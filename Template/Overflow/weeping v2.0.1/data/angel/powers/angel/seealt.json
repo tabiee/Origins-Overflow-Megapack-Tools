@@ -1,0 +1,254 @@
+{
+	"name": "§c§nQuantum-Locked",
+	"description": "Your ultimate defense is also your ultimate weakness. You can't be seen, else you cannot move.",
+	"type": "origins:multiple",
+	"facingme": {
+		"type": "origins:cooldown",
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 7,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:angel/seealt_noblocks",
+				"comparison": "!=",
+				"compare_to": 0
+			}
+		}
+	},
+	"noblocks": {
+		"type": "origins:cooldown",
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": false,
+			"bar_index": 4
+		}
+	},
+	"checkfacing": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:angel/lightsout_gone",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:in_block_anywhere",
+							"block_condition": {
+								"type": "origins:light_level",
+								"light_type": "sky",
+								"comparison": ">",
+								"compare_to": 5
+							}
+						},
+						{
+							"type": "origins:in_block_anywhere",
+							"block_condition": {
+								"type": "origins:light_level",
+								"light_type": "block",
+								"comparison": ">",
+								"compare_to": 5
+							}
+						}
+					]
+				},
+				{
+					"type": "origins:command",
+					"command": "execute as @e[tag=watcher,distance=..30,sort=nearest,nbt=!{ActiveEffects:[{Id: 15b}]}] at @s facing entity @e[tag=statue,limit=1] feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.92,nbt=!{ActiveEffects:[{Id: 15b}]}]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:trigger_cooldown",
+			"power": "*:angel/seealt_facingme"
+		}
+	},
+	"checkblocks": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:angel/lightsout_gone",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:in_block_anywhere",
+							"block_condition": {
+								"type": "origins:light_level",
+								"light_type": "sky",
+								"comparison": ">",
+								"compare_to": 5
+							}
+						},
+						{
+							"type": "origins:in_block_anywhere",
+							"block_condition": {
+								"type": "origins:light_level",
+								"light_type": "block",
+								"comparison": ">",
+								"compare_to": 5
+							}
+						}
+					]
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute anchored eyes facing entity @e[tag=watcher,distance=..30,sort=nearest] eyes run function angel:lookalt",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"whocansee": {
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "tag @e[type=!#angel:noeyes,tag=!statue] add watcher",
+			"permission_level": 4
+		}
+	},
+	"freeze": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:angel/seealt_facingme",
+					"comparison": "!=",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:angel/seealt_noblocks",
+					"comparison": "!=",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:motion 0 @s",
+			"permission_level": 4
+		},
+		"falling_action": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:motion 1 @s",
+			"permission_level": 4
+		}
+	},
+	"location": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "tp @e[tag=see] ^ ^ ^ ~ ~",
+			"permission_level": 4
+		}
+	},
+	"ifdied": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"condition": {
+			"type": "origins:health",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "kill @e[tag=see]",
+			"permission_level": 4
+		}
+	},
+	"camera": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:angel/seealt_facingme",
+					"comparison": "!=",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:angel/seealt_noblocks",
+					"comparison": "!=",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "execute rotated as @e[tag=see] run tp @s @e[tag=see,limit=1,distance=..1]",
+			"permission_level": 4
+		}
+	},
+	"fly": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:angel/seealt_facingme",
+					"comparison": "!=",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:angel/seealt_noblocks",
+					"comparison": "!=",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:fall_flying"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"falling_action": {
+			"type": "origins:add_velocity",
+			"y": 0.5,
+			"z": 1,
+			"space": "local"
+		}
+	}
+}

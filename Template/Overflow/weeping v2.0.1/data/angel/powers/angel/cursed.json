@@ -1,0 +1,149 @@
+{
+	"name": "§1§nCursed Touch",
+	"description": "When a creature is hit by your empty hand, it is teleported randomly up to 100 blocks away. Additionally, you do a lot more damage with your fist. (Toggled with Save Hotbar Activator)",
+	"type": "origins:multiple",
+	"tog": {
+		"type": "origins:toggle",
+		"active_by_default": true,
+		"key": {
+			"key": "key.saveToolbarActivator"
+		}
+	},
+	"hit": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "*:angel/cursed_tog"
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:empty"
+					}
+				}
+			]
+		},
+		"type": "origins:target_action_on_hit",
+		"target_condition": {
+			"type": "origins:command",
+			"command": "execute if entity @e[tag=statue,distance=..6]",
+			"comparison": ">=",
+			"compare_to": 1,
+			"permission_level": 4
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effects": [
+						{
+							"effect": "nausea",
+							"duration": 60,
+							"amplifier": 0,
+							"show_particles": false,
+							"show_icon": false
+						},
+						{
+							"effect": "blindness",
+							"duration": 60,
+							"amplifier": 0,
+							"show_particles": false,
+							"show_icon": false
+						}
+					]
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "spreadplayers ~ ~ 30 100 false @s",
+						"permission_level": 4
+					},
+					"ticks": 1
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "particle ash ~ ~ ~ 1 1 1 0 100",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.vex.ambient",
+								"volume": 5,
+								"pitch": 0.5
+							}
+						]
+					},
+					"ticks": 6
+				}
+			]
+		},
+		"cooldown": 50,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"hitdmg": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:empty"
+					}
+				}
+			]
+		},
+		"type": "origins:target_action_on_hit",
+		"target_condition": {
+			"type": "origins:command",
+			"command": "execute if entity @e[tag=statue,distance=..6]",
+			"comparison": ">=",
+			"compare_to": 1,
+			"permission_level": 4
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:damage",
+					"amount": 5,
+					"source": {
+						"name": "generic.player"
+					}
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle ash ~ ~ ~ 0.5 1 0.5 0 10",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle squid_ink ~ ~0.5 ~ 0.5 1 0.5 0 5",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.vex.ambient",
+					"volume": 2,
+					"pitch": 0.5
+				}
+			]
+		},
+		"cooldown": 50,
+		"hud_render": {
+			"should_render": false
+		}
+	}
+}

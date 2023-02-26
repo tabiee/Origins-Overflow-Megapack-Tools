@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 9,
+    "name": "Weeping Angel",
+	"id": "angel",
+	"version": "1.19",
+    "description": "The Weeping Angel",
+	"authors": "Tabee#5318 in the Origins Discord Server, Teomydude IGN, Meightaboot on Fiverr."
+  }
+}

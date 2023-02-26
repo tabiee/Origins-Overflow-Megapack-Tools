@@ -1,0 +1,61 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"oof": {
+		"type": "origins:action_when_damage_taken",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.gilded_blackstone.break",
+					"volume": 3,
+					"pitch": 0.1
+				}
+			]
+		},
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"move": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=watcher,distance=..30]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				},
+				{
+					"inverted": true,
+					"type": "origins:resource",
+					"resource": "*:angel/seealt_facingme",
+					"comparison": "!=",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:resource",
+					"resource": "*:angel/seealt_noblocks",
+					"comparison": "!=",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 200,
+		"entity_action": {
+			"type": "origins:chance",
+			"chance": 0.5,
+			"action": {
+				"type": "origins:execute_command",
+				"command": "playsound minecraft:entity.villager.work_weaponsmith ambient @s ~ ~ ~ 0.2 0.1",
+				"permission_level": 4
+			}
+		}
+	}
+}

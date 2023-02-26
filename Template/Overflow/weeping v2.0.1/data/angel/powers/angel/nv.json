@@ -1,0 +1,10 @@
+{
+    "name": "§2§nNight Sight",
+    "description": "Often lurking in the shadows to avoid prying eyes, you can see slightly better in the dark. (Toggled with Load Hotbar Activator)",
+    "type": "origins:toggle_night_vision",
+    "active_by_default": true,
+    "strength": 0.15,
+    "key": {
+        "key": "key.loadToolbarActivator"
+    }
+}

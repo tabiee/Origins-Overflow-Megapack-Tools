@@ -1,0 +1,87 @@
+{
+	"name": "§5§nLight's Out",
+	"description": "Blind everything around you and go invisible for a short time.",
+	"type": "origins:multiple",
+	"gone": {
+		"type": "origins:cooldown",
+		"cooldown": 200,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 18
+		}
+	},
+	"act": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "blindness",
+						"duration": 22,
+						"amplifier": 3,
+						"show_particles": false,
+						"show_icon": false
+					}
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle squid_ink ~ ~ ~ 5 3 5 0 300",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle ash ~ ~ ~ 5 3 5 1 300",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[tag=watcher,distance=..30] blindness 10 0 true",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[tag=watcher,distance=..30] weakness 10 0 true",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "entity.vex.charge",
+					"volume": 10,
+					"pitch": 0.1
+				},
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "*:angel/lightsout_gone"
+				}
+			]
+		},
+		"cooldown": 3800,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 1,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:angel/lightsout_gone",
+				"comparison": "==",
+				"compare_to": 0
+			}
+		},
+		"key": {
+			"key": "primary"
+		}
+	},
+	"invis": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:angel/lightsout_gone",
+			"comparison": "!=",
+			"compare_to": 0
+		},
+		"type": "origins:invisibility",
+		"render_armor": false
+	}
+}

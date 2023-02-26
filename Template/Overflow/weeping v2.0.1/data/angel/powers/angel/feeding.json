@@ -1,0 +1,50 @@
+{
+	"name": "§e§nDiet of Potential",
+	"description": "You do not eat in a normal way, any time you teleport someone away with your touch, you feed on the potential energy they left behind.",
+	"type": "origins:multiple",
+	"feed": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "*:angel/cursed_tog"
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:empty"
+					}
+				}
+			]
+		},
+		"type": "origins:self_action_on_hit",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:feed",
+					"food": 2,
+					"saturation": 2
+				},
+				{
+					"type": "origins:heal",
+					"amount": 2
+				}
+			]
+		},
+		"cooldown": 50,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 17
+		}
+	},
+	"prevent": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:food"
+		}
+	}
+}

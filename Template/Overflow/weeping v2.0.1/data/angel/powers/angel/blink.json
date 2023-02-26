@@ -1,0 +1,263 @@
+{
+	"name": "§3§nBlink.",
+	"description": "Entities around you become aware of their blinking, anytime they blink - you're free to move.",
+	"type": "origins:multiple",
+	"gain": {
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "power grant @e[tag=watcher,type=player,distance=..30] angel:angel/blink",
+			"permission_level": 4
+		}
+	},
+	"lose": {
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "power revoke @e[tag=watcher,type=player,distance=100..]}] angel:angel/blink",
+			"permission_level": 4
+		}
+	},
+	"meter": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 200,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 7,
+			"condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"inverted": true,
+						"type": "origins:origin",
+						"origin": "angel:angel",
+						"layer": "origins:origin"
+					},
+					{
+						"type": "origins:resource",
+						"resource": "*:angel/blink_meter",
+						"comparison": ">",
+						"compare_to": 0
+					},
+					{
+						"type": "origins:status_effect",
+						"effect": "unluck"
+					}
+				]
+			}
+		},
+		"max_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:command",
+						"command": "execute if entity @e[tag=statue,distance=..30]",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					"if_action": {
+						"type": "origins:apply_effect",
+						"effect": {
+							"effect": "blindness",
+							"duration": 30,
+							"amplifier": 9,
+							"show_particles": false,
+							"show_icon": false
+						}
+					}
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:change_resource",
+						"resource": "*:angel/blink_meter",
+						"change": -200
+					},
+					"ticks": 1
+				}
+			]
+		}
+	},
+	"tick": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:origin",
+					"origin": "angel:angel",
+					"layer": "origins:origin"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:angel/blink_meter",
+					"change": 1
+				}
+			]
+		}
+	},
+	"mobs": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:origin",
+					"origin": "angel:angel",
+					"layer": "origins:origin"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 200,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:chance",
+					"chance": 0.75,
+					"action": {
+						"type": "origins:execute_command",
+						"command": "effect give @e[tag=watcher,type=!player,distance=..30,limit=2,sort=nearest] blindness 3 0 true",
+						"permission_level": 4
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.75,
+					"action": {
+						"type": "origins:execute_command",
+						"command": "effect give @e[tag=watcher,type=!player,distance=..30,limit=2,sort=furthest] blindness 3 0 true",
+						"permission_level": 4
+					}
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[tag=watcher,type=!player,distance=..30,limit=3,sort=random] blindness 3 0 true",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"mobs2": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:origin",
+					"origin": "angel:angel",
+					"layer": "origins:origin"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 300,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:chance",
+					"chance": 0.9,
+					"action": {
+						"type": "origins:execute_command",
+						"command": "effect give @e[tag=watcher,type=!player,distance=..30,limit=2,sort=nearest] blindness 3 0 true",
+						"permission_level": 4
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.6,
+					"action": {
+						"type": "origins:execute_command",
+						"command": "effect give @e[tag=watcher,type=!player,distance=..30,limit=2,sort=random] blindness 3 0 true",
+						"permission_level": 4
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.3,
+					"action": {
+						"type": "origins:execute_command",
+						"command": "effect give @e[tag=watcher,type=!player,distance=..30,limit=3,sort=random] blindness 3 0 true",
+						"permission_level": 4
+					}
+				}
+			]
+		}
+	},
+	"who_blinked": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:origin",
+					"origin": "angel:angel",
+					"layer": "origins:origin"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=watcher,distance=..30,nbt={ActiveEffects:[{Id: 15b}]}] at @s run particle end_rod ~ ~3 ~ 0 0 0 0 1",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"check_near": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:origin",
+					"origin": "angel:angel",
+					"layer": "origins:origin"
+				},
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=statue,distance=..30]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "unluck",
+						"duration": 5,
+						"amplifier": 0,
+						"show_particles": false,
+						"show_icon": false
+					}
+				}
+			]
+		}
+	}
+}

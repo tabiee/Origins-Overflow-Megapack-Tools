@@ -1,0 +1,115 @@
+{
+    "hidden": true,
+	"name": "was supposed to allow for multiple angels",
+	"description": "it didn't work",
+    "type": "origins:multiple",
+    "assign_num": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scoreboard objectives add num dummy",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "scoreboard players add dummy num 1",
+                        "permission_level": 4
+                    },
+                    "ticks": 1
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "scoreboard players operation @s num += dummy num",
+                        "permission_level": 4
+                    },
+                    "ticks": 3
+                }
+            ]
+        },
+        "execute_chosen_when_orb": true,
+        "entity_action_lost": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scoreboard players reset @a num",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scoreboard players reset dummy num",
+                    "permission_level": 4
+                }
+            ]
+        }
+    },
+	"angelsees": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "execute facing entity @e[tag=statue,distance=2..30] feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @e[tag=statue,distance=..0.92,nbt=!{ActiveEffects:[{Id: 15b}]}] run resource set @e[tag=statue,distance=..0.92,limit=1] angel:angel/seealt_facingme 1",
+			"permission_level": 4
+		}
+	},
+	"checkblocks_angel": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:angel/lightsout_gone",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:in_block_anywhere",
+							"block_condition": {
+								"type": "origins:light_level",
+								"light_type": "sky",
+								"comparison": ">",
+								"compare_to": 5
+							}
+						},
+						{
+							"type": "origins:in_block_anywhere",
+							"block_condition": {
+								"type": "origins:light_level",
+								"light_type": "block",
+								"comparison": ">",
+								"compare_to": 5
+							}
+						}
+					]
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute positioned ~ ~2 ~ run execute facing entity @e[tag=statue,distance=2..30,sort=nearest] eyes run function angel:lookangel",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

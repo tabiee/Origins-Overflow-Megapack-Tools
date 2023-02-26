@@ -1,0 +1,24 @@
+{
+	"powers": [
+		"angel:angel/seealt",
+		"angel:angel/lock",
+		"angel:angel/blink",
+		"angel:angel/whois",
+		"angel:angel/lightsout",
+		"angel:angel/cursed",
+		"angel:angel/nv",
+		"angel:angel/feeding",
+		"angel:angel/attri",
+		"angel:angel/effects",
+		"angel:angel/taggeralt",
+		"angel:angel/funyjok",
+		"angel:angel/scrape"
+	],
+	"icon": {
+		"item": "minecraft:player_head",
+		"tag": "{SkullOwner:{Id:[I;1163161304,1228361353,-1404347964,333753401],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzc2MTA4OTRiYjkyMTk2ODJhOTQ5ODFkZmU3OTI0NjM0ZjljZWE1OGM5YzViODkxZDk2YzE5MWRjNGVkNzZmOSJ9fX0=\"}]}}}"
+	},
+	"impact": 3,
+	"name": "§7§l§oWeeping Angel",
+	"description": "Blink, blink and they're dead. I am fast, faster than they can believe. Turn your back, look away, just blink. I am so close."
+}
