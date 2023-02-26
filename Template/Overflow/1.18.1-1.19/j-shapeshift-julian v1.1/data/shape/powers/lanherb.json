@@ -1,0 +1,133 @@
+{
+    "name": "§3§nLandform: Herbivore",
+    "description": "The herbivore version of your Land form. You cannot eat meat, you are naturally faster, you leap higher and you gain regeneration from Forests.",
+    "type": "origins:multiple",
+    "stats": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_form",
+                    "comparison": "==",
+                    "compare_to": 4
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:category",
+                            "category": "forest"
+                        }
+                    },
+                    "if_action": {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "regeneration",
+                                "duration": 150,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "speed",
+                            "duration": 150,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "jump_boost",
+                            "duration": 150,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": true
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "herb": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_form",
+                    "comparison": "==",
+                    "compare_to": 4
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+            ]
+        },
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "origins:meat"
+                            }
+                        },
+                        {
+                            "type": "origins:meat"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:food"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "origins:ignore_diet"
+                    }
+                }
+            ]
+        }
+    }
+}

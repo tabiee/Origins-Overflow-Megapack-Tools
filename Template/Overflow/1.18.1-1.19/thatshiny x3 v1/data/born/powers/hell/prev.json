@@ -1,0 +1,27 @@
+{
+    "name": "Hellish Existence",
+    "description": "You spawn and can only set your spawn within the Nether, meaning you cannot use end respawn anchors or beds.",
+    "type": "apoli:multiple",
+    "spawn": {
+        "type": "origins:modify_player_spawn",
+        "dimension": "the_nether",
+        "dimension_distance_multiplier": 0.125,
+        "spawn_strategy": "center"
+    },
+    "respawn": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_tag",
+                    "tag": "minecraft:beds"
+                },
+                {
+                    "type": "origins:block",
+                    "block": "unusualend:ender_respawn_altar"
+                }
+            ]
+        }
+    }
+}

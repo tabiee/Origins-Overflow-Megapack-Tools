@@ -1,0 +1,12 @@
+{
+    "name": "Projectile Vulnerability",
+    "description": "You take twice as much damage from projectiles.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:projectile"
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": 2
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "name": "§4§nThe Unknown",
+    "description": "You are scared of the dark.",
+    "condition": {
+        "type": "origins:brightness",
+        "comparison": "<=",
+        "compare_to": 0.2
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "slowness",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "weakness",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "blindness",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ]
+    },
+    "rising_action": {
+        "type": "origins:play_sound",
+        "sound": "ambient.cave",
+        "volume": 1,
+        "pitch": 1
+    }
+}

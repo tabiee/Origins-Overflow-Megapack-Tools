@@ -1,0 +1,37 @@
+{
+    "name": "§6§nFaerie Weakness§r",
+    "description": "You cannot wear iron armor, but can still use iron tools and weapons.",
+    "type": "origins:restrict_armor",
+    "head": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "iron_helmet"
+            }
+        ]
+    },
+    "chest": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "iron_chestplate"
+            }
+        ]
+    },
+    "legs": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "iron_leggings"
+            }
+        ]
+    },
+    "feet": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "iron_boots"
+            }
+        ]
+    }
+}

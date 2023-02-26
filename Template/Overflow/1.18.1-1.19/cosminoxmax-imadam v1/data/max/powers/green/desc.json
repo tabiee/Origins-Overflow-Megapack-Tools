@@ -1,0 +1,5 @@
+{
+    "name": "§a§nFeeling Hungry",
+    "description": "Being happy for so long starts using up hunger more quickly, but your saturation fills up slightly quicker. Reaching 0 hunger removes Gleeful Green and puts it into cooldown.",
+    "type": "origins:simple"
+}

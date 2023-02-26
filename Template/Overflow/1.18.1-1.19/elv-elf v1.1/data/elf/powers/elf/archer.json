@@ -1,0 +1,38 @@
+{
+	"name": "Skilled Archer",
+	"description": "You have a passed down skill from your ancestors with archery\nyour projectiles do 35% more damage.\nYou cannot use a shield and swords do 5% less damage.",
+	"type": "origins:multiple",
+	"proj": {
+		"type": "origins:modify_projectile_damage",
+		"modifier": {
+			"operation": "multiply_base",
+			"value": 0.35
+		}
+	},
+	"shield": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "shield"
+			}
+		}
+	},
+	"swrd": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "elf:weapons"
+				}
+			}
+		},
+		"type": "origins:modify_damage_dealt",
+		"modifier": {
+			"operation": "multiply_base",
+			"value": -0.05
+		}
+	}
+}

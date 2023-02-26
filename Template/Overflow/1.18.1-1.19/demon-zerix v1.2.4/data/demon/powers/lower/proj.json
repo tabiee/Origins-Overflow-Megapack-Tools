@@ -1,0 +1,33 @@
+{
+    "name": "§5§nBlood Demon Art: Hiasobi Temari",
+    "description": "Fire 6 flaming projectiles.",
+    "type": "origins:multiple",
+    "fire": {
+        "type": "origins:fire_projectile",
+        "entity_type": "arrow",
+        "cooldown": 400,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 7
+        },
+        "count": 6,
+        "interval": 5,
+        "speed": 2.5,
+        "divergence": 3,
+        "sound": "minecraft:entity.blaze.hurt",
+        "tag": "{Fire:200,SoundEvent:\"entity.blaze.hurt\",Tags:[\"six\"],PickUp:0b,damage:9.0d}",
+        "key": {
+            "key": "secondary",
+            "continuous": true
+        }
+    },
+    "fx": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "execute as @e[tag=six] at @s run particle flame ~ ~ ~ 0 0 0 0 1"
+        }
+    }
+}

@@ -1,0 +1,238 @@
+{
+	"name": "§5§nLaunch",
+	"description": "Every 20 seconds you are able to launch about 20 blocks up into the air or held down Shift and the Secondary key for 3 seconds to charge it up for a bigger boost.",
+	"type": "origins:multiple",
+	"bit": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 60,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": true,
+			"bar_index": 4,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:dragon/launch_bit",
+				"comparison": "!=",
+				"compare_to": 0
+			}
+		},
+		"max_action": {
+			"type": "origins:delay",
+			"action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "*:dragon/launch_bit",
+						"change": -60
+					},
+					{
+						"type": "origins:trigger_cooldown",
+						"power": "*:dragon/launch_cool"
+					}
+				]
+			},
+			"ticks": 10
+		}
+	},
+	"held": {
+		"type": "origins:cooldown",
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"cool": {
+		"type": "origins:cooldown",
+		"cooldown": 500,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 8
+		}
+	},
+	"act_held": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:dragon/launch_cool",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "*:dragon/launch_held"
+				}
+			]
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary",
+			"continuous": true
+		}
+	},
+	"gained": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:dragon/launch_held",
+			"comparison": "!=",
+			"compare_to": 0
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:dragon/launch_bit",
+					"change": 1
+				}
+			]
+		}
+	},
+	"loss": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:dragon/launch_held",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"type": "origins:action_over_time",
+		"interval": 2,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:dragon/launch_bit",
+					"change": -1
+				}
+			]
+		}
+	},
+	"less": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:dragon/launch_bit",
+					"comparison": "!=",
+					"compare_to": 60
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:dragon/launch_cool",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:sneaking"
+				},
+				{
+					"inverted": true,
+					"type": "origins:fall_flying"
+				}
+			]
+		},
+		"type": "origins:launch",
+		"cooldown": 500,
+		"speed": 2.1,
+		"hud_render": {
+			"should_render": false
+		},
+		"sound": "minecraft:entity.ender_dragon.flap",
+		"key": {
+			"key": "secondary",
+			"continuous": true
+		}
+	},
+	"more": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:dragon/launch_bit",
+					"comparison": "==",
+					"compare_to": 60
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:dragon/launch_cool",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"inverted": true,
+					"type": "origins:fall_flying"
+				}
+			]
+		},
+		"type": "origins:launch",
+		"cooldown": 500,
+		"speed": 2.6,
+		"hud_render": {
+			"should_render": false
+		},
+		"sound": "minecraft:entity.ender_dragon.flap",
+		"key": {
+			"key": "secondary",
+			"continuous": true
+		}
+	},
+	"trigger_cool": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:dragon/launch_cool",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:sneaking"
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:delay",
+			"action": {
+				"type": "origins:trigger_cooldown",
+				"power": "*:dragon/launch_cool"
+			},
+			"ticks": 3
+		},
+		"cooldown": 500,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary",
+			"continuous": true
+		}
+	}
+}

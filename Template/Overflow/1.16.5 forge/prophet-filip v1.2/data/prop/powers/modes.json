@@ -1,0 +1,261 @@
+{
+    "name": "§6§nBattle Modes§r",
+    "description": "Enter a mode with specialized abilities. Hold Primary and tap Hotbar1 for Stealth, 2 for Armor, 3 for Emergency and 4 for None.",
+    "type": "origins:multiple",
+    "pick": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 7,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
+            "bar_index": 17
+        }
+    },
+    "sel1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_hold",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_pick",
+                    "change": -3,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_pick",
+                        "change": 1,
+                        "operation": "add"
+                    },
+                    "ticks": 1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"§lStealth Mode: Active§r\"}"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:power_cd"
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.hotbar.1"
+        }
+    },
+    "sel2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_hold",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_pick",
+                    "change": -3,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_pick",
+                        "change": 2,
+                        "operation": "add"
+                    },
+                    "ticks": 1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"§7§lArmor Mode: Active§r\"}"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:power_cd"
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.hotbar.2"
+        }
+    },
+    "sel3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_hold",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_pick",
+                    "change": -3,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_pick",
+                        "change": 3,
+                        "operation": "add"
+                    },
+                    "ticks": 1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"§c§lEmergency Mode: Active§r\"}"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:power_cd"
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.hotbar.3"
+        }
+    },
+    "sel0": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_hold",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_pick",
+                    "change": -3,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"§6§lModes: Inactive§r\"}"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:power_cd"
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.hotbar.4"
+        }
+    },
+    "hold": {
+        "type": "origins:cooldown",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "use": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 3
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_cd2",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:ultimate_dur",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_hold"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle enchanted_hit ^ ^1.5 ^1.5 0 0 0 0 3"
+                }
+            ]
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "primary",
+            "continuous": true
+        }
+    }
+}

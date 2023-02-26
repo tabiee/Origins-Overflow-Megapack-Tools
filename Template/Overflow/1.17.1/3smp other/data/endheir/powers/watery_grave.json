@@ -1,0 +1,39 @@
+{
+    "type": "origins:damage_over_time",
+    "interval": 20,
+    "onset_delay": 1,
+    "damage": 2,
+    "damage_easy": 1,
+    "damage_source": {
+        "name": "hurt_by_water",
+        "unblockable": true,
+        "bypasses_armor": true,
+        "fire": false,
+        "magic": false,
+        "out_of_world": false
+    },
+    "protection_enchantment": "origins:water_protection",
+    "protection_effectiveness": 1,
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:fluid_height",
+                "fluid": "minecraft:water",
+                "comparison": ">",
+                "compare_to": 0,
+                "inverted": false
+            },
+            {
+                "type": "origins:fluid_height",
+                "fluid": "minecraft:water",
+                "comparison": ">",
+                "compare_to": 0,
+                "inverted": false
+            }
+        ],
+        "inverted": false
+    },
+    "name": "Watery Grave",
+    "description": "Water, and rain will damage you over time naturally, tridents do increased damage aswell, due to their relation with the deep depths and the power imbued in them."
+}

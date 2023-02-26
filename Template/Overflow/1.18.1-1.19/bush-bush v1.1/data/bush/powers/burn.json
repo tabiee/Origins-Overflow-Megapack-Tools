@@ -1,0 +1,36 @@
+{
+    "name": "Wildfires",
+    "description": "If you are on fire, any nearby flammable blocks have a chance to catch fire too.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:on_fire"
+            },
+            {
+                "type": "origins:block_in_radius",
+                "block_condition": {
+                    "type": "origins:material",
+                    "materials": [
+                        "wood",
+                        "leaves",
+                        "wool"
+                    ]
+                },
+                "radius": 1,
+                "shape": "star",
+                "comparison": ">=",
+                "compare_to": 1
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 60,
+    "entity_action": {
+        "type": "origins:block_action_at",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "fill ~ ~ ~ ~ ~ ~ fire replace air"
+        }
+    }
+}

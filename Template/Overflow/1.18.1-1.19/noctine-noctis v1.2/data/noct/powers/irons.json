@@ -1,0 +1,78 @@
+{
+	"name": "Lockpick",
+	"description": "You can open iron doors and trapdoors.",
+	"type": "origins:multiple",
+	"door": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:irons_cd",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"type": "origins:action_on_block_use",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "apoli:trigger_cooldown",
+					"power": "*:irons_cd"
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "block.iron_door.open",
+					"volume": 0.3,
+					"pitch": 2
+				}
+			]
+		},
+		"block_action": {
+			"type": "origins:modify_block_state",
+			"property": "open",
+			"cycle": true
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "minecraft:iron_door"
+		}
+	},
+	"trapdoor": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:irons_cd",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "apoli:trigger_cooldown",
+					"power": "*:irons_cd"
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "block.iron_door.open",
+					"volume": 0.3,
+					"pitch": 2
+				}
+			]
+		},
+		"type": "origins:action_on_block_use",
+		"block_action": {
+			"type": "origins:modify_block_state",
+			"property": "open",
+			"cycle": true
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "minecraft:iron_trapdoor"
+		}
+	},
+	"cd": {
+		"type": "apoli:cooldown",
+		"cooldown": 3,
+		"hud_render": {
+			"should_render": false
+		}
+	}
+}

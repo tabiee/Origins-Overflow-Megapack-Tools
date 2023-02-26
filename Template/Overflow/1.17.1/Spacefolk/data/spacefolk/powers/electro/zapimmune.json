@@ -1,0 +1,9 @@
+{
+    "name": "Lightning Affinity",
+    "description": "You take no damage from lightning.",
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "lightningBolt"
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "name": "§1§nHover Mode",
+    "description": "Grant yourself the ability to glide, like you would with an elytra, for a short time.",
+    "type": "origins:multiple",
+    "act": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:alien/elytra_dur"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle glow ^ ^ ^0.5 0.5 0.5 0.5 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1.5
+                }
+            ]
+        },
+        "cooldown": 1000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 1
+        },
+        "key": {
+            "key": "secondary"
+        }
+    },
+    "dur": {
+        "type": "origins:cooldown",
+        "cooldown": 400,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 8
+        }
+    },
+    "elytra": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:alien/elytra_dur",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "type": "origins:elytra_flight",
+        "render_elytra": false
+    }
+}

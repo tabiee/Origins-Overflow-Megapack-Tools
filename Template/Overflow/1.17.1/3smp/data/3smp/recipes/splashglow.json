@@ -1,0 +1,42 @@
+{
+	"type": "nbtcrafting:brewing",
+	"base": {
+		"item": "minecraft:potion",
+		"data": {
+			"CustomPotionColor": 16771514,
+			"CustomPotionEffects": [{
+				"Duration": 9600,
+				"Id": 24
+			}],
+			"display": {
+				"Name": [{
+						"text": "Potion of Glowing",
+						"italic": false
+					},
+					"nbtcrafting:stringify"
+				]
+			}
+		}
+	},
+	"ingredient": {
+		"item": "minecraft:bone_meal"
+	},
+	"result": {
+		"item": "minecraft:splash_potion",
+		"data": {
+			"CustomPotionColor": 16771514,
+			"CustomPotionEffects": [{
+				"Duration": 9600,
+				"Id": 24
+			}],
+			"display": {
+				"Name": [{
+						"text": "Splash Potion of Glowing",
+						"italic": false
+					},
+					"nbtcrafting:stringify"
+				]
+			}
+		}
+	}
+}

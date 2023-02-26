@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"candle:candle/wax",
+		"candle:candle/burn",
+		"candle:candle/size",
+		"candle:candle/death",
+		"candle:candle/hungy",
+		"candle:candle/hp",
+		"candle:candle/water",
+		"candle:candle/tagger"
+	],
+	"icon": "minecraft:torch",
+	"impact": 2,
+	"name": "Living Candle",
+	"description": "Being a wandering spirit that has found itself into a candle, you have tried your best to adapt to your new form."
+}

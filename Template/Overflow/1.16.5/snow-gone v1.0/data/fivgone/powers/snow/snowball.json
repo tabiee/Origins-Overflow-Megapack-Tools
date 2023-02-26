@@ -1,0 +1,18 @@
+{
+    "name": "§1§nSnow Fight!",
+    "description": "Launch snowballs at will. They kind of hurt.",
+    "type": "origins:fire_projectile",
+    "entity_type": "minecraft:snowball",
+    "cooldown": 7,
+    "hud_render": {
+        "should_render": false
+    },
+	"sound": "minecraft:block.snow.fall",
+    "count": 1,
+    "speed": 1.5,
+    "divergence": 1,
+    "key": {
+        "key": "secondary",
+        "continuous": true
+    }
+}

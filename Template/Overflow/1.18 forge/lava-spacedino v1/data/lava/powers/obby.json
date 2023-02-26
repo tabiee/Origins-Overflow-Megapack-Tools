@@ -1,0 +1,22 @@
+{
+    "name": "§6§nObsidian Armor",
+    "description": "Entering water hardens your body, giving you high resistance until you leave it.",
+    "condition": {
+        "type": "origins:fluid_height",
+        "fluid": "water",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "type": "origins:action_over_time",
+    "interval": 35,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "resistance",
+            "duration": 35,
+            "amplifier": 4,
+            "show_particles": true,
+            "show_icon": true
+        }
+    }
+}

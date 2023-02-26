@@ -1,0 +1,154 @@
+{
+	"name": "§3§nStardust",
+	"description": "Because you are made of stardust, you cannot physically take damage. Instead, you lose stardust whenever you are hit or use an ability. When you run out of stardust, your body will fall apart and you will die. This recharges by being exposed to the sky, and recharges faster at night, as long as you are not wearing a helmet.",
+	"type": "origins:multiple",
+	"dis_death": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:star/dust_speck",
+			"comparison": "!=",
+			"compare_to": 0
+		},
+		"type": "origins:prevent_death"
+	},
+	"hungy": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:food_level",
+					"comparison": ">",
+					"compare_to": 6
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:star/dust_speck",
+					"comparison": "<",
+					"compare_to": 600
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:feed",
+			"food": -2,
+			"saturation": -2
+		}
+	},
+	"feed": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:star/dust_speck",
+			"comparison": ">",
+			"compare_to": 599
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:feed",
+			"food": 10,
+			"saturation": 10
+		}
+	},
+	"speck": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 2000,
+		"start_value": 2000,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 19
+		},
+		"min_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "particle dust_color_transition 0.871 1.000 1.000 1 0.031 1.000 0.871 ~ ~ ~ 1.5 1 1.5 100 500 normal",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @s",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"respawn": {
+		"type": "origins:action_on_callback",
+		"execute_chosen_when_orb": false,
+		"entity_action_respawned": {
+			"type": "origins:change_resource",
+			"resource": "*:star/dust_speck",
+			"change": 2000
+		}
+	},
+	"damage": {
+		"type": "origins:self_action_when_hit",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "particle minecraft:falling_dust oxidized_copper ~ ~ ~ 0.2 0.7 0.2 0 50",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle dust_color_transition 0.871 1.000 1.000 1 0.031 1.000 0.871 ~ ~ ~ 0.5 1 0.5 1 50 normal",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle dust 0.000 1.000 0.765 1 ~ ~ ~ 0.2 0.7 0.2 0 50 normal",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:star/dust_speck",
+					"change": -50
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"regain": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "head",
+					"item_condition": {
+						"type": "origins:empty"
+					}
+				},
+				{
+					"inverted": true,
+					"type": "origins:power_active",
+					"power": "*:star/fly_tog"
+				},
+				{
+					"inverted": true,
+					"type": "origins:daytime"
+				},
+				{
+					"type": "origins:exposed_to_sky"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 60,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:star/dust_speck",
+			"change": 50
+		}
+	}
+}

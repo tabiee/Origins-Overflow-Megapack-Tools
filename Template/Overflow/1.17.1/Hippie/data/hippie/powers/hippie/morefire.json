@@ -1,0 +1,26 @@
+{
+	"name": "§4§nFire Ouch",
+	"description": "It hurts more.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "OnFire"
+            },
+            {
+                "type": "origins:name",
+                "name": "InFire"
+            },
+            {
+                "type": "origins:name",
+                "name": "Lava"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": 1
+    }
+}

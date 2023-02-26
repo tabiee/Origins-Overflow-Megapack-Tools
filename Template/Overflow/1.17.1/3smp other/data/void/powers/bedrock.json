@@ -1,0 +1,25 @@
+{
+    "type": "origins:phasing",
+    "block_condition": {
+        "type": "origins:block",
+        "block": "minecraft:bedrock"
+    },
+	"hidden": true,
+    "render_type": "blindness",
+    "view_distance": 100,
+    "phase_down_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:on_block",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "minecraft:bedrock"
+                }
+            },
+            {
+                "type": "origins:sneaking"
+            }
+        ]
+    }
+}

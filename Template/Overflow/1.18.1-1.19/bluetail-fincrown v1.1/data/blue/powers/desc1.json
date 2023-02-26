@@ -1,0 +1,11 @@
+{
+    "name": "One-Tail",
+    "description": "With one tail active, you have increased attack haste, Speed, Strength, Jump and have the ability to walljump.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Toggle walljumping with SaveToolbar key."
+        }
+    ],
+    "type": "origins:simple"
+}

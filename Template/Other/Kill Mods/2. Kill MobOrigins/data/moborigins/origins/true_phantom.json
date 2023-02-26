@@ -1,0 +1,10 @@
+{
+    "powers": [
+        "moborigins:insomnia_power"
+    ],
+    "unchoosable": true,
+    "loading_priority": 100,
+    "icon": "minecraft:phantom_membrane",
+    "order": 4,
+    "impact": 3
+}

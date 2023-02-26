@@ -1,0 +1,80 @@
+{
+	"name": "§1§nSpectral Movement",
+	"description": "While flying, you completely disappear, becoming intangible and able to move through blocks without taking damage.",
+	"type": "origins:multiple",
+	"invis": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:swimming"
+				},
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:invisibility",
+		"render_armor": false
+	},
+	"phase": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:swimming"
+				},
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:phasing",
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "origins:unphasable"
+		},
+		"phase_down_condition": {
+			"type": "origins:swimming"
+		},
+		"blacklist": true,
+		"render_type": "none",
+		"view_distance": 100
+	},
+	"invul": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:swimming"
+				},
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "inWall"
+				},
+				{
+					"type": "origins:name",
+					"name": "inWall.player"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+    "name": "§4§nToo Much Fur",
+    "description": "Due to your amount of weight and fur, you are slowed down in water and projectiles & fire does 2x damage.",
+    "type": "origins:multiple",
+    "slow": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "water",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "slowness",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        }
+    },
+    "fire": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fire"
+                },
+                {
+                    "type": "origins:projectile"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 2
+        }
+    }
+}

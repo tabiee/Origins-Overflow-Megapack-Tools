@@ -1,0 +1,16 @@
+{
+    "name": "§6§nDifferent Combat Style",
+    "description": "You are unable to use shields.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "shield"
+            },
+            {
+                "item": "crossbow"
+            }
+        ]
+    }
+}

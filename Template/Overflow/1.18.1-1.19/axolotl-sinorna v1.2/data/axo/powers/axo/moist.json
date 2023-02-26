@@ -1,0 +1,152 @@
+{
+	"name": "§4§nMoistness",
+	"description": "You dry up quickly on land, exhausting you.",
+	"type": "origins:multiple",
+	"mm": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 3600,
+		"start_value": 3600,
+		"hud_render": {
+			"should_render": true,
+			"bar_index": 1
+		}
+	},
+	"land": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:in_rain"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:axo/moist_mm",
+			"change": -1
+		}
+	},
+	"fire": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:on_fire"
+						},
+						{
+							"type": "origins:fluid_height",
+							"fluid": "lava",
+							"comparison": ">",
+							"compare_to": 0
+						},
+						{
+							"type": "origins:dimension",
+							"dimension": "minecraft:the_nether"
+						},
+						{
+							"type": "origins:on_block",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "magma_block"
+							}
+						}
+					]
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:axo/moist_mm",
+			"change": -2
+		}
+	},
+	"water": {
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:in_rain"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:axo/moist_mm",
+			"change": 25
+		}
+	},
+	"effect": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:axo/moist_mm",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:exhaust",
+					"amount": 1.5
+				},
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "hunger",
+						"duration": 100,
+						"amplifier": 0,
+						"show_particles": false,
+						"show_icon": true
+					}
+				}
+			]
+		},
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "particle smoke ~ ~ ~ 0.3 0.3 0.3 0 5",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.fire.extinguish",
+					"volume": 1,
+					"pitch": 1.5
+				}
+			]
+		}
+	}
+}

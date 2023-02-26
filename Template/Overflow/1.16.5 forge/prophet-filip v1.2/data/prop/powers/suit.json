@@ -1,0 +1,33 @@
+{
+    "name": "§4§nSuited§r",
+    "description": "You can't wear any armor except artifacts.",
+    "type": "origins:restrict_armor",
+    "head": {
+        "inverted": true,
+        "type": "origins:enchantment",
+        "enchantment": "minecraft:lure",
+        "comparison": ">=",
+        "compare_to": 1
+    },
+    "chest": {
+        "inverted": true,
+        "type": "origins:enchantment",
+        "enchantment": "minecraft:lure",
+        "comparison": ">=",
+        "compare_to": 1
+    },
+    "legs": {
+        "inverted": true,
+        "type": "origins:enchantment",
+        "enchantment": "minecraft:lure",
+        "comparison": ">=",
+        "compare_to": 1
+    },
+    "feet": {
+        "inverted": true,
+        "type": "origins:enchantment",
+        "enchantment": "minecraft:lure",
+        "comparison": ">=",
+        "compare_to": 1
+    }
+}

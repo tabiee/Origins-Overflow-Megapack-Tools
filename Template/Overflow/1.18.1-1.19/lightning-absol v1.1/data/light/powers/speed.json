@@ -1,0 +1,11 @@
+{
+    "name": "§1§nQuick Reflexes",
+    "description": "You're incredibly fast, your speed is even higher than an Avian.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.movement_speed",
+        "operation": "multiply_base",
+        "value": 0.4
+    },
+    "update_health": false
+}

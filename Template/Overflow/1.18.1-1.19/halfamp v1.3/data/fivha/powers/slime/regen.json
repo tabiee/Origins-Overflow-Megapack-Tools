@@ -1,0 +1,10 @@
+{
+    "name": "Regenerative Properties",
+    "description": "Your natural regeneration is higher than that of a human.",
+    "type": "origins:action_over_time",
+    "interval": 300,
+    "entity_action": {
+        "type": "origins:heal",
+        "amount": 1
+    }
+}

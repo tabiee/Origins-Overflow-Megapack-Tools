@@ -1,0 +1,57 @@
+{
+    "name": "§a§nJoyous",
+    "description": "Increased mobility, as a speed and jump boost is applied due to your increased joy.",
+    "type": "apoli:multiple",
+    "sp": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 15,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "speed",
+                    "duration": 35,
+                    "amplifier": 1,
+                    "show_particles": false,
+                    "show_icon": false
+                },
+                {
+                    "effect": "jump_boost",
+                    "duration": 35,
+                    "amplifier": 1,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            ]
+        }
+    },
+    "food": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    }
+}

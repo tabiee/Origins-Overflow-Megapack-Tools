@@ -1,0 +1,88 @@
+{
+    "name": "Deity",
+    "description": "As a God, you are able to deny death once every 5 minutes, but it may have side-effects.",
+    "type": "origins:multiple",
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 6
+        }
+    },
+    "ded": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:prevent_death",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_cd"
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 49,
+                            "element": {
+                                "type": "origins:apply_effect",
+                                "effect": {
+                                    "effect": "strength",
+                                    "duration": 1200,
+                                    "amplifier": 1,
+                                    "show_particles": false,
+                                    "show_icon": true
+                                }
+                            }
+                        },
+                        {
+                            "weight": 49,
+                            "element": {
+                                "type": "origins:apply_effect",
+                                "effect": {
+                                    "effect": "weakness",
+                                    "duration": 1200,
+                                    "amplifier": 1,
+                                    "show_particles": false,
+                                    "show_icon": true
+                                }
+                            }
+                        },
+                        {
+                            "weight": 2,
+                            "element": {
+                                "type": "origins:nothing"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle sculk_charge 0 ~ ~1 ~ 0.5 0.5 0.5 0 50"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle sculk_charge_pop ~ ~1 ~ 0.5 0.5 0.5 0 50"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.elder_guardian.curse",
+                    "volume": 1,
+                    "pitch": 0.7
+                }
+            ]
+        }
+    }
+}

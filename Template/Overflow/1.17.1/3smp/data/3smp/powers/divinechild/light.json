@@ -1,0 +1,186 @@
+{
+	"type": "origins:multiple",
+	"description": "Strong in the light, weak in the dark.",
+	"name": "§e§nBeing of Light",
+	"condition": {
+		"value": false,
+		"type": "origins:constant",
+		"inverted": false
+	},
+	"light1": {
+		"type": "origins:action_over_time",
+		"condition": {
+			"type": "origins:and",
+			"inverted": false,
+			"conditions": [{
+					"type": "origins:in_block",
+					"inverted": false,
+					"block_condition": {
+						"type": "origins:light_level",
+						"inverted": false,
+						"comparison": "<",
+						"compare_to": 4
+					}
+				},
+				{
+					"type": "origins:status_effect",
+					"inverted": true,
+					"effect": "glowing"
+				},
+				{
+					"type": "origins:equipped_item",
+					"inverted": true,
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"inverted": false,
+						"ingredient": {
+							"item": "minecraft:lantern"
+						}
+					}
+				}
+			]
+		},
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"duration": 1,
+				"is_ambient": false,
+				"show_particles": false,
+				"show_icon": false,
+				"effect": "instant_damage"
+			}
+		},
+		"interval": 100,
+		"hidden": false
+	},
+	"light2": {
+		"type": "origins:action_over_time",
+		"hidden": true,
+		"condition": {
+			"type": "origins:and",
+			"inverted": false,
+			"conditions": [{
+					"type": "origins:in_block",
+					"inverted": false,
+					"block_condition": {
+						"type": "origins:light_level",
+						"inverted": false,
+						"comparison": "<",
+						"compare_to": 6
+					}
+				},
+				{
+					"type": "origins:status_effect",
+					"inverted": true,
+					"effect": "glowing"
+				},
+				{
+					"type": "origins:equipped_item",
+					"inverted": true,
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"inverted": false,
+						"ingredient": {
+							"item": "minecraft:lantern"
+						}
+					}
+				}
+			]
+		},
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"duration": 100,
+				"is_ambient": false,
+				"show_particles": false,
+				"show_icon": true,
+				"effect": "weakness"
+			}
+		},
+		"interval": 100
+	},
+	"light3": {
+		"type": "origins:action_over_time",
+		"condition": {
+			"type": "origins:or",
+			"inverted": false,
+			"conditions": [{
+					"type": "origins:in_block",
+					"inverted": false,
+					"block_condition": {
+						"type": "origins:light_level",
+						"inverted": false,
+						"comparison": ">",
+						"compare_to": 9
+					}
+				},
+				{
+					"type": "origins:status_effect",
+					"inverted": false,
+					"effect": "glowing"
+				},
+				{
+					"type": "origins:equipped_item",
+					"inverted": false,
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"inverted": false,
+						"ingredient": {
+							"item": "minecraft:lantern"
+						}
+					}
+				}
+			]
+		},
+		"hidden": true,
+		"interval": 100,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"duration": 100,
+				"is_ambient": false,
+				"show_particles": false,
+				"show_icon": true,
+				"effect": "strength"
+			}
+		}
+	},
+	"light4": {
+		"type": "origins:action_over_time",
+		"hidden": true,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"duration": 100,
+				"is_ambient": false,
+				"show_particles": false,
+				"show_icon": true,
+				"effect": "regeneration"
+			}
+		},
+		"condition": {
+			"type": "origins:or",
+			"inverted": false,
+			"conditions": [{
+					"type": "origins:in_block",
+					"inverted": false,
+					"block_condition": {
+						"type": "origins:light_level",
+						"inverted": false,
+						"comparison": "==",
+						"compare_to": 15
+					}
+				},
+				{
+					"type": "origins:status_effect",
+					"inverted": false,
+					"effect": "glowing"
+				}
+			]
+		},
+		"interval": 100
+	}
+}

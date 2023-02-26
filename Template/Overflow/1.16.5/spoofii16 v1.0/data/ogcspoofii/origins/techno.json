@@ -1,0 +1,21 @@
+{
+	"powers": [
+		"ogcspoofii:techno/fade",
+		"ogcspoofii:techno/phase",
+		"ogcspoofii:techno/climb",
+		"ogcspoofii:techno/shift",
+		"origins:vegetarian",
+		"origins:elytra",
+		"origins:fall_immunity",
+		"ogcspoofii:techno/particles",
+		"ogcspoofii:techno/redstone",
+		"ogcspoofii:techno/shieldless",
+		"ogcspoofii:techno/weakarmor",
+		"ogcspoofii:techno/firedmg",
+		"ogcspoofii:techno/reset"
+	],
+	"icon": "minecraft:enchanting_table",
+	"impact": 2,
+	"name": "§c§lTechno",
+	"description": "Cool."
+}

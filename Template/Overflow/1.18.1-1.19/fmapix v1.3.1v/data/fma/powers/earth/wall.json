@@ -1,0 +1,2092 @@
+{
+	"name": "§1§nStone Wall",
+	"description": "Create a wall or platform in front of you using nearby ground, clear with shift.",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:sneaking",
+				"inverted": true
+			}
+		]
+	},
+	"type": "origins:active_self",
+	"cooldown": 100,
+	"entity_action": {
+		"type": "origins:if_else_list",
+		"actions": [
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "stone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block stone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 stone replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "cobblestone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block cobblestone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 cobblestone replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "mossy_cobblestone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block mossy_cobblestone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 mossy_cobblestone replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "granite"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block granite ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 granite replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "andesite"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block andesite ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 andesite replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "diorite"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block diorite ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 diorite replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "deepslate"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block deepslate ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 deepslate replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "cobbled_deepslate"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block cobbled_deepslate ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 cobbled_deepslate replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "netherrack"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block netherrack ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 netherrack replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "blackstone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block blackstone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 blackstone replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "sandstone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block sandstone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 sandstone replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "red_sandstone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block red_sandstone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 red_sandstone replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "end_stone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block end_stone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 end_stone replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "orange_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block orange_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 orange_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "white_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block white_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 white_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "magenta_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block magenta_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 magenta_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "light_blue_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block light_blue_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 light_blue_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "yellow_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block yellow_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 yellow_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "lime_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block lime_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 lime_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "pink_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block pink_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 pink_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "gray_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block gray_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 gray_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "light_gray_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block light_gray_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 light_gray_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "cyan_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block cyan_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 cyan_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "purple_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block purple_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 purple_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "blue_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block blue_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 blue_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "brown_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block brown_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 brown_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "green_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block green_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 green_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "red_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block red_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 red_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "black_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block black_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 black_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "orange_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block orange_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 orange_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "white_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block white_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 white_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "magenta_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block magenta_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 magenta_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "light_blue_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block light_blue_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 light_blue_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "yellow_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block yellow_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 yellow_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "lime_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block lime_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 lime_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "pink_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block pink_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 pink_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "gray_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block gray_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 gray_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "light_gray_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block light_gray_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 light_gray_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "cyan_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block cyan_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 cyan_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "purple_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block purple_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 purple_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "blue_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block blue_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 blue_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "brown_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block brown_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 brown_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "green_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block green_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 green_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "red_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block red_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 red_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "black_glazed_terracotta"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block black_glazed_terracotta ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 black_glazed_terracotta replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "tuff"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block tuff ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 tuff replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "basalt"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"inverted": true,
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block basalt ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 basalt replace air",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			}
+		]
+	},
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+		"bar_index": 3
+	},
+	"key": {
+		"key": "secondary"
+	}
+}

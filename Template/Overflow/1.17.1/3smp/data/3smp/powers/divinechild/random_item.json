@@ -1,0 +1,84 @@
+{
+    "type": "origins:action_over_time",
+    "name": "§2§nGifts from above",
+    "description": "The world will give you gifts, it wants you to succeed.",
+    "entity_action": {
+        "type": "origins:choice",
+        "actions": [
+            {
+                "weight": 5,
+                "element": {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "give @s minecraft:golden_carrot"
+                }
+            },
+            {
+                "weight": 5,
+                "element": {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "give @s minecraft:lapis_block"
+                }
+            },
+            {
+                "weight": 20,
+                "element": {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "give @s minecraft:pumpkin_pie"
+                }
+            },
+            {
+                "weight": 20,
+                "element": {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "give @s minecraft:book"
+                }
+            },
+            {
+                "weight": 40,
+                "element": {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "give @s minecraft:allium"
+                }
+            },
+            {
+                "weight": 20,
+                "element": {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "give @s minecraft:flower_pot"
+                }
+            },
+            {
+                "weight": 5,
+                "element": {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "give @s minecraft:apple"
+                }
+            },
+            {
+                "weight": 40,
+                "element": {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "give @s minecraft:sunflower"
+                }
+            },
+            {
+                "weight": 40,
+                "element": {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "give @s minecraft:lily_of_the_valley"
+                }
+            }
+        ]
+    },
+    "interval": 33600,
+    "hidden": false
+}

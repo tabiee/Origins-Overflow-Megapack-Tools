@@ -1,0 +1,37 @@
+{
+    "name": "§2§nGoat-like Strength",
+    "description": "Your mask gives you immense strength, increasing your knockback.",
+    "type": "origins:multiple",
+    "kick": {
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "tp @s ~ ~ ~ facing entity @e[tag=mask,limit=1]"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:add_velocity",
+                            "y": 0.45,
+                            "z": -1.15,
+                            "space": "local",
+                            "client": true,
+                            "server": true,
+                            "set": true
+                        },
+                        "ticks": 3
+                    }
+                ]
+            }
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

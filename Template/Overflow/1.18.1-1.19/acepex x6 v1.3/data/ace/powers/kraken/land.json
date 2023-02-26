@@ -1,0 +1,22 @@
+{
+	"name": "Too Dry",
+	"description": "You are weakened on land.",
+	"condition": {
+		"type": "origins:fluid_height",
+		"fluid": "water",
+		"comparison": "==",
+		"compare_to": 0
+	},
+	"type": "origins:action_over_time",
+	"interval": 25,
+	"entity_action": {
+		"type": "origins:apply_effect",
+		"effect": {
+			"effect": "weakness",
+			"duration": 35,
+			"amplifier": 0,
+			"show_particles": false,
+			"show_icon": true
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+    "hidden": true,
+    "type": "origins:target_action_on_hit",
+    "damage_condition": {
+        "type": "origins:projectile",
+        "projectile": "shulker_bullet"
+    },
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "/summon firework_rocket ~ ~2 ~ {LifeTime:1,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:2,Flicker:1,Trail:1,Colors:[I;14602026,15435844],FadeColors:[I;14602026]}]}}}}",
+        "permission_level": 4
+    },
+    "cooldown": 100,
+    "hud_render": {
+        "should_render": false
+    }
+}

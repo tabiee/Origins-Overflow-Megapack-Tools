@@ -1,0 +1,33 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:tag",
+					"weight": 25,
+					"name": "fivha:salad",
+					"expand": true
+				},
+				{
+					"type": "minecraft:tag",
+					"weight": 25,
+					"name": "fivha:meat",
+					"expand": true
+				},
+				{
+					"type": "minecraft:tag",
+					"weight": 25,
+					"name": "fivha:modded",
+					"expand": true
+				},
+				{
+					"type": "minecraft:tag",
+					"weight": 25,
+					"name": "fivha:baked",
+					"expand": true
+				}
+			]
+		}
+	]
+}

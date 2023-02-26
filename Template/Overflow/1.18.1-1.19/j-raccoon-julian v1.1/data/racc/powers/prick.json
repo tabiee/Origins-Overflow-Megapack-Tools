@@ -1,0 +1,26 @@
+{
+    "name": "§2§nCallus Skin",
+    "description": "As you skin is very hard you are immune to sweet berries and cacti.",
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "sweetBerryBush"
+            },
+            {
+                "type": "origins:name",
+                "name": "sweetBerryBush.player"
+            },
+            {
+                "type": "origins:name",
+                "name": "cactus"
+            },
+            {
+                "type": "origins:name",
+                "name": "cactus.player"
+            }
+        ]
+    }
+}

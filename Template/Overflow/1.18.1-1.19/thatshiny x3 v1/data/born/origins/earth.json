@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"born:earth/prev",
+		"born:earth/particles",
+		"born:earth/inv"
+	],
+	"icon": "minecraft:grass_block",
+	"impact": 1,
+	"name": "Earth-born",
+	"description": "You come from the Overworld."
+}

@@ -1,0 +1,210 @@
+{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:if_else",
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "minecraft:netherrack"
+				}
+			}
+		},
+		"if_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @s minecraft:netherrack 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "give @s minecraft:nether_brick 1",
+					"permission_level": 4
+				}
+			]
+		},
+		"else_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:nether_bricks"
+					}
+				}
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "clear @s minecraft:nether_bricks 1",
+						"permission_level": 4
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cracked_nether_bricks 1",
+						"permission_level": 4
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:basalt"
+						}
+					}
+				},
+				"if_action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "clear @s minecraft:basalt 1",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "give @s minecraft:smooth_basalt 1",
+							"permission_level": 4
+						}
+					]
+				},
+				"else_action": {
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:equipped_item",
+						"equipment_slot": "mainhand",
+						"item_condition": {
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "minecraft:clay"
+							}
+						}
+					},
+					"if_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "clear @s minecraft:clay 1",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "give @s minecraft:terracotta 1",
+								"permission_level": 4
+							}
+						]
+					},
+					"else_action": {
+						"type": "origins:if_else",
+						"condition": {
+							"type": "origins:equipped_item",
+							"equipment_slot": "mainhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "minecraft:stone_bricks"
+								}
+							}
+						},
+						"if_action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "origins:execute_command",
+									"command": "clear @s minecraft:stone_bricks 1",
+									"permission_level": 4
+								},
+								{
+									"type": "origins:execute_command",
+									"command": "give @s minecraft:cracked_stone_bricks 1",
+									"permission_level": 4
+								}
+							]
+						},
+						"else_action": {
+							"type": "origins:if_else",
+							"condition": {
+								"type": "origins:equipped_item",
+								"equipment_slot": "mainhand",
+								"item_condition": {
+									"type": "origins:ingredient",
+									"ingredient": {
+										"item": "minecraft:polished_blackstone_bricks"
+									}
+								}
+							},
+							"if_action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "clear @s minecraft:polished_blackstone_bricks 1",
+										"permission_level": 4
+									},
+									{
+										"type": "origins:execute_command",
+										"command": "give @s minecraft:cracked_polished_blackstone_bricks 1",
+										"permission_level": 4
+									}
+								]
+							},
+							"else_action": {
+								"type": "origins:if_else",
+								"condition": {
+									"type": "origins:equipped_item",
+									"equipment_slot": "mainhand",
+									"item_condition": {
+										"type": "origins:ingredient",
+										"ingredient": {
+											"item": "minecraft:cobbled_deepslate"
+										}
+									}
+								},
+								"if_action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:execute_command",
+											"command": "clear @s minecraft:cobbled_deepslate 1",
+											"permission_level": 4
+										},
+										{
+											"type": "origins:execute_command",
+											"command": "give @s minecraft:deepslate 1",
+											"permission_level": 4
+										}
+									]
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"name": "Molten Hands",
+	"description": "You can smelt ores in your hands.",
+	"hidden": true,
+	"cooldown": 1,
+	"key": {
+		"key": "secondary",
+		"continuous": true
+	},
+	"hud_render": {
+		"should_render": false
+	}
+}

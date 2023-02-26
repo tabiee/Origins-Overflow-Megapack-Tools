@@ -1,0 +1,23 @@
+{
+    "name": "§2§nFiery Touch",
+    "description": "Anytime you attack something you set it on fire.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:fluid_height",
+                "fluid": "water",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        ]
+    },
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+            "type": "origins:set_on_fire",
+            "duration": 4
+        }
+    }
+}

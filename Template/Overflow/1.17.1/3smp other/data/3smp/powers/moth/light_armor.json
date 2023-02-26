@@ -1,0 +1,29 @@
+{
+    "type": "origins:restrict_armor",
+    "head": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 2,
+        "inverted": false
+    },
+    "chest": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 5,
+        "inverted": false
+    },
+    "legs": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 4,
+        "inverted": false
+    },
+    "feet": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 1,
+        "inverted": false
+    },
+    "name": "§6§nLight Armor",
+    "description": "Armor is restricted by weight."
+}

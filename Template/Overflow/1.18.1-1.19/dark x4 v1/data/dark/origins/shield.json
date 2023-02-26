@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"dark:shield/rush",
+		"dark:shield/dmg",
+		"dark:shield/hp",
+		"dark:shield/speed",
+		"dark:shield/size",
+		"dark:shield/tagger"
+	],
+	"icon": "minecraft:shield",
+	"impact": 3,
+	"name": "Shield",
+	"description": "Tough and immoveable, they are a fearsome foe in battle."
+}

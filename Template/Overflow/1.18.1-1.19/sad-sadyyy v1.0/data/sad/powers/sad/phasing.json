@@ -1,0 +1,45 @@
+{
+    "name": "§5§nGhostly Form",
+    "description": "Turn invisible and phase through blocks at will.",
+    "type": "origins:multiple",
+    "tap": {
+        "type": "origins:toggle",
+        "active_by_default": true,
+        "key": {
+            "key": "primary"
+        }
+    },
+    "phase": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:sad/phasing_tap"
+        },
+        "type": "origins:phasing",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:unphasable"
+        },
+        "blacklist": true,
+        "render_type": "blindness",
+        "view_distance": 10,
+        "phase_down_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:on_block"
+                }
+            ]
+        }
+    },
+    "invis": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:sad/phasing_tap"
+        },
+        "type": "origins:invisibility",
+        "render_armor": false
+    }
+}

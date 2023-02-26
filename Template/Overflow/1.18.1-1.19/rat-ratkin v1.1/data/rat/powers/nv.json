@@ -1,0 +1,9 @@
+{
+	"name": "§2§nNight Vision",
+	"description": "You can see clearly in the dark.",
+	"type": "origins:multiple",
+	"nv": {
+		"type": "origins:night_vision",
+		"strength": 0.15
+	}
+}

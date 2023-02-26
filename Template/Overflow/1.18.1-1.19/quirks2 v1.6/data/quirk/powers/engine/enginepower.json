@@ -1,0 +1,40 @@
+{
+    "name": "Recipro Turbo",
+    "description": "When at less than half health, you get stronger",
+    "hidden": false,
+    "condition": {
+            "type": "origins:relative_health",
+            "comparison": "<",
+            "compare_to": 0.51
+    },
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 20,
+    "effects": [
+        {
+            "effect": "minecraft:strength",
+            "duration": 20,
+            "amplifier": 0,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:speed",
+            "duration": 20,
+            "amplifier": 3,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:jump_boost",
+            "duration": 20,
+            "amplifier": 3,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        }
+    ]
+}

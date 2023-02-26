@@ -1,0 +1,23 @@
+{
+    "powers": [
+        "betterhuman:nohitdamage",
+        "betterhuman:necromancerdd",
+        "betterhuman:necrofalldd",
+        "betterhuman:necrofiredd",
+        "betterhuman:necrolava",
+        "betterhuman:slowaat",
+        "betterhuman:reset"
+    ],
+    "icon": "minecraft:cactus",
+    "order": 2022,
+    "impact": 3,
+    "name": "Cacti",
+    "description": "You are very slow and can barely do anything but when you evolve you will be one of the hardest to kill",
+    "upgrades": {
+        "condition": "minecraft:end/kill_dragon",
+        "origin": "betterhuman:cactusorigin",
+        "announcement": "You have achieved a great goal and now are able to destroy many things in your path..."
+    },
+    "loading_priority": 100,
+    "unchoosable": true
+}

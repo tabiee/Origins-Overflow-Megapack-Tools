@@ -1,0 +1,25 @@
+{
+    "type": "origins:active_self",
+      "entity_action": {
+        "type": "origins:and",
+        "actions": [ 
+          {    
+          "type": "origins:execute_command",
+          "command": "effect give @s minecraft:invisibility 7 0 true",
+          "permission_level": 4
+          }
+		]
+      },
+      "name": "Camouflage",
+      "description": "Turn invisible for 7 seconds",
+      "key": {
+          "key": "key.origins.quaternary_active",
+          "continuous": false
+      },
+      "cooldown": 230,
+      "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 0
+          }
+  }

@@ -1,0 +1,8 @@
+{
+    "name": "§1§nAir Gliding",
+    "description": "You are a gaseous being, you are lighter than the air around you, allowing you to fly, replacing the ordinary sprint function.",
+    "type": "origins:multiple",
+    "fly": {
+        "type": "origins:swimming"
+    }
+}

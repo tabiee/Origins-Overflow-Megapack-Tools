@@ -1,0 +1,60 @@
+{
+	"name": "§3§nProve Yourself",
+	"description": "Kill 20 Zombie Pigmen to be recognized as a Demon.",
+	"type": "origins:multiple",
+	"kills": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 20,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 17
+		},
+		"max_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "particle flame ~ ~1.5 ~ 2 0.1 2 0.2 500"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle dust 0.710 0.000 0.000 1 ~ ~1.5 ~ 2 0.1 2 0.2 500"
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.vex.ambient",
+					"volume": 5,
+					"pitch": 0.5
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "origin set @s origins:origin demon:weak"
+					},
+					"ticks": 3
+				}
+			]
+		}
+	},
+	"count": {
+		"type": "origins:self_action_on_kill",
+		"target_condition": {
+			"type": "origins:entity_type",
+			"entity_type": "minecraft:zombified_piglin"
+		},
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "demon:start_kills",
+			"change": 1,
+			"operation": "add"
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"born:hell/prev",
+		"born:hell/particles",
+		"born:hell/fire"
+	],
+	"icon": "minecraft:netherrack",
+	"impact": 1,
+	"name": "Hell-spawn",
+	"description": "You come from the Nether."
+}

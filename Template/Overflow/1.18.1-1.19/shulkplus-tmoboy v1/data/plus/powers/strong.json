@@ -1,0 +1,30 @@
+{
+    "name": "§2§nStrong Arms",
+    "description": "You are strong enough to break natural stones without using a pickaxe.",
+    "type": "origins:multiple",
+    "harvest": {
+        "type": "origins:modify_harvest",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:natural_stone"
+        },
+        "allow": true
+    },
+    "mine": {
+        "hidden": true,
+        "condition": {
+            "inverted": true,
+            "type": "origins:using_effective_tool"
+        },
+        "type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:natural_stone"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.06,
+            "name": "Strong Arms stone break speed bonus"
+        }
+    }
+}

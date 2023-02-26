@@ -1,0 +1,26 @@
+{
+	"powers": [
+		"kynaan:kynaan/wolf",
+		"kynaan:kynaan/lance",
+		"kynaan:kynaan/expert",
+		"kynaan:kynaan/swapper",
+		"kynaan:kynaan/dual",
+		"kynaan:kynaan/wings",
+		"kynaan:kynaan/gift",
+		"kynaan:kynaan/desc1",
+		"kynaan:kynaan/desc2",
+		"kynaan:kynaan/desc3",
+		"kynaan:kynaan/desc4",
+		"kynaan:kynaan/fuel",
+		"kynaan:kynaan/buffs",
+		"kynaan:kynaan/loud",
+		"kynaan:kynaan/firefear",
+		"kynaan:kynaan/wither",
+		"kynaan:kynaan/tagger",
+		"icarus:powered_flight"
+	],
+	"icon": "mythicmounts:summoning_staff",
+	"impact": 3,
+	"name": "§2§l§oBattlemage",
+	"description": "Elemental fighter that benefits from Earth, Ice, Water and Air, but not Fire."
+}

@@ -1,0 +1,27 @@
+{
+	"name": "§6§l§oBlaze Queen",
+	"description": "The Ruler of the Nether.",
+	"powers": [
+		"3smp:blazequeen/fire_immunity",
+		"3smp:blazequeen/nether_spawn",
+		"3smp:blazequeen/burning_wrath",
+		"3smp:blazequeen/hotblooded",
+		"3smp:blazequeen/water_vulnerability",
+		"3smp:blazequeen/flame_particles",
+		"3smp:blazequeen/damage_from_snowballs",
+		"3smp:blazequeen/damage_from_potions",
+		"3smp:blazequeen/firering",
+		"3smp:blazequeen/firebolt",
+		"3smp:blazequeen/short",
+		"3smp:blazequeen/hover",
+		"3smp:blazequeen/flight",
+		"3smp:blazequeen/color",
+		"3smp:blazequeen/queen",
+		"3smp:blazequeen/rainhate"
+	],
+	"icon": {
+		"item": "minecraft:blaze_rod"
+	},
+	"order": 1,
+	"impact": 3
+}

@@ -1,0 +1,10 @@
+{
+	"hidden": true,
+    "name": "§2§nLearning Curve",
+    "description": "You gain more experience.",
+    "type": "origins:modify_xp_gain",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.5
+    }
+}

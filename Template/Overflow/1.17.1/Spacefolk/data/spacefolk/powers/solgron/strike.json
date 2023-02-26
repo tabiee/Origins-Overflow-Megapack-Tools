@@ -1,0 +1,16 @@
+{
+    "name": "Solar Strike",
+    "description": "Hit your enemies with light.",
+    "type": "origins:fire_projectile",
+    "entity_type": "shulker_bullet",
+    "cooldown": 100,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 2
+    },
+    "count": 3,
+    "speed": 1.5,
+    "divergence": 1,
+    "key": "primary"
+}

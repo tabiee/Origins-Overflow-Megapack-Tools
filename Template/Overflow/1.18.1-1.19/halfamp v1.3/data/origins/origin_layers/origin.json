@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "origins": [
+    "fivha:star",
+	"fivha:centaur",
+	"fivha:dryad",
+	"fivha:rat",
+	"fivha:martian",
+	"fivha:slime",
+	"fivha:ramen"
+  ]
+}

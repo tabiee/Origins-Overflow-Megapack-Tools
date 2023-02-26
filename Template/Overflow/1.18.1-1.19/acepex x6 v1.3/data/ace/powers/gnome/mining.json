@@ -1,0 +1,9 @@
+{
+    "name": "Hard Worker",
+    "description": "Your block breaking speed is much higher than average.",
+    "type": "origins:modify_break_speed",
+    "modifier": {
+        "operation": "addition",
+        "value": 10
+    }
+}

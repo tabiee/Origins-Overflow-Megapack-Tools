@@ -1,0 +1,28 @@
+{
+    "name": "§2§nNature Home",
+    "description": "The forest is your home, seeing it brings back nostalgic memories. Forest biomes will give your regeneration.",
+    "condition": {
+        "type": "origins:biome",
+        "biomes": [
+            "birch_forest",
+            "birch_forest_hills",
+            "dark_forest",
+            "dark_forest_hills",
+            "flower_forest",
+            "forest",
+            "tall_birch_forest"
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "regeneration",
+            "duration": 100,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

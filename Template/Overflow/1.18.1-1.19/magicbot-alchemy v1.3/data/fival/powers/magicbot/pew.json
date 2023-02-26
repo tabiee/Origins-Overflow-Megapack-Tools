@@ -1,0 +1,68 @@
+{
+	"name": "§1§nMagic Blast",
+	"description": "Strike enemies with magic.",
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.illusioner.prepare_mirror",
+				"volume": 0.5,
+				"pitch": 1.5
+			},
+			{
+				"type": "origins:raycast",
+				"distance": 50,
+				"block": true,
+				"entity": true,
+				"shape_type": "collider",
+				"fluid_handling": "any",
+				"bientity_action": {
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:damage",
+								"source": {
+									"name": "magic.player"
+								},
+								"amount": 6,
+								"bypasses_armor": true
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "tp @s ~ ~ ~ facing entity @p[tag=magic]",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:add_velocity",
+									"y": 1,
+									"z": -1,
+									"space": "local"
+								},
+								"ticks": 3
+							}
+						]
+					}
+				},
+				"command_along_ray": "particle witch ^ ^ ^0.5 0.1 0.1 0.1 0 5 normal",
+				"command_at_hit": "particle block purple_concrete ~ ~ ~ 0.5 0.5 0.5 0.1 100 normal",
+				"command_step": 1
+			}
+		]
+	},
+	"key": {
+		"key": "secondary",
+		"continuous": false
+	},
+	"cooldown": 50,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+		"bar_index": 19
+	}
+}

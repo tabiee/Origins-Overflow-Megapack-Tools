@@ -1,0 +1,16 @@
+{
+    "name": "§5§nGliding",
+    "description": "Finding an Elytra grants you the ability to glide without wings.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "This ability is unlocked by getting the Sky's the Limit advancement."
+        }
+    ],
+    "condition": {
+        "type": "origins:advancement",
+        "advancement": "end/elytra"
+    },
+    "type": "origins:elytra_flight",
+    "render_elytra": false
+}

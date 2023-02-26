@@ -1,0 +1,14 @@
+{
+    "hidden": true,
+    "type": "origins:active_self",
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": "primary",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "particle minecraft:warped_spore ~ ~ ~ 0.3 0.7 0.3 0 25",
+        "permission_level": 4
+    }
+}

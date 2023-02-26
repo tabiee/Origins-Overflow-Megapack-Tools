@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"born:end/prev",
+		"born:end/particles",
+		"born:end/stare",
+		"born:end/tp"
+	],
+	"icon": "minecraft:end_stone",
+	"impact": 1,
+	"name": "End-bound",
+	"description": "You come from the End."
+}

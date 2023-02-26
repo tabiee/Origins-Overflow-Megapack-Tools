@@ -1,0 +1,24 @@
+{
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 20,
+    "effect": {
+        "duration": 30,
+        "is_ambient": false,
+        "show_particles": false,
+        "show_icon": false,
+        "effect": "minecraft:water_breathing"
+    },
+	"condition":
+	{
+	"type": "origins:health",
+	"comparison": "<",
+	"compare_to": 4
+	},
+	"name": "Leftover Moisture",
+	"description": "You cannot die from lack of moisture",
+	"tick_rate": 2
+}
+
+

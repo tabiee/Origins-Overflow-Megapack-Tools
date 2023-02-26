@@ -1,0 +1,5 @@
+{
+    "name": "Like a stone",
+    "description": "You sink in water.",
+    "type": "origins:ignore_water"
+}

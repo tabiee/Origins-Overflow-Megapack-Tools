@@ -1,0 +1,12 @@
+{
+    "type": "origins:action_over_time",
+    "name": "S",
+    "description": "You.",
+    "hidden": true,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "particle minecraft:soul_fire_flame ~ ~1 ~ 0.3 0.3 0.3 .05 5 force"
+    },
+    "interval": 10
+}

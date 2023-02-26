@@ -1,0 +1,22 @@
+{
+    "impact": 3,
+    "unchoosable": false,
+    "name": "§c§l§oImoltu",
+    "description": "The pest of any planet they are smuggled onto. These mole like species was created to eat the planet resources to the core, able to withstand the many obstacles and heat. ",
+    "icon": "minecraft:magma_block",
+    "powers": [
+        "spacefolk:imoltu/dig",
+		"spacefolk:imoltu/moltenhands",
+		"spacefolk:imoltu/eatlava",
+		"spacefolk:imoltu/sound",
+		"spacefolk:imoltu/fire_immunity",
+		"spacefolk:imoltu/noeating",
+		"spacefolk:imoltu/nightv",
+		"spacefolk:imoltu/waterdmg",
+		"spacefolk:imoltu/warmth",
+		"spacefolk:imoltu/lavaswim",
+		"spacefolk:imoltu/lesshp",
+		"spacefolk:imoltu/lavawalk",
+		"spacefolk:imoltu/size"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+	"powers": [
+		"mask:phasing",
+		"mask:ping",
+		"mask:invis",
+		"mask:kick",
+		"mask:resist",
+		"mask:undead",
+		"mask:wither",
+		"mask:desc",
+		"mask:eat",
+		"mask:weps",
+		"mask:hp",
+		"mask:soulfire",
+		"mask:firedmg"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"impact": 3,
+	"name": "§5§l§oCursed Mask",
+	"description": "You were once a confident traveler who foolishly put on a strange skull mask, it then consumed you."
+}

@@ -1,0 +1,329 @@
+{
+    "name": "§5§nGift of Magic",
+    "description": "You are attuned to the elements of Water, Ice, Earth and the Air.",
+    "type": "origins:multiple",
+    "water1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "minecraft:water"
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:aqua_affinity",
+                    "calculation": "sum",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:modify_break_speed",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 4
+        }
+    },
+    "water2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:on_block"
+                }
+            ]
+        },
+        "type": "origins:modify_break_speed",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 4
+        }
+    },
+    "water3": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:gain_air",
+            "value": 100
+        }
+    },
+    "water4": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "water",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "additionalentityattributes:water_speed",
+            "operation": "multiply_base",
+            "value": 2
+        },
+        "tick_rate": 5
+    },
+    "ice": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:on_block",
+                            "block_condition": {
+                                "type": "origins:or",
+                                "conditions": [
+                                    {
+                                        "type": "origins:block",
+                                        "block": "ice"
+                                    },
+                                    {
+                                        "type": "origins:block",
+                                        "block": "packed_ice"
+                                    },
+                                    {
+                                        "type": "origins:block",
+                                        "block": "blue_ice"
+                                    },
+                                    {
+                                        "type": "origins:block",
+                                        "block": "frosted_ice"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "origins:biome",
+                            "biomes": [
+                                "snowy_plains",
+                                "ice_spikes",
+                                "old_growth_pine_taiga",
+                                "old_growth_spruce_taiga",
+                                "taiga",
+                                "snowy_taiga",
+                                "snowy_slopes",
+                                "frozen_peaks",
+                                "jagged_peaks",
+                                "frozen_river",
+                                "snowy_beach",
+                                "cold_ocean",
+                                "deep_cold_ocean",
+                                "frozen_ocean",
+                                "deep_frozen_ocean"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:biome",
+                    "biomes": [
+                        "desert",
+                        "savanna",
+                        "savanna_plateau",
+                        "windswept_savanna",
+                        "jungle",
+                        "sparse_jungle",
+                        "bamboo_jungle",
+                        "badlands",
+                        "eroded_badlands",
+                        "wooded_badlands",
+                        "nether_wastes",
+                        "warped_forest",
+                        "crimson_forest",
+                        "soul_and_valley",
+                        "basalt_deltas"
+                    ]
+                }
+            ]
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_base",
+            "value": 0.4
+        },
+        "tick_rate": 1
+    },
+    "ice2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:biome",
+                    "biomes": [
+                        "desert",
+                        "savanna",
+                        "savanna_plateau",
+                        "windswept_savanna",
+                        "jungle",
+                        "sparse_jungle",
+                        "bamboo_jungle",
+                        "badlands",
+                        "eroded_badlands",
+                        "wooded_badlands",
+                        "nether_wastes",
+                        "warped_forest",
+                        "crimson_forest",
+                        "soul_and_valley",
+                        "basalt_deltas"
+                    ]
+                }
+            ]
+        },
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "slowness",
+                "duration": 50,
+                "amplifier": 0,
+                "show_particles": true,
+                "show_icon": true
+            }
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "ice3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:biome",
+                    "biomes": [
+                        "desert",
+                        "savanna",
+                        "savanna_plateau",
+                        "windswept_savanna",
+                        "jungle",
+                        "sparse_jungle",
+                        "bamboo_jungle",
+                        "badlands",
+                        "eroded_badlands",
+                        "wooded_badlands",
+                        "nether_wastes",
+                        "warped_forest",
+                        "crimson_forest",
+                        "soul_and_valley",
+                        "basalt_deltas"
+                    ]
+                }
+            ]
+        },
+        "type": "origins:attacker_action_when_hit",
+        "entity_action": {
+            "type": "origins:damage",
+            "amount": 1,
+            "source": {
+                "name": "thorns",
+                "unblockable": true
+            }
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "earth": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:biome",
+            "biomes": [
+                "desert",
+                "savanna",
+                "savanna_plateau",
+                "windswept_savanna",
+                "jungle",
+                "sparse_jungle",
+                "bamboo_jungle",
+                "badlands",
+                "eroded_badlands",
+                "wooded_badlands",
+                "nether_wastes",
+                "warped_forest",
+                "crimson_forest",
+                "soul_and_valley",
+                "basalt_deltas"
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 40,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:exposed_to_sky"
+            },
+            "if_action": {
+                "type": "origins:heal",
+                "amount": 1
+            },
+            "else_action": {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "night_vision",
+                    "duration": 250,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            }
+        }
+    },
+    "air": {
+        "condition": {
+            "type": "origins:fall_flying"
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_base",
+            "value": 0.5
+        },
+        "tick_rate": 5
+    },
+    "air2": {
+        "condition": {
+            "type": "origins:fall_flying"
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "flyIntoWall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "flyIntoWall.player"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    }
+}

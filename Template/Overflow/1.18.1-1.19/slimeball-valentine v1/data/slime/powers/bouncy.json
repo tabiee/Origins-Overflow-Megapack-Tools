@@ -1,0 +1,517 @@
+{
+    "name": "Bouncy",
+    "description": "You bounce on all blocks except sticky ones.",
+    "type": "origins:multiple",
+    "jumps": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 8,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "bounce": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:on_block",
+            "block_condition": {
+                "type": "origins:in_tag",
+                "tag": "slime:sticky"
+            }
+        },
+        "type": "origins:action_on_land",
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "slime:bouncy_jumps",
+                        "comparison": "==",
+                        "compare_to": 1
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:add_velocity",
+                                "y": 0.1,
+                                "space": "world",
+                                "client": true,
+                                "server": true,
+                                "set": true
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 0,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "slime:bouncy_jumps",
+                        "comparison": "==",
+                        "compare_to": 2
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:add_velocity",
+                                "y": 0.15,
+                                "space": "world",
+                                "client": true,
+                                "server": true,
+                                "set": true
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 1,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "slime:bouncy_jumps",
+                        "comparison": "==",
+                        "compare_to": 3
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:add_velocity",
+                                "y": 0.25,
+                                "space": "world",
+                                "client": true,
+                                "server": true,
+                                "set": true
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 2,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "slime:bouncy_jumps",
+                        "comparison": "==",
+                        "compare_to": 4
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:add_velocity",
+                                "y": 0.45,
+                                "space": "world",
+                                "client": true,
+                                "server": true,
+                                "set": true
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 3,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "slime:bouncy_jumps",
+                        "comparison": "==",
+                        "compare_to": 5
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:add_velocity",
+                                "y": 0.6,
+                                "space": "world",
+                                "client": true,
+                                "server": true,
+                                "set": true
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 4,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "slime:bouncy_jumps",
+                        "comparison": "==",
+                        "compare_to": 6
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:add_velocity",
+                                "y": 0.75,
+                                "space": "world",
+                                "client": true,
+                                "server": true,
+                                "set": true
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 5,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "slime:bouncy_jumps",
+                        "comparison": "==",
+                        "compare_to": 7
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:add_velocity",
+                                "y": 1,
+                                "space": "world",
+                                "client": true,
+                                "server": true,
+                                "set": true
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 6,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "slime:bouncy_jumps",
+                        "comparison": "==",
+                        "compare_to": 8
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:add_velocity",
+                                "y": 1.35,
+                                "space": "world",
+                                "client": true,
+                                "server": true,
+                                "set": true
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 7,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "gain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:sneaking"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:climbing"
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "lava",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "slime:bouncy_cd",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:block_in_radius",
+                    "block_condition": {
+                        "type": "origins:offset",
+                        "condition": {
+                            "inverted": true,
+                            "type": "origins:in_tag",
+                            "tag": "slime:sticky"
+                        },
+                        "y": -1
+                    },
+                    "radius": 0,
+                    "shape": "star",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:fall_distance",
+                                "comparison": ">",
+                                "compare_to": 1.5
+                            },
+                            {
+                                "type": "origins:fall_distance",
+                                "comparison": "<=",
+                                "compare_to": 2.3
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_cd",
+                                "change": 0,
+                                "operation": "set"
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 4,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:fall_distance",
+                                "comparison": ">",
+                                "compare_to": 2.3
+                            },
+                            {
+                                "type": "origins:fall_distance",
+                                "comparison": "<=",
+                                "compare_to": 3
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_cd",
+                                "change": 0,
+                                "operation": "set"
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 5,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:fall_distance",
+                                "comparison": ">",
+                                "compare_to": 3
+                            },
+                            {
+                                "type": "origins:fall_distance",
+                                "comparison": "<=",
+                                "compare_to": 4
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_cd",
+                                "change": 0,
+                                "operation": "set"
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 6,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:fall_distance",
+                                "comparison": ">",
+                                "compare_to": 4
+                            },
+                            {
+                                "type": "origins:fall_distance",
+                                "comparison": "<=",
+                                "compare_to": 5
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_cd",
+                                "change": 0,
+                                "operation": "set"
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 7,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:fall_distance",
+                                "comparison": ">",
+                                "compare_to": 5
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_cd",
+                                "change": 0,
+                                "operation": "set"
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "slime:bouncy_jumps",
+                                "change": 8,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "interval": 1
+    },
+    "reset": {
+        "condition": {
+            "type": "origins:sneaking"
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "slime:bouncy_jumps",
+            "change": 0,
+            "operation": "set"
+        }
+    },
+    "cd": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 1,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 2
+        }
+    },
+    "land": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "slime:bouncy_jumps",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:action_on_land",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "slime:bouncy_cd",
+            "change": 1,
+            "operation": "set"
+        }
+    },
+    "fx": {
+        "condition": {
+            "type": "origins:fall_distance",
+            "comparison": ">",
+            "compare_to": 1.5
+        },
+        "type": "origins:action_on_land",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle item slime_block ~ ~0.25 ~ 0.25 0.25 0.25 0.1 6"
+        }
+    }
+}

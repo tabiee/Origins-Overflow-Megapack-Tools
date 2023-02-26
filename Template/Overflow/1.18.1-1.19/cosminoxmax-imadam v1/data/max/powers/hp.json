@@ -1,0 +1,29 @@
+{
+    "name": "§4§nBound to Outer Space",
+    "description": "When you can't see the sky, you are significantly weaker.",
+    "type": "origins:multiple",
+    "hp": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "inverted": true,
+            "type": "origins:exposed_to_sky"
+        },
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": -4
+        },
+        "tick_rate": 1
+    },
+    "hungy": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:exposed_to_sky"
+        },
+        "type": "apoli:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    }
+}

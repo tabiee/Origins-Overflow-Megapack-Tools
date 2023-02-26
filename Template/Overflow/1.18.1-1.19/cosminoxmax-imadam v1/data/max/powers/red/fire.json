@@ -1,0 +1,23 @@
+{
+    "name": "§c§nBurning Rage",
+    "description": "Fire and lava damage hurt moderately less in this state.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "*:select_mode",
+                "comparison": "==",
+                "compare_to": 1
+            }
+        ]
+    },
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:fire"
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": -0.5
+    }
+}

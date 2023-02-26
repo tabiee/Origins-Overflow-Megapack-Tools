@@ -1,0 +1,86 @@
+{
+	"name": "§e§nMade of Stone",
+	"description": "Your lack of a mortal body makes you immune to poison, wither, hunger and makes it harder to drown, but you take more explosion, fall and kinetic damage due to weight.",
+	"type": "origins:multiple",
+	"eff": {
+		"type": "origins:effect_immunity",
+		"effects": [
+			"poison",
+			"wither",
+			"hunger"
+		]
+	},
+	"air": {
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"entity_action": {
+			"type": "origins:gain_air",
+			"value": 6
+		}
+	},
+	"speed": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "generic.movement_speed",
+			"operation": "multiply_base",
+			"value": 0.5
+		}
+	},
+	"dmg": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"name": "More kinetic damage taken",
+			"value": 0.5,
+			"operation": "multiply_base"
+		},
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				},
+				{
+					"type": "origins:name",
+					"name": "flyIntoWall"
+				},
+				{
+					"type": "origins:name",
+					"name": "flyIntoWall.player"
+				},
+				{
+					"type": "origins:name",
+					"name": "explosion"
+				},
+				{
+					"type": "origins:name",
+					"name": "explosion.player"
+				},
+				{
+					"type": "origins:name",
+					"name": "fireball"
+				},
+				{
+					"type": "origins:name",
+					"name": "fireball.player"
+				},
+				{
+					"type": "origins:name",
+					"name": "fireball.item"
+				},
+				{
+					"type": "origins:name",
+					"name": "fireworks"
+				},
+				{
+					"type": "origins:name",
+					"name": "fireworks.player"
+				}
+			]
+		}
+	}
+}

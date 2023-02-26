@@ -1,0 +1,14 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "execute at @s run summon phantom ~ -70 ~ {Health:40f,Size:10,Attributes:[{Name:generic.follow_range,Base:40},{Name:generic.attack_damage,Base:4},{Name:generic.armor,Base:20}]}",
+      "permission_level": 4
+    },
+    "interval": 200,
+    "hud_render": {
+        "should_render": false
+    },
+    "name":"Predators",
+    "description": "Being in the void isn't that safe, as there are an evolved species of phantom that made your entire species go extinct and are hungry for more."
+}

@@ -1,0 +1,53 @@
+{
+    "name": "§4§nTraumatic Haunting",
+    "description": "You lost your family in a burning building due to a reckless super-hero. You barely survived, the memory still haunts you.",
+    "type": "apoli:multiple",
+    "burnbbyburn": {
+        "condition": {
+            "type": "origins:in_block_anywhere",
+            "block_condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:block",
+                        "block": "fire"
+                    },
+                    {
+                        "type": "origins:block",
+                        "block": "soul_fire"
+                    }
+                ]
+            },
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "falling_action": {
+            "type": "origins:set_on_fire",
+            "duration": 6
+        }
+    },
+    "drain": {
+        "type": "apoli:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "apoli:if_else",
+            "condition": {
+                "type": "apoli:on_fire"
+            },
+            "if_action": {
+                "type": "apoli:change_resource",
+                "resource": "*:conf_bar",
+                "change": -2,
+                "operation": "add"
+            },
+            "else_action": {
+                "type": "apoli:change_resource",
+                "resource": "*:conf_bar",
+                "change": -1,
+                "operation": "add"
+            }
+        }
+    }
+}

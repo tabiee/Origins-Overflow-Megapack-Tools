@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"fivha:martian/nightv",
+		"fivha:martian/astral",
+		"fivha:martian/gravity",
+		"fivha:martian/sleep",
+		"fivha:martian/up",
+		"fivha:martian/foodweird"
+	],
+	"icon": "minecraft:red_sand",
+	"impact": 1,
+	"name": "§4§l§oMartian",
+	"description": "In your face Neil Armstrong!"
+}

@@ -1,0 +1,71 @@
+{
+    "name": "Heat Based",
+    "description": "Hot liquids is where you thrive. When near lava your regeneration is boosted slightly, and when you swim in lava it gives Saturation, Strength, and Haste for up to 8 minutes. Lava does not harm you. You can still be burned by fire.",
+    "type": "origins:multiple",
+    "buffs": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "lava",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 240,
+        "duration_per_stack": 40,
+        "effects": [
+            {
+                "effect": "strength",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "saturation",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "haste",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        ]
+    },
+    "nodmgbutyesdmg": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "lava",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:fire"
+        }
+    },
+    "near": {
+        "condition": {
+            "type": "origins:block_in_radius",
+            "block_condition": {
+                "type": "origins:block",
+                "block": "lava"
+            },
+            "radius": 3,
+            "shape": "cube",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 100,
+        "entity_action": {
+            "type": "origins:heal",
+            "amount": 1
+        }
+    }
+}

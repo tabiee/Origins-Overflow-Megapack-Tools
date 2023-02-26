@@ -1,0 +1,2 @@
+execute unless entity @e[type=minecraft:cow,distance=..1.5] run execute as @e[type=minecraft:cow,distance=..12] at @s run teleport @s ^ ^ ^0.2 facing entity @e[tag=hippie,limit=1]
+execute unless entity @e[type=minecraft:mooshroom,distance=..1.5] run execute as @e[type=minecraft:mooshroom,distance=..12] at @s run teleport @s ^ ^ ^0.2 facing entity @e[tag=hippie,limit=1]

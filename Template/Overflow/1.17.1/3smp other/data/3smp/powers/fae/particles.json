@@ -1,0 +1,36 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "particle betterend:firefly ~ ~ ~ 1 1 1 0 1 normal"
+            },
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "particle betterend:amber_sphere ~ ~ ~ 1 1 1 0 1 normal"
+            }
+        ]
+    },
+    "interval": 32,
+    "hidden": true,
+    "condition": {
+        "type": "origins:or",
+        "inverted": true,
+        "conditions": [
+            {
+                "type": "origins:status_effect",
+                "inverted": false,
+                "effect": "invisibility"
+            },
+            {
+                "type": "origins:power_active",
+                "inverted": false,
+                "power": "3smp:fae/fade"
+            }
+        ]
+    }
+}

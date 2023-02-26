@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"fma:ice/makeice",
+		"fma:ice/iceshard",
+		"fma:ice/throwice",
+		"fma:ice/isconsume",
+		"fma:ice/toggle",
+		"fma:ice/frostfloat",
+		"fma:ice/icemetal",
+		"fma:ice/slide",
+		"fma:ice/frostwalk",
+		"fma:ice/negdesc",
+		"fma:ice/clearice"
+	],
+	"icon": "minecraft:powder_snow_bucket",
+	"impact": 1,
+	"name": "§b§l§oIce Alchemy",
+	"description": "Mixed combat-style alchemy type that freezes enemies as you attack."
+}

@@ -1,0 +1,181 @@
+{
+    "name": "§3§nSatyr Form§r",
+    "description": "You are a goat. You can headbutt by hitting an enemy when sprinting. You are fast and have regeneration in mountains and plains, but take 2x fall damage.",
+    "type": "origins:multiple",
+    "fx": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_form",
+                    "comparison": "==",
+                    "compare_to": 5
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 145,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:biome",
+                "condition": {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:category",
+                            "category": "mountain"
+                        },
+                        {
+                            "type": "origins:category",
+                            "category": "plains"
+                        }
+                    ]
+                }
+            },
+            "if_action": {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "speed",
+                        "duration": 150,
+                        "amplifier": 0,
+                        "show_particles": false,
+                        "show_icon": true
+                    },
+                    {
+                        "effect": "regeneration",
+                        "duration": 150,
+                        "amplifier": 0,
+                        "show_particles": false,
+                        "show_icon": true
+                    }
+                ]
+            }
+        }
+    },
+    "fall": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_form",
+                    "comparison": "==",
+                    "compare_to": 5
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "butt": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_form",
+                    "comparison": "==",
+                    "compare_to": 5
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:sprinting"
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[distance=..2]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+            ]
+        },
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.llama.angry",
+                    "volume": 1,
+                    "pitch": 0.7
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[distance=..2,tag=!shape] at @s run tp @s ~ ~ ~ facing entity @p[tag=shape]"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:add_velocity",
+                        "y": 1,
+                        "z": -1,
+                        "space": "local",
+                        "client": true,
+                        "server": true
+                    },
+                    "ticks": 3
+                }
+            ]
+        },
+        "cooldown": 300,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 17
+        }
+    }
+}

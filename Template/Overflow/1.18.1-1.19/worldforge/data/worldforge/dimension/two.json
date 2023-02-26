@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:overworld_caves",
+  "generator": {
+    "biome_source": {
+      "biome": "worldforge:caves",
+      "type": "minecraft:fixed"
+    },
+    "seed": 286444624,
+    "settings": "minecraft:caves",
+    "type": "minecraft:noise"
+  }
+}

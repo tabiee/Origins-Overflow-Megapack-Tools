@@ -1,0 +1,39 @@
+{
+    "name": "§b§nConcussive Force",
+    "description": "You have a 15% chance to stun your enemy with a jab, inflicting Slowness and Blindness.",
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+            "type": "apoli:chance",
+            "chance": 0.15,
+            "action": {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "slowness",
+                        "duration": 100,
+                        "amplifier": 4,
+                        "show_particles": true,
+                        "show_icon": true
+                    },
+                    {
+                        "effect": "blindness",
+                        "duration": 100,
+                        "amplifier": 0,
+                        "show_particles": true,
+                        "show_icon": true
+                    }
+                ]
+            }
+        }
+    },
+    "damage_condition": {
+        "inverted": true,
+        "type": "origins:projectile"
+    },
+    "cooldown": 30,
+    "hud_render": {
+        "should_render": false
+    }
+}

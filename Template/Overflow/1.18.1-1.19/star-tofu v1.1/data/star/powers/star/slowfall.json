@@ -1,0 +1,20 @@
+{
+    "name": "§2§nLight Body",
+    "description": "Since your body is made out of stardust, you are very light and fall slowly, unless you sneak, which condenses your body so you can fall normally.",
+    "condition": {
+        "inverted": true,
+        "type": "origins:sneaking"
+    },
+    "type": "origins:action_over_time",
+    "interval": 3,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "slow_falling",
+            "duration": 5,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

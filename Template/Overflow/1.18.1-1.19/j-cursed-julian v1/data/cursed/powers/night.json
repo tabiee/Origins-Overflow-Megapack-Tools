@@ -1,0 +1,20 @@
+{
+    "name": "§2§nNyctophillia",
+    "description": "You are faster during the night.",
+    "condition": {
+        "inverted": true,
+        "type": "origins:daytime"
+    },
+    "type": "origins:action_over_time",
+    "interval": 25,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "speed",
+            "duration": 35,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "type": "origins:modify_damage_taken",
+    "self_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:area_of_effect",
+                "radius": 6,
+                "bientity_condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:command",
+                        "command": "execute if entity @s[tag=mark]",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    }
+                },
+                "bientity_action": {
+                    "type": "origins:damage",
+                    "amount": 1,
+                    "source": {
+                        "name": "magic",
+                        "bypasses_armor": false,
+                        "unblockable": true,
+                        "magic": true
+                    }
+                }
+            }
+        ]
+    }
+}

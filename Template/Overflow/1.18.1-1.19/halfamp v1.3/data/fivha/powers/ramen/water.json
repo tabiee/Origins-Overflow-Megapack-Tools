@@ -1,0 +1,81 @@
+{
+	"name": "Waterlogged",
+	"description": "Spending too much time in water causes you to slow down and slowly drains your hunger.",
+	"type": "origins:multiple",
+	"nuggets": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1200,
+		"start_value": 1200,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 3,
+			"condition": {
+				"type": "origins:fluid_height",
+				"fluid": "water",
+				"comparison": ">",
+				"compare_to": 0
+			}
+		}
+	},
+	"drain": {
+		"condition": {
+			"type": "origins:fluid_height",
+			"fluid": "water",
+			"comparison": ">",
+			"compare_to": 0
+		},
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_nuggets",
+			"change": -5
+		}
+	},
+	"gain": {
+		"condition": {
+			"type": "origins:fluid_height",
+			"fluid": "water",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_nuggets",
+			"change": 25
+		}
+	},
+	"slownstuff": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_nuggets",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "slowness",
+						"duration": 100,
+						"amplifier": 0,
+						"show_particles": false,
+						"show_icon": false
+					}
+				},
+				{
+					"type": "origins:exhaust",
+					"amount": 0.8
+				}
+			]
+		}
+	}
+}

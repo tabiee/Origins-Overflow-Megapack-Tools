@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"nixo:apex/roar",
+		"nixo:apex/glow",
+		"nixo:apex/pickup",
+		"nixo:apex/dmg",
+		"nixo:apex/carnivore",
+		"nixo:apex/size",
+		"nixo:apex/tail"
+	],
+	"icon": "minecraft:prismarine_shard",
+	"impact": 3,
+	"name": "§3§l§oApex Predator",
+	"description": "Large and powerful beast with a mighty roar."
+}

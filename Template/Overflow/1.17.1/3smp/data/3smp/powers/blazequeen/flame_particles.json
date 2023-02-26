@@ -1,0 +1,14 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "particle minecraft:flame ~ ~ ~ 1 1 1 0 1 normal"
+    },
+    "interval": 3,
+	"hidden": true,    "condition": {
+        "type": "origins:status_effect",
+        "inverted": true,
+        "effect": "invisibility"
+    }
+}

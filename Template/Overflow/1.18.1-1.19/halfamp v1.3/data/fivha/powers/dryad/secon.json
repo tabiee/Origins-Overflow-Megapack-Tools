@@ -1,0 +1,20 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:resource",
+        "resource": "*:dryad/waterbar_bubbles",
+        "comparison": ">",
+        "compare_to": 99
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:change_resource",
+        "resource": "*:dryad/waterbar_bubbles",
+        "change": -100
+    },
+    "cooldown": 900,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": "secondary"
+}

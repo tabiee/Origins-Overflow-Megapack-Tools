@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"dark:ice/freeze",
+		"dark:ice/model",
+		"dark:ice/firedmg",
+		"dark:ice/particles",
+		"dark:ice/tagger"
+	],
+	"icon": "minecraft:blue_ice",
+	"impact": 3,
+	"name": "Iceborn",
+	"description": "The cold cousin of the Blazeborn, everything around them starts to freeze."
+}

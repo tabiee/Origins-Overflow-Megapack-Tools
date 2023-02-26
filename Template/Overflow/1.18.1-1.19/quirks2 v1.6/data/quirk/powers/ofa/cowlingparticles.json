@@ -1,0 +1,22 @@
+{
+    "type": "origins:action_over_time",
+    "name": "Cowling",
+    "description": "Taking Damage will allow you to activate cowling, the more damage you take the more intense cowling gets. When active you won't take fall damage",
+    "hidden": false,
+    "interval": 10,
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+    {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "particle minecraft:enchanted_hit ~ ~1 ~ 0.3 0.5 0.3 1 15"
+    }
+ ]
+},
+    "condition": {
+            "type": "origins:relative_health",
+            "comparison": "<",
+            "compare_to": 0.81
+    }
+}

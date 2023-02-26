@@ -1,0 +1,83 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "minecraft:resistance",
+                    "duration": 0,
+                    "amplifier": 50,
+                    "show_icon": false,
+                    "show_particles": false
+                }
+            },
+            {
+                "type": "origins:add_velocity",
+                "z": 2,
+                "y": 2,
+                "space": "local"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "playsound minecraft:entity.generic.explode @a[distance=..10] ~ ~ ~ 2 0.7",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:dust 0.4 1 1 1 ~ ~ ~ 0.4 0.1 0.4 1 75 force",
+                "permission_level": 4
+            },
+        {
+          "type": "origins:delay",
+          "ticks": 5,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:dust 0.4 1 1 1 ~ ~ ~ 0.4 0.1 0.4 1 75 force",
+            "permission_level": 4
+          }
+        },
+        {
+          "type": "origins:delay",
+          "ticks": 10,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:dust 0.4 1 1 1 ~ ~ ~ 0.4 0.1 0.4 1 75 force",
+            "permission_level": 4
+          }
+        },
+        {
+          "type": "origins:delay",
+          "ticks": 15,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:dust 0.4 1 1 1 ~ ~ ~ 0.4 0.1 0.4 1 75 force",
+            "permission_level": 4
+          }
+        },
+        {
+          "type": "origins:delay",
+          "ticks": 20,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:dust 0.4 1 1 1 ~ ~ ~ 0.4 0.1 0.4 1 75 force",
+            "permission_level": 4
+          }
+        }
+        ]
+    },
+    "cooldown": 15,
+	"hud_render": {
+	  "should_render":true,
+	  "sprite_location":"origins:textures/gui/resource_bar.png",
+	  "bar_index": 4
+	},
+    "key": {
+        "key": "key.origins.senary_active",
+        "continuous": false
+    },
+	"name": "Ice Ascension",
+	"description": "Summon platforms of ice to send yourself foward",
+    "hidden": false
+}

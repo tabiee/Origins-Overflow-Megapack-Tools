@@ -1,0 +1,15 @@
+{
+	"name": "§4§nWhat are you?",
+	"description": "Villagers distrust you and refuse to trade.",
+	"type": "origins:multiple",
+	"use": {
+        "type": "origins:prevent_entity_use",
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "villager"
+            }
+        }
+    }
+}

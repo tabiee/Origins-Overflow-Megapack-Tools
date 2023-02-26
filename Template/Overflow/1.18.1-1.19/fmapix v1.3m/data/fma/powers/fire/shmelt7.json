@@ -1,0 +1,210 @@
+{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:if_else",
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "minecraft:deepslate_bricks"
+				}
+			}
+		},
+		"if_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @s minecraft:deepslate_bricks 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "give @s minecraft:cracked_deepslate_bricks 1",
+					"permission_level": 4
+				}
+			]
+		},
+		"else_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:deepslate_tiles"
+					}
+				}
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "clear @s minecraft:deepslate_tiles 1",
+						"permission_level": 4
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cracked_deepslate_tiles 1",
+						"permission_level": 4
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:cactus"
+						}
+					}
+				},
+				"if_action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "clear @s minecraft:cactus 1",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "give @s minecraft:green_dye 1",
+							"permission_level": 4
+						}
+					]
+				},
+				"else_action": {
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:equipped_item",
+						"equipment_slot": "mainhand",
+						"item_condition": {
+							"type": "origins:ingredient",
+							"ingredient": {
+								"tag": "minecraft:logs"
+							}
+						}
+					},
+					"if_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "clear @s #minecraft:logs 1",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "give @s minecraft:charcoal 1",
+								"permission_level": 4
+							}
+						]
+					},
+					"else_action": {
+						"type": "origins:if_else",
+						"condition": {
+							"type": "origins:equipped_item",
+							"equipment_slot": "mainhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "minecraft:chorus_fruit"
+								}
+							}
+						},
+						"if_action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "origins:execute_command",
+									"command": "clear @s minecraft:chorus_fruit 1",
+									"permission_level": 4
+								},
+								{
+									"type": "origins:execute_command",
+									"command": "give @s minecraft:popped_chorus_fruit 1",
+									"permission_level": 4
+								}
+							]
+						},
+						"else_action": {
+							"type": "origins:if_else",
+							"condition": {
+								"type": "origins:equipped_item",
+								"equipment_slot": "mainhand",
+								"item_condition": {
+									"type": "origins:ingredient",
+									"ingredient": {
+										"item": "minecraft:wet_sponge"
+									}
+								}
+							},
+							"if_action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "clear @s minecraft:wet_sponge 1",
+										"permission_level": 4
+									},
+									{
+										"type": "origins:execute_command",
+										"command": "give @s minecraft:sponge 1",
+										"permission_level": 4
+									}
+								]
+							},
+							"else_action": {
+								"type": "origins:if_else",
+								"condition": {
+									"type": "origins:equipped_item",
+									"equipment_slot": "mainhand",
+									"item_condition": {
+										"type": "origins:ingredient",
+										"ingredient": {
+											"item": "minecraft:sea_pickle"
+										}
+									}
+								},
+								"if_action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:execute_command",
+											"command": "clear @s minecraft:sea_pickle 1",
+											"permission_level": 4
+										},
+										{
+											"type": "origins:execute_command",
+											"command": "give @s minecraft:lime_dye 1",
+											"permission_level": 4
+										}
+									]
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"name": "Molten Hands",
+	"description": "You can smelt ores in your hands.",
+	"hidden": true,
+	"cooldown": 1,
+	"key": {
+		"key": "secondary",
+		"continuous": true
+	},
+	"hud_render": {
+		"should_render": false
+	}
+}

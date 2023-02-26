@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"nixo:cow/cure",
+		"nixo:cow/ew",
+		"nixo:cow/butt",
+		"nixo:cow/hp",
+		"nixo:cow/veggie",
+		"nixo:cow/tagger"
+	],
+	"icon": "minecraft:cow_spawn_egg",
+	"impact": 3,
+	"name": "§e§l§oCow",
+	"description": "You're... literally a cow. What."
+}

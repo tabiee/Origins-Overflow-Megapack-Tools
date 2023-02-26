@@ -1,0 +1,17 @@
+{
+    "name": "Withered",
+    "description": "You only have 6 hearts.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": -8
+        },
+        {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 4
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Unnatural Limbs",
+	"description": "You do slightly more damage, has more reach, and jumps 1 block higher",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "reach-entity-attributes:reach",
+            "operation": "addition",
+            "value": 1.5,
+            "name": "Extra Reach block reach"
+        },
+        {
+            "attribute": "reach-entity-attributes:attack_range",
+            "operation": "addition",
+            "value": 1.5,
+            "name": "Extra Reach entity reach"
+        }
+    ]
+}

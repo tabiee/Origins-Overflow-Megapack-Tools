@@ -1,0 +1,120 @@
+{
+    "name": "Overcharge",
+    "description": "Activating Overcharge will boost you at the cost of draining your charge. If your charge drains to zero while active, you will suffer Blindness and Weakness for a short time. Does not drain Battery.",
+    "type": "origins:multiple",
+    "toggle": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+    "effects": {
+        "condition": {
+            "type": "origins:resource",
+			"resource": "*:*_toggle",
+			"comparison": "==",
+			"compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "haste",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "speed",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "strength",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "show_particles": false,
+                            "show_icon": false
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle glow ~ ~ ~ 0.5 1 0.5 0.2 50",
+                    "permission_level": 4
+                }
+            ]
+        }
+    },
+    "drain": {
+        "condition": {
+            "type": "origins:resource",
+			"resource": "*:*_toggle",
+			"comparison": "==",
+			"compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:star/charge_nuggets",
+            "change": -10
+        }
+    },
+    "weak": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+			        "resource": "*:*_toggle",
+			        "comparison": "==",
+			        "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:star/charge_nuggets",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "weakness",
+                            "duration": 200,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "blindness",
+                            "duration": 200,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": false
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

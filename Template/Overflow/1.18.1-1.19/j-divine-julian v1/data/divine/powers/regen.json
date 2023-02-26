@@ -1,0 +1,16 @@
+{
+    "name": "§2§nLifeblood",
+    "description": "You have Ichor mixed in your veins.",
+    "type": "origins:action_over_time",
+    "interval": 15,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "regeneration",
+            "duration": 100,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    }
+}

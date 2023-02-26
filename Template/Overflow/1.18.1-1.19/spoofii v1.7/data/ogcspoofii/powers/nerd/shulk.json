@@ -1,0 +1,10 @@
+{
+  "type": "origins:inventory",
+  "name": "Extra Pockets",
+  "description": "You have more inventory space.",
+  "drop_on_death": false,
+  "key": {
+    "key": "ternary",
+    "continuous": false
+  }
+}

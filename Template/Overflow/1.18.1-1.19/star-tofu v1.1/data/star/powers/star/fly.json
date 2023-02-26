@@ -1,0 +1,129 @@
+{
+	"name": "§5§nDisplace",
+	"description": "You can dismantle your body into a sphere and fly around, however you will lose some stardust while active.",
+	"type": "origins:multiple",
+	"tog": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"swim": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:power_active",
+					"power": "*:star/fly_tog"
+				}
+			]
+		},
+		"type": "origins:swimming"
+	},
+	"invis": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "*:star/fly_tog"
+				}
+			]
+		},
+		"type": "origins:invisibility",
+		"render_armor": false
+	},
+	"fx": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "*:star/fly_tog"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 2,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "particle dust 0.000 1.000 0.765 3 ~ ~1 ~ 0.1 0.1 0.1 1 5 normal",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle wax_off ~ ~1 ~ 0.3 0.3 0.3 0 1",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"fx2": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "*:star/fly_tog"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 7,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.amethyst_block.chime",
+					"volume": 1,
+					"pitch": 1
+				}
+			]
+		}
+	},
+	"drain": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "*:star/fly_tog"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:star/dust_speck",
+					"change": -20
+				}
+			]
+		}
+	}
+}

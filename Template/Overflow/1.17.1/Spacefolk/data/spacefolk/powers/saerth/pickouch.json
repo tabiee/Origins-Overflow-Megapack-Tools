@@ -1,0 +1,19 @@
+{
+    "name": "Right where it hurts",
+    "description": "Pickaxes do more damage to you.",
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "spacefolk:pickaxes"
+            }
+        }
+    },
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+        "operation": "addition",
+        "value": 4
+    }
+}

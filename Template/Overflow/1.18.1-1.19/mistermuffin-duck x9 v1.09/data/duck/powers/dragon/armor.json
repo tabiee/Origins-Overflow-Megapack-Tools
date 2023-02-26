@@ -1,0 +1,49 @@
+{
+    "name": "§6§nDragon Scales§r",
+    "description": "You naturally have 3 points of armor but you can't use a shield or wear netherite armor.",
+    "type": "origins:multiple",
+    "att": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 6
+        }
+    },
+    "arm": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "netherite_helmet"
+            }
+        },
+        "chest": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "netherite_chestplate"
+            }
+        },
+        "legs": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "netherite_leggings"
+            }
+        },
+        "feet": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "netherite_boots"
+            }
+        }
+    },
+    "shield": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "shield"
+            }
+        }
+    }
+}

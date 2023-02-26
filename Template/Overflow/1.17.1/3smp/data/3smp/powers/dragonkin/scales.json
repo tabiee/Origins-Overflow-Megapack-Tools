@@ -1,0 +1,10 @@
+{
+    "type": "origins:attribute",
+    "modifier": {
+        "operation": "addition",
+        "name": "generic.armor",
+        "value": 3,
+		"attribute": "minecraft:generic.armor"
+    },
+    "hidden": true
+}

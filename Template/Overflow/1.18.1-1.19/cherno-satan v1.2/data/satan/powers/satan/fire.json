@@ -1,0 +1,62 @@
+{
+    "name": "§2§lFire Affinity",
+    "description": "You are immune to fire, in fact, you are healed by it.",
+    "type": "origins:multiple",
+    "imm": {
+        "type": "origins:fire_immunity"
+    },
+    "heal": {
+		"condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "fire"
+                            },
+                            {
+                                "type": "origins:block",
+                                "block": "soul_fire"
+                            }
+                        ]
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "lava",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "magma_block"
+                    }
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 40,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:heal",
+                    "amount": 1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 0.812 0.000 0.000 1 ~ ~ ~ 0.2 1 0.2 0 50",
+                    "permission_level": 4
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "name": "§1§nYummy Carrots",
+    "description": "Carrots and golden carrots restore more hunger, additionally they give you night vision and regeneration effects.",
+    "type": "origins:multiple",
+    "carr": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "carrot"
+            }
+        },
+        "food_modifier": {
+            "operation": "addition",
+            "value": 3
+        },
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": 3
+        },
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "night_vision",
+                "duration": 600,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        }
+    },
+    "goldcarr": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "golden_carrot"
+            }
+        },
+        "food_modifier": {
+            "operation": "addition",
+            "value": 3
+        },
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": 3
+        },
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "night_vision",
+                    "duration": 600,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": false
+                },
+                {
+                    "effect": "regeneration",
+                    "duration": 200,
+                    "amplifier": 1,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            ]
+        }
+    }
+}

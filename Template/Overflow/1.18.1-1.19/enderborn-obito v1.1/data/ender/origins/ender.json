@@ -1,0 +1,25 @@
+{
+	"powers": [
+		"ender:point",
+		"origins:throw_ender_pearl",
+		"ender:silky",
+		"ender:desc",
+		"ender:arrows",
+		"ender:nv",
+		"ender:spawn",
+		"ender:eat",
+		"ender:mobs",
+		"ender:size",
+		"origins:water_vulnerability",
+		"origins:pumpkin_hate",
+		"origins:extra_reach",
+		"ender:grant",
+		"ender:teamer",
+		"origins:ender_particles",
+		"origins:damage_from_potions"
+	],
+	"icon": "minecraft:ender_eye",
+	"impact": 3,
+	"name": "§3§l§oEnderborn",
+	"description": "A true descendant of the End."
+}

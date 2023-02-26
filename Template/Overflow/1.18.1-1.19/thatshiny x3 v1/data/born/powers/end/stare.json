@@ -1,0 +1,75 @@
+{
+    "name": "Adapted Stare",
+    "description": "Looking at endermen will not enrage them, but if hit, they will remain aggressive for a minute.",
+    "type": "origins:multiple",
+    "team": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join endbound @e[tag=!aggro,type=enderman,distance=..100]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[tag=aggro,distance=..100]"
+                }
+            ]
+        }
+    },
+    "remove": {
+        "type": "origins:action_over_time",
+        "interval": 1200,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @e remove aggro"
+                }
+            ]
+        }
+    },
+    "aggro": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "tag @s add aggro"
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "teamer": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team add endbound",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team join endbound @s",
+					"permission_level": 4
+				}
+			]
+		},
+		"execute_chosen_when_orb": true,
+		"entity_action_lost": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team remove endbound",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

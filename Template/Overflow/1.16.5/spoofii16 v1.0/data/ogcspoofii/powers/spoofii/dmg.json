@@ -1,0 +1,21 @@
+{
+    "name": "Arrow and Fall",
+    "description": "You take more damage from arrows and falling.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:projectile"
+            },
+            {
+                "type": "origins:name",
+                "name": "fall"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": 2
+    }
+}

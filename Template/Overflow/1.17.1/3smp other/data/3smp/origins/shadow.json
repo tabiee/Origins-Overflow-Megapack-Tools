@@ -1,0 +1,19 @@
+{
+    "impact": 3,
+    "unchoosable": false,
+    "powers": [
+        "3smp:shadow/spooky",
+        "3smp:shadow/nightv",
+        "3smp:shadow/dark",
+        "3smp:shadow/particles",
+        "3smp:shadow/effect_toggle",
+		"3smp:shadow/glowergy",
+		"3smp:shadow/gooplegs",
+		"3smp:shadow/screech",
+		"3smp:shadow/color",
+		"3smp:shadow/skinny"
+    ],
+    "name": "§0§l§oShadow",
+    "description": "Angelic being, fallen and corrupted.",
+	"icon": "betterend:murkweed"
+}

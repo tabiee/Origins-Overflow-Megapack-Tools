@@ -1,0 +1,46 @@
+{
+    "name": "The Villain",
+    "description": "Hostile mobs ignore you until you attack them, if hit, they will remain aggressive for a minute.",
+    "type": "origins:multiple",
+    "team": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join brain @e[tag=!aggro,type=#brain:hostiles,distance=..100]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[tag=aggro,distance=..100]"
+                }
+            ]
+        }
+    },
+    "remove": {
+        "type": "origins:action_over_time",
+        "interval": 1200,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @e remove aggro"
+                }
+            ]
+        }
+    },
+    "aggro": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "tag @s add aggro"
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

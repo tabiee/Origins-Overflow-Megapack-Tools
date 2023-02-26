@@ -1,0 +1,320 @@
+{
+	"type": "origins:multiple",
+	"name": "Wind Shield",
+	"description": "Block all incoming projectiles (your own projectiles will also be absorbed",
+	"defense_points": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 15,
+		"start_value": 15,
+  "hud_render": {
+    "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+    "bar_index": 0
+  }
+	},
+	"particle_setup": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {	
+			"type": "origins:and",
+			"actions": [
+				{	
+					"type": "origins:execute_command",
+					"command": "kill @e[type=minecraft:armor_stand, tag=pointdefense]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,Small:1b,Marker:1b,Rotation:[6f],Tags:[\"pointdefense\"]}",
+					"permission_level": 4
+				}
+			]
+		},
+		"entity_action_respawned": {	
+			"type": "origins:and",
+			"actions": [
+				{	
+					"type": "origins:execute_command",
+					"command": "/kill @e[type=minecraft:armor_stand, tag=pointdefense]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,Small:1b,Marker:1b,Rotation:[6f],Tags:[\"pointdefense\"]}",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"point_defense_main": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=arrow, distance=0..3, nbt={inGround:0b}] at @e[type=arrow, distance=0..3, nbt={inGround:0b}] run particle minecraft:end_rod ~ ~ ~ 0.1 0.1 0.1 0.1 10 force",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=arrow, distance=0..3, nbt={inGround:0b}] at @e[type=arrow, distance=0..3, nbt={inGround:0b}] run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=arrow, distance=0..3, nbt={inGround:0b}] run resource change @s quirk:whirlwind/point_defense_defense_points -3",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=arrow, distance=0..3, nbt={inGround:0b}] run kill @e[type=arrow, distance=0..3, nbt={inGround:0b}]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=spectral_arrow, distance=0..3, nbt={inGround:0b}] at @e[type=spectral_arrow, distance=0..3, nbt={inGround:0b}] run particle minecraft:end_rod ~ ~ ~ 0.1 0.1 0.1 0.1 10 force",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=spectral_arrow, distance=0..3, nbt={inGround:0b}] at @e[type=spectral_arrow, distance=0..3, nbt={inGround:0b}] run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=spectral_arrow, distance=0..3, nbt={inGround:0b}] run resource change @s quirk:whirlwind/point_defense_defense_points -3",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=spectral_arrow, distance=0..3, nbt={inGround:0b}] run kill @e[type=spectral_arrow, distance=0..3, nbt={inGround:0b}]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=snowball, distance=0..3] at @e[type=snowball, distance=0..3] run particle minecraft:end_rod ~ ~ ~ 0.1 0.1 0.1 0.1 10 force",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=snowball, distance=0..3] at @e[type=snowball, distance=0..3] run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=snowball, distance=0..3] run resource change @s quirk:whirlwind/point_defense_defense_points -3",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=snowball, distance=0..3] run kill @e[type=snowball, distance=0..3]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=egg, distance=0..3] at @e[type=egg, distance=0..3] run particle minecraft:end_rod ~ ~ ~ 0.1 0.1 0.1 0.1 10 force",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=egg, distance=0..3] at @e[type=egg, distance=0..3] run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=egg, distance=0..3] run resource change @s quirk:whirlwind/point_defense_defense_points -3",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=egg, distance=0..3] run kill @e[type=egg, distance=0..3]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=llama_spit, distance=0..3] at @e[type=llama_spit, distance=0..3] run particle minecraft:end_rod ~ ~ ~ 0.1 0.1 0.1 0.1 10 force",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=llama_spit, distance=0..3] at @e[type=llama_spit, distance=0..3] run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=llama_spit, distance=0..3] run resource change @s quirk:whirlwind/point_defense_defense_points -3",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=llama_spit, distance=0..3] run kill @e[type=llama_spit, distance=0..3]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=fireball, distance=0..3] at @e[type=fireball, distance=0..3] run particle minecraft:end_rod ~ ~ ~ 0.1 0.1 0.1 0.1 10 force",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=fireball, distance=0..3] at @e[type=fireball, distance=0..3] run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=fireball, distance=0..3] run resource change @s quirk:whirlwind/point_defense_defense_points -3",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=fireball, distance=0..3] run kill @e[type=fireball, distance=0..3]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=small_fireball, distance=0..3] at @e[type=small_fireball, distance=0..3] run particle minecraft:end_rod ~ ~ ~ 0.1 0.1 0.1 0.1 10 force",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=small_fireball, distance=0..3] at @e[type=small_fireball, distance=0..3] run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=small_fireball, distance=0..3] run resource change @s quirk:whirlwind/point_defense_defense_points -3",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=small_fireball, distance=0..3] run kill @e[type=small_fireball, distance=0..3]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=wither_skull, distance=0..3] at @e[type=wither_skull, distance=0..3] run particle minecraft:end_rod ~ ~ ~ 0.1 0.1 0.1 0.1 10 force",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=wither_skull, distance=0..3] at @e[type=wither_skull, distance=0..3] run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=wither_skull, distance=0..3] run resource change @s quirk:whirlwind/point_defense_defense_points -3",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=wither_skull, distance=0..3] run kill @e[type=wither_skull, distance=0..3]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=dragon_fireball, distance=0..3] at @e[type=dragon_fireball, distance=0..3] run particle minecraft:end_rod ~ ~ ~ 0.1 0.1 0.1 0.1 10 force",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=dragon_fireball, distance=0..3] at @e[type=dragon_fireball, distance=0..3] run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=dragon_fireball, distance=0..3] run resource change @s quirk:whirlwind/point_defense_defense_points -3",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=dragon_fireball, distance=0..3] run kill @e[type=dragon_fireball, distance=0..3]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=shulker_bullet, distance=0..3] at @e[type=shulker_bullet, distance=0..3] run particle minecraft:end_rod ~ ~ ~ 0.1 0.1 0.1 0.1 10 force",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=shulker_bullet, distance=0..3] at @e[type=shulker_bullet, distance=0..3] run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=shulker_bullet, distance=0..3] run resource change @s quirk:whirlwind/point_defense_defense_points -3",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @e[type=shulker_bullet, distance=0..3] run kill @e[type=shulker_bullet, distance=0..3]",
+					"permission_level": 4
+				}
+			]
+			
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "quirk:whirlwind/point_defense_defense_points",
+					"comparison": "!=",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:power_active",
+					"power": "quirk:whirlwind/point_defense_point_defense_toggle"
+				}
+			]
+		},
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute at @e[type=armor_stand, tag=pointdefense] rotated as @e[type=armor_stand, tag=pointdefense] run particle end_rod ^1 ^2.1 ^ .2 .2 .2 .1 25 force @a",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=armor_stand, tag=pointdefense] at @s run playsound minecraft:entity.firework_rocket.large_blast_far master @p ~ ~ ~ 1",
+					"permission_level": 4
+				}
+			]
+		},
+		"falling_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute at @e[type=armor_stand, tag=pointdefense] rotated as @e[type=armor_stand, tag=pointdefense] run particle end_rod ^1 ^2.1 ^ .2 .2 .2 .1 25 force @a",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=armor_stand, tag=pointdefense] at @s run playsound minecraft:entity.firework_rocket.blast master @p ~ ~ ~ 1",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"point_defense_toggle": {
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": {
+			"key": "key.origins.senary_active",
+			"continuous": false
+		}
+	},
+	"point_defense_regenerate": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "quirk:whirlwind/point_defense_defense_points",
+			"change": 1
+		},
+		"interval": 200
+	}
+}

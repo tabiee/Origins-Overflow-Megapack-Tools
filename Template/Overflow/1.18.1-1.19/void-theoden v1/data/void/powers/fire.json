@@ -1,0 +1,27 @@
+{
+    "name": "§4§nDistaste for Heat§r",
+    "description": "All fire damage is doubled and you die instantly in the Nether.",
+    "type": "apoli:multiple",
+    "dmg": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:fire"
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "act": {
+        "condition": {
+            "type": "apoli:dimension",
+            "dimension": "minecraft:the_nether"
+        },
+        "type": "apoli:action_over_time",
+        "interval": 100,
+        "entity_action": {
+            "type": "apoli:execute_command",
+            "command": "kill @s"
+        }
+    }
+}

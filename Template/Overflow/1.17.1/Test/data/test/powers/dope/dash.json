@@ -1,0 +1,59 @@
+{
+    "type": "origins:multiple",
+    "nuggets": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 7,
+        "start_value": 7,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 3,
+            "condition": {
+                "type": "origins:resource",
+                "inverted": false,
+                "comparison": "<",
+                "compare_to": 7,
+                "resource": "*:*_nuggets"
+            }
+        }
+    },
+    "dash": {
+        "type": "origins:active_self",
+        "cooldown": 4,
+        "key": "primary",
+        "hud_render": {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:add_velocity",
+                    "space": "velocity_horizontal_normalized",
+                    "set": false,
+                    "z": 7
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_nuggets",
+                    "change": -1
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:on_block",
+            "inverted": false
+        }
+    },
+    "gain": {
+        "type": "origins:action_over_time",
+        "interval": 60,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_nuggets",
+            "change": 1
+        }
+    }
+}

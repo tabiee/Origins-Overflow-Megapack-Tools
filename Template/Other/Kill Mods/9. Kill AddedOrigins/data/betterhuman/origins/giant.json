@@ -1,0 +1,18 @@
+{
+    "powers": [
+        "betterhuman:super_hydrophobic_legs",
+        "origins:strong_arms",
+        "betterhuman:giant_sized",
+        "betterhuman:super_strength",
+        "origins:fall_immunity",
+        "origins:no_shield",
+        "betterhuman:giantsize"
+    ],
+    "icon": "minecraft:blackstone",
+    "order": 20,
+    "impact": 3,
+    "name": "Giant",
+    "description": "A horrifying creature to deal with",
+    "loading_priority": 100,
+    "unchoosable": true
+}

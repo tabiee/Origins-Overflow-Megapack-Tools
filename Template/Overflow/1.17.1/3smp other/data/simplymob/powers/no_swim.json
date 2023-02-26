@@ -1,0 +1,18 @@
+{
+    "type": "origins:multiple",
+    "ignore_water": {
+        "type": "origins:ignore_water"
+    },
+        "modifier": {
+            "name": "Slowness in water",
+            "attribute": "minecraft:generic.movement_speed",
+            "value": -0.4,
+            "operation": "multiply_total",
+            "slow_falling_in_water": {
+                "type": "origins:modify_falling",
+                "velocity": 0.024
+            }
+        },
+    "name": "No Swim",
+    "description": "You can't swim."
+}

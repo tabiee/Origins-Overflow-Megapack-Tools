@@ -1,0 +1,35 @@
+{
+    "name": "8-bit - Bigger Pockets",
+    "description": "Open an extra 9-Slot inventory. Requires The End.. Again.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:advancement",
+                "advancement": "adventure/sniper_duel"
+            },
+            {
+                "type": "origins:advancement",
+                "advancement": "story/shiny_gear"
+            },
+            {
+                "type": "origins:advancement",
+                "advancement": "adventure/hero_of_the_village"
+            },
+            {
+                "type": "origins:advancement",
+                "advancement": "end/respawn_dragon"
+            },
+            {
+                "type": "origins:resource",
+                "resource": "*:pixel_swapper_bit",
+                "comparison": "==",
+                "compare_to": 3
+            }
+        ]
+    },
+    "type": "origins:inventory",
+    "key": {
+        "key": "primary"
+    }
+}

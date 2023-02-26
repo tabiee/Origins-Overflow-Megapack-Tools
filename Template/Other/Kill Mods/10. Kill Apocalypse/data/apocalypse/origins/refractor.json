@@ -1,0 +1,40 @@
+{
+    "powers": [
+        "apocalypse:refractor/refractor_callback",
+        "apocalypse:refractor/description_crystalline_structure",
+        "apocalypse:refractor/description_brittle",
+        "apocalypse:refractor/description_purity_of_ideals",
+        "apocalypse:refractor/description_inorganic",
+        "apocalypse:refractor/description_blinding_glare",
+        "apocalypse:refractor/description_trapped_light",
+        "apocalypse:refractor/refractor_trapped_light_charge",
+        "apocalypse:refractor/refractor_passives",
+        "apocalypse:refractor/refractor_dash",
+        "apocalypse:refractor/description_ftl_blink",
+        "apocalypse:refractor/description_magic_mirror",
+        "apocalypse:refractor/description_mirror_gates",
+        "apocalypse:refractor/refractor_attunement_teleport",
+        "apocalypse:refractor/refractor_resource_dashing",
+        "apocalypse:refractor/refractor_resource_select",
+        "apocalypse:refractor/refractor_secondaries",
+        "apocalypse:refractor/refractor_cycle",
+        "apocalypse:refractor/refractor_veil_of_illusions",
+        "apocalypse:refractor/description_veil_of_illusions",
+        "apocalypse:refractor/description_reflect_item",
+        "apocalypse:refractor/description_reflect_injury",
+        "apocalypse:refractor/refractor_reflect_injury",
+        "apocalypse:refractor/refractor_reflect_injury_left_click",
+        "apocalypse:refractor/description_tricks_of_the_light",
+        "apocalypse:refractor/credits"
+    ],
+    "icon": {
+        "item": "minecraft:amethyst_shard",
+        "tag": "{CustomModelData:1}"
+    },
+    "unchoosable": true,
+    "order": 10,
+    "impact": 3,
+    "name": "Refractor",
+    "description": "A being of crystals and gems, able to manipulate light to create illusions and to travel faster than light.",
+    "loading_priority": 100
+}

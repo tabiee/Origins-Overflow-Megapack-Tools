@@ -1,0 +1,20 @@
+{
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 3,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[tag=swrd] at @s run particle glow ~ ~0.2 ~ 0.7 0.7 0.7 0 1",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[tag=swrd] at @s run particle soul_fire_flame ~ ~0.2 ~ 0.5 0.5 0.5 0 1",
+                "permission_level": 4
+            }
+        ]
+    }
+}

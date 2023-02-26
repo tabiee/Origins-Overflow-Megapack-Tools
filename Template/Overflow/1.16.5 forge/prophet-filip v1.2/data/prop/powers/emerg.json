@@ -1,0 +1,184 @@
+{
+    "name": "§c§nEmergency Mode§r",
+    "description": "When you enter this mode, you are locked in it. You gain Regeneration II, Resistance X, Slowness III, but are unable to deal damage. After leaving this mode, all modes go on cooldown for 5 mins.",
+    "type": "origins:multiple",
+    "enter": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 3
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle crimson_spore ~ ~1 ~ 0.5 0.5 0.5 1 75"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.power_select",
+                    "volume": 1,
+                    "pitch": 1.5
+                }
+            ]
+        },
+        "falling_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle warped_spore ~ ~1 ~ 0.5 0.5 0.5 1 10"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.deactivate",
+                    "volume": 1,
+                    "pitch": 0.5
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:modes_pick",
+                    "change": -3,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:power_cd2"
+                }
+            ]
+        }
+    },
+    "fx": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 40,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "regeneration",
+                            "duration": 40,
+                            "amplifier": 1,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "resistance",
+                            "duration": 100,
+                            "amplifier": 9,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "weakness",
+                            "duration": 100,
+                            "amplifier": 9,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "slowness",
+                            "duration": 100,
+                            "amplifier": 2,
+                            "show_particles": false,
+                            "show_icon": true
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "act": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 3
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:power_bar",
+                    "change": -8,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "act2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 3
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:power_bar",
+                    "change": -4,
+                    "operation": "add"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"magnus:farm/prevent",
+		"magnus:king/crown",
+		"magnus:warr/attri",
+		"magnus:farm/cook"
+	],
+	"icon": "minecraft:netherite_helmet",
+	"impact": 1,
+	"order": 3,
+	"name": "§f§l§oWarrior",
+	"description": "You are highly skilled in combat."
+}

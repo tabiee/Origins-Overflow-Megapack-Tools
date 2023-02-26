@@ -1,0 +1,97 @@
+{
+	"name": "§c§nCan't Be Seen",
+	"description": "You've been cursed to possess a statue, therefore you can't be able to move at all.. or can you?",
+	"type": "origins:multiple",
+	"themeat": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:angel/lightsout_gone",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute anchored eyes if entity @e[tag=watcher,distance=..30,sort=nearest] run execute facing entity @e[tag=watcher,distance=..30,sort=nearest] eyes run function angel:look",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=watcher,distance=..30,sort=nearest] at @s if entity @e[tag=see] run execute as @e[tag=watcher,distance=..30,sort=nearest] at @s facing entity @e[tag=statue,limit=1] feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.92] at @p[tag=statue] run execute as @p[tag=statue] at @s run execute unless score count2 entityCount matches 3.. run summon area_effect_cloud ~ ~ ~ {Particle:\"block air\",Radius:0.1f,Duration:3,Tags:[\"confirm\"]}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "tp @e[tag=see] ^ ^ ^ ~ ~",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "tp @e[tag=confirm] ^ ^ ^ ~ ~",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute rotated as @e[tag=see] if entity @e[tag=confirm] run tp @s @e[tag=see,limit=1]",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"testfor": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=see]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				},
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=confirm]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:motion 0 @s",
+			"permission_level": 4
+		},
+		"falling_action": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:motion 1 @s",
+			"permission_level": 4
+		}
+	},
+	"whocansee": {
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "tag @e[type=!#angel:noeyes,tag=!statue] add watcher",
+			"permission_level": 4
+		}
+	}
+}

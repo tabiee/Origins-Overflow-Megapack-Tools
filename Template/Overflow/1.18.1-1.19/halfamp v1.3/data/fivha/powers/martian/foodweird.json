@@ -1,0 +1,100 @@
+{
+	"name": "Unearthly Diet",
+	"description": "You don't normally eat food from earth, different food types seem to have varying effects.",
+	"type": "origins:multiple",
+	"cooked": {
+		"type": "origins:action_on_item_use",
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "regeneration",
+				"duration": 600,
+				"amplifier": 0,
+				"show_particles": true,
+				"show_icon": true
+			}
+		},
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "fivha:cookedmeat"
+			}
+		}
+	},
+	"salad": {
+		"type": "origins:action_on_item_use",
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "haste",
+				"duration": 600,
+				"amplifier": 0,
+				"show_particles": true,
+				"show_icon": true
+			}
+		},
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "fivha:salad"
+			}
+		}
+	},
+	"baked": {
+		"type": "origins:action_on_item_use",
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "speed",
+				"duration": 600,
+				"amplifier": 0,
+				"show_particles": true,
+				"show_icon": true
+			}
+		},
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "fivha:baked"
+			}
+		}
+	},
+	"carrot": {
+		"type": "origins:action_on_item_use",
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "night_vision",
+				"duration": 1200,
+				"amplifier": 0,
+				"show_particles": true,
+				"show_icon": true
+			}
+		},
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "carrot"
+			}
+		}
+	},
+	"golden": {
+		"type": "origins:action_on_item_use",
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "night_vision",
+				"duration": 4800,
+				"amplifier": 0,
+				"show_particles": true,
+				"show_icon": true
+			}
+		},
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "golden_carrot"
+			}
+		}
+	}
+}

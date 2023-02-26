@@ -1,0 +1,29 @@
+{
+    "name": "§e§nUncharted Lands",
+    "description": "When in the end, due to it being a unfamiliar realm, even before you were exiled, you would still have foggy memories of the place. You gain weakness, as well as speed.",
+    "condition": {
+        "type": "origins:dimension",
+        "dimension": "minecraft:the_end"
+    },
+    "type": "origins:action_over_time",
+    "interval": 25,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "weakness",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "speed",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ]
+    }
+}

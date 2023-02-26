@@ -1,0 +1,41 @@
+{
+    "name": "§6§nHot Surface",
+    "description": "Entities that you hit and that hit you have a small chance to catch on fire.",
+    "type": "apoli:multiple",
+    "on": {
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:set_on_fire",
+                "duration": 6
+            }
+        },
+        "damage_condition": {
+            "inverted": true,
+            "type": "origins:projectile"
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "when": {
+        "type": "origins:action_when_hit",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:set_on_fire",
+                "duration": 6
+            }
+        },
+        "damage_condition": {
+            "inverted": true,
+            "type": "origins:projectile"
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

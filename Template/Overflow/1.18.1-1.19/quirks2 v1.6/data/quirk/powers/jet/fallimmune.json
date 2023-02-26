@@ -1,0 +1,15 @@
+{
+	"type": "origins:invulnerability",
+	"damage_condition": {
+		"type": "origins:name",
+		"name": "fall"
+	},
+	"condition": {
+		"type": "origins:fall_distance",
+		"comparison": "<=",
+		"compare_to": 100
+	},
+    "hidden": true,
+    "name": "Fall immunity",
+    "description": "You take no fall damage if it's a less than a 100 block fall."
+}

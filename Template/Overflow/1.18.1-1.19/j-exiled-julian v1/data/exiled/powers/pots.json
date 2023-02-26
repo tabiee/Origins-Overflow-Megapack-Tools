@@ -1,0 +1,17 @@
+{
+    "name": "§4§nMagic Affinity",
+    "description": "Potions? Bahh, what use do they serve to you? You already can do everything they could grant you! No need to drink such silly things.",
+    "condition": {
+        "type": "origins:resource",
+        "resource": "exiled:forms_tog",
+        "comparison": "==",
+        "compare_to": 0
+    },
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "potion"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "origins:action_over_time",
+    "name": "Better deals",
+    "description": "You are practiced at bargaining and get the best trades from villagers",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "duration": 500,
+            "is_ambient": false,
+            "show_particles": false,
+            "show_icon": false,
+            "effect": "minecraft:hero_of_the_village",
+            "amplifier": 1
+        }
+    },
+    "interval": 500
+}

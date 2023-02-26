@@ -1,0 +1,23 @@
+{
+	"name": "§1§nBlood Flow Vision",
+	"description": "Sense entities around you, even through walls.",
+	"type": "origins:multiple",
+	"tap": {
+		"type": "origins:toggle",
+		"active_by_default": true,
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"glow": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:vamp/see_tap"
+		},
+		"type": "origins:entity_glow",
+		"use_teams": false,
+		"red": 0.85,
+		"green": 0.1,
+		"blue": 0.2
+	}
+}

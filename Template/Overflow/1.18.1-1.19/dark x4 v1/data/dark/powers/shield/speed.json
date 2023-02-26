@@ -1,0 +1,11 @@
+{
+    "name": "Heavy",
+    "description": "You move very slowly.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.movement_speed",
+        "operation": "multiply_total",
+        "value": -0.4
+    },
+    "update_health": false
+}

@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"rabbit:rabbit/launch",
+		"rabbit:rabbit/cling",
+		"rabbit:rabbit/carrots",
+		"rabbit:rabbit/effects",
+		"rabbit:rabbit/luck",
+		"rabbit:rabbit/smol",
+		"rabbit:rabbit/veggie",
+		"rabbit:rabbit/weak"
+	],
+	"icon": "minecraft:rabbit_foot",
+	"impact": 1,
+	"name": "§b§l§oRabbitfolk",
+	"description": "Hippity-hoppity."
+}

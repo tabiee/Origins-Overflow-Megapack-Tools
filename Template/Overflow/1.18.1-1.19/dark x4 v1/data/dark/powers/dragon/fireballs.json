@@ -1,0 +1,20 @@
+{
+    "name": "Fireballs",
+    "description": "You can shoot fireballs.",
+    "type": "origins:fire_projectile",
+    "entity_type": "fireball",
+    "cooldown": 6000,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 15
+    },
+    "count": 3,
+    "interval": 10,
+    "speed": 0.5,
+    "divergence": 25,
+    "sound": "entity.blaze.shoot",
+    "key": {
+        "key": "primary"
+    }
+}

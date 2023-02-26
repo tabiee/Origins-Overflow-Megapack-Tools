@@ -1,0 +1,24 @@
+{
+    "name": "§4§nFragile Form",
+    "description": "Traveling through dimensions has left your form fragile. If you get hit for at least 4 points of damage, you gain Weakness for 5 seconds.",
+    "type": "origins:self_action_when_hit",
+    "damage_condition": {
+        "type": "origins:amount",
+        "comparison": ">=",
+        "compare_to": 4
+    },
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "weakness",
+            "duration": 100,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    }
+}

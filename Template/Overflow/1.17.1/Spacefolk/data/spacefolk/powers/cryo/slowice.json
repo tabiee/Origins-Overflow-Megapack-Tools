@@ -1,0 +1,39 @@
+{
+    "hidden": true,
+    "condition": {
+        "inverted": true,
+        "type": "origins:on_fire"
+    },
+    "type": "origins:target_action_on_hit",
+    "damage_condition": {
+        "type": "origins:projectile",
+        "projectile": "snowball"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "slowness",
+                    "duration": 100,
+                    "amplifier": 2,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            },
+            {
+                "type": "origins:damage",
+                "amount": 2,
+                "source": {
+                    "name": "arrow",
+                    "bypasses_armor": true
+                }
+            }
+        ]
+    },
+    "cooldown": 5,
+    "hud_render": {
+        "should_render": false
+    }
+}

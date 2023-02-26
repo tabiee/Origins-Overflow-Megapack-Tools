@@ -1,0 +1,86 @@
+{
+    "type": "origins:multiple",
+    "name": "Ender Respect",
+    "description": "Your Enderkin hate Pumpkins, and the Nether, you have no clue why, but you respect their traditions. You are unable to eat pumpkin pie, wear pumpkins, wear netherite, or use those tools.",
+    "hidden": true,
+    "item_condition__": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "inverted": false,
+            "ingredient": {
+                "item": "minecraft:pumpkin_pie"
+            }
+        }
+    },
+    "item_condition________": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:carved_pumpkin"
+        }
+    },
+    "item_condition___": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "inverted": false,
+            "ingredient": {
+                "item": "minecraft:netherite_axe"
+            }
+        }
+    },
+    "item_condition____": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "inverted": false,
+            "ingredient": {
+                "item": "minecraft:netherite_sword"
+            }
+        }
+    },
+    "item_condition_____": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "inverted": false,
+            "ingredient": {
+                "item": "minecraft:netherite_pickaxe"
+            }
+        }
+    },
+    "item_condition______": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "inverted": false,
+            "ingredient": {
+                "item": "minecraft:netherite_shovel"
+            }
+        }
+    },
+    "item_condition_______": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "inverted": false,
+            "ingredient": {
+                "item": "minecraft:netherite_hoe"
+            }
+        }
+    },
+    "o___2": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "inverted": false,
+            "name": "minecraft:trident"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.15
+        }
+    }
+}

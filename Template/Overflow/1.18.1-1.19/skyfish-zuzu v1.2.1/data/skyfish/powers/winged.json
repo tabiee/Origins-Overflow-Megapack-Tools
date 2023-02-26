@@ -1,0 +1,6 @@
+{
+    "name": "Winged",
+    "description": "You have the power of flight.",
+    "type": "origins:elytra_flight",
+    "render_elytra": true
+}

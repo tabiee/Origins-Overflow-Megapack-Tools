@@ -1,0 +1,178 @@
+{
+	"hidden": true,
+	"type": "origins:active_self",
+	"cooldown": 20,
+	"hud_render": {
+		"should_render": false
+	},
+	"key": {
+		"key": "primary"
+	},
+	"entity_action": {
+		"type": "origins:if_else_list",
+		"actions": [
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:or",
+							"conditions": [
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "adventure/sniper_duel"
+								},
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "story/shiny_gear"
+								}
+							]
+						},
+						{
+							"type": "origins:resource",
+							"resource": "*:pixel_swapper_bit",
+							"comparison": "==",
+							"compare_to": 1
+						}
+					]
+				},
+				"action": {
+					"type": "origins:execute_command",
+					"command": "tellraw @s {\"text\":\" *-* This ability in not unlocked. Requires Cover me in Diamonds and all prior abilities.\",\"italic\":true,\"color\":\"red\"}",
+					"permission_level": 4
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:or",
+							"conditions": [
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "adventure/sniper_duel"
+								},
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "story/shiny_gear"
+								},
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "adventure/hero_of_the_village"
+								}
+							]
+						},
+						{
+							"type": "origins:resource",
+							"resource": "*:pixel_swapper_bit",
+							"comparison": "==",
+							"compare_to": 2
+						}
+					]
+				},
+				"action": {
+					"type": "origins:execute_command",
+					"command": "tellraw @s {\"text\":\" *-* This ability in not unlocked. Requires Hero of the Village and all prior abilities.\",\"italic\":true,\"color\":\"red\"}",
+					"permission_level": 4
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:or",
+							"conditions": [
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "adventure/sniper_duel"
+								},
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "story/shiny_gear"
+								},
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "adventure/hero_of_the_village"
+								},
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "end/respawn_dragon"
+								}
+							]
+						},
+						{
+							"type": "origins:resource",
+							"resource": "*:pixel_swapper_bit",
+							"comparison": "==",
+							"compare_to": 3
+						}
+					]
+				},
+				"action": {
+					"type": "origins:execute_command",
+					"command": "tellraw @s {\"text\":\" *-* This ability in not unlocked. Requires The End.. Again and all prior abilities.\",\"italic\":true,\"color\":\"red\"}",
+					"permission_level": 4
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:or",
+							"conditions": [
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "adventure/sniper_duel"
+								},
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "story/shiny_gear"
+								},
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "adventure/hero_of_the_village"
+								},
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "end/respawn_dragon"
+								},
+								{
+									"inverted": true,
+									"type": "origins:advancement",
+									"advancement": "adventure/throw_trident"
+								}
+							]
+						},
+						{
+							"type": "origins:resource",
+							"resource": "*:pixel_swapper_bit",
+							"comparison": "==",
+							"compare_to": 4
+						}
+					]
+				},
+				"action": {
+					"type": "origins:execute_command",
+					"command": "tellraw @s {\"text\":\" *-* This ability in not unlocked. Requires A Throwaway Joke and all prior abilities.\",\"italic\":true,\"color\":\"red\"}",
+					"permission_level": 4
+				}
+			}
+		]
+	}
+}

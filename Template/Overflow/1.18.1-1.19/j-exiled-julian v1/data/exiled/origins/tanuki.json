@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"exiled:forms",
+		"exiled:obj",
+		"exiled:aqua",
+		"exiled:tall",
+		"exiled:effhit",
+		"exiled:glow",
+		"exiled:fall",
+		"exiled:end",
+		"exiled:pots",
+		"exiled:exhaust",
+		"exiled:hp",
+		"exiled:sizes"
+	],
+	"icon": "minecraft:spore_blossom",
+	"impact": 3,
+	"name": "§5§l§oExiled Tanuki",
+	"description": "Through the faint wisps of memory, there stands alone a single creature. Destined to pave the way through unfamiliar powers without the aid of their kind. As a Tanuki you had the ability to shapeshift into anything you could think about. But after an uncertain exile, you now only have a few different forms you can change between, each with its own abilities. While you may not be a full creature of mischief, it still runs deep through your body."
+}

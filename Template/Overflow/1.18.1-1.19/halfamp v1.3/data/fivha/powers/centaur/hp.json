@@ -1,0 +1,10 @@
+{
+    "name": "Hefty",
+    "description": "Because of your strong body build you have 4 more hearts than that of a human.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": 8
+    }
+}

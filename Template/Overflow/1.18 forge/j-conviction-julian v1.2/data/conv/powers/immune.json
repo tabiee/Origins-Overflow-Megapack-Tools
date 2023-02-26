@@ -1,0 +1,50 @@
+{
+    "name": "§e§nFiltered Mask§r",
+    "description": "Your mask prevents you from being affected by any potion effect, regardless if you drink or get splashed by it.",
+    "type": "origins:multiple",
+    "effects": {
+        "type": "origins:effect_immunity",
+        "effects": [
+            "slowness",
+            "haste",
+            "mining_fatigue",
+            "nausea",
+            "fire_resistance",
+            "water_breathing",
+            "invisibility",
+            "blindness",
+            "hunger",
+            "weakness",
+            "poison",
+            "wither",
+            "health_boost",
+            "absorption",
+            "saturation",
+            "glowing",
+            "levitation",
+            "luck",
+            "unluck",
+            "slow_falling",
+            "conduit_power",
+            "dolphins_grace",
+            "bad_omen",
+            "hero_of_the_village"
+        ]
+    },
+    "fx": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:conf_bar",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:effect_immunity",
+        "effects": [
+            "speed",
+            "jump_boost",
+            "strength",
+            "regeneration",
+            "resistance"
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "name": "§4§nNo Sleep",
+    "description": "You can't sleep.",
+    "type": "origins:prevent_sleep",
+    "message": "Crime don' sleep and you shouldn't either!",
+    "set_spawn_point": true
+}

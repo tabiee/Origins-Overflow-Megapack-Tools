@@ -1,0 +1,43 @@
+{
+	"name": "Fragile Flame",
+	"description": "Due to your life force coming from your flame, if you are in rain or underwater, your flame goes out and you die instantly.",
+	"condition": {
+		"type": "origins:or",
+		"conditions": [
+			{
+				"type": "origins:submerged_in",
+				"fluid": "water"
+			},
+			{
+				"type": "origins:in_rain"
+			}
+		]
+	},
+	"type": "origins:action_over_time",
+	"interval": 1,
+	"rising_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:block.fire.extinguish",
+				"volume": 1,
+				"pitch": 2
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "particle smoke ~ ~ ~ 1.75 1.75 1.75 0 200",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:change_resource",
+					"resource": "*:candle/wax_goo",
+					"change": -990
+				},
+				"ticks": 5
+			}
+		]
+	}
+}

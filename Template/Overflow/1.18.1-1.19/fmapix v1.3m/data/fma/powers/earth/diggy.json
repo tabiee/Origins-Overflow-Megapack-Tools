@@ -1,0 +1,24 @@
+{
+    "name": "§2§nArms of Steel",
+    "description": "You are able to mine and collect any stone blocks by hand.",
+    "type": "origins:multiple",
+    "fast": {
+        "type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "fma:natural_stone"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.7
+        }
+    },
+    "collect": {
+        "type": "origins:modify_harvest",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "fma:natural_stone"
+        },
+        "allow": true
+    }
+}

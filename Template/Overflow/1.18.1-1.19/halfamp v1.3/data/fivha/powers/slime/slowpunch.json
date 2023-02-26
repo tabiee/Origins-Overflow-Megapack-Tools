@@ -1,0 +1,10 @@
+{
+    "name": "Goop Arms",
+    "description": "Your lack of actual muscles means that you naturally attack slightly slower.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.attack_speed",
+        "operation": "addition",
+        "value": -0.5
+    }
+}

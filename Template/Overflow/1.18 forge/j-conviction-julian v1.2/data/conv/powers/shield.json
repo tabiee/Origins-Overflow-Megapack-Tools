@@ -1,0 +1,221 @@
+{
+    "name": "§9§nExpert Guard§r",
+    "description": "You are an expert in street brawling and boxing.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "Hold Right-click with an empty mainhand to mimic the effects of a shield."
+        }
+    ],
+    "type": "origins:multiple",
+    "use": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_dur",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "apoli:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "apoli:empty"
+                    }
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_dur",
+                    "change": -1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_held"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle electric_spark ^ ^1.5 ^1.25 0.05 0.05 0.05 0 1"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "item.spyglass.stop_using",
+                    "volume": 5,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        }
+    },
+    "dur": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 120,
+        "start_value": 120,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 0,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:cd",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        }
+    },
+    "held": {
+        "type": "origins:cooldown",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "restore": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_held",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_dur",
+            "change": 1,
+            "operation": "add"
+        }
+    },
+    "slow": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_held",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_total",
+            "value": -0.5
+        },
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "invuln": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_held",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:projectile"
+                        },
+                        {
+                            "inverted": true,
+                            "type": "origins:attacker",
+                            "entity_condition": {
+                                "type": "origins:or",
+                                "conditions": [
+                                    {
+                                        "type": "origins:equipped_item",
+                                        "equipment_slot": "mainhand",
+                                        "item_condition": {
+                                            "type": "origins:enchantment",
+                                            "enchantment": "minecraft:piercing",
+                                            "comparison": ">=",
+                                            "compare_to": 1
+                                        }
+                                    },
+                                    {
+                                        "type": "origins:equipped_item",
+                                        "equipment_slot": "offhand",
+                                        "item_condition": {
+                                            "type": "origins:enchantment",
+                                            "enchantment": "minecraft:piercing",
+                                            "comparison": ">=",
+                                            "compare_to": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:name",
+                    "name": "mob"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "mob.item"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "player.item"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "explosion"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "explosion.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "sting"
+                }
+            ]
+        }
+    }
+}

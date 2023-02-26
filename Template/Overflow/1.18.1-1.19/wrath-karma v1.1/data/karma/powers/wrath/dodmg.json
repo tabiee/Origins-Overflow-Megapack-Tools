@@ -1,0 +1,69 @@
+{
+	"name": "§2§nBattle Prowess",
+    "description": "You deal more damage using melee weapons, as well as crossbow.",
+    "type": "origins:modify_damage_dealt",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:projectile",
+                "projectile": "arrow"
+            },
+            {
+                "type": "origins:attacker",
+                "entity_condition": {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": [
+                            {
+                                "item": "wooden_sword"
+                            },
+                            {
+                                "item": "wooden_axe"
+                            },
+                            {
+                                "item": "golden_sword"
+                            },
+                            {
+                                "item": "golden_axe"
+                            },
+                            {
+                                "item": "stone_sword"
+                            },
+                            {
+                                "item": "stone_axe"
+                            },
+                            {
+                                "item": "iron_sword"
+                            },
+                            {
+                                "item": "iron_axe"
+                            },
+                            {
+                                "item": "diamond_sword"
+                            },
+                            {
+                                "item": "diamond_axe"
+                            },
+                            {
+                                "item": "netherite_sword"
+                            },
+                            {
+                                "item": "netherite_axe"
+                            },
+                            {
+                                "item": "trident"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.25
+    }
+}

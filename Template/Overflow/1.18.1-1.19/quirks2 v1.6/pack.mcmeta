@@ -1,0 +1,12 @@
+{
+  "pack": {
+    "pack_format": 8,
+        "authors": [
+            "MichaelJackson23",
+	    "KingMcNuggies",
+            "cookiebug234"
+        ],
+        "name": "MHA Quirks",
+    "description": "All the quirks in one place"
+  }
+}

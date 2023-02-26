@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"undead:mobs",
+		"undead:burn",
+		"undead:breath"
+	],
+	"icon": "minecraft:rotten_flesh",
+	"impact": 1,
+	"name": "§c§l§oUndead",
+	"description": "You're a zombie."
+}

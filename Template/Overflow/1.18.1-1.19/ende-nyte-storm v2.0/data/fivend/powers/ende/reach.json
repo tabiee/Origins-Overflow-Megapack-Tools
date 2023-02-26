@@ -1,0 +1,19 @@
+{
+	"name": "§2§nSlender Body",
+	"description": "Longest fingers in the world!",
+  "type": "origins:attribute",
+  "modifiers": [
+    {
+      "name": "Extra Reach block reach",
+      "attribute": "reach-entity-attributes:reach",
+      "value": 5.5,
+      "operation": "addition"
+    },
+    {
+      "name": "Extra Reach entity reach",
+      "attribute": "reach-entity-attributes:attack_range",
+      "value": 5.5,
+      "operation": "addition"
+    }
+  ]
+}

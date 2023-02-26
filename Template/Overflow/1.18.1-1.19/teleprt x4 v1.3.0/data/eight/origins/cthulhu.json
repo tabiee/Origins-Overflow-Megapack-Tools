@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"eight:cthulhu/ink",
+		"eight:cthulhu/double_jump",
+		"eight:cthulhu/water",
+		"eight:cthulhu/fire"
+	],
+	"icon": "minecraft:ink_sac",
+	"impact": 2,
+	"name": "§3§l§oCthulhu",
+	"description": "Great Old One of great power."
+}

@@ -1,0 +1,137 @@
+{
+    "name": "crops",
+    "hidden": true,
+    "type": "origins:multiple",
+    "wheat": {
+        "type": "origins:action_on_block_break",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "summon item ^ ^ ^2 {Item:{id:\"wheat\",Count:4b}}",
+            "permission_level": 4
+        },
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "wheat"
+                },
+                {
+                    "type": "origins:block_state",
+                    "property": "age",
+                    "comparison": "==",
+                    "compare_to": 7
+                }
+            ]
+        },
+        "only_when_harvested": true
+    },
+    "carrot": {
+        "type": "origins:action_on_block_break",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "summon item ^ ^ ^2 {Item:{id:\"carrot\",Count:4b}}",
+            "permission_level": 4
+        },
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "carrots"
+                },
+                {
+                    "type": "origins:block_state",
+                    "property": "age",
+                    "comparison": "==",
+                    "compare_to": 7
+                }
+            ]
+        },
+        "only_when_harvested": true
+    },
+    "potato": {
+        "type": "origins:action_on_block_break",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "summon item ^ ^ ^2 {Item:{id:\"potato\",Count:4b}}",
+            "permission_level": 4
+        },
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "potatoes"
+                },
+                {
+                    "type": "origins:block_state",
+                    "property": "age",
+                    "comparison": "==",
+                    "compare_to": 7
+                }
+            ]
+        },
+        "only_when_harvested": true
+    },
+    "beetroot": {
+        "type": "origins:action_on_block_break",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "summon item ^ ^ ^2 {Item:{id:\"beetroot\",Count:4b}}",
+            "permission_level": 4
+        },
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "beetroots"
+                },
+                {
+                    "type": "origins:block_state",
+                    "property": "age",
+                    "comparison": "==",
+                    "compare_to": 4
+                }
+            ]
+        },
+        "only_when_harvested": true
+    },
+    "pumpkin": {
+        "type": "origins:action_on_block_break",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "summon item ^ ^ ^2 {Item:{id:\"pumpkin\",Count:1b}}",
+            "permission_level": 4
+        },
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "pumpkin"
+                }
+            ]
+        },
+        "only_when_harvested": true
+    },
+    "melon": {
+        "type": "origins:action_on_block_break",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "summon item ^ ^ ^2 {Item:{id:\"melon\",Count:1b}}",
+            "permission_level": 4
+        },
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "melon"
+                }
+            ]
+        },
+        "only_when_harvested": true
+    }
+}

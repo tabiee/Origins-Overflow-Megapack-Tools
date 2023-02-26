@@ -1,0 +1,178 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "fx": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_tap",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_bit",
+                    "comparison": "==",
+                    "compare_to": 4
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[tag=circle]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 25,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "strength",
+                "duration": 35,
+                "amplifier": 1,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    },
+    "pull": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=!circle] at @s if entity @e[tag=circle,distance=10..15] facing entity @e[tag=circle,limit=1] eyes run tp ^ ^0.5 ^0.5"
+                }
+            ]
+        }
+    },
+    "act": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_tap",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_bit",
+                    "comparison": "==",
+                    "compare_to": 4
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:command",
+                        "command": "execute if entity @e[tag=circle]",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    "if_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "summon marker ~ ~ ~ {Tags:[\"circle\"]}"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle soul_fire_flame ~ ~1 ~ 1.5 1.5 1.5 0.5 250"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle dust 0.000 1.000 1.000 4 ~ ~1 ~ 1.5 1.5 1.5 0.5 50"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "execute as @a[distance=..30] at @s run playsound minecraft:entity.blaze.death ambient @s ~ ~ ~ 0.3 2"
+                            }
+                        ]
+                    },
+                    "else_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "kill @e[tag=circle]"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle soul_fire_flame ~ ~1 ~ 1.5 1.5 1.5 0.5 250"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle dust 0.000 1.000 1.000 4 ~ ~1 ~ 1.5 1.5 1.5 0.5 50"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "execute as @a[distance=..30] at @s run playsound minecraft:entity.blaze.death ambient @s ~ ~ ~ 0.3 1.5"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "cooldown": 200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 12
+        },
+        "key": {
+            "key": "key.saveToolbarActivator"
+        }
+    },
+    "circle": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_tap",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_bit",
+                    "comparison": "==",
+                    "compare_to": 4
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 25,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=circle] at @s run summon area_effect_cloud ~ ~ ~ {Particle:\"soul_fire_flame\",Radius:10f,Duration:30}"
+                }
+            ]
+        },
+        "falling_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "kill @e[tag=circle]"
+                }
+            ]
+        }
+    }
+}

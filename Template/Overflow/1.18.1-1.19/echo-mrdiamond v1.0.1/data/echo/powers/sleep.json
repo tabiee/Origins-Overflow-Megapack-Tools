@@ -1,0 +1,7 @@
+{
+    "name": "Too Much Noise",
+    "description": "You can’t sleep since you are so sensitive to sound.",
+    "type": "origins:prevent_sleep",
+    "message": "It's too noise, you can't rest like this.",
+    "set_spawn_point": true
+}

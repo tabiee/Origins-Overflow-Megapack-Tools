@@ -1,0 +1,17 @@
+{
+	"name": "particles",
+	"description": "feel free to change",
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "particle minecraft:totem_of_undying ~ ~ ~ 1 0 1 0 2"
+    },
+    "interval": 5,
+	"hidden": true,    
+	"condition": {
+        "type": "origins:status_effect",
+        "inverted": true,
+        "effect": "invisibility"
+    }
+}

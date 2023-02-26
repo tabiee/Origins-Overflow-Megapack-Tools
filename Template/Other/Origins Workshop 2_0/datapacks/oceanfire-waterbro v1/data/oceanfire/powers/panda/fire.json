@@ -1,0 +1,24 @@
+{
+    "name": "Fire Immunity",
+    "description": "You do not take damage from any fire and are able to see clearly in lava.",
+    "type": "origins:multiple",
+    "imm": {
+        "type": "origins:fire_immunity"
+    },
+	"stats": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "additionalentityattributes:lava_visibility",
+                "operation": "addition",
+                "value": 25
+            },
+            {
+                "attribute": "additionalentityattributes:lava_speed",
+                "operation": "multiply_total",
+                "value": 0.8
+            }
+        ],
+        "update_health": false
+    }
+}

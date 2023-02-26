@@ -1,0 +1,56 @@
+{
+    "hidden": true,
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:resource",
+			        "resource": "*:rat/crawl_bip",
+			        "comparison": "==",
+			        "compare_to": 0
+        },
+        "if_action": {
+			"type": "origins:and",
+            "actions": [
+			{
+            "type": "origins:execute_command",
+            "command": "/tellraw @s {\"text\":\"~ Crawling\",\"italic\":true,\"color\":\"red\"}",
+            "permission_level": 4
+			},
+			{
+			"type": "origins:delay",
+					"action": {
+						"type": "origins:change_resource",
+						"resource": "*:rat/crawl_bip",
+						"change": 1
+						},
+					"ticks": 5
+			}
+			]
+        },
+        "else_action": {
+			"type": "origins:and",
+            "actions": [
+			{
+            "type": "origins:execute_command",
+            "command": "/tellraw @s {\"text\":\"~ Not Crawling\",\"italic\":true,\"color\":\"dark_red\"}",
+            "permission_level": 4
+			},
+			{
+			"type": "origins:delay",
+					"action": {
+						"type": "origins:change_resource",
+						"resource": "*:rat/crawl_bip",
+						"change": -1
+						},
+					"ticks": 5
+			}
+			]
+		}
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": "secondary"
+}

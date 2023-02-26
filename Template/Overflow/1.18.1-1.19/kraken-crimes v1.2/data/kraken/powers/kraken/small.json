@@ -1,0 +1,111 @@
+{
+	"name": "§e§nTiny Form",
+	"description": "Your default form, weaker and far more fragile.",
+	"type": "origins:multiple",
+	"size": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:kraken/size_bit",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale reset @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "function kraken:small",
+						"permission_level": 4
+					},
+					"ticks": 2
+				}
+			]
+		}
+	},
+	"eff": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:kraken/size_bit",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "weakness",
+				"duration": 100,
+				"amplifier": 0,
+				"show_particles": false,
+				"show_icon": false
+			}
+		}
+	},
+	"eff2": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:kraken/size_bit",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "slowness",
+				"duration": 100,
+				"amplifier": 3,
+				"show_particles": false,
+				"show_icon": true
+			}
+		}
+	},
+	"hp": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:kraken/size_bit",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "generic.max_health",
+			"operation": "addition",
+			"value": -10
+		},
+		"tick_rate": 5
+	}
+}

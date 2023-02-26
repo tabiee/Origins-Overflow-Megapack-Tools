@@ -1,0 +1,1 @@
+execute at @e[type=minecraft:egg] run effect give @s[distance=0..2] minecraft:wither 1 1 true

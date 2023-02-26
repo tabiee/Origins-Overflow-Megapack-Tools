@@ -1,0 +1,14 @@
+{
+	"type": "origins:action_over_time",
+	"entity_action": {
+		"type": "origins:execute_command",
+		"command": "particle falling_dust snow ~ ~1 ~ 0.3 0.3 0.3 0 1 normal"
+	},
+    "interval": 6,
+	"hidden": true,    
+	"condition": {
+        "type": "origins:status_effect",
+        "inverted": true,
+        "effect": "invisibility"
+    }
+}

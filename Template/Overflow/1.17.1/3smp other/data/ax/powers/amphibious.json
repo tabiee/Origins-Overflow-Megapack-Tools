@@ -1,0 +1,29 @@
+{
+	"type": "origins:multiple",
+	"water_breathing": {
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 0,
+		"max_stacks": 1,
+		"duration_per_stack": 20,
+		"effect": {
+			"effect": "minecraft:water_breathing",
+			"duration": 20,
+			"is_ambient": true,
+			"show_particles": false,
+			"show_icon": false
+		},
+		"condition": {
+			"type": "origins:submerged_in",
+			"fluid": "water"
+		}
+	},
+	"swim_speed": {
+		"type": "origins:modify_swim_speed",
+		"modifier": {
+			"value": 2,
+			"operation": "multiply_base"
+		}
+	},
+	"name": "Amphibious",
+	"description": "You're able to breathe both on the land and in the water, and you can swim a little faster!"
+}

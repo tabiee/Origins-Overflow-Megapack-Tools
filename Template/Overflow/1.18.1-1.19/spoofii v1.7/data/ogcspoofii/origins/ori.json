@@ -1,0 +1,21 @@
+{
+	"powers": [
+		"ogcspoofii:ori/particles",
+		"origins:nether_spawn",
+		"ogcspoofii:ori/hp",
+		"ogcspoofii:ori/fireass",
+		"ogcspoofii:ori/perms",
+		"ogcspoofii:ori/tagger",
+		"ogcspoofii:ori/arrodmg",
+		"ogcspoofii:ori/waterno",
+		"ogcspoofii:ori/powerup",
+		"ogcspoofii:ori/woosh",
+		"ogcspoofii:ori/nuggets",
+		"ogcspoofii:ori/hit",
+		"ogcspoofii:ori/size"
+	],
+	"icon": "minecraft:blaze_powder",
+	"impact": 1,
+	"name": "§b§lOri",
+	"description": "Smoke monster."
+}

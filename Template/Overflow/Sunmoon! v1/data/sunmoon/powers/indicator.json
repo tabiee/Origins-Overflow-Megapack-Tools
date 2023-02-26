@@ -1,0 +1,86 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "synced": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 7,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
+            "bar_index": 15,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "sunmoon:indicator_synced",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        }
+    },
+    "check": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=sun] at @s if entity @e[tag=moon,distance=..1.5] run execute as @e[tag=duo] at @s run resource set @s sunmoon:indicator_synced 1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=sun] at @s if entity @e[tag=moon,distance=1.5..] run execute as @e[tag=duo] at @s run resource set @s sunmoon:indicator_synced 0"
+                }
+            ]
+        }
+    },
+    "seat_tip_1p": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "sunmoon:indicator_synced",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute if entity @s[gamemode=spectator] run title @s actionbar \"§b§oHold Shift to enter 3rd-Person.§r\""
+                }
+            ]
+        }
+    },
+    "seat_tip_3p": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "sunmoon:indicator_synced",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 300,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute if entity @s[gamemode=spectator] run title @s actionbar \"§b§oLeft-click the person in control to enter 1st-Person.\""
+                }
+            ]
+        }
+    }
+}

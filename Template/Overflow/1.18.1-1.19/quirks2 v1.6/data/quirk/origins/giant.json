@@ -1,0 +1,24 @@
+{
+  "powers": [
+    "quirk:giant/swap2",
+    "quirk:giant/giant_jump",
+    "quirk:giant/giant_fall",
+    "quirk:giant/knockback",
+    "quirk:giant/punch",
+    "quirk:giant/pocket_sand",
+    "quirk:giant/giant_stomp",
+    "quirk:giant/super_stomp",
+    "quirk:giant/reach",
+    "quirk:giant/fix",
+    "quirk:giant/fix2",
+    "quirk:giant/fix3",
+    "quirk:giant/fall2",
+		"quirk:health"
+  ],
+  "icon": "minecraft:beacon",
+        "unchoosable": true,
+  "order": 30,
+  "impact": 3,
+  "name": "Giantification (ON)",
+  "description": "Mt. Lady's Quirk"
+}

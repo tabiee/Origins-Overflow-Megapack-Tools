@@ -1,0 +1,140 @@
+{
+    "name": "§1§nShapeshift§r",
+    "description": "You can change your size at will.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "Use SaveToolbar to select size, then shapeshift using LoadToolbar. (Check your keybinds under Creative tab)"
+        }
+    ],
+    "type": "origins:multiple",
+    "form": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2,
+        "start_value": 1,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 21,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:fae/sizeswap_cd",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        }
+    },
+    "swap": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle totem_of_undying ~ ~1.5 ~ 0.25 0.25 0.25 0 50"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:fae/sizeswap_cd"
+                }
+            ]
+        },
+        "cooldown": 300,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 1,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:fae/sizeswap_cd",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        },
+        "key": {
+            "key": "key.loadToolbarActivator",
+            "continuous": false
+        }
+    },
+    "pick": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fae/sizeswap_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:fae/sizeswap_form",
+                        "comparison": "==",
+                        "compare_to": 2
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:fae/sizeswap_form",
+                                "change": 1,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:fae/sizeswap_form",
+                        "comparison": "==",
+                        "compare_to": 1
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:fae/sizeswap_form",
+                                "change": 2,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.saveToolbarActivator",
+            "continuous": true
+        }
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 1200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 21
+        }
+    }
+}

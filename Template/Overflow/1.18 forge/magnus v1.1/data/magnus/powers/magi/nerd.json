@@ -1,0 +1,23 @@
+{
+    "name": "Lack of Experience",
+    "description": "You take more damage overall. But you are pretty good with ranged weapons.",
+    "type": "origins:multiple",
+    "ranged": {
+        "type": "origins:modify_damage_dealt",
+        "damage_condition": {
+            "type": "origins:projectile",
+            "projectile": "arrow"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.25
+        }
+    },
+    "dmg": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.25
+        }
+    }
+}

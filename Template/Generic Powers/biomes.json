@@ -1,0 +1,110 @@
+{
+    "name": "§e§nNatural Element",
+    "description": "You gain Strength in cold biomes and Weakness in warm biomes. Additionally, you don't take damage from powdered snow and take extra fire damage.",
+    "type": "origins:multiple",
+    "biom": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:biome",
+                        "biomes": [
+                            "minecraft:ice_spikes",
+                            "minecraft:snowy_plains",
+                            "minecraft:snowy_beach",
+                            "minecraft:deep_frozen_ocean",
+                            "minecraft:frozen_ocean",
+                            "minecraft:frozen_river",
+                            "minecraft:old_growth_pine_taiga",
+                            "minecraft:old_growth_spruce_taiga",
+                            "minecraft:snowy_taiga",
+                            "minecraft:taiga",
+                            "minecraft:frozen_peaks",
+                            "minecraft:snowy_slopes"
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "strength",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": true
+                        }
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:biome",
+                        "biomes": [
+                            "minecraft:desert",
+                            "minecraft:basalt_deltas",
+                            "minecraft:crimson_forest",
+                            "minecraft:nether_wastes",
+                            "minecraft:soul_sand_valley",
+                            "minecraft:warped_forest",
+                            "minecraft:savanna",
+                            "minecraft:savanna_plateau",
+                            "minecraft:windswept_savanna",
+                            "minecraft:lukewarm_ocean",
+                            "minecraft:ocean",
+                            "minecraft:warm_ocean",
+                            "minecraft:deep_lukewarm_ocean",
+                            "minecraft:swamp",
+                            "minecraft:badlands",
+                            "minecraft:eroded_badlands",
+                            "minecraft:wooded_badlands",
+                            "minecraft:bamboo_jungle",
+                            "minecraft:jungle",
+                            "minecraft:sparse_jungle"
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "weakness",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": true
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "snow": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "freeze"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "freeze.player"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    },
+    "fire": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:fire"
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    }
+}

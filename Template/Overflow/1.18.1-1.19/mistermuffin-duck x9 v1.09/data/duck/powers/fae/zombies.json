@@ -1,0 +1,44 @@
+{
+    "name": "§4§nEnemy of Undeath",
+    "description": "Zombies stalk you from further away and have a chance to poison you on hit.",
+    "type": "origins:multiple",
+    "follow": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "execute as @e[type=zombie,distance=..100] at @s run attribute @s minecraft:generic.follow_range base set 100"
+        }
+    },
+    "hit": {
+        "type": "origins:action_when_hit",
+        "bientity_action": {
+            "type": "origins:chance",
+            "chance": 0.5,
+            "action": {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "poison",
+                        "duration": 200,
+                        "amplifier": 0,
+                        "show_particles": false,
+                        "show_icon": true
+                    }
+                }
+            }
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "zombie"
+            }
+        },
+        "cooldown": 200,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

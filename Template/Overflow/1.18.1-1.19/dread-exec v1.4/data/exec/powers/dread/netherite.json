@@ -1,0 +1,43 @@
+{
+	"type": "origins:multiple",
+	"wither": {
+		"type": "origins:effect_immunity",
+		"effect": "wither"
+	},
+	"res": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "explosion"
+				},
+				{
+					"type": "origins:name",
+					"name": "explosion.player"
+				}
+			]
+		}
+	},
+	"arm": {
+		"type": "origins:attribute",
+		"modifiers": [
+			{
+				"attribute": "generic.knockback_resistance",
+				"operation": "addition",
+				"value": 1
+			},
+			{
+				"attribute": "generic.armor_toughness",
+				"operation": "addition",
+				"value": 2
+			},
+			{
+				"attribute": "generic.armor",
+				"operation": "addition",
+				"value": 10
+			}
+		]
+	}
+}

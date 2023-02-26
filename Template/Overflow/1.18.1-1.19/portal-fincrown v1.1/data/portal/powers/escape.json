@@ -1,0 +1,200 @@
+{
+    "name": "Quick Escape",
+    "description": "Your escape skills are excellent and unique. When used, you begin to channel a one-way unstable portal that will teleport you and any player within 5 blocks of you to a random location near x:0 z:0 3 seconds after this ability is used.",
+    "type": "origins:multiple",
+    "use": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:escape_fakecd"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute rotated 90 0 run function portal:tube"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.amethyst_block.chime",
+                    "volume": 10,
+                    "pitch": 1
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "execute rotated 90 0 run function portal:tube2"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "block.amethyst_block.chime",
+                                "volume": 10,
+                                "pitch": 1
+                            }
+                        ]
+                    },
+                    "ticks": 10
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "execute rotated 90 0 run function portal:tube3"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "block.amethyst_block.chime",
+                                "volume": 10,
+                                "pitch": 1
+                            }
+                        ]
+                    },
+                    "ticks": 20
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "execute rotated 90 0 run function portal:tube4"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "block.amethyst_block.chime",
+                                "volume": 10,
+                                "pitch": 1
+                            }
+                        ]
+                    },
+                    "ticks": 30
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "execute rotated 90 0 run function portal:tube5"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "block.amethyst_block.chime",
+                                "volume": 10,
+                                "pitch": 1
+                            }
+                        ]
+                    },
+                    "ticks": 40
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "execute rotated 90 0 run function portal:tube6"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "block.amethyst_block.chime",
+                                "volume": 10,
+                                "pitch": 1
+                            }
+                        ]
+                    },
+                    "ticks": 50
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle block_marker white_concrete ~ ~1 ~ 0.1 0.25 0.1 0 6"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle end_rod ~ ~0.5 ~ 0.5 0.5 0.5 0.3 100"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle enchanted_hit ~ ~0.5 ~ 0.5 0.5 0.5 1 100"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "playsound item.trident.thunder master @a[distance=..10] ~ ~ ~ 0.5 0.1"
+                            }
+                        ]
+                    },
+                    "ticks": 57
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "spreadplayers 0 0 1 50 false @a[distance=..5]"
+                            }
+                        ]
+                    },
+                    "ticks": 60
+                }
+            ]
+        },
+        "cooldown": 600,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 1,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:escape_fakecd",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        },
+        "key": {
+            "key": "key.loadToolbarActivator"
+        }
+    },
+    "fakecd": {
+        "type": "origins:cooldown",
+        "cooldown": 60,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 9
+        }
+    },
+    "reset": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:escape_fakecd",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "falling_action": {
+            "type": "origins:change_resource",
+            "resource": "*:escape_use",
+            "change": 1,
+            "operation": "set"
+        }
+    }
+}

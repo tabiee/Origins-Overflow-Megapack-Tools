@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"broken:god/elytra",
+		"broken:god/carn",
+		"broken:god/wither",
+		"broken:god/smite",
+		"broken:god/tagger"
+	],
+	"icon": "minecraft:wither_rose",
+	"impact": 2,
+	"name": "§e§l§oBroken God",
+	"description": "Fallen and forgotten, but still powerful."
+}

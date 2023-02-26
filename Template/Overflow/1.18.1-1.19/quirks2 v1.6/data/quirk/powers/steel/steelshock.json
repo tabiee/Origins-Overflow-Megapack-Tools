@@ -1,0 +1,112 @@
+{
+    "type": "origins:active_self",
+    "name": "Steel Shockwave",
+    "description": "Smash everything within a radius",
+    "hidden": false,
+    "cooldown": 1500,
+  "key": {
+    "key": "key.origins.quaternary_active",
+    "continuous": false
+  },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+{
+            "type": "origins:execute_command",
+            "command": "resource set @p quirk:steel/ground_pound 0",
+            "permission_level": 4
+	},
+        {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~ ~ 0.6 0.6 0.6 0.01 200",
+            "permission_level": 4
+	},
+        {
+            "type": "origins:execute_command",
+            "command": "effect give @p minecraft:slowness 2 50 true",
+            "permission_level": 4
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 5,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~ ~ 0.6 0.6 0.6 1 200",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 10,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~ ~ 0.6 0.6 0.6 1 200",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 15,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~ ~ 0.6 0.6 0.6 1 200",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 20,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~ ~ 0.6 0.6 0.6 1 200",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 25,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~ ~ 0.6 0.6 0.6 1 200",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 25,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "effect give @p minecraft:resistance 1 50 true",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 30,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "execute at @p run function quirk:steelshock",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 35,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "execute at @p run function quirk:steelshock2",
+            "permission_level": 4
+          }
+	}
+			
+		]
+	},
+    "condition": {
+            "type": "origins:on_block"
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+        "bar_index": 22
+    }
+}

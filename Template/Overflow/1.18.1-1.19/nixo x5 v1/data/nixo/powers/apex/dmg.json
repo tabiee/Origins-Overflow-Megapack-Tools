@@ -1,0 +1,13 @@
+{
+    "name": "§2§nSharp Claws",
+    "description": "You deal more damage in melee.",
+    "type": "origins:modify_damage_dealt",
+    "damage_condition": {
+        "inverted": true,
+        "type": "origins:projectile"
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.25
+    }
+}

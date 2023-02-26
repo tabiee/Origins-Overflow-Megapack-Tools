@@ -1,0 +1,28 @@
+{
+    "name": "Blinding Sunlight",
+    "description": "Sunlight makes you feel weak and sluggish.",
+    "condition": {
+        "type": "origins:exposed_to_sun"
+    },
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 200,
+    "duration_per_stack": 15,
+    "tick_rate": 10,
+    "effects": [
+        {
+            "effect": "slowness",
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true,
+            "duration": 1
+        },
+        {
+            "effect": "weakness",
+            "duration": 1,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    ]
+}

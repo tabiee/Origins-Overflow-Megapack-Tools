@@ -1,0 +1,105 @@
+{
+    "name": "§e§nGills§r",
+    "description": "You can breathe underwater but will dry out on land, you can hold a water bucket in your hand to prevent this.",
+    "type": "origins:multiple",
+    "air": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "inverted": true,
+                                "type": "origins:submerged_in",
+                                "fluid": "water"
+                            },
+                            {
+                                "type": "origins:air",
+                                "comparison": ">",
+                                "compare_to": -20
+                            },
+                            {
+                                "inverted": true,
+                                "type": "origins:equipped_item",
+                                "equipment_slot": "mainhand",
+                                "item_condition": {
+                                    "type": "origins:ingredient",
+                                    "ingredient": {
+                                        "item": "water_bucket"
+                                    }
+                                }
+                            },
+                            {
+                                "inverted": true,
+                                "type": "origins:equipped_item",
+                                "equipment_slot": "offhand",
+                                "item_condition": {
+                                    "type": "origins:ingredient",
+                                    "ingredient": {
+                                        "item": "water_bucket"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:gain_air",
+                        "value": -5
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:submerged_in",
+                                "fluid": "water"
+                            },
+                            {
+                                "type": "origins:air",
+                                "comparison": "<",
+                                "compare_to": 300
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:gain_air",
+                        "value": 8
+                    }
+                }
+            ]
+        }
+    },
+    "dmg": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:submerged_in",
+                    "fluid": "water"
+                },
+                {
+                    "type": "origins:air",
+                    "comparison": "<",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:damage_over_time",
+        "interval": 20,
+        "onset_delay": 1,
+        "damage": 1,
+        "damage_easy": 1,
+        "damage_source": {
+            "name": "no_water_for_gills",
+            "bypasses_armor": true,
+            "unblockable": true
+        },
+        "protection_effectiveness": 1
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Warmth",
+    "description": "Gain haste when on fire.",
+    "condition": {
+        "type": "origins:on_fire"
+    },
+    "type": "origins:action_over_time",
+    "interval": 60,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "haste",
+            "duration": 100,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

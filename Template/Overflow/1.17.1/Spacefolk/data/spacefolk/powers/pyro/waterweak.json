@@ -1,0 +1,61 @@
+{
+    "name": "Vulnerability to Water",
+    "description": "Water makes you feel sick.",
+    "type": "origins:multiple",
+    "tired": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_rain"
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:exhaust",
+        "interval": 40,
+        "exhaustion": 10
+    },
+    "weak": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_rain"
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 40,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+		    {
+                "effect": "weakness",
+                "duration": 200,
+                "amplifier": 2,
+                "show_particles": false,
+                "show_icon": false
+            },
+			{
+			    "effect": "slowness",
+                "duration": 200,
+                "amplifier": 2,
+                "show_particles": false,
+                "show_icon": false
+			}
+			]
+        }
+    }
+}

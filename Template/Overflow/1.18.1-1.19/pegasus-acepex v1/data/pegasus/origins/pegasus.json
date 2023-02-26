@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"pegasus:jump",
+		"pegasus:bolt",
+		"origins:elytra",
+		"pegasus:hp",
+		"pegasus:speed",
+		"origins:vegetarian",
+		"origins:fresh_air",
+		"pegasus:fall",
+		"pegasus:weak",
+		"origins:claustrophobia",
+		"pegasus:size"
+	],
+	"icon": "minecraft:feather",
+	"impact": 2,
+	"name": "Pegasus",
+	"description": "Majestic winged equine that soars freely through the skies."
+}

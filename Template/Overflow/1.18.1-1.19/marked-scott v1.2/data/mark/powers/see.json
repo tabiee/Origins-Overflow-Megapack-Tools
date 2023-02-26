@@ -1,0 +1,14 @@
+{
+    "name": "Dark Vision",
+    "description": "You have the ability to see any mob within 16 blocks of you.",
+    "type": "origins:entity_glow",
+    "bientity_condition": {
+        "type": "origins:distance",
+        "comparison": "<=",
+        "compare_to": 16
+    },
+    "use_teams": false,
+    "red": 0.35,
+    "green": 0.1,
+    "blue": 0.6
+}

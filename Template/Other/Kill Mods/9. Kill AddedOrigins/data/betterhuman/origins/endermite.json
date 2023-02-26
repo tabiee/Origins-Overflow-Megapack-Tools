@@ -1,0 +1,15 @@
+{
+    "powers": [
+        "origins:throw_ender_pearl",
+        "origins:water_vulnerability",
+        "betterhuman:silverfish_sized",
+        "betterhuman:silverfishsize"
+    ],
+    "icon": "minecraft:end_stone",
+    "order": 11,
+    "impact": 2,
+    "name": "Endermite",
+    "description": "The endermite is a rare species.",
+    "loading_priority": 100,
+    "unchoosable": true
+}

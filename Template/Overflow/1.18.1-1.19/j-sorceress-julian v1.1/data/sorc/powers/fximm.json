@@ -1,0 +1,17 @@
+{
+    "name": "§2§nAccustomed to Arcane",
+    "description": "You are immune to negative potion effects.",
+    "type": "origins:effect_immunity",
+    "effects": [
+        "slowness",
+        "mining_fatigue",
+        "instant_damage",
+        "nausea",
+        "blindness",
+        "hunger",
+        "weakness",
+        "wither",
+        "unluck",
+		"poison"
+    ]
+}

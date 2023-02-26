@@ -1,0 +1,210 @@
+{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:if_else",
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "minecraft:deepslate_coal_ore"
+				}
+			}
+		},
+		"if_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @s minecraft:deepslate_coal_ore 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "give @s minecraft:coal 7",
+					"permission_level": 4
+				}
+			]
+		},
+		"else_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:deepslate_iron_ore"
+					}
+				}
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "clear @s minecraft:deepslate_iron_ore 1",
+						"permission_level": 4
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_ingot 5",
+						"permission_level": 4
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:deepslate_lapis_ore"
+						}
+					}
+				},
+				"if_action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "clear @s minecraft:deepslate_lapis_ore 1",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "give @s minecraft:lapis_lazuli 7",
+							"permission_level": 4
+						}
+					]
+				},
+				"else_action": {
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:equipped_item",
+						"equipment_slot": "mainhand",
+						"item_condition": {
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "minecraft:deepslate_redstone_ore"
+							}
+						}
+					},
+					"if_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "clear @s minecraft:deepslate_redstone_ore 1",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "give @s minecraft:redstone 7",
+								"permission_level": 4
+							}
+						]
+					},
+					"else_action": {
+						"type": "origins:if_else",
+						"condition": {
+							"type": "origins:equipped_item",
+							"equipment_slot": "mainhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "minecraft:deepslate_gold_ore"
+								}
+							}
+						},
+						"if_action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "origins:execute_command",
+									"command": "clear @s minecraft:deepslate_gold_ore 1",
+									"permission_level": 4
+								},
+								{
+									"type": "origins:execute_command",
+									"command": "give @s minecraft:gold_ingot 5",
+									"permission_level": 4
+								}
+							]
+						},
+						"else_action": {
+							"type": "origins:if_else",
+							"condition": {
+								"type": "origins:equipped_item",
+								"equipment_slot": "mainhand",
+								"item_condition": {
+									"type": "origins:ingredient",
+									"ingredient": {
+										"item": "minecraft:deepslate_emerald_ore"
+									}
+								}
+							},
+							"if_action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "clear @s minecraft:deepslate_emerald_ore 1",
+										"permission_level": 4
+									},
+									{
+										"type": "origins:execute_command",
+										"command": "give @s minecraft:emerald 3",
+										"permission_level": 4
+									}
+								]
+							},
+							"else_action": {
+								"type": "origins:if_else",
+								"condition": {
+									"type": "origins:equipped_item",
+									"equipment_slot": "mainhand",
+									"item_condition": {
+										"type": "origins:ingredient",
+										"ingredient": {
+											"item": "minecraft:deepslate_diamond_ore"
+										}
+									}
+								},
+								"if_action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:execute_command",
+											"command": "clear @s minecraft:deepslate_diamond_ore 1",
+											"permission_level": 4
+										},
+										{
+											"type": "origins:execute_command",
+											"command": "give @s minecraft:diamond 3",
+											"permission_level": 4
+										}
+									]
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"name": "Molten Hands",
+	"description": "You can smelt ores in your hands.",
+	"hidden": true,
+	"cooldown": 1,
+	"key": {
+		"key": "secondary",
+		"continuous": true
+	},
+	"hud_render": {
+		"should_render": false
+	}
+}

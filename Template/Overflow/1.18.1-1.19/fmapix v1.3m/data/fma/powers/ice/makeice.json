@@ -1,0 +1,10 @@
+{
+    "hidden": true,
+    "type": "origins:action_on_callback",
+    "entity_action_chosen": {
+        "type": "origins:execute_command",
+        "command": "give @s heart_of_the_sea{CustomModelData:2,display:{Name:'[{\"text\":\"Ice Transmutation Array\",\"italic\":false,\"color\":\"aqua\",\"bold\":true}]'}} 1",
+        "permission_level": 4
+    },
+    "execute_chosen_when_orb": true
+}

@@ -1,0 +1,19 @@
+{
+	"name": "Alchemy Specialization",
+	"replace": false,
+	"order": 69,
+	"origins": [
+		{
+			"condition": {
+				"type": "origins:origin",
+				"origin": "fma:master",
+				"layer": "origins:origin"
+			},
+			"origins": [
+				"fma:fire",
+				"fma:ice",
+				"fma:earth"
+			]
+		}
+	]
+}

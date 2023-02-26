@@ -1,0 +1,95 @@
+{
+    "name": "Lurk",
+    "description": "Teleport behind any entity",
+    "type": "origins:multiple",
+    "invis":
+    {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "hud_render":
+        {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 0
+        }
+    },
+    "ghost":
+    {
+        "type": "origins:invisibility",
+        "render_armor": false,
+        "condition":
+        {
+            "type": "origins:resource",
+            "inverted": false,
+            "comparison": "==",
+            "resource": "*:*_invis",
+            "compare_to": 1
+        }
+    },
+    "activate":
+    {
+        "type": "origins:active_self",
+        "cooldown": 60,
+        "hud_render":
+        {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 0
+        },
+        "entity_action":
+        {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_invis",
+                    "change": 1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "particle minecraft:squid_ink ~ ~.5 ~ .3 .5 .3 0 50 normal"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "playsound minecraft:block.wool.fall player @a[distance=..10] ~ ~ ~ .5 0"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "execute at @e[distance=0.1..15,type=!minecraft:area_effect_cloud,type=!minecraft:armor_stand,type=!minecraft:end_crystal,type=!minecraft:evoker_fangs,type=!minecraft:fishing_bobber,type=!minecraft:item_frame,type=!minecraft:leash_knot,type=!minecraft:lightning_bolt,type=!minecraft:painting,type=!minecraft:arrow,type=!minecraft:dragon_fireball,type=!minecraft:egg,type=!minecraft:ender_pearl,type=!minecraft:experience_bottle,type=!minecraft:eye_of_ender,type=!minecraft:fireball,type=!minecraft:firework_rocket,type=!minecraft:llama_spit,type=!minecraft:potion,type=!minecraft:shulker_bullet,type=!minecraft:small_fireball,type=!minecraft:snowball,type=!minecraft:spectral_arrow,type=!minecraft:trident,type=!minecraft:wither_skull,type=!minecraft:boat,type=!minecraft:chest_minecart,type=!minecraft:command_block_minecart,type=!minecraft:furnace_minecart,type=!minecraft:hopper_minecart,type=!minecraft:minecart,type=!minecraft:spawner_minecart,type=!minecraft:tnt_minecart,type=!minecraft:falling_block,type=!minecraft:tnt,type=!minecraft:experience_orb,type=!minecraft:item,limit=1,sort=nearest] run tp @s ^ ^0.5 ^-2.5 facing entity @e[distance=..2,type=!minecraft:area_effect_cloud,type=!minecraft:armor_stand,type=!minecraft:end_crystal,type=!minecraft:evoker_fangs,type=!minecraft:fishing_bobber,type=!minecraft:item_frame,type=!minecraft:leash_knot,type=!minecraft:lightning_bolt,type=!minecraft:painting,type=!minecraft:arrow,type=!minecraft:dragon_fireball,type=!minecraft:egg,type=!minecraft:ender_pearl,type=!minecraft:experience_bottle,type=!minecraft:eye_of_ender,type=!minecraft:fireball,type=!minecraft:firework_rocket,type=!minecraft:llama_spit,type=!minecraft:potion,type=!minecraft:shulker_bullet,type=!minecraft:small_fireball,type=!minecraft:snowball,type=!minecraft:spectral_arrow,type=!minecraft:trident,type=!minecraft:wither_skull,type=!minecraft:boat,type=!minecraft:chest_minecart,type=!minecraft:command_block_minecart,type=!minecraft:furnace_minecart,type=!minecraft:hopper_minecart,type=!minecraft:minecart,type=!minecraft:spawner_minecart,type=!minecraft:tnt_minecart,type=!minecraft:falling_block,type=!minecraft:tnt,type=!minecraft:experience_orb,type=!minecraft:item,limit=1,sort=nearest] feet"
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 5,
+                    "action":
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_invis",
+                        "change": -1
+                    }
+                }
+            ]
+        },
+        "condition":
+        {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "inverted": false,
+                    "comparison": ">=",
+                    "compare_to": 1,
+                    "permission_level": 4,
+                    "command": "execute if entity @e[distance=0.1..15,type=!minecraft:area_effect_cloud,type=!minecraft:armor_stand,type=!minecraft:end_crystal,type=!minecraft:evoker_fangs,type=!minecraft:fishing_bobber,type=!minecraft:item_frame,type=!minecraft:leash_knot,type=!minecraft:lightning_bolt,type=!minecraft:painting,type=!minecraft:arrow,type=!minecraft:dragon_fireball,type=!minecraft:egg,type=!minecraft:ender_pearl,type=!minecraft:experience_bottle,type=!minecraft:eye_of_ender,type=!minecraft:fireball,type=!minecraft:firework_rocket,type=!minecraft:llama_spit,type=!minecraft:potion,type=!minecraft:shulker_bullet,type=!minecraft:small_fireball,type=!minecraft:snowball,type=!minecraft:spectral_arrow,type=!minecraft:trident,type=!minecraft:wither_skull,type=!minecraft:boat,type=!minecraft:chest_minecart,type=!minecraft:command_block_minecart,type=!minecraft:furnace_minecart,type=!minecraft:hopper_minecart,type=!minecraft:minecart,type=!minecraft:spawner_minecart,type=!minecraft:tnt_minecart,type=!minecraft:falling_block,type=!minecraft:tnt,type=!minecraft:experience_orb,type=!minecraft:item,limit=1,sort=nearest]"
+                }
+            ]
+        },
+            "key": {
+                "key": "key.origins.quaternary_active"
+            }
+    }
+}

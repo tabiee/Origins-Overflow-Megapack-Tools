@@ -1,0 +1,58 @@
+{
+	"name": "Cooking Pot",
+	"description": "If you sleep near a cauldron you wake up with full health and hunger. If other players are near you when you wake up, the same effects apply to them. You may find a random piece of food when you wake up.\n",
+	"type": "origins:multiple",
+	"sleep": {
+		"condition": {
+			"type": "origins:block_in_radius",
+			"block_condition": {
+				"type": "origins:block",
+				"block": "cauldron"
+			},
+			"radius": 10,
+			"shape": "cube",
+			"comparison": ">=",
+			"compare_to": 1
+		},
+		"type": "origins:action_on_wake_up",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[distance=..12] instant_health 1 200",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[distance=..12] saturation 1 200",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle minecraft:landing_honey ~ ~ ~ 5 0 5 0 100",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"food": {
+		"condition": {
+			"type": "origins:block_in_radius",
+			"block_condition": {
+				"type": "origins:block",
+				"block": "cauldron"
+			},
+			"radius": 10,
+			"shape": "cube",
+			"comparison": ">=",
+			"compare_to": 1
+		},
+		"type": "origins:action_on_wake_up",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "loot give @s loot fivha:foods",
+			"permission_level": 4
+		}
+	}
+}

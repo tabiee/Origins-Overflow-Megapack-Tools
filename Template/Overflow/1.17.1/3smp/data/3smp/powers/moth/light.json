@@ -1,0 +1,36 @@
+{
+    "type": "origins:attribute",
+	"name": "§1§nLight Boost",
+    "description": "Being in a five block radius of a bright block at night gives a speed boost. ",
+    "modifier": {
+        "attribute": "generic.movement_speed",
+        "operation": "addition",
+        "value": 0.075,
+        "name": "moth light bonus"
+    },
+    "condition": {
+        "type": "origins:and",
+        "inverted": false,
+        "conditions": [
+            {
+                "type": "origins:daytime",
+                "inverted": true
+            },
+            {
+                "type": "origins:block_in_radius",
+                "inverted": false,
+                "radius": 5,
+                "shape": "cube",
+                "comparison": "<",
+                "compare_to": 1,
+                "block_condition": {
+                    "type": "origins:light_level",
+                    "inverted": false,
+					"light_type": "block",
+                    "comparison": ">",
+                    "compare_to": 13
+                }
+            }
+        ]
+    }
+}

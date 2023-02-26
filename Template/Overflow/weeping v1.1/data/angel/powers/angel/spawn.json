@@ -1,0 +1,9 @@
+{
+    "name": "§6§nRotten and Forgotten",
+    "description": "Always spawn in the Jungle.",
+    "type": "origins:modify_player_spawn",
+    "dimension": "minecraft:overworld",
+    "biome": "minecraft:jungle",
+    "spawn_strategy": "center",
+    "dimension_distance_multiplier": 1
+}

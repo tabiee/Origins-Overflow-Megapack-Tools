@@ -1,0 +1,30 @@
+{
+	"powers": [
+		"ax:amphibious",
+		"ax:emergency_exit",
+		"origins:carnivore",
+		"origins:aquatic",
+		"ax:bucket",
+		"ax:bubbles",
+		"ax:fishdiettropical",
+		"ax:fishdietcod",
+		"ax:fishdietcookcod",
+		"ax:fishdietsalmon",
+		"ax:fishdietcooksalmon",
+		"origins:water_vision",
+		"origins:like_water",
+        "ax:nodie",
+        "origins:water_breathing",
+		"origins:conduit_power_on_land",
+        "ax:respiration",
+		"ax:instinct",
+		"ax:strength",
+		"ax:waterspeed",
+		"ax:color"
+	],
+	"icon": "minecraft:axolotl_bucket",
+	"order": 473,
+	"impact": 2,
+	"name": "§3§l§oAxolotl",
+	"description": "Axolotl=You=Adorable=Danger"
+}

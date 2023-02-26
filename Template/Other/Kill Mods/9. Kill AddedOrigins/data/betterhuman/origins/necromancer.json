@@ -1,0 +1,27 @@
+{
+    "powers": [
+        "origins:weak_arms",
+        "origins:phantomize",
+        "betterhuman:necromancerdd",
+        "betterhuman:necromancersummons",
+        "betterhuman:necromancersummonz",
+        "betterhuman:necromancermobi",
+        "betterhuman:necrofalldd",
+        "betterhuman:necrofiredd",
+        "betterhuman:necrolava",
+        "betterhuman:necromancerarrowi",
+        "betterhuman:necroonfiredd"
+    ],
+    "icon": "minecraft:rotten_flesh",
+    "order": 7,
+    "impact": 3,
+    "name": "Necromancer",
+    "description": "The necromancer is a powerful origin.",
+    "upgrades": {
+        "condition": "minecraft:end/kill_dragon",
+        "origin": "betterhuman:antimancer",
+        "announcement": "You have evolved, you are now capable of destroyed beings in seconds"
+    },
+    "loading_priority": 100,
+    "unchoosable": true
+}

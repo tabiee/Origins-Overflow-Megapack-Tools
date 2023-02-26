@@ -1,0 +1,200 @@
+{
+    "name": "§4§nEnvironmetal Sensitivity§r",
+    "description": "Being in cold areas freezes your armor, causing you to take 2x damage. Being in hot areas consumes 1 energy per second to prevent overheating, if you run out of power you get Slowness II and Weakness I.",
+    "type": "origins:multiple",
+    "cold": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:biome",
+                    "biomes": [
+                        "minecraft:ice_spikes",
+                        "minecraft:snowy_plains",
+                        "minecraft:snowy_beach",
+                        "minecraft:deep_frozen_ocean",
+                        "minecraft:frozen_ocean",
+                        "minecraft:frozen_river",
+                        "minecraft:old_growth_pine_taiga",
+                        "minecraft:old_growth_spruce_taiga",
+                        "minecraft:snowy_taiga",
+                        "minecraft:taiga",
+                        "minecraft:frozen_peaks",
+                        "minecraft:snowy_slopes"
+                    ]
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "cold2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:biome",
+                    "biomes": [
+                        "minecraft:ice_spikes",
+                        "minecraft:snowy_plains",
+                        "minecraft:snowy_beach",
+                        "minecraft:deep_frozen_ocean",
+                        "minecraft:frozen_ocean",
+                        "minecraft:frozen_river",
+                        "minecraft:old_growth_pine_taiga",
+                        "minecraft:old_growth_spruce_taiga",
+                        "minecraft:snowy_taiga",
+                        "minecraft:taiga",
+                        "minecraft:frozen_peaks",
+                        "minecraft:snowy_slopes"
+                    ]
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"§9§lWARNING: Freezing§r\"}"
+                }
+            ]
+        }
+    },
+    "hot": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:biome",
+                    "biomes": [
+                        "minecraft:desert",
+                        "minecraft:basalt_deltas",
+                        "minecraft:crimson_forest",
+                        "minecraft:nether_wastes",
+                        "minecraft:soul_sand_valley",
+                        "minecraft:warped_forest",
+                        "minecraft:savanna",
+                        "minecraft:savanna_plateau",
+                        "minecraft:windswept_savanna",
+                        "minecraft:ocean",
+                        "minecraft:warm_ocean",
+                        "minecraft:swamp",
+                        "minecraft:badlands",
+                        "minecraft:eroded_badlands",
+                        "minecraft:wooded_badlands",
+                        "minecraft:bamboo_jungle",
+                        "minecraft:jungle",
+                        "minecraft:sparse_jungle"
+                    ]
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:power_bar",
+                    "change": -2,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"§c§lWARNING: Overheating§r\"}"
+                }
+            ]
+        }
+    },
+    "hot2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:biome",
+                    "biomes": [
+                        "minecraft:desert",
+                        "minecraft:basalt_deltas",
+                        "minecraft:crimson_forest",
+                        "minecraft:nether_wastes",
+                        "minecraft:soul_sand_valley",
+                        "minecraft:warped_forest",
+                        "minecraft:savanna",
+                        "minecraft:savanna_plateau",
+                        "minecraft:windswept_savanna",
+                        "minecraft:ocean",
+                        "minecraft:warm_ocean",
+                        "minecraft:swamp",
+                        "minecraft:badlands",
+                        "minecraft:eroded_badlands",
+                        "minecraft:wooded_badlands",
+                        "minecraft:bamboo_jungle",
+                        "minecraft:jungle",
+                        "minecraft:sparse_jungle"
+                    ]
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:power_bar",
+                    "change": -1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"§c§lWARNING: Overheating§r\"}"
+                }
+            ]
+        }
+    }
+}

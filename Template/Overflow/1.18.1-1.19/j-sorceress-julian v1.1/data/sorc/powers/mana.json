@@ -1,0 +1,42 @@
+{
+    "name": "§c§nMana",
+    "description": "Your abilities use mana.",
+    "type": "origins:multiple",
+    "bar": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 400,
+        "start_value": 400,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 23
+        }
+    },
+    "regain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "sorc:beam_shoot",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "sorc:mana_bar",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        }
+    }
+}

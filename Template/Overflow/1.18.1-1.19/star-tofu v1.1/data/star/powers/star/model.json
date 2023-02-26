@@ -1,0 +1,92 @@
+{
+	"name": "§3§nStar Body",
+	"description": "Your entire body is made out of stardust and floats around your central gravity inside you.",
+	"type": "origins:multiple",
+	"fx1": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:invisible"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 6,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle glow ~ ~ ~ 0.5 1 0.5 0 2",
+			"permission_level": 4
+		}
+	},
+	"fx2": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:invisible"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 4,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "particle wax_off ~ ~ ~ 0.4 1 0.4 0 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle dust_color_transition 0.871 1.000 1.000 1 0.031 1.000 0.871 ~ ~ ~ 0.5 1 0.5 1 3 normal",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"model": {
+		"type": "origins:model_color",
+		"red": 0.5,
+		"green": 0.8,
+		"blue": 0.9,
+		"alpha": 0.7
+	},
+	"glow": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:invisible"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				}
+			]
+		},
+		"type": "origins:self_glow",
+		"bientity_condition": {
+			"type": "origins:can_see"
+		},
+		"use_teams": false,
+		"red": 0.25,
+		"green": 0.75,
+		"blue": 0.8
+	}
+}

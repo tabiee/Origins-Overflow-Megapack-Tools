@@ -1,0 +1,45 @@
+{
+    "hidden": true,
+    "type": "origins:action_on_callback",
+    "entity_action_chosen": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "tag @s add statue",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "summon area_effect_cloud ~ ~ ~ {Particle:\"block air\",Radius:0.1f,Duration:99999,Tags:[\"see\"]}",
+                "permission_level": 4
+            }
+        ]
+    },
+    "execute_chosen_when_orb": true,
+    "entity_action_lost": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "tag @s remove statue",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:motion 1 @s",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "kill @e[tag=see]",
+                "permission_level": 4
+            }
+        ]
+    },
+	 "entity_action_respawned": {
+        "type": "origins:execute_command",
+        "command": "summon area_effect_cloud ~ ~ ~ {Particle:\"block air\",Radius:0.1f,Duration:99999,Tags:[\"see\"]}",
+        "permission_level": 4
+    }
+}

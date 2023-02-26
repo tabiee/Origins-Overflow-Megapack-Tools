@@ -1,0 +1,87 @@
+{
+    "name": "§5§nFrost Dash",
+    "description": "Rush forward quickly leaving behind a trail of snow.",
+    "type": "origins:multiple",
+    "dash": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:trigger_cooldown",
+            "power": "*:snow/dash_cd"
+        },
+        "cooldown": 300,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 8
+        },
+        "key": "primary"
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "act": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:snow/dash_cd",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:on_block",
+                        "block_condition": {
+                            "type": "origins:constant",
+                            "value": true
+                        }
+                    },
+                    "if_action": {
+                        "type": "origins:add_velocity",
+                        "z": 1,
+                        "space": "local_horizontal"
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle spit ~ ~ ~ 0.3 1 0.3 0 3",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle white_ash ~ ~ ~ 0.3 1 0.3 0 20",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:on_block",
+                        "block_condition": {
+                            "type": "origins:constant",
+                            "value": true
+                        }
+                    },
+                    "if_action": {
+                        "type": "origins:execute_command",
+                        "command": "fill ~ ~ ~ ~ ~ ~ snow replace air",
+                        "permission_level": 4
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.note_block.flute",
+                    "volume": 0.4,
+                    "pitch": 1
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "powers": [
+        "betterhuman:lakordamagebuff",
+        "betterhuman:lakorkillerradius",
+        "betterhuman:poisonimmune",
+        "betterhuman:hugeapetite",
+        "origins:vegetarian",
+        "betterhuman:lastchancefighter"
+    ],
+    "icon": "minecraft:iron_sword",
+    "order": 15,
+    "impact": 1,
+    "name": "Lakor Warrior",
+    "description": "The Lakor Warrior is Greatly Skilled at combat",
+    "loading_priority": 100,
+    "unchoosable": true
+}

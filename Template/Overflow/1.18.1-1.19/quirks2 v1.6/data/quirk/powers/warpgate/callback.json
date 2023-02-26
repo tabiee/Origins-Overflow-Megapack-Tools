@@ -1,0 +1,30 @@
+{
+    "type": "origins:active_self",
+      "entity_action": {
+        "type": "origins:and",
+        "actions": [ 
+          {    
+          "type": "origins:execute_command",
+          "command": "effect give @p extraalchemy:recall 6 2 true",
+          "permission_level": 4
+          },
+          {    
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:item.trident.hit_ground master @p ~ ~ ~ 1 0.1",
+          "permission_level": 4
+          }
+		]
+      },
+      "name": "Recall",
+      "description": "When this ability is activated, it'll teleport you back to the spot when activated",
+      "key": {
+          "key": "key.origins.primary_active",
+          "continuous": false
+      },
+      "cooldown": 350,
+      "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 1
+          }
+  }

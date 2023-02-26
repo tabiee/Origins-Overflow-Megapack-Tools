@@ -1,0 +1,47 @@
+{
+    "name": "§b§nBelonging To The Depths",
+    "description": "Soul-imbued ground overwhelms you.",
+    "type": "origins:multiple",
+    "dmg": {
+        "condition": {
+            "type": "origins:on_block",
+            "block_condition": {
+                "type": "origins:block",
+                "block": "soul_sand"
+            }
+        },
+        "type": "origins:damage_over_time",
+        "interval": 2,
+        "onset_delay": 10,
+        "damage": 2,
+        "damage_easy": 1,
+        "damage_source": {
+            "name": "magic",
+            "unblockable": true,
+            "magic": true
+        },
+        "protection_enchantment": "minecraft:fire_protection",
+        "protection_effectiveness": 1
+    },
+    "weak": {
+        "condition": {
+            "type": "origins:on_block",
+            "block_condition": {
+                "type": "origins:block",
+                "block": "soul_soil"
+            }
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "weakness",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    }
+}

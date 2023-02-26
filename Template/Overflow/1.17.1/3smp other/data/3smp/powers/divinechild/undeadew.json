@@ -1,0 +1,35 @@
+{
+    "type": "origins:modify_damage_taken",
+    "condition": {
+        "type": "origins:constant",
+        "inverted": false,
+        "value": true
+    },
+    "damage_condition": {
+        "type": "origins:attacker",
+        "inverted": false,
+        "entity_condition": {
+            "type": "origins:in_tag",
+            "inverted": false,
+            "tag": "3smp:undead"
+        }
+    },
+    "name": "§4§nAversion to Undeath",
+    "description": "The undead are extra annoying.",
+    "hidden": false,
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 1,
+        "name": "mob"
+    },
+    "self_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "duration": 60,
+            "is_ambient": false,
+            "show_particles": false,
+            "show_icon": true,
+            "effect": "slowness"
+        }
+    }
+}

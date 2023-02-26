@@ -1,0 +1,12 @@
+{
+    "type": "origins:modify_projectile_damage",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.75
+    },
+    "damage_condition": {
+        "type": "extraorigins:crossbow_arrow"
+    },
+	"name": "§1§nCrossbow Expert",
+    "description": "Because of your training you use crossbows 75% more effectively than most would."
+}

@@ -1,0 +1,19 @@
+{
+    "powers": [
+        "origins:swim_speed",
+        "origins:aqua_affinity",
+        "origins:aquatic",
+        "origins:water_vision",
+        "origins:water_breathing",
+        "betterhuman:big_sized",
+        "betterhuman:bigsize",
+        "betterhuman:drinkwaterwb"
+    ],
+    "icon": "minecraft:cooked_cod",
+    "order": 2,
+    "impact": 2,
+    "name": "Megaladon",
+    "description": "These creatures have been said to be extinct!",
+    "loading_priority": 100,
+    "unchoosable": true
+}

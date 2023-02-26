@@ -1,0 +1,25 @@
+{
+    "type": "origins:starting_equipment",
+    "recurrent": false,
+    "stacks": [
+        {
+            "amount": 1,
+            "item": "minecraft:end_crystal",
+            "tag": "{display:{Name:'[{\"text\":\"End Crystal\",\"italic\":true,\"color\":\"dark_purple\",\"bold\":true}]',Lore:['[{\"text\":\"Gift from Mother.\",\"italic\":false,\"color\":\"white\"}]']}} 1",
+            "slot": 1
+        },
+        {
+            "amount": 1,
+            "item": "minecraft:chorus_flower",
+            "slot": 2
+        },
+        {
+            "amount": 1,
+            "item": "minecraft:end_stone",
+            "slot": 3
+        }
+    ],
+    "name": "§e§nKeepsakes",
+    "description": "Well you can't just leave these behind...",
+    "hidden": false
+}

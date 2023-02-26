@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"duck:eldritch/fear",
+		"duck:eldritch/sizeswap",
+		"duck:eldritch/mining",
+		"duck:eldritch/nv",
+		"duck:eldritch/hit",
+		"duck:eldritch/sun",
+		"duck:eldritch/vill",
+		"duck:eldritch/tagger"
+	],
+	"icon": "minecraft:sculk_sensor",
+	"impact": 3,
+	"name": "§2§l§oEldritch Abomination",
+	"description": "Unfathomable being of pure madness and fear."
+}

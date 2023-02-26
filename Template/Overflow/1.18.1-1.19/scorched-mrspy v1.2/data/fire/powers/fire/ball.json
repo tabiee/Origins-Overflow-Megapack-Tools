@@ -1,0 +1,99 @@
+{
+    "name": "Fireball",
+    "description": "At Level 3, you gain the ability to shoot fireballs.",
+    "type": "origins:multiple",
+    "effs": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fire/levels_lvl",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "strength",
+                    "duration": 100,
+                    "amplifier": 4,
+                    "show_particles": false,
+                    "show_icon": false
+                },
+                {
+                    "effect": "resistance",
+                    "duration": 100,
+                    "amplifier": 1,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            ]
+        }
+    },
+    "fire": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fire/levels_lvl",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "type": "origins:fire_projectile",
+        "entity_type": "fireball",
+        "cooldown": 120,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 7
+        },
+        "count": 1,
+        "speed": 0.5,
+        "divergence": 0,
+        "sound": "minecraft:entity.blaze.shoot",
+        "key": {
+            "key": "secondary",
+            "continuous": true
+        }
+    },
+    "fire2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fire/levels_lvl",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "type": "origins:fire_projectile",
+        "entity_type": "small_fireball",
+        "cooldown": 120,
+        "hud_render": {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 7
+        },
+        "count": 3,
+        "speed": 0.1,
+        "divergence": 10,
+		"start_delay": 3,
+		"interval": 3,
+        "sound": "minecraft:entity.blaze.shoot",
+        "key": {
+            "key": "secondary",
+            "continuous": true
+        }
+    }
+}

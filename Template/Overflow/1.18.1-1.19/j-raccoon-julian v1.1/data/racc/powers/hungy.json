@@ -1,0 +1,9 @@
+{
+    "name": "§4§nConstantly Searching",
+    "description": "The heat and curse you have makes you constantly hungry.",
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 1.5
+    }
+}

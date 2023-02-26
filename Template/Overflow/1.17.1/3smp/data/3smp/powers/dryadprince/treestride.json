@@ -1,0 +1,32 @@
+{
+	"name": "§1§nTreestride [Secondary]",
+	"description": "Melt into trees.",
+    "type": "origins:phasing",
+    "blacklist": false,
+    "render_type": "remove_blocks",
+    "view_distance": 10,
+    "block_condition": {
+        "type": "origins:in_tag",
+        "inverted": false,
+        "tag": "3smp:tree"
+    },
+    "phase_down_condition": {
+        "type": "origins:and",
+        "inverted": false,
+        "conditions": [
+            {
+                "type": "origins:sneaking",
+                "inverted": false
+            },
+            {
+                "type": "origins:on_block",
+                "inverted": false
+            }
+        ]
+    },
+    "condition": {
+        "type": "origins:power_active",
+        "inverted": false,
+        "power": "3smp:dryadprince/toggle"
+    }
+}

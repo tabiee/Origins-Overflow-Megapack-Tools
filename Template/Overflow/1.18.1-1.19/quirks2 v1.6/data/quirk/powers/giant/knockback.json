@@ -1,0 +1,12 @@
+{
+  "type": "origins:attribute",
+  "modifiers": [
+    {
+      "attribute": "minecraft:generic.knockback_resistance",
+      "operation": "addition",
+      "value": 0.5
+    }
+  ],
+  "name": "Giant Stats",
+  "description": "You take less knockback, no fall damage, increased range, and can jump higher"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "§2§nAbsorbing",
+    "description": "When wet you deal x5 your normal damage.",
+    "condition": {
+        "type": "origins:fluid_height",
+        "fluid": "water",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 4
+    }
+}

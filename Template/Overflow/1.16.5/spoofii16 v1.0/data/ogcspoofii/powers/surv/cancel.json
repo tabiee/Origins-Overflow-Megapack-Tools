@@ -1,0 +1,5 @@
+{
+    "name": "No Regen",
+    "description": "Better hope you have a golden apple.",
+    "type": "origins:disable_regen"
+}

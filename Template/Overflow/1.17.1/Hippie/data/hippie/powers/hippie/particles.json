@@ -1,0 +1,45 @@
+{
+    "hidden": true,
+    "condition": {
+        "inverted": true,
+        "type": "origins:status_effect",
+        "effect": "invisibility"
+    },
+    "type": "origins:multiple",
+    "red": {
+        "type": "origins:action_over_time",
+        "interval": 28,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle item minecraft:red_concrete ~ ~ ~ 2.5 2.5 2.5 0 4",
+            "permission_level": 4
+        }
+    },
+    "ora": {
+        "type": "origins:action_over_time",
+        "interval": 36,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle item minecraft:orange_concrete ~ ~ ~ 2.5 2.5 2.5 0 4",
+            "permission_level": 4
+        }
+    },
+    "cya": {
+        "type": "origins:action_over_time",
+        "interval": 40,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle item minecraft:cyan_concrete ~ ~ ~ 2.5 2.5 2.5 0 4",
+            "permission_level": 4
+        }
+    },
+    "purp": {
+        "type": "origins:action_over_time",
+        "interval": 32,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle item minecraft:purple_concrete ~ ~ ~ 2.5 2.5 2.5 0 4",
+            "permission_level": 4
+        }
+    }
+}

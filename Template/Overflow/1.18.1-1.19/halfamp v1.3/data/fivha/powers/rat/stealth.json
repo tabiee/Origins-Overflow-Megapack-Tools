@@ -1,0 +1,203 @@
+{
+	"name": "Stealth",
+	"description": "While toggled, you are able to walk and interact with objects without being detected. Attacking a target while stealthed deals bonus Sneak Attack damage. Performing a Sneak Attack brings you out of stealth on a longer cooldown.\n",
+	"type": "origins:multiple",
+	"tap": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"invis": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_tap",
+			"comparison": "==",
+			"compare_to": 1
+		},
+		"type": "origins:invisibility",
+		"render_armor": false
+	},
+	"trigger": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "origins:resource",
+						"resource": "*:*_tap",
+						"comparison": "==",
+						"compare_to": 0
+					},
+					{
+						"type": "origins:resource",
+						"resource": "*:*_cd",
+						"comparison": "==",
+						"compare_to": 0
+					}
+				]
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:delay",
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:*_tap",
+							"change": 1
+						},
+						"ticks": 2
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "block.note_block.snare",
+						"volume": 0.5,
+						"pitch": 1
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "team join sneak @s",
+						"permission_level": 4
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:delay",
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:*_tap",
+							"change": -1
+						},
+						"ticks": 2
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "block.note_block.snare",
+						"volume": 0.5,
+						"pitch": 0.8
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "team leave @s",
+						"permission_level": 4
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "team leave @e[type=!player]",
+						"permission_level": 4
+					}
+				]
+			}
+		},
+		"cooldown": 100,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 7,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:*_cd",
+				"comparison": "==",
+				"compare_to": 0
+			}
+		},
+		"key": "primary"
+	},
+	"cd": {
+		"type": "origins:cooldown",
+		"cooldown": 300,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 7
+		}
+	},
+	"damage": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_tap",
+			"comparison": "==",
+			"compare_to": 1
+		},
+		"type": "origins:modify_damage_dealt",
+		"modifier": {
+			"operation": "addition",
+			"value": 6
+		}
+	},
+	"attack": {
+		"type": "origins:action_on_hit",
+		"bientity_condition": {
+			"type": "origins:actor_condition",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:*_tap",
+				"comparison": "==",
+				"compare_to": 1
+			}
+		},
+		"bientity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:actor_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:change_resource",
+									"resource": "*:*_tap",
+									"change": -1
+								},
+								"ticks": 2
+							},
+							{
+								"type": "origins:trigger_cooldown",
+								"power": "*:*_cd"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "block.note_block.snare",
+								"volume": 0.5,
+								"pitch": 0.8
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "team leave @s",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "team leave @e[type=!player]",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "particle dust_color_transition 1.000 0.000 0.000 2 0.188 0.000 0.000 ~ ~1 ~ 0.2 0.2 0.2 0 10 normal",
+						"permission_level": 4
+					}
+				}
+			]
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		}
+	}
+}

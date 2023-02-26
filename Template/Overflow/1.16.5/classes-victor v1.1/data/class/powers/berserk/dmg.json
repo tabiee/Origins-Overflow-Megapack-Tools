@@ -1,0 +1,13 @@
+{
+    "name": "§c§nBrutal Fighter",
+    "description": "You deal +3 extra damage with all weapons, except bows.",
+    "type": "origins:modify_damage_dealt",
+    "damage_condition": {
+        "inverted": true,
+        "type": "origins:projectile"
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": 3
+    }
+}

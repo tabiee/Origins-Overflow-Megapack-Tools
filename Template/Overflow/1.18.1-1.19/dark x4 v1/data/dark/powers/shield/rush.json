@@ -1,0 +1,42 @@
+{
+    "name": "Adrenaline Rush",
+    "description": "Once every 3 minutes you can push yourself to the limit, gaining Strength and Speed for 30s.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle crit ~ ~0.5 ~ 0.5 0.5 0.5 0 50"
+            },
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "strength",
+                        "duration": 600,
+                        "amplifier": 0,
+                        "show_particles": true,
+                        "show_icon": true
+                    },
+                    {
+                        "effect": "speed",
+                        "duration": 600,
+                        "amplifier": 1,
+                        "show_particles": false,
+                        "show_icon": true
+                    }
+                ]
+            }
+        ]
+    },
+    "cooldown": 4200,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 1
+    },
+    "key": {
+        "key": "primary"
+    }
+}

@@ -1,0 +1,176 @@
+{
+    "name": "§4§nRecharge",
+    "description": "You do not regen normally, you instead regen when making contact with powered redstone or eating redstone. When you hold a stack of redstone in your hand it passively gets drained.",
+    "type": "origins:multiple",
+    "dis": {
+        "type": "origins:disable_regen"
+    },
+    "regen": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block_in_radius",
+                    "block_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:in_tag",
+                                "tag": "teir:redstone"
+                            },
+                            {
+                                "type": "origins:block_state",
+                                "property": "power",
+                                "comparison": ">=",
+                                "compare_to": 1
+                            }
+                        ]
+                    },
+                    "radius": 1,
+                    "shape": "star",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:health",
+                    "comparison": "<",
+                    "compare_to": 20
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:heal",
+                    "amount": 1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 1.000 0.000 0.000 1 ~ ~ ~ 0.3 0.1 0.3 0 3"
+                }
+            ]
+        }
+    },
+    "eat": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "<",
+                    "compare_to": 20
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "redstone"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "redstone"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s redstone 1"
+                },
+                {
+                    "type": "origins:heal",
+                    "amount": 1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 1.000 0.000 0.000 1 ^ ^1 ^1 0.3 0.1 0.3 0 3"
+                }
+            ]
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        }
+    },
+    "passive": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "<",
+                    "compare_to": 20
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "redstone"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "redstone"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 60,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s redstone 1"
+                },
+                {
+                    "type": "origins:heal",
+                    "amount": 1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 1.000 0.000 0.000 1 ^ ^1 ^1 0.3 0.1 0.3 0 3"
+                }
+            ]
+        }
+    }
+}

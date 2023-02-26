@@ -1,0 +1,180 @@
+{
+    "name": "Elder Beam",
+    "description": "Charge a beam for 3 seconds to launch a strong attack at your enemies. Missing resets the cooldown slightly.",
+    "type": "origins:multiple",
+    "charge": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_cd",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle scrape ^ ^1.25 ^1 .1 .1 .1 0 1"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_ray",
+                    "change": 1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_hold"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.chorus_flower.grow",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "primary",
+            "continuous": true
+        }
+    },
+    "ray": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 60,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 24,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_ray",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        },
+        "max_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 60,
+                    "block": false,
+                    "entity": true,
+                    "shape_type": "outline",
+                    "fluid_handling": "any",
+                    "bientity_action": {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "particle glow ~ ~ ~ 1 1 1 0.3 50"
+                                },
+                                {
+                                    "type": "origins:damage",
+                                    "amount": 8,
+                                    "source": {
+                                        "name": "player",
+                                        "unblockable": true
+                                    }
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "tp @s ~ ~ ~ facing entity @p[tag=kraken]",
+                                    "permission_level": 4
+                                },
+                                {
+                                    "type": "origins:delay",
+                                    "action": {
+                                        "type": "origins:add_velocity",
+                                        "y": 1,
+                                        "z": -1,
+                                        "space": "local"
+                                    },
+                                    "ticks": 3
+                                }
+                            ]
+                        }
+                    },
+                    "miss_action": {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:change_resource",
+                            "resource": "*:*_cd",
+                            "change": 500,
+                            "operation": "set"
+                        },
+                        "ticks": 6
+                    },
+                    "command_along_ray": "function ace:beam",
+                    "command_step": 1
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.elder_guardian.curse",
+                    "volume": 1,
+                    "pitch": 1.25
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_ray",
+                        "change": 0,
+                        "operation": "set"
+                    },
+                    "ticks": 3
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:trigger_cooldown",
+                        "power": "*:*_cd"
+                    },
+                    "ticks": 3
+                }
+            ]
+        }
+    },
+    "reset": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_hold",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_ray",
+            "change": -5,
+            "operation": "add"
+        }
+    },
+    "hold": {
+        "type": "origins:cooldown",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 600,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 1
+        }
+    }
+}

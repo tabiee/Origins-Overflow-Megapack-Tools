@@ -1,0 +1,8 @@
+{
+    "name": "§2§nLava Sight",
+    "description": "You can see clearly in lava.",
+	"hidden": true,
+    "type": "origins:lava_vision",
+    "s": 12,
+    "v": 20
+}

@@ -1,0 +1,11 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:execute_command",
+"command": "/replaceitem entity @s container.9 minecraft:tipped_arrow{Potion:\"minecraft:harming\"} 1",
+"permission_level": 4
+      },
+      "interval": 1,
+      "name":"Infinity",
+      "description":"You have infinite harming arrows."
+}

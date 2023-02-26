@@ -1,0 +1,46 @@
+{
+    "type": "origins:action_on_wake_up",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "minecraft:blindness",
+                        "duration": 400,
+                        "amplifier": 1,
+                        "is_ambient": true,
+                        "show_particles": true,
+                        "show_icon": true
+                    },
+                    {
+                        "effect": "minecraft:hunger",
+                        "duration": 400,
+                        "amplifier": 2,
+                        "is_ambient": true,
+                        "show_particles": true,
+                        "show_icon": true
+                    },
+                    {
+                        "duration": 400,
+                        "is_ambient": false,
+                        "show_particles": true,
+                        "show_icon": true,
+                        "effect": "minecraft:slowness"
+                    },
+                    {
+                        "duration": 400,
+                        "is_ambient": false,
+                        "show_particles": true,
+                        "show_icon": true,
+                        "effect": "minecraft:mining_fatigue"
+                    }
+                ]
+            }
+        ]
+    },
+    "name": "Bad Sleep",
+    "description": "You have the relatable experience of waking up feeling awful",
+	"hidden": true
+}

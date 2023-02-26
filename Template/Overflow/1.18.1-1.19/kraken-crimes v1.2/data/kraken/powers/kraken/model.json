@@ -1,0 +1,72 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "md": {
+        "type": "origins:model_color",
+        "alpha": 0.7
+    },
+    "act": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:kraken/size_bit",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle block black_concrete ~ ~ ~ 0.3 0.3 0.3 0 1",
+            "permission_level": 4
+        }
+    },
+    "act2": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:kraken/size_bit",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle block black_concrete ~ ~ ~ 2 4 2 0 20",
+            "permission_level": 4
+        }
+    },
+    "act3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:predicate",
+                    "predicate": "kraken:weather/thunder"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:kraken/size_bit",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle electric_spark ~ ~ ~ 2 4 2 0 20",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle glow ~ ~ ~ 2 4 2 0 20",
+                    "permission_level": 4
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+	"hidden": true,
+	"type": "origins:action_on_callback",
+	"entity_action_chosen": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "tag @s add capt",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "give @s trident{display:{Name:'[{\"text\":\"Mjolnir\",\"italic\":false,\"color\":\"yellow\",\"bold\":true}]'},Enchantments:[{id:channeling,lvl:1},{id:impaling,lvl:10},{id:sharpness,lvl:5},{id:loyalty,lvl:3},{id:mending,lvl:1},{id:unbreaking,lvl:3}]} 1",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "give @s shield{display:{Name:'[{\"text\":\"His Shield\",\"italic\":false,\"color\":\"dark_blue\",\"bold\":true}]'},Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:1},{id:\"minecraft:sharpness\",lvl:2},{id:\"minecraft:unbreaking\",lvl:100}],BlockEntityTag:{Base:0,Patterns:[{Pattern:ss,Color:14},{Pattern:cbo,Color:11},{Pattern:mr,Color:11},{Pattern:flo,Color:11},{Pattern:ms,Color:11},{Pattern:mc,Color:0},{Pattern:bo,Color:11}]}} 1",
+				"permission_level": 4
+			}
+		]
+	},
+	"entity_action_respawned": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "give @s trident{display:{Name:'[{\"text\":\"Mjolnir\",\"italic\":false,\"color\":\"yellow\",\"bold\":true}]'},Enchantments:[{id:channeling,lvl:1},{id:impaling,lvl:10},{id:sharpness,lvl:5},{id:loyalty,lvl:3},{id:mending,lvl:1},{id:unbreaking,lvl:3}]} 1",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "give @s shield{display:{Name:'[{\"text\":\"His Shield\",\"italic\":false,\"color\":\"dark_blue\",\"bold\":true}]'},Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:1},{id:\"minecraft:sharpness\",lvl:2},{id:\"minecraft:unbreaking\",lvl:100}],BlockEntityTag:{Base:0,Patterns:[{Pattern:ss,Color:14},{Pattern:cbo,Color:11},{Pattern:mr,Color:11},{Pattern:flo,Color:11},{Pattern:ms,Color:11},{Pattern:mc,Color:0},{Pattern:bo,Color:11}]}} 1",
+				"permission_level": 4
+			}
+		]
+	},
+	"execute_chosen_when_orb": true,
+	"entity_action_lost": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "tag @s remove capt",
+				"permission_level": 4
+			}
+		]
+	}
+}

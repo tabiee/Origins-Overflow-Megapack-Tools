@@ -1,0 +1,141 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "lv1": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:knight/souls_kills",
+            "comparison": "<",
+            "compare_to": 50
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[tag=dog] speed 10 2 true",
+                    "permission_level": 4
+                }
+            ]
+        }
+    },
+    "lv2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:knight/souls_kills",
+                    "comparison": ">=",
+                    "compare_to": 50
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:knight/souls_kills",
+                    "comparison": "<",
+                    "compare_to": 100
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[tag=dog] speed 10 2 true",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[tag=dog] strength 10 0 true",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[tag=dog] luck 10 0 true",
+                    "permission_level": 4
+                }
+            ]
+        }
+    },
+    "lv3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:knight/souls_kills",
+                    "comparison": ">=",
+                    "compare_to": 100
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:knight/souls_kills",
+                    "comparison": "<",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[tag=dog] speed 10 2 true",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[tag=dog] strength 10 1 true",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[tag=dog] luck 10 1 true",
+                    "permission_level": 4
+                }
+            ]
+        }
+    },
+    "lv4": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:knight/souls_kills",
+                    "comparison": ">=",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[tag=dog] speed 10 2 true",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[tag=dog] strength 10 2 true",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[tag=dog] luck 10 2 true",
+                    "permission_level": 4
+                }
+            ]
+        }
+    }
+}

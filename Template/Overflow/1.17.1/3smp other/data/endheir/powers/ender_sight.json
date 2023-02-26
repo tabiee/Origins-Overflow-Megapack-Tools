@@ -1,0 +1,66 @@
+{
+    "type": "origins:multiple",
+    "name": "Ender Sight",
+    "description": "Using your Secondary Active Key. you can enable your Ender Sight, which gives you Speed and Night Vision for 30 seconds.",
+    "o___1": {
+        "type": "origins:active_self",
+        "cooldown": 1200,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "duration": 600,
+                    "is_ambient": false,
+                    "show_particles": true,
+                    "show_icon": true,
+                    "effect": "minecraft:night_vision",
+                    "amplifier": 1
+                },
+                {
+                    "duration": 600,
+                    "is_ambient": false,
+                    "show_particles": true,
+                    "show_icon": true,
+                    "effect": "minecraft:speed",
+                    "amplifier": 0
+                }
+            ]
+        },
+        "key": {
+            "key": "key.origins.secondary_active",
+            "continuous": false
+        },
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 8
+        }
+    },
+    "o___1_": {
+        "type": "origins:entity_glow"
+    },
+    "o___2": {
+        "type": "origins:active_self",
+        "cooldown": 1200,
+        "entity_action": {
+            "type": "origins:clear_effect",
+            "effect": "minecraft:blindness"
+        },
+        "key": {
+            "continuous": false,
+            "key": "key.origins.secondary_active"
+        }
+    },
+    "o___2_": {
+        "type": "origins:active_self",
+        "cooldown": 1200,
+        "entity_action": {
+            "type": "origins:clear_effect",
+            "effect": "minecraft:slowness"
+        },
+        "key": {
+            "continuous": false,
+            "key": "key.origins.secondary_active"
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "point": {
+		"condition": {
+            "type": "origins:dimension",
+            "dimension": "minecraft:overworld"
+        },
+        "type": "origins:action_on_block_use",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:beds"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "kill @e[tag=point]"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "forceload remove all"
+                    },
+                    "ticks": 2
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "forceload add ~ ~"
+                    },
+                    "ticks": 4
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Invulnerable:1b,Small:1b,Tags:[\"point\"]}"
+                    },
+                    "ticks": 4
+                }
+            ]
+        },
+        "action_result": "success"
+    },
+    "respawn": {
+        "type": "origins:action_on_callback",
+        "execute_chosen_when_orb": false,
+        "entity_action_respawned": {
+            "type": "origins:execute_command",
+            "command": "tp @s @e[tag=point,limit=1]"
+        }
+    }
+}

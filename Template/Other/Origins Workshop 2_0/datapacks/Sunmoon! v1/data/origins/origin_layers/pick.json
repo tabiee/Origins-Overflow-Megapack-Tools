@@ -1,0 +1,18 @@
+{
+	"name": "Personality Mode",
+	"order": 2,
+	"replace": false,
+	"origins": [
+		{
+			"condition": {
+				"type": "origins:origin",
+				"origin": "sunmoon:duo",
+				"layer": "origins:origin"
+			},
+			"origins": [
+				"sunmoon:sun",
+				"sunmoon:moon"
+			]
+		}
+	]
+}

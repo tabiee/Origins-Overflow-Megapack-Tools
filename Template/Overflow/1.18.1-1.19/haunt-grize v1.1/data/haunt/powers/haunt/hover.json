@@ -1,0 +1,39 @@
+{
+    "name": "§5§nHover",
+    "description": "You are able to stop anywhere in the air at will, remaining stationary until you begin flying again or reactivate the power.",
+    "type": "origins:multiple",
+    "tog": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "primary"
+        }
+    },
+    "act": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:swimming"
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:haunt/hover_tog"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "levitation",
+                "duration": 12,
+                "amplifier": -1,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    }
+}

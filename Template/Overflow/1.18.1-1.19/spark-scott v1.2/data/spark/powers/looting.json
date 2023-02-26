@@ -1,0 +1,104 @@
+{
+	"hidden": true,
+	"name": "§2§nLooter§r",
+	"description": "Whenever you kill something it has a high chance of giving extra loot.",
+	"type": "origins:multiple",
+	"fort": {
+		"type": "origins:target_action_on_hit",
+		"target_condition": {
+			"type": "apoli:health",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"debug": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @a knowledge_book",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=item,tag=fort] at @s run data modify entity @s Item set from entity @e[type=item,tag=!fort,limit=1,distance=..0.6] Item",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

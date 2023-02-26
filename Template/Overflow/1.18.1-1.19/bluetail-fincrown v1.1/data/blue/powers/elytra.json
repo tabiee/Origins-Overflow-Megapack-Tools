@@ -1,0 +1,5 @@
+{
+    "name": "Flightless",
+    "description": "You cannot fly with an elytra.",
+    "type": "origins:prevent_elytra_flight"
+}

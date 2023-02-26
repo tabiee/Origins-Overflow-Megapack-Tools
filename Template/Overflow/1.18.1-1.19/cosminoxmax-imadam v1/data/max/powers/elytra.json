@@ -1,0 +1,16 @@
+{
+    "name": "§5§nAirways",
+    "description": "Glide through the air as you lower you gravity to emulate wings.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "This ability is unlocked by getting the Sky's the Limit advancement."
+        }
+    ],
+    "condition": {
+        "type": "origins:advancement",
+        "advancement": "end/elytra"
+    },
+    "type": "origins:elytra_flight",
+    "render_elytra": false
+}

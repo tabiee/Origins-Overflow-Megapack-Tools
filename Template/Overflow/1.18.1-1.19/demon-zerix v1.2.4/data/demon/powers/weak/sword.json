@@ -1,0 +1,89 @@
+{
+    "name": "§c§nSoulbound Blade",
+    "description": "Odium, a weapon imbued with hatred, is always at your side.",
+    "type": "origins:multiple",
+    "gibsword": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:if_else_list",
+                    "actions": [
+                        {
+                            "condition": {
+                                "type": "origins:command",
+                                "command": "clear @s stone_sword{display:{Name:'[{\"text\":\"Odium\",\"italic\":false,\"bold\":true,\"color\":\"dark_red\"}]'}} 0",
+                                "comparison": "==",
+                                "compare_to": 0
+                            },
+                            "action": {
+                                "type": "origins:execute_command",
+                                "command": "give @p stone_sword{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:6,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-122510,9277,11524,-18554]},{AttributeName:\"generic.attack_speed\",Amount:-2.4,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-122410,10077,11524,-20124]}],display:{Name:'[{\"text\":\"Odium\",\"italic\":false,\"bold\":true,\"color\":\"dark_red\"}]'},Enchantments:[{id:sweeping,lvl:3},{id:sharpness,lvl:3},{id:vanishing_curse,lvl:1},{id:unbreaking,lvl:100},{id:fire_aspect,lvl:2},{id:looting,lvl:3}],HideFlags:1} 1"
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:command",
+                                "command": "clear @s stone_sword{display:{Name:'[{\"text\":\"Odium\",\"italic\":false,\"bold\":true,\"color\":\"dark_red\"}]'}} 0",
+                                "comparison": ">",
+                                "compare_to": 1
+                            },
+                            "action": {
+                                "type": "origins:execute_command",
+                                "command": "clear @s stone_sword{display:{Name:'[{\"text\":\"Odium\",\"italic\":false,\"bold\":true,\"color\":\"dark_red\"}]'}} 1"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "kill @e[type=item,nbt={Item:{tag:{display:{Name:'[{\"text\":\"Odium\",\"italic\":false,\"bold\":true,\"color\":\"dark_red\"}]'}}}}]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @e[tag=!demon] netherite_sword{display:{Name:'[{\"text\":\"Odium\",\"italic\":false,\"bold\":true,\"color\":\"dark_red\"}]'}} 10"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @e[tag=!demon] diamond_sword{display:{Name:'[{\"text\":\"Odium\",\"italic\":false,\"bold\":true,\"color\":\"dark_red\"}]'}} 10"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @e[tag=!demon] iron_sword{display:{Name:'[{\"text\":\"Odium\",\"italic\":false,\"bold\":true,\"color\":\"dark_red\"}]'}} 10"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @e[tag=!demon] golden_sword{display:{Name:'[{\"text\":\"Odium\",\"italic\":false,\"bold\":true,\"color\":\"dark_red\"}]'}} 10"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @e[tag=!demon] stone_sword{display:{Name:'[{\"text\":\"Odium\",\"italic\":false,\"bold\":true,\"color\":\"dark_red\"}]'}} 10"
+                }
+            ]
+        }
+    },
+    "lifesteal": {
+        "type": "origins:self_action_on_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:nbt",
+                    "nbt": "{display:{Name:'[{\"text\":\"Odium\",\"italic\":false,\"bold\":true,\"color\":\"dark_red\"}]'}}"
+                }
+            }
+        },
+        "entity_action": {
+            "type": "origins:heal",
+            "amount": 1
+        },
+        "cooldown": 400,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

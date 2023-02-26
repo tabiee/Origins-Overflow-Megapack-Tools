@@ -1,0 +1,34 @@
+{
+    "name": "§6§nPicky Eater",
+    "description": "Carrots, apples and their golden counterparts are the only things you eat.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:food"
+            },
+            {
+                "inverted": true,
+                "type": "origins:ingredient",
+                "ingredient": [
+                    {
+                        "item": "carrot"
+                    },
+                    {
+                        "item": "golden_carrot"
+                    },
+                    {
+                        "item": "apple"
+                    },
+                    {
+                        "item": "golden_apple"
+                    },
+                    {
+                        "item": "enchanted_golden_apple"
+                    }
+                ]
+            }
+        ]
+    }
+}

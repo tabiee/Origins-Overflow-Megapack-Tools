@@ -1,0 +1,11 @@
+{
+    "name": "Unwieldy",
+    "description": "Your claws can’t hold a shield upright.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "shield"
+        }
+    }
+}

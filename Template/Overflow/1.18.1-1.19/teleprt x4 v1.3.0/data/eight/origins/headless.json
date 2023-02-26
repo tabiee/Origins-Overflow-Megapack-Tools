@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"eight:headless/pumpkin",
+		"eight:headless/phase",
+		"eight:headless/horse",
+		"eight:headless/hp"
+	],
+	"icon": "minecraft:jack_o_lantern",
+	"impact": 1,
+	"name": "§6§l§oHeadless Horseman",
+	"description": "\"It is over, your search is done! Let fate choose now, the righteous one!\""
+}

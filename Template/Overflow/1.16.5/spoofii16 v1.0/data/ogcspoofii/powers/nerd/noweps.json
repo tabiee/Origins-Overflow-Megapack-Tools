@@ -1,0 +1,41 @@
+{
+    "name": "Nerd Arms",
+    "description": "Your arms are noodles you can't fight with swords or tridents.",
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "trident"
+                },
+                {
+                    "item": "wooden_sword"
+                },
+                {
+                    "item": "stone_sword"
+                },
+                {
+                    "item": "iron_sword"
+                },
+                {
+                    "item": "golden_sword"
+                },
+                {
+                    "item": "diamond_sword"
+                },
+                {
+                    "item": "netherite_sword"
+                }
+            ]
+        }
+    },
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "attribute": "generic.attack_damage",
+        "operation": "addition",
+        "value": -99
+    },
+    "tick_rate": 2
+}

@@ -1,0 +1,33 @@
+{
+	"name": "Grazing",
+	"description": "While nearby hay bales your hunger passively fills.",
+    "condition": {
+        "type": "origins:block_in_radius",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "hay_block"
+        },
+        "radius": 4,
+        "shape": "cube",
+        "comparison": ">=",
+        "compare_to": 1
+    },
+    "type": "origins:action_over_time",
+    "interval": 100,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:feed",
+                "food": 1,
+                "saturation": 1.5
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.horse.eat",
+                "volume": 0.2,
+                "pitch": 2
+            }
+        ]
+    }
+}

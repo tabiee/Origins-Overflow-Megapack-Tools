@@ -1,0 +1,14 @@
+{
+	"name": "Rodeo",
+	"description": "You deal more knockback to enemies. This applies to melee and not any ranged/magical attacks.",
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+        "type": "origins:add_velocity",
+        "z": 0.4
+    },
+	"bientity_condition": {
+    "type": "origins:distance",
+    "comparison": "<=",
+    "compare_to": 3
+}
+}

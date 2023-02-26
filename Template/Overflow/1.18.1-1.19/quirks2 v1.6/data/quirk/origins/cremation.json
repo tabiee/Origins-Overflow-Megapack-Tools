@@ -1,0 +1,21 @@
+{
+    "powers": [
+	"quirk:cremation/fire_fist",
+	"quirk:cremation/jet_burn",
+	"quirk:cremation/jet_burn2",
+	"quirk:cremation/fire_vortex",
+	"quirk:cremation/burnmode",
+	"quirk:cremation/particles",
+	"quirk:cremation/fire_darts",
+	"quirk:cremation/flashfire",
+	"quirk:cremation/fire_immune",
+	"quirk:health"
+       
+    ],
+        "unchoosable": true,
+    "icon": "minecraft:soul_campfire",
+    "order": 20,
+    "impact": 3,
+    "name": "Cremation",
+    "description": "Dabi's Quirk"
+}

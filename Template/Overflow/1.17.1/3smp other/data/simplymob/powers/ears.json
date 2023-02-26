@@ -1,0 +1,11 @@
+{
+    "name": "Sensitive Head",
+    "description": "Wearing anything on your head hurts your scalp so you choose not to wear a helmet.",
+    "type": "origins:conditioned_restrict_armor",
+    "head": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "tick_rate": 20
+}

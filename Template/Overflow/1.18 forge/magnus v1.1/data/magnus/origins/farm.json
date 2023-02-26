@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"magnus:farm/looting",
+		"magnus:farm/prevent",
+		"magnus:king/crown",
+		"magnus:farm/pve",
+		"magnus:farm/desc"
+	],
+	"icon": "minecraft:iron_hoe",
+	"impact": 1,
+	"order": 1,
+	"name": "§f§l§oFarmer",
+	"description": "You lead a simple life tending to crops and animals."
+}

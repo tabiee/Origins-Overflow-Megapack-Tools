@@ -1,0 +1,8 @@
+{
+  "type": "extraorigins:start_riding",
+  "name": "§1§nClingy",
+  "description": "Sit on someone's shoulder.",
+  "key": {
+	"key": "key.origins.secondary_active"
+  }
+}

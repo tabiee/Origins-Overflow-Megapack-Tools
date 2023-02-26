@@ -1,0 +1,37 @@
+{
+    "type": "origins:active_self",
+    "cooldown": 5,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": {
+        "key": "primary"
+    },
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "inverted": true,
+            "type": "origins:sneaking"
+        },
+        "if_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "levitation",
+                "duration": 100,
+                "amplifier": -1,
+                "show_particles": false,
+                "show_icon": true
+            }
+        },
+        "else_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "levitation",
+                "duration": 100,
+                "amplifier": 255,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    }
+}

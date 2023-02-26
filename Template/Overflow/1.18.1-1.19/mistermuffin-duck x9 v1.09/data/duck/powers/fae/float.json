@@ -1,0 +1,20 @@
+{
+    "name": "§2§nGently Floating",
+    "description": "You fall slowly unless you crouch.",
+    "condition": {
+        "inverted": true,
+        "type": "origins:sneaking"
+    },
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "slow_falling",
+            "duration": 5,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    }
+}

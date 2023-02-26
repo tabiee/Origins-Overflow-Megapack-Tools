@@ -1,0 +1,41 @@
+{
+    "name": "§4§nOverheating",
+    "description": "Warmer climates make you feel weak.",
+    "condition": {
+        "type": "origins:biome",
+        "biomes": [
+            "minecraft:desert",
+            "minecraft:basalt_deltas",
+            "minecraft:crimson_forest",
+            "minecraft:nether_wastes",
+            "minecraft:soul_sand_valley",
+            "minecraft:warped_forest",
+            "minecraft:savanna",
+            "minecraft:savanna_plateau",
+            "minecraft:windswept_savanna",
+            "minecraft:lukewarm_ocean",
+            "minecraft:ocean",
+            "minecraft:warm_ocean",
+            "minecraft:deep_lukewarm_ocean",
+            "minecraft:swamp",
+            "minecraft:badlands",
+            "minecraft:eroded_badlands",
+            "minecraft:wooded_badlands",
+            "minecraft:bamboo_jungle",
+            "minecraft:jungle",
+            "minecraft:sparse_jungle"
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 25,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "weakness",
+            "duration": 35,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    }
+}

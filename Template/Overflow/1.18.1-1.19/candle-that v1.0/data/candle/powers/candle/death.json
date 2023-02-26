@@ -1,0 +1,138 @@
+{
+    "name": "Going out with a flash",
+    "description": "When you die, your body erupts into flames as you burn the last of your wax, going out in a bright, flashy way.",
+    "type": "origins:multiple",
+    "fx": {
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:candle/wax_goo",
+                                "comparison": ">",
+                                "compare_to": 750
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle flame ^ ^1.6 ^ 0 0 0 0 1",
+                                "permission_level": 4
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:candle/wax_goo",
+                                "comparison": "<",
+                                "compare_to": 750
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:candle/wax_goo",
+                                "comparison": ">=",
+                                "compare_to": 500
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle flame ^ ^1.3 ^ 0 0 0 0 1",
+                                "permission_level": 4
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:candle/wax_goo",
+                                "comparison": "<",
+                                "compare_to": 500
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:candle/wax_goo",
+                                "comparison": ">=",
+                                "compare_to": 250
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle flame ^ ^0.95 ^ 0 0 0 0 1",
+                                "permission_level": 4
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:candle/wax_goo",
+                                "comparison": "<",
+                                "compare_to": 250
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:candle/wax_goo",
+                                "comparison": ">",
+                                "compare_to": 0
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle flame ^ ^0.7 ^ 0 0 0 0 1",
+                                "permission_level": 4
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "ded": {
+        "condition": {
+            "type": "origins:health",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:execute_command",
+            "command": "particle flame ~ ~ ~ 0.75 0.75 0.75 0.5 100",
+            "permission_level": 4
+        }
+    }
+}

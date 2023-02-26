@@ -1,0 +1,5 @@
+{
+	"name": "Don't Stare",
+	"description": "While looked at by a player, you begin to take damage and become furious over the insult, gaining Strength.",
+	"type": "origins:simple"
+}

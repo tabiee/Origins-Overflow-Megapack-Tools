@@ -1,0 +1,43 @@
+{
+    "name": "Natural Hallucinogen",
+    "description": "You shake your wings, releasing tiny poisonous scales that disorient your enemies.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "effect give @e[tag=!saturn,distance=..7] nausea 5 3 true",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "effect give @e[tag=!saturn,distance=..7] blindness 15 0 true",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "effect give @e[tag=!saturn,distance=..7] poison 5 3 true",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:enchanted_hit ~ ~ ~ 5 0.8 5 0 100 normal",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.strider.saddle",
+                "volume": 1,
+                "pitch": 0.7
+            }
+        ]
+    },
+    "cooldown": 600,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 6
+    },
+    "key": "primary"
+}

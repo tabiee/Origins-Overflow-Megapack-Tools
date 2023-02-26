@@ -1,0 +1,14 @@
+{
+    "name": "Gills",
+    "description": "You can breathe underwater.",
+    "condition": {
+        "type": "origins:submerged_in",
+        "fluid": "water"
+    },
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:gain_air",
+        "value": 25
+    }
+}

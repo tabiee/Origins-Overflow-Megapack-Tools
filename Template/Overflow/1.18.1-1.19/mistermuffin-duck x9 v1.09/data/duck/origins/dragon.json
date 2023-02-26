@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"duck:dragon/sizeswap",
+		"duck:dragon/elytra",
+		"duck:dragon/fireaspect",
+		"duck:dragon/fortune",
+		"duck:dragon/armor",
+		"duck:dragon/forms"
+	],
+	"icon": "minecraft:dragon_head",
+	"impact": 3,
+	"name": "§6§l§oDragonborn",
+	"description": "Years as a dragon living in human form to avoid Dragon hunters you have a hard time staying in your Dragon form now. Your powers may be dampened but you still have some of your monstrous powers."
+}

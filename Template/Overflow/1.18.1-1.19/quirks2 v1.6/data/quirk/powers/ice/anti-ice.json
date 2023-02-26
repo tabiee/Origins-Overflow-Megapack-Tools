@@ -1,0 +1,13 @@
+{
+    "type": "origins:modify_slipperiness",
+    "block_condition": {
+        "type": "origins:in_tag",
+        "tag": "quirk:ice"
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": -0.4
+    },
+    "name": "Stable Footing",
+    "description": "You are unable to slip on ice"
+}

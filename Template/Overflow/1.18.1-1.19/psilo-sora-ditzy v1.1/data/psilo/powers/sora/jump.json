@@ -1,0 +1,17 @@
+{
+    "name": "§1§nBunny Hop",
+    "description": "Launch yourself upwards with a mighty jump.",
+    "type": "origins:launch",
+    "cooldown": 50,
+    "speed": 1.25,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 9
+    },
+    "sound": "minecraft:entity.rabbit.hurt",
+    "key": {
+        "key": "secondary",
+        "continuous": true
+    }
+}

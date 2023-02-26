@@ -1,0 +1,183 @@
+{
+	"name": "Dimension Door",
+	"description": "Create a portal 3 blocks in front of you, then while holding Shift you can create another portal within 50 blocks range.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/star.png",
+			"text": "These portals allow any creature to pass through them, however they can only be placed within 50 blocks of each other."
+		}
+	],
+	"type": "origins:multiple",
+	"blu": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+
+				{
+					"inverted": true,
+					"type": "origins:sneaking"
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=blu] at @s run summon item ~ ~ ~ {Age:5995,PickupDelay:200,Tags:[\"reset\"],Item:{id:\"minecraft:egg\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "kill @e[tag=blu]",
+						"permission_level": 4
+					},
+					"ticks": 1
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "execute as @e[tag=reset] at @s run forceload remove ~ ~ ~ ~",
+						"permission_level": 4
+					},
+					"ticks": 2
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:raycast",
+						"distance": 3,
+						"block": true,
+						"entity": true,
+						"shape_type": "visual",
+						"fluid_handling": "none",
+						"miss_action": {
+							"type": "origins:execute_command",
+							"command": "summon minecraft:marker ^ ^1 ^3 {NoGravity:1b,Tags:[\"blu\",\"portal\"],Invisible:1b}"
+						},
+						"command_at_hit": "summon minecraft:marker ~ ~0.5 ~ {NoGravity:1b,Tags:[\"blu\",\"portal\"],Invisible:1b}",
+						"command_step": 1,
+						"command_along_ray_only_on_hit": false
+					},
+					"ticks": 3
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "execute as @e[tag=blu] at @s run forceload add ~ ~ ~ ~",
+						"permission_level": 4
+					},
+					"ticks": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "execute as @e[tag=blu] at @s run tp @s ~ ~ ~ facing entity @p[sort=nearest]",
+						"permission_level": 4
+					},
+					"ticks": 4
+				}
+			]
+		},
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+			"bar_index": 12
+		},
+		"key": {
+			"key": "primary"
+		}
+	},
+	"ora": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=ora] at @s run summon item ~ ~ ~ {Age:5995,PickupDelay:200,Tags:[\"reset\"],Item:{id:\"minecraft:egg\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "kill @e[tag=ora]",
+						"permission_level": 4
+					},
+					"ticks": 1
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "execute as @e[tag=reset] at @s run forceload remove ~ ~ ~ ~",
+						"permission_level": 4
+					},
+					"ticks": 2
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:raycast",
+						"distance": 50,
+						"block": true,
+						"entity": true,
+						"shape_type": "visual",
+						"fluid_handling": "none",
+						"miss_action": {
+							"type": "origins:execute_command",
+							"command": "summon minecraft:marker ^ ^1 ^35 {NoGravity:1b,Tags:[\"ora\",\"portal\"],Invisible:1b}"
+						},
+						"command_at_hit": "summon minecraft:marker ~ ~0.5 ~ {NoGravity:1b,Tags:[\"ora\",\"portal\"],Invisible:1b}",
+						"command_step": 1,
+						"command_along_ray_only_on_hit": false
+					},
+					"ticks": 3
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "execute as @e[tag=ora] at @s run forceload add ~ ~ ~ ~",
+						"permission_level": 4
+					},
+					"ticks": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "execute as @e[tag=ora] at @s run tp @s ~ ~ ~ facing entity @p[sort=nearest]",
+						"permission_level": 4
+					},
+					"ticks": 4
+				}
+			]
+		},
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+			"bar_index": 10
+		},
+		"key": {
+			"key": "primary"
+		}
+	}
+}

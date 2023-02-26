@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"mark:tp",
+		"mark:see",
+		"mark:nv",
+		"mark:void",
+		"mark:size",
+		"mark:connect",
+		"mark:tagger"
+	],
+	"icon": "minecraft:sculk",
+	"impact": 3,
+	"name": "§5§l§oMarked",
+	"description": "Your people were exposed to the void a long time ago, and you have gained special abilities from your ancestors because of this."
+}

@@ -1,0 +1,31 @@
+{
+    "name": "§6§nVoid Lust",
+    "description": "When your void meter is at zero, you gain Slowness and Hunger.",
+    "condition": {
+        "type": "origins:resource",
+        "resource": "*:void",
+        "comparison": "==",
+        "compare_to": 0
+    },
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 100,
+    "duration_per_stack": 220,
+    "tick_rate": 200,
+    "effects": [
+        {
+            "effect": "slowness",
+            "duration": 100,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        },
+        {
+            "effect": "hunger",
+            "duration": 100,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    ]
+}

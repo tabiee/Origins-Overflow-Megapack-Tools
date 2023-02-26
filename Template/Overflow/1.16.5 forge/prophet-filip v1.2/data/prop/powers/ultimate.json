@@ -1,0 +1,178 @@
+{
+    "name": "§5§nUltimate Mode§r",
+    "description": "Using your Secondary, sacrifice 25 levels for a minute of unlimited power. After the effect ends, you immediately enter Emergency Mode to recover.",
+    "type": "origins:multiple",
+    "use": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 25
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 3
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:ultimate_dur",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"§d§lULTIMATE Mode: Active!§r\"}"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.respawn_anchor.set_spawn",
+                    "volume": 1,
+                    "pitch": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle enchanted_hit ~ ~ ~ 0.5 0 0.5 2 250"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:dragon_breath ~ ~1 ~ 1 0 1 0.1 200"
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "resistance",
+                            "duration": 1200,
+                            "amplifier": 99,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "strength",
+                            "duration": 1200,
+                            "amplifier": 2,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "regeneration",
+                            "duration": 1200,
+                            "amplifier": 2,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "jump_boost",
+                            "duration": 1200,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "speed",
+                            "duration": 1200,
+                            "amplifier": 2,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "haste",
+                            "duration": 1200,
+                            "amplifier": 2,
+                            "show_particles": false,
+                            "show_icon": true
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:add_xp",
+                    "levels": -25
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_dur"
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "secondary"
+        }
+    },
+    "dur": {
+        "type": "origins:cooldown",
+        "cooldown": 1200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 18
+        }
+    },
+    "act": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:ultimate_dur",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle enchanted_hit ~ ~0.7 ~ 0.1 0.25 0.25 0 7"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle witch ~ ~0.4 ~ 0.25 0.1 0.25 0 3"
+                }
+            ]
+        },
+        "falling_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.respawn_anchor.deplete",
+                    "volume": 1,
+                    "pitch": 0.75
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:modes_pick",
+                    "change": 3,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle end_rod ~ ~1 ~ 0.15 0 0.15 0.25 50"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"§c§lEmergency Mode: Active§r\"}"
+                }
+            ]
+        }
+    }
+}

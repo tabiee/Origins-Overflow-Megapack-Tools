@@ -1,0 +1,19 @@
+{
+    "name": "§2§nPumpkin Hatred",
+    "description": "If someone is wearing a pumpkin, you do extra damage to them, long story why.",
+    "type": "origins:modify_damage_dealt",
+    "target_condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "head",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "carved_pumpkin"
+            }
+        }
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": 2
+    }
+}

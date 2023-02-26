@@ -1,0 +1,16 @@
+{
+    "name": "§1§nWater Eyes",
+    "description": "You can see well underwater.",
+	"condition": {
+            "type": "origins:fluid_height",
+            "fluid": "water",
+            "comparison": ">",
+            "compare_to": 0
+        },
+    "type": "origins:toggle_night_vision",
+    "active_by_default": true,
+    "strength": 1,
+    "key": {
+        "key": "secondary"
+    }
+}

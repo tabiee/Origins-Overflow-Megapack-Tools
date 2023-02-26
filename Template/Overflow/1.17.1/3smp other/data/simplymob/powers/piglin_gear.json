@@ -1,0 +1,21 @@
+{
+    "name": "Leftover",
+    "description": "Ever Since your banishment you managed to survive on your own after getting far away from that bastion.",
+    "type": "origins:starting_equipment",
+    "stacks": [
+        {
+            "item": "minecraft:crossbow"
+        },
+        {
+            "item": "minecraft:golden_sword"
+        },
+        {
+            "item": "minecraft:spectral_arrow",
+            "amount": 16
+        },
+        {
+            "item": "minecraft:cooked_porkchop",
+            "amount": 6
+        }
+    ]
+}

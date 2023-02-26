@@ -1,0 +1,76 @@
+{
+	"name": "§5§nCall Thunder",
+	"description": "Summon the storm.",
+	"type": "origins:multiple",
+	"weather": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:predicate",
+				"predicate": "kraken:weather/thunder"
+			},
+			"if_action": {
+				"type": "origins:execute_command",
+				"command": "weather clear",
+				"permission_level": 4
+			},
+			"else_action": {
+				"type": "origins:execute_command",
+				"command": "weather thunder",
+				"permission_level": 4
+			}
+		},
+		"cooldown": 200,
+		"hud_render": {
+			"should_render": true,
+			"bar_index": 1
+		},
+		"key": {
+			"key": "primary"
+		}
+	},
+	"buff": {
+		"condition": {
+			"type": "origins:predicate",
+			"predicate": "kraken:weather/thunder"
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:gain_air",
+			"value": 25
+		}
+	},
+	"no": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:predicate",
+					"predicate": "kraken:weather/thunder"
+				},
+				{
+					"type": "origins:fluid_height",
+					"fluid": "minecraft:water",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"entity_action": {
+			"type": "origins:gain_air",
+			"value": -50
+		}
+	},
+	"crea": {
+		"condition": {
+			"type": "origins:predicate",
+			"predicate": "kraken:weather/thunder"
+		},
+		"type": "origins:creative_flight"
+	}
+}

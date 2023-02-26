@@ -1,0 +1,198 @@
+{
+    "name": "§1§nLife Leecher§r",
+    "description": "Sap the energy of others to regain your strength.",
+    "type": "origins:multiple",
+    "cd": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 100,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 22,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:leech_cd",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        }
+    },
+    "act": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:leech_cd",
+                    "change": 1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:leech_hold"
+                }
+            ]
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "secondary",
+            "continuous": true
+        }
+    },
+    "hit": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:leech_cd",
+            "comparison": "==",
+            "compare_to": 100
+        },
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:heal",
+                        "amount": 1
+                    },
+                    {
+                        "type": "origins:feed",
+                        "food": 1,
+                        "saturation": 0.5
+                    }
+                ]
+            }
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "hold": {
+        "type": "origins:cooldown",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "reset": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:leech_cd",
+            "comparison": "==",
+            "compare_to": 100
+        },
+        "type": "origins:action_over_time",
+        "interval": 300,
+        "rising_action": {
+            "type": "origins:change_resource",
+            "resource": "*:leech_cd",
+            "change": -100,
+            "operation": "add"
+        }
+    },
+    "fx": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:leech_cd",
+            "comparison": "==",
+            "compare_to": 100
+        },
+        "type": "origins:action_over_time",
+        "interval": 4,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle crimson_spore ~ ~ ~ 0.2 0.2 0.2 0 2"
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "strength",
+                        "duration": 100,
+                        "amplifier": 1,
+                        "show_particles": false,
+                        "show_icon": true
+                    }
+                }
+            ]
+        }
+    },
+    "low": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:leech_cd",
+                    "comparison": "<",
+                    "compare_to": 100
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:leech_hold",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:leech_cd",
+                    "change": -5,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "kill": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "strength",
+                            "duration": 60,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "speed",
+                            "duration": 60,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": true
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:feed",
+                    "food": 1,
+                    "saturation": 0.5
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

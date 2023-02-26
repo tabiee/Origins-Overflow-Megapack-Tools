@@ -1,0 +1,48 @@
+{
+    "name": "Toot",
+    "description": "Cause a small explosion around you.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[tag=!ori,distance=..6] at @s run tp @s ~ ~ ~ facing entity @e[tag=ori,limit=1]",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "*:ori/nuggets_nuggets",
+                "change": 20
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle explosion ~ ~ ~ 3 1 3 0.3 10",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute at @e[tag=!ori,distance=..6] run summon snowball ~ ~4 ~ {Motion:[0.0,-2.0,0.0]}",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute at @s as @e[type=minecraft:snowball,distance=..20] run data modify entity @s Owner set from entity @p[tag=ori] UUID",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.generic.explode",
+                "volume": 1,
+                "pitch": 1
+            }
+        ]
+    },
+    "cooldown": 600,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 0
+    },
+    "key": "primary"
+}

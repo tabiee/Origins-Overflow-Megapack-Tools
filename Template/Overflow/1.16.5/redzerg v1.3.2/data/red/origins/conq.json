@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"red:conq/summon",
+		"red:conq/regen",
+		"red:conq/mine",
+		"red:conq/weps",
+		"red:conq/hungy",
+		"red:conq/tagger",
+		"red:conq/charm",
+		"red:conq/attacker",
+		"red:conq/pacify"
+	],
+	"icon": "minecraft:skeleton_skull",
+	"impact": 3,
+	"name": "§c§l§oSwarmlord",
+	"description": "The Swarmlord Origin brings about an army to conquer your foes."
+}

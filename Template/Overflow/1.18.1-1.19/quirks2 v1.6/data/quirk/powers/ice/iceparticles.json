@@ -1,0 +1,12 @@
+{
+    "type": "origins:action_over_time",
+    "name": "s",
+    "description": "s",
+    "hidden": true,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "particle minecraft:dust 0.4 1 1 1 ~ ~1 ~ 0.2 0.2 0.2 0.01 2 force"
+    },
+    "interval": 5
+}

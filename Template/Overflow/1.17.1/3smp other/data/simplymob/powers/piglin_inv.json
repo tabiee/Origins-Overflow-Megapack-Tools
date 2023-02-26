@@ -1,0 +1,6 @@
+{
+    "name": "Deep Pockets",
+    "description": "You have an extra 9 slots of inv space [PRIMARY ABILITY KEY].",
+    "type": "origins:inventory",
+    "drop_on_death": true
+}

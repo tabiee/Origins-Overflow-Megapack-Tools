@@ -1,0 +1,6 @@
+{
+    "name": "Winged Bug",
+    "description": "Flutter and glide.",
+    "type": "origins:elytra_flight",
+    "render_elytra": true
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Patchwork",
+    "description": "Being near looms provide a slight increase to your passive regeneration.",
+    "condition": {
+        "type": "origins:block_in_radius",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "loom"
+        },
+        "radius": 5,
+        "shape": "cube",
+        "comparison": ">=",
+        "compare_to": 1
+    },
+    "type": "origins:action_over_time",
+    "interval": 100,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:heal",
+                "amount": 1
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "block.bamboo.fall",
+                "volume": 1,
+                "pitch": 0.5
+            }
+        ]
+    }
+}

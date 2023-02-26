@@ -1,0 +1,887 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"form": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 7,
+		"start_value": 1,
+		"hud_render": {
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:select_basic",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
+			"bar_index": 16
+		}
+	},
+	"basic": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 6,
+		"start_value": 6,
+		"hud_render": {
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:select_basic",
+				"comparison": "==",
+				"compare_to": 6
+			},
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
+			"bar_index": 17
+		}
+	},
+	"cd": {
+		"type": "origins:cooldown",
+		"cooldown": 50,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+			"bar_index": 21
+		}
+	},
+	"s_basic": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:select_cd",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_basic",
+						"change": 6,
+						"operation": "set"
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "title @s actionbar {\"text\":\" - Basic Form -\",\"bold\":true,\"color\":\"green\"}",
+						"permission_level": 4
+					},
+					{
+						"type": "origins:trigger_cooldown",
+						"power": "*:select_cd"
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "particle glow_squid_ink ~ ~1.5 ~ 0.5 0.5 0.5 0 10"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.magma_cube.jump",
+						"volume": 1,
+						"pitch": 0.7
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "particle dust 0.553 0.812 0.502 1 ~ ~1 ~ 0.4 0.3 0.4 0 100"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.axolotl.hurt",
+						"volume": 1,
+						"pitch": 0.1
+					},
+					{
+						"type": "origins:apply_effect",
+						"effects": [
+							{
+								"effect": "weakness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "blindness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "slowness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							}
+						]
+					}
+				]
+			}
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"s1": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:swapper_bit",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:sneaking",
+					"inverted": true
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:select_cd",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_form",
+						"change": 1,
+						"operation": "set"
+					},
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_basic",
+						"change": 0,
+						"operation": "set"
+					},
+					{
+						"type": "origins:trigger_cooldown",
+						"power": "*:select_cd"
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "particle glow_squid_ink ~ ~1.5 ~ 0.5 0.5 0.5 0 10"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.magma_cube.jump",
+						"volume": 1,
+						"pitch": 0.7
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "particle dust 0.553 0.812 0.502 1 ~ ~1 ~ 0.4 0.3 0.4 0 100"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.axolotl.hurt",
+						"volume": 1,
+						"pitch": 0.1
+					},
+					{
+						"type": "origins:apply_effect",
+						"effects": [
+							{
+								"effect": "weakness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "blindness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "slowness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							}
+						]
+					}
+				]
+			}
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"s2": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:swapper_bit",
+					"comparison": "==",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:sneaking",
+					"inverted": true
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:select_cd",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_form",
+						"change": 2,
+						"operation": "set"
+					},
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_basic",
+						"change": 0,
+						"operation": "set"
+					},
+					{
+						"type": "origins:trigger_cooldown",
+						"power": "*:select_cd"
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "particle glow_squid_ink ~ ~1.5 ~ 0.5 0.5 0.5 0 10"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.magma_cube.jump",
+						"volume": 1,
+						"pitch": 0.7
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "particle dust 0.553 0.812 0.502 1 ~ ~1 ~ 0.4 0.3 0.4 0 100"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.axolotl.hurt",
+						"volume": 1,
+						"pitch": 0.1
+					},
+					{
+						"type": "origins:apply_effect",
+						"effects": [
+							{
+								"effect": "weakness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "blindness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "slowness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							}
+						]
+					}
+				]
+			}
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"s3": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:swapper_bit",
+					"comparison": "==",
+					"compare_to": 3
+				},
+				{
+					"type": "origins:sneaking",
+					"inverted": true
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:select_cd",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_form",
+						"change": 3,
+						"operation": "set"
+					},
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_basic",
+						"change": 0,
+						"operation": "set"
+					},
+					{
+						"type": "origins:trigger_cooldown",
+						"power": "*:select_cd"
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "particle glow_squid_ink ~ ~1.5 ~ 0.5 0.5 0.5 0 10"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.magma_cube.jump",
+						"volume": 1,
+						"pitch": 0.7
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "particle dust 0.553 0.812 0.502 1 ~ ~1 ~ 0.4 0.3 0.4 0 100"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.axolotl.hurt",
+						"volume": 1,
+						"pitch": 0.1
+					},
+					{
+						"type": "origins:apply_effect",
+						"effects": [
+							{
+								"effect": "weakness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "blindness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "slowness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							}
+						]
+					}
+				]
+			}
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"s4": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:swapper_bit",
+					"comparison": "==",
+					"compare_to": 4
+				},
+				{
+					"type": "origins:sneaking",
+					"inverted": true
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:select_cd",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_form",
+						"change": 4,
+						"operation": "set"
+					},
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_basic",
+						"change": 0,
+						"operation": "set"
+					},
+					{
+						"type": "origins:trigger_cooldown",
+						"power": "*:select_cd"
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "particle glow_squid_ink ~ ~1.5 ~ 0.5 0.5 0.5 0 10"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.magma_cube.jump",
+						"volume": 1,
+						"pitch": 0.7
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "particle dust 0.553 0.812 0.502 1 ~ ~1 ~ 0.4 0.3 0.4 0 100"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.axolotl.hurt",
+						"volume": 1,
+						"pitch": 0.1
+					},
+					{
+						"type": "origins:apply_effect",
+						"effects": [
+							{
+								"effect": "weakness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "blindness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "slowness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							}
+						]
+					}
+				]
+			}
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"s5": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:swapper_bit",
+					"comparison": "==",
+					"compare_to": 5
+				},
+				{
+					"type": "origins:sneaking",
+					"inverted": true
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:select_cd",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_form",
+						"change": 5,
+						"operation": "set"
+					},
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_basic",
+						"change": 0,
+						"operation": "set"
+					},
+					{
+						"type": "origins:trigger_cooldown",
+						"power": "*:select_cd"
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "particle glow_squid_ink ~ ~1.5 ~ 0.5 0.5 0.5 0 10"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.magma_cube.jump",
+						"volume": 1,
+						"pitch": 0.7
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "particle dust 0.553 0.812 0.502 1 ~ ~1 ~ 0.4 0.3 0.4 0 100"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.axolotl.hurt",
+						"volume": 1,
+						"pitch": 0.1
+					},
+					{
+						"type": "origins:apply_effect",
+						"effects": [
+							{
+								"effect": "weakness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "blindness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "slowness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							}
+						]
+					}
+				]
+			}
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"s6": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:swapper_bit",
+					"comparison": "==",
+					"compare_to": 6
+				},
+				{
+					"type": "origins:sneaking",
+					"inverted": true
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:select_cd",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_form",
+						"change": 6,
+						"operation": "set"
+					},
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_basic",
+						"change": 0,
+						"operation": "set"
+					},
+					{
+						"type": "origins:trigger_cooldown",
+						"power": "*:select_cd"
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "particle glow_squid_ink ~ ~1.5 ~ 0.5 0.5 0.5 0 10"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.magma_cube.jump",
+						"volume": 1,
+						"pitch": 0.7
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "particle dust 0.553 0.812 0.502 1 ~ ~1 ~ 0.4 0.3 0.4 0 100"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.axolotl.hurt",
+						"volume": 1,
+						"pitch": 0.1
+					},
+					{
+						"type": "origins:apply_effect",
+						"effects": [
+							{
+								"effect": "weakness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "blindness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "slowness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							}
+						]
+					}
+				]
+			}
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"s7": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:swapper_bit",
+					"comparison": "==",
+					"compare_to": 7
+				},
+				{
+					"type": "origins:sneaking",
+					"inverted": true
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:select_cd",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_form",
+						"change": 7,
+						"operation": "set"
+					},
+					{
+						"type": "origins:change_resource",
+						"resource": "*:select_basic",
+						"change": 0,
+						"operation": "set"
+					},
+					{
+						"type": "origins:trigger_cooldown",
+						"power": "*:select_cd"
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "particle glow_squid_ink ~ ~1.5 ~ 0.5 0.5 0.5 0 10"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.magma_cube.jump",
+						"volume": 1,
+						"pitch": 0.7
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "particle dust 0.553 0.812 0.502 1 ~ ~1 ~ 0.4 0.3 0.4 0 100"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.axolotl.hurt",
+						"volume": 1,
+						"pitch": 0.1
+					},
+					{
+						"type": "origins:apply_effect",
+						"effects": [
+							{
+								"effect": "weakness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "blindness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "slowness",
+								"duration": 200,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							}
+						]
+					}
+				]
+			}
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		}
+	}
+}

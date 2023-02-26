@@ -1,0 +1,42 @@
+{
+    "name": "§4§nToo Loud",
+    "description": "Explosions do more damage.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "explosion"
+            },
+            {
+                "type": "origins:name",
+                "name": "explosion.player"
+            },
+            {
+                "type": "origins:name",
+                "name": "fireball"
+            },
+            {
+                "type": "origins:name",
+                "name": "fireball.player"
+            },
+            {
+                "type": "origins:name",
+                "name": "fireworks"
+            },
+            {
+                "type": "origins:name",
+                "name": "fireworks.item"
+            },
+            {
+                "type": "origins:name",
+                "name": "fireworks.player"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.5
+    }
+}

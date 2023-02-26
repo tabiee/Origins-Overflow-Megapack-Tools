@@ -1,0 +1,158 @@
+{
+    "name": "Emergency Exit",
+    "description": "When you would die, you instead briefly gain invisibility, speed, and massive regeneration. However, your maximum health is drastically reduced, and slowly restores itself until this is available again.",
+    "type": "origins:multiple",
+    "timer": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1800,
+        "start_value": 1800,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 4,
+		    "condition": {
+                "type": "origins:resource",
+                "inverted": false,
+                "comparison": "<",
+                "compare_to": 1800,
+                "resource": "*:*_timer"
+            }
+		}
+    },
+    "timer_increment": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "<",
+            "compare_to": 1800
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_timer",
+            "change": 10
+        }
+    },
+    "timer_low": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "<",
+            "compare_to": 360
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "addition",
+            "value": -4
+        },
+        "tick_rate": 20
+    },
+    "timer_mid_low": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "<",
+            "compare_to": 720
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "addition",
+            "value": -4
+        },
+        "tick_rate": 20
+    },
+    "timer_mid": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "<",
+            "compare_to": 1080
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "addition",
+            "value": -2
+        },
+        "tick_rate": 20
+    },
+    "timer_mid_high": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "<",
+            "compare_to": 1440
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "addition",
+            "value": -2
+        },
+        "tick_rate": 20
+    },
+    "timer_high": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "<",
+            "compare_to": 1800
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "addition",
+            "value": -2
+        },
+        "tick_rate": 20
+    },
+    "prevent_death": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 1800
+        },
+        "type": "origins:prevent_death",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "minecraft:regeneration",
+                            "duration": 60,
+                            "amplifier": 9,
+                            "show_particles": true,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "minecraft:speed",
+                            "duration": 100,
+                            "amplifier": 3,
+                            "show_particles": true,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "minecraft:invisibility",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "show_particles": true,
+                            "show_icon": true
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_timer",
+                    "change": -1800
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "§4§nFire Vulnerability",
+    "description": "Fire does twice as much damage to you.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:fire"
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 1
+    }
+}

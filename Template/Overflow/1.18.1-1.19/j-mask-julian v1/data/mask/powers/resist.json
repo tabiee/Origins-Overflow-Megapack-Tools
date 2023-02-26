@@ -1,0 +1,78 @@
+{
+    "name": "§2§nNon-existant Nerves§r",
+    "description": "You have an extremely high pain tolerance.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "inverted": true,
+                "type": "origins:block_in_radius",
+                "block_condition": {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:block",
+                            "block": "soul_fire"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "soul_torch"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "soul_wall_torch"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "soul_lantern"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "soul_campfire"
+                        }
+                    ]
+                },
+                "radius": 5,
+                "shape": "cube",
+                "comparison": ">=",
+                "compare_to": 1
+            },
+            {
+                "inverted": true,
+                "type": "origins:on_block",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "soul_soil"
+                }
+            },
+            {
+                "inverted": true,
+                "type": "origins:on_block",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "soul_sand"
+                }
+            },
+            {
+                "type": "apoli:fluid_height",
+                "fluid": "lava",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "resistance",
+                "duration": 40,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ]
+    }
+}

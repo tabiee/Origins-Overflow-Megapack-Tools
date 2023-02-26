@@ -1,0 +1,32 @@
+{
+    "name": "Strength & Speed",
+    "description": "Permanent strength and speed.",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "strength",
+                "duration": 40,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "speed",
+                "duration": 40,
+                "amplifier": 1,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "glowing",
+                "duration": 40,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        ]
+    }
+}

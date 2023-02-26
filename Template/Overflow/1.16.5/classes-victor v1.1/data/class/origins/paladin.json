@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"class:paladin/hp",
+		"class:paladin/start",
+		"class:paladin/speed"
+	],
+	"icon": "minecraft:shield",
+	"impact": 1,
+	"name": "§6§l§oPaladin",
+	"description": "Start with an iron chestplate. Tough, but slow."
+}

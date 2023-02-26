@@ -1,0 +1,67 @@
+{
+	"name": "§4§nBig Body",
+	"description": "Because of your huge body you are unaffected by drinkable potions. You still receive effects from Splash Potions.",
+	"type": "origins:multiple",
+	"nopots": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:potion"
+			}
+		}
+	},
+	"call": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:height 1.5 @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:width 1.5 @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "summon minecraft:vex ^ ^ ^-1 {Invulnerable:1b,NoAI:1b,NoGravity:1b,Silent:1b,Tags:[\"vex\"]}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "power grant @e[tag=vex] fivlord:dragon/fakevis",
+						"permission_level": 4
+					},
+					"ticks": 2
+				}
+			]
+		},
+		"execute_chosen_when_orb": true,
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "scale reset @s",
+			"permission_level": 4
+		},
+		"entity_action_respawned": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:height 1.5 @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:width 1.5 @s",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"satan:satan/call",
+		"satan:satan/eye",
+		"satan:satan/energy",
+		"satan:satan/undead",
+		"satan:satan/att",
+		"satan:satan/fire",
+		"satan:satan/villa",
+		"satan:satan/desc",
+		"satan:satan/tagger"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"impact": 3,
+	"name": "§4§l§oBrother of Satan",
+	"description": "Demonic entity of immense power."
+}

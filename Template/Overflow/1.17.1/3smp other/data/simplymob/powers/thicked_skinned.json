@@ -1,0 +1,11 @@
+{
+    "name": "Thick Skinned",
+    "description": "from fighting with your pack caused your skin to be much more durable than humans.",
+    "type": "origins:attribute",
+    "modifier": {
+      "name": "Natural Armor health bonus",
+      "attribute": "minecraft:generic.armor",
+      "value": 10.0,
+      "operation": "addition"
+    }
+  }

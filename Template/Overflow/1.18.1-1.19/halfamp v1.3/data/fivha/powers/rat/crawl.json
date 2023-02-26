@@ -1,0 +1,95 @@
+{
+	"name": "Small and Nimble",
+	"description": "You run faster due to your small body. You are also able to sneak at walking speed and fit into 1 block tall spaces while sneaking.",
+	"type": "origins:multiple",
+	"swim": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [{
+					"type": "origins:on_block"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_bip",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:swimming"
+	},
+	"bip": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"sneak": {
+		"condition": {
+			"type": "origins:sneaking"
+		},
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "generic.movement_speed",
+			"operation": "addition",
+			"value": 0.065
+		},
+		"tick_rate": 1
+	},
+	"slower": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [{
+					"type": "origins:swimming"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_bip",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "generic.movement_speed",
+			"operation": "addition",
+			"value": -0.065
+		},
+		"tick_rate": 1
+	},
+	"speed": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [{
+					"type": "origins:resource",
+					"resource": "*:rat/stealth_toggle",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_bip",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "generic.movement_speed",
+			"operation": "addition",
+			"value": 0.04
+		},
+		"tick_rate": 1
+	}
+}

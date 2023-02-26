@@ -1,0 +1,69 @@
+{
+	"type": "origins:multiple",
+	
+	"bad_bow_arrow": 
+	{
+		"type": "origins:modify_projectile_damage",
+		"damage_condition":
+		{
+			"type": "origins:projectile",
+			"projectile": "minecraft:arrow"
+		},
+		"modifiers": 
+		[
+		{
+			"operation": "multiply_total",
+			"value": -0.5
+		},
+		{
+			"operation": "addition",
+			"value": -2.5
+		}
+		]
+	},
+	
+	"bad_bow_spec_arrow": 
+	{
+		"type": "origins:modify_projectile_damage",
+		"damage_condition":
+		{
+			"type": "origins:projectile",
+			"projectile": "minecraft:spectral_arrow"
+		},
+		"modifiers": 
+		[
+		{
+			"operation": "multiply_total",
+			"value": -0.5
+		},
+		{
+			"operation": "addition",
+			"value": -2.5
+		}
+		]
+	},
+	
+	"bad_bow_trident": 
+	{
+		"type": "origins:modify_projectile_damage",
+		"damage_condition":
+		{
+			"type": "origins:projectile",
+			"projectile": "minecraft:trident"
+		},
+		"modifiers": 
+		[
+		{
+			"operation": "multiply_total",
+			"value": -0.5
+		},
+		{
+			"operation": "addition",
+			"value": -2.5
+		}
+		]
+	},
+	
+	"name": "Untrained Technique",
+	"description": "You do less damage with projectiles."
+}

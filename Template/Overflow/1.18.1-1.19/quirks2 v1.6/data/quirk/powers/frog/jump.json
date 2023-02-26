@@ -1,0 +1,17 @@
+{
+    "type": "origins:action_over_time",
+    "name": "Frog Legs",
+    "description": "Jump up to 2 blocks high",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "duration": 100,
+            "is_ambient": false,
+            "show_particles": false,
+            "show_icon": false,
+            "effect": "minecraft:jump_boost",
+            "amplifier": 1
+        }
+    }
+}

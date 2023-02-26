@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"origins:shulker_inventory",
+		"ant:climb",
+		"ant:fx",
+		"ant:poison",
+		"ant:fall",
+		"ant:firedmg",
+		"ant:hp",
+		"origins:water_vulnerability",
+		"ant:size"
+	],
+	"icon": "minecraft:spider_eye",
+	"impact": 3,
+	"name": "§c§l§oAnt",
+	"description": "Tiny but strong!"
+}

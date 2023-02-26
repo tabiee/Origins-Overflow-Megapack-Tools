@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"quirk:steel/steel_skin",
+		"quirk:steel/swap2",
+		"quirk:steel/powerpunch",
+		"quirk:steel/hammer",
+		"quirk:steel/peak",
+		"quirk:steel/ground_pound",
+		"quirk:steel/steelshock",
+		"quirk:steel/tired1",
+		"quirk:steel/fix",
+		"quirk:health"
+	],
+        "unchoosable": true,
+	"icon": "iron_block",
+	"order": 10,
+	"impact": 3,
+	"name": "Steel (Steel Form)",
+	"description": "Tetsutetsu Tetsutetsu's Quirk"
+}

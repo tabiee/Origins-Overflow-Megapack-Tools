@@ -1,0 +1,29 @@
+{
+    "name": "§1§nKeen Smell§r",
+    "description": "You can sniff out nearby mobs, even if they are behind walls. Can be toggled.",
+    "type": "origins:multiple",
+    "tog": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "secondary"
+        },
+        "retain_state": true
+    },
+    "glow": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:apex/glow_tog"
+        },
+        "type": "origins:entity_glow",
+        "bientity_condition": {
+            "type": "origins:distance",
+            "comparison": "<=",
+            "compare_to": 20
+        },
+        "use_teams": false,
+        "red": 0.8,
+        "green": 0.2,
+        "blue": 0.2
+    }
+}

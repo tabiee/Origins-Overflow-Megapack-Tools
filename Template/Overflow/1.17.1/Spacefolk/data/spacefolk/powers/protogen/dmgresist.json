@@ -1,0 +1,38 @@
+{
+    "name": "Robotic",
+    "description": "Being built in a lab you don't have any lungs or flesh allowing you to breath underwater and take less damage.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "mob"
+            },
+            {
+                "type": "origins:name",
+                "name": "player"
+            },
+            {
+                "type": "origins:name",
+                "name": "generic"
+            },
+            {
+                "type": "origins:name",
+                "name": "arrow"
+            },
+            {
+                "type": "origins:name",
+                "name": "thrown"
+            },
+            {
+                "type": "origins:name",
+                "name": "trident"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": -1.5
+    }
+}

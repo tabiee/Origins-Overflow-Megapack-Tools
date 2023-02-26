@@ -1,0 +1,24 @@
+{
+	"name": "Pixel Meter",
+	"description": "Your Pixel Meter fills up with every kill, upon reaching a certain number of kills, you will unlock your primary ablitiy, but you will lose the ablitiy if the Pixel Meter drops down below the set value for the ability.",
+	"type": "origins:multiple",
+	"resource": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 100,
+		"start_value": 0,
+		"hud_render": {
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 13
+		}
+	},
+	"gain_on_kill": {
+		"type": "origins:self_action_on_kill",
+		"cooldown": 0,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "pixel:pixel_meter_resource",
+			"change": 1
+		}
+	}
+}

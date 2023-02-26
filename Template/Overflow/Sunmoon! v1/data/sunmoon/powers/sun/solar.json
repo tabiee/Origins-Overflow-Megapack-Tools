@@ -1,0 +1,50 @@
+{
+    "name": "§3§n§lSolar Powered!§r",
+    "description": "You gain battery power from direct sunlight.\nAlthough, you drain more power on average.",
+    "type": "origins:multiple",
+    "exh": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.25
+        }
+    },
+    "gain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "survival"
+                },
+                {
+                    "type": "origins:exposed_to_sun"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 200,
+        "entity_action": {
+            "type": "origins:chance",
+            "chance": 0.5,
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:feed",
+                        "food": 1,
+                        "saturation": 0.5
+                    },
+                    {
+                        "type": "origins:heal",
+                        "amount": 1
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle dust 0.000 1.000 0.900 1 ~ ~1 ~ 0.5 0.1 0.5 0 7"
+                    }
+                ]
+            }
+        }
+    }
+}

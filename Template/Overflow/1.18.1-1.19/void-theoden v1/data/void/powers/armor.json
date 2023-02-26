@@ -1,0 +1,37 @@
+{
+    "name": "§6§nSteely Style",
+    "description": "You can't wear diamond armor.",
+    "type": "origins:restrict_armor",
+    "head": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "diamond_helmet"
+            }
+        ]
+    },
+    "chest": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "diamond_chestplate"
+            }
+        ]
+    },
+    "legs": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "diamond_leggings"
+            }
+        ]
+    },
+    "feet": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "diamond_boots"
+            }
+        ]
+    }
+}

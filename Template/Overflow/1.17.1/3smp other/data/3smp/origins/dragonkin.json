@@ -1,0 +1,23 @@
+{
+    "impact": 3,
+    "unchoosable": false,
+    "powers": [
+        "3smp:dragonkin/dragon_fireball",
+        "3smp:dragonkin/carnivore",
+        "3smp:dragonkin/ender_particles",
+        "3smp:dragonkin/immunity",
+        "3smp:dragonkin/elytra",
+		"3smp:dragonkin/enderfriend",
+		"3smp:dragonkin/water_vulnerability",
+		"3smp:dragonkin/endhealing",
+		"3smp:dragonkin/little",
+		"3smp:dragonkin/color",
+		"3smp:dragonkin/flap",
+		"3smp:dragonkin/toggle",
+		"3smp:dragonkin/dragon",
+		"3smp:dragonkin/rainhate"
+    ],
+    "name": "§5§l§oDragonkin",
+    "description": "A dragon assuming humanoid form.",
+	"icon": "dragon_egg"
+}

@@ -1,0 +1,74 @@
+{
+    "name": "§1§nStarbolt",
+    "description": "You can shoot out a bolt of stardust to hit entities to deal decent damage.",
+    "type": "origins:multiple",
+    "proj": {
+        "type": "origins:fire_projectile",
+        "entity_type": "arrow",
+        "cooldown": 100,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 16
+        },
+        "count": 1,
+        "speed": 2.5,
+        "divergence": 0,
+        "tag": "{pickup:0b,Tags:[\"bolt\"],damage:4.0d}",
+        "key": {
+            "key": "key.spectatorOutlines",
+            "continuous": true
+        }
+    },
+    "fx": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=bolt] at @s run particle scrape ~ ~ ~ 0.3 0.3 0.3 1 5",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=bolt] at @s run particle dust 0.243 0.707 0.690 3 ~ ~ ~ 0.1 0.1 0.1 1 5 normal",
+                    "permission_level": 4
+                },
+				{
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=bolt,nbt={inGround:1b}] at @s run kill @s",
+                    "permission_level": 4
+                }
+            ]
+        }
+    },
+    "use": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:star/dust_speck",
+                    "change": -30
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.glow_squid.squirt",
+                    "volume": 0.5,
+                    "pitch": 2
+                }
+            ]
+        },
+        "cooldown": 100,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.spectatorOutlines",
+            "continuous": true
+        }
+    }
+}

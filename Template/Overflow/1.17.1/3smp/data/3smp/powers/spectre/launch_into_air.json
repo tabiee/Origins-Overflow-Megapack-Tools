@@ -1,0 +1,16 @@
+{
+    "type": "origins:launch",
+	"hidden": true,
+    "cooldown": 600,
+    "hud_render": {
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 4,
+        "should_render": true
+    },
+    "sound": "minecraft:entity.parrot.fly",
+    "speed": 2,
+    "key": {
+        "key": "key.origins.secondary_active",
+        "continuous": true
+    }
+}

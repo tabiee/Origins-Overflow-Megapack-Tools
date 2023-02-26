@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"sorc:buffs",
+		"sorc:mana",
+		"sorc:blast",
+		"sorc:beam",
+		"sorc:jumps",
+		"sorc:desc",
+		"sorc:fximm",
+		"sorc:iron",
+		"sorc:effects",
+		"sorc:tagger"
+	],
+	"icon": "minecraft:potion",
+	"impact": 3,
+	"name": "§4§l§oChaotic Sorceress",
+	"description": "You are well versed in the more chaotic and forbidden arts of magic."
+}

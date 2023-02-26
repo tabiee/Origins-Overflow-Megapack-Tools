@@ -1,0 +1,81 @@
+{
+	"name": "§4§nFear of Felines",
+	"description": "Being near a cat or ocelot is scary enough to damage you and make you want to run away fast.",
+	"type": "origins:multiple",
+	"dmg": {
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[type=cat,distance=..10]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				},
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[type=ocelot,distance=..10]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				}
+			]
+		},
+		"type": "origins:damage_over_time",
+		"interval": 50,
+		"onset_delay": 1,
+		"damage": 2,
+		"damage_easy": 1,
+		"damage_source": {
+			"name": "cactus",
+			"bypasses_armor": true,
+			"unblockable": true,
+			"magic": true
+		}
+	},
+	"speed": {
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[type=cat,distance=..12]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				},
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[type=ocelot,distance=..12]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 50,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "speed",
+						"duration": 60,
+						"amplifier": 0,
+						"show_particles": false,
+						"show_icon": false
+					}
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.cat.hiss",
+					"volume": 1,
+					"pitch": 1
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+    "name": "§2§nBurrow Speed",
+    "description": "Your mining speed is higher.",
+    "type": "origins:modify_break_speed",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.5
+    }
+}

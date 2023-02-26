@@ -1,0 +1,26 @@
+{
+    "powers": [
+        "betterhuman:foodgiver",
+        "betterhuman:cookedfoodbetter",
+        "origins:water_vulnerability",
+        "betterhuman:silverfish_sized",
+        "betterhuman:silverfishsize",
+        "origins:phantomize",
+        "betterhuman:cookeda",
+        "betterhuman:cookedb",
+        "betterhuman:cookedc",
+        "betterhuman:cookedd",
+        "betterhuman:cookede",
+        "betterhuman:cookedf",
+        "betterhuman:cookedg",
+        "betterhuman:cookedh",
+        "betterhuman:cookedi"
+    ],
+    "icon": "minecraft:cauldron",
+    "order": 46,
+    "impact": 1,
+    "name": "Rat",
+    "description": "The rat is a great cook!",
+    "loading_priority": 100,
+    "unchoosable": true
+}

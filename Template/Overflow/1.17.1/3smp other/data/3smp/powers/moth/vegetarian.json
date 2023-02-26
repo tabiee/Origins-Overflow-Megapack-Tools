@@ -1,0 +1,39 @@
+{
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "origins:meat"
+                        },
+                        "inverted": false
+                    },
+                    {
+                        "type": "origins:meat",
+                        "inverted": false
+                    }
+                ],
+                "inverted": false
+            },
+            {
+                "type": "origins:food",
+                "inverted": false
+            },
+            {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "origins:ignore_diet"
+                },
+                "inverted": true
+            }
+        ],
+        "inverted": false
+    },
+    "name": "§e§nVegetarian",
+    "description": "Non-meat only."
+}

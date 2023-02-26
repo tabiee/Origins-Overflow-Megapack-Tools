@@ -1,0 +1,36 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:tadpole",
+
+        "minecraft:bee",
+        "minecraft:cat",
+        "minecraft:chicken",
+        "minecraft:cow",
+        "minecraft:donkey",
+        "minecraft:fox",
+        "minecraft:hoglin",
+        "minecraft:horse",
+        "minecraft:mooshroom",
+        "minecraft:mule",
+        "minecraft:ocelot",
+        "minecraft:panda",
+        "minecraft:parrot",
+        "minecraft:polar_bear",
+        "minecraft:pig",
+        "minecraft:piglin",
+        "minecraft:rabbit",
+        "minecraft:sheep",
+        "minecraft:turtle",
+        "minecraft:villager",
+        "minecraft:wolf",
+
+        
+        "minecraft:drowned",
+        "minecraft:husk",
+        "minecraft:zoglin",
+        "minecraft:zombie",
+        "minecraft:zombified_piglin",
+        "minecraft:zombie_villager"
+    ]
+}

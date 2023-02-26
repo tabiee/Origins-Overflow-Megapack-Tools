@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"duck:flower/bonemeal",
+		"duck:flower/breed",
+		"duck:flower/wet",
+		"duck:flower/regen",
+		"duck:flower/photosyn",
+		"duck:flower/firedmg"
+	],
+	"icon": "minecraft:oxeye_daisy",
+	"impact": 3,
+	"name": "§a§l§oFlower Child",
+	"description": "Nature sprite with plant-like qualities."
+}

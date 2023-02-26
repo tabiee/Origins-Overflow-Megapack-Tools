@@ -1,0 +1,194 @@
+{
+    "type": "origins:multiple",
+    "name": "End Fist",
+    "description": "Being around Enderman has helped you learn how to efficiently pick up, and break blocks faster with your bare hands.",
+    "condition": {
+        "type": "origins:dimension",
+        "inverted": false,
+        "dimension": "the_end"
+    },
+    "modifier": {
+        "type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "end_stone"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.1
+        }
+    },
+    "modifier_": {
+        "type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:purpur_stairs"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.1
+        }
+    },
+    "modifier__": {
+        "type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:end_stone_bricks"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.1
+        }
+    },
+    "modifier_____": {
+        "type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:purpur_slab"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.1
+        }
+    },
+    "modifier___": {
+        "type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:purpur_pillar"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.1
+        }
+    },
+    "modifier____": {
+        "type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:purpur_block"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.1
+        }
+    },
+    "o___3": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:dimension",
+            "inverted": false,
+            "dimension": "the_end"
+        },
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "duration": 300,
+                "is_ambient": false,
+                "show_particles": true,
+                "show_icon": true,
+                "effect": "minecraft:strength",
+                "amplifier": 1
+            }
+        },
+        "interval": 2
+    },
+    "o___3_": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:dimension",
+            "inverted": false,
+            "dimension": "the_end"
+        },
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "duration": 300,
+                "is_ambient": false,
+                "show_particles": true,
+                "show_icon": true,
+                "effect": "minecraft:resistance",
+                "amplifier": 0
+            }
+        },
+        "interval": 1
+    },
+    "o___6": {
+        "type": "origins:modify_harvest",
+        "allow": true,
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:purpur_pillar"
+        }
+    },
+    "o___6_": {
+        "type": "origins:modify_harvest",
+        "allow": true,
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:purpur_block"
+        }
+    },
+    "o___6__": {
+        "type": "origins:modify_harvest",
+        "allow": true,
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:purpur_stairs"
+        }
+    },
+    "o___6___": {
+        "type": "origins:modify_harvest",
+        "allow": true,
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:end_stone"
+        }
+    },
+    "o___6____": {
+        "type": "origins:modify_harvest",
+        "allow": true,
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:end_stone_bricks"
+        }
+    },
+    "o___6______": {
+        "type": "origins:modify_harvest",
+        "allow": true,
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:end_stone_bricks"
+        }
+    },
+    "o___6_____": {
+        "type": "origins:modify_harvest",
+        "allow": true,
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:end_rod"
+        }
+    },
+    "o___6_______": {
+        "type": "origins:modify_harvest",
+        "allow": true,
+        "block_condition": {
+            "type": "origins:block",
+            "inverted": false,
+            "block": "minecraft:purpur_slab"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "§4§nThick Feathers",
+    "description": "Slowness in water.",
+    "condition": {
+        "type": "origins:fluid_height",
+        "fluid": "water",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "slowness",
+            "duration": 25,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    }
+}

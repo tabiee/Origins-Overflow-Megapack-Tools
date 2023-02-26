@@ -1,0 +1,38 @@
+{
+    "type": "apoli:action_over_time",
+    "entity_action": {
+        "type": "apoli:apply_effect",
+        "effect": {
+            "effect": "minecraft:regeneration",
+            "duration": 200,
+            "amplifier": 0
+        }
+    },
+    "interval": 40,
+    "condition": {
+        "type": "origins:and",
+        "inverted": false,
+        "conditions": [
+            {
+                "type": "apoli:block_in_radius",
+                "block_condition": {
+                    "type": "apoli:in_tag",
+                    "tag": "minecraft:flowers"
+                },
+                "radius": "3",
+                "shape": "cube",
+                "comparison": ">=",
+                "compare_to": 3,
+                "inverted": false
+            },
+            {
+                "type": "origins:brightness",
+                "inverted": false,
+                "comparison": "<=",
+                "compare_to": 4
+            }
+        ]
+    },
+    "name": "§1§nFlower Power",
+    "description": "Flowers restore you."
+}

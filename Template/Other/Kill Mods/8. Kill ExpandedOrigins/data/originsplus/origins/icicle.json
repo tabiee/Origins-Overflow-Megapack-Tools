@@ -1,0 +1,14 @@
+{
+    "powers": [
+        "originsplus:water_walking",
+        "originsplus:ice_speed",
+        "originsplus:damage_from_snowballs",
+        "originsplus:flammable",
+        "originsplus:scared_of_nether"
+    ],
+    "icon": "minecraft:blue_ice",
+    "order": 5,
+    "impact": 1,
+    "loading_priority": 100,
+    "unchoosable": true
+}

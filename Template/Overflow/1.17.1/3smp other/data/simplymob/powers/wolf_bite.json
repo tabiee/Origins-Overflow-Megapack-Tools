@@ -1,0 +1,22 @@
+{
+    "name": "Night Hunters",
+    "description": "you deal extra damage at night.",
+    "type": "origins:conditioned_attribute",
+    "modifiers": [
+      {
+        "attribute": "generic.attack_damage",
+        "operation": "addition",
+        "value": 2.0,
+        "name": "Night wolf bonus"
+      }
+    ],
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:daytime",
+          "inverted": true
+        }
+      ]
+    }
+  }

@@ -1,0 +1,173 @@
+{
+    "name": "Shock",
+    "description": "Every 30s you are able to zap an entity within 30 blocks of you with lightning. Missing resets the cooldown.",
+    "type": "origins:multiple",
+    "static": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 600,
+        "start_value": 600,
+        "hud_render": {
+            "should_render": true,
+            "bar_index": 2
+        },
+        "max_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle electric_spark ~ ~1 ~ 0.5 0.5 0.5 0 20"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        }
+    },
+    "up": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_static",
+            "change": 1,
+            "operation": "add"
+        }
+    },
+    "use": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_static",
+            "comparison": "==",
+            "compare_to": 600
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_static",
+                    "change": -600,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:raycast",
+                    "distance": 30,
+                    "block": true,
+                    "entity": true,
+                    "shape_type": "visual",
+                    "fluid_handling": "any",
+                    "bientity_action": {
+                        "type": "apoli:and",
+                        "actions": [
+                            {
+                                "type": "apoli:actor_action",
+                                "action": {
+                                    "type": "apoli:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:play_sound",
+                                            "sound": "minecraft:item.trident.thunder",
+                                            "volume": 1,
+                                            "pitch": 2
+                                        },
+                                        {
+                                            "type": "origins:swing_hand",
+                                            "hand": "MAIN_HAND"
+                                        },
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "particle glow ^ ^1 ^1 0.25 0.25 0.25 0.2 25"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "particle glow ~ ~ ~ 1 1 1 0.2 100"
+                                        },
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "particle electric_spark ~ ~ ~ 1.5 1.5 1.5 0.2 300"
+                                        },
+                                        {
+                                            "type": "origins:play_sound",
+                                            "sound": "minecraft:item.trident.thunder",
+                                            "volume": 1,
+                                            "pitch": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "block_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle glow ~ ~ ~ 1 1 1 0.2 100"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle electric_spark ~ ~ ~ 1.5 1.5 1.5 0.2 300"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:item.trident.thunder ambient @a[distance=..30] ~ ~ ~ 1 2"
+                            }
+                        ]
+                    },
+                    "miss_action": {
+                        "type": "apoli:and",
+                        "actions": [
+                            {
+                                "type": "apoli:delay",
+                                "action": {
+                                    "type": "apoli:change_resource",
+                                    "resource": "*:*_static",
+                                    "operation": "add",
+                                    "change": 500
+                                },
+                                "ticks": 2
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle smoke ^ ^1 ^2 0.25 0.25 0.25 0 5"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:block.note_block.snare",
+                                "volume": 1,
+                                "pitch": 1
+                            },
+                            {
+                                "type": "origins:swing_hand",
+                                "hand": "MAIN_HAND"
+                            }
+                        ]
+                    },
+                    "command_at_hit": "summon lightning_bolt ~ ~ ~",
+                    "command_step": 1,
+                    "command_along_ray_only_on_hit": false
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "primary"
+        }
+    }
+}

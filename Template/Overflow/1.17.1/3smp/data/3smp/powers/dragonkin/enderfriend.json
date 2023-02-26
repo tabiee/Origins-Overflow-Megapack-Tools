@@ -1,0 +1,10 @@
+{
+    "name": "§2§nFriend of the End",
+    "description": "Endermen tolerate your presence.",
+  "type": "extraorigins:mob_neutrality",
+  "entity_types": [
+	"minecraft:enderman",
+	"minecraft:ender_dragon",
+	"minecraft:shulker"
+  ]
+}

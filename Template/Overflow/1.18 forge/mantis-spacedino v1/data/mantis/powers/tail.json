@@ -1,0 +1,11 @@
+{
+    "name": "§3§nTail§r",
+    "description": "Your tail allows for faster movement in water.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "additionalentityattributes:water_speed",
+        "operation": "multiply_total",
+        "value": 2
+    },
+    "update_health": false
+}

@@ -1,0 +1,6 @@
+{
+    "name": "Breathless",
+    "description": "You don't need to breathe",
+    "type": "origins:entity_group",
+    "group": "undead"
+}

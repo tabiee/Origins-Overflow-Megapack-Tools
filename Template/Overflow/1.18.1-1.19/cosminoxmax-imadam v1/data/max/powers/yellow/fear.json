@@ -1,0 +1,27 @@
+{
+    "name": "§e§nFearful",
+    "description": "You deal more damage to hostile mobs.",
+    "type": "origins:multiple",
+    "dmg": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.25
+        },
+        "target_condition": {
+            "type": "apoli:in_tag",
+            "tag": "max:hostiles"
+        }
+    }
+}

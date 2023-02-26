@@ -1,0 +1,146 @@
+{
+    "name": "§5§nJack O' Lantern-ed!",
+    "description": "Throw a flaming pumpkin at your enemies!",
+    "type": "origins:multiple",
+    "proj": {
+        "type": "origins:fire_projectile",
+        "entity_type": "snowball",
+        "cooldown": 900,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 19
+        },
+        "count": 1,
+        "speed": 1.25,
+        "divergence": 0,
+        "sound": "entity.shulker.shoot",
+        "tag": "{Silent:1b,HasVisualFire:0b,Tags:[\"fancy\"],Item:{id:\"minecraft:jack_o_lantern\",Count:1b}}",
+        "key": {
+            "key": "primary",
+            "continuous": true
+        }
+    },
+    "dmg": {
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if entity @e[tag=pumphit,distance=..60]",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:area_of_effect",
+            "radius": 60,
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[tag=pumphit]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            },
+            "bientity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:damage",
+                        "amount": 12,
+                        "source": {
+                            "name": "player",
+                            "unblockable": true
+                        }
+                    },
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "apoli:target_action",
+                            "action": {
+                                "type": "origins:execute_command",
+                                "command": "tag @s remove pumphit"
+                            }
+                        },
+                        "ticks": 1
+                    }
+                ]
+            }
+        }
+    },
+    "mark": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "snowball"
+                        }
+                    }
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "snowball"
+                        }
+                    }
+                }
+            ]
+        },
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "tag @s add pumphit"
+            }
+        },
+        "damage_condition": {
+            "type": "origins:projectile",
+            "projectile": "snowball"
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "sound": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.vex.ambient",
+                    "volume": 10,
+                    "pitch": 0.1
+                }
+            ]
+        },
+        "cooldown": 900,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "primary",
+            "continuous": true
+        }
+    },
+    "fx": {
+        "type": "origins:action_over_time",
+        "interval": 4,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "execute as @e[tag=fancy] at @s run particle flame ~ ~ ~ 0 0 0 0 1"
+        }
+    }
+}

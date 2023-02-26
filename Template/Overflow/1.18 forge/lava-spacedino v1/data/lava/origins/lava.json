@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"lava:fire",
+		"lava:obby",
+		"lava:hitfire",
+		"lava:reach",
+		"lava:hp",
+		"lava:size",
+		"lava:carnivore",
+		"lava:eat",
+		"lava:boney",
+		"lava:fall",
+		"lava:ride",
+		"lava:particles"
+	],
+	"icon": "minecraft:magma_block",
+	"impact": 3,
+	"name": "§6§l§oLava-kin",
+	"description": "You are a mutant containing leviathan DNA."
+}

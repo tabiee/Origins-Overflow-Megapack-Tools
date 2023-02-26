@@ -1,0 +1,131 @@
+{
+    "name": "§5§nNova Blast",
+    "description": "Shoot three stars of concentrated magic.",
+    "type": "origins:multiple",
+    "one": {
+        "type": "origins:fire_projectile",
+        "entity_type": "firework_rocket",
+        "cooldown": 250,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 19
+        },
+        "count": 1,
+        "speed": 1,
+        "divergence": 1,
+        "sound": "minecraft:entity.illusioner.cast_spell",
+        "tag": "{Silent:1b,LifeTime:40,ShotAtAngle:1b,Tags:[\"fancy\"],FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Flicker:0b,Trail:0b,Colors:[I;16735744],FadeColors:[I;16755200]},{Type:2,Flicker:0b,Trail:0b,Colors:[I;56247],FadeColors:[I;4915133]}]}}}}",
+        "key": {
+            "key": "primary",
+            "continuous": true
+        }
+    },
+    "two": {
+        "type": "origins:fire_projectile",
+        "entity_type": "firework_rocket",
+        "cooldown": 250,
+        "hud_render": {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 19
+        },
+        "count": 1,
+        "speed": 1,
+        "divergence": 15,
+        "sound": "minecraft:entity.illusioner.cast_spell",
+        "tag": "{Silent:1b,LifeTime:40,ShotAtAngle:1b,Tags:[\"fancy\"],FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Flicker:0b,Trail:0b,Colors:[I;16735744],FadeColors:[I;16755200]},{Type:2,Flicker:0b,Trail:0b,Colors:[I;56247],FadeColors:[I;4915133]}]}}}}",
+        "key": {
+            "key": "primary",
+            "continuous": true
+        }
+    },
+    "three": {
+        "type": "origins:fire_projectile",
+        "entity_type": "firework_rocket",
+        "cooldown": 250,
+        "hud_render": {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 19
+        },
+        "count": 1,
+        "speed": 1,
+        "divergence": 15,
+        "sound": "minecraft:entity.illusioner.cast_spell",
+        "tag": "{Silent:1b,LifeTime:40,ShotAtAngle:1b,Tags:[\"fancy\"],FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Flicker:0b,Trail:0b,Colors:[I;16735744],FadeColors:[I;16755200]},{Type:2,Flicker:0b,Trail:0b,Colors:[I;56247],FadeColors:[I;4915133]}]}}}}",
+        "key": {
+            "key": "primary",
+            "continuous": true
+        }
+    },
+    "fx": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=fancy] at @s run particle glow ~ ~-0.1 ~ 0 0 0 0 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=fancy] at @s run particle wax_on ~ ~0.1 ~ 0 0 0 0 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:command",
+                        "command": "execute if entity @e[tag=star]",
+                        "comparison": "<=",
+                        "compare_to": 200,
+                        "permission_level": 4
+                    },
+                    "if_action": {
+                        "type": "origins:execute_command",
+                        "command": "execute as @e[tag=fancy] at @s run summon snowball ~ ~ ~ {NoGravity:1b,LifeTime:200,Tags:[\"star\"],Item:{id:\"minecraft:nether_star\",Count:1b}}",
+                        "permission_level": 4
+                    }
+                },
+				{
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:command",
+                        "command": "execute if entity @e[tag=star]",
+                        "comparison": ">",
+                        "compare_to": 200,
+                        "permission_level": 4
+                    },
+                    "if_action": {
+                        "type": "origins:execute_command",
+                        "command": "kill @e[tag=star]",
+                        "permission_level": 4
+                    }
+                },
+				{
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:command",
+                        "command": "execute if entity @e[tag=fancy]",
+                        "comparison": "==",
+                        "compare_to": 0,
+                        "permission_level": 4
+                    },
+                    "if_action": {
+                        "type": "origins:execute_command",
+                        "command": "kill @e[tag=star]",
+                        "permission_level": 4
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tp @e[tag=star] @e[tag=fancy,limit=1,sort=nearest]",
+                    "permission_level": 4
+                }
+            ]
+        }
+    }
+}

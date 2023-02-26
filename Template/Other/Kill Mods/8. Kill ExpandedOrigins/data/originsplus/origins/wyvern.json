@@ -1,0 +1,16 @@
+{
+    "powers": [
+        "originsplus:firewall",
+        "origins:nether_spawn",
+        "origins:fire_immunity",
+        "origins:water_vulnerability",
+        "origins:carnivore",
+        "origins:flame_particles",
+        "origins:damage_from_snowballs"
+    ],
+    "icon": "minecraft:blaze_rod",
+    "order": 3,
+    "impact": 3,
+    "loading_priority": 100,
+    "unchoosable": true
+}

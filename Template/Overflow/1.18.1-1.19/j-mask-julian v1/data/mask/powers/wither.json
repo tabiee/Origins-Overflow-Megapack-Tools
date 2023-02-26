@@ -1,0 +1,26 @@
+{
+    "name": "§2§nHollowing Touch",
+    "description": "Attacking an enemy withers them for a short time.",
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "wither",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": true,
+                "show_icon": true
+            }
+        }
+    },
+    "damage_condition": {
+        "inverted": true,
+        "type": "origins:projectile"
+    },
+    "cooldown": 20,
+    "hud_render": {
+        "should_render": false
+    }
+}

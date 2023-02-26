@@ -1,0 +1,39 @@
+{
+	"name": "§e§nCarnivore",
+    "description": "As a dragon of the End, you can only digest meat or chorus fruit. Anything else won't satiate you.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "3smp:meat"
+                        },
+                        "inverted": false
+                    },
+                    {
+                        "type": "origins:meat",
+                        "inverted": false
+                    }
+                ],
+                "inverted": true
+            },
+            {
+                "type": "origins:food",
+                "inverted": false
+            },
+            {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "origins:ignore_diet"
+                },
+                "inverted": true
+            }
+        ],
+        "inverted": false
+    }
+}

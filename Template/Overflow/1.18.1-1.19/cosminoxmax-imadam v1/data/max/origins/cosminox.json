@@ -1,0 +1,63 @@
+{
+	"powers": [
+		"max:desc",
+		"max:solar",
+		"max:blind",
+		"max:lunar",
+		"max:tp",
+		"max:lightning",
+		"max:elytra",
+		"max:dream",
+		"max:hp",
+		"max:swapper",
+
+		"max:red",
+		"max:red/blast",
+		"max:red/burn",
+		"max:red/fire",
+		"max:red/shield",
+		"max:red/desc",
+
+		"max:yellow",
+		"max:yellow/thing",
+		"max:yellow/fear",
+		"max:yellow/fall",
+		"max:yellow/drown",
+		"max:yellow/desc",
+
+		"max:green",
+		"max:green/heal",
+		"max:green/speed",
+		"max:green/veggie",
+		"max:green/bows",
+		"max:green/desc",
+
+		"max:blue",
+		"max:blue/rain",
+		"max:blue/sad",
+		"max:blue/slow",
+		"max:blue/fire",
+
+		"max:purple",
+		"max:purple/weird",
+		"max:purple/confuse",
+		"max:purple/craft",
+		"max:purple/ironhate",
+		"max:purple/desc",
+		
+		"max:pink",
+		"max:pink/cloud",
+		"max:pink/hp",
+		"max:pink/pets",
+		"max:pink/armor",
+		"max:pink/die",
+
+		"max:select",
+		"max:particles",
+		"max:tagger"
+	],
+	"icon": "minecraft:nether_star",
+	"impact": 3,
+	"name": "§b§l§oCosminox+",
+	"description": "Both the Day, the Night and colors of the world, a perfect balance with prismatic brilliance."
+}

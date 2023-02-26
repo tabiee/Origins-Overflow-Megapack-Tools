@@ -1,0 +1,13 @@
+{
+    "name": "§4§nPoor Swimmer",
+    "description": "You move slower in water.",
+    "condition": {
+        "type": "origins:constant",
+        "value": true
+    },
+    "type": "origins:modify_swim_speed",
+    "modifier": {
+        "operation": "addition",
+        "value": -0.01
+    }
+}

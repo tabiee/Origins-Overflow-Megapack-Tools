@@ -1,0 +1,16 @@
+{
+    "powers": [
+        "genesis:ghastling/fireball",
+        "origins:more_exhaustion",
+        "genesis:ghastling/gaseous",
+        "genesis:ghastling/aghast",
+        "genesis:ghastling/bloated"
+    ],
+    "icon": "minecraft:ghast_tear",
+    "order": 2,
+    "impact": 1,
+    "name": "Ghastling",
+    "description": "Sometimes, when Ghasts are born from the fires of the Nether, they are changed. Some decide to leave the Nether and enter the feared Overworld. ",
+    "loading_priority": 100,
+    "unchoosable": true
+}

@@ -1,0 +1,203 @@
+{
+	"name": "§3§nWater form",
+	"description": "This form is made to travel within water. You gain; dolphin's grace, night vision and water breathing. You also gain the ability to not sink in water and not glide. However, you cannot breathe on Land in this form.",
+	"type": "origins:multiple",
+	"fx": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:select_form",
+					"comparison": "==",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effects": [
+						{
+							"effect": "dolphins_grace",
+							"duration": 150,
+							"amplifier": 0,
+							"show_particles": false,
+							"show_icon": true
+						}
+					]
+				}
+			]
+		}
+	},
+	"air": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:select_form",
+					"comparison": "==",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:submerged_in",
+					"fluid": "water"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:gain_air",
+			"value": 10
+		}
+	},
+	"air2": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:select_form",
+					"comparison": "==",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:submerged_in",
+					"fluid": "water"
+				},
+				{
+					"type": "origins:air",
+					"comparison": ">=",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:gain_air",
+			"value": -6
+		}
+	},
+	"air3": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:select_form",
+					"comparison": "==",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:submerged_in",
+					"fluid": "water"
+				},
+				{
+					"type": "origins:air",
+					"comparison": "<",
+					"compare_to": 10
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:damage_over_time",
+		"interval": 20,
+		"onset_delay": 10,
+		"damage": 2,
+		"damage_easy": 1,
+		"damage_source": {
+			"name": "no_water_for_gills",
+			"bypasses_armor": true,
+			"unblockable": true
+		},
+		"protection_effectiveness": 1
+	},
+	"sink": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:select_form",
+					"comparison": "==",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:creative_flight"
+	}
+}

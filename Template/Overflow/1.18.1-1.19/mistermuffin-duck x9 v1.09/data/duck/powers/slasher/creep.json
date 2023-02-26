@@ -1,0 +1,106 @@
+{
+    "name": "§1§nCorner Creep§r",
+    "description": "Become somewhat transparent and phase through walls for 30 seconds, but you won't be able to affect the world around you.",
+    "type": "origins:multiple",
+    "act": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle end_rod ~ ~0.25 ~ 0.3 0.25 0.3 0.05 10"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power grant @s duck:slasher/model"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:slasher/creep_dur"
+                }
+            ]
+        },
+        "cooldown": 550,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 5,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:slasher/creep_dur",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        },
+        "key": {
+            "key": "secondary"
+        }
+    },
+    "dur": {
+        "type": "origins:cooldown",
+        "cooldown": 600,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "phase": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:slasher/creep_dur",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:phasing",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:unphasable"
+        },
+        "blacklist": true,
+        "render_type": "blindness",
+        "view_distance": 10,
+        "phase_down_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:on_block"
+                }
+            ]
+        }
+    },
+    "prev": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:slasher/creep_dur",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:prevent_block_selection"
+    },
+    "transp": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:slasher/creep_dur",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "falling_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revoke @s duck:slasher/model"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:slasher/creep_act"
+                }
+            ]
+        }
+    }
+}

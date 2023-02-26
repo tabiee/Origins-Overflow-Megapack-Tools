@@ -1,0 +1,25 @@
+{
+    "name": "§4§nLight Sensitivity",
+    "description": "Sunlight blinds you.",
+    "condition": {
+        "type": "origins:exposed_to_sun"
+    },
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "blindness",
+            "duration": 40,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": false
+        }
+    },
+    "rising_action": {
+        "type": "origins:play_sound",
+        "sound": "entity.bat.death",
+        "volume": 1,
+        "pitch": 1
+    }
+}

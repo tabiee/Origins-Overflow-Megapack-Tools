@@ -1,0 +1,54 @@
+{
+    "name": "Guard",
+    "description": "Gain Absoption, Saturation and take no damage",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "saturation",
+                        "duration": 300,
+                        "amplifier": 0,
+                        "show_particles": false,
+                        "show_icon": false
+                    },
+                    {
+                        "effect": "absorption",
+                        "duration": 300,
+                        "amplifier": 1,
+                        "show_particles": false,
+                        "show_icon": false
+                    },
+                    {
+                        "effect": "resistance",
+                        "duration": 100,
+                        "amplifier": 9,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                ]
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle witch ~ ~ ~ 2 0.3 2 0.1 25",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.enderman.scream",
+                "volume": 1,
+                "pitch": 1.5
+            }
+        ]
+    },
+    "cooldown": 1000,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+        "bar_index": 19
+    },
+    "key": "secondary"
+}

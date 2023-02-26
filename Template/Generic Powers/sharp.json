@@ -1,0 +1,16 @@
+{
+    "name": "§6§nSharp Claws",
+    "description": "When you hold nothing in your hand, you do an additional 5 damage.",
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:empty"
+        }
+    },
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "addition",
+        "value": 9
+    }
+}

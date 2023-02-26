@@ -1,0 +1,25 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"prevent": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:food"
+				},
+				{
+					"inverted": true,
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "origins:ignore_diet"
+					}
+				}
+			]
+		}
+	},
+	"regen": {
+		"type": "origins:disable_regen"
+	}
+}

@@ -1,0 +1,36 @@
+{
+    "name": "§5§nDual Wield",
+    "description": "When both hands are holding equipment (weapons and shields) you moves faster.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "kynaan:weapons"
+                    }
+                }
+            },
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "offhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "shield"
+                    }
+                }
+            }
+        ]
+    },
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "attribute": "generic.movement_speed",
+        "operation": "multiply_base",
+        "value": 0.25
+    },
+    "tick_rate": 5
+}

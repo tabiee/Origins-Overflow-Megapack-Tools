@@ -1,0 +1,99 @@
+{
+	"name": "Death Stare",
+	"description": "If you spend a minute looking at a mob, they die.",
+	"type": "origins:multiple",
+	"look": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:raycast",
+			"distance": 60,
+			"block": false,
+			"entity": true,
+			"shape_type": "visual",
+			"fluid_handling": "any",
+			"hit_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "brain:stare_tick",
+						"change": 1,
+						"operation": "add"
+					}
+				]
+			}
+		}
+	},
+	"tick": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1200,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 7,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "brain:stare_tick",
+				"comparison": "!=",
+				"compare_to": 0
+			}
+		},
+		"max_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:raycast",
+					"distance": 60,
+					"block": false,
+					"entity": true,
+					"shape_type": "visual",
+					"fluid_handling": "any",
+					"bientity_action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:execute_command",
+							"command": "kill @s"
+						}
+					},
+					"command_at_hit": "particle glow ~ ~1 ~ 0.5 0.5 0.5 0.5 25",
+					"command_along_ray": "particle dust 0.196 0.788 0.494 2 ~ ~ ~ 0 0 0 0 1 normal",
+					"command_along_ray_only_on_hit": true
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "brain:stare_tick",
+					"change": -1200,
+					"operation": "add"
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "entity.phantom.death",
+					"volume": 2,
+					"pitch": 0.3
+				}
+			]
+		}
+	},
+	"reset": {
+		"condition": {
+			"inverted": true,
+			"type": "origins:raycast",
+			"distance": 60,
+			"block": false,
+			"entity": true,
+			"shape_type": "visual",
+			"fluid_handling": "any"
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "brain:stare_tick",
+			"change": -10,
+			"operation": "add"
+		}
+	}
+}

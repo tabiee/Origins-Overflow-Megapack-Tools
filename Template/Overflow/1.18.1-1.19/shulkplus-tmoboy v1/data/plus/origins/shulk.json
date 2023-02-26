@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"plus:hoard",
+		"plus:shoot",
+		"plus:hp",
+		"plus:armor",
+		"plus:strong",
+		"plus:water",
+		"plus:shield",
+		"plus:exh"
+	],
+	"icon": "minecraft:shulker_shell",
+	"impact": 2,
+	"name": "§d§l§oShulk+",
+	"description": "Related to Shulkers, the bodies of the Shulk are outfitted with a protective shell-like skin."
+}

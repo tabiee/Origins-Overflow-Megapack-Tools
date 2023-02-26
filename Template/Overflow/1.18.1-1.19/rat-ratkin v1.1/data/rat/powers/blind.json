@@ -1,0 +1,42 @@
+{
+    "name": "§4§nLight Sensitivity§r",
+    "description": "Being in bright light blinds you if you're not wearing a helmet.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "head",
+                "item_condition": {
+                    "type": "origins:empty"
+                }
+            },
+            {
+                "type": "apoli:exposed_to_sun"
+            },
+            {
+                "type": "apoli:daytime"
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 15,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "blindness",
+                "duration": 50,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ]
+    },
+    "rising_action": {
+        "type": "origins:play_sound",
+        "sound": "entity.bat.death",
+        "volume": 0.35,
+        "pitch": 1
+    }
+}

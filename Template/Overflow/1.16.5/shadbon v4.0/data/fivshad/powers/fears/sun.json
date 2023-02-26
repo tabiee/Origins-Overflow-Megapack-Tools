@@ -1,0 +1,13 @@
+{
+    "name": "§6§nEw, Sunlight",
+    "description": "You burn in sunlight.",
+    "condition": {
+        "type": "origins:exposed_to_sun"
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:set_on_fire",
+        "duration": 2
+    }
+}

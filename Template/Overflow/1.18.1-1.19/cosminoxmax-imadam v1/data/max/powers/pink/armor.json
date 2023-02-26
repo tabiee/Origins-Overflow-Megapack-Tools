@@ -1,0 +1,37 @@
+{
+    "name": "§d§nFloaty",
+    "description": "Being a lot lighter in this state, you are unable to effectively use armor heavier than iron.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "*:select_mode",
+                "comparison": "==",
+                "compare_to": 6
+            }
+        ]
+    },
+    "type": "origins:conditioned_restrict_armor",
+    "head": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 2
+    },
+    "chest": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 5
+    },
+    "legs": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 4
+    },
+    "feet": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 1
+    },
+    "tick_rate": 1
+}

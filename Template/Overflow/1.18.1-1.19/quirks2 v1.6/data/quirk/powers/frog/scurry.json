@@ -1,0 +1,48 @@
+{
+	"type": "origins:multiple",
+
+	"fall_damage": {
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "flyIntoWall"
+				}
+			]
+		}
+	},
+
+	"climbing": {
+		"type": "origins:climbing",
+		"hold_condition": {
+			"type": "origins:and",
+			"conditions": [{
+				"type": "origins:or",
+				"conditions": [{
+						"type": "origins:block_collision",
+						"offset_x": 0.01,
+						"offset_z": 0.01,
+						"offset_y": 0
+					},
+					{
+						"type": "origins:block_collision",
+						"offset_x": -0.01,
+						"offset_z": -0.01,
+						"offset_y": 0
+					}
+				]
+			}]
+		},
+		"condition": {
+			"type": "origins:collided_horizontally"
+		}
+	},
+
+	"name": "Sticky Hands",
+	"description": "You are able to climb and hold onto walls because of your sticky webbed fingers."
+}

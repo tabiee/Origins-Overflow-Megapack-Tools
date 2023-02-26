@@ -1,0 +1,14 @@
+{
+    "name": "§2§nSiphon Life",
+    "description": "You deal extra damage to living beings.",
+    "type": "origins:modify_damage_dealt",
+    "target_condition": {
+        "inverted": true,
+        "type": "origins:in_tag",
+        "tag": "reaper:nonliving"
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": 3
+    }
+}

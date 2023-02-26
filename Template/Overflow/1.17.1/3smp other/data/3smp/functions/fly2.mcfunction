@@ -1,0 +1,2 @@
+execute if block ~ ~ ~ air positioned ^ ^ ^1 run function 3smp:fly2
+execute as @e[dx=0] positioned ~-0.01 ~-0.01 ~-0.01 if entity @s[dx=0] run effect give @e[distance=..2,name=!Teomydude,name=!theonlysecret] minecraft:levitation 2 70

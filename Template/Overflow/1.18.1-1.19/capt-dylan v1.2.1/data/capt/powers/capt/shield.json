@@ -1,0 +1,82 @@
+{
+	"name": "§1§nHis Shield",
+	"description": "Summon your signature Shield at will. You gain buffs when holding any shield.",
+	"type": "origins:multiple",
+	"act": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:temperature",
+						"comparison": "<",
+						"compare_to": 0.6
+					}
+				},
+				{
+					"inverted": true,
+					"type": "origins:command",
+					"command": "clear @s shield{display:{Name:'[{\"text\":\"His Shield\",\"italic\":false,\"color\":\"dark_blue\",\"bold\":true}]'},Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:1},{id:\"minecraft:sharpness\",lvl:2},{id:\"minecraft:unbreaking\",lvl:100}],BlockEntityTag:{Base:0,Patterns:[{Pattern:ss,Color:14},{Pattern:cbo,Color:11},{Pattern:mr,Color:11},{Pattern:flo,Color:11},{Pattern:ms,Color:11},{Pattern:mc,Color:0},{Pattern:bo,Color:11}]}} 0",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "give @s shield{display:{Name:'[{\"text\":\"His Shield\",\"italic\":false,\"color\":\"dark_blue\",\"bold\":true}]'},Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:1},{id:\"minecraft:sharpness\",lvl:2},{id:\"minecraft:unbreaking\",lvl:100}],BlockEntityTag:{Base:0,Patterns:[{Pattern:ss,Color:14},{Pattern:cbo,Color:11},{Pattern:mr,Color:11},{Pattern:flo,Color:11},{Pattern:ms,Color:11},{Pattern:mc,Color:0},{Pattern:bo,Color:11}]}} 1",
+					"permission_level": 4
+				}
+			]
+		},
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "primary"
+		}
+	},
+	"debug": {
+		"condition": {
+			"type": "origins:command",
+			"command": "clear @s shield{display:{Name:'[{\"text\":\"His Shield\",\"italic\":false,\"color\":\"dark_blue\",\"bold\":true}]'},Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:1},{id:\"minecraft:sharpness\",lvl:2},{id:\"minecraft:unbreaking\",lvl:100}],BlockEntityTag:{Base:0,Patterns:[{Pattern:ss,Color:14},{Pattern:cbo,Color:11},{Pattern:mr,Color:11},{Pattern:flo,Color:11},{Pattern:ms,Color:11},{Pattern:mc,Color:0},{Pattern:bo,Color:11}]}} 0",
+			"comparison": ">=",
+			"compare_to": 2,
+			"permission_level": 4
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @s shield{display:{Name:'[{\"text\":\"His Shield\",\"italic\":false,\"color\":\"dark_blue\",\"bold\":true}]'},Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:1},{id:\"minecraft:sharpness\",lvl:2},{id:\"minecraft:unbreaking\",lvl:100}],BlockEntityTag:{Base:0,Patterns:[{Pattern:ss,Color:14},{Pattern:cbo,Color:11},{Pattern:mr,Color:11},{Pattern:flo,Color:11},{Pattern:ms,Color:11},{Pattern:mc,Color:0},{Pattern:bo,Color:11}]}} 1",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"debug2": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=!capt] at @s run clear @s shield{display:{Name:'[{\"text\":\"His Shield\",\"italic\":false,\"color\":\"dark_blue\",\"bold\":true}]'},Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:1},{id:\"minecraft:sharpness\",lvl:2},{id:\"minecraft:unbreaking\",lvl:100}],BlockEntityTag:{Base:0,Patterns:[{Pattern:ss,Color:14},{Pattern:cbo,Color:11},{Pattern:mr,Color:11},{Pattern:flo,Color:11},{Pattern:ms,Color:11},{Pattern:mc,Color:0},{Pattern:bo,Color:11}]}} 10",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

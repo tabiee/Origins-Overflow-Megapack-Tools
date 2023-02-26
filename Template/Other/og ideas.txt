@@ -1,0 +1,82 @@
+convert azuly
+convert spirit knight
+
+terraria ideas:
+chloropotyte set crystal
+projectile from sword
+
+
+
+SUNMOON BOIS
+
+2 layers
+
+main: The Eclipse/The Daycare Attendant
+sub: 
+1) Sun 
+2) Moon 
+3) Nychthemeron/Cycle (Singleplayer)
+
+
+eclipse:
+. can't swim
+. immune to drown/suffocation
+. x2 fire damage
+. no fall dmg from great heights, reduced fall dmg but get slowed for a sec
+. tall af boi
+. no eating food, instead you use Charge
+ . charge via standing on redstone blocks?? i dont like this
+ . lose charge slowly overtime
+* requires 2 players, 1 moon 1 sun
+ . light level >= 12 makes you sun, light level <= 6 makes you moon, light levels 7-8-9-10-11 allow you to request swap
+ . while one is active, the other is in spectator forced to follow the active one
+* request to swap in/out with the other half
+ . hold button, if the other half also holds, control swaps
+
+sun:
+. lose charge if standing still too long
+. gain charge slowly in direct sunlight, or when near lava in the nether
+. faster movement/digging
+. villagers like you
+. PRIM: big jumps
+. SEC: 
+
+moon:
+. lose less charge
+. slower
+. PRIM: airswim slowly if there is a celling above you within atleast 30 blocks
+. SEC: 
+. murderbot - does more damage
+. nightvision
+
+
+
+MAIN FEATURES FOR SUNMOON:
+
+* 2 players share 1 body
++ . sync player locations - this is easy - THIS IS EVEN EASIER??? JUST /SPECTATE YO HOLY SHIT
++ . sync player inventories + I CAN COPY AND PASTE SHIT OMG I'M SO COOL
++ . sync hp, hunger, effects
++ . forced swap control at certain light lvls - SO MUCH LOGIC FUCK ME
++ . allow to request control at mid light lvls - MORE LOGIC???? H E L L
++ . fight for control if spectator - YES
++ . resist fighter if in control - HMMM :))))
+
+ADDITIONAL FEATURES
+- . sunrays remodel
+- . pants model
++- . allow options for cosmetics when installing
+- . custom icons for origin
+
+! make sure to do a shit ton of debugs
+
+FIX
+X . drop inv when dying
++ . gamemode dynamic again
++ . debug tp for spectator
++ . extend won fight duration
++- * potential huge gameplay change: lower forced swap by a lot?
++ . reduce moon forced swap
+
++? . block light
+* THIS SHIT SUCKS ASS AND REFUSES TO WORK FUCK ME SIDEWAYS . condition for swaps specific to cont

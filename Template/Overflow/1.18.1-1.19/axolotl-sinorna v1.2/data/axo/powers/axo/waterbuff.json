@@ -1,0 +1,31 @@
+{
+    "name": "§2§nIn Your Element",
+    "description": "While underwater, you take less damage and do more damage to others.",
+    "type": "origins:multiple",
+    "take": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "water",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.25
+        }
+    },
+    "do": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "water",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.25
+        }
+    }
+}

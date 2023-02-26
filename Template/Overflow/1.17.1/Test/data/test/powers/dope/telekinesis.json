@@ -1,0 +1,15 @@
+{
+    "name": "this",
+    "description": "a",
+    "condition": {
+        "type": "origins:power_active",
+        "power": "test:dope/toggle"
+    },
+    "type": "origins:action_over_time",
+    "interval": 2,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "execute positioned ^ ^1 ^ anchored feet run function test:start_ray",
+        "permission_level": 4
+    }
+}

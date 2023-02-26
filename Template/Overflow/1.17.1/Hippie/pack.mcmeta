@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 7,
+    "name": "Hippie",
+	"id": "Hippie",
+	"version": "1.17.1",
+    "description": "This is silly",
+	"authors": "Meightaboot on Fiverr, Teomydude IGN"
+  }
+}

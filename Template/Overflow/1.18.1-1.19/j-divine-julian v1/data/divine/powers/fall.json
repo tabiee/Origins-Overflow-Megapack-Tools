@@ -1,0 +1,39 @@
+{
+    "name": "§2§nLight as a leaf",
+    "description": "You are able to glide through the air and don’t take fall damage.",
+    "type": "origins:multiple",
+    "slow": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:sneaking"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "slow_falling",
+                "duration": 5,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    },
+    "dmg": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                }
+            ]
+        }
+    }
+}

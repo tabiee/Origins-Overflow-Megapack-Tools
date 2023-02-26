@@ -1,0 +1,9 @@
+{
+    "name": "§6§nBurning Calories",
+    "description": "You need to eat more often.",
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.5
+    }
+}

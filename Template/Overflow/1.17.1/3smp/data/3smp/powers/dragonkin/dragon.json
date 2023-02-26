@@ -1,0 +1,87 @@
+{
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "key": "key.origins.secondary_active",
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:power_active",
+            "inverted": true,
+            "power": "3smp:dragonkin/toggle"
+        },
+        "if_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "scale set pehkui:height 0.1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "scale set pehkui:width 0.1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "permission_level": 4,
+                        "command": "identity equip @s minecraft:ender_dragon"
+                    },
+                    "ticks": 20
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "permission_level": 4,
+                        "command": "particle minecraft:dragon_breath ~ ~ ~ 0 1 0 0.1 100 normal"
+                    },
+                    "ticks": 20
+                }
+            ]
+        },
+        "else_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "identity unequip @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "particle minecraft:dragon_breath ~ ~ ~ 0 1 0 0.1 100 normal"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "permission_level": 4,
+                                "command": "scale set pehkui:height 0.75"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "permission_level": 4,
+                                "command": "scale set pehkui:width 0.70"
+                            }
+                        ]
+                    },
+                    "ticks": 5
+                }
+            ]
+        }
+    },
+    "hud_render": {
+        "should_render": false,
+        "sprite_location": "origins:textures/gui/resource_bar.png"
+    },
+    "hidden": false,
+    "name": "§5§nDraconic Form [Secondary]",
+    "description": "Switch into your true form."
+}

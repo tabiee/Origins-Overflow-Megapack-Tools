@@ -1,0 +1,595 @@
+{
+	"name": "§c§n§lFight§r",
+	"description": "IT'S MY TURN ON THE XBOX",
+	"type": "origins:multiple",
+	"sun_fite": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @s[tag=sun,tag=spec]",
+					"comparison": ">=",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:request_sunhold",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:request_moonhold",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:fight_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:fight_res",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "resource set @e[tag=moon,limit=1] sunmoon:fight_sunwarn 1"
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.85,
+					"action": {
+						"type": "origins:choice",
+						"actions": [
+							{
+								"weight": 1,
+								"element": {
+									"type": "origins:execute_command",
+									"command": "execute as @e[tag=cont] at @s run particle minecraft:electric_spark ^ ^1.5 ^1 0.5 0.5 0.5 0 15"
+								}
+							},
+							{
+								"weight": 1,
+								"element": {
+									"type": "origins:execute_command",
+									"command": "effect give @e[tag=cont] blindness 3 0"
+								}
+							},
+							{
+								"weight": 1,
+								"element": {
+									"type": "origins:area_of_effect",
+									"radius": 3,
+									"bientity_condition": {
+										"type": "origins:target_condition",
+										"condition": {
+											"type": "origins:command",
+											"command": "execute if entity @s[tag=cont]",
+											"comparison": ">=",
+											"compare_to": 1
+										}
+									},
+									"bientity_action": {
+										"type": "origins:choice",
+										"actions": [
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:add_velocity",
+													"y": 0.025,
+													"z": 0.9,
+													"client": true,
+													"server": true,
+													"set": true
+												}
+											},
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:add_velocity",
+													"y": 0.025,
+													"z": -0.3,
+													"client": true,
+													"server": true,
+													"set": true
+												}
+											},
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:add_velocity",
+													"x": 0.4,
+													"y": 0.05,
+													"client": true,
+													"server": true,
+													"set": true
+												}
+											},
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:add_velocity",
+													"x": -0.35,
+													"y": 0.05,
+													"client": true,
+													"server": true,
+													"set": true
+												}
+											},
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:add_velocity",
+													"x": -0.35,
+													"y": 0.025,
+													"z": 0.9,
+													"client": true,
+													"server": true,
+													"set": true
+												}
+											},
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:add_velocity",
+													"x": 0.4,
+													"y": 0.025,
+													"z": -0.3,
+													"client": true,
+													"server": true,
+													"set": true
+												}
+											},
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:damage",
+													"amount": 2,
+													"source": {
+														"name": "thorns",
+														"bypasses_armor": true,
+														"unblockable": true
+													}
+												}
+											}
+										]
+									}
+								}
+							},
+							{
+								"weight": 1,
+								"element": {
+									"type": "origins:play_sound",
+									"sound": "minecraft:item.crossbow.quick_charge_3",
+									"volume": 1,
+									"pitch": 1.5
+								}
+							}
+						]
+					},
+					"fail_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:trigger_cooldown",
+								"power": "sunmoon:fight_dur"
+							},
+							{
+								"type": "origins:trigger_cooldown",
+								"power": "sunmoon:fight_cd"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=moon,limit=1] sunmoon:fight_dur 1"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:execute_command",
+											"command": "tag @s remove spec"
+										},
+										{
+											"type": "origins:execute_command",
+											"command": "tag @e[tag=moon] remove cont"
+										},
+										{
+											"type": "origins:execute_command",
+											"command": "tag @s add cont"
+										},
+										{
+											"type": "origins:execute_command",
+											"command": "tag @e[tag=moon] add spec"
+										}
+									]
+								},
+								"ticks": 3
+							}
+						]
+					}
+				}
+			]
+		},
+		"cooldown": 15,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 24,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "sunmoon:request_sunhold",
+				"comparison": "==",
+				"compare_to": 0
+			}
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"moon_fite": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @s[tag=moon,tag=spec]",
+					"comparison": ">=",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:request_sunhold",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:request_moonhold",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:fight_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:fight_res",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "resource set @e[tag=sun,limit=1] sunmoon:fight_moonwarn 1"
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.85,
+					"action": {
+						"type": "origins:choice",
+						"actions": [
+							{
+								"weight": 1,
+								"element": {
+									"type": "origins:execute_command",
+									"command": "execute as @e[tag=cont] at @s run particle minecraft:electric_spark ^ ^1.5 ^1 0.5 0.5 0.5 0 3"
+								}
+							},
+							{
+								"weight": 1,
+								"element": {
+									"type": "origins:execute_command",
+									"command": "effect give @e[tag=cont] blindness 3 0"
+								}
+							},
+							{
+								"weight": 10,
+								"element": {
+									"type": "origins:area_of_effect",
+									"radius": 3,
+									"bientity_condition": {
+										"type": "origins:target_condition",
+										"condition": {
+											"type": "origins:command",
+											"command": "execute if entity @s[tag=cont]",
+											"comparison": ">=",
+											"compare_to": 1
+										}
+									},
+									"bientity_action": {
+										"type": "origins:choice",
+										"actions": [
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:add_velocity",
+													"y": 0.025,
+													"z": 0.9,
+													"client": true,
+													"server": true,
+													"set": true
+												}
+											},
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:add_velocity",
+													"y": 0.025,
+													"z": -0.3,
+													"client": true,
+													"server": true,
+													"set": true
+												}
+											},
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:add_velocity",
+													"x": 0.4,
+													"y": 0.05,
+													"client": true,
+													"server": true,
+													"set": true
+												}
+											},
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:add_velocity",
+													"x": -0.35,
+													"y": 0.05,
+													"client": true,
+													"server": true,
+													"set": true
+												}
+											},
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:add_velocity",
+													"x": -0.35,
+													"y": 0.025,
+													"z": 0.9,
+													"client": true,
+													"server": true,
+													"set": true
+												}
+											},
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:add_velocity",
+													"x": 0.4,
+													"y": 0.025,
+													"z": -0.3,
+													"client": true,
+													"server": true,
+													"set": true
+												}
+											},
+											{
+												"weight": 1,
+												"element": {
+													"type": "origins:damage",
+													"amount": 2,
+													"source": {
+														"name": "thorns",
+														"bypasses_armor": true,
+														"unblockable": true
+													}
+												}
+											}
+										]
+									}
+								}
+							},
+							{
+								"weight": 1,
+								"element": {
+									"type": "origins:play_sound",
+									"sound": "minecraft:item.crossbow.quick_charge_3",
+									"volume": 1,
+									"pitch": 1.5
+								}
+							}
+						]
+					},
+					"fail_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:trigger_cooldown",
+								"power": "sunmoon:fight_dur"
+							},
+							{
+								"type": "origins:trigger_cooldown",
+								"power": "sunmoon:fight_cd"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=sun,limit=1] sunmoon:fight_dur 1"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:execute_command",
+											"command": "tag @s remove spec"
+										},
+										{
+											"type": "origins:execute_command",
+											"command": "tag @e[tag=sun] remove cont"
+										},
+										{
+											"type": "origins:execute_command",
+											"command": "tag @s add cont"
+										},
+										{
+											"type": "origins:execute_command",
+											"command": "tag @e[tag=sun] add spec"
+										}
+									]
+								},
+								"ticks": 3
+							}
+						]
+					}
+				}
+			]
+		},
+		"cooldown": 15,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 23,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "sunmoon:request_moonhold",
+				"comparison": "==",
+				"compare_to": 0
+			}
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"trigger_cd": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "sunmoon:fight_dur",
+			"comparison": "==",
+			"compare_to": 800
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"falling_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "sunmoon:fight_cd"
+				}
+			]
+		}
+	},
+	"resist": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @s[tag=cont]",
+					"comparison": ">=",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:fight_res",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:fight_dur",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "sunmoon:fight_res"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "resource set @e[tag=spec,limit=1] sunmoon:fight_res 1"
+				}
+			]
+		},
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"sunwarn": {
+		"type": "origins:cooldown",
+		"cooldown": 15,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 24
+		}
+	},
+	"moonwarn": {
+		"type": "origins:cooldown",
+		"cooldown": 15,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 23
+		}
+	},
+	"res": {
+		"type": "origins:cooldown",
+		"cooldown": 7,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 0
+		}
+	},
+	"dur": {
+		"type": "origins:cooldown",
+		"cooldown": 1000,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 19
+		}
+	},
+	"cd": {
+		"type": "origins:cooldown",
+		"cooldown": 800,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 1,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "sunmoon:fight_dur",
+				"comparison": "==",
+				"compare_to": 0
+			}
+		}
+	}
+}

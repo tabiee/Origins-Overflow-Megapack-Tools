@@ -1,0 +1,1456 @@
+{
+	"name": "§1§nStone Wall",
+	"description": "Create a wall or platform in front of you using nearby ground, clear with shift.",
+	"hidden": true,
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:sneaking"
+			}
+		]
+	},
+	"type": "origins:active_self",
+	"cooldown": 40,
+	"entity_action": {
+		"type": "origins:if_else_list",
+		"actions": [
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "cut_red_sandstone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block cut_red_sandstone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace cut_red_sandstone",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "chiseled_red_sandstone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block chiseled_red_sandstone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace chiseled_red_sandstone",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "stone_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block stone_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace stone_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "mossy_stone_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block mossy_stone_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace mossy_stone_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "cracked_stone_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block cracked_stone_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace cracked_stone_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "chiseled_stone_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block chiseled_stone_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace chiseled_stone_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "infested_mossy_stone_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block infested_mossy_stone_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace infested_mossy_stone_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "cut_sandstone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block cut_sandstone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace cut_sandstone",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "chiseled_sandstone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block chiseled_sandstone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace chiseled_sandstone",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "infested_cobblestone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block infested_cobblestone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace infested_cobblestone",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "smooth_stone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block smooth_stone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace smooth_stone",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "infested_stone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block infested_stone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace infested_stone",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "infested_stone_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block infested_stone_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace infested_stone_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "infested_cracked_stone_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block infested_cracked_stone_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace infested_cracked_stone_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "infested_chiseled_stone_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block infested_chiseled_stone_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace infested_chiseled_stone_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "gilded_blackstone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block gilded_blackstone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace gilded_blackstone",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "polished_blackstone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block polished_blackstone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace polished_blackstone",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "chiseled_polished_blackstone"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block chiseled_polished_blackstone ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace chiseled_polished_blackstone",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "polished_blackstone_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block polished_blackstone_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace polished_blackstone_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "cracked_polished_blackstone_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block cracked_polished_blackstone_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace cracked_polished_blackstone_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "end_stone_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block end_stone_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace end_stone_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "polished_diorite"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block polished_diorite ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace polished_diorite",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "polished_deepslate"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block polished_deepslate ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace polished_deepslate",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "polished_andesite"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block polished_andesite ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace polished_andesite",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "polished_granite"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block polished_granite ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace polished_granite",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "polished_basalt"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block polished_basalt ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace polished_basalt",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "smooth_basalt"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block smooth_basalt ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace smooth_basalt",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "infested_deepslate"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block infested_deepslate ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace infested_deepslate",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "dripstone_block"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block dripstone_block ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace dripstone_block",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "deepslate_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block deepslate_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace deepslate_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "cracked_deepslate_bricks"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block cracked_deepslate_bricks ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace cracked_deepslate_bricks",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "deepslate_tiles"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block deepslate_tiles ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace deepslate_tiles",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "cracked_deepslate_tiles"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block cracked_deepslate_tiles ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace cracked_deepslate_tiles",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			},
+			{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:block_in_radius",
+							"block_condition": {
+								"type": "origins:block",
+								"block": "chiseled_deepslate"
+							},
+							"radius": 3,
+							"shape": "cube",
+							"comparison": ">=",
+							"compare_to": 5
+						},
+						{
+							"type": "origins:sneaking"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "particle block chiseled_deepslate ^ ^1.5 ^1 2 0 2 0 200 normal",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute positioned ^ ^ ^1 run fill ^-1 ^ ^1 ^1 ^2 ^1 air replace chiseled_deepslate",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "block.stone.break",
+							"volume": 1,
+							"pitch": 0.7
+						}
+					]
+				}
+			}
+		]
+	},
+	"hud_render": {
+		"should_render": false,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+		"bar_index": 3
+	},
+	"key": {
+		"key": "secondary"
+	}
+}

@@ -1,0 +1,121 @@
+{
+	"name": "§1§nGently Floating",
+	"description": "Float in the air while below y=110, Shift to go down.",
+	"type": "origins:multiple",
+	"up": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:sneaking"
+				},
+				{
+					"inverted": true,
+					"type": "origins:on_block"
+				},
+				{
+					"type": "origins:in_block_anywhere",
+					"block_condition": {
+						"type": "origins:height",
+						"comparison": "<=",
+						"compare_to": 110
+					},
+					"comparison": ">=",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:sad/float_hold",
+					"comparison": "!=",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "levitation",
+				"duration": 2,
+				"amplifier": 3,
+				"show_particles": false,
+				"show_icon": true
+			}
+		}
+	},
+	"dmg": {
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
+		}
+	},
+	"act": {
+		"type": "origins:active_self",
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.jump",
+			"continuous": true
+		},
+		"entity_action": {
+			"type": "origins:trigger_cooldown",
+			"power": "*:sad/float_hold"
+		}
+	},
+	"hold": {
+		"type": "origins:cooldown",
+		"cooldown": 4,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"particles": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:sad/float_hold",
+					"comparison": "!=",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:power_active",
+					"power": "*:sad/phasing_tap"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "particle glow ~ ~ ~ 0.5 0.8 0.5 0 4",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle falling_obsidian_tear ~ ~0.8 ~ 0.2 0.1 0.2 0 2",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

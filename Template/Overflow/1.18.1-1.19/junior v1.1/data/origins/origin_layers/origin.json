@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "origins": [
+    "junior:farmer",
+	"junior:miner",
+	"junior:archer",
+	"junior:warrior"
+  ]
+}

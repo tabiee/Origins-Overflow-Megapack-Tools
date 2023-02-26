@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"pixel:pixel_meter",
+		"pixel:pixel_store",
+		"pixel:pixel_store_effects",
+		"pixel:pixel_wash",
+		"pixel:pixel_sleep",
+		"pixel:pixel_extract",
+		"pixel:pixel_xp",
+		"pixel:pixel_lv1",
+		"pixel:pixel_lv2",
+		"pixel:pixel_lv3"
+	],
+	"icon": "minecraft:poisonous_potato",
+	"order": 10,
+	"impact": 2,
+	"name": "Pixel",
+	"description": "DESCRIPTION HERE"
+}

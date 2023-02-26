@@ -1,0 +1,19 @@
+{
+	"name": "2-bit - Parkour Champion",
+	"description": "Permanent Jump Boost.",
+	"type": "origins:multiple",
+	"jump": {
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "jump_boost",
+				"duration": 100,
+				"amplifier": 0,
+				"show_particles": false,
+				"show_icon": false
+			}
+		}
+	}
+}

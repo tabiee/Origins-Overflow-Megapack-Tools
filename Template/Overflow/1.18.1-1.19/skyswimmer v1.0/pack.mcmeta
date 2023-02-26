@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 7,
+    "name": "Sky",
+	"id": "sky",
+	"version": "1.18.1",
+    "description": "Skyswimmer",
+	"authors": "Meightaboot on Fiverr, Teomydude IGN"
+  }
+}

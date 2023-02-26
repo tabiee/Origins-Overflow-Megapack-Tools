@@ -1,0 +1,120 @@
+{
+    "name": "Overheat",
+    "description": "While any of your tails are active, heat slowly builds up, which will disable your powers if it reaches a critical point.",
+    "type": "origins:multiple",
+    "heat": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1000,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 8,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_heat",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        },
+        "max_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 0.100 0.500 0.500 3 ~ ~1 ~ 2 1 2 0.25 100"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.fire.extinguish",
+                    "volume": 1,
+                    "pitch": 1
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_cd"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:tails_tap",
+                    "change": 0,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_heat",
+                    "change": 0,
+                    "operation": "set"
+                }
+            ]
+        }
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 2400,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 1
+        }
+    },
+    "up": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_tap",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_heat",
+            "change": 1,
+            "operation": "add"
+        }
+    },
+    "down": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_tap",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_heat",
+            "change": -4,
+            "operation": "add"
+        }
+    },
+    "turnoff": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_cd",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:tails_tap",
+            "change": 0,
+            "operation": "set"
+        }
+    }
+}

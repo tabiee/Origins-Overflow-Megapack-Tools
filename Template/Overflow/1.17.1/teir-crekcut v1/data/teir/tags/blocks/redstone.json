@@ -1,0 +1,20 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:redstone_block",
+        "minecraft:redstone_ore",
+        "minecraft:deepslate_redstone_ore",
+        "minecraft:redstone_lamp",
+        "minecraft:redstone_torch",
+        "minecraft:redstone_wall_torch",
+        "minecraft:repeater",
+        "minecraft:comparator",
+        "minecraft:powered_rail",
+        "minecraft:activator_rail",
+        "minecraft:detector_rail",
+        "minecraft:daylight_detector",
+        "minecraft:observer",
+        "minecraft:piston",
+        "minecraft:sticky_piston"
+    ]
+}

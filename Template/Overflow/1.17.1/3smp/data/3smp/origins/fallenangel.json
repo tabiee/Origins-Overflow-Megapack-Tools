@@ -1,0 +1,14 @@
+{
+    "impact": 1,
+    "unchoosable": false,
+    "powers": [
+        "3smp:fallenangel/slow_falling",
+        "3smp:fallenangel/fresh_air",
+        "3smp:fallenangel/tailwind",
+        "3smp:fallenangel/elytra",
+        "3smp:fallenangel/more_kinetic_damage"
+    ],
+    "name": "§7§l§oFallen Angel",
+    "description": "An angel that fell from the world above.",
+	"icon": "dead_horn_coral"
+}

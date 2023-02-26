@@ -1,0 +1,64 @@
+{
+	"name": "Nuclear Pig",
+	"description": "On death a massive explosion is created where you died destroying all blocks in a large radius.\n",
+	"condition": {
+		"type": "origins:health",
+		"comparison": "==",
+		"compare_to": 0
+	},
+	"type": "origins:action_over_time",
+	"interval": 1,
+	"rising_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "function pig:explode"
+			},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:execute_command",
+					"command": "function pig:explode"
+				},
+				"ticks": 2
+			},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:execute_command",
+					"command": "function pig:explode"
+				},
+				"ticks": 4
+			},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:execute_command",
+					"command": "function pig:explode"
+				},
+				"ticks": 6
+			},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:execute_command",
+					"command": "function pig:explode"
+				},
+				"ticks": 8
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "particle minecraft:explosion_emitter ~ ~ ~ 10 100 10 0 1000 force"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "particle minecraft:explosion_emitter ~ ~90 ~ 30 10 30 0 1000 force"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "particle minecraft:campfire_signal_smoke ~ ~ ~ 100 10 100 0.2 1000 force"
+			}
+		]
+	}
+}

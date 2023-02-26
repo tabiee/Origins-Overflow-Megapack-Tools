@@ -1,0 +1,41 @@
+{
+    "name": "MURDER",
+    "description": "GOOD",
+    "hidden": true,
+    "condition": {
+        "type": "origins:origin",
+        "origin": "ogcspoofii:ghost",
+        "layer": "origins:origin"
+    },
+    "type": "origins:self_action_on_kill",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "origin set @s origins:origin ogcspoofii:spoofii",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "*:ghost/ghostpower_nuggets",
+                "change": 0
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:block.respawn_anchor.charge",
+                "volume": 1,
+                "pitch": 2
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute at @s positioned ^ ^2 ^ run particle minecraft:soul ~ ~ ~ 1 0.2 1 0.1 100",
+                "permission_level": 4
+            }
+        ]
+    },
+    "cooldown": 5,
+    "hud_render": {
+        "should_render": false
+    }
+}

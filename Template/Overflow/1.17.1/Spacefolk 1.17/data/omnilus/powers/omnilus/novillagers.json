@@ -1,0 +1,12 @@
+{
+	"name": "Lonesomeness",
+	"description": "Because of your obscure appearance, villagers are scared of you.",
+	"type": "origins:prevent_entity_use",
+	"bientity_condition": {
+		"type": "origins:target_condition",
+		"condition": {
+			"type": "origins:entity_type",
+			"entity_type": "minecraft:villager"
+		}
+	}
+}

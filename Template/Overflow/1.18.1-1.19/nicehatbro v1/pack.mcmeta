@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 8,
+    "name": "Sunrays & Moonhat!",
+	"id": "nicehatbro",
+	"version": "1.18.2",
+    "description": "They take up your head slot!",
+	"authors": "Tabee#5318 on Discord"
+  }
+}

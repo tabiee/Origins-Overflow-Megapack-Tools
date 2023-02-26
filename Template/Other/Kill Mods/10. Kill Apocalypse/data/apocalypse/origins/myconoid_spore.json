@@ -1,0 +1,18 @@
+{
+    "powers": [
+        "apocalypse:myconoids/spore_callback",
+        "apocalypse:myconoids/spore_passives",
+        "apocalypse:myconoids/spore_secondaries",
+        "apocalypse:myconoids/turf_penalty"
+    ],
+    "icon": {
+        "item": "minecraft:amethyst_shard",
+        "tag": "{CustomModelData:19}"
+    },
+    "unchoosable": true,
+    "order": 10,
+    "impact": 3,
+    "name": "Myconoid Spore",
+    "description": "You are a tiny spore. Small and insignificant, you won't last long. You must find a suitable environment to grow and evolve.",
+    "loading_priority": 100
+}

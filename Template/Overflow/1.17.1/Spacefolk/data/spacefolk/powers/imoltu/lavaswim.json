@@ -1,0 +1,17 @@
+{
+    "name": "Lava Dweller",
+    "description": "Swim in lava as if it were water.",
+    "type": "origins:multiple",
+    "swim": {
+        "condition": {
+            "type": "origins:submerged_in",
+            "fluid": "lava"
+        },
+        "type": "origins:swimming"
+    },
+    "see": {
+        "type": "origins:lava_vision",
+        "s": 8,
+        "v": 12
+    }
+}

@@ -1,0 +1,18 @@
+{
+	"powers": [
+	    "fivha:rat/stealth",
+		"fivha:rat/snack",
+		"fivha:rat/meats",
+		"fivha:rat/sneak",
+	    "fivha:rat/exhaust",
+		"fivha:rat/hp",
+		"fivha:rat/crawl",
+		"fivha:rat/silent",
+		"fivha:rat/slowdown",
+		"fivha:rat/notify"
+	],
+	"icon": "minecraft:sponge",
+	"impact": 2,
+	"name": "§c§l§oRatfolk",
+	"description": "Tiny and smelly."
+}

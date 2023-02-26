@@ -1,0 +1,33 @@
+{
+	"type": "origins:action_over_time",
+	"entity_action": {
+		"type": "origins:add_velocity",
+		"y": 0.1,
+		"space": "world"
+	},
+	"interval": 1,
+	"condition": {
+		"type": "origins:and",
+		"conditions": [{
+				"type": "origins:or",
+				"conditions": [{
+						"type": "origins:submerged_in",
+						"fluid": "minecraft:water"
+					},
+					{
+        "type": "origins:fluid_height",
+        "fluid": "water",
+        "comparison": ">",
+        "compare_to": 1
+    }
+				]
+			},
+			{
+				"type": "origins:sneaking",
+				"inverted": true
+			}
+		]
+	},
+	"name": "Buoyancy",
+	"description": "You float on water and move faster on the surface. You can hold shift to sink, but releasing shift makes you float upwards very fast."
+}

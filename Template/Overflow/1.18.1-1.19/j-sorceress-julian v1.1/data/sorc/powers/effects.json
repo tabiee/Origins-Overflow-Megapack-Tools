@@ -1,0 +1,21 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "share": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=!sorc,type=player,distance=..10] at @s run power grant @s sorc:buffs"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=!sorc,type=player,distance=11..] at @s run power revoke @s sorc:buffs"
+                }
+            ]
+        }
+    }
+}

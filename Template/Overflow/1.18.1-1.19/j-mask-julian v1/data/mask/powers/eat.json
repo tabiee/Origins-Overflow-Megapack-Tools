@@ -1,0 +1,79 @@
+{
+	"name": "§e§nUnstable Lifeforce",
+	"description": "You cannot consume normal food and most kill other mobs and or players to fill your hunger",
+	"type": "origins:multiple",
+	"eat": {
+		"target_condition": {
+			"inverted": true,
+			"type": "origins:in_tag",
+			"tag": "mask:noeyes"
+		},
+		"type": "origins:self_action_on_kill",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:heal",
+					"amount": 4
+				},
+				{
+					"type": "origins:feed",
+					"food": 4,
+					"saturation": 6
+				},
+				{
+					"type": "origins:apply_effect",
+					"effects": [
+						{
+							"effect": "speed",
+							"duration": 70,
+							"amplifier": 0,
+							"show_particles": false,
+							"show_icon": true
+						},
+						{
+							"effect": "strength",
+							"duration": 70,
+							"amplifier": 0,
+							"show_particles": false,
+							"show_icon": true
+						}
+					]
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "entity.strider.death",
+					"volume": 0.25,
+					"pitch": 1.2
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute at @s anchored eyes run particle minecraft:soul ^ ^ ^1.5 0.5 0.5 0.5 0 3 normal",
+					"permission_level": 4
+				}
+			]
+		},
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"noeat": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:food"
+				},
+				{
+					"inverted": true,
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "origins:ignore_diet"
+					}
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,3202 @@
+{
+	"name": "§3§n§lHP & Food Sync",
+	"description": "Stop hitting yourself",
+	"type": "origins:multiple",
+	"hp": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 20,
+		"start_value": 20,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 4,
+			"condition": {
+				"type": "origins:gamemode",
+				"gamemode": "spectator"
+			}
+		}
+	},
+	"death": {
+		"condition": {
+			"type": "origins:health",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:execute_command",
+			"command": "kill @e[tag=duo]"
+		}
+	},
+	"check_hp": {
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if entity @s[tag=cont]",
+			"comparison": ">=",
+			"compare_to": 1
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 1
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 1,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 1"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 2
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 2,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 2"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 3
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 3,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 3"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 4
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 4,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 4"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 5
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 5,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 5"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 6
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 6,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 6"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 7
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 7,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 7"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 8
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 8,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 8"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 9
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 9,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 9"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 10
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 10,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 10"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 11
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 11,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 11"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 12
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 12,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 12"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 13
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 13,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 13"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 14
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 14,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 14"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 15
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 15,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 15"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 16
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 16,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 16"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 17
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 17,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 17"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 18
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 18,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 18"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 19
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 19,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 19"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:health",
+						"comparison": "==",
+						"compare_to": 20
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_hp",
+								"change": 20,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_hp 20"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	"match_hp": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @s[tag=spec]",
+					"comparison": ">=",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 1
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 1
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 1"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 2
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 2"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 3
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 3
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 3"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 4
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 4
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 4"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 5
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 5
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 5"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 6
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 6
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 6"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 7
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 7
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 7"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 8
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 8
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 8"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 9
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 9
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 9"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 10
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 10
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 10"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 11
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 11
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 11"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 12
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 12
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 12"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 13
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 13
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 13"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 14
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 14
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 14"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 15
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 15
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 15"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 16
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 16
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 16"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 17
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 17
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 17"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 18
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 18
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 18"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 19
+							},
+							{
+								"type": "origins:health",
+								"comparison": ">",
+								"compare_to": 19
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "attribute @s minecraft:generic.max_health base set 19"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:apply_effect",
+									"effect": {
+										"effect": "health_boost",
+										"duration": 1,
+										"amplifier": 0,
+										"show_particles": false,
+										"show_icon": false
+									}
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "attribute @s minecraft:generic.max_health base set 20"
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 2
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 3
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 3
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 4
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 4
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 5
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 5
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 6
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 6
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 7
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 7
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 8
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 8
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 9
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 9
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 10
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 10
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 11
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 11
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 12
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 12
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 13
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 13
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 14
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 14
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 15
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 15
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 16
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 16
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 17
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 17
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 18
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 18
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 19
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 19
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_hp",
+								"comparison": "==",
+								"compare_to": 20
+							},
+							{
+								"type": "origins:health",
+								"comparison": "<",
+								"compare_to": 20
+							}
+						]
+					},
+					"action": {
+						"type": "origins:heal",
+						"amount": 1
+					}
+				}
+			]
+		}
+	},
+	"food": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 20,
+		"start_value": 20,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 18,
+			"condition": {
+				"type": "origins:gamemode",
+				"gamemode": "spectator"
+			}
+		}
+	},
+	"check_food": {
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if entity @s[tag=cont]",
+			"comparison": ">=",
+			"compare_to": 1
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 1
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 1,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 1"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 2
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 2,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 2"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 3
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 3,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 3"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 4
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 4,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 4"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 5
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 5,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 5"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 6
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 6,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 6"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 7
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 7,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 7"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 8
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 8,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 8"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 9
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 9,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 9"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 10
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 10,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 10"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 11
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 11,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 11"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 12
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 12,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 12"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 13
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 13,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 13"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 14
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 14,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 14"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 15
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 15,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 15"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 16
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 16,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 16"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 17
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 17,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 17"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 18
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 18,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 18"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 19
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 19,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 19"
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": "==",
+						"compare_to": 20
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "sunmoon:sync_food",
+								"change": 20,
+								"operation": "set"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "resource set @e[tag=spec,limit=1] sunmoon:sync_food 20"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	"match_food": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @s[tag=spec]",
+					"comparison": ">=",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 1
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 1
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 2
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 3
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 3
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 4
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 4
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 5
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 5
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 6
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 6
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 7
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 7
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 8
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 8
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 9
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 9
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 10
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 10
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 11
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 11
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 12
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 12
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 13
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 13
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 14
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 14
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 15
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 15
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 16
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 16
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 17
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 17
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 18
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 18
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 19
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">",
+								"compare_to": 19
+							}
+						]
+					},
+					"action": {
+						"type": "origins:exhaust",
+						"amount": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 2
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 3
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 3
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 4
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 4
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 5
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 5
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 6
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 6
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 7
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 7
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 8
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 8
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 9
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 9
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 10
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 10
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 11
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 11
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 12
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 12
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 13
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 13
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 14
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 14
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 15
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 15
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 16
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 16
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 17
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 17
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 18
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 18
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 19
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 19
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:sync_food",
+								"comparison": "==",
+								"compare_to": 20
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": "<",
+								"compare_to": 20
+							}
+						]
+					},
+					"action": {
+						"type": "origins:feed",
+						"food": 1,
+						"saturation": 1
+					}
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "type": "origins:modify_damage_dealt",
+  "condition": {
+    "type": "origins:on_fire"
+  },
+  "modifier": {
+    "value": 4,
+    "operation": "addition"
+  },
+    "name": "Flame Body",
+    "description": "When on fire, you do extra damage"
+}

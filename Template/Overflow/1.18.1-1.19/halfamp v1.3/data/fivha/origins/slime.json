@@ -1,0 +1,16 @@
+{
+	"powers": [
+	    "fivha:slime/boing",
+		"fivha:slime/bounce",
+		"fivha:slime/backtoback",
+		"fivha:slime/surface",
+		"fivha:slime/gethit",
+		"fivha:slime/regen",
+		"fivha:slime/slowpunch",
+		"fivha:slime/model"
+	],
+	"icon": "minecraft:slime_block",
+	"impact": 3,
+	"name": "§a§l§oSlime",
+	"description": "Goop monster."
+}

@@ -1,0 +1,11 @@
+{
+    "type": "origins:exhaust",
+    "interval": 20,
+	"hidden": true,
+    "exhaustion": 0.812,
+    "condition": {
+        "type": "origins:power_active",
+        "power": "3smp:spectre/phantomize",
+        "inverted": false
+    }
+}

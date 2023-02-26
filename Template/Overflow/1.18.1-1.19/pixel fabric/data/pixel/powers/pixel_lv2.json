@@ -1,0 +1,145 @@
+{
+	"name": "2-bit - Parkour Champion",
+	"description": "Toggle Climbing and Jump Boost. Requires Cover me with Diamonds.",
+	"type": "origins:multiple",
+	"jump": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:advancement",
+					"advancement": "adventure/sniper_duel"
+				},
+				{
+					"type": "origins:advancement",
+					"advancement": "story/shiny_gear"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "jump_boost",
+				"duration": 100,
+				"amplifier": 0,
+				"show_particles": false,
+				"show_icon": false
+			}
+		}
+	},
+	"climb": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:advancement",
+					"advancement": "adventure/sniper_duel"
+				},
+				{
+					"type": "origins:advancement",
+					"advancement": "story/shiny_gear"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:pixel_swapper_bit",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:power_active",
+					"power": "*:pixel_lv2_tog"
+				},
+				{
+					"type": "origins:collided_horizontally"
+				}
+			]
+		},
+		"type": "origins:climbing",
+		"allow_holding": true,
+		"hold_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:block_collision",
+							"offset_x": 0.01,
+							"offset_y": 0,
+							"offset_z": 0.01
+						},
+						{
+							"type": "origins:block_collision",
+							"offset_x": -0.01,
+							"offset_y": 0,
+							"offset_z": -0.01
+						}
+					]
+				}
+			]
+		}
+	},
+	"tog": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:advancement",
+					"advancement": "adventure/sniper_duel"
+				},
+				{
+					"type": "origins:advancement",
+					"advancement": "story/shiny_gear"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:pixel_swapper_bit",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": {
+			"key": "primary"
+		}
+	},
+	"sound": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:advancement",
+					"advancement": "adventure/sniper_duel"
+				},
+				{
+					"type": "origins:advancement",
+					"advancement": "story/shiny_gear"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:pixel_swapper_bit",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:play_sound",
+			"sound": "block.bamboo.break",
+			"volume": 1,
+			"pitch": 2
+		},
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "primary"
+		}
+	}
+}

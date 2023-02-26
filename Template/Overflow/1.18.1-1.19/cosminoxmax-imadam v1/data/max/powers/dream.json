@@ -1,0 +1,346 @@
+{
+    "name": "§5§nDreamer§r",
+    "description": "Once you reach your full potential, take a nap, let the world revolve, gain the ability to change time using a daylight detector.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "Unlock all your powers, then head to bed."
+        }
+    ],
+    "type": "origins:multiple",
+    "achi": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:advancement",
+                    "advancement": "nether/create_full_beacon"
+                },
+                {
+                    "type": "origins:advancement",
+                    "advancement": "end/elytra"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:blind_lock",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle enchant ~ ~1 ~ 1 0.25 1 0 200"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle falling_obsidian_tear ~ ~0.1 ~ 2 0.25 2 0 200"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle falling_lava ~ ~0.1 ~ 2 0.25 2 0 200"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "particle enchant ~ ~1 ~ 2 0.25 2 0 400"
+                    },
+                    "ticks": 6
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "particle warped_spore ~ ~1 ~ 2 0.25 2 0 100"
+                    },
+                    "ticks": 16
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "particle white_ash ~ ~1 ~ 2 0.25 2 0 100"
+                    },
+                    "ticks": 16
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.power_select",
+                    "volume": 1,
+                    "pitch": 0.1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add sleepy"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s \"§d§oYou feel unusually sleepy...§r\""
+                }
+            ]
+        }
+    },
+    "nap": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[tag=sleepy]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_on_wake_up",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s remove sleepy"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add dreamt"
+                }
+            ]
+        }
+    },
+    "to_day": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[tag=dreamt]",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:daylight_detector"
+                            },
+                            {
+                                "type": "origins:block_state",
+                                "property": "inverted",
+                                "comparison": "==",
+                                "value": false
+                            }
+                        ]
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:daytime"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "time add 25"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function max:spin"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle witch ~ ~0.1 ~ 0.5 0 0.5 0 1"
+                }
+            ]
+        }
+    },
+    "to_night": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[tag=dreamt]",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:daylight_detector"
+                            },
+                            {
+                                "type": "origins:block_state",
+                                "property": "inverted",
+                                "comparison": "==",
+                                "value": true
+                            }
+                        ]
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:daytime"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "time add 25"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function max:spin"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle witch ~ ~0.1 ~ 0.5 0 0.5 0 1"
+                }
+            ]
+        }
+    },
+    "fx_day": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[tag=dreamt]",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:daylight_detector"
+                            },
+                            {
+                                "type": "origins:block_state",
+                                "property": "inverted",
+                                "comparison": "==",
+                                "value": false
+                            }
+                        ]
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:daytime"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 12,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "item.lodestone_compass.lock",
+                    "volume": 0.3,
+                    "pitch": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle enchant ~ ~2 ~ 3 0 3 0 25"
+                }
+            ]
+        }
+    },
+    "fx_night": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[tag=dreamt]",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:daylight_detector"
+                            },
+                            {
+                                "type": "origins:block_state",
+                                "property": "inverted",
+                                "comparison": "==",
+                                "value": true
+                            }
+                        ]
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:daytime"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 12,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "item.lodestone_compass.lock",
+                    "volume": 0.3,
+                    "pitch": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle enchant ~ ~2 ~ 3 0 3 0 25"
+                }
+            ]
+        }
+    }
+}

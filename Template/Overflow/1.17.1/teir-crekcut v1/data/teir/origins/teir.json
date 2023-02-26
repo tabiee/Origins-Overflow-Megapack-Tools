@@ -1,0 +1,23 @@
+{
+	"powers": [
+		"teir:jukebox",
+		"teir:jumps",
+		"teir:dash",
+		"teir:place",
+		"teir:ray",
+		"teir:motion",
+		"teir:food",
+		"teir:sizeswap",
+		"teir:pots",
+		"teir:overcharge",
+		"teir:recharge",
+		"teir:tv"
+	],
+	"icon": {
+		"item": "minecraft:player_head",
+		"tag": "{SkullOwner:\"Vailahteir\"}"
+	},
+	"impact": 3,
+	"name": "§d§l§oTeir",
+	"description": "Robotic being with a TV for a head."
+}

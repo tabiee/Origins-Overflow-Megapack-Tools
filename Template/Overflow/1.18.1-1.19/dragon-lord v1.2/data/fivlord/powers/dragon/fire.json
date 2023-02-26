@@ -1,0 +1,36 @@
+{
+    "name": "§e§nFire Dragon",
+    "description": "As part of the Fire dragons race you are naturally immune to fire. However, you take damage from water.",
+    "type": "origins:multiple",
+    "dmg": {
+        "type": "origins:fire_immunity"
+    },
+    "water": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:in_rain"
+                }
+            ]
+        },
+        "type": "origins:damage_over_time",
+        "interval": 20,
+        "onset_delay": 1,
+        "damage": 2,
+        "damage_easy": 1,
+        "damage_source": {
+            "name": "hurt_by_water",
+            "bypasses_armor": true,
+            "unblockable": true
+        },
+        "protection_enchantment": "origins:water_protection",
+        "protection_effectiveness": 1
+    }
+}

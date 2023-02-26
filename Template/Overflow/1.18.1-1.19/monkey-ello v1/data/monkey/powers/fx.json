@@ -1,0 +1,25 @@
+{
+    "name": "Natural Resilience",
+    "description": "You always have Strength and Speed effects.",
+    "type": "origins:action_over_time",
+    "interval": 35,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "strength",
+                "duration": 55,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "speed",
+                "duration": 55,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        ]
+    }
+}

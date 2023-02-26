@@ -1,0 +1,199 @@
+{
+    "name": "Cure",
+    "description": "When you have weakness, you can eat a golden apple to start the curing process to remove the Undead trait from you. The cure can be interrupted with milk.",
+    "type": "origins:multiple",
+    "gapple": {
+        "condition": {
+            "type": "origins:status_effect",
+            "effect": "weakness"
+        },
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:cure_dur",
+                    "change": 0,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add curing"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.zombie_villager.cure",
+                    "volume": 0.5,
+                    "pitch": 0.5
+                }
+            ]
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "golden_apple"
+            }
+        }
+    },
+    "malk": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:cure_dur",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "apoli:delay",
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:cure_dur",
+                        "change": 6000,
+                        "operation": "set"
+                    },
+                    "ticks": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s remove curing"
+                }
+            ]
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "milk_bucket"
+            }
+        }
+    },
+    "dur": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 6000,
+        "start_value": 6000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 14,
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:cure_dur",
+                        "comparison": "!=",
+                        "compare_to": 6000
+                    }
+                ]
+            }
+        },
+        "max_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.zombie.infect",
+                    "volume": 1,
+                    "pitch": 1
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:command",
+                        "command": "execute if entity @s[tag=curing]",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    "if_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:revoke_power",
+                                "power": "noct:undeath",
+                                "source": "noct:noctine"
+                            },
+                            {
+                                "type": "origins:revoke_power",
+                                "power": "noct:zombify",
+                                "source": "noct:noctine"
+                            },
+                            {
+                                "type": "apoli:delay",
+                                "action": {
+                                    "type": "origins:revoke_power",
+                                    "power": "noct:cure",
+                                    "source": "noct:noctine"
+                                },
+                                "ticks": 5
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle minecraft:wax_on ~ ~0.5 ~ 0.5 0.5 0.5 10 100"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "entity.allay.ambient_with_item",
+                                "volume": 0.6,
+                                "pitch": 0.1
+                            }
+                        ]
+                    },
+                    "else_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle dust 0 0 0 2 ~ ~0.3 ~ 1 0.1 1 0 100"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "entity.allay.ambient_without_item",
+                                "volume": 0.6,
+                                "pitch": 0.1
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "gain": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:cure_dur",
+            "comparison": "!=",
+            "compare_to": 6000
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:cure_dur",
+                    "change": 1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:white_ash ~ ~0.5 ~ 0.5 0.5 0.5 10 3"
+                }
+            ]
+        }
+    },
+    "shakeitbby": {
+        "hidden": true,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:cure_dur",
+            "comparison": "!=",
+            "compare_to": 6000
+        },
+        "type": "origins:shaking"
+    }
+}

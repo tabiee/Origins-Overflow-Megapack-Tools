@@ -1,0 +1,126 @@
+{
+    "name": "§e§nBasically Vaccinated",
+    "description": "You are immune to all debuffs, yet also all buffs. This includes potion effects, flames, fall damage, withering and drowning. Additionally, you have armoured flesh that has the same strength as a Blast Protection III iron set.",
+    "type": "origins:multiple",
+    "fire": {
+        "type": "origins:fire_immunity"
+    },
+    "effects": {
+        "type": "origins:effect_immunity",
+        "effects": [
+            "speed",
+            "strength",
+            "slowness",
+            "haste",
+            "mining_fatigue",
+            "jump_boost",
+            "nausea",
+            "regeneration",
+            "resistance",
+            "fire_resistance",
+            "water_breathing",
+            "invisibility",
+            "blindness",
+            "night_vision",
+            "hunger",
+            "weakness",
+            "poison",
+            "wither",
+            "health_boost",
+            "absorption",
+            "saturation",
+            "glowing",
+            "levitation",
+            "luck",
+            "unluck",
+            "slow_falling",
+            "conduit_power",
+            "dolphins_grace",
+            "bad_omen",
+            "hero_of_the_village"
+        ]
+    },
+    "fall": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    },
+    "drown": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "drown"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "drown.player"
+                }
+            ]
+        }
+    },
+    "blast": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "explosion"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "explosion.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "badRespawnPoint"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fireworks"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fireworks.item"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fireworks.player"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.24
+        }
+    },
+    "dmg": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:constant",
+            "value": true
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.6
+        }
+    }
+}

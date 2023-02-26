@@ -1,0 +1,11 @@
+{
+    "type": "origins:action_over_time",
+    "name": "§2§nCrystal Healing",
+    "description": "End Crystals have a calming glow.",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "function 3smp:endheal"
+    },
+    "interval": 60
+}

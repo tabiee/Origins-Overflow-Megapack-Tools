@@ -1,0 +1,50 @@
+{
+    "name": "§2§nFavourite Food",
+    "description": "You have a strong liking for Sweet Berries, they are as filling as steak. Additionally, mushroom stew gives you Regeneration and Saturation for 4s.",
+    "type": "origins:multiple",
+    "berries": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "sweet_berries"
+            }
+        },
+        "food_modifier": {
+            "operation": "addition",
+            "value": 6
+        },
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": 12.4
+        }
+    },
+    "stew": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "mushroom_stew"
+            }
+        },
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "regeneration",
+                    "duration": 80,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "saturation",
+                    "duration": 80,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            ]
+        }
+    }
+}

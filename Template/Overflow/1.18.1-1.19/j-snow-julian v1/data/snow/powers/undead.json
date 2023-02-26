@@ -1,0 +1,16 @@
+{
+    "name": "§2§nOne of them",
+    "description": "Undead mobs will ignore you completely.",
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "team join dead @e[type=#snow:undead]",
+                "permission_level": 4
+            }
+        ]
+    }
+}

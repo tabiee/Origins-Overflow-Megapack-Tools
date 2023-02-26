@@ -1,0 +1,86 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"inv": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @s[tag=pickup]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				},
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=hawk,distance=..5]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				}
+			]
+		},
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
+		}
+	},
+	"check": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @s[tag=pickup]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				},
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=hawk,distance=..3.5]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"falling_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "slow_falling",
+						"duration": 10,
+						"amplifier": 0,
+						"show_particles": false,
+						"show_icon": false
+					}
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "power revoke @s hawk:hawk/debug",
+						"permission_level": 4
+					},
+					"ticks": 1
+				}
+			]
+		}
+	}
+}

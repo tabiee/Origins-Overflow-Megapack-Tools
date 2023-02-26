@@ -1,0 +1,15 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "particle minecraft:white_ash ~ ~ ~ 1 1 1 2 2 normal"
+    },
+    "interval": 5,
+	"hidden": true,
+	    "condition": {
+        "type": "origins:status_effect",
+        "inverted": true,
+        "effect": "invisibility"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Fire Touch",
+    "description": "Attacking an enemy sets them on fire for a short time.",
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+            "type": "origins:set_on_fire",
+            "duration": 3
+        }
+    },
+    "damage_condition": {
+        "inverted": true,
+        "type": "origins:projectile"
+    },
+    "cooldown": 100,
+    "hud_render": {
+        "should_render": false
+    }
+}

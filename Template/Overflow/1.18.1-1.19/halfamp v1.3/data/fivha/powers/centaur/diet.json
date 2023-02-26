@@ -1,0 +1,36 @@
+{
+    "hidden": true,
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:or",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "fivha:meat"
+            }
+          },
+          {
+            "type": "origins:ingredient",
+			"ingredient": {
+				"tag": "fivha:modded"
+          }
+		  }
+        ]
+      },
+      {
+        "type": "origins:food"
+      },
+      {
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "origins:ignore_diet"
+        },
+        "inverted": true
+      }
+    ]
+  }
+}

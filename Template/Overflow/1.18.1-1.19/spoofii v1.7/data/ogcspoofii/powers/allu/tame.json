@@ -1,0 +1,17 @@
+{
+    "name": "Tamer",
+    "description": "Tame by shiftrightclicking mobs, breed by holding a stick and shiftrightclicking.",
+    "type": "origins:action_on_entity_use",
+    "bientity_action": {
+			"type": "origins:tame"
+    },
+    "condition": {
+        "type": "origins:sneaking"
+    },
+    "item_condition": {
+        "type": "origins:empty"
+    },
+    "hands": [
+        "main_hand"
+    ]
+}

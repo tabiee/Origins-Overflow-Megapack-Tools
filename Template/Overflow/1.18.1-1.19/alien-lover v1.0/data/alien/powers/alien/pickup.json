@@ -1,0 +1,144 @@
+{
+	"name": "§1§nTelekinesis",
+	"description": "Your species has natural telekinetic abilities. Hit an entity to select them, then Toggle this power when next to that entity to lift them in the air infront of you.",
+	"type": "origins:multiple",
+	"tap": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"hit": {
+		"type": "origins:target_action_on_hit",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tag @e remove pickup",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "tag @s add pickup",
+						"permission_level": 4
+					},
+					"ticks": 2
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"deltog": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:alien/pickup_tap",
+				"comparison": "==",
+				"compare_to": 1
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:play_sound",
+						"sound": "block.amethyst_block.step",
+						"volume": 2,
+						"pitch": 0.1
+					},
+					{
+						"type": "origins:delay",
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:alien/pickup_tap",
+							"change": -1
+						},
+						"ticks": 2
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:play_sound",
+						"sound": "block.amethyst_block.step",
+						"volume": 2,
+						"pitch": 1
+					},
+					{
+						"type": "origins:delay",
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:alien/pickup_tap",
+							"change": 1
+						},
+						"ticks": 2
+					}
+				]
+			}
+		},
+		"cooldown": 10,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"act": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:alien/pickup_tap",
+			"comparison": "==",
+			"compare_to": 1
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tp @e[tag=pickup,distance=..3.5,limit=1] ^ ^1 ^2",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"deb": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:alien/pickup_tap",
+			"comparison": "==",
+			"compare_to": 1
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "power grant @e[tag=pickup,distance=..3.5] alien:alien/debug",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "power revoke @e[tag=pickup,distance=3.6..] alien:alien/debug",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

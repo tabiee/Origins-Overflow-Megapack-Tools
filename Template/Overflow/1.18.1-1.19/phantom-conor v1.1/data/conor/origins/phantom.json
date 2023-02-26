@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"conor:phantom/phasing",
+		"conor:phantom/tp",
+		"conor:phantom/phased",
+		"conor:phantom/manhu",
+		"conor:phantom/model",
+		"conor:phantom/debug"
+	],
+	"icon": "minecraft:phantom_membrane",
+	"impact": 3,
+	"name": "§5§l§oPhantom+",
+	"description": "Danny Phantom go brrrrrr"
+}

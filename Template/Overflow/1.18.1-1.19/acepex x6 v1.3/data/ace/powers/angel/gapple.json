@@ -1,0 +1,43 @@
+{
+    "name": "Bless",
+    "description": "Gain the effects of a golden apple at will.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "absorption",
+                        "duration": 2400,
+                        "amplifier": 0,
+                        "show_particles": false,
+                        "show_icon": true
+                    },
+                    {
+                        "effect": "regeneration",
+                        "duration": 100,
+                        "amplifier": 1,
+                        "show_particles": false,
+                        "show_icon": true
+                    }
+                ]
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle wax_on ~ ~ ~ 1 1 1 0.2 100"
+            }
+        ]
+    },
+    "cooldown": 1200,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 14
+    },
+    "key": {
+        "key": "primary",
+        "continuous": true
+    }
+}

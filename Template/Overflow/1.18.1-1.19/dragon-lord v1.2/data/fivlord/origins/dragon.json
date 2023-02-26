@@ -1,0 +1,26 @@
+{
+	"powers": [
+	    "fivlord:dragon/regain",
+		"fivlord:dragon/effects",
+		"fivlord:dragon/eyes",
+		"fivlord:dragon/fire",
+		"fivlord:dragon/sleep",
+		"fivlord:dragon/shiny",
+		"fivlord:dragon/noweps",
+	    "fivlord:dragon/food",
+		"fivlord:dragon/pots",
+		"fivlord:dragon/villa",
+		"fivlord:dragon/tagger",
+		"fivlord:dragon/debug",
+		"fivlord:dragon/dummy1",
+		"fivlord:dragon/dummy2",
+		"fivlord:dragon/dummy3",
+		"fivlord:dragon/dummy4",
+		"fivlord:dragon/dummy5"
+	],
+	"icon": "minecraft:dragon_head",
+	"unchoosable": true,
+	"impact": 3,
+	"name": "§6§l§oDragon Lord",
+	"description": "The greatest Leader of a forgotten Empire. As you are reborn in this flimsy Human body, you are searching for a way to regain your Power and kill the one who betrayed you."
+}

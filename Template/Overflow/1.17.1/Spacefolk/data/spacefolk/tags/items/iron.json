@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:iron_ingot",
+    "minecraft:iron_block",
+    "minecraft:iron_helmet",
+    "minecraft:iron_chestplate",
+    "minecraft:iron_leggings",
+    "minecraft:iron_boots",
+    "minecraft:iron_bars",
+    "minecraft:iron_door",
+    "minecraft:iron_trapdoor",
+    "minecraft:iron_sword",
+    "minecraft:iron_axe",
+    "minecraft:iron_pickaxe",
+    "minecraft:iron_shovel",
+    "minecraft:iron_hoe",
+    "minecraft:anvil",
+    "minecraft:bucket",
+    "minecraft:cauldron",
+    "minecraft:hopper",
+    "minecraft:minecart",
+    "minecraft:shears",
+	"minecraft:chipped_anvil",
+	"minecraft:damaged_anvil",
+	"minecraft:heavy_weighted_pressure_plate",
+	"minecraft:iron_horse_armor",
+	"minecraft:chain",
+	"minecraft:lantern",
+	"minecraft:soul_lantern"
+  ]
+}

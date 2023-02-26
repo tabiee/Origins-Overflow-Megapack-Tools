@@ -1,0 +1,27 @@
+{
+    "name": "Unfamiliar Environment",
+    "description": "Movement on land is far more difficult for you.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "inverted": true,
+                "type": "origins:fall_flying"
+            },
+            {
+                "type": "origins:fluid_height",
+                "fluid": "water",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        ]
+    },
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "attribute": "generic.movement_speed",
+        "operation": "multiply_total",
+        "value": -0.6
+    },
+    "tick_rate": 1,
+    "update_health": false
+}

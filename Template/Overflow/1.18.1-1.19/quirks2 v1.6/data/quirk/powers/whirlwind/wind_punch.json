@@ -1,0 +1,34 @@
+{
+	"type": "origins:target_action_on_hit",
+	"name": "Wind Punch",
+	"description": "You throw enemies around with wind when you punch them",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [{
+		
+			"type": "origins:add_velocity",
+			"z": 2,
+			"y": 1,
+			"space": "local"
+		},
+		{
+			"type": "origins:execute_command",
+			"permission_level": 4,
+			"command": "execute as @s run particle minecraft:cloud ~ ~ ~ 0 0 0 1 100"
+		},
+		{
+			"type": "origins:execute_command",
+			"permission_level": 4,
+			"command": "execute run playsound minecraft:block.note_block.cow_bell master @p ~ ~ ~ 2 0.1"
+		}
+	]
+},
+
+
+	"cooldown": 80,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+		"bar_index": 1
+	}
+}

@@ -1,0 +1,21 @@
+{
+    "name": "§6§nOverlord's Laziness",
+    "description": "Your attacks are weaker and you mine slower.",
+    "type": "apoli:multiple",
+    "att": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.attack_damage",
+            "operation": "multiply_total",
+            "value": -0.2
+        },
+        "update_health": false
+    },
+    "mine": {
+        "type": "apoli:modify_break_speed",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.2
+        }
+    }
+}

@@ -1,0 +1,318 @@
+{
+	"name": "§6§n§lControl",
+	"description": "Who is in control?",
+	"type": "origins:multiple",
+	"copypaste": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=cont] at @s run function sunmoon:copy"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=spec] at @s run function sunmoon:paste"
+				}
+			]
+		}
+	},
+	"swap_sun": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:fight_dur",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:and",
+							"conditions": [
+								{
+									"type": "origins:in_block_anywhere",
+									"block_condition": {
+										"type": "origins:light_level",
+										"light_type": "sky",
+										"comparison": ">=",
+										"compare_to": 12
+									}
+								},
+								{
+									"type": "origins:daytime"
+								}
+							]
+						},
+						{
+							"type": "origins:in_block_anywhere",
+							"block_condition": {
+								"type": "origins:light_level",
+								"light_type": "block",
+								"comparison": ">=",
+								"compare_to": 12
+							}
+						}
+					]
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @s[tag=sun] run tag @s add cont"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @s[tag=sun] run tag @s remove spec"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @s[tag=moon] run tag @s remove cont"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @s[tag=moon] run tag @s add spec"
+				}
+			]
+		}
+	},
+	"swap_moon": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:fight_dur",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:and",
+							"conditions": [
+								{
+									"type": "origins:in_block_anywhere",
+									"block_condition": {
+										"type": "origins:light_level",
+										"light_type": "sky",
+										"comparison": "<=",
+										"compare_to": 6
+									}
+								},
+								{
+									"type": "origins:daytime"
+								}
+							]
+						},
+						{
+							"type": "origins:in_block_anywhere",
+							"block_condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:light_level",
+										"light_type": "sky",
+										"comparison": "<=",
+										"compare_to": 6
+									},
+									{
+										"type": "origins:light_level",
+										"light_type": "block",
+										"comparison": "<=",
+										"compare_to": 6
+									}
+								]
+							}
+						},
+						{
+							"type": "origins:and",
+							"conditions": [
+								{
+									"type": "origins:in_block_anywhere",
+									"block_condition": {
+										"type": "origins:light_level",
+										"light_type": "block",
+										"comparison": "<=",
+										"compare_to": 6
+									}
+								},
+								{
+									"inverted": true,
+									"type": "origins:daytime"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @s[tag=moon] run tag @s add cont"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @s[tag=moon] run tag @s remove spec"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @s[tag=sun] run tag @s remove cont"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute if entity @s[tag=sun] run tag @s add spec"
+				}
+			]
+		}
+	},
+	"follow": {
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if entity @s[tag=spec]",
+			"comparison": ">=",
+			"compare_to": 1
+		},
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "spectate @e[tag=cont,limit=1] @s"
+				}
+			]
+		}
+	},
+	"mount": {
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if entity @s[tag=spec]",
+			"comparison": ">=",
+			"compare_to": 1
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:area_of_effect",
+					"radius": 20,
+					"include_target": false,
+					"bientity_condition": {
+						"type": "origins:target_condition",
+						"condition": {
+							"type": "origins:command",
+							"command": "execute if entity @s[tag=cont]",
+							"comparison": ">=",
+							"compare_to": 1
+						}
+					},
+					"bientity_action": {
+						"type": "origins:mount"
+					}
+				}
+			]
+		}
+	},
+	"fx": {
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if entity @s[tag=cont]",
+			"comparison": ">=",
+			"compare_to": 1
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "function sunmoon:fx"
+		},
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute at @e[tag=spec,limit=1] run tp @s ~ ~1 ~ ~ ~"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle end_rod ~ ~ ~ 0.5 0.5 0.5 0 10"
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "item.spyglass.use",
+					"volume": 1,
+					"pitch": 0.3
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "effect clear @s"
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "tp @e[tag=fxcloud] @s"
+					},
+					"ticks": 3
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "tp @e[tag=fxcloud] 0 6967 0"
+					},
+					"ticks": 8
+				}
+			]
+		}
+	},
+	"fx2": {
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if entity @s[tag=spec]",
+			"comparison": ">=",
+			"compare_to": 1
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "effect clear @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle wax_on ~ ~ ~ 0.5 0.5 0.5 0 10"
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "item.spyglass.use",
+					"volume": 1,
+					"pitch": 1.3
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,185 @@
+{
+	"description": "why did i have to give this origin minions they are so hard to do. i blame my cat",
+	"hidden": true,
+	"type": "origins:multiple",
+	"target": {
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if entity @e[type=vex,team=wiz,distance=..30]",
+			"comparison": ">=",
+			"compare_to": 1,
+			"permission_level": 4
+		},
+		"type": "origins:target_action_on_hit",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tag @e remove tar",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "tag @s[team=!wiz] add tar",
+						"permission_level": 4
+					},
+					"ticks": 1
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "execute at @e[team=wiz,tag=!tar,distance=..30] run summon snowball ~ ~4 ~ {Tags:[\"snowhit\"],Motion:[0.0,-0.5,0.0]}",
+						"permission_level": 4
+					},
+					"ticks": 3
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"attacker": {
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if entity @e[type=vex,team=wiz,distance=..30]",
+			"comparison": ">=",
+			"compare_to": 1,
+			"permission_level": 4
+		},
+		"type": "origins:attacker_action_when_hit",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tag @e remove tar",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "tag @s[team=!wiz] add tar",
+						"permission_level": 4
+					},
+					"ticks": 1
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "execute at @e[type=vex,team=wiz,tag=!tar,distance=..30] run summon snowball ~ ~2 ~ {Tags:[\"snowhit\"],Motion:[0.0,-0.5,0.0]}",
+						"permission_level": 4
+					},
+					"ticks": 3
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"pacify": {
+		"hidden": true,
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team join wiz @e[type=villager,tag=!tar]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team join wiz @e[type=snow_golem,tag=!tar]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team join wiz @e[type=vex,tag=!tar]",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"tp": {
+		"type": "origins:action_over_time",
+		"interval": 50,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=vex,team=wiz,distance=21..100] at @s run tp @s @e[tag=wizzy,limit=1]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=vex,team=wiz,distance=..20] at @s if entity @e[tag=tar,distance=..20] run tp @s @e[tag=tar,limit=1]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=vex,team=wiz,distance=..20] at @s if entity @e[tag=tar,distance=..20] run tp @s ~ ~ ~ facing entity @e[tag=tar,limit=1]",
+					"permission_level": 4
+				},
+				"ticks": 2
+				},
+				{
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:command",
+						"command": "execute if entity @e[tag=tar,distance=..20]",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					"if_action": {
+						"type": "origins:area_of_effect",
+						"radius": 20,
+						"bientity_action": {
+							"type": "origins:target_action",
+							"action": {
+								"type": "origins:damage",
+								"amount": 4,
+								"source": {
+									"name": "mob"
+								}
+							}
+						},
+						"bientity_condition": {
+							"type": "origins:target_condition",
+							"condition": {
+								"type": "origins:command",
+								"command": "execute if entity @s[tag=tar] if entity @e[type=vex,team=wiz,distance=..5]",
+								"comparison": ">=",
+								"compare_to": 1,
+								"permission_level": 4
+							}
+						}
+					}
+				}
+			]
+		}
+	},
+	"owner": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "execute as @e[tag=snowhit] run data modify entity @s Owner set from entity @e[tag=tar,limit=1] UUID",
+			"permission_level": 4
+		}
+	}
+}

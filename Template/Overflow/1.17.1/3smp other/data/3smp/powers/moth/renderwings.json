@@ -1,0 +1,22 @@
+{
+    "1": {
+        "type": "origins:elytra_flight",
+        "render_elytra": true
+    },
+    "2": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "inverted": false,
+            "ingredient": {
+                "item": "minecraft:elytra"
+            }
+        }
+    },
+    "type": "origins:multiple",
+    "condition": {
+        "type": "origins:constant",
+        "inverted": false,
+        "value": true
+    }
+}

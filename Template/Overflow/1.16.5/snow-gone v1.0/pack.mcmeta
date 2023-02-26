@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 6,
+    "name": "Stuff",
+	"id": "stuff",
+	"version": "1.16.5",
+    "description": "Stuff",
+	"authors": "Meightaboot on Fiverr, Teomydude IGN"
+  }
+}

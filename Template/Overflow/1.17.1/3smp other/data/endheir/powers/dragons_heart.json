@@ -1,0 +1,33 @@
+{
+    "type": "origins:multiple",
+    "name": "Dragon's Heart",
+    "description": "From years of living with the Ender Dragon, you have gained 3+ hearts and Resistance naturally.",
+    "o___0": {
+        "type": "origins:attribute",
+        "modifier": {
+            "operation": "addition",
+            "attribute": "minecraft:generic.max_health",
+            "value": 5
+        }
+    },
+    "o___1": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:dimension",
+            "inverted": false,
+            "dimension": "the_end"
+        },
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "duration": 300,
+                "is_ambient": false,
+                "show_particles": true,
+                "show_icon": true,
+                "effect": "minecraft:resistance",
+                "amplifier": 0
+            }
+        },
+        "interval": 2
+    }
+}

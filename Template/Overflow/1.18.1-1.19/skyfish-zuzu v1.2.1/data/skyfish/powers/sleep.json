@@ -1,0 +1,45 @@
+{
+    "name": "King of Two Worlds",
+    "description": "You can only sleep underwater below sea level or up in the clouds.",
+    "type": "origins:multiple",
+    "slep": {
+        "type": "origins:prevent_sleep",
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:height",
+                    "comparison": ">",
+                    "compare_to": 62
+                },
+                {
+                    "type": "origins:height",
+                    "comparison": "<",
+                    "compare_to": 100
+                }
+            ]
+        },
+        "message": "You can't sleep here. You need to be either below sea level (y=62) underwater, or above in the sky (y=100).",
+        "set_spawn_point": true
+    },
+    "water": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:submerged_in",
+            "fluid": "water"
+        },
+        "type": "origins:prevent_sleep",
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:height",
+                    "comparison": "<=",
+                    "compare_to": 62
+                }
+            ]
+        },
+        "message": "You can't sleep here. You need to be either below sea level (y=62) underwater, or above in the sky (y=100).",
+        "set_spawn_point": true
+    }
+}

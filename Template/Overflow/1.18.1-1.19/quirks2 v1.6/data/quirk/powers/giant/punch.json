@@ -1,0 +1,180 @@
+{
+    "name": "Giant Punch", 
+    "description": "Hit your enemy with your giant fist (Punch an entity after toggling this ability)",
+    "hidden": false,
+    "type": "origins:multiple",
+    "resource":
+    {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "hud_render":
+        {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 1
+        }
+    },
+    "cooldown":
+    {
+        "type": "origins:resource",
+        "min": 0,
+        "start_value": 0,
+        "max": 100,
+        "hud_render":
+        {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 1,
+            "condition":
+            {
+                "type": "origins:resource",
+                "resource": "*:*_cooldown",
+                "inverted": true,
+                "comparison": "==",
+                "compare_to": 0
+            }
+        }
+    },
+    "drain":
+    {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action":
+        {
+            "type": "origins:change_resource",
+            "resource": "*:*_cooldown",
+            "change": -1
+        }
+    },
+    "toggle":
+    {
+        "type": "origins:active_self",
+        "entity_action":
+        {
+            "type": "origins:if_else",
+            "condition":
+            {
+                "type": "origins:resource",
+                "resource": "*:*_resource",
+                "comparison": "==",
+                "compare_to": 1
+            },
+            "if_action":
+            {
+                "type": "origins:change_resource",
+                "resource": "*:*_resource",
+                "change": -1
+            },
+            "else_action":
+            {
+                "type": "origins:change_resource",
+                "resource": "*:*_resource",
+                "change": 1
+            }
+        },
+        "key":
+        {
+            "key": "key.origins.primary_active"
+        },
+        "cooldown": 0,
+        "hud_render":
+        {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 8
+        },
+        "condition":
+        {
+            "type": "origins:resource",
+            "inverted": false,
+            "comparison": "==",
+            "resource": "*:*_cooldown",
+            "compare_to": 0
+        }
+    },
+    "toggle_particle":
+    {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action":
+        {
+            "type": "origins:execute_command",
+            "permission_level": 4,
+            "command": "particle minecraft:dust 1 1 1 1 ~ ~2 ~ 2 2 2 0 5 force"
+        },
+        "condition":
+        {
+            "type": "origins:resource",
+            "inverted": false,
+            "comparison": "==",
+            "resource": "*:*_resource",
+            "compare_to": 1
+        }
+    },
+    "modify_damage":
+    {
+        "type": "origins:modify_damage_dealt",
+        "modifier":
+        {
+            "operation": "addition",
+            "value": 10
+        },
+        "condition":
+        {
+            "type": "origins:resource",
+            "inverted": false,
+            "comparison": "==",
+            "resource": "*:*_resource",
+            "compare_to": 1
+        },
+        "self_action":
+        {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_resource",
+                    "change": -1
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_cooldown",
+                    "change": 1000
+                }
+            ]
+        },
+        "target_action":
+        {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "playsound minecraft:entity.generic.explode player @a[distance=..10] ~ ~1 ~ 1 0"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "playsound minecraft:entity.generic.explode player @a[distance=..10] ~ ~1 ~ 1 1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "playsound minecraft:entity.generic.explode player @a[distance=..10] ~ ~1 ~ 1 2"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "particle minecraft:cloud ~ ~1 ~ .3 .3 .3 1 50 normal"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "particle minecraft:poof ~ ~-1 ~ 1 1 1 .6 100 normal"
+                }
+            ]
+        }
+    }
+}

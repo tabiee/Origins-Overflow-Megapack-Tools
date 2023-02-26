@@ -1,0 +1,17 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": "secondary"
+    },
+    "invis": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        },
+        "type": "origins:invisibility",
+        "render_armor": false
+    }
+}

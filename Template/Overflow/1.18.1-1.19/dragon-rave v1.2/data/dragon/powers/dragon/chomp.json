@@ -1,0 +1,39 @@
+{
+    "name": "§1§nChomp",
+    "description": "Every 30 seconds you can chomp on mobs which does 10 damage.",
+    "type": "origins:target_action_on_hit",
+    "target_condition": {
+        "type": "origins:command",
+        "command": "execute if entity @e[tag=dragon,distance=..5]",
+        "comparison": ">=",
+        "compare_to": 1,
+        "permission_level": 4
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.phantom.bite",
+                "volume": 1,
+                "pitch": 0.8
+            },
+            {
+                "type": "origins:damage",
+                "amount": 10,
+                "source": {
+                    "name": "generic.player"
+                }
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:dust 0.600 0.000 0.161 1 ~ ~ ~ 1 1 1 0 6",
+                "permission_level": 4
+            }
+        ]
+    },
+    "cooldown": 600,
+    "hud_render": {
+        "should_render": true
+    }
+}

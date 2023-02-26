@@ -1,0 +1,23 @@
+{
+    "name": "§e§nIncorporeal",
+    "description": "Due to a lack of a physical body other people cant attack you, and you cant attack anything either.",
+    "type": "origins:multiple",
+    "you": {
+        "type": "origins:modify_damage_dealt",
+        "damage_condition": {
+            "type": "origins:constant",
+            "value": true
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": -99
+        }
+    },
+    "others": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:constant",
+            "value": true
+        }
+    }
+}

@@ -1,0 +1,299 @@
+{
+    "name": "False Treasure",
+    "description": "Toggleable ability to mimic a chest, when disguised you are invulnerable, but unable to move or attack. If the chest is broken you will take significant damage and all items that were stored in the chest will be dropped.",
+    "type": "origins:multiple",
+    "act": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_tap",
+                "comparison": "==",
+                "compare_to": 0
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle block chest ~ ~1 ~ 0.35 0.75 0.35 0 45"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle scrape ~ ~1 ~ 0.35 0.75 0.35 0 25"
+                    },
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:block.chest.open",
+                        "volume": 1,
+                        "pitch": 0.5
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:motion 0"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:height 0.5"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:width 0.5"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:eye_height 1.25"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:change_resource",
+                            "resource": "*:*_tap",
+                            "change": 1,
+                            "operation": "add"
+                        },
+                        "ticks": 18
+                    }
+                ]
+            },
+            "else_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle block chest ~ ~0.5 ~ 0.25 0.25 0.25 0 25"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle scrape ~ ~0.5 ~ 0.25 0.25 0.25 0 10"
+                    },
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:block.chest.close",
+                        "volume": 1,
+                        "pitch": 0.5
+                    },   
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:change_resource",
+                            "resource": "*:*_tap",
+                            "change": -1,
+                            "operation": "add"
+                        },
+                        "ticks": 2
+                    }
+                ]
+            }
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 0
+        },
+        "key": {
+            "key": "primary"
+        }
+    },
+    "tap": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 1,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_tap",
+                "comparison": "==",
+                "compare_to": 1
+            }
+        }
+    },
+    "sum": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_tap",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "function mimic:place"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute as @e[tag=chest] at @s rotated as @e[tag=mimic] run tp ~ ~ ~"
+                    },
+                    "ticks": 1
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "function mimic:copy"
+                    },
+                    "ticks": 1
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "data modify block ~ ~ ~ Items set from entity @e[type=minecraft:chest_minecart,tag=inventory,limit=1] Items"
+                    },
+                    "ticks": 3
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "function mimic:clear"
+                    },
+                    "ticks": 3
+                }
+            ]
+        },
+        "falling_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "data modify entity @e[tag=inventory,limit=1] Items set from block ~ ~ ~ Items"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale reset pehkui:motion @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale reset pehkui:eye_height @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 0.75"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 0.75"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=chest] at @s run fill ~ ~ ~ ~ ~ ~ air replace chest"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "kill @e[tag=chest]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tp ~ ~ ~"
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:*_broken",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    "if_action": {
+                        "type": "origins:execute_command",
+                        "command": "function mimic:paste"
+                    }
+                }
+            ]
+        }
+    },
+    "break": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[tag=chest]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "chest"
+                    },
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "data remove entity @e[tag=inventory,limit=1] Items"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=chest] at @s run fill ~ ~ ~ ~ ~ ~ air destroy"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "kill @e[tag=chest]"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_broken"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_tap",
+                        "change": 0,
+                        "operation": "set"
+                    },
+                    "ticks": 1
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:damage",
+                        "amount": 8,
+                        "source": {
+                            "name": "magic",
+                            "bypasses_armor": true,
+                            "unblockable": true,
+                            "magic": true
+                        }
+                    },
+                    "ticks": 3
+                }
+            ]
+        }
+    },
+    "broken": {
+        "type": "origins:cooldown",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

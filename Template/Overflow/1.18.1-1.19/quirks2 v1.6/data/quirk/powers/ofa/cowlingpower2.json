@@ -1,0 +1,48 @@
+{
+    "name": "The Final Destination1",
+    "description": "While at the End, you becoming stronger, ready to finish the conflict and finish it all.1 ",
+    "hidden": true,
+    "condition": {
+            "type": "origins:relative_health",
+            "comparison": "<",
+            "compare_to": 0.51
+    },
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 20,
+    "effects": [
+        {
+            "effect": "minecraft:strength",
+            "duration": 20,
+            "amplifier": 2,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:speed",
+            "duration": 20,
+            "amplifier": 1,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:resistance",
+            "duration": 20,
+            "amplifier": 0,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:jump_boost",
+            "duration": 20,
+            "amplifier": 1,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Fireball",
+    "description": "You can shoot fireballs like a ghast would",
+    "type": "origins:fire_projectile",
+    "entity_type": "minecraft:fireball",
+    "cooldown": 60,
+    "hud_render": {
+        "should_render": true
+    },
+    "tag": "{ExplosionPower:1}"
+}

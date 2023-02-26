@@ -1,0 +1,214 @@
+{
+    "name": "§b§nSword Throw§r",
+    "description": "You can throw your sword as a projectile.",
+    "type": "origins:multiple",
+    "proj": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:nbt",
+                "nbt": "{display:{Name:'[{\"text\":\"Warheart\",\"italic\":false,\"color\":\"aqua\",\"bold\":true}]'}}"
+            }
+        },
+        "type": "origins:fire_projectile",
+        "entity_type": "snowball",
+        "cooldown": 100,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 1
+        },
+        "count": 1,
+        "speed": 1,
+        "divergence": 0,
+        "tag": "{Silent:1b,HasVisualFire:0b,Tags:[\"fancy\"],Item:{id:\"minecraft:netherite_sword\",Count:1b}}",
+        "key": {
+            "key": "key.saveToolbarActivator",
+            "continuous": true
+        }
+    },
+    "dmg": {
+        "condition": {
+            "type": "origins:command",
+            "command": "execute if entity @e[tag=swordhit,distance=..60]",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:area_of_effect",
+            "radius": 60,
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[tag=swordhit]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            },
+            "bientity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:damage",
+                        "amount": 22,
+                        "source": {
+                            "name": "player"
+                        }
+                    },
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "apoli:target_action",
+                            "action": {
+                                "type": "origins:execute_command",
+                                "command": "tag @s remove swordhit"
+                            }
+                        },
+                        "ticks": 1
+                    }
+                ]
+            }
+        }
+    },
+    "mark": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "snowball"
+                        }
+                    }
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "snowball"
+                        }
+                    }
+                }
+            ]
+        },
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "tag @s add swordhit"
+            }
+        },
+        "damage_condition": {
+            "type": "origins:projectile",
+            "projectile": "snowball"
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "sound": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:nbt",
+                "nbt": "{display:{Name:'[{\"text\":\"Warheart\",\"italic\":false,\"color\":\"aqua\",\"bold\":true}]'}}"
+            }
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.player.attack.sweep",
+                    "volume": 1,
+                    "pitch": 1.35
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "item.trident.throw",
+                    "volume": 1,
+                    "pitch": 1.2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s netherite_sword{display:{Name:'[{\"text\":\"Warheart\",\"italic\":false,\"color\":\"aqua\",\"bold\":true}]'}} 1"
+                }
+            ]
+        },
+        "cooldown": 100,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.saveToolbarActivator",
+            "continuous": true
+        }
+    },
+    "fx": {
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "execute as @e[tag=fancy] at @s run particle soul_fire_flame ~ ~ ~ 0 0 0 0 1"
+        }
+    },
+    "snowballs": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "snowball"
+                        }
+                    }
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "snowball"
+                        }
+                    }
+                },
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[type=snowball,tag=fancy]",
+					"comparison": ">=",
+					"compare_to": 1
+				}
+            ]
+        },
+        "type": "origins:modify_projectile_damage",
+        "damage_condition": {
+            "type": "origins:projectile",
+            "projectile": "snowball"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.1
+        }
+    }
+}

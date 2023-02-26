@@ -1,0 +1,17 @@
+{
+    "name": "§6§nStalwart",
+    "description": "You have 13 hearts and have 3 extra armor, even when not wearing any.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": 6
+        },
+        {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 6
+        }
+    ]
+}

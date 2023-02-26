@@ -1,0 +1,27 @@
+{
+    "name": "Tough",
+    "description": "You have 5 more hearts and natural armor.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": 10
+        },
+        {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 15
+        },
+        {
+            "attribute": "generic.knockback_resistance",
+            "operation": "addition",
+            "value": 0.8
+        },
+        {
+            "attribute": "generic.movement_speed",
+            "operation": "addition",
+            "value": -0.02
+        }
+    ]
+}

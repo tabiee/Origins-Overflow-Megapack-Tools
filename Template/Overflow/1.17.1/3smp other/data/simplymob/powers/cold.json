@@ -1,0 +1,22 @@
+{
+    "type": "origins:stacking_status_effect",
+    "min_stacks": -8,
+    "max_stacks": 10,
+    "duration_per_stack": 10,
+    "effect": {
+        "effect": "minecraft:slowness",
+        "amplifier": 3,
+        "show_particles": false,
+        "show_icon": false,
+        "is_ambient": false
+    },
+    "condition": {
+        "type": "origins:on_fire",
+      "inverted": true
+    },
+
+
+
+    "name": "Cold",
+    "description": "You're Cold When not on fire, therefore making you slower."
+}

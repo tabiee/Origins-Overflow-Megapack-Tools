@@ -1,0 +1,53 @@
+{
+    "name": "creepy appearance",
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 60,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:choice",
+                "actions": [
+                    {
+                        "weight": 1,
+                        "element": {
+                            "type": "origins:execute_command",
+                            "command": "scale add pehkui:height 0.2",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "element": {
+                            "type": "origins:execute_command",
+                            "command": "scale subtract pehkui:height 0.2",
+                            "permission_level": 4
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "origins:choice",
+                "actions": [
+                    {
+                        "weight": 1,
+                        "element": {
+                            "type": "origins:execute_command",
+                            "command": "scale add pehkui:width 0.2",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "element": {
+                            "type": "origins:execute_command",
+                            "command": "scale subtract pehkui:width 0.2",
+                            "permission_level": 4
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

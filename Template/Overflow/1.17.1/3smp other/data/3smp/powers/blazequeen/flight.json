@@ -1,0 +1,9 @@
+{
+    "type": "origins:creative_flight",
+    "condition": {
+        "value": true,
+        "type": "origins:constant",
+        "inverted": false
+    },
+    "hidden": true
+}

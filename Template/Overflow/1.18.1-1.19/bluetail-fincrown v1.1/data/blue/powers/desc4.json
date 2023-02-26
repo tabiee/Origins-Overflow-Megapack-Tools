@@ -1,0 +1,11 @@
+{
+    "name": "Four-Tail",
+    "description": "With four tails active, you have the ability to summon a fiery circle which no one can leave, including you. While in this circle you gain additional Strength.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Tap SaveToolbar key to summon and remove the circle."
+        }
+    ],
+    "type": "origins:simple"
+}

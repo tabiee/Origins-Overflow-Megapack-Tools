@@ -1,0 +1,172 @@
+{
+	"name": "§e§nCarnivore",
+	"description": "You only eat meat and ink sacs.",
+	"type": "origins:multiple",
+	"ink": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:food_level",
+					"comparison": "<",
+					"compare_to": 20
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "mainhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "ink_sac"
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "offhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "ink_sac"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @s ink_sac 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:feed",
+					"food": 4,
+					"saturation": 6
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.squid.squirt",
+					"volume": 0.5,
+					"pitch": 2
+				}
+			]
+		},
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.use",
+			"continuous": true
+		}
+	},
+	"glow": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:food_level",
+					"comparison": "<",
+					"compare_to": 20
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "mainhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "glow_ink_sac"
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "offhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "glow_ink_sac"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @s glow_ink_sac 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:feed",
+					"food": 7,
+					"saturation": 10
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.squid.squirt",
+					"volume": 0.5,
+					"pitch": 2
+				}
+			]
+		},
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.use",
+			"continuous": true
+		}
+	},
+	"meat": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"tag": "origins:meat"
+							}
+						},
+						{
+							"type": "origins:meat"
+						}
+					]
+				},
+				{
+					"type": "origins:food"
+				},
+				{
+					"inverted": true,
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "origins:ignore_diet"
+					}
+				}
+			]
+		}
+	}
+}

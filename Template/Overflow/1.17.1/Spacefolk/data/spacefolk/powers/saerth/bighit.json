@@ -1,0 +1,33 @@
+{
+    "name": "Big Swing",
+    "description": "You hit harder.",
+    "condition": {
+        "type": "origins:power",
+        "power": "spacefolk:saerth/bigboi"
+    },
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "addition",
+        "value": 2
+    },
+    "target_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:add_velocity",
+                "x": 0,
+                "y": 0,
+                "z": 2,
+                "space": "velocity"
+            },
+            {
+                "type": "origins:add_velocity",
+                "x": 0,
+                "y": 0.2,
+                "z": 0,
+                "space": "world",
+                "set": true
+            }
+        ]
+    }
+}

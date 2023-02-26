@@ -1,0 +1,41 @@
+{
+    "name": "Feed on Heat",
+    "description": "You can't eat normal food, instead you gain sustenance from heat sources.",
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:on_fire"
+            },
+            {
+                "type": "origins:in_block_anywhere",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "fire"
+                },
+                "comparison": ">=",
+                "compare_to": 1
+            },
+            {
+                "type": "origins:fluid_height",
+                "fluid": "lava",
+                "comparison": ">=",
+                "compare_to": 0.3
+            },
+            {
+                "type": "origins:on_block",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "magma_block"
+                }
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:feed",
+        "food": 2,
+        "saturation": 4.2
+    }
+}

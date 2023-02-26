@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"ogcspoofii:looptrack/particles",
+		"ogcspoofii:looptrack/tp",
+		"ogcspoofii:looptrack/withertouch",
+		"ogcspoofii:looptrack/effects",
+		"ogcspoofii:looptrack/perms",
+		"origins:nether_spawn",
+		"origins:fragile",
+		"ogcspoofii:looptrack/exhaust",
+		"ogcspoofii:looptrack/outcast",
+		"ogcspoofii:looptrack/cloud",
+		"ogcspoofii:looptrack/tagger",
+		"ogcspoofii:looptrack/side_step"
+	],
+	"icon": "minecraft:wither_rose",
+	"impact": 3,
+	"name": "§8§lLooptrack",
+	"description": "Withering."
+}

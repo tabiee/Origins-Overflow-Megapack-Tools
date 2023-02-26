@@ -1,0 +1,10 @@
+{
+	"powers": [
+		"quirk:copy/blank"
+	],
+	"unchoosable": true,
+	"icon": "minecraft:glass_pane",
+	"impact": 3,
+	"name": "§2§lNone",
+	"description": "§aNot copying anyone currenty.                                                Toggle your Denary ability key and then hit someone to copy them!"
+}

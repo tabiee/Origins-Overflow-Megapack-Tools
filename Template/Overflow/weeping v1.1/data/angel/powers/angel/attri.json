@@ -1,0 +1,53 @@
+{
+	"name": "§e§nHard As Rocks",
+	"description": "You take less damage from melee weapons, but a lot more from pickaxes.",
+	"type": "origins:multiple",
+	"att": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "generic.attack_damage",
+			"operation": "multiply_base",
+			"value": 0.25
+		}
+	},
+	"dmg": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:attacker",
+			"entity_condition": {
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "angel:weapons"
+					}
+				}
+			}
+		},
+		"modifier": {
+			"operation": "multiply_base",
+			"value": -0.25
+		}
+	},
+	"pick": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:attacker",
+			"entity_condition": {
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "angel:pickaxe"
+					}
+				}
+			}
+		},
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 1.25
+		}
+	}
+}

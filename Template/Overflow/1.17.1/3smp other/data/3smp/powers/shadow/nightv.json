@@ -1,0 +1,11 @@
+{
+	"name": "§2§nDarkvision",
+	"description": "See through the gloom.",
+    "type": "origins:night_vision",
+    "strength": 0.2,
+    "condition": {
+        "type": "origins:submerged_in",
+        "fluid": "minecraft:water",
+        "inverted": true
+    }
+}

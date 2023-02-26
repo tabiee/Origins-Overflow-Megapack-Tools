@@ -1,0 +1,50 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"fx1": {
+		"type": "origins:action_over_time",
+		"interval": 14,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle soul_fire_flame ~ ~0.5 ~ 0.5 0.5 0.5 0 2",
+			"permission_level": 4
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:invisible"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				}
+			]
+		}
+	},
+	"fx2": {
+		"type": "origins:action_over_time",
+		"interval": 9,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle glow ~ ~0.5 ~ 0.5 0.5 0.5 0 1",
+			"permission_level": 4
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:invisible"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				}
+			]
+		}
+	}
+}

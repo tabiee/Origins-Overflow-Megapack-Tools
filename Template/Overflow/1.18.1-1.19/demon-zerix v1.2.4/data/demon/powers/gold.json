@@ -1,0 +1,28 @@
+{
+    "name": "§6§nGolden Weakness",
+    "description": "You take twice as much damage from golden items.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:attacker",
+        "entity_condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "demon:gold"
+                }
+            }
+        }
+    },
+    "modifiers": [
+        {
+            "operation": "addition",
+            "value": 2
+        },
+        {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    ]
+}

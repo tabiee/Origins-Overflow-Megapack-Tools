@@ -1,0 +1,11 @@
+{
+    "name": "§c§nReality Crash",
+    "description": "If you push your powers too much they'll crash completely.",
+    "type": "origins:cooldown",
+    "cooldown": 450,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 17
+    }
+}

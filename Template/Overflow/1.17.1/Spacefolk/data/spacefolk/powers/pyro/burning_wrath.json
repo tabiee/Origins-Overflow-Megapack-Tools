@@ -1,0 +1,12 @@
+{
+	    "name": "Burning Wrath",
+	"description": "Additional damage while on fire.",
+  "type": "origins:modify_damage_dealt",
+  "condition": {
+    "type": "origins:on_fire"
+  },
+  "modifier": {
+    "value": 3,
+    "operation": "addition"
+  }
+}

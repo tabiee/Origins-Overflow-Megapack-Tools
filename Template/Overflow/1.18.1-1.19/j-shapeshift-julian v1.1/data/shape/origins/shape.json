@@ -1,0 +1,24 @@
+{
+	"powers": [
+		"shape:swapper",
+		"shape:mimic",
+		"shape:water",
+		"shape:lancarn",
+		"shape:lanherb",
+		"shape:satyr",
+		"shape:arachnid",
+		"shape:birb",
+		"shape:hp",
+		"shape:hungy",
+		"shape:desc",
+		"shape:villa",
+		"shape:select",
+		"shape:debug",
+		"shape:tagger",
+		"shape:nightvision_fuck_off"
+	],
+	"icon": "minecraft:slime_ball",
+	"impact": 3,
+	"name": "§2§l§oShapeshifter",
+	"description": "Your cellular and molecule level are much different than humans and other origins. Your normal form is one of many, you will never be able to lead a normal life."
+}

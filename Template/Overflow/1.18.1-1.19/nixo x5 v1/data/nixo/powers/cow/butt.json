@@ -1,0 +1,66 @@
+{
+    "name": "§2§nRamming Speed§r",
+    "description": "You can headbutt enemies if you're sprinting.",
+    "condition": {
+        "type": "origins:sprinting"
+    },
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "tp @s ~ ~ ~ facing entity @p[tag=cow]"
+                        },
+                        {
+                            "type": "origins:delay",
+                            "action": {
+                                "type": "origins:add_velocity",
+                                "y": 1,
+                                "z": -1.25,
+                                "space": "local",
+                                "client": true,
+                                "server": true
+                            },
+                            "ticks": 3
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "origins:actor_action",
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:play_sound",
+                            "sound": "entity.cow.ambient",
+                            "volume": 1,
+                            "pitch": 0.7
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "bientity_condition": {
+        "type": "origins:distance",
+        "comparison": "<=",
+        "compare_to": 3
+    },
+    "damage_condition": {
+        "inverted": true,
+        "type": "origins:projectile"
+    },
+    "cooldown": 100,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 17
+    }
+}

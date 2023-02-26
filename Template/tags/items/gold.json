@@ -1,0 +1,30 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:golden_sword",
+		"minecraft:golden_axe",
+		"minecraft:golden_pickaxe",
+		"minecraft:golden_shovel",
+		"minecraft:golden_hoe",
+		"minecraft:gold_ingot",
+		"minecraft:gold_nugget",
+		"minecraft:gold_ore",
+		"minecraft:raw_gold",
+		"minecraft:gold_block",
+		"minecraft:golden_apple",
+		"minecraft:golden_carrot",
+		"minecraft:enchanted_golden_apple",
+		"minecraft:nether_gold_ore",
+		"minecraft:raw_gold_block",
+		"minecraft:deepslate_gold_ore",
+		"minecraft:golden_horse_armor",
+		"minecraft:golden_helmet",
+		"minecraft:golden_chestplate",
+		"minecraft:golden_leggings",
+		"minecraft:golden_boots",
+		"minecraft:clock",
+		"minecraft:glistering_melon_slice",
+		"minecraft:powered_rail",
+		"minecraft:light_weighted_pressure_plate"
+	]
+}

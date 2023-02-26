@@ -1,0 +1,164 @@
+{
+    "name": "§9§n§lCaretaker§r",
+    "description": "You cannot harm children. You must be a good role model to kids by cleaning up any mess you find!",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "Items left on the ground drain your power slightly."
+        },
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Child mobs will ignore you unless you get too close."
+        },
+        {
+            "sprite": "origins:textures/gui/badge/arrow_up.png",
+            "text": "You are able to pick up any entity by right-clicking it when Hotbar9 is selected."
+        }
+    ],
+    "type": "origins:multiple",
+    "act": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+					"type": "origins:gamemode",
+					"gamemode": "survival"
+				},
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[type=item,distance=1.5..10]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 200,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar \"§c§lMess detected! Clean up!§r\""
+                },
+                {
+                    "type": "origins:exhaust",
+                    "amount": 2
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.lantern.break",
+                    "volume": 0.25,
+                    "pitch": 2
+                }
+            ]
+        },
+        "rising_action": {
+            "type": "origins:execute_command",
+            "command": "execute as @e[tag=duo] at @s run resource change @s sunmoon:battery_usage 1"
+        },
+        "falling_action": {
+            "type": "origins:execute_command",
+            "command": "execute as @e[tag=duo] at @s run resource change @s sunmoon:battery_usage -1"
+        }
+    },
+    "dont_touch_da_child": {
+        "type": "origins:modify_damage_dealt",
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{IsBaby:1b}"
+                            },
+                            {
+                                "inverted": true,
+                                "type": "origins:nbt",
+                                "nbt": "{Age:0}"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:in_tag",
+                        "tag": "sunmoon:child"
+                    }
+                ]
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    },
+    "ignore": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join baby @e[tag=!aggro,type=#sunmoon:child,nbt={IsBaby:1b},distance=..30]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join baby @e[tag=!aggro,type=#sunmoon:child,nbt=!{Age:0},distance=..30]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[tag=!duo,team=baby,nbt={IsBaby:0b},distance=..30]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[tag=!duo,team=baby,nbt={Age:0},distance=..30]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[tag=!duo,team=baby,tag=aggro,distance=..30]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @e[tag=!duo,team=baby,distance=..1.5] add aggro"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @e[tag=aggro,distance=3..30] remove aggro"
+                }
+            ]
+        }
+    },
+    "glow": {
+        "type": "origins:entity_glow",
+        "bientity_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:distance",
+                    "comparison": ">=",
+                    "compare_to": 1.5
+                },
+                {
+                    "type": "origins:distance",
+                    "comparison": "<=",
+                    "compare_to": 10
+                },
+                {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:item"
+                    }
+                }
+            ]
+        },
+        "use_teams": false,
+        "red": 0.7,
+        "green": 0.15,
+        "blue": 0.5
+    }
+}

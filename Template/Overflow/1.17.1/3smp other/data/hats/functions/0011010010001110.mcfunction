@@ -1,0 +1,2 @@
+tellraw @a ["",{"text":"[","color":"dark_aqua","bold":"true"},{"text":"PvPqnda Maps","color":"aqua","clickEvent":{"action":"open_url","value":"https://PvPqnda.com"},"hoverEvent":{"action":"show_text","contents":"Click to visit website!"}},{"text":"]","color":"dark_aqua","bold":"true"},{"text":" » ","color":"aqua","bold":"true"},{"text":"\"Hats\" Datapack loaded.","color":"white"}] 
+scoreboard objectives add hat trigger 

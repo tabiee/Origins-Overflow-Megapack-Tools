@@ -1,0 +1,15 @@
+{
+    "powers": [
+        "betterhuman:hugeapetite",
+        "origins:phantomize",
+        "origins:vegetarian",
+        "betterhuman:weakhealrange"
+    ],
+    "icon": "minecraft:shroomlight",
+    "order": 28,
+    "impact": 3,
+    "name": "Dakor Healer",
+    "description": "The Dakor Healer Was a Weaker Healer than the Lakors but Had A better Range of healing",
+    "loading_priority": 100,
+    "unchoosable": true
+}

@@ -1,0 +1,143 @@
+{
+    "name": "§9§n§lRobotic§r",
+    "description": "You can't suffocate without the ability to breathe, but being underwater too long drains your power. Additionally, you take a lot less fall damage.",
+    "type": "origins:multiple",
+    "dmgs": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "drown"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "drown.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "inWall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "inWall.player"
+                }
+            ]
+        }
+    },
+    "starve": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "starve"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "starve.player"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "fall": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.75
+        }
+    },
+    "hungy": {
+        "condition": {
+            "type": "origins:food_level",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 25,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "slowness",
+                    "duration": 100,
+                    "amplifier": 9,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "weakness",
+                    "duration": 100,
+                    "amplifier": 9,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "blindness",
+                    "duration": 100,
+                    "amplifier": 9,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "darkness",
+                    "duration": 100,
+                    "amplifier": 9,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            ]
+        }
+    },
+    "air": {
+        "condition": {
+            "type": "origins:air",
+            "comparison": "<",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 60,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:exhaust",
+                    "amount": 2
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.lantern.break",
+                    "volume": 0.25,
+                    "pitch": 2
+                }
+            ]
+        },
+        "rising_action": {
+            "type": "origins:execute_command",
+            "command": "execute as @e[tag=duo] at @s run resource change @s sunmoon:battery_usage 1"
+        },
+        "falling_action": {
+            "type": "origins:execute_command",
+            "command": "execute as @e[tag=duo] at @s run resource change @s sunmoon:battery_usage -1"
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "name": "§5§nLarge Horns",
+    "description": "You can headbutt enemies if you're sprinting.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:sprinting"
+            },
+            {
+                "type": "origins:command",
+                "command": "execute if entity @e[distance=..2]",
+                "comparison": ">=",
+                "compare_to": 1,
+                "permission_level": 4
+            }
+        ]
+    },
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "playsound minecraft:entity.llama.angry ambient @p[tag=ram] ~ ~ ~ 1 0.7",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,tag=!ram] at @s run tp @s ~ ~ ~ facing entity @p[tag=ram]",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:delay",
+                "action": {
+                    "type": "origins:add_velocity",
+                    "y": 1,
+                    "z": -1,
+                    "space": "local"
+                },
+                "ticks": 3
+            }
+        ]
+    },
+    "cooldown": 100,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 17
+    }
+}

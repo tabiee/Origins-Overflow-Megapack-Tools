@@ -1,0 +1,19 @@
+{
+    "name": "§6§nDefault Nobility",
+    "description": "As the Dragon Lord you stand above pesky human weapons. Therefore, you refrain from using Shields/Crossbows/Bows.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "bow"
+            },
+            {
+                "item": "crossbow"
+            },
+            {
+                "item": "shield"
+            }
+        ]
+    }
+}

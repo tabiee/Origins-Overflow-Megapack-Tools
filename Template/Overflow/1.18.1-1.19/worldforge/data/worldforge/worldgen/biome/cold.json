@@ -1,0 +1,42 @@
+{
+  "depth": 0.1,
+  "scale": 0.9,
+  "temperature": 0.0,
+  "temperature_modifier": "frozen",
+  "downfall": 0.9,
+  "player_spawn_friendly": true,
+  "creature_spawn_probability": 0.1,
+  "precipitation": "snow",
+  "category": "taiga",
+  "effects": {
+    "sky_color": 1907427,
+    "fog_color": 72281463,
+    "water_color": 4159634,
+    "water_fog_color": 927031,
+	"foliage_color": 1244999,
+	"grass_color": 2671208,
+	"particle": {
+		"options": {
+			"type": "minecraft:glow"
+		},
+		"probability": 0.2
+	}
+  },
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+  "worldforge:ores"
+  ],
+  [],
+  [],
+  []
+  ]
+}

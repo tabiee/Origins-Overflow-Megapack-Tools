@@ -1,0 +1,22 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "swimspeed": {
+        "type": "origins:modify_swim_speed",
+        "modifier": {
+            "operation": "addition",
+            "value": 0.05
+        }
+    },
+    "breakspeed": {
+        "condition": {
+            "type": "origins:submerged_in",
+            "fluid": "water"
+        },
+        "type": "origins:modify_break_speed",
+        "modifier": {
+            "operation": "addition",
+            "value": 0.05
+        }
+    }
+}

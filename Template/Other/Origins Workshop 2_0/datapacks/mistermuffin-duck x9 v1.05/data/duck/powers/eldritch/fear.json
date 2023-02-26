@@ -1,0 +1,140 @@
+{
+    "name": "§5§nFrightful Presence",
+    "description": "Mobs around you have a chance to become afraid of you and run away.\nUsing your Primary you can Instil Terror into mobs that fear you, causing them to take damage.",
+    "type": "origins:multiple",
+    "chance": {
+        "type": "origins:action_over_time",
+        "interval": 80,
+        "entity_action": {
+            "type": "origins:chance",
+            "chance": 0.7,
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "tag @e[sort=random,type=!#duck:noeyes,tag=!feared,tag=!eld,tag=!panic,distance=..10,limit=1] add feared"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "tag @e[sort=random,type=!#duck:noeyes,tag=!feared,tag=!eld,tag=!panic,distance=..10,limit=1] add feared"
+                        },
+                        "ticks": 20
+                    },
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "execute as @e[tag=feared] at @s unless entity @e[tag=panic,distance=..2] run summon ocelot ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:[\"panic\"],ActiveEffects:[{Id:14,Amplifier:0b,Duration:99999,ShowParticles:0b}],Attributes:[{Name:generic.movement_speed,Base:0.12}]}"
+                        },
+                        "ticks": 2
+                    },
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "execute as @e[tag=feared] at @s unless entity @e[tag=panic,distance=..1] run summon ocelot ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:[\"panic\"],ActiveEffects:[{Id:14,Amplifier:0b,Duration:99999,ShowParticles:0b}],Attributes:[{Name:generic.movement_speed,Base:0.12}]}"
+                        },
+                        "ticks": 22
+                    }
+                ]
+            }
+        }
+    },
+    "run": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=feared] at @s run particle soul ~ ~0.5 ~ 0.1 0.1 0.1 0 1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=feared] at @s if entity @e[tag=panic,distance=..3] run tp @s @e[tag=panic,limit=1,sort=nearest]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "kill @e[tag=panic,distance=17..]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @e[tag=feared,distance=17..] remove feared"
+                }
+            ]
+        }
+    },
+    "end": {
+        "type": "origins:action_over_time",
+        "interval": 140,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @e[tag=feared,limit=3,sort=furthest] remove feared"
+                }
+            ]
+        }
+    },
+    "deal_dmg": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:area_of_effect",
+            "radius": 25,
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[tag=feared]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            },
+            "bientity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "particle squid_ink ~ ~0.5 ~ 0.25 0.25 0.25 0 5"
+                        }
+                    },
+                    {
+                        "type": "origins:damage",
+                        "amount": 6,
+                        "source": {
+                            "name": "player",
+                            "bypasses_armor": true,
+                            "unblockable": true
+                        }
+                    },
+                    {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:play_sound",
+                            "sound": "entity.vex.ambient",
+                            "volume": 5,
+                            "pitch": 0.1
+                        }
+                    }
+                ]
+            }
+        },
+        "cooldown": 160,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 7
+        },
+        "key": {
+            "key": "primary",
+            "continuous": true
+        }
+    }
+}

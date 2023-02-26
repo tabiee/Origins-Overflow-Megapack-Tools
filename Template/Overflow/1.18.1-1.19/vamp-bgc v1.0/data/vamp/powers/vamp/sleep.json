@@ -1,0 +1,7 @@
+{
+    "name": "§e§nRestless",
+    "description": "You can't sleep.",
+    "type": "origins:prevent_sleep",
+    "message": "No sleep for the wicked.",
+    "set_spawn_point": true
+}

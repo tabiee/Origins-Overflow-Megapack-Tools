@@ -1,0 +1,51 @@
+{
+	"name": "§3§nMimic Form§r",
+	"description": "You can copy other people's faces, but you may not copy their abilities. In this form, you are much weaker but are much more resistant. You are cursed to never be able to fight in this form.",
+	"type": "origins:multiple",
+	"fx": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:select_form",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effects": [
+				{
+					"effect": "weakness",
+					"duration": 15,
+					"amplifier": 2,
+					"show_particles": false,
+					"show_icon": true
+				},
+				{
+					"effect": "resistance",
+					"duration": 15,
+					"amplifier": 3,
+					"show_particles": false,
+					"show_icon": true
+				}
+			]
+		}
+	}
+}

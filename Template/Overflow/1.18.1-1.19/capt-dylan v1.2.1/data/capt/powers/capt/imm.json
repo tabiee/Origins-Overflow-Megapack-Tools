@@ -1,0 +1,56 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "inverted": true,
+                "type": "origins:biome",
+                "condition": {
+                    "type": "origins:temperature",
+                    "comparison": "<",
+                    "compare_to": 0.6
+                }
+            },
+            {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "item": "shield"
+                            }
+                        }
+                    },
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "offhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "item": "shield"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "origins:effect_immunity",
+    "effects": [
+        "mining_fatigue",
+        "instant_damage",
+        "nausea",
+        "blindness",
+        "hunger",
+        "weakness",
+        "poison",
+        "wither",
+        "glowing",
+        "levitation",
+        "unluck"
+    ]
+}

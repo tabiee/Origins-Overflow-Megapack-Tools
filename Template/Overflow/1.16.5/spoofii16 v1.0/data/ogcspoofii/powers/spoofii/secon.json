@@ -1,0 +1,54 @@
+{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "tag @e[scores={minatotp=1}] add minatotp"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute at @e[tag=minatotp,limit=1] run tp @s ~ ~ ~"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "playsound minecraft:block.beacon.activate ambient @s ~ ~ ~ 1 2"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "playsound minecraft:block.glass.break ambient @a ~ ~ ~ 1 2"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "playsound minecraft:block.grass.break ambient @s ~ ~ ~ 1 2"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scoreboard players reset @e[tag=minatotp] minatotp"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "tag @e[tag=minatotp] remove minatotp"
+			}
+		]
+	},
+	"cooldown": 600,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/resource_bar.png",
+		"bar_index": 2
+	},
+	"key": {
+        "key": "key.origins.secondary_active",
+        "continuous": false
+    },
+	"name": "Teleport",
+	"description": "You will teleport to the target you hit.",
+	"condition": {
+		"type": "origins:command",
+		"command": "execute as @e if entity @e[scores={minatotp=1}]",
+		"comparison": ">",
+		"compare_to": 0
+	}
+}

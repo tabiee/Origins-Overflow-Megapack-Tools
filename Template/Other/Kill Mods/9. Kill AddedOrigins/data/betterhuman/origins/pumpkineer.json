@@ -1,0 +1,20 @@
+{
+    "powers": [
+        "betterhuman:blindnesshit",
+        "betterhuman:blindnesshit2",
+        "betterhuman:mobarmor",
+        "betterhuman:spookyenvironment",
+        "betterhuman:nosleeppumpkin",
+        "betterhuman:noregengoharvest",
+        "betterhuman:soulharvestregen",
+        "betterhuman:necrofiredd",
+        "betterhuman:forestspawn"
+    ],
+    "icon": "minecraft:jack_o_lantern",
+    "order": 2021,
+    "impact": 3,
+    "name": "Pumpkineer",
+    "description": "A Scary Pumpkin",
+    "loading_priority": 100,
+    "unchoosable": true
+}

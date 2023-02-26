@@ -1,0 +1,97 @@
+{
+    "name": "§e§nHover",
+    "description": "You float gently when standing still.",
+    "type": "origins:multiple",
+    "up": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:moving"
+                },
+                {
+                    "type": "origins:fall_distance",
+                    "comparison": "<",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:float_swing",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 30,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "levitation",
+                    "duration": 16,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            ]
+        }
+    },
+    "down": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:moving"
+                },
+                {
+                    "type": "origins:fall_distance",
+                    "comparison": "<",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:modify_falling",
+        "velocity": 0.0001,
+        "take_fall_damage": false
+    },
+    "swing": {
+        "type": "origins:cooldown",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "trigger": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:trigger_cooldown",
+            "power": "*:float_swing"
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.attack",
+            "continuous": true
+        }
+    },
+    "trigger2": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:trigger_cooldown",
+            "power": "*:float_swing"
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        }
+    }
+}

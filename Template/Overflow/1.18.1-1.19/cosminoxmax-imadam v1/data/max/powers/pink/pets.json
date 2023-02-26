@@ -1,0 +1,169 @@
+{
+    "name": "§d§nHeartwrench§r",
+    "description": "When not in the proximity of pets for a period of time you grow slow and weak, missing your loved ones.",
+    "type": "origins:multiple",
+    "act": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 6
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:command",
+                                "command": "execute if entity @e[type=#max:pets,nbt={Tame:1},distance=..12]",
+                                "comparison": "==",
+                                "compare_to": 0
+                            },
+                            {
+                                "type": "origins:command",
+                                "command": "execute if entity @e[type=#max:pets,nbt={FromBucket:1},distance=..12]",
+                                "comparison": "==",
+                                "compare_to": 0
+                            },
+                            {
+                                "type": "origins:command",
+                                "command": "execute as @e[distance=..12] if data entity @s Owner",
+                                "comparison": "==",
+                                "compare_to": 0
+                            },
+                            {
+                                "type": "origins:command",
+                                "command": "execute if entity @e[type=#max:pets,nbt={Trusting:1},distance=..12]",
+                                "comparison": "==",
+                                "compare_to": 0
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:pink/pets_luv",
+                                "change": -1,
+                                "operation": "add"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:command",
+                                "command": "execute if entity @e[type=#max:pets,nbt={Tame:1},distance=..12]",
+                                "comparison": ">=",
+                                "compare_to": 1
+                            },
+                            {
+                                "type": "origins:command",
+                                "command": "execute if entity @e[type=#max:pets,nbt={FromBucket:1},distance=..12]",
+                                "comparison": ">=",
+                                "compare_to": 1
+                            },
+                            {
+                                "type": "origins:command",
+                                "command": "execute as @e[distance=..12] if data entity @s Owner",
+                                "comparison": ">=",
+                                "compare_to": 1
+                            },
+                            {
+                                "type": "origins:command",
+                                "command": "execute if entity @e[type=#max:pets,nbt={Trusting:1},distance=..12]",
+                                "comparison": ">=",
+                                "compare_to": 1
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:pink/pets_luv",
+                                "change": 15,
+                                "operation": "add"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "sad": {
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:pink/pets_luv",
+                        "comparison": "==",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            "type": "origins:action_over_time",
+            "interval": 1,
+            "entity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "slowness",
+                                "duration": 50,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            },
+                            {
+                                "effect": "weakness",
+                                "duration": 50,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle falling_obsidian_tear ^0.15 ^1.7 ^ 0.1 0.1 0.1 0 2"
+                    }
+                ]
+            }
+        }
+    },
+    "luv": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1800,
+        "start_value": 1800,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 9,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:select_mode",
+                "comparison": "==",
+                "compare_to": 6
+            }
+        }
+    }
+}

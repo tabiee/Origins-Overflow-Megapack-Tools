@@ -1,0 +1,22 @@
+{
+    "name": "§4§nLover not a Fighter",
+    "description": "You deal 3 less damage with all weapons, and benefit less from armor.",
+    "type": "origins:multiple",
+    "dmg": {
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "addition",
+            "value": -3
+        }
+    },
+    "armor": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": -4
+            }
+        ]
+    }
+}

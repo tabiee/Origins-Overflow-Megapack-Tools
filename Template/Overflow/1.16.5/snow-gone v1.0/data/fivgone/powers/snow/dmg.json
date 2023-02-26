@@ -1,0 +1,56 @@
+{
+	"name": "§2§nFrostbite",
+    "description": "You deal extra damage while standing on cold blocks.",
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:on_block",
+                "block_condition": {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:block",
+                            "block": "snow"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "snow_block"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "packed_ice"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "ice"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "frosted_ice"
+                        },
+                        {
+                            "type": "origins:block",
+                            "block": "blue_ice"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "origins:in_block_anywhere",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "snow"
+                },
+                "comparison": ">=",
+                "compare_to": 1
+            }
+        ]
+    },
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "attribute": "generic.attack_damage",
+        "operation": "addition",
+        "value": 2
+    }
+}

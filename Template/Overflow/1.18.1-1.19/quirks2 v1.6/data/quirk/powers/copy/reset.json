@@ -1,0 +1,10 @@
+{
+    "hidden": true,
+    "type": "origins:action_on_callback",
+    "execute_chosen_when_orb": false,
+    "entity_action_added": {
+        "type": "origins:execute_command",
+        "command": "function quirk:copyreset",
+        "permission_level": 4
+    }
+}

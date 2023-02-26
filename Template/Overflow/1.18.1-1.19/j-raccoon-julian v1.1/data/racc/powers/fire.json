@@ -1,0 +1,13 @@
+{
+    "name": "§2§nFire Resistant",
+    "description": "Being forged from the deepest parts of the nether you are naturally resistant to fire and lava and able to see fine in the lava.",
+    "type": "origins:multiple",
+    "imm": {
+        "type": "origins:fire_immunity"
+    },
+    "see": {
+        "type": "origins:lava_vision",
+        "s": 6,
+        "v": 16
+    }
+}

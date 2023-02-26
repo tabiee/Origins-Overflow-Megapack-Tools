@@ -1,0 +1,9 @@
+{
+    "name": "§4§nTelevision Head",
+    "description": "Helmets can't fit on your head.",
+    "type": "origins:restrict_armor",
+    "head": {
+        "inverted": true,
+        "type": "origins:empty"
+    }
+}

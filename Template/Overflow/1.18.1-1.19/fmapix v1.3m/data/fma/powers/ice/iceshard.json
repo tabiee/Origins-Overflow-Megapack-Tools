@@ -1,0 +1,168 @@
+{
+	"name": "§5§nIce Shard Volley",
+	"description": "Fire several ice shards to damage and freeze enemies.",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"inverted": true,
+				"type": "origins:on_fire"
+			},
+			{
+				"inverted": true,
+				"type": "origins:dimension",
+				"dimension": "the_nether"
+			},
+			{
+				"type": "origins:xp_levels",
+				"comparison": ">",
+				"compare_to": 0
+			},
+			{
+				"type": "origins:sneaking",
+				"inverted": true
+			},
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "offhand",
+				"item_condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "heart_of_the_sea"
+							}
+						},
+						{
+							"type": "origins:nbt",
+							"nbt": "{CustomModelData:2}"
+						}
+					]
+				}
+			},
+			{
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "origins:block_in_radius",
+						"block_condition": {
+							"type": "origins:or",
+							"conditions": [
+								{
+									"type": "origins:block",
+									"block": "ice"
+								},
+								{
+									"type": "origins:block",
+									"block": "blue_ice"
+								},
+								{
+									"type": "origins:block",
+									"block": "packed_ice"
+								},
+								{
+									"type": "origins:block",
+									"block": "frosted_ice"
+								},
+								{
+									"type": "origins:block",
+									"block": "snow"
+								},
+								{
+									"type": "origins:block",
+									"block": "snow_block"
+								},
+								{
+									"type": "origins:block",
+									"block": "water"
+								}
+							]
+						},
+						"radius": 2,
+						"shape": "cube",
+						"comparison": ">=",
+						"compare_to": 1
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s water_bucket 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s minecraft:potion{Potion:\"minecraft:water\"} 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s ice 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s blue_ice 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s packed_ice 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s snow 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s snow_block 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s powder_snow_bucket 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					}
+				]
+			}
+		]
+	},
+	"type": "origins:fire_projectile",
+	"entity_type": "minecraft:snowball",
+	"cooldown": 50,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+		"bar_index": 8
+	},
+	"count": 5,
+	"speed": 2,
+	"divergence": 1,
+	"particle": {
+		"type": "minecraft:block",
+		"params": "minecraft:ice"
+	},
+	"sound": "entity.snow_golem.hurt",
+	"tag": "{pickup:0b,CustomPotionEffects:[{Id:2,Duration:150,Amplifier:3}],Item:{id:\"minecraft:ice\",Count:1b}}",
+	"key": {
+		"key": "primary",
+		"continuous": true
+	}
+}

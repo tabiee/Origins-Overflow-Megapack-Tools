@@ -1,0 +1,394 @@
+{
+	"type": "origins:multiple",
+	"timer": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 100,
+		"start_value": 100,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 3,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "blue:wall_timer",
+				"comparison": "!=",
+				"compare_to": 100
+			}
+		}
+	},
+	"cling": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "blue:wall_deltog",
+			"comparison": "==",
+			"compare_to": 1
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"inverted": true,
+								"type": "origins:on_block"
+							},
+							{
+								"type": "origins:resource",
+								"resource": "blue:wall_timer",
+								"comparison": "!=",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:or",
+								"conditions": [
+									{
+										"type": "origins:block_collision",
+										"offset_x": 0.1,
+										"offset_y": 0,
+										"offset_z": 0.1
+									},
+									{
+										"type": "origins:block_collision",
+										"offset_x": -0.1,
+										"offset_y": 0,
+										"offset_z": -0.1
+									}
+								]
+							}
+						]
+					},
+					"if_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "blue:wall_timer",
+								"change": -1,
+								"operation": "add"
+							},
+							{
+								"type": "origins:apply_effect",
+								"effect": {
+									"effect": "levitation",
+									"duration": 2,
+									"amplifier": -1,
+									"is_ambient": false,
+									"show_particles": false,
+									"show_icon": false
+								}
+							},
+							{
+								"type": "origins:add_velocity",
+								"z": 0.03,
+								"space": "local",
+								"client": true,
+								"server": true,
+								"set": false
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "particle scrape ~ ~0.1 ~ 0 0.1 0 1 1"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "block.moss_carpet.step",
+								"volume": 0.1,
+								"pitch": 0.1
+							}
+						]
+					},
+					"else_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "blue:wall_timer",
+								"change": 1,
+								"operation": "add"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "effect clear @s levitation"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	"jump": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:on_block"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "blue:wall_deltog",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "blue:wall_timer",
+					"comparison": "!=",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:in_block_anywhere",
+						"block_condition": {
+							"type": "origins:offset",
+							"condition": {
+								"type": "origins:movement_blocking"
+							},
+							"x": 1
+						},
+						"comparison": ">=",
+						"compare_to": 1
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:add_velocity",
+								"x": -0.5,
+								"y": 0.8,
+								"space": "world",
+								"client": true,
+								"server": true,
+								"set": true
+							},
+							{
+								"type": "origins:add_velocity",
+								"z": 0.7,
+								"space": "local",
+								"client": true,
+								"server": true
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "particle dust 0.000 1.000 1.000 1 ~ ~0.25 ~ 0.1 0.1 0.1 0 25"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:ui.toast.out",
+								"volume": 2,
+								"pitch": 1.6
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:in_block_anywhere",
+						"block_condition": {
+							"type": "origins:offset",
+							"condition": {
+								"type": "origins:movement_blocking"
+							},
+							"x": -1
+						},
+						"comparison": ">=",
+						"compare_to": 1
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:add_velocity",
+								"x": 0.5,
+								"y": 0.8,
+								"space": "world",
+								"client": true,
+								"server": true,
+								"set": true
+							},
+							{
+								"type": "origins:add_velocity",
+								"z": 0.7,
+								"space": "local",
+								"client": true,
+								"server": true
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "particle dust 0.000 1.000 1.000 1 ~ ~0.25 ~ 0.1 0.1 0.1 0 25"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:ui.toast.out",
+								"volume": 2,
+								"pitch": 1.6
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:in_block_anywhere",
+						"block_condition": {
+							"type": "origins:offset",
+							"condition": {
+								"type": "origins:movement_blocking"
+							},
+							"z": 1
+						},
+						"comparison": ">=",
+						"compare_to": 1
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:add_velocity",
+								"z": -0.5,
+								"y": 0.8,
+								"space": "world",
+								"client": true,
+								"server": true,
+								"set": true
+							},
+							{
+								"type": "origins:add_velocity",
+								"z": 0.7,
+								"space": "local",
+								"client": true,
+								"server": true
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "particle dust 0.000 1.000 1.000 1 ~ ~0.25 ~ 0.1 0.1 0.1 0 25"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:ui.toast.out",
+								"volume": 2,
+								"pitch": 1.6
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:in_block_anywhere",
+						"block_condition": {
+							"type": "origins:offset",
+							"condition": {
+								"type": "origins:movement_blocking"
+							},
+							"z": -1
+						},
+						"comparison": ">=",
+						"compare_to": 1
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:add_velocity",
+								"z": 0.5,
+								"y": 0.8,
+								"space": "world",
+								"client": true,
+								"server": true,
+								"set": true
+							},
+							{
+								"type": "origins:add_velocity",
+								"z": 0.7,
+								"space": "local",
+								"client": true,
+								"server": true
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "particle dust 0.000 1.000 1.000 1 ~ ~0.25 ~ 0.1 0.1 0.1 0 25"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:ui.toast.out",
+								"volume": 2,
+								"pitch": 1.6
+							}
+						]
+					}
+				}
+			]
+		},
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.jump",
+			"continuous": false
+		}
+	},
+	"deltog": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 7,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
+			"bar_index": 3
+		}
+	},
+	"act": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "blue:wall_deltog",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "blue:wall_deltog",
+						"change": 1,
+						"operation": "set"
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "blue:wall_deltog",
+						"change": 0,
+						"operation": "set"
+					}
+				]
+			}
+		},
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.saveToolbarActivator"
+		}
+	}
+}

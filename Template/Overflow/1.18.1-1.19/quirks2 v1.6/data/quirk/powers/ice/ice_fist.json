@@ -1,0 +1,19 @@
+{
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:slowness",
+            "amplifier": 2,
+            "duration": 100
+        }
+    },
+    "cooldown": 250,
+  "hud_render": {
+    "should_render": true,
+    "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+    "bar_index": 0
+  },
+    "name" : "Ice Fists",
+    "description" : "You temporarily freeze whatever you touch"
+}

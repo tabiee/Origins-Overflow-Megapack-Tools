@@ -1,0 +1,146 @@
+{
+	"name": "§1§nFrom The Depths",
+	"description": "The lower you go, the more power you get.\nAt y=0 you can create water for yourself.",
+	"type": "origins:multiple",
+	"mine": {
+		"condition": {
+			"type": "origins:in_block",
+			"block_condition": {
+				"type": "origins:height",
+				"comparison": "<=",
+				"compare_to": 0
+			}
+		},
+		"type": "origins:modify_harvest",
+		"allow": true
+	},
+	"speed": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:in_block",
+					"block_condition": {
+						"type": "origins:height",
+						"comparison": "<=",
+						"compare_to": 0
+					}
+				}
+			]
+		},
+		"type": "origins:modify_break_speed",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 10
+		}
+	},
+	"speed2": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:in_block",
+					"block_condition": {
+						"type": "origins:height",
+						"comparison": "<=",
+						"compare_to": 0
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:empty"
+					}
+				}
+			]
+		},
+		"type": "origins:modify_break_speed",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 100
+		}
+	},
+	"nospeed": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:kraken/size_bit",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"inverted": true,
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:empty"
+					}
+				}
+			]
+		},
+		"type": "origins:modify_break_speed",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": -200
+		}
+	},
+	"haste": {
+		"condition": {
+			"type": "origins:in_block",
+			"block_condition": {
+				"type": "origins:height",
+				"comparison": "<=",
+				"compare_to": 0
+			}
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "haste",
+				"duration": 100,
+				"amplifier": 1,
+				"show_particles": false,
+				"show_icon": true
+			}
+		}
+	},
+	"water": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:in_block",
+					"block_condition": {
+						"type": "origins:height",
+						"comparison": "<=",
+						"compare_to": 0
+					}
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.saveToolbarActivator"
+		},
+		"entity_action": {
+			"type": "origins:raycast",
+			"distance": 100,
+			"block": true,
+			"entity": true,
+			"shape_type": "visual",
+			"fluid_handling": "none",
+			"command_at_hit": "fill ~ ~ ~ ~ ~ ~ water replace air",
+			"command_step": 1,
+			"command_along_ray_only_on_hit": false
+		}
+	}
+}

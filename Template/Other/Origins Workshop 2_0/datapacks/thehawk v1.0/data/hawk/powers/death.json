@@ -1,0 +1,18 @@
+{
+    "type": "origins:multiple",
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 100,
+        "hud_render": {
+            "should_render": true,
+            "bar_index": 5
+        }
+    },
+    "ded": {
+        "type": "origins:prevent_death",
+        "entity_action": {
+            "type": "origins:trigger_cooldown",
+            "power": "*:*_cd"
+        }
+    }
+}

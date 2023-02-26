@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"pig:pig/punch",
+		"pig:pig/dash",
+		"pig:pig/tnt",
+		"pig:pig/size",
+		"pig:pig/armor",
+		"pig:pig/carn",
+		"pig:pig/death",
+		"pig:pig/hp",
+		"pig:pig/tagger"
+	],
+	"icon": "minecraft:tnt",
+	"impact": 3,
+	"name": "§c§l§oGenocidal Pig",
+	"description": "Piggy with destructive tendencies."
+}

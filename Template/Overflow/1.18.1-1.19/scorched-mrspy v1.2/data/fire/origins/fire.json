@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"fire:fire/levels",
+		"fire:fire/five",
+		"fire:fire/dash",
+		"fire:fire/ball",
+		"fire:fire/wings",
+		"fire:fire/lava",
+		"fire:fire/imm",
+		"fire:fire/breath"
+	],
+	"icon": "minecraft:fire_charge",
+	"impact": 3,
+	"name": "§6§l§oMrSpyplant",
+	"description": "A being of fire that gets stronger the more it kills."
+}

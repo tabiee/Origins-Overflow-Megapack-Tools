@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"dragon:dragon/breath",
+		"dragon:dragon/tp",
+		"dragon:dragon/boost",
+		"dragon:dragon/wings",
+		"dragon:dragon/size"
+	],
+	"icon": "minecraft:dragon_head",
+	"impact": 3,
+	"name": "§5§l§oEnder Dragon",
+	"description": "The dragon of the End."
+}

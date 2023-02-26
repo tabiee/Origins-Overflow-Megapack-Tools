@@ -1,0 +1,54 @@
+{
+    "hidden": true,
+    "type": "origins:active_self",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "offhand",
+				"item_condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "heart_of_the_sea"
+							}
+						},
+						{
+							"type": "origins:nbt",
+							"nbt": "{CustomModelData:4}"
+						}
+					]
+				}
+			},
+			{
+				"type": "origins:block_in_radius",
+				"block_condition": {
+					"type": "origins:in_tag",
+					"tag": "fma:earths"
+				},
+				"radius": 5,
+				"shape": "cube",
+				"comparison": ">=",
+				"compare_to": 5
+			},
+			{
+	"type": "origins:sneaking"
+}
+		]
+	},
+    "cooldown": 5,
+    "hud_render": {
+        "should_render": false
+    },
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace pointed_dripstone",
+        "permission_level": 4
+    },
+    "key": {
+        "key": "primary"
+    }
+}

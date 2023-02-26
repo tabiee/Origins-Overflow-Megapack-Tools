@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"slime:climb",
+		"extraorigins:jockey",
+		"slime:mobs",
+		"extraorigins:nimble",
+		"slime:low",
+		"slime:bouncy",
+		"slime:hp",
+		"slime:model",
+		"slime:size",
+		"slime:teamer"
+	],
+	"icon": "minecraft:slime_ball",
+	"impact": 3,
+	"name": "§a§l§oSlimeball",
+	"description": "A cross between the slime and the inchling."
+}

@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"quirk:steel/swap",
+		"quirk:steel/fix",
+		"quirk:health"
+	],
+	"icon": "iron_block",
+        "unchoosable": true,
+	"order": 10,
+	"impact": 3,
+	"name": "Steel",
+	"description": "Tetsutetsu Tetsutetsu's Quirk"
+}

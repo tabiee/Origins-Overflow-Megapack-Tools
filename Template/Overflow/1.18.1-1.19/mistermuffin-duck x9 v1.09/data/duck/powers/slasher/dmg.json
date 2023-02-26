@@ -1,0 +1,11 @@
+{
+    "name": "§2§nWeapons Maniac",
+    "description": "You do slightly more damage than normal.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.attack_damage",
+        "operation": "multiply_total",
+        "value": 0.25
+    },
+    "update_health": false
+}

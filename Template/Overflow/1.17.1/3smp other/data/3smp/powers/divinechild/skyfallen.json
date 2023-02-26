@@ -1,0 +1,14 @@
+{
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 1
+    },
+    "damage_condition": {
+        "type": "origins:name",
+        "inverted": false,
+        "name": "fall"
+    },
+    "name": "§6§nSkyfallen",
+    "description": "Hitting the ground never hurt this bad."
+}

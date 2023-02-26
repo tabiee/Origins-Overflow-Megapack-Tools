@@ -1,0 +1,193 @@
+{
+    "name": "Battery Charge",
+    "description": "You are able to consume copper blocks to gain charge over time. However you can't consume more than one too soon.",
+    "type": "origins:multiple",
+    "regen": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "<",
+                    "compare_to": 20
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_cd",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:heal",
+                    "amount": 1
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "item.lodestone_compass.lock",
+                    "volume": 0.3,
+                    "pitch": 1
+                },
+				{
+                    "type": "origins:change_resource",
+                    "resource": "*:*_cd",
+                    "change": -10
+                }
+            ]
+        }
+    },
+    "sprintdrain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sprinting"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_cd",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 50,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_cd",
+            "change": -25
+        }
+    },
+	"water": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:fluid_height",
+                            "fluid": "water",
+                            "comparison": ">",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:in_rain"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_cd",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_cd",
+                    "change": -25
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.conduit.deactivate",
+                    "volume": 0.2,
+                    "pitch": 2
+                }
+            ]
+        }
+    },
+    "cd": {
+        "type": "origins:resource",
+		"min": 0,
+        "max": 500,
+		"start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "bar_index": 2,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_cd",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        }
+    },
+    "activate": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "copper_ingot"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "copper_ingot"
+                        }
+                    }
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_cd",
+                    "change": 500
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.respawn_anchor.charge",
+                    "volume": 1,
+                    "pitch": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s copper_ingot 1",
+                    "permission_level": 4
+                }
+            ]
+        },
+        "cooldown": 2400,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 16,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_cd",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        },
+        "key": {
+            "key": "key.use"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "impact": 1,
+    "unchoosable": false,
+    "name": "§a§l§oSpeedrunner",
+    "description": "§a§l§oDUDUDUDUDU",
+    "icon": "minecraft:lime_concrete",
+    "powers": [
+        "3smp:speedrunner/tailwind",
+        "3smp:speedrunner/more_exhaustion",
+        "3smp:speedrunner/village_spawn",
+        "3smp:speedrunner/fragile",
+        "3smp:speedrunner/better_trading"
+    ],
+    "loading_priority": 1
+}

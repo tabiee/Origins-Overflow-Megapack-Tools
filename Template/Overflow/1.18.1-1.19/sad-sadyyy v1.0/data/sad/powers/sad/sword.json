@@ -1,0 +1,22 @@
+{
+    "name": "§2§nSwordsman",
+    "description": "You trained your entire life with swords to defend the villagers and you died saving the village. You deal more damage with swords.",
+    "type": "origins:modify_damage_dealt",
+    "damage_condition": {
+        "type": "origins:attacker",
+        "entity_condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "sad:swords"
+                }
+            }
+        }
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.25
+    }
+}

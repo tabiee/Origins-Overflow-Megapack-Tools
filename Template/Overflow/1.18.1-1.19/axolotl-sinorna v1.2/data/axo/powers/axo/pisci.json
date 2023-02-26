@@ -1,0 +1,31 @@
+{
+    "name": "§e§nPiscivore",
+    "description": "You only eat fish, but it fills you up real good.",
+    "type": "origins:multiple",
+    "prevent": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "axo:notfish"
+            }
+        }
+    },
+    "mmmfish": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "axo:yesfish"
+            }
+        },
+        "food_modifier": {
+            "operation": "addition",
+            "value": 3
+        },
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": 5
+        }
+    }
+}

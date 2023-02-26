@@ -1,0 +1,42 @@
+{
+	"name": "§4§nGluten-free",
+	"description": "You can’t eat anything to do with bread or else you get poisoned.",
+	"type": "origins:multiple",
+	"all": {
+		"type": "origins:modify_food",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "duck:gluten"
+			}
+		},
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "poison",
+				"duration": 100,
+				"amplifier": 0,
+				"show_particles": false,
+				"show_icon": true
+			}
+		}
+	},
+	"cake": {
+		"type": "origins:action_on_block_use",
+		"block_condition": {
+			"type": "origins:block",
+			"block": "cake"
+		},
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "poison",
+				"duration": 100,
+				"amplifier": 0,
+				"show_particles": false,
+				"show_icon": true
+			}
+		},
+		"action_result": "success"
+	}
+}

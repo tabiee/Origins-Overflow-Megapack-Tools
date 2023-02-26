@@ -1,0 +1,22 @@
+{
+    "name": "§0§nGravity",
+    "description": "You take extra fall damage.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "apoli:and",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "fall"
+            },
+            {
+                "type": "origins:name",
+                "name": "fall.player"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.5
+    }
+}

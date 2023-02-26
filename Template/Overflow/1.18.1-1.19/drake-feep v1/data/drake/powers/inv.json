@@ -1,0 +1,9 @@
+{
+    "name": "§b§nFur Pockets",
+    "description": "You can hide all sorts of things in there.",
+    "type": "origins:inventory",
+    "title": "Fur",
+    "key": {
+        "key": "primary"
+    }
+}

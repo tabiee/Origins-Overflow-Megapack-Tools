@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"skyfish:breach",
+		"skyfish:winged",
+		"skyfish:ride",
+		"skyfish:size",
+		"skyfish:hp",
+		"skyfish:aura",
+		"skyfish:sleep",
+		"skyfish:land",
+		"skyfish:dmg"
+	],
+	"icon": "minecraft:salmon",
+	"impact": 2,
+	"name": "§b§l§oSkyfish",
+	"description": "Friendly giant of the Sky and Sea."
+}

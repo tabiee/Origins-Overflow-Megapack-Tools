@@ -1,0 +1,26 @@
+{
+    "type": "origins:fire_projectile",
+    "entity_type": "minecraft:fireball",
+    "cooldown": 1250,
+    "hud_render": {
+        "should_render": false,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 7
+    },
+    "speed": 1,
+    "sound" : "entity.blaze.shoot",
+	"count": 6,
+	"interval": 5,
+	"speed": 3.0,
+	"divergence": 1,
+	"sound": "minecraft:entity.ender_dragon.shoot",
+    "tag": "{LifeTime:5,ExplosionPower:2b}",
+  "key": {
+    "key": "key.origins.quaternary_active",
+    "continuous": false
+  },
+    "name" : "Fireball",
+    "description" : "You can cough up a slow but powerful fireball",
+    "hidden" : true
+    
+}

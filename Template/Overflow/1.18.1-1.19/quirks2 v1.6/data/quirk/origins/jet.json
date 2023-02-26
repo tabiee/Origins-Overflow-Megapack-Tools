@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"quirk:jet/double_jump",
+		"quirk:jet/launch",
+		"quirk:jet/thrust",
+		"quirk:jet/fallimmune",
+		"quirk:jet/dash",
+		"quirk:jet/sprint",
+		"quirk:jet/hurtdash",
+		"quirk:health"
+	],
+	"icon": "minecraft:feather",
+        "unchoosable": true,
+	"order": 10,
+	"impact": 3,
+	"name": "Jet",
+	"description": "Gran Torino's Quirk"
+}

@@ -1,0 +1,69 @@
+{
+	"name": "§c§n§lFacial Recongnition",
+	"description": "If not in sync, your facial recognition stops working, preventing you from seeing any entity.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/star.png",
+			"text": "Drains power slightly when active."
+		}
+	],
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:gamemode",
+				"gamemode": "survival"
+			},
+			{
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "origins:resource",
+						"resource": "sunmoon:spec/tog-eyeshands_deltog",
+						"comparison": "==",
+						"compare_to": 0
+					},
+					{
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:spec/tog-eyeshands_deltog",
+								"comparison": "==",
+								"compare_to": 1
+							},
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:indicator_synced",
+								"comparison": "==",
+								"compare_to": 0
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"type": "origins:prevent_entity_render",
+	"entity_condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"inverted": true,
+				"type": "origins:origin",
+				"origin": "sunmoon:duo",
+				"layer": "origins:origin"
+			},
+			{
+				"inverted": true,
+				"type": "origins:status_effect",
+				"effect": "glowing"
+			},
+			{
+				"inverted": true,
+				"type": "origins:entity_type",
+				"entity_type": "item"
+			}
+		]
+	}
+}

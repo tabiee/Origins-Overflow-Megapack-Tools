@@ -1,0 +1,43 @@
+{
+    "name": "Robotic Creation",
+    "description": "Summon a Vex at will.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle ash ^ ^3 ^2 0.3 0.3 0.3 0 200"
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "item.spyglass.use",
+                "volume": 10,
+                "pitch": 0.1
+            },
+            {
+                "type": "origins:delay",
+                "action": {
+                    "type": "origins:play_sound",
+                    "sound": "entity.vex.ambient",
+                    "volume": 10,
+                    "pitch": 0.1
+                },
+                "ticks": 5
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "summon vex ^ ^3 ^2 {Team:\"brain\",PersistenceRequired:1b,HandItems:[{id:\"minecraft:iron_sword\",Count:1b},{}]}"
+            }
+        ]
+    },
+    "cooldown": 3600,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 7
+    },
+    "key": {
+        "key": "primary"
+    }
+}

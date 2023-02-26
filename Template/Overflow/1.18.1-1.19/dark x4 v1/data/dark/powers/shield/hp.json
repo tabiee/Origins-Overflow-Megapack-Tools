@@ -1,0 +1,17 @@
+{
+    "name": "Resilient",
+    "description": "Your defense is doubled and you take no knockback.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "generic.armor",
+            "operation": "multiply_total",
+            "value": 1
+        },
+        {
+            "attribute": "generic.knockback_resistance",
+            "operation": "addition",
+            "value": 10
+        }
+    ]
+}

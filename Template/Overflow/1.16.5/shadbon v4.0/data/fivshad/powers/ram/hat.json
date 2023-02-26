@@ -1,0 +1,10 @@
+{
+    "name": "§6§nIt Doesn't Fit",
+    "description": "Due to your large horns, you can't wear a helmet.",
+    "type": "origins:conditioned_restrict_armor",
+    "head": {
+        "type": "origins:constant",
+        "value": true
+    },
+    "tick_rate": 80
+}

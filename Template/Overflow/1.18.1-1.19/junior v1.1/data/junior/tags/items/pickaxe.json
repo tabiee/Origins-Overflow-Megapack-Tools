@@ -1,0 +1,17 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:wooden_pickaxe",
+		"minecraft:stone_pickaxe",
+		"minecraft:golden_pickaxe",
+		"minecraft:iron_pickaxe",
+		"minecraft:diamond_pickaxe",
+		"minecraft:netherite_pickaxe",
+		"betterend:aeternium_pickaxe",
+		"betterend:terminite_pickaxe",
+		"betterend:thallasium_pickaxe",
+		"betternether:cincinnasite_pickaxe",
+		"betternether:cincinnasite_pickaxe_diamond",
+		"betternether:nether_ruby_pickaxe"
+	]
+}

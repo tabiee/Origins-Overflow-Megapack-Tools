@@ -1,0 +1,392 @@
+{
+    "name": "§nStealth Mode§r",
+    "description": "You become translucent and invisible for mobs. Your actions affect the power usage. Attacking consumes a large amount of energy and makes the target aware of you for up to 15s.",
+    "type": "origins:multiple",
+    "enter": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join invis @e[distance=..60,tag=!prop,tag=!aggro]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[distance=..60,tag=aggro]"
+                }
+            ]
+        },
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle white_ash ~ ~1 ~ 0.5 0.5 0.5 1 10"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join invis @s"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.shulker.teleport",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        },
+        "falling_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle ash ~ ~1 ~ 0.5 0.5 0.5 1 10"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @s"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.shulker.teleport",
+                    "volume": 1,
+                    "pitch": 0.1
+                }
+            ]
+        }
+    },
+    "remove": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": ">=",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 300,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @e remove aggro"
+                }
+            ]
+        }
+    },
+    "aggro": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:target_action_on_hit",
+        "target_condition": {
+            "type": "origins:command",
+            "command": "execute if entity @s[tag=prop]",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "tag @s add aggro"
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "still": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:moving"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:sprinting"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:power_bar",
+                    "change": -5,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "sneak": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:moving"
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:power_bar",
+                    "change": -10,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "moving": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:moving"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:sneaking"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:sprinting"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:power_bar",
+                    "change": -16,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "sprint": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:sprinting"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:power_bar",
+                    "change": -32,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "hit": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:power_bar",
+                    "change": -45,
+                    "operation": "add"
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "drop": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:modes_pick",
+                    "change": -3,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"§6§lModes: Inactive§r\"}"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:power_cd"
+                }
+            ]
+        }
+    },
+    "invis": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:invisibility",
+        "render_armor": false
+    }
+}

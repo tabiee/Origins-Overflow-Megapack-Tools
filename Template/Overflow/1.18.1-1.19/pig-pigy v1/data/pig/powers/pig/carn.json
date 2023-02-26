@@ -1,0 +1,46 @@
+{
+    "name": "Fussy Little Piggy",
+    "description": "You can only eat meat, carrots and golden carrots.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "inverted": true,
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "origins:meat"
+                        }
+                    },
+                    {
+                        "type": "origins:meat"
+                    },
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": [
+                            {
+                                "item": "carrot"
+                            },
+                            {
+                                "item": "golden_carrot"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "origins:food"
+            },
+            {
+                "inverted": true,
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "origins:ignore_diet"
+                }
+            }
+        ]
+    }
+}

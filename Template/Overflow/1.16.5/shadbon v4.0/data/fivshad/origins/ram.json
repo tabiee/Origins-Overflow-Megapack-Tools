@@ -1,0 +1,18 @@
+{
+	"powers": [
+	    "fivshad:ram/butt",
+	    "fivshad:ram/climb",
+		"fivshad:ram/teeth",
+		"fivshad:ram/forest",
+		"fivshad:ram/size",
+		"fivshad:ram/fur",
+		"fivshad:ram/fall",
+		"fivshad:ram/hat",
+		"fivshad:ram/badfur",
+		"fivshad:ram/tagger"
+	],
+	"icon": "minecraft:gray_wool",
+	"impact": 1,
+	"name": "§7§l§oRam",
+	"description": "When the gods fell, your species was at first unaware until others began waking up from hibernation; seeing the chaos of the world and your god gone. Determined to figure what happened; you head out into the world alone, you will find out what caused the death of your god."
+}

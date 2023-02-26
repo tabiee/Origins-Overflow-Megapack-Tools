@@ -1,0 +1,1976 @@
+{
+    "name": "Ctrl+C",
+    "description": "Ctrl+V",
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 21
+        }
+    },
+    "blank": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:copy/copycat_cd",
+            "comparison": "==",
+            "compare_to": 1
+		},
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:blank",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.deactivate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        }
+    },
+    "arachnid": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:arachnid",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied origins:arachnid",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+    "avian": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:avian",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied origins:avian",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+    "blazeborn": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:blazeborn",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied origins:blazeborn",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+    "elytrian": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:elytrian",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied origins:elytrian",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"enderian": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:enderian",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied origins:enderian",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"feline": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:feline",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied origins:feline",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"human": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:human",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied origins:human",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"merling": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:merling",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied origins:merling",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"phantom": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:phantom",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied origins:phantom",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"shulk": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "origins:shulk",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied origins:shulk",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"cremation": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:cremation",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:cremation",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"engine": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:engine",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:engine",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"engineoff": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:engineoff",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:engineoff",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"explosion": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:explosion",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:explosion",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"frog": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:frog",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:frog",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"giant": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:giant",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:giant",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"giantoff": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:giantoff",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:giantoff",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"hellflame": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:hellflame",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:hellflame",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"ice": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:ice",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:ice",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"jet": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:jet",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:jet",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"ofa": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:ofa",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:ofa",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"perm": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:perm",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:perm",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"steel": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:steel",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:steel",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"steelform": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:steelform",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:steelform",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"superregen": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:superregen",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:superregen",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"whirlwind": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:whirlwind",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:whirlwind",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"zerograv": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:zerograv",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:zerograv",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"warpgate": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:warpgate",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:warpgate",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"electrification": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:electrification",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:electrification",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"hchh": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:hchh",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:hchh",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    },
+	"quirkless": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "resource": "*:copy/copycat_toggle",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:copy/copycat_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                }
+            }
+            ]
+        },
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:origin",
+            "origin": "quirk:quirkless",
+            "layer": "origins:origin"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:copied quirk:quirkless",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~2 ~ 0.2 0.5 0.2 0 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:copy/copycat_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": false,
+            "bar_index": 4
+        }
+    }
+}

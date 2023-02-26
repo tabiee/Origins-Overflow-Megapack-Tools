@@ -1,0 +1,31 @@
+{
+	"type": "origins:multiple",
+	"toggle": {
+		"type": "origins:toggle",
+		"key": {
+			"key": "primary",
+			"continuous": false
+		}
+	},
+	"fly": {
+		"type": "origins:swimming",
+		"condition": {
+			"type": "origins:and",
+			"conditions": [{
+					"type": "origins:fluid_height",
+					"fluid": "minecraft:water",
+					"comparison": ">",
+					"compare_to": 0.0,
+					"inverted": true
+				},
+				{
+					"type": "origins:power_active",
+					"power": "*:*_toggle",
+					"inverted": true
+				}
+			]
+		}
+	},
+	"name": "Soaring",
+	"description": "You have the ability to fly (toggle)"
+}

@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"fivend:ende/tp",
+		"fivend:ende/particles",
+		"fivend:ende/pots",
+		"fivend:ende/snowballs",
+		"fivend:ende/immune",
+		"fivend:ende/reach",
+		"fivend:ende/pump",
+		"fivend:ende/water"
+	],
+	"icon": "minecraft:ender_eye",
+	"impact": 2,
+	"name": "§3§l§oStorm Enderian",
+	"description": "Resilient sub-type of the Enderian."
+}

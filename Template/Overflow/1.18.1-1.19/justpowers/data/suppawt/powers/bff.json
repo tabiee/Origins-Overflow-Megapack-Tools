@@ -1,0 +1,113 @@
+{
+	"name": "BFF",
+	"description": "Yes",
+	"type": "origins:multiple",
+	"hit": {
+		"type": "origins:target_action_on_hit",
+		"damage_condition": {
+			"type": "origins:attacker",
+			"entity_condition": {
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "stick"
+							}
+						},
+						{
+							"type": "origins:nbt",
+							"nbt": "{CustomModelData:101}"
+						}
+					]
+				}
+			}
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tag @e remove bff",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "tag @s add bff",
+					"permission_level": 4
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"effects": {
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if entity @e[tag=bff,distance=..10]",
+			"comparison": ">=",
+			"compare_to": 1,
+			"permission_level": 4
+		},
+		"type": "origins:action_over_time",
+		"interval": 50,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[tag=bff,distance=..10] regeneration 15 0 true",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[tag=bff,distance=..10] strength 15 0 true",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[tag=bff,distance=..10] luck 15 0 true",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:suppawt_happiness",
+					"change": 10
+				}
+			]
+		}
+	},
+	"tp": {
+		"condition": {
+			"type": "origins:sneaking"
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tp @s @e[tag=bff,limit=1]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle wax_off ~ ~ ~ 1 1 1 0 100",
+					"permission_level": 4
+				}
+			]
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.saveToolbarActivator"
+		}
+	}
+}

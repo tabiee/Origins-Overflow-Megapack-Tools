@@ -1,0 +1,22 @@
+{
+	"values": [
+		"minecraft:cod",
+		"minecraft:cooked_cod",
+		"minecraft:tropical_fish",
+		"minecraft:pufferfish",
+		"minecraft:salmon",
+		"minecraft:cooked_salmon",
+		"alexsmobs:lobster_tail",
+		"alexsmobs:cooked_lobster_tail",
+		"alexsmobs:fish_oil",
+		"alexsmobs:raw_catfish",
+		"alexsmobs:cooked_catfish",
+		"alexsmobs:blobfish",
+		"alexsmobs:cosmic_cod",
+		"alexsmobs:flying_fish",
+		"alexsmobs:maggot",
+		"crittersandcompanions:koi_fish",
+		"undergarden:raw_gwibling",
+		"undergarden:cooked_gwibling"
+	]
+}

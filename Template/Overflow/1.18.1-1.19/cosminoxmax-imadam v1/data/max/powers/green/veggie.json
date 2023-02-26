@@ -1,0 +1,37 @@
+{
+	"name": "§a§nEat Your Greens",
+	"description": "You are only able to eat vegetables and fruits, with meat poisoning you.",
+	"condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "*:select_mode",
+                "comparison": "==",
+                "compare_to": 3
+            }
+        ]
+    },
+	"type": "origins:modify_food",
+	"item_condition": {
+		"type": "apoli:meat"
+	},
+	"food_modifier": {
+		"operation": "multiply_total",
+		"value": -1
+	},
+	"saturation_modifier": {
+		"operation": "multiply_total",
+		"value": -1
+	},
+	"entity_action": {
+		"type": "apoli:apply_effect",
+		"effect": {
+			"effect": "poison",
+			"duration": 60,
+			"amplifier": 0,
+			"show_icon": true,
+			"show_particles": false
+		}
+	}
+}

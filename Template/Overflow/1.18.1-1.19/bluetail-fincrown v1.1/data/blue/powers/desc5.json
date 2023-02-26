@@ -1,0 +1,11 @@
+{
+    "name": "Five-Tail",
+    "description": "With five tails active, you have increased attack haste, Speed, Strength, Jump, the ability to walljump, are able to set enemies on fire when you hit them and can run on water as if it were land.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Toggle ALL: walljumping, firetouch and waterwalking with SaveToolbar key."
+        }
+    ],
+    "type": "origins:simple"
+}

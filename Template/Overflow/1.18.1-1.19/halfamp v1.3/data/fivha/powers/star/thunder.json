@@ -1,0 +1,107 @@
+{
+    "name": "Conductive",
+    "description": "You have an increased chance to be struck by lighting. Being struck briefly makes you immune to status effects and fills your Charge to full for a short period of time.",
+    "type": "origins:multiple",
+    "zap": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_rain"
+                },
+                {
+                    "type": "origins:predicate",
+                    "predicate": "fivha:weather/thunder"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 12000,
+        "entity_action": {
+            "type": "origins:chance",
+            "chance": 10,
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "summon lightning_bolt ~ ~ ~",
+                        "permission_level": 4
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle glow ~ ~ ~ 1.5 1 1.5 0.5 100",
+                        "permission_level": 4
+                    },
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "block.beacon.activate",
+                        "volume": 1,
+                        "pitch": 0.7
+                    },
+                    {
+                        "type": "origins:trigger_cooldown",
+                        "power": "*:*_zappity"
+                    }
+                ]
+            }
+        }
+    },
+    "zappity": {
+        "type": "origins:cooldown",
+        "cooldown": 1000,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "fill": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_zappity",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:star/charge_nuggets",
+                    "change": 1000
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle electric_spark ~ ~ ~ 0.5 1 0.5 0.5 10",
+                    "permission_level": 4
+                }
+            ]
+        },
+        "falling_action": {
+            "type": "origins:play_sound",
+            "sound": "block.beacon.deactivate",
+            "volume": 1,
+            "pitch": 0.7
+        }
+    },
+    "effects": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_zappity",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:effect_immunity",
+        "effects": [
+            "weakness",
+            "nausea",
+            "blindness",
+            "hunger",
+            "poison",
+            "wither",
+            "unluck",
+            "bad_omen"
+        ]
+    }
+}

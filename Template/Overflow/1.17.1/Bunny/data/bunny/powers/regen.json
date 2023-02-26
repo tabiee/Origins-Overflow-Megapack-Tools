@@ -1,0 +1,10 @@
+{
+  "type": "origins:action_over_time",
+  "interval": 1,
+  "entity_action": {
+    "type": "origins:execute_command",
+    "command": "effect give @e[distance=..3] minecraft:regeneration 1 0 true"
+  },
+  "name": "Pleasant Presence",
+  "description": "Your presence in a area heals all those around you."
+}

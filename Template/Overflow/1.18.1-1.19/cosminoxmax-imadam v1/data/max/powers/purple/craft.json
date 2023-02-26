@@ -1,0 +1,20 @@
+{
+    "name": "§5§nForeign Technology§r",
+    "description": "In your confusion, you forget how to craft, smelt, brew, and enchant.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "*:select_mode",
+                "comparison": "==",
+                "compare_to": 5
+            }
+        ]
+    },
+    "type": "origins:prevent_block_use",
+    "block_condition": {
+        "type": "origins:in_tag",
+        "tag": "max:stations"
+    }
+}

@@ -1,0 +1,23 @@
+{
+	"replace": false,
+	"values": [
+		"lapis_ore",
+		"copper_ore",
+		"emerald_ore",
+		"coal_ore",
+		"gold_ore",
+		"redstone_ore",
+		"iron_ore",
+		"diamond_ore",
+		"deepslate_copper_ore",
+		"deepslate_emerald_ore",
+		"deepslate_coal_ore",
+		"deepslate_gold_ore",
+		"deepslate_redstone_ore",
+		"deepslate_iron_ore",
+		"deepslate_diamond_ore",
+		"nether_gold_ore",
+		"nether_quartz_ore",
+		"ancient_debris"
+	]
+}

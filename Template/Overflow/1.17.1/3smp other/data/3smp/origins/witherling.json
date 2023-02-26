@@ -1,0 +1,16 @@
+{
+    "impact": 1,
+    "unchoosable": false,
+    "powers": [
+        "3smp:witherling/nether_spawn",
+        "3smp:witherling/wither_effect",
+        "3smp:witherling/wither_immunity",
+        "3smp:witherling/fire_immunity",
+        "3smp:witherling/fragile",
+        "3smp:witherling/wither_particles",
+		"3smp:witherling/undead"
+    ],
+    "name": "§0§l§oWitherling",
+    "description": "Withered being with a sentient mind.",
+	"icon": "wither_rose"
+}

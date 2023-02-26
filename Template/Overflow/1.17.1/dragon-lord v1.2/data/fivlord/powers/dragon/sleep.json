@@ -1,0 +1,12 @@
+{
+    "name": "§6§nThe One On Top",
+    "description": "As the Dragon Lord you stand above everyone else. Literally. You can only sleep above Y level 200.",
+    "type": "origins:prevent_sleep",
+    "block_condition": {
+        "type": "origins:height",
+        "comparison": "<",
+        "compare_to": 200
+    },
+    "message": "You can't bare the thought of sleeping this close to the ground! (y=200+)",
+    "set_spawn_point": true
+}

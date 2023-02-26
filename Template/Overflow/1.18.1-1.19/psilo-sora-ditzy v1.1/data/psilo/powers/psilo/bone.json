@@ -1,0 +1,51 @@
+{
+	"name": "§1§nRich Soil",
+	"description": "A minor form of plant magic. While normal-sized, you can right click the ground to bonemeal it.",
+	"type": "origins:active_self",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:resource",
+				"resource": "*:psilo/sprout_01",
+				"comparison": "==",
+				"compare_to": 1
+			},
+			{
+				"type": "origins:resource",
+				"resource": "*:psilo/tog_tap",
+				"comparison": "==",
+				"compare_to": 1
+			}
+		]
+	},
+	"entity_action": {
+		"type": "origins:raycast",
+		"distance": 7,
+		"block": true,
+		"entity": false,
+		"shape_type": "visual",
+		"fluid_handling": "any",
+		"command_at_hit": "particle mycelium ~ ~ ~ 0.5 0.5 0.5 0 50",
+		"command_step": 1,
+		"command_along_ray_only_on_hit": true,
+		"block_action": {
+			"type": "origins:offset",
+			"action": {
+				"type": "origins:bonemeal",
+				"effects": true
+			},
+			"y": 1
+		}
+	},
+	"cooldown": 40,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+		"bar_index": 22
+	},
+	"key": {
+		"key": "key.use",
+		"continuous": true
+	}
+}

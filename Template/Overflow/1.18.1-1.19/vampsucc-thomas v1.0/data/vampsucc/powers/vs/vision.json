@@ -1,0 +1,31 @@
+{
+    "type": "origins:multiple",
+	"name": "§2§nDark Vision",
+	"description": "You can see in the dark, but only in shades of gray.",
+    "nv": {
+		"condition": {
+            "type": "origins:in_block_anywhere",
+            "block_condition": {
+                "type": "origins:light_level",
+                "light_type": "sky",
+                "comparison": "<=",
+                "compare_to": 4
+            }
+        },
+        "type": "origins:night_vision",
+        "strength": 0.3
+    },
+    "gray": {
+        "condition": {
+            "type": "origins:in_block_anywhere",
+            "block_condition": {
+                "type": "origins:light_level",
+                "light_type": "sky",
+                "comparison": "<=",
+                "compare_to": 4
+            }
+        },
+        "type": "origins:shader",
+        "shader": "minecraft:shaders/post/pencil.json"
+    }
+}

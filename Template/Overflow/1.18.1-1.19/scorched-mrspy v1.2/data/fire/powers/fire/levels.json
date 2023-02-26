@@ -1,0 +1,142 @@
+{
+	"name": "Feed the Flame",
+	"description": "Each kill grants 1 Fire Shard, reaching 100 Fire Shards raises you to the next level, unlocking new abilities. Once you've reached Level 3, this ability grants 3 minutes of buffs when maxed out.",
+	"type": "origins:multiple",
+	"shard": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 100,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 5
+		},
+		"max_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:fire/levels_lvl",
+				"comparison": "!=",
+				"compare_to": 3
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"resource": "*:fire/levels_lvl",
+						"change": 1
+					},
+					{
+						"type": "origins:change_resource",
+						"resource": "*:fire/levels_shard",
+						"change": -100
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "particle flame ~ ~0.5 ~ 1 0 1 0.2 100",
+						"permission_level": 4
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "particle dust 1.000 0.400 0.051 1 ~ ~0.5 ~ 1 0 1 0.2 50 normal",
+						"permission_level": 4
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "particle flame ~ ~0.5 ~ 1 0 1 0.2 25",
+						"permission_level": 4
+					},
+					{
+						"type": "origins:apply_effect",
+						"effects": [
+							{
+								"effect": "speed",
+								"duration": 3600,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "haste",
+								"duration": 3600,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "night_vision",
+								"duration": 3600,
+								"amplifier": 0,
+								"show_particles": false,
+								"show_icon": true
+							}
+						]
+					},
+					{
+						"type": "origins:change_resource",
+						"resource": "*:fire/levels_shard",
+						"change": -100
+					}
+				]
+			}
+		}
+	},
+	"lvl": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 3,
+		"start_value": 1,
+		"hud_render": {
+			"should_render": false,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 15
+		}
+	},
+	"convert": {
+		"condition": {
+			"type": "origins:command",
+			"command": "clear @s blaze_powder{CustomModelData:69} 0",
+			"comparison": ">=",
+			"compare_to": 1,
+			"permission_level": 4
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @s blaze_powder{CustomModelData:69} 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:fire/levels_shard",
+					"change": 1
+				}
+			]
+		}
+	},
+	"loot": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=!#fire:noeyes,type=!player] run data modify entity @s DeathLootTable set value \"fire:entities/shard\"",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

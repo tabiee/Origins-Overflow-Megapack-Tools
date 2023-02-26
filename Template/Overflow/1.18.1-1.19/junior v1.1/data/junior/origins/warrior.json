@@ -1,0 +1,12 @@
+{
+	"powers": [
+		    "junior:warr/strong",
+            "junior:warr/health",
+            "junior:warr/bow"
+	],
+	"icon": "minecraft:iron_sword",
+	"order": 1,
+	"impact": 1,
+	"name": "Warrior",
+	"description": "Specialist in Close Combat Battles."
+}

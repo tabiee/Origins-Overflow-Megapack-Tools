@@ -1,0 +1,17 @@
+{
+    "powers": [
+        "origins:extra_reach",
+        "origins:strong_arms",
+        "origins:strong_arms_break_speed",
+        "origins:more_exhaustion",
+        "betterhuman:hydrophobic_legs",
+        "betterhuman:nightlight"
+    ],
+    "icon": "minecraft:player_head",
+    "order": 15,
+    "impact": 1,
+    "name": "Caverner",
+    "description": "This human-like origin can mine blocks with his hands and even reach farther than normal",
+    "loading_priority": 100,
+    "unchoosable": true
+}

@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"cosmi:desc",
+		"cosmi:solar",
+		"cosmi:blind",
+		"cosmi:lunar",
+		"cosmi:eclipse",
+		"cosmi:lightning",
+		"cosmi:elytra",
+		"cosmi:dream",
+		"cosmi:hp",
+		"cosmi:particles",
+		"cosmi:tagger"
+	],
+	"icon": "minecraft:nether_star",
+	"impact": 3,
+	"name": "§b§l§oCosminox",
+	"description": "Both the Day and the Night, a perfect balance."
+}

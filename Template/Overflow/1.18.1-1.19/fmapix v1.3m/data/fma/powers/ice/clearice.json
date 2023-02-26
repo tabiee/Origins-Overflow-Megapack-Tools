@@ -1,0 +1,147 @@
+{
+	"hidden": true,
+	"type": "origins:active_self",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"inverted": true,
+				"type": "origins:on_fire"
+			},
+			{
+				"inverted": true,
+				"type": "origins:dimension",
+				"dimension": "the_nether"
+			},
+			{
+				"type": "origins:sneaking"
+			},
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "offhand",
+				"item_condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "heart_of_the_sea"
+							}
+						},
+						{
+							"type": "origins:nbt",
+							"nbt": "{CustomModelData:2}"
+						}
+					]
+				}
+			},
+			{
+				"type": "origins:block_in_radius",
+				"block_condition": {
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:block",
+							"block": "ice"
+						},
+						{
+							"type": "origins:block",
+							"block": "blue_ice"
+						},
+						{
+							"type": "origins:block",
+							"block": "packed_ice"
+						},
+						{
+							"type": "origins:block",
+							"block": "frosted_ice"
+						},
+						{
+							"type": "origins:block",
+							"block": "snow"
+						},
+						{
+							"type": "origins:block",
+							"block": "snow_block"
+						},
+						{
+							"type": "origins:block",
+							"block": "water"
+						},
+						{
+							"type": "origins:block",
+							"block": "powder_snow"
+						}
+					]
+				},
+				"radius": 2,
+				"shape": "cube",
+				"comparison": ">=",
+				"compare_to": 1
+			}
+		]
+	},
+	"cooldown": 5,
+	"hud_render": {
+		"should_render": false
+	},
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace packed_ice",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace frosted_ice",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace ice",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace blue_ice",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace powder_snow",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace snow",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace snow_block",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute at @s anchored eyes run particle cloud ^ ^ ^1.5 1 0.4 1 0 100 normal",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "entity.snow_golem.death",
+				"volume": 1,
+				"pitch": 1.4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "give @s packed_ice 1",
+				"permission_level": 4
+			}
+		]
+	},
+	"key": {
+		"key": "primary"
+	}
+}

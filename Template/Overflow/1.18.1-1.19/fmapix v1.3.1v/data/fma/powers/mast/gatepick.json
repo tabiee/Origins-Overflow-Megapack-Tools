@@ -1,0 +1,14 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:advancement",
+        "advancement": "minecraft:end/root"
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "rising_action": {
+        "type": "origins:execute_command",
+        "command": "origin gui @s origins:gate",
+        "permission_level": 4
+    }
+}

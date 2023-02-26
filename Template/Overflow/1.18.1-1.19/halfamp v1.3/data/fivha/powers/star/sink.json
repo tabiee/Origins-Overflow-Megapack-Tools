@@ -1,0 +1,5 @@
+{
+    "name": "Dense",
+    "description": "Being made of metal makes you heavy, you can't swim in water.",
+    "type": "origins:ignore_water"
+}

@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"fival:magicbot/magic_spores",
+		"fival:magicbot/fly",
+		"fival:magicbot/pew",
+		"fival:magicbot/tagger",
+		"fival:magicbot/slowit",
+		"fival:magicbot/gold",
+		"fival:magicbot/pewtwo",
+		"fival:magicbot/land"
+	],
+	"icon": "minecraft:potion",
+	"impact": 2,
+	"name": "§5§l§oThe Alchemist",
+	"description": "The controller of magic."
+}

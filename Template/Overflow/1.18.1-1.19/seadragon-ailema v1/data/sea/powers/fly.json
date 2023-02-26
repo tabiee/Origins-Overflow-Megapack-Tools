@@ -1,0 +1,12 @@
+{
+    "name": "§5§nWinged",
+    "description": "You can glide or hover easily thanks to the wings on your back.",
+    "type": "origins:multiple",
+    "crea": {
+        "type": "origins:creative_flight"
+    },
+    "ety": {
+        "type": "origins:elytra_flight",
+        "render_elytra": true
+    }
+}

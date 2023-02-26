@@ -1,0 +1,54 @@
+{
+    "name": "§1§nCast Matter",
+    "description": "Place a glass block 3 blocks away in the direction you're looking. ",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:food_level",
+                "comparison": ">=",
+                "compare_to": 4
+            },
+            {
+                "type": "origins:command",
+                "command": "execute if block ^ ^2 ^4 #teir:blocks",
+                "comparison": ">=",
+                "compare_to": 1
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle dust 1.000 0.800 0.000 1 ^ ^2.25 ^3 0.35 0.35 0.35 0 25"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "fill ^ ^2 ^3 ^ ^2 ^3 minecraft:yellow_stained_glass replace #teir:blocks"
+            },
+            {
+                "type": "origins:exhaust",
+                "amount": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:block.note_block.cow_bell",
+                "volume": 1,
+                "pitch": 2
+            }
+        ]
+    },
+    "cooldown": 40,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 14
+    },
+    "key": {
+        "key": "secondary",
+        "continuous": true
+    }
+}

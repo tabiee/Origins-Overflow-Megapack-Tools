@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"mantis:punch",
+		"mantis:jab",
+		"mantis:armor",
+		"mantis:tail",
+		"mantis:aqua",
+		"mantis:gills",
+		"mantis:piscivore",
+		"mantis:size",
+		"mantis:biomes"
+	],
+	"icon": "minecraft:blaze_powder",
+	"impact": 3,
+	"name": "§b§l§oMantis-§4§l§okin",
+	"description": "§3You are an evolved descendant of the Mantis Shrimp."
+}

@@ -1,0 +1,21 @@
+{
+    "powers": [
+        "origins:strong_arms",
+        "betterhuman:silverfishiash_sized",
+        "origins:phasing",
+        "origins:phantomize",
+        "betterhuman:silverfishiashsize",
+        "betterhuman:silverfishiashsizeonemore",
+        "origins:strong_arms_break_speed",
+        "betterhuman:projarrsiashsho",
+        "betterhuman:resetsizesa",
+        "betterhuman:resetsizesb"
+    ],
+    "icon": "minecraft:stone_bricks",
+    "unchoosable": true,
+    "order": 11,
+    "impact": 2,
+    "name": "Silverfishiash",
+    "description": "The silverfishiash are way better than silverfish",
+    "loading_priority": 100
+}

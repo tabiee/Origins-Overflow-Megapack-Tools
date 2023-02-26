@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"quirk:warpgate/callback",
+		"quirk:warpgate/warpparticles",
+		"quirk:warpgate/teleport",
+		"quirk:warpgate/shadow",
+		"quirk:warpgate/lurk",
+		"quirk:warpgate/suffo",
+		"quirk:health"
+	],
+	"icon": "minecraft:nether_star",
+	"order": 10,
+	"impact": 3,
+	"name": "Warp Gate",
+        "unchoosable": true,
+	"description": "Kurogiri's Quirk"
+}

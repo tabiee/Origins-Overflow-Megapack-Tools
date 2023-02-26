@@ -1,0 +1,10 @@
+{
+    "name": "§3§nTough Scales",
+    "description": "You naturally have 3 points of armor.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.armor",
+        "operation": "addition",
+        "value": 6
+    }
+}

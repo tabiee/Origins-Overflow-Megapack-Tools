@@ -1,0 +1,60 @@
+{
+    "name": "Fire Blast",
+    "description": "Shoot fire, deadly but exhausting.",
+    "type": "origins:multiple",
+    "pew": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_rain"
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:fire_projectile",
+        "entity_type": "small_fireball",
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "count": 1,
+        "speed": 1.5,
+        "divergence": 1,
+        "sound": "minecraft:entity.blaze.shoot",
+        "key": "primary"
+    },
+    "tired": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_rain"
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:exhaust",
+            "amount": 20
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": "primary"
+    }
+}

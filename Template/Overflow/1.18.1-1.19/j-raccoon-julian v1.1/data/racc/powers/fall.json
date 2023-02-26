@@ -1,0 +1,18 @@
+{
+    "name": "§2§nNo Falls",
+    "description": "You take no fall damage, preventing you from ending your own suffering this way.",
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "fall"
+            },
+            {
+                "type": "origins:name",
+                "name": "fall.player"
+            }
+        ]
+    }
+}

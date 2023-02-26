@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "origins": [
+    "ogcspoofii:spoofii",
+	"ogcspoofii:surv",
+	"ogcspoofii:ghost",
+	"ogcspoofii:allu",
+	"ogcspoofii:ori",
+	"ogcspoofii:sharade",
+	"ogcspoofii:techno",
+	"ogcspoofii:looptrack",
+	"ogcspoofii:nerd"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+	"name": "§9§nHigh Tides§r",
+	"description": "Enshroud yourself in a blue aura, summoning rain and becoming less susceptible to most forms of damage.",
+	"type": "origins:multiple",
+	"weather": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:select_mode",
+					"comparison": "==",
+					"compare_to": 4
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "weather thunder",
+					"permission_level": 4
+				},
+				{
+					"type": "apoli:trigger_cooldown",
+					"power": "*:blue/rain_dur"
+				},
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.ghast.ambient",
+                    "volume": 0.75,
+                    "pitch": 0.25
+                }
+			]
+		},
+		"cooldown": 800,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 1,
+			"condition": {
+				"type": "apoli:resource",
+				"resource": "*:blue/rain_dur",
+				"comparison": "==",
+				"compare_to": 0
+			}
+		},
+		"key": {
+			"key": "key.spectatorOutlines"
+		}
+	},
+	"dur": {
+		"type": "apoli:cooldown",
+		"cooldown": 600,
+		"hud_render": {
+			"should_render": true,
+			"bar_index": 1
+		}
+	},
+	"act": {
+		"condition": {
+			"type": "apoli:resource",
+			"resource": "*:blue/rain_dur",
+			"comparison": "!=",
+			"compare_to": 0
+		},
+		"type": "apoli:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "apoli:and",
+			"actions": [
+				{
+					"type": "apoli:execute_command",
+					"command": "summon area_effect_cloud ~ ~ ~ {Particle:\"dripping_water\",Radius:1f,Duration:3}"
+				},
+				{
+					"type": "apoli:execute_command",
+					"command": "particle campfire_cosy_smoke ~ ~2.5 ~ 0.1 0.1 0.1 0 1"
+				}
+			]
+		},
+		"falling_action": {
+			"type": "apoli:and",
+			"actions": [
+				{
+					"type": "apoli:execute_command",
+					"command": "resource set @s max:blue/rain_weather 1"
+				}
+			]
+		}
+	},
+	"dmg": {
+		"condition": {
+			"type": "apoli:resource",
+			"resource": "*:blue/rain_dur",
+			"comparison": "!=",
+			"compare_to": 0
+		},
+		"type": "apoli:modify_damage_taken",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": -0.75
+		}
+	}
+}

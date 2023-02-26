@@ -1,0 +1,10 @@
+{
+	"powers": [
+		"monkey:climb",
+		"monkey:fx"
+	],
+	"icon": "minecraft:rabbit_foot",
+	"impact": 1,
+	"name": "§e§l§oChimpanzee",
+	"description": "Monkey business!"
+}

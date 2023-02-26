@@ -1,0 +1,36 @@
+{
+    "name": "§2§nNocturnal",
+    "description": "You grow stronger at night.",
+    "condition": {
+        "inverted": true,
+        "type": "origins:daytime"
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "speed",
+                "duration": 100,
+                "amplifier": 1,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "jump_boost",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "strength",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ]
+    }
+}

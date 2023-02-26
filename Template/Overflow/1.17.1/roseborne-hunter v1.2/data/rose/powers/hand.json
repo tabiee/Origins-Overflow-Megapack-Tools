@@ -1,0 +1,25 @@
+{
+    "name": "Agronomist",
+    "description": "You can till soil with a bare hand for no saturation or food.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "fill ^ ^1 ^1 ^ ^1 ^1 farmland[moisture=7] replace grass_block"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "fill ^ ^1 ^1 ^ ^1 ^1 farmland[moisture=7] replace dirt"
+            }
+        ]
+    },
+    "cooldown": 1,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": {
+        "key": "ternary"
+    }
+}

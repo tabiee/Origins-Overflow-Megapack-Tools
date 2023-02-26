@@ -1,0 +1,63 @@
+{
+    "name": "TOO HOT! TOOOO HOT!",
+    "description": "When in the sun for more than 5 minutes you light on fire.",
+    "type": "origins:multiple",
+    "heat": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1200,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 14,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_heat",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        }
+    },
+    "gain": {
+        "condition": {
+            "type": "origins:exposed_to_sun"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_heat",
+            "change": 1,
+            "operation": "add"
+        }
+    },
+    "lose": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:exposed_to_sun"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_heat",
+            "change": -25,
+            "operation": "add"
+        }
+    },
+    "hot": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_heat",
+            "comparison": "==",
+            "compare_to": 1200
+        },
+        "type": "origins:action_over_time",
+        "interval": 60,
+        "entity_action": {
+            "type": "origins:set_on_fire",
+            "duration": 3
+        }
+    }
+}

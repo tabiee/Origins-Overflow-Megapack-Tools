@@ -1,0 +1,637 @@
+{
+  "values": [
+    "minecraft:egg",
+    {
+      "id": "mythicmetals:adamnite_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:aquarium_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:banglum_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:bronze_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:carmot_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:celestium_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:durasteel_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:hallowed_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:kyber_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:manganese_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:metallurgium_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:morkite",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:midas_gold_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:mythril_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:orichalcum_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:osmium_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:palladium_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:platinum_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:prometheum_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:quadrillum_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:runite_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:silver_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:starrite",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:star_platinum",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:steel_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:stormyx_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:tin_ingot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:unobtainium",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_adamantite",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_aquarium",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_banglum",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_carmot",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_kyber",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_manganese",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_midas_gold",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_mythril",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_orichalcum",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_osmium",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_palladium",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_platinum",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_prometheum",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_quadrillum",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_runite",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_silver",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_stormyx",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_tin",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:adamantite_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:aquarium_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:banglum_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:bronze_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:carmot_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:celestium_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:copper_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:durasteel_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:hallowed_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:kyber_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:manganese_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:metallurgium_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:midas_gold_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:mythril_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:orichalcum_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:osmium_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:palladium_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:platinum_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:prometheum_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:quadrillum_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:runite_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:silver_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:star_platinum_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:steel_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:stormyx_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:tin_nugget",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:aquarium_pearl",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:banglum_chunk",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:stormyx_shell",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:adamantite_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:deepslate_adamantite_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_adamantite_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:adamantite_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:aquarium_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:deepslate_aquarium_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_aquarium_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:aquarium_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:banglum_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:nether_banglum_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_banglum_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:banglum_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:bronze_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:carmot_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:deepslate_carmot_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_carmot_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:carmot_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:celestium_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:durasteel_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:hallowed_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:kyber_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:calcite_kyber_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_kyber_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:kyber_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:manganese_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_manganese_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:manganese_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:metallurgium_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:morkite_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:deepslate_morkite_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:morkite_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:midas_gold_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_midas_gold_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:midas_gold_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:mythril_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:deepslate_mythril_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_mythril_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:mythril_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:orichalcum_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:tuff_orichalcum_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:smooth_basalt_orichalcum_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:deesplate_orichalcum_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_orichalcum_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:orichalcum_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:osmium_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_osmium_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:osmium_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:palladium_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_palladium_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:palladium_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:platinum_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_platinum_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:platinum_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:prometheum_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:deepslate_prometheum_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_prometheum_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:prometheum_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:quadrillum_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_quadrillum_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:quadrillum_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:runite_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:deepslate_runite_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_runite_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:runite_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:silver_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_silver_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:silver_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:star_platinum_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:starrite_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:calcite_starrite_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:end_stone_starrite_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:starrite_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:steel_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:stormyx_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:blackstone_stormyx_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_stormyx_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:stormyx_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:tin_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:raw_tin_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:tin_block",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:unobtainium_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:deepslate_unobtainium_ore",
+      "required": false
+    },
+    {
+      "id": "mythicmetals:unobtainium_block",
+      "required": false
+    }
+  ]
+}

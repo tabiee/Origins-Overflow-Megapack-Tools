@@ -1,0 +1,23 @@
+{
+	"powers": [
+	    "fivha:star/charge",
+		"fivha:star/eat",
+		"fivha:star/battery",
+	    "fivha:star/overcharge",
+		"fivha:star/ironheal",
+		"fivha:star/thunder",
+		"fivha:star/metalfist",
+		"fivha:star/cancel",
+		"fivha:star/sink",
+		"fivha:star/ocactive",
+		"fivha:star/recharge",
+		"fivha:star/slowinwater",
+		"fivha:star/mining",
+		"fivha:star/bucket",
+		"fivha:star/thundertwo"
+	],
+	"icon": "minecraft:nether_star",
+	"impact": 3,
+	"name": "§b§l§oStar Construct",
+	"description": "Robotic being that operates on Charge."
+}

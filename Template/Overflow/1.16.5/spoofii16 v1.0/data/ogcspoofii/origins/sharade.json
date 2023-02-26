@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"ogcspoofii:sharade/dimensionhop",
+		"ogcspoofii:sharade/onhit",
+		"ogcspoofii:sharade/repeat",
+		"ogcspoofii:sharade/secon",
+		"ogcspoofii:sharade/particles",
+		"ogcspoofii:sharade/tagger",
+		"ogcspoofii:sharade/zap",
+		"ogcspoofii:sharade/armorno"
+		"ogcspoofii:sharade/perms",
+		"ogcspoofii:sharade/nohands",
+		"ogcspoofii:sharade/reset",
+		"ogcspoofii:sharade/short"
+	],
+	"icon": "minecraft:beacon",
+	"impact": 1,
+	"name": "§4§lSharade",
+	"description": "You have a world in your pocket."
+}

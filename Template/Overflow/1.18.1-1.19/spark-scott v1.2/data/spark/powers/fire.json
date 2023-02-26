@@ -1,0 +1,24 @@
+{
+	"name": "Flame and Thunder",
+	"description": "You do not take any damage from fire or lightning.",
+	"type": "origins:multiple",
+	"imm": {
+		"type": "origins:fire_immunity"
+	},
+	"lignt": {
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "lightning"
+				},
+				{
+					"type": "origins:name",
+					"name": "lightning.player"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,26 @@
+
+particle electric_spark ^0.319 ^0.754 ^-0.663 0 0 0 0 1 normal
+particle electric_spark ^0.238 ^0.731 ^-0.696 0 0 0 0 1 normal
+particle electric_spark ^0.153 ^0.708 ^-0.720 0 0 0 0 1 normal
+particle electric_spark ^0.066 ^0.685 ^-0.733 0 0 0 0 1 normal
+particle electric_spark ^-0.022 ^0.662 ^-0.735 0 0 0 0 1 normal
+particle electric_spark ^-0.110 ^0.639 ^-0.728 0 0 0 0 1 normal
+particle electric_spark ^-0.196 ^0.616 ^-0.709 0 0 0 0 1 normal
+particle electric_spark ^-0.279 ^0.594 ^-0.681 0 0 0 0 1 normal
+particle electric_spark ^-0.358 ^0.572 ^-0.643 0 0 0 0 1 normal
+particle electric_spark ^-0.432 ^0.550 ^-0.595 0 0 0 0 1 normal
+particle electric_spark ^-0.500 ^0.529 ^-0.539 0 0 0 0 1 normal
+particle electric_spark ^-0.561 ^0.508 ^-0.476 0 0 0 0 1 normal
+particle electric_spark ^-0.614 ^0.487 ^-0.405 0 0 0 0 1 normal
+particle electric_spark ^-0.658 ^0.466 ^-0.329 0 0 0 0 1 normal
+particle electric_spark ^-0.693 ^0.446 ^-0.248 0 0 0 0 1 normal
+particle electric_spark ^-0.717 ^0.426 ^-0.164 0 0 0 0 1 normal
+particle electric_spark ^-0.732 ^0.406 ^-0.077 0 0 0 0 1 normal
+particle electric_spark ^-0.736 ^0.387 ^0.011 0 0 0 0 1 normal
+particle electric_spark ^-0.729 ^0.368 ^0.099 0 0 0 0 1 normal
+particle electric_spark ^-0.712 ^0.349 ^0.185 0 0 0 0 1 normal
+particle electric_spark ^-0.685 ^0.331 ^0.269 0 0 0 0 1 normal
+particle electric_spark ^-0.648 ^0.313 ^0.349 0 0 0 0 1 normal
+particle electric_spark ^-0.602 ^0.296 ^0.424 0 0 0 0 1 normal
+particle electric_spark ^-0.547 ^0.279 ^0.492 0 0 0 0 1 normal
+particle electric_spark ^-0.484 ^0.262 ^0.554 0 0 0 0 1 normal

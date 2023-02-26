@@ -1,0 +1,98 @@
+{
+	"name": "Blazing Trail",
+	"description": "At Level 2, you gain the ability to dash forwards.",
+	"type": "origins:multiple",
+	"nuggets": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 4,
+		"start_value": 4,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+			"bar_index": 3,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:fire/dash_nuggets",
+				"comparison": "<",
+				"compare_to": 4
+			}
+		}
+	},
+	"dash": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:fire/levels_lvl",
+					"comparison": ">=",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:fire/dash_nuggets",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:fire/dash_nuggets",
+					"change": -1
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle flame ^ ^0.5 ^4 0.3 1 0.3 0.1 100",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle dust 1.000 0.400 0.051 1 ^ ^0.5 ^4 0.3 1 0.3 0.1 100 normal",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:if_else",
+					"condition": {
+						"inverted": true,
+						"type": "origins:on_block"
+					},
+					"if_action": {
+						"type": "origins:add_velocity",
+						"z": 1.3,
+						"y": 0.3,
+						"space": "local"
+					},
+					"else_action": {
+						"type": "origins:add_velocity",
+						"z": 4.5,
+						"y": 2.5,
+						"space": "local"
+					}
+				}
+			]
+		},
+		"cooldown": 10,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "primary",
+			"continuous": true
+		}
+	},
+	"gain": {
+		"type": "origins:action_over_time",
+		"interval": 160,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:fire/dash_nuggets",
+			"change": 1
+		}
+	}
+}

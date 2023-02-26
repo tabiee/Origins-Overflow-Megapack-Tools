@@ -1,0 +1,29 @@
+{
+	"unchoosable": true,
+	"powers": [
+		"demon:upper/sword",
+		"demon:upper/rankup",
+		"demon:upper/hp",
+		"demon:upper/bleed",
+		"demon:lower/proj",
+		"demon:strong/tp",
+		"demon:strong/dimhop",
+		"demon:upper/stats",
+		"demon:weak/xp",
+		"demon:fire",
+		"demon:gold",
+		"demon:poison",
+		"demon:nether",
+		"demon:iron",
+		"demon:sun",
+		"demon:lava",
+		"demon:hunger",
+		"demon:fortune",
+		"demon:tagger",
+		"demon:beds"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"impact": 3,
+	"name": "§c§l§oDemon: Upper Moon",
+	"description": "Powerful demon with high authority."
+}

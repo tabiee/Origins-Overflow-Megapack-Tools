@@ -1,0 +1,28 @@
+{
+	"unchoosable": true,
+	"powers": [
+		"demon:lower/sword",
+		"demon:lower/rankup",
+		"demon:lower/hp",
+		"demon:lower/proj",
+		"demon:strong/tp",
+		"demon:strong/dimhop",
+		"demon:strong/stats",
+		"demon:weak/xp",
+		"demon:fire",
+		"demon:gold",
+		"demon:poison",
+		"demon:nether",
+		"demon:iron",
+		"demon:sun",
+		"demon:lava",
+		"demon:hunger",
+		"demon:fortune",
+		"demon:tagger",
+		"demon:beds"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"impact": 3,
+	"name": "§c§l§oDemon: Lower Moon",
+	"description": "Powerful demon with little authority."
+}

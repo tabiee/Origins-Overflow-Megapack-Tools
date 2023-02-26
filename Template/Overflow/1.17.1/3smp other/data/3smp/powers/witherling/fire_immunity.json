@@ -1,0 +1,9 @@
+{
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:fire"
+    },
+	"hidden": false,
+	"name": "§2§nFire Immunity",
+	"description": "Immune to fire and lava."
+}

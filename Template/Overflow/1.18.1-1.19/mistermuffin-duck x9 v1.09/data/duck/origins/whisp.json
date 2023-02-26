@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"duck:whisp/ghosty",
+		"duck:whisp/jump",
+		"duck:whisp/size",
+		"duck:whisp/veggie",
+		"duck:whisp/water",
+		"duck:whisp/storm"
+	],
+	"icon": "minecraft:cyan_stained_glass",
+	"impact": 3,
+	"name": "§8§l§oWhisp Bun",
+	"description": "Ethereal and gentle entity."
+}

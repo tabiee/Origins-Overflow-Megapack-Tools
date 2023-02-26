@@ -1,0 +1,23 @@
+{
+    "powers": [
+        "3smp:piglinbrute/buff_to_gold",
+        "3smp:piglinbrute/crossbow_master",
+        "3smp:piglinbrute/nether_spawn",
+        "3smp:piglinbrute/flabby",
+        "3smp:piglinbrute/pvp_buff",
+        "3smp:piglinbrute/carnivore_nether",
+        "3smp:piglinbrute/nether_diet",
+        "3smp:piglinbrute/piglin_neutrality",
+		"3smp:piglinbrute/soul_spooked",
+		"3smp:piglinbrute/homesick",
+		"3smp:piglinbrute/double_jump",
+		"3smp:piglinbrute/chonk",
+		"3smp:piglinbrute/color"
+    ],
+    "icon": "golden_axe",
+    "order": 1,
+    "impact": 2,
+    "unchoosable": false,
+    "name": "§4§l§oPiglin Mercenary",
+    "description": "One of the Piglin society. Trained warrior, terrifying in battle."
+}

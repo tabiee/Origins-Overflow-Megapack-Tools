@@ -1,0 +1,146 @@
+{
+    "name": "§5§nShapechanger§r",
+    "description": "You can shift your size to being tiny or dragon-sized. You cannot shapeshift in water and your large form is too heavy to fly.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "Use Secondary to select size, then shapeshift using Primary."
+        }
+    ],
+    "type": "origins:multiple",
+    "form": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2,
+        "start_value": 1,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 21,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:dragon/sizeswap_cd",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        }
+    },
+    "swap": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "water",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle flame ~ ~1.5 ~ 0.25 0.25 0.25 0 50"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:dragon/sizeswap_cd"
+                }
+            ]
+        },
+        "cooldown": 18000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 1,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:dragon/sizeswap_cd",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        },
+        "key": {
+            "key": "primary",
+            "continuous": false
+        }
+    },
+    "pick": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:dragon/sizeswap_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:dragon/sizeswap_form",
+                        "comparison": "==",
+                        "compare_to": 2
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:dragon/sizeswap_form",
+                                "change": 1,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:dragon/sizeswap_form",
+                        "comparison": "==",
+                        "compare_to": 1
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:dragon/sizeswap_form",
+                                "change": 2,
+                                "operation": "set"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "secondary",
+            "continuous": true
+        }
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 21
+        }
+    }
+}

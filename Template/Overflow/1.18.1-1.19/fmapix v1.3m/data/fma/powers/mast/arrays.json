@@ -1,0 +1,167 @@
+{
+    "name": "§3§nCreate Array",
+	"description": "You're able to inscribe nether quartz into elemental arrays for your specialization, requires 10 levels.",
+    "type": "origins:multiple",
+    "ice": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 10
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "quartz"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:origin",
+                    "origin": "fma:ice",
+                    "layer": "origins:gate"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s quartz 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "give @s heart_of_the_sea{CustomModelData:2,display:{Name:'[{\"text\":\"Ice Transmutation Array\",\"italic\":false,\"color\":\"aqua\",\"bold\":true}]'}} 1",
+                    "permission_level": 4
+                },
+				{
+                    "type": "origins:add_xp",
+                    "levels": -10
+                }
+            ]
+        },
+        "cooldown": 100,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 6
+        },
+        "key": "primary"
+    },
+    "fire": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 10
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "quartz"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:origin",
+                    "origin": "fma:fire",
+                    "layer": "origins:gate"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s quartz 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "give @s heart_of_the_sea{CustomModelData:3,display:{Name:'[{\"text\":\"Fire Transmutation Array\",\"italic\":false,\"color\":\"gold\",\"bold\":true}]'}} 1",
+                    "permission_level": 4
+                },
+				{
+                    "type": "origins:add_xp",
+                    "levels": -10
+                }
+            ]
+        },
+        "cooldown": 100,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 6
+        },
+        "key": "primary"
+    },
+    "earth": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 10
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "quartz"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:origin",
+                    "origin": "fma:earth",
+                    "layer": "origins:gate"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s quartz 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "give @s heart_of_the_sea{CustomModelData:4,display:{Name:'[{\"text\":\"Earth Transmutation Array\",\"italic\":false,\"color\":\"yellow\",\"bold\":true}]'}} 1",
+                    "permission_level": 4
+                },
+				{
+                    "type": "origins:add_xp",
+                    "levels": -10
+                }
+            ]
+        },
+        "cooldown": 100,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 6
+        },
+        "key": "primary"
+    }
+}

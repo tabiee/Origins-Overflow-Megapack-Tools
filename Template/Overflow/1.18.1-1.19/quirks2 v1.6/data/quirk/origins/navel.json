@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"quirk:navel/laser",
+		"quirk:navel/laser1",
+	    "quirk:health"
+	],
+    "unchoosable": true,
+	"icon": "minecraft:dispenser",
+	"impact": 3,
+	"order": 1,
+	"name": "Navel Laser",
+	"description": "Aoyama's Quirk"
+}

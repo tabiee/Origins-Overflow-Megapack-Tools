@@ -1,0 +1,59 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:add_velocity",
+		"y": -7,
+                "space": "local"
+            },
+          {
+            "type": "origins:apply_effect",
+            "effect": {
+              "effect": "extraalchemy:fuse",
+              "amplifier": 1,
+              "duration": 10
+            }
+          },
+            {
+                "type": "origins:execute_command",
+                "command": "effect give @p minecraft:resistance 2 50 true",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:flame ~ ~0.02 ~ 1 1 1 0.2 100 force",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:soul_fire_flame ~ ~0.02 ~ 1 1 1 0.2 100 force",
+                "permission_level": 4
+            },
+{
+	"type": "origins:change_resource",
+	"resource": "quirk:engine/overheat",
+	"change": 10
+},
+            {
+                "type": "origins:execute_command",
+                "command": "playsound minecraft:entity.generic.explode master @p ~ ~ ~ 2 1",
+                "permission_level": 4
+            }
+        ]
+    },
+    "key": {
+        "key": "key.origins.senary_active",
+        "continuous": false
+    },
+    "cooldown": 50,
+	"hud_render": {
+	  "should_render":true,
+	  "sprite_location":"origins:textures/gui/resource_bar.png",
+	  "bar_index": 4
+	},
+	"name": "Explosive Kick",
+	"description": "Your engines send you downard to create a massive impact kick",
+    "hidden": false
+}

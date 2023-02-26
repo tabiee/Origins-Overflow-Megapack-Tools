@@ -1,0 +1,45 @@
+{
+    "name": "§4§nAchilles' Heel",
+    "description": "You have several kryptonites as a vampire.",
+    "type": "origins:multiple",
+    "fire": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:fire"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.5
+        }
+    },
+    "weps": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "crow:weps"
+                    }
+                }
+            }
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.5
+        },
+        "self_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "weakness",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    }
+}

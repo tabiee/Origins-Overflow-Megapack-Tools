@@ -1,0 +1,16 @@
+{
+    "name": "No Shields or Trident",
+    "description": "Not allowed.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "trident"
+            },
+            {
+                "item": "shield"
+            }
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "§4§nSpatial Anchor",
+    "description": "You can’t teleport through your portals if you have weakness or if you’re wearing gold armor. Eating anything golden gives you weakness.",
+    "type": "origins:modify_food",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "golden_carrot"
+            },
+            {
+                "item": "golden_apple"
+            },
+            {
+                "item": "enchanted_golden_apple"
+            }
+        ]
+    },
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "weakness",
+            "duration": 100,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    }
+}

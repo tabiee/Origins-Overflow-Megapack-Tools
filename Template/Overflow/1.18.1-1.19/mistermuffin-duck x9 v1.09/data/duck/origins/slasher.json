@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"duck:slasher/catch",
+		"duck:slasher/creep",
+		"duck:slasher/dmg",
+		"duck:slasher/hp",
+		"duck:slasher/drama",
+		"duck:slasher/spook",
+		"duck:slasher/eat"
+	],
+	"icon": "minecraft:iron_sword",
+	"impact": 1,
+	"name": "§c§l§oSlasher",
+	"description": "The horror! The horror!"
+}

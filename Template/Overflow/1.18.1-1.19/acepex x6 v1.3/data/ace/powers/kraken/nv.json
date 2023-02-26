@@ -1,0 +1,13 @@
+{
+	"name": "Water Vision",
+	"description": "See through the water.",
+	"type": "origins:multiple",
+	"nv": {
+		"condition": {
+			"type": "origins:submerged_in",
+			"fluid": "water"
+		},
+		"type": "origins:night_vision",
+		"strength": 0.5
+	}
+}

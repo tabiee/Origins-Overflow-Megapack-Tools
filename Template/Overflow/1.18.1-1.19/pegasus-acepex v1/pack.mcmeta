@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 10,
+    "name": "Stuff",
+    "id": "stuff",
+    "version": "1.19",
+    "description": "Stuff",
+    "authors": "Tabee#5318 on Discord | Meightaboot on Fiverr"
+  }
+}

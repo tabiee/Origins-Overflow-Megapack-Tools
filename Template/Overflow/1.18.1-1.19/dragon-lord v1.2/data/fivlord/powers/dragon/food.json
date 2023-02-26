@@ -1,0 +1,53 @@
+{
+    "name": "§4§nCarnivore",
+    "description": "As you sit on top of the food chain you prey on everything else, you only eat meat. Your large form requires twice as much food.",
+    "type": "origins:multiple",
+    "carnv": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "origins:meat"
+                            }
+                        },
+                        {
+                            "type": "origins:meat"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:food"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "origins:ignore_diet"
+                    }
+                }
+            ]
+        }
+    },
+    "more": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:constant",
+            "value": true
+        },
+        "food_modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        },
+        "saturation_modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

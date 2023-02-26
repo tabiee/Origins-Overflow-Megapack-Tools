@@ -1,0 +1,9 @@
+{
+    "type": "origins:modify_player_spawn",
+    "dimension": "minecraft:overworld",
+    "structure": "minecraft:village",
+    "hidden": true,
+    "spawn_strategy": "default",
+    "name": "Village spawn",
+    "description": "Oh look you spawn right next to a village, how convenient"
+}

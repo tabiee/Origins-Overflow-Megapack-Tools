@@ -1,0 +1,445 @@
+{
+	"name": "§b§nMagic Mastery",
+	"description": "With your life spanning over centuries, you gained great proficiency with smithing and crafting. You pour Magic into tools, weapons and armor you create, empowering them.",
+	"type": "origins:multiple",
+	"modstar": {
+		"type": "origins:modify_crafting",
+		"recipe": "mcdw:sword_the_starless_night",
+		"result": {
+			"item": "mcdw:sword_the_starless_night",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:14,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,909]},{AttributeName:\"generic.attack_speed\",Amount:-3,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,901]}],HideFlags:2,display:{Name:'[{\"text\":\"The Starless Night +2\",\"italic\":false}]'}}"
+		}
+	},
+	"modswift": {
+		"type": "origins:modify_crafting",
+		"recipe": "mcdw:dagger_swift_striker",
+		"result": {
+			"item": "mcdw:dagger_swift_striker",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:10,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,908]},{AttributeName:\"generic.attack_speed\",Amount:-1,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,902]}],HideFlags:2,display:{Name:'[{\"text\":\"Swift Striker +2\",\"italic\":false}]'}}"
+		}
+	},
+	"modbegin": {
+		"type": "origins:modify_crafting",
+		"recipe": "mcdw:dagger_the_beginning",
+		"result": {
+			"item": "mcdw:dagger_the_beginning",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:10,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,907]},{AttributeName:\"generic.attack_speed\",Amount:-1.2,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,903]}],HideFlags:2,display:{Name:'[{\"text\":\"The Beginning +2\",\"italic\":false}]'}}"
+		}
+	},
+	"woodsw": {
+		"type": "origins:modify_crafting",
+		"recipe": "wooden_sword",
+		"result": {
+			"item": "wooden_sword",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,11]},{AttributeName:\"generic.attack_speed\",Amount:-2.4,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,101]}],HideFlags:2,display:{Name:'[{\"text\":\"Wooden Sword +2\",\"italic\":false}]'}}"
+		}
+	},
+	"woodsh": {
+		"type": "origins:modify_crafting",
+		"recipe": "wooden_shovel",
+		"result": {
+			"item": "wooden_shovel",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"woodpi": {
+		"type": "origins:modify_crafting",
+		"recipe": "wooden_pickaxe",
+		"result": {
+			"item": "wooden_pickaxe",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"woodho": {
+		"type": "origins:modify_crafting",
+		"recipe": "wooden_hoe",
+		"result": {
+			"item": "wooden_hoe",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"woodax": {
+		"type": "origins:modify_crafting",
+		"recipe": "wooden_axe",
+		"result": {
+			"item": "wooden_axe",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:8,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,22]},{AttributeName:\"generic.attack_speed\",Amount:-3.2,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,102]}],HideFlags:2,display:{Name:'[{\"text\":\"Wooden Axe +2\",\"italic\":false}]'},Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"stonesw": {
+		"type": "origins:modify_crafting",
+		"recipe": "stone_sword",
+		"result": {
+			"item": "stone_sword",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:6,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,33]},{AttributeName:\"generic.attack_speed\",Amount:-2.4,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,103]}],HideFlags:2,display:{Name:'[{\"text\":\"Stone Sword +2\",\"italic\":false}]'}}"
+		}
+	},
+	"stonesh": {
+		"type": "origins:modify_crafting",
+		"recipe": "stone_shovel",
+		"result": {
+			"item": "stone_shovel",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"stonepi": {
+		"type": "origins:modify_crafting",
+		"recipe": "stone_pickaxe",
+		"result": {
+			"item": "stone_pickaxe",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"stoneho": {
+		"type": "origins:modify_crafting",
+		"recipe": "stone_hoe",
+		"result": {
+			"item": "stone_hoe",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"stoneax": {
+		"type": "origins:modify_crafting",
+		"recipe": "stone_axe",
+		"result": {
+			"item": "stone_axe",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:10,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,44]},{AttributeName:\"generic.attack_speed\",Amount:-3.2,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,104]}],HideFlags:2,display:{Name:'[{\"text\":\"Stone Axe +2\",\"italic\":false}]'},Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"goldensw": {
+		"type": "origins:modify_crafting",
+		"recipe": "golden_sword",
+		"result": {
+			"item": "golden_sword",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,55]},{AttributeName:\"generic.attack_speed\",Amount:-2.4,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,105]}],HideFlags:2,display:{Name:'[{\"text\":\"Golden Sword +2\",\"italic\":false}]'}}"
+		}
+	},
+	"goldensh": {
+		"type": "origins:modify_crafting",
+		"recipe": "golden_shovel",
+		"result": {
+			"item": "golden_shovel",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"goldenpi": {
+		"type": "origins:modify_crafting",
+		"recipe": "golden_pickaxe",
+		"result": {
+			"item": "golden_pickaxe",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"goldenho": {
+		"type": "origins:modify_crafting",
+		"recipe": "golden_hoe",
+		"result": {
+			"item": "golden_hoe",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"goldenax": {
+		"type": "origins:modify_crafting",
+		"recipe": "golden_axe",
+		"result": {
+			"item": "golden_axe",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:8,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,66]},{AttributeName:\"generic.attack_speed\",Amount:-3,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,106]}],HideFlags:2,display:{Name:'[{\"text\":\"Golden Axe +2\",\"italic\":false}]'},Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"ironsw": {
+		"type": "origins:modify_crafting",
+		"recipe": "iron_sword",
+		"result": {
+			"item": "iron_sword",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:7,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,77]},{AttributeName:\"generic.attack_speed\",Amount:-2.4,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,107]}],HideFlags:2,display:{Name:'[{\"text\":\"Iron Sword +2\",\"italic\":false}]'}}"
+		}
+	},
+	"ironsh": {
+		"type": "origins:modify_crafting",
+		"recipe": "iron_shovel",
+		"result": {
+			"item": "iron_shovel",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"ironpi": {
+		"type": "origins:modify_crafting",
+		"recipe": "iron_pickaxe",
+		"result": {
+			"item": "iron_pickaxe",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"ironho": {
+		"type": "origins:modify_crafting",
+		"recipe": "iron_hoe",
+		"result": {
+			"item": "iron_hoe",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"ironax": {
+		"type": "origins:modify_crafting",
+		"recipe": "iron_axe",
+		"result": {
+			"item": "iron_axe",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:10,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,88]},{AttributeName:\"generic.attack_speed\",Amount:-3.1,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,108]}],HideFlags:2,display:{Name:'[{\"text\":\"Iron Axe +2\",\"italic\":false}]'},Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"diamondsw": {
+		"type": "origins:modify_crafting",
+		"recipe": "diamond_sword",
+		"result": {
+			"item": "diamond_sword",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:8,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,99]},{AttributeName:\"generic.attack_speed\",Amount:-2.4,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,109]}],HideFlags:2,display:{Name:'[{\"text\":\"Diamond Sword +2\",\"italic\":false}]'}}"
+		}
+	},
+	"diamondsh": {
+		"type": "origins:modify_crafting",
+		"recipe": "diamond_shovel",
+		"result": {
+			"item": "diamond_shovel",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"diamondpi": {
+		"type": "origins:modify_crafting",
+		"recipe": "diamond_pickaxe",
+		"result": {
+			"item": "diamond_pickaxe",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"diamondho": {
+		"type": "origins:modify_crafting",
+		"recipe": "diamond_hoe",
+		"result": {
+			"item": "diamond_hoe",
+			"tag": "{Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+	},
+	"diamondax": {
+		"type": "origins:modify_crafting",
+		"recipe": "diamond_axe",
+		"result": {
+			"item": "diamond_axe",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Amount:10,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;69,69,69,111]},{AttributeName:\"generic.attack_speed\",Amount:-3,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;70,70,70,110]}],HideFlags:2,display:{Name:'[{\"text\":\"Diamond Axe +2\",\"italic\":false}]'},Enchantments: [{id: \"minecraft:efficiency\", lvl: 1s}]}"
+		}
+    },
+	"leathhel": {
+		"type": "origins:modify_crafting",
+		"recipe": "leather_helmet",
+		"result": {
+			"item": "leather_helmet",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:3,Slot:head,Name:\"generic.armor\",UUID:[I;11,11,11,1]}],display:{Name:'[{\"text\":\"Leather Cap +2\",\"italic\":false}]'}}"
+		}
+    },
+	"leathche": {
+		"type": "origins:modify_crafting",
+		"recipe": "leather_chestplate",
+		"result": {
+			"item": "leather_chestplate",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:5,Slot:chest,Name:\"generic.armor\",UUID:[I;22,22,22,2]}],display:{Name:'[{\"text\":\"Leather Tunic +2\",\"italic\":false}]'}}"
+		}
+    },
+	"leathleg": {
+		"type": "origins:modify_crafting",
+		"recipe": "leather_leggings",
+		"result": {
+			"item": "leather_leggings",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:4,Slot:legs,Name:\"generic.armor\",UUID:[I;33,33,33,3]}],display:{Name:'[{\"text\":\"Leather Pants +2\",\"italic\":false}]'}}"
+		}
+    },
+	"leathboo": {
+		"type": "origins:modify_crafting",
+		"recipe": "leather_boots",
+		"result": {
+			"item": "leather_boots",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:3,Slot:feet,Name:\"generic.armor\",UUID:[I;44,44,44,4]}],display:{Name:'[{\"text\":\"Leather Boots +2\",\"italic\":false}]'}}"
+		}
+    },
+	"chainmailhel": {
+		"type": "origins:modify_crafting",
+		"recipe": "chainmail_helmet",
+		"result": {
+			"item": "chainmail_helmet",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:4,Slot:head,Name:\"generic.armor\",UUID:[I;11,11,11,2]}],display:{Name:'[{\"text\":\"Chainmail Helmet +2\",\"italic\":false}]'}}"
+		}
+    },
+	"chainmailche": {
+		"type": "origins:modify_crafting",
+		"recipe": "chainmail_chestplate",
+		"result": {
+			"item": "chainmail_chestplate",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:7,Slot:chest,Name:\"generic.armor\",UUID:[I;22,22,22,2]}],display:{Name:'[{\"text\":\"Chainmail Chestplate +2\",\"italic\":false}]'}}"
+		}
+    },
+	"chainmailleg": {
+		"type": "origins:modify_crafting",
+		"recipe": "chainmail_leggings",
+		"result": {
+			"item": "chainmail_leggings",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:6,Slot:legs,Name:\"generic.armor\",UUID:[I;33,33,33,2]}],display:{Name:'[{\"text\":\"Chainmail Leggings +2\",\"italic\":false}]'}}"
+		}
+    },
+	"chainmailboo": {
+		"type": "origins:modify_crafting",
+		"recipe": "chainmail_boots",
+		"result": {
+			"item": "chainmail_boots",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:3,Slot:feet,Name:\"generic.armor\",UUID:[I;44,44,44,2]}],display:{Name:'[{\"text\":\"Chainmail Boots +2\",\"italic\":false}]'}}"
+		}
+    },
+	"goldenhel": {
+		"type": "origins:modify_crafting",
+		"recipe": "golden_helmet",
+		"result": {
+			"item": "golden_helmet",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:4,Slot:head,Name:\"generic.armor\",UUID:[I;11,11,11,3]}],display:{Name:'[{\"text\":\"Golden Helmet +2\",\"italic\":false}]'}}"
+		}
+    },
+	"goldenche": {
+		"type": "origins:modify_crafting",
+		"recipe": "golden_chestplate",
+		"result": {
+			"item": "golden_chestplate",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:7,Slot:chest,Name:\"generic.armor\",UUID:[I;22,22,22,3]}],display:{Name:'[{\"text\":\"Golden Chestplate +2\",\"italic\":false}]'}}"
+		}
+    },
+	"goldenleg": {
+		"type": "origins:modify_crafting",
+		"recipe": "golden_leggings",
+		"result": {
+			"item": "golden_leggings",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:5,Slot:legs,Name:\"generic.armor\",UUID:[I;33,33,33,3]}],display:{Name:'[{\"text\":\"Golden Leggings +2\",\"italic\":false}]'}}"
+		}
+    },
+	"goldenboo": {
+		"type": "origins:modify_crafting",
+		"recipe": "golden_boots",
+		"result": {
+			"item": "golden_boots",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:3,Slot:feet,Name:\"generic.armor\",UUID:[I;44,44,44,3]}],display:{Name:'[{\"text\":\"Golden Boots +2\",\"italic\":false}]'}}"
+		}
+    },
+	"ironhel": {
+		"type": "origins:modify_crafting",
+		"recipe": "iron_helmet",
+		"result": {
+			"item": "iron_helmet",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:4,Slot:head,Name:\"generic.armor\",UUID:[I;11,11,11,4]}],display:{Name:'[{\"text\":\"Iron Helmet +2\",\"italic\":false}]'}}"
+		}
+    },
+	"ironche": {
+		"type": "origins:modify_crafting",
+		"recipe": "iron_chestplate",
+		"result": {
+			"item": "iron_chestplate",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:8,Slot:chest,Name:\"generic.armor\",UUID:[I;22,22,22,4]}],display:{Name:'[{\"text\":\"Iron Chestplate +2\",\"italic\":false}]'}}"
+		}
+    },
+	"ironleg": {
+		"type": "origins:modify_crafting",
+		"recipe": "iron_leggings",
+		"result": {
+			"item": "iron_leggings",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:7,Slot:legs,Name:\"generic.armor\",UUID:[I;33,33,33,4]}],display:{Name:'[{\"text\":\"Iron Leggings +2\",\"italic\":false}]'}}"
+		}
+    },
+	"ironboo": {
+		"type": "origins:modify_crafting",
+		"recipe": "iron_boots",
+		"result": {
+			"item": "iron_boots",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:4,Slot:feet,Name:\"generic.armor\",UUID:[I;44,44,44,4]}],display:{Name:'[{\"text\":\"Iron Boots +2\",\"italic\":false}]'}}"
+		}
+    },
+	"diamondhel": {
+		"type": "origins:modify_crafting",
+		"recipe": "diamond_helmet",
+		"result": {
+			"item": "diamond_helmet",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:5,Slot:head,Name:\"generic.armor\",UUID:[I;11,11,11,5]},{AttributeName:\"generic.armor_toughness\",Amount:3,Slot:head,Name:\"generic.armor_toughness\",UUID:[I;10,10,10,11]},{AttributeName:\"generic.knockback_resistance\",Amount:0.1,Slot:head,Name:\"generic.knockback_resistance\",UUID:[I;111,111,111,1]}]}"
+		}
+    },
+	"diamondche": {
+		"type": "origins:modify_crafting",
+		"recipe": "diamond_chestplate",
+		"result": {
+			"item": "diamond_chestplate",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:10,Slot:chest,Name:\"generic.armor\",UUID:[I;22,22,22,5]},{AttributeName:\"generic.armor_toughness\",Amount:3,Slot:chest,Name:\"generic.armor_toughness\",UUID:[I;10,10,10,22]},{AttributeName:\"generic.knockback_resistance\",Amount:0.1,Slot:chest,Name:\"generic.knockback_resistance\",UUID:[I;111,111,111,2]}]}"
+		}
+    },
+	"diamondleg": {
+		"type": "origins:modify_crafting",
+		"recipe": "diamond_leggings",
+		"result": {
+			"item": "diamond_leggings",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:8,Slot:legs,Name:\"generic.armor\",UUID:[I;33,33,33,5]},{AttributeName:\"generic.armor_toughness\",Amount:3,Slot:legs,Name:\"generic.armor_toughness\",UUID:[I;10,10,10,33]},{AttributeName:\"generic.knockback_resistance\",Amount:0.1,Slot:legs,Name:\"generic.knockback_resistance\",UUID:[I;111,111,111,3]}]}"
+		}
+    },
+	"diamondboo": {
+		"type": "origins:modify_crafting",
+		"recipe": "diamond_boots",
+		"result": {
+			"item": "diamond_boots",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:5,Slot:feet,Name:\"generic.armor\",UUID:[I;44,44,44,5]},{AttributeName:\"generic.armor_toughness\",Amount:3,Slot:feet,Name:\"generic.armor_toughness\",UUID:[I;10,10,10,44]},{AttributeName:\"generic.knockback_resistance\",Amount:0.1,Slot:feet,Name:\"generic.knockback_resistance\",UUID:[I;111,111,111,4]}]}"
+		}
+    },
+	"turtle": {
+		"type": "origins:modify_crafting",
+		"recipe": "turtle_helmet",
+		"result": {
+			"item": "turtle_helmet",
+			"tag": "{AttributeModifiers:[{AttributeName:\"generic.armor\",Amount:4,Slot:head,Name:\"generic.armor\",UUID:[I;11,11,11,6]}],display:{Name:'[{\"text\":\"Turtle Shell +2\",\"italic\":false}]'}}"
+		}
+    },
+	"bow": {
+		"type": "origins:modify_crafting",
+		"recipe": "bow",
+		"result": {
+			"item": "bow",
+			"tag": "{Enchantments:[{id:power,lvl:1}]}"
+		}
+    },
+	"crossbow": {
+		"type": "origins:modify_crafting",
+		"recipe": "crossbow",
+		"result": {
+			"item": "crossbow",
+			"tag": "{Enchantments:[{id:piercing,lvl:1}]}"
+		}
+    },
+	"shears": {
+		"type": "origins:modify_crafting",
+		"recipe": "shears",
+		"result": {
+			"item": "shears",
+			"tag": "{Enchantments:[{id:unbreaking,lvl:2}]}"
+		}
+    },
+	"fish": {
+		"type": "origins:modify_crafting",
+		"recipe": "fishing_rod",
+		"result": {
+			"item": "fishing_rod",
+			"tag": "{Enchantments:[{id:unbreaking,lvl:2}]}"
+		}
+    },
+	"flint": {
+		"type": "origins:modify_crafting",
+		"recipe": "flint_and_steel",
+		"result": {
+			"item": "flint_and_steel",
+			"tag": "{Enchantments:[{id:unbreaking,lvl:2}]}"
+		}
+    },
+	"shield": {
+		"type": "origins:modify_crafting",
+		"recipe": "shield",
+		"result": {
+			"item": "shield",
+			"tag": "{Enchantments:[{id:unbreaking,lvl:2}]}"
+		}
+    }
+}

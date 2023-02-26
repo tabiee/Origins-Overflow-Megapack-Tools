@@ -1,0 +1,11 @@
+{
+    "name": "Night Vision",
+    "description": "Due to your time spent in deep space you have night vision when outside of water.",
+    "condition": {
+        "type": "origins:submerged_in",
+        "fluid": "water",
+		"inverted": true
+    },
+    "type": "origins:night_vision",
+    "strength": 0.7
+}

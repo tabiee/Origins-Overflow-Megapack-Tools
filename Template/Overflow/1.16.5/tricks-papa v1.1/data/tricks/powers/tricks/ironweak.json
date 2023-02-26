@@ -1,0 +1,67 @@
+{
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:or",
+        "inverted": false,
+        "conditions": [
+            {
+                "type": "origins:attacker",
+                "inverted": false,
+                "entity_condition": {
+                    "type": "origins:equipped_item",
+                    "inverted": false,
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "inverted": false,
+                        "ingredient": {
+                            "tag": "tricks:iron"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "origins:attacker",
+                "inverted": false,
+                "entity_condition": {
+                    "type": "origins:entity_type",
+                    "inverted": false,
+                    "entity_type": "iron_golem"
+                }
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.7
+    },
+    "self_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "duration": 40,
+                "is_ambient": false,
+                "show_particles": true,
+                "show_icon": true,
+                "effect": "minecraft:weakness"
+            },
+            {
+                "duration": 40,
+                "is_ambient": false,
+                "show_particles": true,
+                "show_icon": true,
+                "effect": "minecraft:blindness"
+            },
+            {
+                "duration": 40,
+                "is_ambient": false,
+                "show_particles": true,
+                "show_icon": true,
+                "effect": "minecraft:slowness"
+            }
+        ]
+    },
+    "name": "§4§nIron Weakness",
+    "description": "Iron is deathly harmful.",
+    "hidden": false
+}

@@ -1,0 +1,7 @@
+{
+	"name": "Frostwalker",
+	"description": "Able to turn water into ice and run across it.",
+    "type": "origins:toggle",
+    "active_by_default": false,
+    "key": "secondary"
+}

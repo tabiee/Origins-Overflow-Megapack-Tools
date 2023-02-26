@@ -1,0 +1,15 @@
+{
+    "type": "origins:multiple",
+    "lava": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "additionalentityattributes:lava_visibility",
+            "operation": "addition",
+            "value": 30
+        },
+        "update_health": false
+    },
+    "imm": {
+        "type": "origins:fire_immunity"
+    }
+}

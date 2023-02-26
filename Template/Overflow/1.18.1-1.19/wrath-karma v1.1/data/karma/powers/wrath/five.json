@@ -1,0 +1,59 @@
+{
+	"name": "§5§nShadow Step",
+    "description": "Toggle invisibility.",
+	"type": "origins:multiple",
+	"invis": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "*:wrath/five_tog"
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"inverted": true,
+							"type": "origins:fluid_height",
+							"fluid": "water",
+							"comparison": ">",
+							"compare_to": 0
+						},
+						{
+							"type": "origins:in_rain",
+							"inverted": true
+						}
+					]
+				}
+			]
+		},
+		"type": "origins:invisibility",
+		"render_armor": false
+	},
+	"tog": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:wrath/pick_bit",
+					"comparison": "==",
+					"compare_to": 5
+				}
+			]
+		},
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": {
+			"key": "primary"
+		}
+	}
+}

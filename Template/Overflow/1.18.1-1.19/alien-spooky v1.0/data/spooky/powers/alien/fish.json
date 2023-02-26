@@ -1,0 +1,11 @@
+{
+    "name": "§e§nAlien Diet",
+    "description": "You only eat fish and non-meat foods.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "tag": "spooky:meat"
+        }
+    }
+}

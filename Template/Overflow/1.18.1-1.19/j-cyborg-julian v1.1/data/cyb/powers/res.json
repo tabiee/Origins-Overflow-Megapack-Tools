@@ -1,0 +1,16 @@
+{
+    "name": "§2§nResistant",
+    "description": "As stated, your body can handle much damage before breaking.",
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "resistance",
+            "duration": 55,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

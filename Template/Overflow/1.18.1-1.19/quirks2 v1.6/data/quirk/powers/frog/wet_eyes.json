@@ -1,0 +1,10 @@
+{
+	"name":"Wet Eyes",
+	"description":"You can see underwater.",
+    "type": "origins:night_vision",
+    "strength": 0.5,
+    "condition": {
+        "type": "origins:submerged_in",
+        "fluid": "minecraft:water"
+    }
+}

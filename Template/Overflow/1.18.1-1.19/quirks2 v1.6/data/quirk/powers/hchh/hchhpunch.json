@@ -1,0 +1,53 @@
+{
+	"type": "origins:target_action_on_hit",
+	"name": "Flashfire Fist",
+	"description": "Use fire and ice to punch",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [{
+		
+			"type": "origins:add_velocity",
+			"z": 1,
+			"space": "local"
+		},
+		{
+		"type": "origins:set_on_fire",
+		"duration": 3
+ 		},
+							{
+								"type": "origins:apply_effect",
+								"effect": {
+									"effect": "slowness",
+									"amplifier": 1,
+									"duration": 40,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+								}
+							},
+		{
+			"type": "origins:execute_command",
+			"permission_level": 4,
+			"command": "execute as @s run particle minecraft:flame ~ ~1 ~ 1 1 1 0 100"
+		},
+		{
+			"type": "origins:execute_command",
+			"permission_level": 4,
+			"command": "execute as @s run particle minecraft:dust 0.4 1 1 1 ~ ~1 ~ 1 1 1 0 100"
+		},
+		{
+			"type": "origins:execute_command",
+			"permission_level": 4,
+			"command": "execute run playsound minecraft:entity.generic.extinguish_fire master @p ~ ~ ~ 2 0.1"
+		}
+	]
+},
+
+
+	"cooldown": 120,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+		"bar_index": 1
+	}
+}

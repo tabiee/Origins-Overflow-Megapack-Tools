@@ -1,0 +1,38 @@
+{
+    "name": "§1§nCast Kinesis",
+    "description": "Allows you to lift and move the entity you're looking at.",
+    "type": "origins:multiple",
+    "cast": {
+        "condition": {
+            "type": "origins:food_level",
+            "comparison": ">=",
+            "compare_to": 4
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute anchored eyes positioned ^ ^ ^ anchored feet run function teir:start_ray"
+                },
+                {
+                    "type": "origins:chance",
+                    "chance": 0.25,
+                    "action": {
+                        "type": "origins:exhaust",
+                        "amount": 1
+                    }
+                }
+            ]
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "ternary",
+            "continuous": true
+        }
+    }
+}

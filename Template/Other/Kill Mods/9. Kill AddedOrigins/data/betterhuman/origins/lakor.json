@@ -1,0 +1,17 @@
+{
+    "powers": [
+        "betterhuman:healerabil",
+        "betterhuman:poisonimmune",
+        "betterhuman:poisonimmuneagain",
+        "betterhuman:hugeapetite",
+        "origins:vegetarian",
+        "origins:phantomize"
+    ],
+    "icon": "minecraft:glowstone",
+    "order": 21,
+    "impact": 2,
+    "name": "Lakor healer",
+    "description": "After the Lakor battle the healers and the fighters were sent to be scattered around earth.",
+    "loading_priority": 100,
+    "unchoosable": true
+}

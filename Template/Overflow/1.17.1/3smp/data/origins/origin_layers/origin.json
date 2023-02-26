@@ -1,0 +1,23 @@
+{
+    "replace": false,
+    "origins": [
+        "3smp:fae",
+		"3smp:piglinbrute",
+        "3smp:spectre",
+        "3smp:witherling",
+        "3smp:dontpick",
+        "3smp:speedrunner",
+        "3smp:divinechild",
+        "3smp:fallenangel",
+        "3smp:dragonkin",
+		"3smp:blazequeen",
+		"3smp:moth",
+		"3smp:shadow",
+		"3smp:dryadprince",
+		"3smp:test"
+    ],
+    "auto_choose": false,
+    "allow_random": false,
+    "enabled": true,
+    "allow_random_unchoosable": false
+}

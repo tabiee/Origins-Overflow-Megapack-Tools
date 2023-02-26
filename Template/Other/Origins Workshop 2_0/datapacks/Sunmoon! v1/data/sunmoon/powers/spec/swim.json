@@ -1,0 +1,109 @@
+{
+	"name": "§5§n§lCord Flight§r",
+	"description": "You're flying! As long as there's a celling...",
+	"badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "Drains power when in use."
+        }
+    ],
+	"type": "origins:multiple",
+	"go": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "sunmoon:spec/swim_tap"
+				},
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:gamemode",
+					"gamemode": "survival"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:spec/swim_trigger",
+					"comparison": "!=",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:swimming"
+	},
+	"tap": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:gamemode",
+					"gamemode": "survival"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:spec/tog-movement_deltog2",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:indicator_synced",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": {
+			"key": "key.saveToolbarActivator"
+		},
+		"retain_state": false
+	},
+	"trigger": {
+		"type": "origins:cooldown",
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 0
+		}
+	},
+	"act": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "sunmoon:spec/swim_tap"
+				},
+				{
+					"type": "origins:gamemode",
+					"gamemode": "survival"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute positioned ~ ~1 ~ facing ~ 1000 ~ run function sunmoon:cord"
+				}
+			]
+		}
+	}
+}

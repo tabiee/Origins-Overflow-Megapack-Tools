@@ -1,0 +1,21 @@
+{
+	"powers": [
+		"spirit:knight/sword",
+		"spirit:knight/souls",
+		"spirit:knight/ghost",
+		"spirit:knight/loyal",
+		"spirit:knight/weak",
+		"spirit:knight/debug",
+		"spirit:knight/tagger",
+		"spirit:knight/dogpower",
+		"spirit:knight/shiny",
+		"spirit:knight/particles"
+	],
+	"icon": {
+		"item": "minecraft:diamond_sword",
+		"tag": "{Enchantments:[{}]}"
+	},
+	"impact": 3,
+	"name": "§3§l§oSpirit Knight",
+	"description": "An ancient spirit that once served under a powerful king. This knight wielded an Enchanted Blade that follows it, even as a spirit."
+}

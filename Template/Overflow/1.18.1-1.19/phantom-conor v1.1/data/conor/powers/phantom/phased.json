@@ -1,0 +1,108 @@
+{
+    "name": "§e§nPhantastic Form",
+    "description": "While Phasing, you are far more powerful, however after 5 minutes you suffer from Nausea and must unphase for some time to regain your strength.",
+    "type": "origins:multiple",
+    "timer": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 6000,
+        "start_value": 6000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 5
+        },
+        "min_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.strider.death",
+                    "volume": 1,
+                    "pitch": 1.2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle squid_ink ~ ~ ~ 2 0.2 2 0 100",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:phantom/phased_ick",
+                    "change": 600
+                }
+            ]
+        }
+    },
+    "ick": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 600,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 18,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:phantom/phased_ick",
+                "comparison": "!=",
+                "compare_to": 0
+            }
+        }
+    },
+    "act": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:phantom/phased_ick",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:phantom/phasing_tog"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "nausea",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        }
+    },
+    "cd": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:phantom/phased_ick",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:power_active",
+                    "power": "*:phantom/phasing_tog"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:phantom/phased_ick",
+            "change": -1
+        }
+    }
+}

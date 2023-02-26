@@ -1,0 +1,10 @@
+{
+    "name": "§4§nCorrupt Heart",
+    "description": "Your body has withered your hearts away.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": -6
+    }
+}

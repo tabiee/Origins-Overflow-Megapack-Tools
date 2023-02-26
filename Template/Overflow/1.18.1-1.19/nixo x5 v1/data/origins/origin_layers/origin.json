@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "origins": [
+    "nixo:apex",
+    "nixo:cow",
+    "nixo:saiyan",
+    "nixo:lion",
+    "nixo:sword"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+    "powers": [
+        "betterhuman:fireshootm",
+        "betterhuman:dakormage",
+        "betterhuman:hugeapetite",
+        "betterhuman:waterbreathall",
+        "origins:no_shield",
+        "betterhuman:rainpartic",
+        "origins:phantomize"
+    ],
+    "icon": "minecraft:redstone_torch",
+    "order": 19,
+    "impact": 2,
+    "name": "Dakor Water Mage",
+    "description": "The Dakor Water Mage was the thing that ended lakors",
+    "loading_priority": 100,
+    "unchoosable": true
+}

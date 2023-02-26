@@ -1,0 +1,32 @@
+{
+	"name": "§2§nFiery Touch",
+	"description": "Set enemies on fire in melee combat.",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:fluid_height",
+				"fluid": "water",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			{
+				"inverted": true,
+				"type": "origins:in_rain"
+			}
+		]
+	},
+	"type": "origins:target_action_on_hit",
+	"damage_condition": {
+        "inverted": true,
+        "type": "origins:projectile"
+    },
+	"entity_action": {
+        "type": "origins:set_on_fire",
+        "duration": 3
+    },
+	"cooldown": 100,
+	"hud_render": {
+		"should_render": false
+	}
+}

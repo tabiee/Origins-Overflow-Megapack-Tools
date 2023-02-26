@@ -1,0 +1,14 @@
+{
+	"unchoosable": true,
+	"powers": [
+		"magnus:farm/prevent",
+		"magnus:king/crown",
+		"magnus:king/royal",
+		"magnus:farm/cook"
+	],
+	"icon": "crowns:crown_classic_design_helmet",
+	"impact": 1,
+	"order": 4,
+	"name": "§e§l§oKing",
+	"description": "Heavy is the head that wears the crown."
+}

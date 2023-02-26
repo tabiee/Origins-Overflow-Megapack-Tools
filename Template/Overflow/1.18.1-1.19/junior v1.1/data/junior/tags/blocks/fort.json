@@ -1,0 +1,29 @@
+{
+	"replace": false,
+	"values": [
+		"amethyst_cluster",
+		"coal_ore",
+		"copper_ore",
+		"deepslate_coal_ore",
+		"deepslate_copper_ore",
+		"diamond_ore",
+		"emerald_ore",
+		"deepslate_diamond_ore",
+		"deepslate_emerald_ore",
+		"gilded_blackstone",
+		"glowstone",
+		"gold_ore",
+		"deepslate_gold_ore",
+		"iron_ore",
+		"deepslate_iron_ore",
+		"lapis_ore",
+		"nether_gold_ore",
+		"nether_quartz_ore",
+		"deepslate_redstone_ore",
+		"redstone_ore",
+		"betternether:cincinnasite_ore",
+		"betternether:nether_ruby_ore",
+		"betternether:nether_lapis_ore",
+		"betternether:nether_redstone_ore"
+	]
+}

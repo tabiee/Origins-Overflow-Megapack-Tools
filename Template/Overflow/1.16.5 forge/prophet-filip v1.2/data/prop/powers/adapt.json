@@ -1,0 +1,1277 @@
+{
+    "name": "§9§nAdaptation§r",
+    "description": "You take more damage from all mobs, but are able to adapt to damage from every mob. Taking hits from certain mob types increases your resistance to that type, up to 5x less damage taken.",
+    "type": "origins:multiple",
+    "res_elem": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 500,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 3,
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:adapt_hit_elem",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            }
+        }
+    },
+    "hit_elem": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:elem"
+            }
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:adapt_res_elem",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        },
+        "cooldown": 40,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "dmg_elem1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_elem",
+                    "comparison": "<",
+                    "compare_to": 50
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:elem"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "dmg_elem2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_elem",
+                    "comparison": ">=",
+                    "compare_to": 50
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_elem",
+                    "comparison": "<",
+                    "compare_to": 100
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:elem"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    },
+    "dmg_elem3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_elem",
+                    "comparison": ">=",
+                    "compare_to": 300
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_elem",
+                    "comparison": "<",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:elem"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.4
+        }
+    },
+    "dmg_elem4": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_elem",
+                    "comparison": "==",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:elem"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.8
+        }
+    },
+    "res_end": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 500,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 11,
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:adapt_hit_end",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            }
+        }
+    },
+    "hit_end": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:end"
+            }
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:adapt_res_end",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        },
+        "cooldown": 40,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "dmg_end1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_end",
+                    "comparison": "<",
+                    "compare_to": 50
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:end"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "dmg_end2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_end",
+                    "comparison": ">=",
+                    "compare_to": 50
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_end",
+                    "comparison": "<",
+                    "compare_to": 100
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:end"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    },
+    "dmg_end3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_end",
+                    "comparison": ">=",
+                    "compare_to": 300
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_end",
+                    "comparison": "<",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:end"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.4
+        }
+    },
+    "dmg_end4": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_end",
+                    "comparison": "==",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:end"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.8
+        }
+    },
+    "res_nether": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 500,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 23,
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:adapt_hit_nether",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            }
+        }
+    },
+    "hit_nether": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:nether"
+            }
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:adapt_res_nether",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        },
+        "cooldown": 40,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "dmg_nether1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_nether",
+                    "comparison": "<",
+                    "compare_to": 50
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:nether"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "dmg_nether2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_nether",
+                    "comparison": ">=",
+                    "compare_to": 50
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_nether",
+                    "comparison": "<",
+                    "compare_to": 100
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:nether"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    },
+    "dmg_nether3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_nether",
+                    "comparison": ">=",
+                    "compare_to": 300
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_nether",
+                    "comparison": "<",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:nether"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.4
+        }
+    },
+    "dmg_nether4": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_nether",
+                    "comparison": "==",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:nether"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.8
+        }
+    },
+    "res_other": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 500,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 13,
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:adapt_hit_other",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            }
+        }
+    },
+    "hit_other": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:other"
+            }
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:adapt_res_other",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        },
+        "cooldown": 40,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "dmg_other1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_other",
+                    "comparison": "<",
+                    "compare_to": 50
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:other"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "dmg_other2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_other",
+                    "comparison": ">=",
+                    "compare_to": 50
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_other",
+                    "comparison": "<",
+                    "compare_to": 100
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:other"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    },
+    "dmg_other3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_other",
+                    "comparison": ">=",
+                    "compare_to": 300
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_other",
+                    "comparison": "<",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:other"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.4
+        }
+    },
+    "dmg_other4": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_other",
+                    "comparison": "==",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:other"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.8
+        }
+    },
+    "res_pilla": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 500,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 17,
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:adapt_hit_pilla",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            }
+        }
+    },
+    "hit_pilla": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:pilla"
+            }
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:adapt_res_pilla",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        },
+        "cooldown": 40,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "dmg_pilla1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_pilla",
+                    "comparison": "<",
+                    "compare_to": 50
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:pilla"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "dmg_pilla2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_pilla",
+                    "comparison": ">=",
+                    "compare_to": 50
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_pilla",
+                    "comparison": "<",
+                    "compare_to": 100
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:pilla"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    },
+    "dmg_pilla3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_pilla",
+                    "comparison": ">=",
+                    "compare_to": 300
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_pilla",
+                    "comparison": "<",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:pilla"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.4
+        }
+    },
+    "dmg_pilla4": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_pilla",
+                    "comparison": "==",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:pilla"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.8
+        }
+    },
+    "res_small": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 500,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 18,
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:adapt_hit_small",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            }
+        }
+    },
+    "hit_small": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:small"
+            }
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:adapt_res_small",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        },
+        "cooldown": 40,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "dmg_small1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_small",
+                    "comparison": "<",
+                    "compare_to": 50
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:small"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "dmg_small2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_small",
+                    "comparison": ">=",
+                    "compare_to": 50
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_small",
+                    "comparison": "<",
+                    "compare_to": 100
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:small"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    },
+    "dmg_small3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_small",
+                    "comparison": ">=",
+                    "compare_to": 300
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_small",
+                    "comparison": "<",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:small"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.4
+        }
+    },
+    "dmg_small4": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_small",
+                    "comparison": "==",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:small"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.8
+        }
+    },
+    "res_undead": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 500,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 14,
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:adapt_hit_undead",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            }
+        }
+    },
+    "hit_undead": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:undead"
+            }
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:adapt_res_undead",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        },
+        "cooldown": 40,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "dmg_undead1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_undead",
+                    "comparison": "<",
+                    "compare_to": 50
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:undead"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "dmg_undead2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_undead",
+                    "comparison": ">=",
+                    "compare_to": 50
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_undead",
+                    "comparison": "<",
+                    "compare_to": 100
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:undead"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    },
+    "dmg_undead3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_undead",
+                    "comparison": ">=",
+                    "compare_to": 300
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_undead",
+                    "comparison": "<",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:undead"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.4
+        }
+    },
+    "dmg_undead4": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_undead",
+                    "comparison": "==",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:undead"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.8
+        }
+    },
+    "res_water": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 500,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 12,
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:adapt_hit_water",
+                        "comparison": "!=",
+                        "compare_to": 0
+                    }
+                ]
+            }
+        }
+    },
+    "hit_water": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:water"
+            }
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:adapt_res_water",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        },
+        "cooldown": 40,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "dmg_water1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_water",
+                    "comparison": "<",
+                    "compare_to": 50
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:water"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "dmg_water2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_water",
+                    "comparison": ">=",
+                    "compare_to": 50
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_water",
+                    "comparison": "<",
+                    "compare_to": 100
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:water"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    },
+    "dmg_water3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_water",
+                    "comparison": ">=",
+                    "compare_to": 300
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_water",
+                    "comparison": "<",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:water"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.4
+        }
+    },
+    "dmg_water4": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:adapt_res_water",
+                    "comparison": "==",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "prop:water"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.8
+        }
+    }
+}

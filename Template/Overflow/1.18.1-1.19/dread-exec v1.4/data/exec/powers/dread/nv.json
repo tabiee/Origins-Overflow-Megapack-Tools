@@ -1,0 +1,10 @@
+{
+    "name": "§1§nNight Vision",
+    "description": "Toggle night vision at will.",
+    "type": "origins:toggle_night_vision",
+    "active_by_default": true,
+    "strength": 0.7,
+    "key": {
+        "key": "primary"
+    }
+}

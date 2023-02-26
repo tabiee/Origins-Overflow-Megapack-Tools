@@ -1,0 +1,33 @@
+{
+    "type": "origins:multiple",
+    "name": "§5§nMoth's Flight [Primary]",
+    "description": "Spread your wings during the night.",
+    "creative": {
+        "type": "origins:creative_flight",
+        "condition": {
+            "type": "origins:and",
+            "inverted": true,
+            "conditions": [
+                {
+                    "type": "origins:daytime",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:food_level",
+                    "inverted": false,
+                    "comparison": ">",
+                    "compare_to": 14
+                },
+                {
+                    "type": "origins:health",
+                    "inverted": false,
+                    "comparison": ">",
+                    "compare_to": 15
+                }
+            ]
+        }
+    },
+    "wings": {
+        "type": "origins:simple"
+        }
+}

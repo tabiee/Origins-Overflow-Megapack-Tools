@@ -1,0 +1,17 @@
+{
+    "name": "§6§nImpervious Skin",
+    "description": "You are immune to fire, and have 3 extra hearts, and 3 extra armor points.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 6
+        },
+        {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": 6
+        }
+    ]
+}

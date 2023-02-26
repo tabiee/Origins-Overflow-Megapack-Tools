@@ -1,0 +1,15 @@
+{
+    "hidden": true,
+    "condition": {
+        "inverted": true,
+        "type": "origins:status_effect",
+        "effect": "invisibility"
+    },
+        "type": "origins:action_over_time",
+        "interval": 6,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle portal ~ ~ ~ 0.5 0.5 0.5 0 2",
+            "permission_level": 4
+        }
+	}

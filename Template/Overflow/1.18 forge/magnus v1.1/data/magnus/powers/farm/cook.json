@@ -1,0 +1,33 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "block": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "farmersdelight:cooking_pot"
+                },
+                {
+                    "type": "origins:block",
+                    "block": "farmersdelight:stove"
+                },
+				{
+                    "type": "origins:block",
+                    "block": "farmersdelight:skillet"
+                }
+            ]
+        }
+    },
+    "item": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "farmersdelight:skillet"
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:redstone_block",
+        "minecraft:redstone_ore",
+        "minecraft:deepslate_redstone_ore",
+        "minecraft:redstone_lamp",
+        "minecraft:redstone_torch",
+        "minecraft:repeater",
+        "minecraft:redstone_wire",
+        "minecraft:comparator"
+    ]
+}

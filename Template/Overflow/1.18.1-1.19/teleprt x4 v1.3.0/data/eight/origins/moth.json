@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"eight:moth/elytra",
+		"eight:moth/jumps",
+		"eight:moth/nv",
+		"eight:moth/water"
+	],
+	"icon": "minecraft:dead_brain_coral_fan",
+	"impact": 2,
+	"name": "§7§l§oMoth",
+	"description": "Winged insect humanoid."
+}

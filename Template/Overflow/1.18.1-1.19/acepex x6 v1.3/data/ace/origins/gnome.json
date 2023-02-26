@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"ace:gnome/boost",
+		"ace:gnome/invis",
+		"ace:gnome/hero",
+		"ace:gnome/mining",
+		"ace:gnome/speed",
+		"ace:gnome/size",
+		"origins:vegetarian",
+		"ace:gnome/hp",
+		"ace:angel/falldmg",
+		"ace:yeti/fire"
+	],
+	"icon": "minecraft:golden_shovel",
+	"impact": 1,
+	"name": "Gnome",
+	"description": "A really small person."
+}

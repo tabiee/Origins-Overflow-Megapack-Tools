@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"spark:model",
+		"spark:light",
+		"spark:shock",
+		"spark:fire",
+		"spark:teamer",
+		"spark:food",
+		"spark:water"
+	],
+	"icon": "minecraft:light",
+	"impact": 3,
+	"name": "§e§l§oSpark",
+	"description": "Your ancestors were overexposed to light to the point that you gained the ability to glow like the Sun."
+}

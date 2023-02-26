@@ -1,0 +1,80 @@
+{
+	"name": "Freezing Aura",
+	"description": "Toggle the ability to freeze everything around you, including water.",
+	"type": "origins:multiple",
+	"tap": {
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": "primary"
+	},
+	"walk": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "dark:ice/freeze_tap"
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 minecraft:frosted_ice replace minecraft:water",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "summon area_effect_cloud ~ ~ ~ {Particle:\"snowflake\",Radius:8f,Duration:1}",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"other": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "dark:ice/freeze_tap"
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=!iceb,distance=..8] at @s run power grant @s dark:ice/frozen",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[distance=8..] at @s run power revoke @s dark:ice/frozen",
+					"permission_level": 4
+				}
+			]
+		},
+		"falling_action": {
+			"type": "origins:execute_command",
+			"command": "execute as @e at @s run power revoke @s dark:ice/frozen",
+			"permission_level": 4
+		}
+	},
+	"float": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:fluid_height",
+					"fluid": "minecraft:water",
+					"comparison": "<=",
+					"compare_to": 0.1
+				},
+				{
+					"type": "origins:power_active",
+					"power": "dark:ice/freeze_tap"
+				}
+			]
+		},
+		"type": "origins:walk_on_fluid",
+		"fluid": "minecraft:water"
+	}
+}

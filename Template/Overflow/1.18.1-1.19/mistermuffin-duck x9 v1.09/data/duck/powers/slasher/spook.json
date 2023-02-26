@@ -1,0 +1,211 @@
+{
+    "name": "§e§nSpooky Aura§r",
+    "description": "When you are crouching you make random scary noises.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:chance",
+        "chance": 0.5,
+        "action": {
+            "type": "origins:choice",
+            "actions": [
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.vex.ambient master @a[distance=..30] ~ ~ ~ 1 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.strider.death master @a[distance=..30] ~ ~ ~ 1 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.warden.nearby_close master @a[distance=..30] ~ ~ ~ 1 1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.warden.agitated master @a[distance=..30] ~ ~ ~ 1 0.5"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:block.sculk_shrieker.shriek master @a[distance=..30] ~ ~ ~ 0.5 2"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:ambient.cave master @a[distance=..30] ~ ~ ~ 1 0.5"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:ambient.soul_sand_valley.additions master @a[distance=..30] ~ ~ ~ 5 0.5"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:ambient.basalt_deltas.additions master @a[distance=..30] ~ ~ ~ 5 0.5"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.wither.hurt master @a[distance=..30] ~ ~ ~ 1 0.5"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.wolf.howl master @a[distance=..30] ~ ~ ~ 0.5 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:ambient.warped_forest.mood master @a[distance=..30] ~ ~ ~ 1 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:ambient.warped_forest.additions master @a[distance=..30] ~ ~ ~ 1 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:ambient.nether_wastes.additions master @a[distance=..30] ~ ~ ~ 1 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:ambient.nether_wastes.mood master @a[distance=..30] ~ ~ ~ 1 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.allay.death master @a[distance=..30] ~ ~ ~ 0.15 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.allay.ambient_without_item master @a[distance=..30] ~ ~ ~ 0.15 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.warden.nearby_closest master @a[distance=..30] ~ ~ ~ 1 0.5"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:sculk_catalyst.bloom master @a[distance=..30] ~ ~ ~ 10 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:sculk.charge master @a[distance=..30] ~ ~ ~ 10 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:sculk.spread master @a[distance=..30] ~ ~ ~ 10 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:block.end_portal.spawn master @a[distance=..30] ~ ~ ~ 0.1 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.phantom.ambient master @a[distance=..30] ~ ~ ~ 0.15 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.phantom.death master @a[distance=..30] ~ ~ ~ 0.15 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.phantom.swoop master @a[distance=..30] ~ ~ ~ 10 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.elder_guardian.death master @a[distance=..30] ~ ~ ~ 1 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.elder_guardian.ambient master @a[distance=..30] ~ ~ ~ 1 0.1"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.skeleton_horse.death master @a[distance=..30] ~ ~ ~ 0.15 0.1"
+                    }
+                }
+            ]
+        }
+    },
+    "cooldown": 200,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": {
+        "key": "key.sneak",
+        "continuous": true
+    }
+}

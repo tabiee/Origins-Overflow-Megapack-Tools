@@ -1,0 +1,15 @@
+{
+	"powers": [
+	    "ogcbat:bat/launch",
+		"ogcbat:bat/nightvis",
+		"ogcbat:bat/elytra",
+		"ogcbat:bat/sleep",
+		"ogcbat:bat/kinetic",
+		"ogcbat:bat/sunblind",
+		"ogcbat:bat/slowswim"
+	],
+	"icon": "minecraft:bat_spawn_egg",
+	"impact": 1,
+	"name": "§8§l§oBatborn",
+	"description": "From the vast reaches of the caves, this flying rat is bound to cause some trouble."
+}

@@ -1,0 +1,38 @@
+{
+	"name": "§e§nGhostly Body",
+	"description": "You have a translucent body.\nYou are lighter so you fall slightly slower but will still take damage if falling from more than 5 blocks.",
+	"type": "origins:multiple",
+	"model": {
+		"type": "origins:model_color",
+		"red": 1,
+		"green": 1,
+		"blue": 1,
+		"alpha": 0.5
+	},
+	"fall": {
+		"type": "origins:modify_falling",
+		"velocity": 0.03,
+		"take_fall_damage": true
+	},
+	"dmg": {
+		"condition": {
+			"type": "origins:fall_distance",
+			"comparison": "<=",
+			"compare_to": 5
+		},
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
+		}
+	}
+}

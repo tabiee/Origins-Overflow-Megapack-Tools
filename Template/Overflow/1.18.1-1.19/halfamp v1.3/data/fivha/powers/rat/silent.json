@@ -1,0 +1,36 @@
+{
+    "type": "origins:prevent_game_event",
+	"condition": {
+            "type": "origins:resource",
+            "resource": "*:rat/stealth_toggle",
+			"comparison": "==",
+			"compare_to": 1
+        },
+    "events": [
+"minecraft:step",
+"minecraft:swim",
+"minecraft:projectile_shoot",
+"minecraft:block_change",
+"minecraft:equip",
+"minecraft:eat",
+"minecraft:shear",
+"minecraft:block_close",
+"minecraft:block_unswitch",
+"minecraft:block_unpress",
+"minecraft:block_detach",
+"minecraft:block_open",
+"minecraft:block_switch",
+"minecraft:block_press",
+"minecraft:block_attach",
+"minecraft:block_place",
+"minecraft:entity_place",
+"minecraft:fluid_place",
+"minecraft:block_destroy",
+"minecraft:container_open",
+"minecraft:container_close",
+"minecraft:shulker_open",
+"minecraft:shulker_close",
+"minecraft:entity_killed"
+	],
+    "hidden": true
+}

@@ -1,0 +1,43 @@
+{
+    "name": "§5§nIn My Element",
+    "description": "You can walk through any stone and ores, but it drains your hunger.",
+    "type": "origins:multiple",
+    "tap": {
+        "type": "origins:toggle",
+        "active_by_default": true,
+        "key": "primary"
+    },
+    "walk": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:emer/stonephase_tap"
+        },
+        "type": "origins:phasing",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "fivshad:stones"
+        },
+        "render_type": "blindness",
+        "view_distance": 10,
+        "phase_down_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:on_block"
+                }
+            ]
+        }
+    },
+    "exhaust": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:emer/stonephase_tap"
+        },
+        "type": "origins:exhaust",
+        "interval": 100,
+        "exhaustion": 4
+    }
+}

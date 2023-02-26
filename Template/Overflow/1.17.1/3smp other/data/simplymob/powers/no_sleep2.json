@@ -1,0 +1,7 @@
+{
+    "type": "origins:prevent_sleep",
+    "message": "This bed is way too uncomfortable to sleep in.",
+    "set_spawn_point": false,
+    "name": "No Sleep",
+    "description": "The way your body is prevents you from using a bed"
+}

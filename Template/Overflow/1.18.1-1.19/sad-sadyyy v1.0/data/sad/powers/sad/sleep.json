@@ -1,0 +1,7 @@
+{
+    "name": "§6§nRestless Slumber",
+    "description": "The dead don't sleep.",
+    "type": "origins:prevent_sleep",
+    "message": "No rest for the wicked.",
+    "set_spawn_point": true
+}

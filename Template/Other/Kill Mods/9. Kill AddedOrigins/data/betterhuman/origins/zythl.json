@@ -1,0 +1,19 @@
+{
+    "powers": [
+        "origins:translucent",
+        "origins:fire_immunity",
+        "betterhuman:not_so_fine",
+        "betterhuman:lavakiller",
+        "betterhuman:zythlpower",
+        "betterhuman:zythlheal",
+        "origins:phantomize",
+        "origins:no_shield"
+    ],
+    "icon": "minecraft:andesite",
+    "order": 24,
+    "impact": 2,
+    "name": "Zythl",
+    "description": "These creatures have never before been seen until now",
+    "loading_priority": 100,
+    "unchoosable": true
+}

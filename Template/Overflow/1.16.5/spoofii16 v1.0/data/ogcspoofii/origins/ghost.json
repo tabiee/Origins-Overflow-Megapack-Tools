@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"ogcspoofii:ghost/living",
+		"ogcspoofii:ghost/ghostpower",
+		"ogcspoofii:ghost/sword",
+		"ogcspoofii:ghost/ghosty",
+		"ogcspoofii:ghost/hp",
+		"ogcspoofii:ghost/nohands"
+	],
+	"icon": "minecraft:totem",
+	"unchoosable": true,
+	"impact": 3,
+	"name": "§7§lGhost!",
+	"description": "You can't do anything until you kill."
+}

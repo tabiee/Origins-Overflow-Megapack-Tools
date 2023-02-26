@@ -1,0 +1,10 @@
+{
+	"powers": [
+		"class:bard/song",
+		"class:bard/dmg"
+	],
+	"icon": "minecraft:jukebox",
+	"impact": 1,
+	"name": "§5§l§oBard",
+	"description": "Not a fighter, but provides great support with magic."
+}

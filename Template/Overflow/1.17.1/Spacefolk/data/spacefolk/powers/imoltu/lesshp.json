@@ -1,0 +1,10 @@
+{
+    "name": "Fragile",
+    "description": "You have 8 hearts.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": -4
+    }
+}

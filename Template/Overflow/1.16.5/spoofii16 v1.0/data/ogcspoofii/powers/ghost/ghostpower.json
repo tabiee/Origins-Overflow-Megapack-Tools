@@ -1,0 +1,217 @@
+{
+    "name": "Rising Anger",
+    "description": "With each further death you grow more powerful.",
+	"condition": {
+        "type": "origins:origin",
+        "origin": "ogcspoofii:ghost",
+        "layer": "origins:origin"
+	},
+    "type": "origins:multiple",
+    "nuggets": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 5,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "callback": {
+        "type": "origins:action_on_callback",
+        "execute_chosen_when_orb": false,
+        "entity_action_respawned": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "inverted": true,
+                        "type": "origins:status_effect",
+                        "effect": "strength"
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:ghost/ghostpower_nuggets",
+						"operation": "set",
+                        "change": 1
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:status_effect",
+                        "effect": "strength",
+                        "min_amplifier": 0,
+                        "max_amplifier": 0
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:ghost/ghostpower_nuggets",
+						"operation": "set",
+                        "change": 2
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:status_effect",
+                        "effect": "strength",
+                        "min_amplifier": 1,
+                        "max_amplifier": 1
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:ghost/ghostpower_nuggets",
+						"operation": "set",
+                        "change": 3
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:status_effect",
+                        "effect": "strength",
+                        "min_amplifier": 2,
+                        "max_amplifier": 2
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:ghost/ghostpower_nuggets",
+						"operation": "set",
+                        "change": 4
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:status_effect",
+                        "effect": "strength",
+                        "max_amplifier": 3,
+                        "min_amplifier": 3
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:ghost/ghostpower_nuggets",
+						"operation": "set",
+                        "change": 5
+                    }
+                }
+            ]
+        }
+    },
+    "one": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:ghost/ghostpower_nuggets",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:delay",
+            "action": {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "strength",
+                    "duration": 30,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            },
+            "ticks": 20
+        }
+    },
+    "two": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:ghost/ghostpower_nuggets",
+            "comparison": "==",
+            "compare_to": 2
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:delay",
+            "action": {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "strength",
+                    "duration": 30,
+                    "amplifier": 1,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            },
+            "ticks": 20
+        }
+    },
+    "three": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:ghost/ghostpower_nuggets",
+            "comparison": "==",
+            "compare_to": 3
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:delay",
+            "action": {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "strength",
+                    "duration": 30,
+                    "amplifier": 2,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            },
+            "ticks": 20
+        }
+    },
+    "four": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:ghost/ghostpower_nuggets",
+            "comparison": "==",
+            "compare_to": 4
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:delay",
+            "action": {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "strength",
+                    "duration": 30,
+                    "amplifier": 3,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            },
+            "ticks": 20
+        }
+    },
+    "five": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:ghost/ghostpower_nuggets",
+            "comparison": "==",
+            "compare_to": 5
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:delay",
+            "action": {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "strength",
+                    "duration": 30,
+                    "amplifier": 4,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            },
+            "ticks": 20
+        }
+    }
+}

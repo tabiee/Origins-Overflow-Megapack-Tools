@@ -1,0 +1,16 @@
+{
+    "name": "§2§nSharp Talons",
+    "description": "Whenever someone hits you, they get scratched by your talons and beak.",
+    "type": "origins:attacker_action_when_hit",
+    "entity_action": {
+        "type": "origins:damage",
+        "amount": 1,
+        "source": {
+            "name": "thorns"
+        }
+    },
+    "cooldown": 1,
+    "hud_render": {
+        "should_render": false
+    }
+}

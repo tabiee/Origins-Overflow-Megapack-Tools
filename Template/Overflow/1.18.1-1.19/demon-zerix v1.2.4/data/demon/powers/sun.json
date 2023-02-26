@@ -1,0 +1,61 @@
+{
+    "name": "§4§nScorching Sunlight",
+    "description": "Sunlight tires you, and eventually could kill you.",
+    "type": "origins:multiple",
+    "exh": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:exposed_to_sun"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:exhaust",
+                    "amount": 0.5
+                }
+            ]
+        }
+    },
+    "dmg": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:exposed_to_sun"
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": "<=",
+                    "compare_to": 6
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:exhaust",
+                    "amount": 0.5
+                },
+                {
+                    "type": "origins:damage",
+                    "amount": 2,
+                    "source": {
+                        "name": "starve",
+                        "bypasses_armor": true,
+                        "unblockable": true
+                    }
+                }
+            ]
+        }
+    }
+}

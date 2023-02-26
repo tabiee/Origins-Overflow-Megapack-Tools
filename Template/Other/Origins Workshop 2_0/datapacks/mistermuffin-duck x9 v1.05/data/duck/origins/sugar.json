@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"duck:sugar/speed",
+		"duck:sugar/jump",
+		"duck:sugar/size",
+		"duck:sugar/eat",
+		"duck:sugar/sweet",
+		"duck:sugar/fall"
+	],
+	"icon": "minecraft:sugar",
+	"impact": 1,
+	"name": "§d§l§oSugar Rush",
+	"description": "You got the zoomies!"
+}

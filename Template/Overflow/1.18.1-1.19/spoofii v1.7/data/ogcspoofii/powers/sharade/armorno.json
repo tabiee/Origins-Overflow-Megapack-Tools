@@ -1,0 +1,12 @@
+{
+    "name": "Helm",
+    "description": "You refuse to wear anything other than gold.",
+    "type": "origins:restrict_armor",
+    "head": {
+        "inverted": true,
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "golden_helmet"
+        }
+    }
+}

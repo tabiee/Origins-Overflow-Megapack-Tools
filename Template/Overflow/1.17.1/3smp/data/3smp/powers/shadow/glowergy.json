@@ -1,0 +1,25 @@
+{
+	"name": "§4§nBlinding Light",
+	"description": "Light hurts, making it hard to move.",
+    "type": "origins:action_over_time",
+    "rising_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "duration": 100,
+            "is_ambient": false,
+            "show_particles": false,
+            "show_icon": false,
+            "effect": "wither"
+        }
+    },
+    "falling_action": {
+        "type": "origins:clear_effect",
+        "effect": "wither"
+    },
+    "condition": {
+        "type": "origins:status_effect",
+        "inverted": false,
+        "effect": "glowing"
+    },
+    "interval": 100
+}

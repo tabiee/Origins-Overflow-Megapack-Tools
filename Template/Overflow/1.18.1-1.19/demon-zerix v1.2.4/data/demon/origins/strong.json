@@ -1,0 +1,27 @@
+{
+	"unchoosable": true,
+	"powers": [
+		"demon:strong/sword",
+		"demon:strong/rankup",
+		"demon:strong/hp",
+		"demon:strong/tp",
+		"demon:strong/dimhop",
+		"demon:strong/stats",
+		"demon:weak/xp",
+		"demon:fire",
+		"demon:gold",
+		"demon:poison",
+		"demon:nether",
+		"demon:iron",
+		"demon:sun",
+		"demon:lava",
+		"demon:hunger",
+		"demon:fortune",
+		"demon:tagger",
+		"demon:beds"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"impact": 3,
+	"name": "§c§l§oDemon: Strong",
+	"description": "The second lowest form of demon."
+}

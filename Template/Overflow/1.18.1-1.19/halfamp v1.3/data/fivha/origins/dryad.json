@@ -1,0 +1,21 @@
+{
+	"powers": [
+	    "fivha:dryad/roots",
+	    "fivha:dryad/hp",
+		"fivha:dryad/tagger",
+		"fivha:dryad/crops",
+		"fivha:dryad/secon",
+		"fivha:dryad/nightv",
+		"fivha:dryad/firedmg",
+		"fivha:dryad/weak",
+		"fivha:dryad/waterbar",
+		"fivha:dryad/photosyn",
+		"fivha:dryad/diet",
+		"fivha:dryad/honey",
+		"fivha:dryad/bees"
+	],
+	"icon": "minecraft:red_tulip",
+	"impact": 1,
+	"name": "§2§l§oDryad",
+	"description": "Creature of nature."
+}

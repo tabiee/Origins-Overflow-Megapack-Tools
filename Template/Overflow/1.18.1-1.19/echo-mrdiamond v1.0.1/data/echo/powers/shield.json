@@ -1,0 +1,125 @@
+{
+    "name": "Sound Barrier",
+    "description": "You create a shield of sound waves to stop any incoming ranged attacks. You can hold it up for as long as you had the stamina for it. The stamina would last for 15 seconds max and would recharge 1 second every 2 seconds.",
+    "type": "origins:multiple",
+    "tap": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:shield_dur",
+                    "comparison": "!=",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:block_in_radius",
+                    "block_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "dampens_vibrations"
+                    },
+                    "radius": 3,
+                    "shape": "cube",
+                    "comparison": ">=",
+                    "compare_to": 6
+                }
+            ]
+        },
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "key.loadToolbarActivator"
+        },
+        "retain_state": false
+    },
+    "inv": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:shield_tap"
+                }
+            ]
+        },
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:projectile"
+        }
+    },
+    "dur": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 300,
+        "start_value": 300,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 0,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:shield_dur",
+                "comparison": "!=",
+                "compare_to": 300
+            }
+        }
+    },
+    "drain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:shield_tap"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:shield_dur",
+                    "change": -1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute positioned ~ ~-0.33 ~ rotated 90 0 run function echo:anim2/animate"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:block.amethyst_block.chime master @a[distance=..8] ~ ~ ~ 3 1.75"
+                }
+            ]
+        }
+    },
+    "gain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:power_active",
+                    "power": "*:shield_tap"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:shield_dur",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        }
+    }
+}

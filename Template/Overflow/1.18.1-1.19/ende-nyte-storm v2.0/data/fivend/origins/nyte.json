@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"fivend:nyte/deltog",
+		"fivend:nyte/creative",
+		"fivend:nyte/woop",
+		"fivend:nyte/hunger",
+		"fivend:nyte/xp",
+		"fivend:nyte/pick",
+		"fivend:nyte/immune",
+		"fivend:nyte/silky"
+	],
+	"icon": "minecraft:end_portal_frame",
+	"impact": 3,
+	"name": "§5§l§oThe Nytewalker",
+	"description": "A masked entity that comes from The End."
+}

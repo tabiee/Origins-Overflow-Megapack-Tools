@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"duck:friendly",
+		"duck:slowfall",
+		"duck:boing",
+		"duck:veggie",
+		"duck:gluten",
+		"duck:size"
+	],
+	"icon": "minecraft:feather",
+	"impact": 1,
+	"name": "§e§l§oDuck in a suit",
+	"description": "Gone from the pond and never to come back."
+}

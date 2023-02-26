@@ -1,0 +1,49 @@
+{
+    "name": "§2§nDual-wielder",
+    "description": "When holding a sword in both hands, you move faster, deal more damage and have increased health.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "nixo:sword"
+                    }
+                }
+            },
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "offhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "nixo:sword"
+                    }
+                }
+            }
+        ]
+    },
+    "type": "origins:conditioned_attribute",
+    "modifiers": [
+        {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_total",
+            "value": 0.25
+        },
+        {
+            "attribute": "generic.attack_damage",
+            "operation": "multiply_total",
+            "value": 0.25
+        },
+        {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": 4
+        }
+    ],
+    "tick_rate": 1,
+    "update_health": true
+}

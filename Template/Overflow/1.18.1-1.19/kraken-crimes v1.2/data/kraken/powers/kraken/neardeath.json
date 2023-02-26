@@ -1,0 +1,103 @@
+{
+	"name": "§2§nDefense Mechanism",
+	"description": "When near death, you save yourself on instinct.",
+	"type": "origins:multiple",
+	"main": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:health",
+					"comparison": "<=",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:kraken/neardeath_cd",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effects": [
+						{
+							"effect": "regeneration",
+							"duration": 60,
+							"amplifier": 0,
+							"show_particles": false,
+							"show_icon": true
+						},
+						{
+							"effect": "speed",
+							"duration": 100,
+							"amplifier": 3,
+							"show_particles": false,
+							"show_icon": true
+						}
+					]
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle squid_ink ~ ~ ~ 5 1 5 0 500",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[tag=!fishy,distance=..20] blindness 5 0",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[tag=!fishy,distance=..20] nausea 5 0",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "*:kraken/neardeath_cd"
+				},
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "*:kraken/neardeath_cd2"
+				}
+			]
+		}
+	},
+	"invuln": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:kraken/neardeath_cd2",
+			"comparison": "!=",
+			"compare_to": 0
+		},
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:constant",
+			"value": true
+		}
+	},
+	"cd": {
+		"type": "origins:cooldown",
+		"cooldown": 1200,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 14
+		}
+	},
+	"cd2": {
+		"type": "origins:cooldown",
+		"cooldown": 60,
+		"hud_render": {
+			"should_render": false,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 14
+		}
+	}
+}

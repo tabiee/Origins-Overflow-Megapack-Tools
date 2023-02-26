@@ -1,0 +1,15 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:origin",
+        "origin": "origins:empty",
+        "layer": "origins:copied"
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "origin set @s origins:copied quirk:blank",
+        "permission_level": 4
+    }
+}

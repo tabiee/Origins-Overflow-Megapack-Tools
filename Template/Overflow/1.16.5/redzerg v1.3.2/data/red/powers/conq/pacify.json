@@ -1,0 +1,30 @@
+{
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "team join sum @e[type=villager,tag=!tar]",
+                "permission_level": 4
+            },
+			{
+                "type": "origins:execute_command",
+                "command": "team join sum @e[type=iron_golem,tag=!tar]",
+                "permission_level": 4
+            },
+			{
+                "type": "origins:execute_command",
+                "command": "team join sum @e[type=snow_golem,tag=!tar]",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "team join sum @e[type=player,tag=!tar]",
+                "permission_level": 4
+            }
+        ]
+    }
+}

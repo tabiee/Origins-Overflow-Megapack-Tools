@@ -1,0 +1,1334 @@
+{
+    "name": "§d§nJukebox",
+    "description": "Play music discs in your head.",
+    "type": "origins:multiple",
+    "md_cat": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_cat"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_cat"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.cat ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.cat ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.cat ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: C418 - cat\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_cat 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_cat"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "md_13": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_13"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_13"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.13 ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.13 ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.13 ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: C418 - 13\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_13 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_13"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "md_11": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_11"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_11"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.11 ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.11 ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.11 ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: C418 - 11\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_11 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_11"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "md_blocks": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_blocks"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_blocks"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.blocks ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.blocks ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.blocks ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: C418 - blocks\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_blocks 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_blocks"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "md_chirp": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_chirp"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_chirp"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.chirp ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.chirp ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.chirp ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: C418 - chirp\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_chirp 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_chirp"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "md_far": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_far"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_far"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.far ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.far ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.far ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: C418 - far\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_far 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_far"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "md_mall": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_mall"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_mall"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.mall ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.mall ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.mall ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: C418 - mall\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_mall 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_mall"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "md_mellohi": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_mellohi"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_mellohi"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.mellohi ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.mellohi ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.mellohi ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: C418 - mellohi\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_mellohi 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_mellohi"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "md_pigstep": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_pigstep"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_pigstep"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.pigstep ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.pigstep ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.pigstep ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: Lena Raine - Pigstep\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_pigstep 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_pigstep"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "md_stal": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_stal"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_stal"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.stal ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.stal ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.stal ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: C418 - stal\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_stal 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_stal"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "md_strad": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_strad"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_strad"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.strad ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.strad ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.strad ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: C418 - strad\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_strad 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_strad"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "md_wait": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_wait"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_wait"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.wait ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.wait ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.wait ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: C418 - wait\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_wait 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_wait"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "md_ward": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_ward"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "music_disc_ward"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.ward ambient @a ~ ~ ~ 1000 1"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.ward ambient @a ~ ~ ~ 1000 2"
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:music_disc.ward ambient @a ~ ~ ~ 1000 0.5"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @a actionbar {\"text\":\"§d§lNow playing: C418 - ward\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s music_disc_ward 1"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "item replace entity @s armor.head with minecraft:music_disc_ward"
+                    },
+                    "ticks": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "stop_all": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "head",
+            "item_condition": {
+                "type": "origins:empty"
+            }
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.cat"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.13"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.11"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.blocks"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.chirp"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.far"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.mall"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.mellohi"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.pigstep"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.stal"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.strad"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.wait"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a * minecraft:music_disc.ward"
+                }
+            ]
+        }
+    }
+}

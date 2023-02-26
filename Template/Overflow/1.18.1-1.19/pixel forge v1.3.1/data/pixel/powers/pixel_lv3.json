@@ -1,0 +1,24 @@
+{
+	"name": "4-bit - Pixel Cannon",
+	"description": "Shoot Pixels at will.",
+	"type": "origins:multiple",
+	"proj": {
+		"type": "origins:fire_projectile",
+		"entity_type": "potion",
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 0
+		},
+		"count": 1,
+		"speed": 1.5,
+		"divergence": 1,
+		"sound": "block.chain.break",
+		"tag": "{Item: {id: 'minecraft:poisonous_potato',CustomModelData:101,Count: 1b,tag:{CustomPotionEffects:[{Id:19,Duration:30,Amplifier:4,ShowParticles:0b},{Id:20,Duration:30,Amplifier:4,ShowParticles:0b}]}}}",
+		"key": {
+			"key": "secondary",
+			"continuous": true
+		}
+	}
+}

@@ -1,0 +1,122 @@
+{
+    "name": "Withering Cloud",
+    "description": "Create a harmful cloud around you.",
+    "type": "origins:multiple",
+    "cloud": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:looptrack/cloud_nuggets",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "summon area_effect_cloud ~ ~0.5 ~ {Particle:\"ash\",NoGravity:0b,Radius:5f,Duration:10,WaitTime:0,Color:328978}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function ogcspoofii:roses",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[distance=..4,tag=!loop] wither 2 1 true",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[distance=..4,tag=!loop] slowness 3 0 true",
+                    "permission_level": 4
+                },
+				{
+                    "type": "origins:execute_command",
+                    "command": "execute at @s positioned ~ ~0.5 ~ run particle minecraft:block_marker wither_rose ~ ~ ~ 3 0 3 0 1 normal",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:looptrack/cloud_nuggets",
+                    "change": -10
+                },
+				{
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.wither.ambient",
+                "volume": 0.1,
+                "pitch": 0.5
+                }
+            ]
+        }
+    },
+    "cd": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:looptrack/cloud_nuggets",
+            "change": 260
+        },
+        "cooldown": 1200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 15,
+			"condition": {
+                "type": "origins:resource",
+                "resource": "*:looptrack/cloud_nuggets",
+                "comparison": "<",
+                "compare_to": 1
+            }
+        },
+        "key": "secondary"
+    },
+    "immune": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:looptrack/cloud_nuggets",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:projectile"
+        }
+    },
+    "dmg": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:looptrack/cloud_nuggets",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:projectile"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 1.5
+        }
+    },
+    "nuggets": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 260,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 18,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:looptrack/cloud_nuggets",
+                "comparison": ">",
+                "compare_to": 1
+            }
+        }
+	}
+}

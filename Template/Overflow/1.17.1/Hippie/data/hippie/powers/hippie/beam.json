@@ -1,0 +1,42 @@
+{
+    "type": "origins:multiple",
+	"hidden": true,
+    "nuggets": {
+        "type": "origins:resource",
+        "min": 1,
+        "max": 4,
+        "start_value": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "cycle": {
+        "type": "origins:action_over_time",
+        "interval": 12,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "hippie:hippie/beam_nuggets",
+            "change": 1
+        }
+    },
+    "reset": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "hippie:hippie/beam_nuggets",
+            "comparison": "==",
+            "compare_to": 4
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:delay",
+            "action": {
+                "type": "origins:change_resource",
+                "resource": "hippie:hippie/beam_nuggets",
+                "change": 1,
+				"operation": "set"
+            },
+            "ticks": 12
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Ocean Breath",
+    "description": "You are able to breathe both underwater and on land.",
+    "condition": {
+        "type": "origins:submerged_in",
+        "fluid": "water"
+    },
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:gain_air",
+        "value": 25
+    }
+}

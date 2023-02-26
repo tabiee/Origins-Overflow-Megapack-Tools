@@ -1,0 +1,91 @@
+{
+    "name": "§e§nGemstone Body",
+    "description": "Due to being an emerald, you take less damage on average. But pickaxes do more damage to you.",
+    "type": "origins:multiple",
+    "all": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "inverted": true,
+            "type": "origins:name",
+            "name": "starve"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": -2
+        }
+    },
+    "sword": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": [
+                        {
+                            "item": "wooden_sword"
+                        },
+                        {
+                            "item": "stone_sword"
+                        },
+                        {
+                            "item": "golden_sword"
+                        },
+                        {
+                            "item": "iron_sword"
+                        },
+                        {
+                            "item": "diamond_sword"
+                        },
+                        {
+                            "item": "netherite_sword"
+                        }
+                    ]
+                }
+            }
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": -2
+        }
+    },
+    "pick": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": [
+                        {
+                            "item": "wooden_pickaxe"
+                        },
+                        {
+                            "item": "stone_pickaxe"
+                        },
+                        {
+                            "item": "golden_pickaxe"
+                        },
+                        {
+                            "item": "iron_pickaxe"
+                        },
+                        {
+                            "item": "diamond_pickaxe"
+                        },
+                        {
+                            "item": "netherite_pickaxe"
+                        }
+                    ]
+                }
+            }
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 5
+        }
+    }
+}

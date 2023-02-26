@@ -1,0 +1,12 @@
+{
+    "name": "§b§nSturdy Scales",
+    "description": "Your scales helped you survive for centuries. You take half the damage from projectiles.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:projectile"
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": -2
+    }
+}

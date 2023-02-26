@@ -1,0 +1,252 @@
+{
+	"hidden": true,
+	"name": "§2§nFortuitous",
+	"description": "Whatever you mine has a high chance of giving extra loot.",
+	"type": "origins:multiple",
+	"fort": {
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:chance",
+					"chance": 0.5,
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "summon item ~ ~ ~ {Item:{id:\"knowledge_book\",Count:1b},PickupDelay:30,Tags:[\"fort\"]}",
+								"permission_level": 4
+							}
+						]
+					}
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "exec:fort"
+		},
+		"only_when_harvested": true
+	},
+	"debug": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @a knowledge_book",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=item,tag=fort] at @s run data modify entity @s Item set from entity @e[type=item,tag=!fort,limit=1,distance=..0.6] Item",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

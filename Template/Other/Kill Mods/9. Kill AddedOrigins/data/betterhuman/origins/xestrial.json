@@ -1,0 +1,18 @@
+{
+    "powers": [
+        "origins:translucent",
+        "betterhuman:lavahaterxes",
+        "origins:phantomize",
+        "betterhuman:xestriallaunch",
+        "betterhuman:icysubstance",
+        "origins:fall_immunity",
+        "betterhuman:speedaat"
+    ],
+    "icon": "minecraft:ice",
+    "order": 25,
+    "impact": 2,
+    "name": "Xestrial",
+    "description": "This mythical creature adapts to ice easily as they have lived on it for thousands of years.",
+    "loading_priority": 100,
+    "unchoosable": true
+}

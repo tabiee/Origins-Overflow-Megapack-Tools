@@ -1,0 +1,50 @@
+{
+	"name": "§5§nDivine Favour",
+	"description": "Something is keeping you alive.",
+    "type": "origins:multiple",
+    "stopdeath": {
+        "type": "origins:prevent_death",
+        "hidden": false,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "playsound minecraft:block.amethyst_block.chime player @s ~ ~ ~ 10 0.1"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_shieldcooldown"
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "duration": 600,
+                        "is_ambient": false,
+                        "show_particles": false,
+                        "show_icon": false,
+                        "effect": "glowing"
+                    }
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "inverted": false,
+            "comparison": "==",
+            "resource": "*:*_shieldcooldown",
+            "compare_to": 0
+        }
+    },
+    "shieldcooldown": {
+        "type": "origins:cooldown",
+        "hidden": true,
+        "cooldown": 1200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 14
+        }
+    }
+}

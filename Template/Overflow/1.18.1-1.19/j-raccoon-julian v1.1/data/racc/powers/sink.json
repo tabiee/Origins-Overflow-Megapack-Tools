@@ -1,0 +1,87 @@
+{
+    "name": "§4§nHeavy",
+    "description": "In water you will sink like a rock being unable to swim.",
+    "type": "origins:multiple",
+    "stats": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "water",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_base",
+            "value": -0.5
+        },
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "down": {
+        "type": "origins:ignore_water"
+    },
+    "air": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "water"
+                },
+                {
+                    "type": "origins:air",
+                    "comparison": ">=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "entity_action": {
+            "type": "origins:gain_air",
+            "value": -2
+        }
+    },
+    "drown": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "water"
+                },
+                {
+                    "type": "origins:air",
+                    "comparison": "<",
+                    "compare_to": 10
+                }
+            ]
+        },
+        "type": "origins:damage_over_time",
+        "interval": 20,
+        "onset_delay": 10,
+        "damage": 1,
+        "damage_easy": 1,
+        "damage_source": {
+            "name": "drown",
+            "bypasses_armor": true,
+            "unblockable": true
+        },
+        "protection_effectiveness": 1
+    },
+    "float": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "water"
+                }
+            ]
+        },
+        "type": "origins:modify_falling",
+        "velocity": 0.004,
+        "take_fall_damage": false
+    }
+}

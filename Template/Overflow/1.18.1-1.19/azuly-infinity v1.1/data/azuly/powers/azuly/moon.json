@@ -1,0 +1,62 @@
+{
+	"name": "§4§nMoon Madness",
+	"description": "You’ve never seen anything quite as…entrancing as the moon before. \nIt makes you feel as though you were connected more with your ancestors somehow…During full moons, you gain hunger 3 and can only eat meat. ",
+	"type": "origins:multiple",
+	"hungy": {
+		"condition": {
+			"type": "origins:predicate",
+			"predicate": "azuly:full"
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "hunger",
+				"duration": 100,
+				"amplifier": 2,
+				"show_particles": false,
+				"show_icon": true
+			}
+		}
+	},
+	"carnivore": {
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "hunger",
+			"min_amplifier": 2,
+			"max_amplifier": 2
+		},
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"tag": "origins:meat"
+							}
+						},
+						{
+							"type": "origins:meat"
+						}
+					]
+				},
+				{
+					"type": "origins:food"
+				},
+				{
+					"inverted": true,
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "origins:ignore_diet"
+					}
+				}
+			]
+		}
+	}
+}

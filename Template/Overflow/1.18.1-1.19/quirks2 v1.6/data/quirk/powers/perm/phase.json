@@ -1,0 +1,53 @@
+{
+	"type": "origins:multiple",
+	"duration": {
+		"type": "origins:cooldown",
+		"cooldown": 140,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 7
+		}
+	},
+	"activate": {
+		"type": "origins:active_self",
+		"cooldown": 280,
+		"entity_action": {
+			"type": "origins:trigger_cooldown",
+			"power": "*:*_duration"
+		},
+		"hud_render": {
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 6,
+			"should_render": true
+		},
+		"key": {
+			"key": "key.origins.primary_active"
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_duration",
+			"comparison": "==",
+			"compare_to": 0
+		}
+	},
+	"phasing": {
+           "type": "origins:phasing",
+            "blacklist": true,
+            "render_type": "blindness",
+            "view_distance": 10,
+            "block_condition": {
+                "type": "origins:in_tag",
+                "tag": "origins:unphasable"
+            },
+		"condition": {
+					"type": "origins:resource",
+					"resource": "*:*_duration",
+					"comparison": ">",
+					"compare_to": 0
+		},
+
+		"name": "Phase",
+		"description": "You can go through blocks for 7 seconds, has an 11 second cooldown"
+	}
+}

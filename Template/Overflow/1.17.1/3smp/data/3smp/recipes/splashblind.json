@@ -1,0 +1,42 @@
+{
+	"type": "nbtcrafting:brewing",
+	"base": {
+		"item": "minecraft:potion",
+		"data": {
+			"CustomPotionColor": 2171169,
+			"CustomPotionEffects": [{
+				"Duration": 4500,
+				"Id": 15
+			}],
+			"display": {
+				"Name": [{
+						"text": "Potion of Blindness",
+						"italic": false
+					},
+					"nbtcrafting:stringify"
+				]
+			}
+		}
+	},
+	"ingredient": {
+		"item": "minecraft:bone_meal"
+	},
+	"result": {
+		"item": "minecraft:splash_potion",
+		"data": {
+			"CustomPotionColor": 2171169,
+			"CustomPotionEffects": [{
+				"Duration": 4500,
+				"Id": 15
+			}],
+			"display": {
+				"Name": [{
+						"text": "Splash Potion of Blindness",
+						"italic": false
+					},
+					"nbtcrafting:stringify"
+				]
+			}
+		}
+	}
+}

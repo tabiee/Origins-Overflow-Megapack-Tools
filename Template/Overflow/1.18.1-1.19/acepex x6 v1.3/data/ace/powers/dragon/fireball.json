@@ -1,0 +1,19 @@
+{
+    "name": "Fireball",
+    "description": "Shoot fire at your enemies.",
+    "type": "origins:fire_projectile",
+    "entity_type": "fireball",
+    "cooldown": 600,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 7
+    },
+    "count": 1,
+    "speed": 1,
+    "divergence": 0,
+    "key": {
+        "key": "primary",
+        "continuous": true
+    }
+}

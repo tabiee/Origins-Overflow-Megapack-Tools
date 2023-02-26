@@ -1,0 +1,11 @@
+{
+    "name": "§6§nWeird Vibes",
+    "description": "People around you feel a little off.",
+    "type": "origins:action_over_time",
+    "interval": 80,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "effect give @e[distance=..3,tag=!hippie] minecraft:nausea 3 0 true",
+        "permission_level": 4
+    }
+}

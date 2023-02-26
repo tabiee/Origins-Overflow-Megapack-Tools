@@ -1,0 +1,21 @@
+{
+    "name": "§6§nPeculiar Body",
+    "description": "Helmets can't fit on your head due to your horns, it is also uncomfortable to hold a shield.",
+    "type": "origins:multiple",
+    "head": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "inverted": true,
+            "type": "origins:empty"
+        }
+    },
+    "sh": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "shield"
+            }
+        }
+    }
+}

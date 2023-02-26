@@ -1,0 +1,114 @@
+{
+    "name": "§d§o§lPassionate Pink§r",
+    "description": "The light of the sky is filled with beautiful pink clouds, and so does your skin.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "This mode is unlocked by infusing a Peony flower with a Nether Star."
+        }
+    ],
+    "type": "origins:multiple",
+    "unlock": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:pink_lock",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_on_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "peony"
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "nether_star"
+            }
+        },
+        "hands": [
+            "main_hand"
+        ],
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:pink_lock",
+                    "change": 1,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"§d§lPassionate Pink unlocked!§r\"}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.glow_squid.squirt",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        },
+        "block_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 1 0.506 0.827 2 ~ ~ ~ 0.2 0.2 0.2 0 100"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle item pink_wool ~ ~ ~ 0.25 0.25 0.25 0.2 100"
+                },
+                {
+                    "type": "origins:set_block",
+                    "block": "air"
+                }
+            ]
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        },
+        "action_result": "success"
+    },
+    "lock": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "overlay": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 6
+                }
+            ]
+        },
+        "type": "origins:overlay",
+        "texture": "minecraft:textures/misc/powder_snow_outline.png",
+        "strength": 0.45,
+        "red": 0.8,
+        "green": 0.35,
+        "blue": 0.6,
+        "draw_mode": "texture",
+        "draw_phase": "below_hud",
+        "hide_with_hud": true,
+        "visible_in_third_person": true
+    }
+}

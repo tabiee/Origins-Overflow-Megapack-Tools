@@ -1,0 +1,140 @@
+{
+	"name": "§b§nDragon's Breath",
+	"description": "Scorch your enemies with a blaze of magical fire.",
+	"type": "origins:multiple",
+	"nuggets": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 14,
+		"start_value": 14,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
+			"bar_index": 6
+		}
+	},
+	"held": {
+        "type": "origins:cooldown",
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+	"lower": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:dragon/breath_nuggets",
+                    "change": -1
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:dragon/breath_held"
+                }
+            ]
+		},
+		"cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "primary",
+            "continuous": true
+        }
+	},
+	"regain": {
+		"condition": {
+			"type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:dragon/breath_held",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:dragon/breath_nuggets",
+                    "comparison": "<",
+                    "compare_to": 14
+                }
+            ]
+		},
+		"type": "origins:action_over_time",
+		"interval": 40,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:dragon/breath_nuggets",
+			"change": 1,
+			"operation": "add"
+		}
+	},
+	"yoltoorshul": {
+		"type": "origins:active_self",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:dragon/breath_nuggets",
+			"comparison": ">",
+			"compare_to": 0
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.cat.hiss",
+					"volume": 0.2,
+					"pitch": 0.5
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.fire.ambient",
+					"volume": 1,
+					"pitch": 1
+				},
+				{
+					"type": "origins:raycast",
+					"distance": 10,
+					"block": true,
+					"entity": true,
+					"shape_type": "collider",
+					"fluid_handling": "any",
+					"bientity_action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "origins:damage",
+									"source": {
+										"name": "onFire.player"
+									},
+									"amount": 2,
+									"bypasses_armor": true
+								},
+								{
+									"type": "origins:set_on_fire",
+									"duration": 8
+								}
+							]
+						}
+					},
+					"command_along_ray": "particle minecraft:flame ^ ^-0.5 ^2 0.3 0.3 0.3 0.1 5 normal",
+					"command_at_hit": "particle minecraft:lava ~ ~ ~ 0.5 0.5 0.5 0.3 3 normal",
+					"command_step": 1
+				}
+			]
+		},
+		"key": {
+			"key": "primary",
+			"continuous": true
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	}
+}

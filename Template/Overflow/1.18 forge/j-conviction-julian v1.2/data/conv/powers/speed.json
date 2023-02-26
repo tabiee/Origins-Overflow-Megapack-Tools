@@ -1,0 +1,15 @@
+{
+    "name": "§2§nUndetected",
+    "description": "You don't survive as a well known vigilante for most of your life and not be a master of stealth, you are not slowed down when sneaking.",
+    "type": "origins:conditioned_attribute",
+    "condition": {
+        "type": "apoli:sneaking"
+    },
+    "modifier": {
+        "attribute": "generic.movement_speed",
+        "operation": "multiply_total",
+        "value": 2.2
+    },
+    "update_health": false,
+    "tick_rate": 1
+}

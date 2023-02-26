@@ -1,0 +1,20 @@
+{
+    "impact": 1,
+    "unchoosable": false,
+    "powers": [
+        "3smp:dryadprince/photosynthesis",
+        "3smp:dryadprince/water",
+        "3smp:dryadprince/crops",
+        "3smp:dryadprince/gapples",
+        "3smp:dryadprince/flammable",
+		"3smp:dryadprince/toggle",
+		"3smp:dryadprince/treestride",
+		"3smp:dryadprince/fruity",
+		"3smp:dryadprince/turning",
+		"3smp:dryadprince/color",
+		"3smp:dryadprince/average"
+    ],
+    "name": "§d§l§oTurning Prince",
+    "description": "The heir of Overworld royalty.",
+	"icon": "betternether:quartz_glass_framed_pane_purple"
+}

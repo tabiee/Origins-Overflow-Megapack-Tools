@@ -1,0 +1,75 @@
+{
+    "name": "§3§n§lPower Saver§r",
+    "description": "You drain less power on average, but non-sleeping players within 5-blocks drain your power slightly.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "Picking a player up negates the power drain."
+        }
+    ],
+    "type": "origins:multiple",
+    "exh": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.25
+        }
+    },
+    "insomnia": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[type=player,tag=!duo,tag=!grabbed,distance=..5,nbt={SleepTimer:0s}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "survival"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:daytime"
+                },
+                {
+                    "type": "origins:exposed_to_sky"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 250,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute at @e[type=player,tag=!duo,distance=..5,nbt={SleepTimer:0}] run particle angry_villager ~ ~1 ~ 0.5 0.5 0.5 0 5 normal @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar \"§1§lSleepy person detected! It's past their bedtime!§r\""
+                },
+                {
+                    "type": "origins:exhaust",
+                    "amount": 2
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.lantern.break",
+                    "volume": 0.25,
+                    "pitch": 2
+                }
+            ]
+        },
+        "rising_action": {
+            "type": "origins:execute_command",
+            "command": "execute as @e[tag=duo] at @s run resource change @s sunmoon:battery_usage 1"
+        },
+        "falling_action": {
+            "type": "origins:execute_command",
+            "command": "execute as @e[tag=duo] at @s run resource change @s sunmoon:battery_usage -1"
+        }
+    }
+}

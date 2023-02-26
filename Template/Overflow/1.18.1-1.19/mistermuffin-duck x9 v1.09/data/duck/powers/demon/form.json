@@ -1,0 +1,202 @@
+{
+    "name": "§5§nTrueform§r",
+    "description": "Become your true self for a short time, dramatically increasing your combat capabilities.",
+    "type": "origins:multiple",
+    "act": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:sculk_soul ~ ~0 ~ 1 0 1 0 200"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:demon/form_dur"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.phantom.death",
+                    "volume": 1,
+                    "pitch": 0.5
+                }
+            ]
+        },
+        "cooldown": 2400,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 1,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:demon/form_dur",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        },
+        "key": {
+            "key": "primary"
+        }
+    },
+    "dur": {
+        "type": "origins:cooldown",
+        "cooldown": 1200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 7
+        }
+    },
+    "fx": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:demon/form_dur",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.max_health",
+                "operation": "addition",
+                "value": 10
+            },
+            {
+                "attribute": "generic.knockback_resistance",
+                "operation": "addition",
+                "value": 10
+            },
+            {
+                "attribute": "generic.movement_speed",
+                "operation": "multiply_total",
+                "value": 0.35
+            },
+            {
+                "attribute": "generic.attack_damage",
+                "operation": "addition",
+                "value": 7
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": true
+    },
+    "fx2": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:demon/form_dur",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle falling_obsidian_tear ~ ~1.5 ~ 1.8 1.8 1.8 0 4"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle sculk_soul ~ ~1.5 ~ 1.8 1.8 1.8 0 4"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle warped_spore ~ ~1.5 ~ 1.8 1.8 1.8 0 6"
+                }
+            ]
+        },
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 2.5 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 2.5 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:reach 1.5 @s"
+                }
+            ]
+        },
+        "falling_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale reset @s"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:demon/form_act",
+                    "change": 1,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:damage",
+                                "amount": 10,
+                                "source": {
+                                    "name": "player",
+                                    "bypasses_armor": true,
+                                    "unblockable": true
+                                }
+                            },
+                            {
+                                "type": "origins:exhaust",
+                                "amount": 100
+                            }
+                        ]
+                    },
+                    "ticks": 14
+                }
+            ]
+        }
+    },
+    "turn_back": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:demon/form_dur",
+                    "comparison": "<",
+                    "compare_to": 20
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:demon/form_dur",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:conditioned_restrict_armor",
+        "head": {
+            "inverted": true,
+            "type": "origins:empty"
+        },
+        "chest": {
+            "inverted": true,
+            "type": "origins:empty"
+        },
+        "legs": {
+            "inverted": true,
+            "type": "origins:empty"
+        },
+        "feet": {
+            "inverted": true,
+            "type": "origins:empty"
+        },
+        "tick_rate": 1
+    }
+}

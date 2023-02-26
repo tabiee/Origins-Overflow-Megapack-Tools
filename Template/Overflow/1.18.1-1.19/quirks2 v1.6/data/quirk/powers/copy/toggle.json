@@ -1,0 +1,80 @@
+{
+    "name": "Copycat",
+    "description": "Borrow your enemie's quirk (Once bar is fully charged, click toggle button and hit player with empty hand)",
+	"condition": {
+            "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "*:copy/copycat_cd",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        ]
+        },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:resource",
+			"resource": "*:copy/copycat_toggle",
+			"comparison": "==",
+			"compare_to": 1
+        },
+        "if_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s {\"text\":\"Copy Disabled.\",\"bold\":true,\"color\":\"dark_green\"}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.note_block.guitar",
+                    "volume": 0.5,
+                    "pitch": 0.5
+                },
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:change_resource",
+						"resource": "*:copy/copycat_toggle",
+						"change": -1
+						},
+					"ticks": 2
+				}
+            ]
+        },
+        "else_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s {\"text\":\"Copy Enabled!\",\"bold\":true,\"color\":\"green\"}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.note_block.guitar",
+                    "volume": 0.5,
+                    "pitch": 1
+                },
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:change_resource",
+						"resource": "*:copy/copycat_toggle",
+						"change": 1
+						},
+					"ticks": 2
+				}
+            ]
+        }
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": "denary"
+}

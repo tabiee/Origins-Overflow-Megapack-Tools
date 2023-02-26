@@ -1,0 +1,26 @@
+{
+    "name": "Too Small for Gravity",
+    "description": "You never take fall or kinetic damage.",
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "fall"
+            },
+            {
+                "type": "origins:name",
+                "name": "fall.player"
+            },
+            {
+                "type": "origins:name",
+                "name": "flyIntoWall"
+            },
+            {
+                "type": "origins:name",
+                "name": "flyIntoWall.player"
+            }
+        ]
+    }
+}

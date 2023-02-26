@@ -1,0 +1,12 @@
+{
+    "type": "origins:modify_xp_gain",
+    "modifiers": [
+        {
+            "operation": "multiply_base",
+            "value": 0.75
+        }
+    ],
+    "name": "Less exp",
+    "description": "recieve 75% of the experience points as compared to a normal player",
+		"hidden": true
+}

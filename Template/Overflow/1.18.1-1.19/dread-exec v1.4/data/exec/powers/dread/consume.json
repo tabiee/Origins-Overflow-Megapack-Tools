@@ -1,0 +1,280 @@
+{
+    "name": "§b§nMetal Enhancements",
+    "description": "Consume 3 blocks made of precious metals or gems in order to gain a permanent upgrade.",
+    "type": "origins:active_self",
+    "cooldown": 20,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+        "bar_index": 0
+    },
+    "key": {
+        "key": "secondary"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:if_else_list",
+                "actions": [
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:equipped_item",
+                                    "equipment_slot": "mainhand",
+                                    "item_condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:ingredient",
+                                                "ingredient": {
+                                                    "item": "iron_block"
+                                                }
+                                            },
+                                            {
+                                                "type": "origins:amount",
+                                                "comparison": ">=",
+                                                "compare_to": 3
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "inverted": true,
+                                    "type": "origins:power",
+                                    "power": "*:dread/iron"
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "clear @s iron_block 3",
+                                    "permission_level": 4
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "power grant @s exec:dread/iron",
+                                    "permission_level": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:equipped_item",
+                                    "equipment_slot": "mainhand",
+                                    "item_condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:ingredient",
+                                                "ingredient": {
+                                                    "item": "gold_block"
+                                                }
+                                            },
+                                            {
+                                                "type": "origins:amount",
+                                                "comparison": ">=",
+                                                "compare_to": 3
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "inverted": true,
+                                    "type": "origins:power",
+                                    "power": "*:dread/gold"
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "clear @s gold_block 3",
+                                    "permission_level": 4
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "power grant @s exec:dread/gold",
+                                    "permission_level": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:equipped_item",
+                                    "equipment_slot": "mainhand",
+                                    "item_condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:ingredient",
+                                                "ingredient": {
+                                                    "item": "emerald_block"
+                                                }
+                                            },
+                                            {
+                                                "type": "origins:amount",
+                                                "comparison": ">=",
+                                                "compare_to": 3
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "inverted": true,
+                                    "type": "origins:power",
+                                    "power": "*:dread/emerald"
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "clear @s emerald_block 3",
+                                    "permission_level": 4
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "power grant @s exec:dread/emerald",
+                                    "permission_level": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:equipped_item",
+                                    "equipment_slot": "mainhand",
+                                    "item_condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:ingredient",
+                                                "ingredient": {
+                                                    "item": "diamond_block"
+                                                }
+                                            },
+                                            {
+                                                "type": "origins:amount",
+                                                "comparison": ">=",
+                                                "compare_to": 3
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "inverted": true,
+                                    "type": "origins:power",
+                                    "power": "*:dread/diamond"
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "clear @s diamond_block 3",
+                                    "permission_level": 4
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "power grant @s exec:dread/diamond",
+                                    "permission_level": 4
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "power grant @s exec:dread/pick",
+                                    "permission_level": 4
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "power grant @s exec:dread/silky",
+                                    "permission_level": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:equipped_item",
+                                    "equipment_slot": "mainhand",
+                                    "item_condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:ingredient",
+                                                "ingredient": {
+                                                    "item": "netherite_block"
+                                                }
+                                            },
+                                            {
+                                                "type": "origins:amount",
+                                                "comparison": ">=",
+                                                "compare_to": 3
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "inverted": true,
+                                    "type": "origins:power",
+                                    "power": "*:dread/netherite"
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "clear @s netherite_block 3",
+                                    "permission_level": 4
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "power grant @s exec:dread/netherite",
+                                    "permission_level": 4
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle wax_on ~ ~ ~ 1 1 1 1 100",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "ui.toast.challenge_complete",
+                "volume": 0.2,
+                "pitch": 2
+            }
+        ]
+    }
+}

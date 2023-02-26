@@ -1,0 +1,24 @@
+{
+    "impact": 2,
+    "unchoosable": false,
+    "name": "§8§l§oProtogen",
+    "description": "Robotic being with en enhanced body.",
+    "icon": "minecraft:lodestone",
+    "powers": [
+        "origins:climbing",
+		"spacefolk:protogen/laser",
+		"spacefolk:protogen/dmg",
+		"spacefolk:protogen/dmgresist",
+		"spacefolk:protogen/fast",
+		"spacefolk:protogen/jump",
+		"spacefolk:protogen/overheat",
+		"spacefolk:protogen/reach",
+		"spacefolk:protogen/size",
+		"spacefolk:protogen/tagger",
+		"spacefolk:protogen/morefire",
+		"spacefolk:protogen/water_breathing",
+		"spacefolk:protogen/waterdmg",
+		"spacefolk:protogen/red",
+		"spacefolk:protogen/arrows"
+    ]
+}

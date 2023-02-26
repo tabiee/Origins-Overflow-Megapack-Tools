@@ -1,0 +1,61 @@
+{
+    "name": "§4§nShiny Armor",
+    "description": "You only like shiny armor like iron, gold and diamond.",
+    "type": "origins:restrict_armor",
+    "head": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "leather_helmet"
+            },
+            {
+                "item": "chainmail_helmet"
+            },
+            {
+                "item": "netherite_helmet"
+            }
+        ]
+    },
+    "chest": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "leather_chestplate"
+            },
+            {
+                "item": "chainmail_chestplate"
+            },
+            {
+                "item": "netherite_chestplate"
+            }
+        ]
+    },
+    "legs": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "leather_leggings"
+            },
+            {
+                "item": "chainmail_leggings"
+            },
+            {
+                "item": "netherite_leggings"
+            }
+        ]
+    },
+    "feet": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "leather_boots"
+            },
+            {
+                "item": "chainmail_boots"
+            },
+            {
+                "item": "netherite_boots"
+            }
+        ]
+    }
+}

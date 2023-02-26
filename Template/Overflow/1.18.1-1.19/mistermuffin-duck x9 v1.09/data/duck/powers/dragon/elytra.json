@@ -1,0 +1,76 @@
+{
+    "name": "§1§nDragon Wings§r",
+    "description": "You have elytra wings without needing to equip any, you also move faster on land but slower in water.",
+    "type": "origins:multiple",
+    "fly": {
+        "type": "origins:modify_air_speed",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.25
+        }
+    },
+    "speed": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "water",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_total",
+            "value": 0.3
+        },
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "slow": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "water",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_total",
+            "value": -0.3
+        },
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "elytra": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:dragon/sizeswap_form",
+                            "comparison": "!=",
+                            "compare_to": 2
+                        },
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:dragon/sizeswap_cd",
+                            "comparison": ">",
+                            "compare_to": 0
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:dragon/sizeswap_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:elytra_flight",
+        "render_elytra": true
+    }
+}

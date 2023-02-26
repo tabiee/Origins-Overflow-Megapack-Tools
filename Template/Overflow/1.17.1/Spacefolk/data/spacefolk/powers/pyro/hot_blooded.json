@@ -1,0 +1,9 @@
+{
+    "type": "origins:effect_immunity",
+    "effects": [
+        "minecraft:poison",
+        "minecraft:hunger"
+    ],
+    "name": "Hot Blooded",
+    "description": "Due to your hot body, poison and hunger do not effect you, as they burn up"
+}

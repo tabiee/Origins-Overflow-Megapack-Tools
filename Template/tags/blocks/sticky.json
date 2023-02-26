@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "#minecraft:beds",
+        "minecraft:slime_block",
+        "minecraft:honey_block",
+        "minecraft:cobweb",
+        "minecraft:air"
+    ]
+}

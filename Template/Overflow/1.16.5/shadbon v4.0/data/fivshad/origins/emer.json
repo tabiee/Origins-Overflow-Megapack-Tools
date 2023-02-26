@@ -1,0 +1,15 @@
+{
+	"powers": [
+	    "fivshad:emer/stonephase",
+		"fivshad:emer/melons",
+		"fivshad:emer/pump",
+		"fivshad:emer/tohit",
+	    "fivshad:emer/hits",
+		"fivshad:emer/lava",
+		"fivshad:emer/water"
+	],
+	"icon": "minecraft:emerald",
+	"impact": 2,
+	"name": "§2§l§oEmeranian",
+	"description": "You are a living emerald."
+}

@@ -1,0 +1,22 @@
+{
+    "name": "tool",
+    "description": "no",
+	"hidden": true,
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "hippie:tools"
+            }
+        }
+    },
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "attribute": "generic.attack_damage",
+        "operation": "addition",
+        "value": -100
+    },
+    "tick_rate": 1
+}

@@ -1,0 +1,28 @@
+{
+    "name": "Shackles of the End",
+    "description": "You spawn and can only set your spawn within the End, meaning you cannot use nether respawn anchors or beds.",
+    "type": "origins:multiple",
+    "spawn": {
+        "type": "origins:modify_player_spawn",
+        "dimension": "minecraft:the_end",
+        "biome": "end_highlands",
+        "spawn_strategy": "center",
+        "dimension_distance_multiplier": 1
+    },
+    "respawn": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_tag",
+                    "tag": "minecraft:beds"
+                },
+                {
+                    "type": "origins:block",
+                    "block": "respawn_anchor"
+                }
+            ]
+        }
+    }
+}

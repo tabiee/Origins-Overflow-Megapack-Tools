@@ -1,0 +1,20 @@
+{
+    "impact": 1,
+    "unchoosable": false,
+    "name": "§b§l§oCryogenic",
+    "description": "Person in tune with the element of Ice.",
+    "icon": "minecraft:ice",
+    "powers": [
+	    "spacefolk:cryo/icearrow",
+		"spacefolk:cryo/frostwalk",
+	    "spacefolk:cryo/snow_particles",
+		"spacefolk:cryo/slide",
+		"spacefolk:cryo/blue",
+		"spacefolk:cryo/toggle",
+		"spacefolk:cryo/slowice",
+		"spacefolk:cryo/firevuln",
+		"spacefolk:cryo/icemetal",
+		"spacefolk:cryo/exhaust",
+		"spacefolk:cryo/biome"
+    ]
+}

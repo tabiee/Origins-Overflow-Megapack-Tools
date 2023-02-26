@@ -1,0 +1,20 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "offhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "lava_bucket"
+            }
+        }
+    },
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "lava_bucket"
+        }
+    }
+}

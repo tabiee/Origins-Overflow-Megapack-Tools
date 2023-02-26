@@ -1,0 +1,22 @@
+{
+	"powers": [
+		"fma:alch/chalk",
+		"fma:alch/food",
+		"fma:alch/mold",
+		"fma:alch/crumble",
+		"fma:alch/repair",
+		"fma:alch/ee",
+		"fma:alch/seceff"
+	],
+	"icon": "minecraft:raw_gold",
+	"impact": 3,
+	"name": "§b§l§oAlchemist",
+	"description": "Humankind cannot gain anything without first giving something in return. To obtain, something of equal value must be lost. That is Alchemy's first law of Equivalent Exchange.",
+	"upgrades": [
+		{
+			"condition": "minecraft:end/root",
+			"origin": "fma:master",
+			"announcement": "You've seen beyond the Gate."
+		}
+	]
+}

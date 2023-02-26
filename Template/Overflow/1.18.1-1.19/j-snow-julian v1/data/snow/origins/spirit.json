@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"snow:phase",
+		"snow:undead",
+		"snow:hit",
+		"snow:fall",
+		"snow:biomes",
+		"snow:tagger"
+	],
+	"icon": "minecraft:powder_snow_bucket",
+	"impact": 1,
+	"name": "§b§l§oSnow Spirit",
+	"description": "You froze to death on a snowy mountain, this mountain is now your immortal grave."
+}

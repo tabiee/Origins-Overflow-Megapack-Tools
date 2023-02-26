@@ -1,0 +1,59 @@
+{
+    "name": "§e§nThalassophobia",
+    "description": "You take more damage from drowning, with a faster decreasing bubble meter.",
+    "type": "apoli:multiple",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "*:select_mode",
+                "comparison": "==",
+                "compare_to": 2
+            }
+        ]
+    },
+    "drw": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "apoli:or",
+            "conditions": [
+                {
+                    "type": "apoli:name",
+                    "name": "drown"
+                },
+                {
+                    "type": "apoli:name",
+                    "name": "drown.player"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    },
+    "brth": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 2
+                },
+                {
+                    "type": "apoli:submerged_in",
+                    "fluid": "minecraft:water"
+                }
+            ]
+        },
+        "type": "apoli:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "apoli:gain_air",
+            "value": -10
+        }
+    }
+}

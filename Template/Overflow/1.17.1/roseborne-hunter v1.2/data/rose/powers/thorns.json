@@ -1,0 +1,17 @@
+{
+    "name": "Thorns in your side",
+    "description": "Enemies attacking you are damaged by your thorns.",
+    "type": "origins:self_action_when_hit",
+    "entity_action": {
+        "type": "origins:damage",
+        "amount": 1,
+        "source": {
+            "name": "thorns",
+            "unblockable": true
+        }
+    },
+    "cooldown": 1,
+    "hud_render": {
+        "should_render": false
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "§2§nTough Carapace",
+    "description": "You naturally have 3 points of armor.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.armor",
+        "operation": "addition",
+        "value": 6
+    }
+}

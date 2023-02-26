@@ -1,0 +1,65 @@
+{
+    "name": "Elite Armor",
+    "description": "Leather, chain, gold and non-armor is for plebs.",
+    "type": "origins:restrict_armor",
+    "head": {
+        "inverted": true,
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "iron_helmet"
+            },
+            {
+                "item": "diamond_helmet"
+            },
+            {
+                "item": "netherite_helmet"
+            }
+        ]
+    },
+    "chest": {
+        "inverted": true,
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "iron_chestplate"
+            },
+            {
+                "item": "diamond_chestplate"
+            },
+            {
+                "item": "netherite_chestplate"
+            }
+        ]
+    },
+    "legs": {
+        "inverted": true,
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "iron_leggings"
+            },
+            {
+                "item": "diamond_leggings"
+            },
+            {
+                "item": "netherite_leggings"
+            }
+        ]
+    },
+    "feet": {
+        "inverted": true,
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "iron_boots"
+            },
+            {
+                "item": "diamond_boots"
+            },
+            {
+                "item": "netherite_boots"
+            }
+        ]
+    }
+}

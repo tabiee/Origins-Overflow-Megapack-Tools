@@ -1,0 +1,376 @@
+{
+    "name": "§5§nRegaining Power",
+    "description": "Your power has been lost after your resurrection, you need to regain it. You will start without any abilities and will gain one for every End-Crystal you consume, up to 5.",
+    "type": "origins:multiple",
+    "act": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "end_crystal"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:dragon/regain_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:dragon/regain_hold"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:dragon/regain_absorb",
+                    "change": 1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle enchant ~ ~1 ~ 1.3 2.5 1.3 0 7",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle item blaze_rod ~ ~ ~ 3 0 3 0 30",
+                    "permission_level": 4
+                },
+				{
+                    "type": "origins:execute_command",
+                    "command": "particle item raw_gold ~ ~ ~ 3.5 0 3.5 0 25",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.vex.ambient",
+                    "volume": 0.4,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        }
+    },
+    "hold": {
+        "type": "origins:cooldown",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 24000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 22
+        }
+    },
+    "hhhng": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:dragon/regain_hold",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "slowness",
+                "duration": 100,
+                "amplifier": 2,
+                "show_particles": false,
+                "show_icon": false
+            }
+        }
+    },
+    "absorb": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 500,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 14,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:dragon/regain_absorb",
+                "comparison": "!=",
+                "compare_to": 0
+            }
+        },
+        "max_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s end_crystal 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:dragon/regain_cd"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle flame ~ ~ ~ 5 0.2 5 0.2 500",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle wax_on ~ ~ ~ 5 1 5 25 500",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:if_else_list",
+                    "actions": [
+                        {
+                            "condition": {
+                                "inverted": true,
+                                "type": "origins:power",
+                                "power": "fivlord:dragon/wings"
+                            },
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "power grant @s fivlord:dragon/wings",
+                                        "permission_level": 4
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/tellraw @s {\"text\":\"*#*# Power Regained! #*#*\",\"bold\":true,\"color\":\"aqua\"}",
+                                        "permission_level": 4
+                                    },
+                                    {
+                                        "type": "origins:delay",
+                                        "action": {
+                                            "type": "origins:execute_command",
+                                            "command": "/tellraw @s {\"text\":\"- You feel the Wings on your back heal.\",\"italic\":true,\"color\":\"gold\"}",
+                                            "permission_level": 4
+                                        },
+                                        "ticks": 2
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:power",
+                                        "power": "fivlord:dragon/wings"
+                                    },
+                                    {
+                                        "inverted": true,
+                                        "type": "origins:power",
+                                        "power": "fivlord:dragon/arial"
+                                    }
+                                ]
+                            },
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "power grant @s fivlord:dragon/arial",
+                                        "permission_level": 4
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/tellraw @s {\"text\":\"*#*# Power Regained! #*#*\",\"bold\":true,\"color\":\"aqua\"}",
+                                        "permission_level": 4
+                                    },
+                                    {
+                                        "type": "origins:delay",
+                                        "action": {
+                                            "type": "origins:execute_command",
+                                            "command": "/tellraw @s {\"text\":\"- You may now Boost your flight with magic. [Secondary]\",\"italic\":true,\"color\":\"gold\"}",
+                                            "permission_level": 4
+                                        },
+                                        "ticks": 2
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:power",
+                                        "power": "fivlord:dragon/arial"
+                                    },
+                                    {
+                                        "inverted": true,
+                                        "type": "origins:power",
+                                        "power": "fivlord:dragon/proj"
+                                    }
+                                ]
+                            },
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "power grant @s fivlord:dragon/proj",
+                                        "permission_level": 4
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/tellraw @s {\"text\":\"*#*# Power Regained! #*#*\",\"bold\":true,\"color\":\"aqua\"}",
+                                        "permission_level": 4
+                                    },
+                                    {
+                                        "type": "origins:delay",
+                                        "action": {
+                                            "type": "origins:execute_command",
+                                            "command": "/tellraw @s {\"text\":\"- Your scales harden, they feel tough enough to deflect a barrage of Arrows.\",\"italic\":true,\"color\":\"gold\"}",
+                                            "permission_level": 4
+                                        },
+                                        "ticks": 2
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:power",
+                                        "power": "fivlord:dragon/proj"
+                                    },
+                                    {
+                                        "inverted": true,
+                                        "type": "origins:power",
+                                        "power": "fivlord:dragon/breath"
+                                    }
+                                ]
+                            },
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "power grant @s fivlord:dragon/breath",
+                                        "permission_level": 4
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/tellraw @s {\"text\":\"*#*# Power Regained! #*#*\",\"bold\":true,\"color\":\"aqua\"}",
+                                        "permission_level": 4
+                                    },
+                                    {
+                                        "type": "origins:delay",
+                                        "action": {
+                                            "type": "origins:execute_command",
+                                            "command": "/tellraw @s {\"text\":\"- Overwhelming Heat gathers in your throat, now -this- feels like power. [Primary]\",\"italic\":true,\"color\":\"gold\"}",
+                                            "permission_level": 4
+                                        },
+                                        "ticks": 2
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:power",
+                                        "power": "fivlord:dragon/breath"
+                                    },
+                                    {
+                                        "inverted": true,
+                                        "type": "origins:power",
+                                        "power": "fivlord:dragon/attributes"
+                                    }
+                                ]
+                            },
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "power grant @s fivlord:dragon/attributes",
+                                        "permission_level": 4
+                                    },
+									{
+                                        "type": "origins:execute_command",
+                                        "command": "power grant @s fivlord:dragon/attr",
+                                        "permission_level": 4
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "/tellraw @s {\"text\":\"*#*# Power Regained! #*#*\",\"bold\":true,\"color\":\"aqua\"}",
+                                        "permission_level": 4
+                                    },
+                                    {
+                                        "type": "origins:delay",
+                                        "action": {
+                                            "type": "origins:execute_command",
+                                            "command": "/tellraw @s {\"text\":\"- At last the spark of Magic returns to you at full. Your touch makes weapons and tools you Craft hum with power.\",\"italic\":true,\"color\":\"gold\"}",
+                                            "permission_level": 4
+                                        },
+                                        "ticks": 2
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:power",
+                                "power": "fivlord:dragon/attributes"
+                            },
+                            "action": {
+                                "type": "origins:execute_command",
+                                "command": "/tellraw @s {\"text\":\"- You have regained all that you have lost, your further power rests on you alone.\",\"italic\":true,\"color\":\"gold\"}",
+                                "permission_level": 4
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.ender_dragon.growl",
+                    "volume": 1,
+                    "pitch": 0.6
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:dragon/regain_absorb",
+                        "change": -1000
+                    },
+                    "ticks": 3
+                }
+            ]
+        }
+    }
+}

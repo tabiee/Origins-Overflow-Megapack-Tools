@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"brain:vex",
+		"brain:climb",
+		"brain:stare",
+		"brain:mobs",
+		"brain:hp",
+		"brain:armor",
+		"brain:eat",
+		"brain:dmg",
+		"brain:size",
+		"brain:tagger"
+	],
+	"icon": "minecraft:observer",
+	"impact": 3,
+	"name": "§a§l§oThe B.R.A.I.N.",
+	"description": "The Fabrication Machine."
+}

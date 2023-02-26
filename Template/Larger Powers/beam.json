@@ -1,0 +1,174 @@
+{
+    "name": "§5§nMayhem Beam",
+    "description": "You can fire a red beam of magic after holding your secondary button for 6 seconds.",
+    "type": "origins:multiple",
+    "shoot": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 120,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 5,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_shoot",
+                "comparison": "!=",
+                "compare_to": 0
+            }
+        },
+        "max_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 30,
+                    "block": false,
+                    "entity": true,
+                    "shape_type": "outline",
+                    "fluid_handling": "any",
+                    "bientity_action": {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:damage",
+                                    "amount": 12,
+                                    "source": {
+                                        "name": "magic",
+                                        "unblockable": true,
+                                        "magic": true
+                                    }
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "tp @s ~ ~ ~ facing entity @e[tag=sorc,limit=1]"
+                                },
+                                {
+                                    "type": "origins:delay",
+                                    "action": {
+                                        "type": "origins:add_velocity",
+                                        "y": 0.5,
+                                        "z": -1.5,
+                                        "space": "local",
+                                        "client": true,
+                                        "server": true,
+                                        "set": true
+                                    },
+                                    "ticks": 3
+                                }
+                            ]
+                        }
+                    },
+					"miss_action": {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:change_resource",
+                            "resource": "*:*_cd",
+                            "change": 240,
+                            "operation": "set"
+                        },
+                        "ticks": 6
+                    },
+                    "command_at_hit": "particle dust 1.000 0.000 0.400 3 ~ ~ ~ 0.5 0.5 0.5 0.2 50",
+                    "command_along_ray": "function sorc:beam"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_shoot",
+                    "change": -120,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.illusioner.prepare_blindness",
+                    "volume": 1,
+                    "pitch": 0.75
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_cd"
+                },
+                {
+                    "type": "origins:swing_hand",
+                    "hand": "MAIN_HAND"
+                }
+            ]
+        }
+    },
+    "act": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_cd",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_shoot",
+                    "change": 1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_hold"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 0.839 0.000 0.337 1 ^ ^1.1 ^1 0.1 0.1 0.1 0.1 3"
+                }
+            ]
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "secondary",
+            "continuous": true
+        }
+    },
+    "hold": {
+        "type": "origins:cooldown",
+        "cooldown": 3,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "reset": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_hold",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_shoot",
+            "change": -3,
+            "operation": "add"
+        }
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 300,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 1
+        }
+    }
+}

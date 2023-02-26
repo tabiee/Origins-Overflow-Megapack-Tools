@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"ace:yeti/snowball",
+		"ace:yeti/frostwalk",
+		"ace:yeti/freeze",
+		"ace:yeti/hp",
+		"ace:yeti/size",
+		"ace:yeti/carnivore",
+		"ace:yeti/celling",
+		"ace:yeti/fire"
+	],
+	"icon": "minecraft:snow_block",
+	"impact": 1,
+	"name": "Yeti",
+	"description": "Creature of snowy peaks."
+}

@@ -1,0 +1,22 @@
+{
+	"powers": [
+		"ace:kraken/beam",
+		"ace:kraken/trident",
+		"ace:kraken/water",
+		"ace:kraken/breathe",
+		"ace:kraken/nv",
+		"origins:aqua_affinity",
+		"origins:swim_speed",
+		"origins:like_water",
+		"ace:kraken/piscivore",
+		"ace:kraken/land",
+		"ace:angel/falldmg",
+		"ace:yeti/fire",
+		"ace:dragon/shield",
+		"ace:kraken/teamer"
+	],
+	"icon": "minecraft:heart_of_the_sea",
+	"impact": 3,
+	"name": "Kraken",
+	"description": "An enormous mythical sea monster."
+}

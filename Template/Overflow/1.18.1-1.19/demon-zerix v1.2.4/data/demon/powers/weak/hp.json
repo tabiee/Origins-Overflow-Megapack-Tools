@@ -1,0 +1,10 @@
+{
+    "name": "§2§nVitality",
+    "description": "You have 1 extra heart.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": 2
+    }
+}

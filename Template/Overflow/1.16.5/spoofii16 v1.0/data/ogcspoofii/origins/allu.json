@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"ogcspoofii:allu/night_vision",
+		"ogcspoofii:allu/hp",
+		"ogcspoofii:allu/reset",
+		"ogcspoofii:allu/particles",
+		"ogcspoofii:allu/powerup",
+		"ogcspoofii:allu/perms",
+		"ogcspoofii:allu/waterno",
+		"ogcspoofii:allu/enderspook",
+		"ogcspoofii:allu/shorty",
+		"ogcspoofii:allu/tpaway",
+		"ogcspoofii:allu/tamenbreed",
+		"ogcspoofii:allu/sounds"
+	],
+	"icon": "minecraft:end_portal_frame",
+	"impact": 1,
+	"name": "§5§lAllu",
+	"description": "Doing endy things."
+}

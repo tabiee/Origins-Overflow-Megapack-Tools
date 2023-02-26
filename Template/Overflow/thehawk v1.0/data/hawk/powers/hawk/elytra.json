@@ -1,0 +1,7 @@
+{
+    "name": "§1§nWings",
+    "description": "You can fly.",
+    "type": "origins:elytra_flight",
+    "render_elytra": true,
+	"texture_location": "minecraft:textures/entity/skin.png"
+}

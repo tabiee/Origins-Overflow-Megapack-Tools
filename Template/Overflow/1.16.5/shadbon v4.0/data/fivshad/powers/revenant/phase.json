@@ -1,0 +1,43 @@
+{
+    "name": "§1§nPhantasmic Form",
+    "description": "You are translucent. Phase through blocks using the SaveToolbar key.",
+    "type": "origins:multiple",
+    "phase": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:revenant/phase_tap"
+        },
+        "type": "origins:phasing",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:unphasable"
+        },
+        "blacklist": true,
+        "render_type": "blindness",
+        "view_distance": 10,
+        "phase_down_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:on_block"
+                }
+            ]
+        }
+    },
+    "tap": {
+        "condition": {
+            "type": "origins:food_level",
+            "comparison": ">",
+            "compare_to": 6
+        },
+        "type": "origins:toggle",
+        "active_by_default": true,
+        "key": {
+            "key": "key.saveToolbarActivator",
+            "continuous": false
+        }
+    }
+}

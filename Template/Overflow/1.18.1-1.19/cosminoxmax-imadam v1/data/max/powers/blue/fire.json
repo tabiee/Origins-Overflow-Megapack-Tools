@@ -1,0 +1,23 @@
+{
+    "name": "§9§nBurning Up",
+    "description": "Interacting with fire or lava does more damage as well as put Blooming Blue on cooldown if interacted with for too long.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "*:select_mode",
+                "comparison": "==",
+                "compare_to": 4
+            }
+        ]
+    },
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:fire"
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.5
+    }
+}

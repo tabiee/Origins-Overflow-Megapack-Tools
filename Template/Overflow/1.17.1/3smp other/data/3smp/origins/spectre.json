@@ -1,0 +1,24 @@
+{
+    "impact": 3,
+    "unchoosable": false,
+    "name": "§8§l§oSpectre",
+    "powers": [
+        "3smp:spectre/elytra",
+        "3smp:spectre/launch_into_air",
+        "3smp:spectre/aerial_combatant",
+        "3smp:spectre/light_armor",
+        "3smp:spectre/phantomize",
+        "3smp:spectre/translucent",
+        "3smp:spectre/phasing",
+        "3smp:spectre/invisibility",
+        "3smp:spectre/burn_in_daylight",
+        "3smp:spectre/hunger_over_time",
+        "3smp:spectre/fragile",
+		"3smp:spectre/tall",
+		"3smp:spectre/color"
+    ],
+    "order": 1,
+    "description": "An Elytrian who lost all their lives and now roams the world as a ghost.",
+    "loading_priority": 4,
+    "icon": "minecraft:spectral_arrow"
+}

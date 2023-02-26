@@ -1,0 +1,11 @@
+{
+    "name": "Three-Tail",
+    "description": "With three tails active, you have increased attack haste, Speed, Strength, Jump, the ability to walljump and are able to set enemies on fire when you hit them.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Toggle BOTH walljumping and firetouch with SaveToolbar key."
+        }
+    ],
+    "type": "origins:simple"
+}

@@ -1,0 +1,9 @@
+summon fireball ~ ~200 ~ {ExplosionPower:127,power:[0d, -5d, 0d]}
+summon fireball ~ ~200 ~30 {ExplosionPower:127,power:[0d, -5d, 0d]}
+summon fireball ~ ~200 ~-30 {ExplosionPower:127,power:[0d, -5d, 0d]}
+summon fireball ~30 ~200 ~ {ExplosionPower:127,power:[0d, -5d, 0d]}
+summon fireball ~-30 ~200 ~ {ExplosionPower:127,power:[0d, -5d, 0d]}
+summon fireball ~30 ~200 ~30 {ExplosionPower:127,power:[0d, -5d, 0d]}
+summon fireball ~-30 ~200 ~-30 {ExplosionPower:127,power:[0d, -5d, 0d]}
+summon fireball ~-30 ~200 ~30 {ExplosionPower:127,power:[0d, -5d, 0d]}
+summon fireball ~30 ~200 ~-30 {ExplosionPower:127,power:[0d, -5d, 0d]}

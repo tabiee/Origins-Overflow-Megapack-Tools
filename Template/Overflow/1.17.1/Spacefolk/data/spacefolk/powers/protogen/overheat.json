@@ -1,0 +1,140 @@
+{
+    "name": "Flame Resistant",
+    "description": "Able to temporarily go into flames and lava without taking damage for 15 secs, then you will start taking double damage due to overheating.",
+    "condition": {
+        "type": "origins:constant",
+        "value": false
+    },
+    "type": "origins:multiple",
+    "nugget": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 15,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 7,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "spacefolk:protogen/overheat_nugget",
+                "comparison": ">",
+                "compare_to": 0
+        }
+		}
+    },
+    "timer": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "lava"
+                },
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "magma_block"
+                    }
+                },
+				{
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "lava"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+				{
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "fire"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "spacefolk:protogen/overheat_nugget",
+            "change": 1,
+            "operation": "add"
+        }
+    },
+    "reset": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "spacefolk:protogen/overheat_nugget",
+                    "comparison": ">",
+                    "compare_to": 1
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:on_fire"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:submerged_in",
+                    "fluid": "lava"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "magma_block"
+                    }
+                },
+				{
+                    "inverted": true,
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "lava"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+				{
+                    "inverted": true,
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "fire"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "rising_action": {
+            "type": "origins:change_resource",
+            "resource": "spacefolk:protogen/overheat_nugget",
+            "change": 0,
+			"operation": "set"
+        }
+    },
+    "immunity": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "spacefolk:protogen/overheat_nugget",
+            "comparison": "<",
+            "compare_to": 15
+        },
+        "type": "origins:fire_immunity"
+    }
+}

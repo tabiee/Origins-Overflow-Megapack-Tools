@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"eagle:elytra",
+		"eagle:jump",
+		"eagle:boost",
+		"eagle:piscivore",
+		"eagle:chest",
+		"eagle:weather"
+	],
+	"icon": "minecraft:salmon",
+	"impact": 3,
+	"name": "§c§l§oEagle§f§l§o-§9§l§okin",
+	"description": "Winged humanoid that resembles an eagle."
+}

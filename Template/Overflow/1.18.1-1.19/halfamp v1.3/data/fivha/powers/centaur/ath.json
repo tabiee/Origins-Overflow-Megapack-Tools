@@ -1,0 +1,20 @@
+{
+	"name": "Athletic Build",
+	"description": "You are able to run faster than others and jump 2 blocks high.",
+    "type": "origins:multiple",
+    "jump": {
+        "type": "origins:modify_jump",
+        "modifier": {
+            "operation": "addition",
+            "value": 0.15
+        }
+    },
+    "speed": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "addition",
+            "value": 0.05
+        }
+    }
+}

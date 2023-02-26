@@ -1,0 +1,9 @@
+{
+    "name": "Homeland",
+    "description": "You spawn in the End.",
+    "type": "origins:modify_player_spawn",
+    "dimension": "minecraft:the_end",
+    "biome": "end_highlands",
+    "spawn_strategy": "center",
+    "dimension_distance_multiplier": 1
+}

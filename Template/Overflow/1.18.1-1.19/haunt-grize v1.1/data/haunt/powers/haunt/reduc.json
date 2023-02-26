@@ -1,0 +1,9 @@
+{
+    "name": "§2§nGaseous Form",
+    "description": "It's harder to hit you where it hurts, you take less damage.",
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": -0.5
+    }
+}

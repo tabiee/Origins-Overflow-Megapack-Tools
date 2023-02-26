@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:torch",
+    "minecraft:campfire",
+    "minecraft:redstone_torch",
+    "minecraft:sea_pickle",
+    "minecraft:fire",
+    "minecraft:soul_fire",
+    "minecraft:soul_torch"
+  ]
+}

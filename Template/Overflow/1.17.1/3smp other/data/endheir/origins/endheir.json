@@ -1,0 +1,23 @@
+{
+    "impact": 3,
+    "unchoosable": false,
+    "name": "§d§l§oEnd Heir",
+    "powers": [
+        "endheir:one_of_us",
+        "endheir:team_add",
+        "endheir:barren_home",
+        "endheir:end_fist",
+        "endheir:magic_body",
+        "endheir:dragons_heart",
+        "endheir:ender_respect",
+        "endheir:respect",
+        "endheir:damaged_sense",
+        "endheir:watery_grave",
+        "endheir:weak_lungs",
+        "endheir:eyes_of_ender",
+        "endheir:ender_sight",
+        "origins:throw_ender_pearl"
+    ],
+    "icon": "minecraft:shulker_shell",
+    "description": "You are one of the last Enderman who are still part human who walk the End Highlands, prone to be the next Ruler of the End."
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Fox Den",
+  "description": "you find it much more comfortable to sleep in a den underground than in the sky or a house.",
+  "type": "origins:prevent_sleep",
+  "block_condition": {
+    "type": "origins:height",
+    "comparison": ">",
+    "compare_to": 54
+  },
+  "message": "You are too uncomfortable to rest here. Maybe try going lower."
+}

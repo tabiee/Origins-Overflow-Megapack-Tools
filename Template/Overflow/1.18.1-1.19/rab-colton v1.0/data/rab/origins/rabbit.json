@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"rab:rab/launch",
+		"rab:rab/dash",
+		"rab:rab/dj",
+		"rab:rab/fall",
+		"rab:rab/effects",
+		"rab:rab/smol",
+		"rab:rab/nom",
+		"rab:rab/armor",
+		"rab:rab/dmg"
+	],
+	"icon": "minecraft:rabbit_foot",
+	"impact": 2,
+	"name": "§b§l§oRabbitfolk",
+	"description": "Hippity-Hoppity."
+}

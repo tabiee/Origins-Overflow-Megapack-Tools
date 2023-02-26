@@ -1,0 +1,20 @@
+{
+    "powers": [
+	"origins:flame_particles",
+	"quirk:hellflame/fire_fist",
+	"quirk:hellflame/jet_burn",
+	"quirk:hellflame/fire_vortex",
+	"quirk:hellflame/fire_dash",
+	"quirk:hellflame/fire",
+	"quirk:hellflame/fireball",
+	"quirk:hellflame/hellspider",
+		"quirk:health"
+       
+    ],
+    "icon": "minecraft:flint",
+        "unchoosable": true,
+    "order": 20,
+    "impact": 3,
+    "name": "Hellflame",
+    "description": "Endeavor's Quirk"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "origins:action_over_time",
+  "interval": 1,
+  "entity_action": {
+    "type": "origins:execute_command",
+    "command": "effect give @s minecraft:dolphins_grace 1 0 true"
+  },
+  "name": "Swimmer",
+  "description": "As time has gone on your body has adapted to your environment allow you to swim at amazing speeds."
+}

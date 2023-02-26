@@ -1,0 +1,135 @@
+{
+    "name": "§3§nLandform: Carnivore",
+    "description": "It is as is said; a land form but as a carnivore. You may only eat meat in this form, you can get a speed boost and strength during the night time, and animals you tame gain a strength boost.",
+    "type": "origins:multiple",
+    "stats": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_form",
+                    "comparison": "==",
+                    "compare_to": 3
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "inverted": true,
+                        "type": "origins:daytime"
+                    },
+                    "if_action": {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "speed",
+                                "duration": 150,
+                                "amplifier": 1,
+                                "show_particles": false,
+                                "show_icon": true
+                            },
+                            {
+                                "effect": "strength",
+                                "duration": 150,
+                                "amplifier": 1,
+                                "show_particles": false,
+                                "show_icon": true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[distance=..15] at @s if data entity @s Owner run effect give @s resistance 10 0 true"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[nbt={Trusting:1b},distance=..15] at @s run effect give @s resistance 10 0 true"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[distance=..15] at @s if data entity @s Owner run particle wax_on ~ ~1.5 ~ 0 0 0 0 20"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[nbt={Trusting:1b},distance=..15] at @s run particle wax_on ~ ~1.5 ~ 0 0 0 0 20"
+                }
+            ]
+        }
+    },
+    "carn": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_form",
+                    "comparison": "==",
+                    "compare_to": 3
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+            ]
+        },
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "origins:meat"
+                            }
+                        },
+                        {
+                            "type": "origins:meat"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:food"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "origins:ignore_diet"
+                    }
+                }
+            ]
+        }
+    }
+}

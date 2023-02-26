@@ -1,0 +1,48 @@
+{
+    "name": "§2§nGlued Fingers",
+    "description": "Your hands are as effective as an efficiency II Iron pickaxe, axe and shovel. It also seems to have silk touch.",
+    "type": "origins:multiple",
+    "silky": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:empty"
+            }
+        },
+        "type": "origins:modify_harvest",
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:constant",
+                    "value": true
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:in_tag",
+                    "tag": "fivend:silk"
+                }
+            ]
+        },
+        "allow": true
+    },
+    "speed": {
+        "type": "origins:modify_break_speed",
+		"condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:empty"
+            }
+        },
+        "block_condition": {
+            "type": "origins:constant",
+            "value": true
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.20
+        }
+    }
+}

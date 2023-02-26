@@ -1,0 +1,42 @@
+{
+	"hidden": true,
+	"name": "hue",
+	"description": "yea",
+	"type": "origins:multiple",
+	"ovl": {
+		"condition": {
+			"type": "origins:gamemode",
+			"gamemode": "spectator"
+		},
+		"type": "origins:overlay",
+		"texture": "minecraft:textures/block/cauldron_top.png",
+		"strength": 1,
+		"red": 0,
+		"green": 0,
+		"blue": 0,
+		"draw_mode": "texture",
+		"draw_phase": "below_hud",
+		"hide_with_hud": false,
+		"visible_in_third_person": true
+	},
+	"sha": {
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:gamemode",
+					"gamemode": "spectator"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "sunmoon:indicator_synced",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:shader",
+		"shader": "minecraft:shaders/post/scan_pincushion.json",
+		"toggleable": true
+	}
+}

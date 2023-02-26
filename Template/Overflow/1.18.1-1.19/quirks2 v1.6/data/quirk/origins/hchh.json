@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"quirk:hchh/hchhpunch",
+		"quirk:hchh/particles",
+		"quirk:hchh/blast",
+		"quirk:hchh/blast1",
+		"quirk:hchh/vortex",
+		"quirk:hchh/ice_ascend",
+		"quirk:hchh/flashfirefist",
+		"quirk:hchh/power",
+		"quirk:health"
+	],
+	"icon": "minecraft:ghast_tear",
+        "unchoosable": true,
+	"order": 10,
+	"impact": 3,
+	"name": "Half-Cold Half-Hot",
+	"description": "Shoto's Quirk"
+}

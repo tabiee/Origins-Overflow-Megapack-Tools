@@ -1,0 +1,33 @@
+{
+    "name": "§6§nIllager Aligned",
+    "description": "Villagers distrust you and raise their prices.",
+    "type": "origins:multiple",
+    "prices": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "data modify storage offworld vill set value {Type: \"trading\", Value: -10}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "data modify storage offworld vill.Target set from entity @s UUID",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=minecraft:villager] run data modify entity @s Gossips append from storage minecraft:offworld vill",
+                    "permission_level": 4
+                }
+            ]
+        }
+    },
+    "illager": {
+        "type": "origins:entity_group",
+        "group": "illager"
+    }
+}

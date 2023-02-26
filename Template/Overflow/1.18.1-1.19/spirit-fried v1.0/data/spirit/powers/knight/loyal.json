@@ -1,0 +1,40 @@
+{
+    "name": "§6§nAncient Loyalty",
+    "description": "You and your sword cannot harm other players wearing golden helmets.",
+    "type": "origins:multiple",
+    "gold": {
+        "type": "origins:modify_damage_dealt",
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:player"
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "golden_helmet"
+                        }
+                    }
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -100
+        }
+    },
+    "give_to_dog": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "power grant @e[tag=dog] spirit:knight/loyal",
+            "permission_level": 4
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"star:star/dust",
+		"star:star/model",
+		"star:star/tp",
+		"star:star/fly",
+		"star:star/launch",
+		"star:star/bolt",
+		"star:star/slowfall",
+		"star:star/desc",
+		"star:star/weak",
+		"star:star/blind"
+	],
+	"icon": "minecraft:nether_star",
+	"impact": 3,
+	"name": "§3§l§oStardust",
+	"description": "A pure being made entirely out of stardust."
+}

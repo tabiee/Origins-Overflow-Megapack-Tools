@@ -1,0 +1,9 @@
+{
+    "name": "§4§nFood energy",
+    "description": "Your robotic side requires energy to run. It will use food you eat to run, but you must eat a lot more to run both human and robotic sides of your body.",
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 1
+    }
+}

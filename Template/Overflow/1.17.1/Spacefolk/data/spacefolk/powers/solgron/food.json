@@ -1,0 +1,77 @@
+{
+    "name": "Light Eater",
+    "description": "Normal food gives you nausea, you eat torches instead.",
+    "type": "origins:multiple",
+    "nausea": {
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "nausea",
+                            "duration": 200,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "hunger",
+                            "duration": 200,
+                            "amplifier": 200,
+                            "show_particles": false,
+                            "show_icon": false
+                        }
+                    ]
+                }
+            ]
+        },
+        "item_condition": {
+            "type": "origins:food"
+        }
+    },
+    "torch": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "torch"
+                }
+            }
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s torch 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:feed",
+                    "food": 8,
+                    "saturation": 12.8
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.generic.extinguish_fire",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "secondary",
+            "continuous": true
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+	"name": "Aura",
+	"description": "You have the Conduit's power.",
+	"type": "origins:action_over_time",
+	"interval": 25,
+	"entity_action": {
+		"type": "origins:execute_command",
+		"command": "effect give @e[distance=..30] conduit_power 10 0 true"
+	}
+}

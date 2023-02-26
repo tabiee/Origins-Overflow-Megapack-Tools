@@ -1,0 +1,60 @@
+{
+    "name": "§b§n§lPower Bar§r",
+    "description": "Battery power replaces your hunger bar, you do not eat and replenish your energy through other means.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "Golden apples are still edible, but grant no saturation."
+        }
+    ],
+    "type": "origins:multiple",
+    "textures": {
+        "type": "origins:status_bar_texture",
+        "texture": "energy:textures/gui/energy_v7.png"
+    },
+    "food": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:food"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:ingredient",
+                    "ingredient": [
+                        {
+                            "item": "enchanted_golden_apple"
+                        },
+                        {
+                            "item": "golden_apple"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "gapples": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "enchanted_golden_apple"
+                },
+                {
+                    "item": "golden_apple"
+                }
+            ]
+        },
+        "food_modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        },
+        "saturation_modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    }
+}

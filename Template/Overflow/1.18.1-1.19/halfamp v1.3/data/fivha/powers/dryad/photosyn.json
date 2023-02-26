@@ -1,0 +1,24 @@
+{
+    "name": "Photosynthesis",
+    "description": "You receive nutrients from sunlight.",
+    "condition": {
+        "type": "origins:exposed_to_sun"
+    },
+    "type": "origins:action_over_time",
+    "interval": 100,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:feed",
+                "food": 1,
+                "saturation": 1.5
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "*:dryad/waterbar_bubbles",
+                "change": -25
+            }
+        ]
+    }
+}

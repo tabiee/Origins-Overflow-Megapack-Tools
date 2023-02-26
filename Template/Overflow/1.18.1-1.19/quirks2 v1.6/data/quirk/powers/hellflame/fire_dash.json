@@ -1,0 +1,48 @@
+{
+	"type": "origins:active_self",
+	"cooldown": 70,
+ 	 "key": {
+    "key": "key.origins.senary_active",
+    "continuous": false
+	},
+	"hud_render": {
+	  "should_render":true,
+	  "sprite_location":"origins:textures/gui/resource_bar.png",
+	  "bar_index": 4
+	},
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [ 
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.generic.extinguish_fire"
+			},
+			            {
+                "type": "origins:execute_command",
+                "command": "execute as @s run particle minecraft:flame ~ ~ ~ 0 0 0 1 200",
+                "permission_level": 4
+            },
+
+			{
+				"type": "origins:add_velocity",
+				"z": 2,
+				"space": "local"
+			},
+			{
+			  "type": "origins:execute_command",
+			  "command": "effect give @p minecraft:levitation 1 1 true",
+			  "permission_level": 4
+			}
+			 
+		],
+	  "cooldown": 20,
+	  "hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/resource_bar.png",
+			"bar_index": 4
+		}
+	},
+
+		"name": "Fire Dash",
+		"description": "Use your fire to propel yourself forward"
+	}

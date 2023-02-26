@@ -1,0 +1,13 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:power_active",
+        "power": "*:tricks/fade"
+    },
+    "type": "origins:action_over_time",
+    "interval": 100,
+    "entity_action": {
+        "type": "origins:exhaust",
+        "amount": 2
+    }
+}

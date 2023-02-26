@@ -1,0 +1,24 @@
+{
+    "name": "§2§nEmpowered",
+    "description": "While above y=0, you have the Strength effect.",
+    "condition": {
+        "type": "origins:in_block_anywhere",
+        "block_condition": {
+            "type": "origins:height",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "strength",
+            "duration": 100,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

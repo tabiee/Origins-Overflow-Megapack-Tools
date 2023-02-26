@@ -1,0 +1,36 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:if_else",
+      "condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:block_collision",
+            "offset_x": 0,
+            "offset_y": 1,
+            "offset_z": 0
+          },
+          {
+            "type": "origins:block_in_radius",
+            "block_condition": {
+                "type": "origins:block",
+                "block": "minecraft:bedrock"
+            },
+            "radius": 1,
+            "shape": "cube",
+            "comparison": ">=",
+            "compare_to": 4
+          }
+        ]
+      },
+      "if_action": {
+        "type": "origins:feed",
+        "food": 1,
+        "saturation": 1
+      }
+    },
+    "interval": 60,
+    "name":"Bottom Feeder",
+    "description": "Your only source of food is found by slowly eating nutrients found in bedrock. You can't eat other foods, but you can store nutrients which will feed you over time"
+}

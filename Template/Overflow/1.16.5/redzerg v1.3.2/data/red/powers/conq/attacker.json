@@ -1,0 +1,81 @@
+{
+	"hidden": true,
+	"type": "origins:attacker_action_when_hit",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+					"type": "origins:execute_command",
+					"command": "team leave @s[tag=!minion]",
+					"permission_level": 4
+				},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:execute_command",
+					"command": "tag @s add tar",
+					"permission_level": 4
+				},
+				"ticks": 1
+			},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute at @e[team=sum,tag=minion,tag=!tar,distance=..7,tag=!conq,type=!item,type=!arrow] run summon snowball ~ ~5 ~ {Tags:[\"snowhit\"],Motion:[0.0,-0.5,0.0]}",
+					"permission_level": 4
+				},
+				"ticks": 3
+			},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=snowball,tag=snowhit] run data modify entity @s Owner set from entity @e[tag=tar,limit=1] UUID",
+					"permission_level": 4
+				},
+				"ticks": 5
+			},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=snowball,tag=snowhit] run data modify entity @s Owner set from entity @e[tag=tar,limit=1] UUID",
+					"permission_level": 4
+				},
+				"ticks": 5
+			},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=snowball,tag=snowhit] run data modify entity @s Owner set from entity @e[tag=tar,limit=1] UUID",
+					"permission_level": 4
+				},
+				"ticks": 5
+			},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=snowball,tag=snowhit] run data modify entity @s Owner set from entity @e[tag=tar,limit=1] UUID",
+					"permission_level": 4
+				},
+				"ticks": 5
+			},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=snowball,tag=snowhit] run data modify entity @s Owner set from entity @e[tag=tar,limit=1] UUID",
+					"permission_level": 4
+				},
+				"ticks": 5
+			}
+		]
+	},
+	"cooldown": 0,
+	"hud_render": {
+		"should_render": false
+	}
+}

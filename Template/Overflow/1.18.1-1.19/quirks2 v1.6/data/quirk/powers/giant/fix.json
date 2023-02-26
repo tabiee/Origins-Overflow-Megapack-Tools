@@ -1,0 +1,16 @@
+{
+  "type": "origins:action_on_callback",
+  "entity_action_chosen": {
+    "type": "origins:execute_command",
+    "command": "execute at @s run particle minecraft:cloud ~ ~1 ~ 0.2 0.2 0.2 1 20 force",
+    "permission_level": 4
+  },
+
+  "entity_action_removed": {
+    "type": "origins:execute_command",
+    "command": "scale reset @s",
+    "permission_level": 4
+  },
+  "hidden": true,
+  "execute_chosen_when_orb": true
+}

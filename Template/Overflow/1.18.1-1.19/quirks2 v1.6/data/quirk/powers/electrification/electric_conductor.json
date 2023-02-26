@@ -1,0 +1,15 @@
+{
+	"type": "origins:modify_damage_taken",
+	"damage_condition":{
+		"type": "origins:name",
+		"name": "lightningBolt"			
+	},
+	"modifier":
+	{
+		"operation": "multiply_total",
+		"value": -0.99,
+		"name": "Lightning resistance"
+	},
+	"name": "Electric Conductor",
+	"description": "You take less thunder damage."
+}

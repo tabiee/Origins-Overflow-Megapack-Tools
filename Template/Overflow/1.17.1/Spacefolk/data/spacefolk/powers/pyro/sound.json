@@ -1,0 +1,15 @@
+{
+    "hidden": true,
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:play_sound",
+        "sound": "block.fire.ambient",
+        "volume": 1,
+        "pitch": 2
+    },
+    "cooldown": 1,
+    "key": {
+        "key": "secondary",
+        "continuous": true
+    }
+}

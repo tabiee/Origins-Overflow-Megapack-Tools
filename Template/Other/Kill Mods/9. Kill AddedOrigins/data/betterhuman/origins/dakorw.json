@@ -1,0 +1,17 @@
+{
+    "powers": [
+        "betterhuman:okcombat",
+        "betterhuman:ragemod",
+        "betterhuman:poisonimmune",
+        "betterhuman:poisonimmuneagain",
+        "betterhuman:hugeapetite",
+        "origins:vegetarian"
+    ],
+    "icon": "minecraft:iron_axe",
+    "order": 15,
+    "impact": 1,
+    "name": "Dakor Warrior",
+    "description": "The Dakor Warrior is kind of Skilled at combat",
+    "loading_priority": 100,
+    "unchoosable": true
+}

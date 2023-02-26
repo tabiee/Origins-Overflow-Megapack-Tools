@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"axo:axo/jockey",
+		"axo:axo/nv",
+		"axo:axo/waterbuff",
+		"axo:axo/like_water",
+		"axo:axo/swim",
+		"axo:axo/air",
+		"axo:axo/pisci",
+		"axo:axo/hp",
+		"axo:axo/moist",
+		"axo:axo/mine",
+		"axo:axo/size",
+		"origins:like_water"
+	],
+	"icon": "minecraft:heart_of_the_sea",
+	"impact": 3,
+	"name": "§b§l§oAxolotl",
+	"description": "Small and adorable amphibian."
+}

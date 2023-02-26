@@ -1,0 +1,38 @@
+{
+    "name": "§9§n§lEnergetic!",
+    "description": "You are fast, fast, fast!",
+    "type": "origins:multiple",
+    "haste": {
+        "type": "origins:modify_break_speed",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    },
+    "speed": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.movement_speed",
+                "operation": "multiply_total",
+                "value": 0.5
+            },
+            {
+                "attribute": "generic.attack_speed",
+                "operation": "multiply_total",
+                "value": 0.5
+            },
+            {
+                "attribute": "additionalentityattributes:water_speed",
+                "operation": "multiply_total",
+                "value": 0.5
+            },
+            {
+                "attribute": "additionalentityattributes:lava_speed",
+                "operation": "multiply_total",
+                "value": 0.5
+            }
+        ],
+        "update_health": false
+    }
+}

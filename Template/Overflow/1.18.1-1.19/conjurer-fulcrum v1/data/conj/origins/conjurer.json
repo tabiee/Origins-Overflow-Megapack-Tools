@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"conj:random",
+		"conj:fire",
+		"conj:model"
+	],
+	"icon": "minecraft:nether_star",
+	"impact": 3,
+	"name": "§3§l§oThe Conjurer",
+	"description": "Pull items into existence with nothing more than thought."
+}

@@ -1,0 +1,34 @@
+{
+	"name": "§2§nSharp Hands",
+	"description": "You are able to mine and harvest everything up to Diamond.",
+	"hidden": true,
+	"condition": {
+		"type": "origins:equipped_item",
+		"equipment_slot": "mainhand",
+		"item_condition": {
+			"type": "origins:constant",
+			"value": true
+		}
+	},
+	"type": "origins:modify_harvest",
+	"block_condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:in_tag",
+				"tag": "minecraft:mineable/pickaxe"
+			},
+			{
+				"inverted": true,
+				"type": "origins:block",
+				"block": "minecraft:ancient_debris"
+			},
+			{
+				"inverted": true,
+				"type": "origins:block",
+				"block": "minecraft:netherite_block"
+			}
+		]
+	},
+	"allow": true
+}

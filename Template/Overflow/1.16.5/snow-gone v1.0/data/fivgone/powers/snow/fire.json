@@ -1,0 +1,12 @@
+{
+	"name": "§4§nThaw",
+    "description": "Your naturally cool body is damaged badly by fire and lava.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:fire"
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": 2
+    }
+}

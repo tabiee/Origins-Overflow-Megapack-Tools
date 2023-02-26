@@ -1,0 +1,82 @@
+{
+    "name": "§5§nCatch Up§r",
+    "description": "Go invisible and gain high speed for a short time.",
+    "type": "origins:multiple",
+    "act": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle firework ~ ~1 ~ 0.5 0.5 0.5 0.1 10"
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "speed",
+                        "duration": 200,
+                        "amplifier": 2,
+                        "show_particles": false,
+                        "show_icon": true
+                    }
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:slasher/catch_cd"
+                }
+            ]
+        },
+        "cooldown": 400,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 7,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:slasher/catch_cd",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        },
+        "key": {
+            "key": "primary"
+        }
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 200,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "invis": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:slasher/catch_cd",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:invisibility",
+        "render_armor": false
+    },
+    "trigger": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:slasher/catch_cd",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "falling_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:slasher/catch_act"
+                }
+            ]
+        }
+    }
+}

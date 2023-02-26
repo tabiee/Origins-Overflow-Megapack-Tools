@@ -1,0 +1,23 @@
+{
+    "powers": [
+        "origins:no_shield",
+        "origins:strong_arms",
+        "betterhuman:silverfish_sized",
+        "origins:phasing",
+        "origins:phantomize",
+        "betterhuman:silverfishsize",
+        "betterhuman:reset"
+    ],
+    "icon": "minecraft:stone",
+    "order": 12,
+    "impact": 2,
+    "name": "Silverfishian",
+    "description": "The silverfish have always been treated badly.",
+    "upgrades": {
+        "condition": "minecraft:end/kill_dragon",
+        "origin": "betterhuman:silverfishiash",
+        "announcement": "You have evolved"
+    },
+    "loading_priority": 100,
+    "unchoosable": true
+}

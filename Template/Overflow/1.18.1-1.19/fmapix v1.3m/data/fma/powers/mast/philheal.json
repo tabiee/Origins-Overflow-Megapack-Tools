@@ -1,0 +1,90 @@
+{
+	"hidden": true,
+	"condition": {
+		"type": "origins:command",
+		"command": "clear @s heart_of_the_sea{CustomModelData:1} 0",
+		"comparison": ">=",
+		"compare_to": 1,
+		"permission_level": 4
+	},
+	"type": "origins:multiple",
+	"reg": {
+		"condition": {
+			"type": "origins:command",
+			"command": "clear @s heart_of_the_sea{CustomModelData:1} 0",
+			"comparison": ">=",
+			"compare_to": 1,
+			"permission_level": 4
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "regeneration",
+				"duration": 100,
+				"amplifier": 0,
+				"show_particles": false,
+				"show_icon": true
+			}
+		}
+	},
+	"death": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "clear @s heart_of_the_sea{CustomModelData:1} 0",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*mast/philheal_cd",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:prevent_death",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "*:mast/philheal_cd"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle dust 0.902 0.000 0.329 1 ~ ~ ~ 1.5 1 1.5 0.7 100 normal",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "entity.wither.spawn",
+					"volume": 1,
+					"pitch": 0.8
+				},
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "regeneration",
+						"duration": 100,
+						"amplifier": 3,
+						"show_particles": false,
+						"show_icon": true
+					}
+				}
+			]
+		}
+	},
+	"cd": {
+		"type": "origins:cooldown",
+		"cooldown": 24000,
+		"hud_render": {
+			"should_render": false
+		}
+	}
+}

@@ -1,0 +1,73 @@
+{
+    "name": "§e§nTrained Swordsman",
+    "description": "Due to your years in SurviSky, a different land with different fighting techniques, you deal more damage with swords and less with axes.",
+    "type": "origins:multiple",
+    "axe": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": [
+                    {
+                        "item": "wooden_axe"
+                    },
+                    {
+                        "item": "stone_axe"
+                    },
+                    {
+                        "item": "golden_axe"
+                    },
+                    {
+                        "item": "iron_axe"
+                    },
+                    {
+                        "item": "diamond_axe"
+                    },
+                    {
+                        "item": "netherite_axe"
+                    }
+                ]
+            }
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "addition",
+            "value": -3
+        }
+    },
+    "sword": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": [
+                    {
+                        "item": "wooden_sword"
+                    },
+                    {
+                        "item": "stone_sword"
+                    },
+                    {
+                        "item": "golden_sword"
+                    },
+                    {
+                        "item": "iron_sword"
+                    },
+                    {
+                        "item": "diamond_sword"
+                    },
+                    {
+                        "item": "netherite_sword"
+                    }
+                ]
+            }
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "addition",
+            "value": 2
+        }
+    }
+}

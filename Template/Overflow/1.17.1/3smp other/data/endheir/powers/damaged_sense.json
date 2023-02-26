@@ -1,0 +1,98 @@
+{
+    "type": "origins:multiple",
+    "name": "Damaged Sense",
+    "description": "Your natural homeland is deVOID of light, causing your eyes to be strained while in the overworld during the day, and while in the nether. Your end buffs seem to dissipate, along with your body while in intense rays light.",
+    "condition": {
+        "type": "origins:constant",
+        "inverted": false,
+        "value": false
+    },
+    "o___0": {
+        "type": "origins:action_over_time",
+        "interval": 100,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "duration": 200,
+                            "is_ambient": false,
+                            "show_particles": true,
+                            "show_icon": true,
+                            "effect": "minecraft:blindness"
+                        },
+                        {
+                            "duration": 200,
+                            "is_ambient": false,
+                            "show_particles": true,
+                            "show_icon": true,
+                            "effect": "minecraft:weakness"
+                        }
+                    ]
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:daytime",
+            "inverted": false
+        }
+    },
+    "o___1": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:dimension",
+            "inverted": false,
+            "dimension": "the_nether"
+        },
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "duration": 50,
+                "is_ambient": false,
+                "show_particles": true,
+                "show_icon": true,
+                "effect": "minecraft:blindness"
+            }
+        },
+        "interval": 300
+    },
+    "o___2": {
+        "type": "origins:damage_over_time",
+        "interval": 100,
+        "damage": 1,
+        "protection_effectiveness": 0,
+        "onset_delay": 20,
+        "condition": {
+            "type": "origins:exposed_to_sun",
+            "inverted": false
+        }
+    },
+    "o___3": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:dimension",
+            "inverted": false,
+            "dimension": "the_end"
+        },
+        "entity_action": {
+            "type": "origins:clear_effect",
+            "effect": "minecraft:blindness"
+        },
+        "interval": 2
+    },
+    "o___3_": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:dimension",
+            "inverted": false,
+            "dimension": "the_end"
+        },
+        "entity_action": {
+            "type": "origins:clear_effect",
+            "effect": "minecraft:weakness"
+        },
+        "interval": 2
+    }
+}

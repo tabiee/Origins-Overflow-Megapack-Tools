@@ -1,0 +1,35 @@
+{
+    "name": "§4§nExposed Stem",
+    "description": "While you are normal sized, you have 8 hearts. While you are mushroom sized, you only have four hearts.",
+    "type": "origins:multiple",
+    "big": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:psilo/sprout_01",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": -4
+        },
+        "tick_rate": 1
+    },
+    "small": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:psilo/sprout_01",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": -12
+        },
+        "tick_rate": 1
+    }
+}

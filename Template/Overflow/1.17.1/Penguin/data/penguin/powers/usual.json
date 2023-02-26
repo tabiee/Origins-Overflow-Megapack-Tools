@@ -1,0 +1,29 @@
+{
+    "name": "Unusual",
+    "description": "Your body is adapted to cold biomes and therefore hot biomes make you weaker.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:biome",
+                "condition": {
+                    "type": "origins:temperature",
+                    "comparison": ">=",
+                    "compare_to": 2
+                }
+            },
+            {
+                "inverted": true,
+                "type": "origins:submerged_in",
+                "fluid": "water"
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "effect give @s minecraft:slowness 1 0 true",
+        "permission_level": 4
+    }
+}

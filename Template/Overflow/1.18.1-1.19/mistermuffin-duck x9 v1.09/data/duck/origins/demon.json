@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"duck:demon/form",
+		"duck:demon/charm",
+		"duck:demon/souleat",
+		"duck:demon/undead",
+		"duck:demon/desc",
+		"duck:demon/tagger"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"impact": 3,
+	"name": "§4§l§oIium Demon",
+	"description": "Faceless and indimidating hellish creature."
+}

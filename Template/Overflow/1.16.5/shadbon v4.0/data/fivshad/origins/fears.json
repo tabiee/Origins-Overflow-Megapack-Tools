@@ -1,0 +1,14 @@
+{
+	"powers": [
+	    "fivshad:fears/shad",
+		"fivshad:fears/noattacks",
+		"fivshad:fears/trans",
+		"fivshad:fears/dv",
+		"fivshad:fears/sun",
+		"fivshad:fears/armor"
+	],
+	"icon": "minecraft:black_stained_glass",
+	"impact": 1,
+	"name": "§0§l§oFear's Shadow",
+	"description": "An echo of someone barely clinging to existence."
+}

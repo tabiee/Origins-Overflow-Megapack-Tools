@@ -1,0 +1,17 @@
+{
+    "powers": [
+        "betterhuman:triplemobdamage",
+        "betterhuman:triplepillagerdamage",
+        "betterhuman:triplespiderdamage",
+        "betterhuman:lightningsummon",
+        "betterhuman:modifyhealth",
+        "betterhuman:reset"
+    ],
+    "icon": "minecraft:netherite_ingot",
+    "order": 7,
+    "impact": 3,
+    "unchoosable": true,
+    "name": "Antimancer",
+    "description": "The Antimancer is capable of destroyed mob like beings easily",
+    "loading_priority": 100
+}

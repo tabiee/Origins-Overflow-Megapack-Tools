@@ -1,0 +1,53 @@
+{
+    "name": "Junk Food Diet",
+    "description": "You have a taste for raw meat. You are able to eat raw, poisonous and rotten foods without any side-effects.",
+    "type": "origins:action_on_item_use",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:clear_effect",
+                "effect": "hunger"
+            },
+            {
+                "type": "origins:clear_effect",
+                "effect": "poison"
+            },
+            {
+                "type": "origins:clear_effect",
+                "effect": "nausea"
+            },
+            {
+                "type": "origins:clear_effect",
+                "effect": "weakness"
+            },
+            {
+                "type": "origins:clear_effect",
+                "effect": "blindness"
+            }
+        ]
+    },
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "rotten_flesh"
+            },
+            {
+                "item": "spider_eye"
+            },
+            {
+                "item": "poisonous_potato"
+            },
+            {
+                "item": "suspicious_stew"
+            },
+            {
+                "item": "pufferfish"
+            },
+            {
+                "item": "chicken"
+            }
+        ]
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "name": "§1§nMaster of Escape",
+    "description": "When below 4 hearts, you're able to toggle a speed and jump boost.",
+    "type": "origins:multiple",
+    "tog": {
+        "condition": {
+            "type": "origins:health",
+            "comparison": "<",
+            "compare_to": 8
+        },
+        "type": "origins:toggle",
+        "active_by_default": true,
+        "key": {
+            "key": "secondary"
+        },
+        "retain_state": false
+    },
+    "fx": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_tog"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "speed",
+                    "duration": 25,
+                    "amplifier": 2,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "jump_boost",
+                    "duration": 25,
+                    "amplifier": 1,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            ]
+        }
+    }
+}

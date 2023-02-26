@@ -1,0 +1,20 @@
+{
+	"hidden": true,
+    "name": "§2§nEmpowered",
+    "description": "You deal 25% more damage, and take 20% less damage.",
+    "type": "origins:multiple",
+    "dmg": {
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.25
+        }
+    },
+    "res": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.2
+        }
+    }
+}

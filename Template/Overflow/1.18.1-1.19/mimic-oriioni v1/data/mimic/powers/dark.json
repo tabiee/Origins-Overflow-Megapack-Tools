@@ -1,0 +1,389 @@
+{
+    "name": "Gloomstalker",
+    "description": "Being in the dark slowly raises your defense, going into the light removes it with time, but sunlight shatters your natural armor instantly.",
+    "type": "origins:multiple",
+    "armor": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 10,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "gain": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:daytime"
+                        },
+                        {
+                            "type": "origins:in_block_anywhere",
+                            "block_condition": {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:light_level",
+                                        "light_type": "sky",
+                                        "comparison": "<",
+                                        "compare_to": 7
+                                    },
+                                    {
+                                        "type": "origins:light_level",
+                                        "light_type": "block",
+                                        "comparison": "<=",
+                                        "compare_to": 7
+                                    }
+                                ]
+                            },
+                            "comparison": ">=",
+                            "compare_to": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "inverted": true,
+                            "type": "origins:daytime"
+                        },
+                        {
+                            "type": "origins:in_block_anywhere",
+                            "block_condition": {
+                                "type": "origins:light_level",
+                                "light_type": "block",
+                                "comparison": "<=",
+                                "compare_to": 7
+                            },
+                            "comparison": ">=",
+                            "compare_to": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 120,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_armor",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "lose": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:daytime"
+                        },
+                        {
+                            "type": "origins:in_block_anywhere",
+                            "block_condition": {
+                                "type": "origins:light_level",
+                                "light_type": "sky",
+                                "comparison": ">=",
+                                "compare_to": 10
+                            },
+                            "comparison": ">=",
+                            "compare_to": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "inverted": true,
+                            "type": "origins:daytime"
+                        },
+                        {
+                            "type": "origins:in_block_anywhere",
+                            "block_condition": {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:light_level",
+                                        "light_type": "sky",
+                                        "comparison": ">=",
+                                        "compare_to": 10
+                                    },
+                                    {
+                                        "type": "origins:light_level",
+                                        "light_type": "block",
+                                        "comparison": ">=",
+                                        "compare_to": 7
+                                    }
+                                ]
+                            },
+                            "comparison": ">=",
+                            "compare_to": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:light_level",
+                                "light_type": "sky",
+                                "comparison": "<",
+                                "compare_to": 10
+                            },
+                            {
+                                "type": "origins:light_level",
+                                "light_type": "block",
+                                "comparison": ">",
+                                "compare_to": 7
+                            }
+                        ]
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 120,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_armor",
+                    "change": -1,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "sunlight": {
+        "condition": {
+            "type": "origins:exposed_to_sun"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_armor",
+                    "change": -10,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "1": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_armor",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": 2
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "2": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_armor",
+            "comparison": "==",
+            "compare_to": 2
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": 4
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "3": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_armor",
+            "comparison": "==",
+            "compare_to": 3
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": 6
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "4": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_armor",
+            "comparison": "==",
+            "compare_to": 4
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": 8
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "5": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_armor",
+            "comparison": "==",
+            "compare_to": 5
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": 10
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "6": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_armor",
+            "comparison": "==",
+            "compare_to": 6
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": 12
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "7": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_armor",
+            "comparison": "==",
+            "compare_to": 7
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": 14
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "8": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_armor",
+            "comparison": "==",
+            "compare_to": 8
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": 16
+            },
+            {
+                "attribute": "generic.armor_toughness",
+                "operation": "addition",
+                "value": 4
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "9": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_armor",
+            "comparison": "==",
+            "compare_to": 9
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": 18
+            },
+            {
+                "attribute": "generic.armor_toughness",
+                "operation": "addition",
+                "value": 8
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "10": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_armor",
+            "comparison": "==",
+            "compare_to": 10
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": 20
+            },
+            {
+                "attribute": "generic.armor_toughness",
+                "operation": "addition",
+                "value": 12
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": false
+    }
+}

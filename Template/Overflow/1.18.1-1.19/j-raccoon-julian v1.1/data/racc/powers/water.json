@@ -1,0 +1,38 @@
+{
+    "name": "§4§nWarm Blood",
+    "description": "Due to your prior habitat you get cold easier water will give you weakness, blindness and slowness when you touch it.",
+    "condition": {
+        "type": "origins:fluid_height",
+        "fluid": "water",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "weakness",
+                "duration": 55,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "blindness",
+                "duration": 55,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "slowness",
+                "duration": 55,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ]
+    }
+}

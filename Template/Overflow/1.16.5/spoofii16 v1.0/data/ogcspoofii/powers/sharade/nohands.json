@@ -1,0 +1,56 @@
+{
+    "name": "Can't do stuff",
+    "description": "No bows and axes make you weak.",
+    "hidden": true,
+    "type": "origins:multiple",
+    "bow": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "bow"
+            }
+        }
+    },
+    "axe": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": [
+                    {
+                        "item": "wooden_axe"
+                    },
+                    {
+                        "item": "stone_axe"
+                    },
+                    {
+                        "item": "iron_axe"
+                    },
+                    {
+                        "item": "golden_axe"
+                    },
+                    {
+                        "item": "diamond_axe"
+                    },
+                    {
+                        "item": "netherite_axe"
+                    }
+                ]
+            }
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "weakness",
+                "duration": 30,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        }
+    }
+}

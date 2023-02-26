@@ -1,0 +1,68 @@
+{
+    "name": "§2§nHuman Totem",
+    "description": "First time you are about to die, you don't. This effect resets after death.",
+    "type": "origins:multiple",
+    "cd": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "totem": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:sobrian/revive_cd",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:prevent_death",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:sobrian/revive_cd",
+                    "change": -1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle mycelium ~ ~ ~ 1.5 1.5 1.5 1 300",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle crimson_spore ~ ~ ~ 1.5 1.5 1.5 1 300",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.respawn_anchor.deplete",
+                    "volume": 1,
+                    "pitch": 1.3
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "regeneration",
+                        "duration": 160,
+                        "amplifier": 1,
+                        "show_particles": false,
+                        "show_icon": true
+                    }
+                }
+            ]
+        }
+    },
+    "regain": {
+        "type": "origins:action_on_callback",
+        "execute_chosen_when_orb": false,
+        "entity_action_respawned": {
+            "type": "origins:change_resource",
+            "resource": "*:sobrian/revive_cd",
+            "change": 1
+        }
+    }
+}

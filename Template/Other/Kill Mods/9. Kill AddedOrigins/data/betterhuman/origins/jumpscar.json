@@ -1,0 +1,15 @@
+{
+    "powers": [
+        "betterhuman:jumpscare",
+        "betterhuman:netherpunch",
+        "betterhuman:jumpfreeze",
+        "betterhuman:forestspawn"
+    ],
+    "icon": "minecraft:hay_block",
+    "order": 2022,
+    "impact": 3,
+    "name": "Jumpscar",
+    "description": "Jumpscare everyone with the jumpscar",
+    "loading_priority": 100,
+    "unchoosable": true
+}

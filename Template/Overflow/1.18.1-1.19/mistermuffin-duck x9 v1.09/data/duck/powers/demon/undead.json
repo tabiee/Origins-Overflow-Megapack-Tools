@@ -1,0 +1,6 @@
+{
+    "name": "§e§nInfernal",
+    "description": "Health potions damage you, and damage potions heal you.",
+    "type": "origins:entity_group",
+    "group": "undead"
+}

@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"duck:other/tp",
+		"duck:other/change",
+		"duck:other/pixie",
+		"duck:other/humanoid"
+	],
+	"icon": "minecraft:structure_block",
+	"impact": 3,
+	"name": "§5§l§oOtherworlder",
+	"description": "The otherworlder is a magical being who travels the multiverse searching for fun and knowledge."
+}

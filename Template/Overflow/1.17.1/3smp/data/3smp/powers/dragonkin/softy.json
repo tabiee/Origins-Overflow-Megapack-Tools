@@ -1,0 +1,10 @@
+{
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "fall"
+    },
+    "name": "§2§nClumsy with Style",
+    "description": "You're used to falling off of things.",
+    "hidden": false
+}

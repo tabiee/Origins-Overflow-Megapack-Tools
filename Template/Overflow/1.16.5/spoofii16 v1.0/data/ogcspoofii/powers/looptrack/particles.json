@@ -1,0 +1,32 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "wither": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle ash ~ ~ ~ 1 1 1 0 2",
+            "permission_level": 4
+        },
+			"condition": {
+        "inverted": true,
+        "type": "origins:status_effect",
+        "effect": "invisibility"
+	},
+		"smoke": {
+        "type": "origins:action_over_time",
+        "interval": 6,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle white_ash ~ ~ ~ 1 1 1 0 3",
+            "permission_level": 4
+        },
+			"condition": {
+        "inverted": true,
+        "type": "origins:status_effect",
+        "effect": "invisibility"
+	}
+	}
+	}
+}

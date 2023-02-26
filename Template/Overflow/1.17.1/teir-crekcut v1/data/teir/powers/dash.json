@@ -1,0 +1,50 @@
+{
+    "name": "§5§nCast Dash",
+    "description": "Dash at a high speed in the direction you're looking with a cooldown.",
+    "condition": {
+        "type": "origins:food_level",
+        "comparison": ">=",
+        "compare_to": 4
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle wax_on ^ ^1 ^9 0.5 1 0.5 .1 100"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle item blaze_powder ^ ^1 ^9 0.5 1 0.5 .1 100"
+            },
+            {
+                "type": "origins:add_velocity",
+                "y": 0.025,
+                "z": 2.5,
+                "space": "local",
+                "client": true,
+                "server": true
+            },
+            {
+                "type": "origins:exhaust",
+                "amount": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:item.axe.scrape",
+                "volume": 1,
+                "pitch": 2
+            }
+        ]
+    },
+    "cooldown": 200,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 5
+    },
+    "key": {
+        "key": "primary"
+    }
+}

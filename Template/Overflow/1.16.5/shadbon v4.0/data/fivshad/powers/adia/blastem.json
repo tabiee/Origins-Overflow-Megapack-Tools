@@ -1,0 +1,54 @@
+{
+    "name": "§5§nHoly Blast",
+    "description": "By using your primary you can fire a beam of holy energy that will either give regen to whoever it hurts or poison depending on friend or foe. (Toggle mode with Save Toolbar key)",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:adia/deltog_tap",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "if_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute at @s positioned ~ ~1.5 ~ run function fivshad:heal",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.note_block.chime",
+                    "volume": 0.3,
+                    "pitch": 0.8
+                }
+            ]
+        },
+        "else_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute at @s positioned ~ ~1.5 ~ run function fivshad:poison",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.note_block.chime",
+                    "volume": 0.3,
+                    "pitch": 0.6
+                }
+            ]
+        }
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": {
+        "key": "primary",
+        "continuous": true
+    }
+}

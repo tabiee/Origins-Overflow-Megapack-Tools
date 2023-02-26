@@ -1,0 +1,23 @@
+{
+    "name": "mre",
+    "description": "styff",
+    "type": "origins:self_action_on_hit",
+    "target_condition": {
+        "type": "origins:in_tag",
+        "tag": "hippie:animals"
+    },
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "luck",
+            "duration": 40,
+            "amplifier": 3,
+            "show_particles": false,
+            "show_icon": false
+        }
+    },
+    "cooldown": 1,
+    "hud_render": {
+        "should_render": false
+    }
+}

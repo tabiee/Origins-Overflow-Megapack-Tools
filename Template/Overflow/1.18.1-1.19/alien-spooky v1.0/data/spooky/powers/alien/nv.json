@@ -1,0 +1,6 @@
+{
+    "name": "§2§nDark Vision",
+    "description": "You can see well in the dark.",
+    "type": "origins:night_vision",
+    "strength": 0.7
+}

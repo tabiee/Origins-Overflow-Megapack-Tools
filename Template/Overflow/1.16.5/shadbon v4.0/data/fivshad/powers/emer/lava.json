@@ -1,0 +1,41 @@
+{
+    "name": "§e§nHigh Melting Point",
+    "description": "As emeralds melt at almost triple the heat of lava, you take no damage from lava or fire, however you sink in lava.",
+    "type": "origins:multiple",
+    "dmg": {
+        "type": "origins:fire_immunity"
+    },
+    "see": {
+        "type": "origins:lava_vision",
+        "s": 0,
+        "v": 6
+    },
+    "sink": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:constant",
+                        "value": true
+                    }
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "lava",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:add_velocity",
+            "y": -1,
+            "space": "world"
+        }
+    }
+}

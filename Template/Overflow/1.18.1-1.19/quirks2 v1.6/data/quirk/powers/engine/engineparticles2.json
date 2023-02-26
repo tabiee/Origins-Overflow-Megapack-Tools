@@ -1,0 +1,12 @@
+{
+    "type": "origins:action_over_time",
+    "name": "Mighty Legs",
+    "description": "You take 50% less fall damage",
+    "hidden": false,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "particle minecraft:flame ~ ~0.02 ~ 0.2 0.2 0.2 0.01 4 force"
+    },
+    "interval": 5
+}

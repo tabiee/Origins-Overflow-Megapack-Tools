@@ -1,0 +1,131 @@
+{
+    "type": "origins:multiple",
+    "mining_fatigue": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 1,
+        "max_stacks": 4,
+        "duration_per_stack": 40,
+        "effects": [
+            {
+                "effect": "minecraft:slowness",
+                "amplifier": 4,
+                "is_ambient": true,
+                "show_particles": true,
+                "show_icon": true
+            }
+        ],
+        "condition": {
+            "type": "origins:resource",
+            "resource": "quirk:engine/overheat",
+            "comparison": ">",
+            "compare_to": 50
+        }
+    },
+    "slowness": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 1,
+        "max_stacks": 4,
+        "duration_per_stack": 40,
+        "effects": [
+            {
+                "effect": "minecraft:slowness",
+                "amplifier": 3,
+                "is_ambient": true,
+                "show_particles": true,
+                "show_icon": true
+            }
+        ],
+        "condition": {
+            "type": "origins:resource",
+            "resource": "quirk:engine/overheat",
+            "comparison": ">",
+            "compare_to": 60
+        }
+    },
+    "nausea": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 1,
+        "max_stacks": 4,
+        "duration_per_stack": 40,
+        "effects": [
+            {
+                "effect": "minecraft:slowness",
+                "amplifier": 4,
+                "is_ambient": true,
+                "show_particles": true,
+                "show_icon": true
+            }
+        ],
+        "condition": {
+            "type": "origins:resource",
+            "resource": "quirk:engine/overheat",
+            "comparison": ">",
+            "compare_to": 75
+        }
+    },
+    "poop": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 1,
+        "max_stacks": 4,
+        "duration_per_stack": 40,
+        "effects": [
+            {
+                "effect": "minecraft:mining_fatigue",
+                "amplifier": 0,
+                "is_ambient": true,
+                "show_particles": true,
+                "show_icon": true
+            }
+        ],
+        "condition": {
+            "type": "origins:resource",
+            "resource": "quirk:engine/overheat",
+            "comparison": ">",
+            "compare_to": 75
+        }
+    },
+    "fart": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 1,
+        "max_stacks": 4,
+        "duration_per_stack": 40,
+        "effects": [
+            {
+                "effect": "minecraft:wither",
+                "amplifier": 0,
+                "is_ambient": true,
+                "show_particles": true,
+                "show_icon": true
+            }
+        ],
+        "condition": {
+            "type": "origins:resource",
+            "resource": "quirk:engine/overheat",
+            "comparison": ">",
+            "compare_to": 92
+        }
+    },
+    "wither": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 1,
+        "max_stacks": 4,
+        "duration_per_stack": 40,
+        "effects": [
+            {
+                "effect": "minecraft:slowness",
+                "amplifier": 100,
+                "is_ambient": true,
+                "show_particles": true,
+                "show_icon": true
+            }
+        ],
+        "condition": {
+            "type": "origins:resource",
+            "resource": "quirk:engine/overheat",
+            "comparison": ">",
+            "compare_to": 92
+        }
+    },
+    "name": "Overheat",
+	"description": "The more you use your abilities, the more your engines will overheat causing them to stall"
+}

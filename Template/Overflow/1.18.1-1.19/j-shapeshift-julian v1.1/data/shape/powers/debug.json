@@ -1,0 +1,52 @@
+{
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 100,
+    "entity_action": {
+        "type": "origins:if_else_list",
+        "actions": [
+            {
+                "condition": {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[tag=vex]",
+                    "comparison": ">",
+                    "compare_to": 1,
+                    "permission_level": 4
+                },
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "kill @e[tag=vex]",
+                    "permission_level": 4
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[tag=vex]",
+                    "comparison": "==",
+                    "compare_to": 0,
+                    "permission_level": 4
+                },
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "summon minecraft:vex ^ ^ ^-1 {Invulnerable:1b,NoAI:1b,NoGravity:1b,Silent:1b,Tags:[\"vex\"]}",
+                            "permission_level": 4
+                        },
+                        {
+                            "type": "origins:delay",
+                            "action": {
+                                "type": "origins:execute_command",
+                                "command": "power grant @e[tag=vex] shape:fakevis",
+                                "permission_level": 4
+                            },
+                            "ticks": 3
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

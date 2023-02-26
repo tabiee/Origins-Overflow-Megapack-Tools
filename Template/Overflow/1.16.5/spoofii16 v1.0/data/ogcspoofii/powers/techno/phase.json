@@ -1,0 +1,35 @@
+{
+    "type": "origins:multiple",
+    "name": "§5§nPhase",
+    "description": "Fade into the world.",
+    "phase": {
+        "type": "origins:phasing",
+        "blacklist": true,
+        "render_type": "blindness",
+        "view_distance": 100,
+        "phase_down_condition": {
+            "type": "origins:and",
+            "inverted": false,
+            "conditions": [
+                {
+                    "type": "origins:sneaking",
+                    "inverted": false
+                },
+                {
+                    "type": "origins:on_block",
+                    "inverted": false
+                }
+            ]
+        },
+        "block_condition": {
+            "type": "origins:in_tag",
+            "inverted": false,
+            "tag": "origins:unphasable"
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "inverted": false,
+            "power": "*:techno/fade"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"ogcspoofii:spoofii/respawn",
+		"ogcspoofii:surv/backtoback",
+		"origins:elytra",
+		"origins:launch_into_air",
+		"ogcspoofii:surv/noshi",
+		"ogcspoofii:surv/perms",
+		"ogcspoofii:surv/cancel"
+	],
+	"icon": "minecraft:golden_apple",
+	"unchoosable": true,
+	"impact": 1,
+	"name": "§6§lSurvival Mode",
+	"description": "Chill time."
+}

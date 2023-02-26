@@ -1,0 +1,54 @@
+{
+	"name": "§b§nLooking At Me?",
+	"description": "Check who or what is currently near you and could be looking at you.",
+	"type": "origins:multiple",
+	"glow": {
+		"type": "origins:entity_glow",
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:angel/whois_tap"
+		},
+		"bientity_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:distance",
+					"comparison": "<=",
+					"compare_to": 50
+				},
+				{
+					"type": "origins:target_condition",
+					"condition": {
+						"inverted": true,
+						"type": "origins:in_tag",
+						"tag": "angel:noeyes"
+					}
+				}
+			]
+		},
+		"use_teams": false,
+		"red": 0.5,
+		"green": 0.2,
+		"blue": 0.2
+	},
+	"tap": {
+		"type": "origins:toggle",
+		"active_by_default": true,
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"beam": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:angel/whois_tap"
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "execute as @e[tag=watcher,distance=..30,sort=nearest] at @s anchored eyes if entity @e[tag=watcher,distance=..30,sort=nearest] run execute facing entity @e[tag=statue] eyes run function angel:seenby",
+			"permission_level": 4
+		}
+	}
+}

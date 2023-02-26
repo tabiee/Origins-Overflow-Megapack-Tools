@@ -1,0 +1,33 @@
+{
+    "type": "origins:restrict_armor",
+    "head": {
+        "type": "origins:ingredient",
+        "inverted": false,
+        "ingredient": {
+            "item": "minecraft:netherite_helmet"
+        }
+    },
+    "chest": {
+        "type": "origins:ingredient",
+        "inverted": false,
+        "ingredient": {
+            "item": "minecraft:netherite_chestplate"
+        }
+    },
+    "legs": {
+        "type": "origins:ingredient",
+        "inverted": false,
+        "ingredient": {
+            "item": "minecraft:netherite_leggings"
+        }
+    },
+    "feet": {
+        "type": "origins:ingredient",
+        "inverted": false,
+        "ingredient": {
+            "item": "minecraft:netherite_boots"
+        }
+    },
+    "name": "Ender Respect",
+    "description": "Your Enderkin hate Pumpkins, you have no clue why, but you respect their traditions. You are unable to eat pumpkin pie, and wear pumpkins. Netherite is declared the Nether's Ore, therefore you are FORBIDDEN from wearing it, or from using it."
+}

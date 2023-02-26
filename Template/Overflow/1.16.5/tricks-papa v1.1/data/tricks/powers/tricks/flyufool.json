@@ -1,0 +1,27 @@
+{
+	"name": "§1§nFly, you fools [Ternary]",
+	"description": "Lift people up into the air at will. Much to their dismay.",
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "execute anchored eyes run function tricks:fly",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:exhaust",
+				"amount": 0.3
+			}
+		]
+	},
+	"cooldown": 0,
+	"hud_render": {
+		"should_render": false
+	},
+	"key": {
+		"key": "ternary",
+		"continuous": true
+	}
+}

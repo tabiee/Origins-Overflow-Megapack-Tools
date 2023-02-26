@@ -1,0 +1,32 @@
+{
+	"name": "Nectarivore",
+	"description": "You can only consume honey bottles or suspicious stew.",
+	"type": "origins:prevent_item_use",
+	"item_condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:food"
+			},
+			{
+				"inverted": true,
+				"type": "origins:ingredient",
+				"ingredient": [
+					{
+						"item": "honey_bottle"
+					},
+					{
+						"item": "suspicious_stew"
+					}
+				]
+			},
+			{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "origins:ignore_diet"
+				},
+				"inverted": true
+			}
+		]
+	}
+}

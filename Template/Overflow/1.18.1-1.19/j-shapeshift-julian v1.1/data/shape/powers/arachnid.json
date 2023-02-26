@@ -1,0 +1,228 @@
+{
+	"name": "§3§nArachnid Form§r",
+	"description": "You can climb up walls in this form (toggled), walk through webs and can only eat meat. You are weak during daylight but have night vision in the dark and night time. However, you are the size of an inchling in this form.",
+	"type": "origins:multiple",
+	"time": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:select_form",
+					"comparison": "==",
+					"compare_to": 6
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:daytime"
+			},
+			"if_action": {
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "weakness",
+					"duration": 150,
+					"amplifier": 0,
+					"show_particles": false,
+					"show_icon": true
+				}
+			}
+		},
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:height 0.25 @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:width 0.25 @s",
+					"permission_level": 4
+				}
+			]
+		},
+		"falling_action": {
+			"type": "origins:execute_command",
+			"command": "scale reset @s",
+			"permission_level": 4
+		}
+	},
+	"carn": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:select_form",
+					"comparison": "==",
+					"compare_to": 6
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"tag": "origins:meat"
+							}
+						},
+						{
+							"type": "origins:meat"
+						}
+					]
+				},
+				{
+					"type": "origins:food"
+				},
+				{
+					"inverted": true,
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "origins:ignore_diet"
+					}
+				}
+			]
+		}
+	},
+	"webs": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:select_form",
+					"comparison": "==",
+					"compare_to": 6
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:phasing",
+		"block_condition": {
+			"type": "origins:block",
+			"block": "cobweb"
+		},
+		"render_type": "none",
+		"view_distance": 100,
+		"phase_down_condition": {
+			"type": "origins:sneaking"
+		}
+	},
+	"tog": {
+		"type": "origins:toggle",
+		"active_by_default": true,
+		"key": {
+			"key": "key.saveToolbarActivator",
+			"continuous": false
+		},
+		"retain_state": true
+	},
+	"climbing": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:collided_horizontally"
+				},
+				{
+					"type": "origins:power_active",
+					"power": "*:arachnid_tog"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_form",
+					"comparison": "==",
+					"compare_to": 6
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:select_basic",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:climbing",
+		"allow_holding": true,
+		"hold_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:block_collision",
+							"offset_x": 0.01,
+							"offset_y": 0,
+							"offset_z": 0.01
+						},
+						{
+							"type": "origins:block_collision",
+							"offset_x": -0.01,
+							"offset_y": 0,
+							"offset_z": -0.01
+						}
+					]
+				},
+				{
+					"type": "origins:power_active",
+					"power": "*:arachnid_tog"
+				}
+			]
+		}
+	}
+}

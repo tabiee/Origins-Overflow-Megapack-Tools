@@ -1,0 +1,44 @@
+{
+    "name": "§1§nAdrenaline Rush",
+    "description": "Gain Speed and Strength for 20s at will.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "speed",
+                        "duration": 400,
+                        "amplifier": 0,
+                        "show_particles": false,
+                        "show_icon": true
+                    },
+                    {
+                        "effect": "strength",
+                        "duration": 400,
+                        "amplifier": 0,
+                        "show_particles": false,
+                        "show_icon": true
+                    }
+                ]
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.phantom.ambient",
+                "volume": 1,
+                "pitch": 1.2
+            }
+        ]
+    },
+    "cooldown": 1000,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 7
+    },
+    "key": {
+        "key": "primary"
+    }
+}

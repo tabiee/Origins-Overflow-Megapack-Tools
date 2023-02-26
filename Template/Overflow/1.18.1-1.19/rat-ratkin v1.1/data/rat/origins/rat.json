@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"rat:poison",
+		"rat:nyoom",
+		"rat:ride",
+		"rat:climb",
+		"rat:nv",
+		"rat:fall",
+		"rat:effect",
+		"rat:eat",
+		"rat:blind",
+		"rat:hp",
+		"rat:cats",
+		"rat:size"
+	],
+	"icon": "minecraft:rabbit_foot",
+	"impact": 3,
+	"name": "§6§l§oRatfolk",
+	"description": "Small, smelly and fast."
+}

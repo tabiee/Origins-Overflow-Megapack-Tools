@@ -1,0 +1,13 @@
+{
+	"name": "§9§n§lNight Vision§r",
+	"description": "You have built-in night vision.",
+	"type": "origins:multiple",
+	"nv": {
+		"type": "origins:toggle_night_vision",
+		"active_by_default": true,
+		"strength": 0.125,
+		"key": {
+			"key": "key.loadToolbarActivator"
+		}
+	}
+}

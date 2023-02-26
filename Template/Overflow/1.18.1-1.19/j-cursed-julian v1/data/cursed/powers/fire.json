@@ -1,0 +1,12 @@
+{
+    "name": "§2§nNether is Home",
+    "description": "You take less fire damage.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:fire"
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": -0.5
+    }
+}

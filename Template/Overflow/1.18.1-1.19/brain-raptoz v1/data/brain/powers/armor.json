@@ -1,0 +1,46 @@
+{
+    "name": "Metal Carapace",
+    "description": "You have natural armor, but are unable to wear anything other than iron.",
+    "type": "origins:multiple",
+    "arm": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 8,
+            "name": "Natural Armor health bonus"
+        },
+        "update_health": false
+    },
+    "restr": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "iron_helmet"
+            }
+        },
+        "chest": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "iron_chestplate"
+            }
+        },
+        "legs": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "iron_leggings"
+            }
+        },
+        "feet": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "iron_boots"
+            }
+        }
+    }
+}

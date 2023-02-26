@@ -1,0 +1,39 @@
+{
+	"description": "I absolutely hate action_over_time night vision effect, it keeps blinking, so fuck you nightvision I made a separate power just for you",
+	"hidden": true,
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:select_form",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:resource",
+								"resource": "*:select_form",
+								"comparison": "==",
+								"compare_to": 6
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "origins:resource",
+				"resource": "*:select_cd",
+				"comparison": "==",
+				"compare_to": 0
+			}
+		]
+	},
+	"type": "origins:night_vision",
+	"strength": 0.5
+}

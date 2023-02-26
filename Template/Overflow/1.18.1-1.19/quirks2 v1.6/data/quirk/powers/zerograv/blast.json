@@ -1,0 +1,21 @@
+{
+    "type": "origins:fire_projectile",
+    "name": "Levitation Rock",
+    "description": "Send out a rock to make enemies levitate",
+    "cooldown": 50,
+    "count": 2,
+    "speed": 2,
+    "divergence": 1,
+    "entity_type": "shulker_bullet",
+    "sound": "block.amethyst_block.chime",
+    "key": {
+        "key": "primary",
+        "continuous": false
+    },
+    "hud_render": {
+        "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 24
+    },
+    "hidden": false
+}

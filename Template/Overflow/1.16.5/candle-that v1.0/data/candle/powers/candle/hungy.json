@@ -1,0 +1,25 @@
+{
+    "name": "No Stomach",
+    "description": "Your hunger bar never goes down, you regain health passively at all times instead.",
+    "type": "origins:multiple",
+    "hunger": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:feed",
+            "food": 10,
+            "saturation": 10
+        }
+    },
+    "dis": {
+        "type": "origins:disable_regen"
+    },
+    "artificial_regen": {
+        "type": "origins:action_over_time",
+        "interval": 30,
+        "entity_action": {
+            "type": "origins:heal",
+            "amount": 1
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "name": "Burning and Freezing",
+    "description": "Slowly take damage when in the nether, snowy, desert, badlands and acacia biomes.\n",
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:dimension",
+                "dimension": "the_nether"
+            },
+            {
+                "type": "origins:biome",
+                "biomes": [
+                    "snowy_plains",
+                    "ice_spikes",
+                    "desert",
+                    "snowy_taiga",
+                    "savanna",
+                    "savanna_plateau",
+                    "windswept_savanna",
+                    "badlands",
+                    "eroded_badlands",
+                    "wooded_badlands",
+                    "snowy_slopes",
+                    "frozen_peaks",
+                    "frozen_river",
+                    "snowy_beach",
+                    "frozen_ocean",
+                    "deep_frozen_ocean"
+                ]
+            }
+        ]
+    },
+    "type": "origins:damage_over_time",
+    "interval": 60,
+    "onset_delay": 40,
+    "damage": 1,
+    "damage_easy": 1,
+    "damage_source": {
+        "name": "magic",
+        "magic": true
+    },
+    "protection_effectiveness": 1
+}

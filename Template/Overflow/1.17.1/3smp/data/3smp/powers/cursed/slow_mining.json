@@ -1,0 +1,18 @@
+{
+    "type": "origins:action_over_time",
+    "name": "Slow mining",
+    "description": "You break blocks a lot slower than the average person",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "duration": 500,
+            "is_ambient": false,
+            "show_particles": false,
+            "show_icon": false,
+            "effect": "minecraft:mining_fatigue",
+            "amplifier": 1
+        }
+    },
+    "interval": 500,
+		"hidden": true
+}

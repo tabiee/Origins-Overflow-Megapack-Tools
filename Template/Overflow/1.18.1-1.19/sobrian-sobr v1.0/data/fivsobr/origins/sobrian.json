@@ -1,0 +1,17 @@
+{
+	"powers": [
+	    "fivsobr:sobrian/tagger",
+		"fivsobr:sobrian/zap",
+		"fivsobr:sobrian/invis",
+		"fivsobr:sobrian/revive",
+		"fivsobr:sobrian/fire",
+		"fivsobr:sobrian/dark"
+	],
+	"icon": {
+		"item": "minecraft:player_head",
+		"tag": "{SkullOwner:\"SobrLive\"}"
+	},
+	"impact": 1,
+	"name": "§4§l§oSobrian",
+	"description": "Sobr used to be one of a kind, until people were able to get this origin."
+}

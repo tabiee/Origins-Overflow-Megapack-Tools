@@ -1,0 +1,57 @@
+{
+    "name": "§2§nMelon God",
+    "description": "You get extra melons from farming.\nMelons restore more hunger, but other food restores less.",
+    "type": "origins:multiple",
+    "melon": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "melon_slice"
+            }
+        },
+        "food_modifiers": [
+            {
+                "operation": "addition",
+                "value": 4
+            }
+        ],
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": 6
+        }
+    },
+    "notmelon": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "melon_slice"
+            }
+        },
+        "food_modifiers": [
+            {
+                "operation": "addition",
+                "value": -2
+            }
+        ],
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": -2
+        }
+    },
+    "farm": {
+        "type": "origins:action_on_block_break",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "summon item ~ ~ ~ {Item:{id:\"minecraft:melon_slice\",Count:3b}}",
+            "permission_level": 4
+        },
+        "block_condition": {
+            "type": "origins:block",
+            "block": "melon"
+        },
+        "only_when_harvested": true
+    }
+}

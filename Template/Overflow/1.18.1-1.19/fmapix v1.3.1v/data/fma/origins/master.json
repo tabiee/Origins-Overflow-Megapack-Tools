@@ -1,0 +1,25 @@
+{
+	"powers": [
+		"fma:mast/chalk",
+		"fma:mast/gatepick",
+		"fma:mast/arrays",
+		"fma:mast/moldnether",
+		"fma:mast/phil",
+		"fma:mast/philheal",
+		"fma:mast/philsupport",
+		"fma:mast/tagger",
+		"fma:mast/crumble",
+		"fma:mast/ee",
+		"fma:mast/food",
+		"fma:mast/mold",
+		"fma:mast/repair",
+		"fma:mast/hp",
+		"fma:mast/seceff",
+		"fma:mast/vanilla"
+	],
+	"icon": "minecraft:gold_ingot",
+	"impact": 3,
+	"name": "§4§l§oMaster Alchemist",
+	"description": "One is all, all is one.",
+	"unchoosable": true
+}

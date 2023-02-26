@@ -1,0 +1,292 @@
+{
+    "name": "§3§n§lPower Management§r",
+    "description": "Restore battery power using redstone blocks or a full recharge cycle at a bed.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "The animatronic in Camera Mode can also gain power for the body by looking at various redstone blocks."
+        },
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Stand on or right click a redstone block to recharge."
+        },
+        {
+            "sprite": "origins:textures/gui/badge/arrow_up.png",
+            "text": "The orange bar tells you how much power is currently being used."
+        }
+    ],
+    "type": "origins:multiple",
+    "redstone_use": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:food_level",
+                    "comparison": "<",
+                    "compare_to": 20
+                }
+            ]
+        },
+        "type": "origins:action_on_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "redstone_block"
+        },
+        "item_condition": {
+            "type": "origins:empty"
+        },
+        "entity_action": {
+            "type": "origins:chance",
+            "chance": 0.25,
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:feed",
+                        "food": 1,
+                        "saturation": 1
+                    },
+                    {
+                        "type": "origins:heal",
+                        "amount": 1
+                    }
+                ]
+            }
+        },
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "particle dust 0.000 1.000 0.900 1 ~ ~ ~ 0.5 0.5 0.5 0 10"
+        }
+    },
+    "redstone_stand": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:food_level",
+                    "comparison": "<",
+                    "compare_to": 20
+                },
+                {
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "redstone_block"
+                    }
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "survival"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 50,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 0.000 1.000 0.900 1 ~ ~ ~ 0.5 0.1 0.5 0 10"
+                },
+                {
+                    "type": "origins:feed",
+                    "food": 1,
+                    "saturation": 0.5
+                },
+                {
+                    "type": "origins:heal",
+                    "amount": 1
+                }
+            ]
+        }
+    },
+    "bed": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:overworld"
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "survival"
+                }
+            ]
+        },
+        "type": "origins:prevent_sleep",
+        "message": "§3§lCharging...§r",
+        "set_spawn_point": true
+    },
+    "bed_use": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:overworld"
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "survival"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "sunmoon:battery_inuse",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "sunmoon:fight_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_on_block_use",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:beds"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "sunmoon:battery_inuse"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=spec] at @s run resource set @s sunmoon:battery_inuse 1"
+                }
+            ]
+        },
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "summon armor_stand ~ ~-1.5 ~ {NoGravity:1b,Invulnerable:1b,Small:1b,Invisible:1b,Tags:[\"recharge\"],DisabledSlots:4144959}"
+        }
+    },
+    "inuse": {
+        "type": "origins:cooldown",
+        "cooldown": 160,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 8
+        }
+    },
+    "charging": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "sunmoon:battery_inuse",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "falling_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:feed",
+                    "food": 20,
+                    "saturation": 20
+                },
+                {
+                    "type": "origins:heal",
+                    "amount": 20
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "kill @e[tag=recharge]"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1.5
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.note_block.bit",
+                    "volume": 1,
+                    "pitch": 0.5
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "sunmoon:fight_cd"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=spec] at @s run resource set @s sunmoon:fight_cd 1"
+                }
+            ]
+        }
+    },
+    "fx": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "survival"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "sunmoon:battery_inuse",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 0.000 1.000 0.900 1 ~ ~ ~ 0.5 0.1 0.5 0 3"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.ambient",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        }
+    },
+    "tp": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "sunmoon:battery_inuse",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tp @e[tag=cont] @e[tag=recharge,limit=1]"
+                }
+            ]
+        }
+    },
+    "usage": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 7,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 5
+        }
+    }
+}

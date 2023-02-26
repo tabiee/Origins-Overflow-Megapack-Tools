@@ -1,0 +1,230 @@
+{
+    "name": "§4§nDrying-out§r",
+    "description": "Entering the nether, desert biome, or badlands will give you weakness, after 5mins you get Mining Fatigue, the next 5 minutes you will get Nausea, and in the next 5 minutes you get Withering.",
+    "type": "origins:multiple",
+    "heat": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 18000,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 5,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_heat",
+                "comparison": "!=",
+                "compare_to": 0
+            }
+        }
+    },
+    "gain": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:biome",
+                "condition": {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:category",
+                            "category": "nether"
+                        },
+                        {
+                            "type": "origins:category",
+                            "category": "desert"
+                        },
+                        {
+                            "type": "origins:category",
+                            "category": "mesa"
+                        }
+                    ]
+                }
+            },
+            "if_action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_heat",
+                "change": 1,
+                "operation": "add"
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_heat",
+                "change": -300,
+                "operation": "add"
+            }
+        }
+    },
+    "debuff": {
+        "type": "origins:action_over_time",
+        "interval": 25,
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:*_heat",
+                                "comparison": "<",
+                                "compare_to": 6000
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:*_heat",
+                                "comparison": "!=",
+                                "compare_to": 0
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "weakness",
+                                "duration": 50,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:*_heat",
+                                "comparison": ">",
+                                "compare_to": 6000
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:*_heat",
+                                "comparison": "<",
+                                "compare_to": 12000
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "weakness",
+                                "duration": 50,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            },
+                            {
+                                "effect": "mining_fatigue",
+                                "duration": 50,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:*_heat",
+                                "comparison": ">",
+                                "compare_to": 12000
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:*_heat",
+                                "comparison": "<",
+                                "compare_to": 18000
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "weakness",
+                                "duration": 50,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            },
+                            {
+                                "effect": "mining_fatigue",
+                                "duration": 50,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            },
+                            {
+                                "effect": "nausea",
+                                "duration": 50,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:*_heat",
+                                "comparison": "==",
+                                "compare_to": 18000
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "weakness",
+                                "duration": 50,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            },
+                            {
+                                "effect": "mining_fatigue",
+                                "duration": 50,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            },
+                            {
+                                "effect": "nausea",
+                                "duration": 50,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            },
+                            {
+                                "effect": "wither",
+                                "duration": 50,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

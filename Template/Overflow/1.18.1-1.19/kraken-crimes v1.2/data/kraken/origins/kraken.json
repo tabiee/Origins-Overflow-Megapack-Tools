@@ -1,0 +1,24 @@
+{
+	"powers": [
+		"kraken:kraken/thunda",
+		"kraken:kraken/size",
+		"kraken:kraken/bolt",
+		"kraken:kraken/zero",
+		"kraken:kraken/neardeath",
+		"kraken:kraken/big",
+		"kraken:kraken/small",
+		"kraken:kraken/food",
+		"kraken:kraken/noarmor",
+		"kraken:kraken/nopots",
+		"kraken:kraken/thirty",
+		"kraken:kraken/waterstuff",
+		"kraken:kraken/model",
+		"kraken:kraken/tagger",
+		"kraken:kraken/debug",
+		"origins:like_water"
+	],
+	"icon": "minecraft:glow_squid_spawn_egg",
+	"impact": 3,
+	"name": "§b§l§oKraken",
+	"description": "An enormous mythical sea monster."
+}

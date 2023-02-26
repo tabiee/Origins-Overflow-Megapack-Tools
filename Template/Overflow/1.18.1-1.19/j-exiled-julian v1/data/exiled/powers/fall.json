@@ -1,0 +1,46 @@
+{
+    "name": "§2§nAcrobatics",
+    "description": "You can leap from great heights without taking any damage, which makes it easier to cause mayhem.",
+    "type": "origins:invulnerability",
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "exiled:forms_tog",
+                "comparison": "==",
+                "compare_to": 0
+            },
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "exiled:forms_form",
+                        "comparison": "==",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "exiled:forms_tog",
+                        "comparison": "==",
+                        "compare_to": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "fall"
+            },
+            {
+                "type": "origins:name",
+                "name": "fall.player"
+            }
+        ]
+    }
+}

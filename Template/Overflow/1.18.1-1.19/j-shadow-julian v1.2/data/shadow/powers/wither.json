@@ -1,0 +1,26 @@
+{
+    "name": "§b§nReminder of your fate",
+    "description": "Due to it reminding you of your godly ex, you have an intense fear of death.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "wither"
+            },
+            {
+                "type": "origins:name",
+                "name": "wither.player"
+            },
+            {
+                "type": "origins:name",
+                "name": "witherSkull"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.5
+    }
+}

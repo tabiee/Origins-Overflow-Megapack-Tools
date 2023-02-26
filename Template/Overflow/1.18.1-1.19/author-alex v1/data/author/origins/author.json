@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"author:fly",
+		"author:phase",
+		"author:bolt",
+		"author:glow"
+	],
+	"icon": "minecraft:writable_book",
+	"impact": 1,
+	"name": "§3§l§oThe Author",
+	"description": "A powerful being capable of creation, flight and thunder."
+}

@@ -1,0 +1,46 @@
+{
+    "type": "origins:action_over_time",
+	"hidden": true,
+    "interval": 3,
+    "entity_action": {
+        "type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scoreboard objectives add minatotp dummy"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scoreboard objectives add minatohigh dummy"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scoreboard objectives add minatoarrow minecraft.used:minecraft.bow"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scoreboard players set $highest minatohigh -1"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute as @e if entity @e[scores={minatotp=1..},limit=1] run scoreboard players operation @s minatohigh = @s minatotp"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute as @e if entity @e[scores={minatotp=1..},limit=1] run scoreboard players operation $highest minatohigh > @s minatohigh"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute as @e[scores={minatoarrow=1..}] run scoreboard players add @e[scores={minatotp=1..}] minatotp 1"
+			},
+            {
+				"type": "origins:execute_command",
+				"command": "execute as @e[scores={minatoarrow=1..}] run scoreboard players add @e[type=minecraft:arrow,sort=nearest,limit=1] minatotp 1"
+			},
+            {
+				"type": "origins:execute_command",
+				"command": "scoreboard players reset @s minatoarrow"
+			}
+		]
+    }
+}

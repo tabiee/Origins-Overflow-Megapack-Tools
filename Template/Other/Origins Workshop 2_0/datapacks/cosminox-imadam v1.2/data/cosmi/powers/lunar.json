@@ -1,0 +1,237 @@
+{
+    "name": "§3§nLunar§r",
+    "description": "With the Moon above your head, you are able to suffocate enemies on hit and lower the gravity of every player around you. Your diet is also limited to veggies.",
+    "type": "origins:multiple",
+    "veggies": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:daytime"
+        },
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "origins:meat"
+                            }
+                        },
+                        {
+                            "type": "origins:meat"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:food"
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "origins:ignore_diet"
+                    },
+                    "inverted": true
+                }
+            ]
+        }
+    },
+    "gravity": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "apoli:daytime"
+                },
+                {
+                    "type": "origins:exposed_to_sky"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[type=player,distance=..6] jump_boost 1 2 true"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[type=player,distance=..6] slow_falling 1 0 true"
+                }
+            ]
+        }
+    },
+    "speed_weak": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "apoli:daytime"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:exposed_to_sky"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[type=player,distance=..6] jump_boost 1 0 true"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[type=player,distance=..6] slow_falling 1 0 true"
+                }
+            ]
+        }
+    },
+    "wither": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "apoli:daytime"
+                },
+                {
+                    "type": "origins:exposed_to_sky"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:lunar_tap",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle firework ~ ~1 ~ 0.5 0.5 0.5 0 10"
+                    },
+                    {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "wither",
+                            "duration": 100,
+                            "amplifier": 3,
+                            "show_particles": false,
+                            "show_icon": true
+                        }
+                    }
+                ]
+            }
+        },
+        "cooldown": 40,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "act": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "apoli:daytime"
+                },
+                {
+                    "type": "origins:exposed_to_sky"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:lunar_tap",
+                "comparison": "==",
+                "compare_to": 1
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "title @s actionbar {\"text\":\"§9§lSuffocation Disabled§r\"}"
+                    },
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:block.note_block.chime",
+                        "volume": 0.25,
+                        "pitch": 0.5
+                    },
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:change_resource",
+                            "resource": "*:lunar_tap",
+                            "change": -1,
+                            "operation": "add"
+                        },
+                        "ticks": 2
+                    }
+                ]
+            },
+            "else_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "title @s actionbar {\"text\":\"§3§lSuffocation Enabled§r\"}"
+                    },
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:block.note_block.chime",
+                        "volume": 0.25,
+                        "pitch": 1
+                    },
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:change_resource",
+                            "resource": "*:lunar_tap",
+                            "change": 1,
+                            "operation": "add"
+                        },
+                        "ticks": 2
+                    }
+                ]
+            }
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "secondary"
+        }
+    },
+    "tap": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

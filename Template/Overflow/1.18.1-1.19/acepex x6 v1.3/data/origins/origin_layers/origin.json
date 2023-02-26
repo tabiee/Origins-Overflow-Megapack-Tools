@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "origins": [
+    "ace:yeti",
+    "ace:angel",
+    "ace:mummy",
+    "ace:gnome",
+    "ace:dragon",
+    "ace:kraken"
+  ]
+}

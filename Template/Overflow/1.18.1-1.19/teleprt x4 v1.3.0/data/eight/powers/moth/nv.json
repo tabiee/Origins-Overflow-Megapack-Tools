@@ -1,0 +1,10 @@
+{
+    "name": "§2§nNight Vision",
+    "description": "You're able to see clearly in the dark.",
+    "type": "origins:toggle_night_vision",
+    "active_by_default": true,
+    "strength": 0.35,
+    "key": {
+        "key": "primary"
+    }
+}

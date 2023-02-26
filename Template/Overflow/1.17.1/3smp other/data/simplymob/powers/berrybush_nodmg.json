@@ -1,0 +1,9 @@
+{
+    "name": "Berry Nice",
+    "description": "You recieve no damage from standing inside of a sweet berry bush.",
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "sweetBerryBush"
+    }
+}

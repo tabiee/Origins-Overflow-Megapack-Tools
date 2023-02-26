@@ -1,0 +1,21 @@
+{
+	"powers": [
+		"vampsucc:vs/kissy",
+		"vampsucc:vs/phasing",
+		"vampsucc:vs/charm",
+		"vampsucc:vs/elytra",
+		"vampsucc:vs/vision",
+		"vampsucc:vs/undead",
+		"vampsucc:vs/resil",
+		"vampsucc:vs/crossbow",
+		"vampsucc:vs/tagger",
+		"vampsucc:vs/prief",
+		"vampsucc:vs/invis",
+		"vampsucc:vs/sun",
+		"vampsucc:vs/crea"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"impact": 3,
+	"name": "§4§l§oVampubus",
+	"description": "Half Vampire, half Succubus."
+}

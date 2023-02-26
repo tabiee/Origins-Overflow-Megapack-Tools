@@ -1,0 +1,44 @@
+{
+    "name": "§1§nFortitude",
+    "description": "You are immune to fire and explosions.",
+    "type": "origins:multiple",
+    "fire": {
+        "type": "origins:fire_immunity"
+    },
+    "ex": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "explosion"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "explosion.player"
+                }
+            ]
+        }
+    },
+    "fall": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    }
+}

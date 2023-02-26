@@ -1,0 +1,12 @@
+{
+    "name": "§6§nFresh Air",
+    "description": "When sleeping, your bed needs to be at an altitude of at least 85 blocks so you can breathe fresh air.",
+    "type": "origins:prevent_sleep",
+    "block_condition": {
+        "type": "origins:height",
+        "comparison": "<",
+        "compare_to": 86
+    },
+    "message": "origins.avian_sleep_fail",
+    "set_spawn_point": true
+}

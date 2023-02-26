@@ -1,0 +1,11 @@
+{
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "wither",
+        "inverted": false
+    },
+    "name": "§2§nWither Immunity",
+    "description": "Immune to withering.",
+	"hidden": false
+}

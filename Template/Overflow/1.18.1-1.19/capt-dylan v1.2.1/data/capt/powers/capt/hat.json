@@ -1,0 +1,73 @@
+{
+	"name": "§4§nRestricted Mobility",
+	"description": "You can only wear Iron and Diamond armor.",
+	"type": "origins:restrict_armor",
+	"head": {
+		"type": "origins:ingredient",
+		"ingredient": [
+			{
+				"item": "leather_helmet"
+			},
+			{
+				"item": "chainmail_helmet"
+			},
+			{
+				"item": "golden_helmet"
+			},
+			{
+				"item": "netherite_helmet"
+			}
+		]
+	},
+	"chest": {
+		"type": "origins:ingredient",
+		"ingredient": [
+			{
+				"item": "leather_chestplate"
+			},
+			{
+				"item": "chainmail_chestplate"
+			},
+			{
+				"item": "golden_chestplate"
+			},
+			{
+				"item": "netherite_chestplate"
+			}
+		]
+	},
+	"legs": {
+		"type": "origins:ingredient",
+		"ingredient": [
+			{
+				"item": "leather_leggings"
+			},
+			{
+				"item": "chainmail_leggings"
+			},
+			{
+				"item": "golden_leggings"
+			},
+			{
+				"item": "netherite_leggings"
+			}
+		]
+	},
+	"feet": {
+		"type": "origins:ingredient",
+		"ingredient": [
+			{
+				"item": "leather_boots"
+			},
+			{
+				"item": "chainmail_boots"
+			},
+			{
+				"item": "golden_boots"
+			},
+			{
+				"item": "netherite_boots"
+			}
+		]
+	}
+}

@@ -1,0 +1,19 @@
+{
+    "powers": [
+        "betterhuman:levitationillusion",
+        "betterhuman:illusionerarmy",
+        "betterhuman:illusionerhealth",
+        "origins:water_vulnerability",
+        "betterhuman:projectilehurts",
+        "betterhuman:dividefalldamage",
+        "betterhuman:friendsofpillagers",
+        "betterhuman:villagerhater"
+    ],
+    "icon": "minecraft:purpur_pillar",
+    "order": 1,
+    "impact": 3,
+    "name": "illusionist",
+    "description": "The illusionist is the summoner of illusioners",
+    "loading_priority": 100,
+    "unchoosable": true
+}

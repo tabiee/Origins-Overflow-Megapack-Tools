@@ -1,0 +1,25 @@
+{
+	"powers": [
+		"tricks:tricks/otherworldly",
+		"tricks:tricks/tp",
+		"tricks:tricks/flyufool",
+		"tricks:tricks/climb",
+		"tricks:tricks/double_jump",
+		"tricks:tricks/waterwalk",
+		"tricks:tricks/model",
+		"tricks:tricks/size",
+		"tricks:tricks/tagger",
+		"tricks:tricks/arth",
+		"tricks:tricks/fade",
+		"tricks:tricks/waterslow",
+		"tricks:tricks/hp",
+		"tricks:tricks/ironweak",
+		"tricks:tricks/ironal",
+		"tricks:tricks/ironstand",
+		"tricks:tricks/hungy"
+	],
+	"icon": "minecraft:firework_rocket",
+	"impact": 2,
+	"name": "§5§l§oTrickster Spirit",
+	"description": "Mischievous being that loves to have a little bit of fun."
+}

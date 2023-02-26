@@ -1,0 +1,24 @@
+{
+    "name": "§5§nCamouflage",
+    "description": "Turn invisible for several minutes.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "invisibility",
+            "duration": 4200,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    },
+    "cooldown": 12000,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 1
+    },
+    "key": {
+        "key": "primary"
+    }
+}

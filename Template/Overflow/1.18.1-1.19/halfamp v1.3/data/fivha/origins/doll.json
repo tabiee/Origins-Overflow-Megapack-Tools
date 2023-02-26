@@ -1,0 +1,15 @@
+{
+	"unchoosable": true,
+	"powers": [
+	    "fivha:slime/backtoback",
+		"fivha:doll/fire",
+		"fivha:doll/halfhp",
+		"fivha:doll/hp",
+		"fivha:doll/looms",
+		"fivha:doll/string"
+	],
+	"icon": "minecraft:string",
+	"impact": 1,
+	"name": "§a§l§oDoll",
+	"description": "Doll Mode."
+}

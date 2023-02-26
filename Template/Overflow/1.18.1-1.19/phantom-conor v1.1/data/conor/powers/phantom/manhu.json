@@ -1,0 +1,80 @@
+{
+	"name": "§4§nMortal Peril",
+	"description": "You are significantly weaker in human form.",
+	"type": "origins:multiple",
+	"mining": {
+		"condition": {
+			"inverted": true,
+			"type": "origins:power_active",
+			"power": "*:phantom/phasing_tog"
+		},
+		"type": "origins:modify_break_speed",
+		"modifier": {
+			"operation": "addition",
+			"value": -0.2
+		}
+	},
+	"eff": {
+		"condition": {
+			"inverted": true,
+			"type": "origins:power_active",
+			"power": "*:phantom/phasing_tog"
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effects": [
+				{
+					"effect": "weakness",
+					"duration": 100,
+					"amplifier": 0,
+					"show_particles": false,
+					"show_icon": false
+				},
+				{
+					"effect": "slowness",
+					"duration": 100,
+					"amplifier": 1,
+					"show_particles": false,
+					"show_icon": false
+				},
+				{
+					"effect": "blindness",
+					"duration": 50,
+					"amplifier": 0,
+					"show_particles": false,
+					"show_icon": false
+				},
+				{
+					"effect": "hunger",
+					"duration": 100,
+					"amplifier": 0,
+					"show_particles": false,
+					"show_icon": false
+				},
+				{
+					"effect": "unluck",
+					"duration": 100,
+					"amplifier": 0,
+					"show_particles": false,
+					"show_icon": false
+				}
+			]
+		}
+	},
+	"regain": {
+		"condition": {
+			"inverted": true,
+			"type": "origins:power_active",
+			"power": "*:phantom/phasing_tog"
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:phantom/phased_timer",
+			"change": 10
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+    "powers": [
+        "originsplus:grapple",
+        "origins:vegetarian",
+        "origins:water_vulnerability",
+        "originsplus:sleep_in_trees"
+    ],
+    "icon": "minecraft:bamboo",
+    "order": 3,
+    "impact": 2,
+    "loading_priority": 100,
+    "unchoosable": true
+}

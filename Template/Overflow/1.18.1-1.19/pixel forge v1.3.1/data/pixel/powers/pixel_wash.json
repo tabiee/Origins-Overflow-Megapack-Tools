@@ -1,0 +1,67 @@
+{
+	"name": "There's a leak",
+	"description": "Being in water damages you and slowly washes away your Pixels.",
+	"type": "origins:multiple",
+	"pixels": {
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:in_rain"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:pixel_meter_resource",
+					"change": -5
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "block.amethyst_cluster.break",
+					"volume": 1,
+					"pitch": 2
+				}
+			]
+		}
+	},
+	"dmg": {
+		"type": "origins:damage_over_time",
+		"interval": 20,
+		"onset_delay": 1,
+		"damage": 2,
+		"damage_easy": 1,
+		"damage_source": {
+			"name": "hurt_by_water",
+			"unblockable": true,
+			"bypasses_armor": true
+		},
+		"protection_enchantment": "origins:water_protection",
+		"protection_effectiveness": 1.0,
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:fluid_height",
+					"fluid": "minecraft:water",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:in_rain"
+				}
+			]
+		}
+	}
+}

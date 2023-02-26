@@ -1,0 +1,261 @@
+{
+	"name": "§2§lCall For Thee",
+	"description": "After killing a wither skeleton or three skeletons, you can summon Satan himself to fight for you.",
+	"type": "origins:multiple",
+	"skele": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 3,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 7,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:satan/call_skele",
+				"comparison": "!=",
+				"compare_to": 0
+			}
+		}
+	},
+	"killed": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=satan]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				}
+			]
+		},
+		"type": "origins:self_action_on_kill",
+		"target_condition": {
+			"type": "origins:entity_type",
+			"entity_type": "wither_skeleton"
+		},
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:satan/call_skele",
+			"change": 3
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"killed2": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=satan]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				}
+			]
+		},
+		"type": "origins:self_action_on_kill",
+		"target_condition": {
+			"type": "origins:entity_type",
+			"entity_type": "skeleton"
+		},
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:satan/call_skele",
+			"change": 1
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"act": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:satan/call_skele",
+					"comparison": "==",
+					"compare_to": 3
+				},
+				{
+					"inverted": true,
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=satan]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"cooldown": 5,
+		"key": {
+			"key": "key.hotbar.1"
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:satan/call_skele",
+					"change": -3
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "summon wither ~ ~8 ~ {CustomNameVisible:1b,Team:\"dead\",Health:1500f,Tags:[\"satan\"],CustomName:'{\"text\":\"SATAN\",\"color\":\"dark_red\",\"bold\":true}',Attributes:[{Name:generic.max_health,Base:1500}]}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "entity.wither.spawn",
+					"volume": 3,
+					"pitch": 0.1
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "entity.vex.charge",
+					"volume": 10,
+					"pitch": 0.1
+				}
+			]
+		},
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"act2": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=satan]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"cooldown": 5,
+		"key": {
+			"key": "key.hotbar.1"
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tp @e[tag=satan] ~ ~-500 ~",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[tag=satan]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "entity.wither.spawn",
+					"volume": 3,
+					"pitch": 2
+				}
+			]
+		},
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"fx": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=satan] at @s run particle soul ~ ~ ~ 2 2 2 0.1 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=satan] at @s run particle flame ~ ~ ~ 2 2 2 0.1 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=satan] at @e[tag=edgy] run tp @s ~ ~8 ~",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"side": {
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if entity @e[tag=satan]",
+			"comparison": ">=",
+			"compare_to": 1,
+			"permission_level": 4
+		},
+		"type": "origins:action_over_time",
+		"interval": 100,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effects": [
+						{
+							"effect": "nausea",
+							"duration": 200,
+							"amplifier": 0,
+							"show_particles": false,
+							"show_icon": true
+						},
+						{
+							"effect": "slowness",
+							"duration": 200,
+							"amplifier": 0,
+							"show_particles": false,
+							"show_icon": true
+						},
+						{
+							"effect": "weakness",
+							"duration": 200,
+							"amplifier": 0,
+							"show_particles": false,
+							"show_icon": true
+						}
+					]
+				},
+				{
+					"type": "origins:damage",
+					"amount": 1,
+					"source": {
+						"name": "wither",
+						"bypasses_armor": true,
+						"unblockable": true,
+						"magic": true
+					}
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,36 @@
+{
+    "name": "§6§nIron Weakness",
+    "description": "Iron tools and weapons do more damage to you.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:attacker",
+        "entity_condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": [
+                    {
+                        "item": "iron_hoe"
+                    },
+                    {
+                        "item": "iron_pickaxe"
+                    },
+                    {
+                        "item": "iron_axe"
+                    },
+                    {
+                        "item": "iron_shovel"
+                    },
+                    {
+                        "item": "iron_sword"
+                    }
+                ]
+            }
+        }
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": 2
+    }
+}

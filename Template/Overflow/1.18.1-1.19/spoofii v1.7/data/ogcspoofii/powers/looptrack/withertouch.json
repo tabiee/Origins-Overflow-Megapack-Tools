@@ -1,0 +1,17 @@
+{
+    "type": "origins:target_action_on_hit",
+    "name": "Wither Touch",
+    "description": "You inflict the wither effect on hit.",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:wither",
+            "amplifier": 1,
+            "duration": 100
+        }
+    },
+    "cooldown": 10,
+    "hud_render": {
+        "should_render": false
+    }
+}

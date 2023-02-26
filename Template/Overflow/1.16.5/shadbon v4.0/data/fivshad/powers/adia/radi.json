@@ -1,0 +1,69 @@
+{
+    "name": "§1§nVessel's Radiance",
+    "description": "Desperate times call for desperate measures. Create a giant burst of divine energy that will repel all enemies around you for a short time.",
+    "type": "origins:multiple",
+    "tog": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:adia/radi_cd"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.illusioner.cast_spell",
+                    "volume": 1,
+                    "pitch": 0.1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 1.000 0.650 0.300 4 ~ ~ ~ 5 5 5 10 500 normal",
+                    "permission_level": 4
+                }
+            ]
+        },
+        "cooldown": 700,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 0
+        },
+        "key": "secondary"
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 120,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 24
+        }
+    },
+    "rade": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:adia/radi_cd",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[distance=..10,tag=!adia] at @s if block ^ ^0.4 ^-1 air run tp @s ^ ^0.4 ^-1 facing entity @p[tag=adia]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "summon area_effect_cloud ~ ~ ~ {Particle:\"betterend:amber_sphere\",NoGravity:0b,Radius:10f,Duration:1,Color:16761600}",
+                    "permission_level": 4
+                }
+            ]
+        }
+    }
+}

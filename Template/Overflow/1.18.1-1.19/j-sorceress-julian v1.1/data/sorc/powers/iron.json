@@ -1,0 +1,82 @@
+{
+    "name": "§4§nArcane Conductive",
+    "description": "Iron is very useful for conducting or nullifying magic, and therefore is detrimental to you.",
+    "type": "origins:multiple",
+    "arm": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "iron_helmet"
+            }
+        },
+        "chest": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "iron_chestplate"
+            }
+        },
+        "legs": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "iron_leggings"
+            }
+        },
+        "feet": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "iron_boots"
+            }
+        }
+    },
+    "use": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "sorc:iron"
+                }
+            }
+        },
+        "type": "origins:prevent_block_selection"
+    },
+    "att": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "sorc:iron"
+                }
+            }
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    },
+	"dmg": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "sorc:iron"
+                    }
+                }
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    }
+}

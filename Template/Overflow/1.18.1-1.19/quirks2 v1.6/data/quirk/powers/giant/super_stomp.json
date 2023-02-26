@@ -1,0 +1,80 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "effect give @s minecraft:slowness 1 60",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:cloud ~ ~ ~ 0.5 0 0.5 0.2 40 normal",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:exhaust",
+                "amount": 30
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "playsound minecraft:entity.ravager.roar player @a[distance=0..25] ~ ~ ~ 0.4 1 1",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:delay",
+                "ticks": 26,
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/effect give @e[distance=1..7] minecraft:wither 4 6 true"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/effect give @e[distance=1..7] minecraft:wither 4 6 true"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "origins:delay",
+                "ticks": 26,
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:entity.generic.explode player @a[distance=0..25] ~ ~ ~ 0.9 1.5 1.5",
+                    "permission_level": 4
+                }
+            },
+            {
+                "type": "origins:delay",
+                "ticks": 26,
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:explosion ~ ~ ~ 1.5 0 1.5 0.4 60 normal",
+                    "permission_level": 4
+                }
+            }
+        ]
+    },
+    "condition": {
+        "type": "origins:on_block",
+        "inverted": false
+    },
+    "name": "Super Stomp",
+    "description": "Stomp on any enemies to damage them with this move",
+    "key": {
+        "key": "key.origins.quaternary_active",
+        "continuous": false
+    },
+    "cooldown": 1250,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 19
+    }
+}

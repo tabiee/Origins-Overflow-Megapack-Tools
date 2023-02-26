@@ -1,0 +1,94 @@
+{
+	"name": "§5§nSpike Slam",
+	"description": "Slam into the ground and cause spikes to errupt, giving your enemies and not-so-soft landing, clear with shift.",
+	"type": "origins:active_self",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "offhand",
+				"item_condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "heart_of_the_sea"
+							}
+						},
+						{
+							"type": "origins:nbt",
+							"nbt": "{CustomModelData:4}"
+						}
+					]
+				}
+			},
+			{
+				"type": "origins:block_in_radius",
+				"block_condition": {
+					"type": "origins:in_tag",
+					"tag": "fma:earths"
+				},
+				"radius": 5,
+				"shape": "cube",
+				"comparison": ">=",
+				"compare_to": 5
+			},
+			{
+				"type": "origins:sneaking",
+				"inverted": true
+			},
+			{
+				"type": "origins:xp_levels",
+				"comparison": ">",
+				"compare_to": 0
+			}
+		]
+	},
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "execute at @s positioned ^ ^1 ^4 run effect give @e[tag=!blam,distance=..6] levitation 1 14 true",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute at @s positioned ^ ^ ^2 run fill ^ ^ ^ ^ ^3 ^6 minecraft:pointed_dripstone replace air",
+					"permission_level": 4
+				},
+				"ticks": 5
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "particle item dripstone_block ^ ^1.5 ^5 1.3 0 1.3 0 200 normal",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "particle explosion ^ ^1.5 ^5 1.3 0 1.3 0 10 normal",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "particle block_marker pointed_dripstone ^ ^1 ^5 1.3 0 1.3 0 100 normal",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "entity.evoker_fangs.attack",
+				"volume": 1,
+				"pitch": 0.8
+			}
+		]
+	},
+	"cooldown": 200,
+	"hud_render": {
+		"should_render": true
+	},
+	"key": "primary"
+}

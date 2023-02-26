@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"sea:fly",
+		"sea:boost",
+		"sea:nv",
+		"sea:water",
+		"sea:carnivore"
+	],
+	"icon": "minecraft:heart_of_the_sea",
+	"impact": 3,
+	"name": "§b§l§oSeawing",
+	"description": "Oceanic dragon that thrives in water."
+}

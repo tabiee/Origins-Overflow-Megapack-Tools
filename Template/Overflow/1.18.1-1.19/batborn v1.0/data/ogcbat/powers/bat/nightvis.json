@@ -1,0 +1,18 @@
+{
+    "name": "§9§nNight Vision",
+    "description": "You're well adapted to the dark.",
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": true,
+        "key": "secondary"
+    },
+    "nightv": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:bat/nightvis_toggle"
+        },
+        "type": "origins:night_vision",
+        "strength": 0.7
+    }
+}

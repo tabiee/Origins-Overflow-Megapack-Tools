@@ -1,0 +1,30 @@
+{
+    "type": "origins:active_self",
+      "entity_action": {
+        "type": "origins:and",
+        "actions": [ 
+          {    
+          "type": "origins:execute_command",
+          "command": "effect give @s minecraft:speed 8 2 true",
+          "permission_level": 4
+          },
+{
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "particle minecraft:cloud ~ ~0.03 ~ 1 1 1 1 100 force"
+    }
+		]
+      },
+    "name": "Full Sprint",
+    "description": "Run at full speed",
+      "key": {
+          "key": "key.origins.quaternary_active",
+          "continuous": false
+      },
+      "cooldown": 850,
+      "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 1
+          }
+  }

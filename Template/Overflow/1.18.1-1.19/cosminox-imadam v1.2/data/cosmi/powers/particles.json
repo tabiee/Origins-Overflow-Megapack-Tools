@@ -1,0 +1,122 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"solar1": {
+		"type": "origins:action_over_time",
+		"interval": 14,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle dust 1 0.749 0 1 ~ ~ ~ 1 1 1 0 2",
+			"permission_level": 4
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:invisible"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				},
+				{
+					"type": "apoli:daytime"
+				},
+				{
+					"type": "origins:exposed_to_sky"
+				}
+			]
+		}
+	},
+	"solar2": {
+		"type": "origins:action_over_time",
+		"interval": 7,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle wax_on ~ ~ ~ 1 1 1 0 1",
+			"permission_level": 4
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:invisible"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				},
+				{
+					"type": "apoli:daytime"
+				},
+				{
+					"type": "origins:exposed_to_sky"
+				}
+			]
+		}
+	},
+	"lunar1": {
+		"type": "origins:action_over_time",
+		"interval": 14,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle glow ~ ~ ~ 1 1 1 0 2",
+			"permission_level": 4
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:invisible"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				},
+				{
+					"inverted": true,
+					"type": "apoli:daytime"
+				},
+				{
+					"type": "origins:exposed_to_sky"
+				}
+			]
+		}
+	},
+	"lunar2": {
+		"type": "origins:action_over_time",
+		"interval": 7,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle wax_off ~ ~ ~ 1 1 1 0 1",
+			"permission_level": 4
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:invisible"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				},
+				{
+					"inverted": true,
+					"type": "apoli:daytime"
+				},
+				{
+					"type": "origins:exposed_to_sky"
+				}
+			]
+		}
+	}
+}

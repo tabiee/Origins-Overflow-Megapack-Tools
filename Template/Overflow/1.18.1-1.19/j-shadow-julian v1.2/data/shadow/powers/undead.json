@@ -1,0 +1,74 @@
+{
+    "name": "§b§nSoul Hunters",
+    "description": "Due to your godly ex wanting you back they have sent the forces of the dead after you.",
+    "type": "origins:multiple",
+    "callb": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team add aggro"
+                }
+            ]
+        },
+        "execute_chosen_when_orb": true,
+        "entity_action_lost": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team remove aggro"
+                }
+            ]
+        }
+    },
+    "reset": {
+        "type": "origins:action_over_time",
+        "interval": 80,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join aggro @e[type=#shadow:undead,distance=..30]"
+                },
+				{
+                    "type": "origins:execute_command",
+                    "command": "team join aggro @e[tag=!shad,type=player,distance=..30]"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "team leave @e[type=#shadow:undead]"
+                    },
+                    "ticks": 20
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute as @e[type=#shadow:undead,distance=..30] at @s run tp @s ~ ~ ~ facing entity @e[tag=shad,limit=1]"
+                    },
+                    "ticks": 1
+                }
+            ]
+        }
+    },
+    "dmg": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "shadow:undead"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.5
+        }
+    }
+}

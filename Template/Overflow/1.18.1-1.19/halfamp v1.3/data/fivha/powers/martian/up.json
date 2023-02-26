@@ -1,0 +1,30 @@
+{
+    "name": "Rocket Jump",
+    "description": "Boost upwards into the air.",
+    "type": "origins:multiple",
+    "launch": {
+        "type": "origins:launch",
+        "cooldown": 600,
+        "speed": 3,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 7
+        },
+        "sound": "entity.firework_rocket.large_blast_far",
+        "key": "primary"
+    },
+    "particles": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle flame ~ ~ ~ 0.5 0.2 0.5 0.5 50",
+            "permission_level": 4
+        },
+        "cooldown": 600,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": "primary"
+    }
+}

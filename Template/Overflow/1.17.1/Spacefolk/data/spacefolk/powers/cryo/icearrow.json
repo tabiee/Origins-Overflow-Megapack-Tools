@@ -1,0 +1,19 @@
+{
+    "name": "Ice Shard",
+    "description": "Launch iceshards at will.",
+    "condition": {
+        "inverted": true,
+        "type": "origins:on_fire"
+    },
+    "type": "origins:fire_projectile",
+    "entity_type": "minecraft:snowball",
+    "cooldown": 5,
+    "hud_render": {
+        "should_render": false
+    },
+    "count": 1,
+    "speed": 1.5,
+    "divergence": 1,
+    "tag": "{Item:{id:\"minecraft:ice\",Count:1b,pickup:0b}}",
+    "key": "primary"
+}

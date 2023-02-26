@@ -1,0 +1,170 @@
+{
+    "name": "§e§nVoid of Soul",
+    "description": "As you are undead, all undead mobs will ignore you completely.",
+    "type": "origins:multiple",
+    "model": {
+        "type": "origins:model_color",
+        "alpha": 0.5
+    },
+    "friend": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join rev @e[type=zombie,distance=..64]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join rev @e[type=husk,distance=..64]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join rev @e[type=skeleton,distance=..64]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join rev @e[type=wither_skeleton,distance=..64]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join rev @e[type=drowned,distance=..64]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join rev @e[type=stray,distance=..64]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join rev @e[type=zombie_villager,distance=..64]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join rev @e[type=zombified_piglin,distance=..64]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join rev @e[type=zoglin,distance=..64]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join rev @e[type=phantom,distance=..64]",
+                    "permission_level": 4
+                }
+            ]
+        }
+    },
+    "group": {
+        "type": "origins:entity_group",
+        "group": "undead"
+    },
+    "callback": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team add rev",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join rev @s",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add rev",
+                    "permission_level": 4
+                }
+            ]
+        },
+        "execute_chosen_when_orb": true,
+        "entity_action_lost": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @s",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s remove rev",
+                    "permission_level": 4
+                }
+            ]
+        }
+    },
+    "unfriend": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[type=zombie,distance=64..]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[type=husk,distance=64..]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[type=skeleton,distance=64..]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave  @e[type=wither_skeleton,distance=64..]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[type=drowned,distance=64..]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[type=stray,distance=64..]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[type=zombie_villager,distance=64..]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[type=zombified_piglin,distance=64..]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[type=zoglin,distance=64..]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[type=phantom,distance=64..]",
+                    "permission_level": 4
+                }
+            ]
+        }
+    }
+}

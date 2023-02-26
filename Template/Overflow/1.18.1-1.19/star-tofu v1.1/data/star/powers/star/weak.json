@@ -1,0 +1,68 @@
+{
+    "name": "§4§nWeak",
+    "description": "Your body is very frail, you cannot hold shields or wear any armor other than leather and chain mail.",
+    "type": "origins:multiple",
+    "ar": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "chainmail_helmet"
+                },
+                {
+                    "item": "leather_helmet"
+                },
+                {
+                    "item": "carved_pumpkin"
+                }
+            ]
+        },
+        "chest": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "chainmail_chestplate"
+                },
+                {
+                    "item": "leather_chestplate"
+                }
+            ]
+        },
+        "legs": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "chainmail_leggings"
+                },
+                {
+                    "item": "leather_leggings"
+                }
+            ]
+        },
+        "feet": {
+            "inverted": true,
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "chainmail_boots"
+                },
+                {
+                    "item": "leather_boots"
+                }
+            ]
+        }
+    },
+    "sh": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "shield"
+            }
+        }
+    }
+}

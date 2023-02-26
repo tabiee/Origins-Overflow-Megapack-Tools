@@ -1,0 +1,13 @@
+{
+    "name": "Noodle Body",
+    "description": "You take reduced fall damage. The soft nature of your body also makes it so that you can only wear up to iron armor.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "fall"
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.5
+    }
+}

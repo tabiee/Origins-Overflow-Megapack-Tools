@@ -1,0 +1,9 @@
+{
+    "name": "§2§nHops",
+    "description": "You jump higher than average.",
+    "type": "origins:modify_jump",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.5
+    }
+}

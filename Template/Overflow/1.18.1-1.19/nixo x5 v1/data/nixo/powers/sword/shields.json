@@ -1,0 +1,41 @@
+{
+    "name": "§6§nUnwieldy",
+    "description": "Shields are uncomfortable to use and slow you down.",
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "shield"
+                    }
+                }
+            },
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "offhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "shield"
+                    }
+                }
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 25,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "slowness",
+            "duration": 35,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    }
+}

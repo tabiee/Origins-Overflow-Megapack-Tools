@@ -1,0 +1,13 @@
+{
+    "impact": 1,
+    "unchoosable": false,
+    "name": "§e§l§oDope",
+    "description": "Fun stuff.",
+    "icon": "minecraft:red_concrete",
+    "powers": [
+        "test:dope/dash",
+		"test:dope/telekinesis",
+		"test:dope/toggle",
+		"test:dope/tagger"
+    ]
+}

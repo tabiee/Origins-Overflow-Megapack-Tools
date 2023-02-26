@@ -1,0 +1,299 @@
+{
+    "name": "ee2 philstone effect",
+    "hidden": true,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "offhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+						"item": "white_dye"
+					}
+                }
+            },
+            {
+                "type": "origins:resource",
+                "resource": "*:alch/chalk_stuff",
+                "comparison": "==",
+                "compare_to": 4
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:play_sound",
+                "sound": "block.chain.break",
+                "volume": 1,
+                "pitch": 0.4
+            },
+            {
+                "type": "origins:if_else_list",
+                "actions": [
+                    {
+                        "condition": {
+                            "type": "origins:on_block",
+                            "block_condition": {
+                                "type": "origins:block",
+                                "block": "grass_block"
+                            }
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 sand replace grass_block",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "inverted": true,
+                                    "type": "origins:sneaking"
+                                },
+                                {
+                                    "type": "origins:on_block",
+                                    "block_condition": {
+                                        "type": "origins:block",
+                                        "block": "dirt"
+                                    }
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 sand replace dirt",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:sneaking"
+                                },
+                                {
+                                    "type": "origins:on_block",
+                                    "block_condition": {
+                                        "type": "origins:block",
+                                        "block": "sand"
+                                    }
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 dirt replace sand",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:on_block",
+                            "block_condition": {
+                                "type": "origins:block",
+                                "block": "mycelium"
+                            }
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 sand replace mycelium",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:on_block",
+                            "block_condition": {
+                                "type": "origins:block",
+                                "block": "dirt_path"
+                            }
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 sand replace dirt_path",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:on_block",
+                            "block_condition": {
+                                "type": "origins:block",
+                                "block": "dirt_path"
+                            }
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 sand replace dirt_path",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "inverted": true,
+                                    "type": "origins:sneaking"
+                                },
+                                {
+                                    "type": "origins:on_block",
+                                    "block_condition": {
+                                        "type": "origins:block",
+                                        "block": "sand"
+                                    }
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 gravel replace sand",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:sneaking"
+                                },
+                                {
+                                    "type": "origins:on_block",
+                                    "block_condition": {
+                                        "type": "origins:block",
+                                        "block": "gravel"
+                                    }
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 sand replace gravel",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:on_block",
+                            "block_condition": {
+                                "type": "origins:block",
+                                "block": "red_sand"
+                            }
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 gravel replace red_sand",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "inverted": true,
+                                    "type": "origins:sneaking"
+                                },
+                                {
+                                    "type": "origins:on_block",
+                                    "block_condition": {
+                                        "type": "origins:block",
+                                        "block": "gravel"
+                                    }
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 stone replace gravel",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:sneaking"
+                                },
+                                {
+                                    "type": "origins:on_block",
+                                    "block_condition": {
+                                        "type": "origins:block",
+                                        "block": "stone"
+                                    }
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 gravel replace stone",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "inverted": true,
+                                    "type": "origins:sneaking"
+                                },
+                                {
+                                    "type": "origins:on_block",
+                                    "block_condition": {
+                                        "type": "origins:block",
+                                        "block": "stone"
+                                    }
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 dirt replace stone",
+                            "permission_level": 4
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:sneaking"
+                                },
+                                {
+                                    "type": "origins:on_block",
+                                    "block_condition": {
+                                        "type": "origins:block",
+                                        "block": "dirt"
+                                    }
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 stone replace dirt",
+                            "permission_level": 4
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "cooldown": 30,
+    "hud_render": {
+        "should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+        "bar_index": 22
+    },
+    "key": "primary"
+}

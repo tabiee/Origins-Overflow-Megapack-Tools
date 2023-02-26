@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"fivha:centaur/hp",
+		"fivha:centaur/ath",
+		"fivha:centaur/crunch",
+		"fivha:centaur/graze",
+		"fivha:centaur/nopants",
+		"fivha:centaur/passenger",
+		"fivha:centaur/knockback",
+		"fivha:centaur/mountallow",
+		"fivha:centaur/mount",
+		"fivha:centaur/nomount",
+		"fivha:centaur/diet"
+	],
+	"icon": "minecraft:hay_block",
+	"impact": 1,
+	"name": "§e§l§oCentaur",
+	"description": "A horse is a horse of course, of course."
+}

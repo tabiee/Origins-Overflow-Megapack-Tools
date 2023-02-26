@@ -1,0 +1,29 @@
+{
+    "name": "no magic for u",
+    "hidden": true,
+    "type": "origins:multiple",
+    "item": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "spelled:ancient_knowledge_tome"
+                },
+                {
+                    "item": "spelled:spell_book"
+                },
+                {
+                    "item": "spelled:creative_tome"
+                }
+            ]
+        }
+    },
+    "block": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "spelled:leveling_altar"
+        }
+    }
+}

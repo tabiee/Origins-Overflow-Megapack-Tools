@@ -1,0 +1,65 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:in_rain"
+                    },
+                    {
+                        "type": "origins:fluid_height",
+                        "fluid": "water",
+                        "comparison": ">",
+                        "compare_to": 0
+                    }
+                ]
+            },
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "offhand",
+                "item_condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "item": "heart_of_the_sea"
+                            }
+                        },
+                        {
+							"type": "origins:nbt",
+							"nbt": "{CustomModelData:3}"
+						}
+                    ]
+                }
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "cooldown": 20,
+    "key": {
+        "key": "primary"
+    },
+    "hud_render": {
+        "should_render": false
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "execute at @s anchored eyes run particle smoke ^ ^ ^1.5 0.4 0.4 0.4 0 25 normal",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.generic.extinguish_fire",
+                "volume": 1,
+                "pitch": 1
+            }
+        ]
+    }
+}

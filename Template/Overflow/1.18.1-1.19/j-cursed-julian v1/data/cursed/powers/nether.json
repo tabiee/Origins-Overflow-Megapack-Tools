@@ -1,0 +1,29 @@
+{
+    "name": "§2§nHome Sweet Home",
+    "description": "Gain speed and jump boost in the crimson forest.",
+    "condition": {
+        "type": "origins:biome",
+        "biome": "crimson_forest"
+    },
+    "type": "origins:action_over_time",
+    "interval": 25,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "speed",
+                "duration": 35,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "jump_boost",
+                "duration": 35,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "name": "Feeder",
+	"loading_priority": 2,
+    "description": "Can't eat normal food. Drain lifeforce of nearby creatures for sustenance.",
+    "condition": {
+        "type": "origins:constant",
+        "value": true
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "execute if entity @e[distance=..3,tag=!feeder,type=!armor_stand,type=!item,type=!minecart,type=!chest_minecart,type=!furnace_minecart,type=!hopper_minecart,type=!tnt_minecart,type=!arrow,type=!trident,type=!boat,type=!spectral_arrow,type=!leash_knot] run effect give @e[distance=..3,tag=!feeder,limit=1] wither 1 1 true"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute if entity @e[distance=..3,tag=!feeder,type=!armor_stand,type=!item,type=!minecart,type=!chest_minecart,type=!furnace_minecart,type=!hopper_minecart,type=!tnt_minecart,type=!arrow,type=!trident,type=!boat,type=!spectral_arrow,type=!leash_knot] run effect give @s minecraft:regeneration 1 2 true"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute if entity @e[distance=..3,tag=!feeder,type=!armor_stand,type=!item,type=!minecart,type=!chest_minecart,type=!furnace_minecart,type=!hopper_minecart,type=!tnt_minecart,type=!arrow,type=!trident,type=!boat,type=!spectral_arrow,type=!leash_knot] run effect give @s minecraft:saturation 1 0 true"
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.strider.death",
+                "volume": 1,
+                "pitch": 1.2
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute at @s anchored eyes run particle minecraft:soul ^ ^ ^3 0.5 0.5 0.5 0 3 normal"
+            }
+        ]
+    },
+    "cooldown": 10,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": {
+        "key": "secondary"
+    }
+}

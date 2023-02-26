@@ -1,0 +1,201 @@
+{
+    "type": "origins:multiple",
+    "name": "§5§nExperienced Warrior",
+    "description": "As a piglin you know nether equipment best. You use gold and netherite tools and armor much more effectively.",
+    "golden_tool_boost": {
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "name": "Origin modifier",
+            "operation": "addition",
+            "value": 2.5
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "3smp:golden_tools"
+                },
+                "inverted": false
+            },
+            "inverted": false
+        }
+    },
+    "golden_helmet_boost": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "name": "Origin modifier",
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 1
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "head",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "3smp:golden_armor"
+                },
+                "inverted": false
+            },
+            "inverted": false
+        },
+        "tick_rate": 20
+    },
+    "golden_chestplate_boost": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "name": "Origin modifier",
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 2
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "chest",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "3smp:golden_armor"
+                },
+                "inverted": false
+            },
+            "inverted": false
+        },
+        "tick_rate": 20
+    },
+    "golden_leggings_boost": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "name": "Origin modifier",
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 2
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "legs",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "3smp:golden_armor"
+                },
+                "inverted": false
+            },
+            "inverted": false
+        },
+        "tick_rate": 20
+    },
+    "golden_boots_boost": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "name": "Origin modifier",
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 1
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "feet",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "3smp:golden_armor"
+                },
+                "inverted": false
+            },
+            "inverted": false
+        },
+        "tick_rate": 20
+    },
+    "netherite_helmet_boost": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "name": "Origin modifier",
+            "attribute": "generic.movement_speed",
+            "operation": "addition",
+            "value": 0.002
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "head",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "3smp:netherite_armor"
+                },
+                "inverted": false
+            },
+            "inverted": false
+        },
+        "tick_rate": 20
+    },
+    "netherite_chestplate_boost": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "name": "Origin modifier",
+            "attribute": "generic.movement_speed",
+            "operation": "addition",
+            "value": 0.002
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "chest",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "3smp:netherite_armor"
+                },
+                "inverted": false
+            },
+            "inverted": false
+        },
+        "tick_rate": 20
+    },
+    "netherite_leggings_boost": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "name": "Origin modifier",
+            "attribute": "generic.movement_speed",
+            "operation": "addition",
+            "value": 0.002
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "legs",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "3smp:netherite_armor"
+                },
+                "inverted": false
+            },
+            "inverted": false
+        },
+        "tick_rate": 20
+    },
+    "netherite_boots_boost": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "name": "Origin modifier",
+            "attribute": "generic.movement_speed",
+            "operation": "addition",
+            "value": 0.002
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "feet",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "3smp:netherite_armor"
+                },
+                "inverted": false
+            },
+            "inverted": false
+        },
+        "tick_rate": 20
+    }
+}

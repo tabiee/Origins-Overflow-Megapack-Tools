@@ -1,0 +1,10 @@
+{
+    "name": "§2§nHearty",
+    "description": "You have 12 hearts.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": 4
+    }
+}

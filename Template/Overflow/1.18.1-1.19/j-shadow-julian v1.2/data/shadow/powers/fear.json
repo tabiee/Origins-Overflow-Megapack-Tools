@@ -1,0 +1,29 @@
+{
+    "name": "§b§nFear of Fate",
+    "description": "If an undead mob manages to hit you it will give you weakness for 5 seconds. ",
+    "type": "origins:action_when_hit",
+    "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "weakness",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    },
+    "damage_condition": {
+        "type": "origins:attacker",
+        "entity_condition": {
+            "type": "origins:in_tag",
+            "tag": "shadow:undead"
+        }
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    }
+}

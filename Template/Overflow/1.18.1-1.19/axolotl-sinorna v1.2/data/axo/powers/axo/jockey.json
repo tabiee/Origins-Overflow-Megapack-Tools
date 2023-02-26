@@ -1,0 +1,8 @@
+{
+	"name": "§5§nPiggyback Ride",
+	"description": "Climb onto someone for a ride.",
+	"type": "extraorigins:start_riding",
+	"key": {
+		"key": "primary"
+	}
+}

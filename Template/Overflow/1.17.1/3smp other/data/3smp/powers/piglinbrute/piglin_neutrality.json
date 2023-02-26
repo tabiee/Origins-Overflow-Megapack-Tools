@@ -1,0 +1,10 @@
+{
+	"name": "§2§nAmong Equals",
+	"description": "Other Piglin won't bother you, whether out of fear or respect.",
+  "type": "extraorigins:mob_neutrality",
+  "entity_types": [
+	"piglin",
+	"ghast",
+	"magma_cube"
+  ]
+}

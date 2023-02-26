@@ -1,0 +1,22 @@
+{
+	"powers": [
+		"rose:bonemeal",
+		"rose:spore",
+		"rose:hand",
+		"rose:sizeswap",
+		"rose:vines",
+		"rose:forest",
+		"rose:speed",
+		"rose:thorns",
+		"extraorigins:photosynthesis",
+		"extraorigins:delicate",
+		"rose:nectarivore",
+		"rose:axe",
+		"rose:poison",
+		"extraorigins:flammable"
+	],
+	"icon": "minecraft:rose_bush",
+	"impact": 2,
+	"name": "§4§l§oRoseborne",
+	"description": "You are a sentient rose creature."
+}

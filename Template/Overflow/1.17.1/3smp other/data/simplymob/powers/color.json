@@ -1,0 +1,34 @@
+{
+    "type": "origins:action_on_callback",
+    "execute_chosen_when_orb": true,
+    "entity_action_chosen": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "team add gray"
+            },
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "team modify gray color gray"
+            }
+        ]
+    },
+    "entity_action_added": {
+        "type": "origins:delay",
+        "action": {
+            "type": "origins:execute_command",
+            "permission_level": 4,
+            "command": "team join gray @s"
+        },
+        "ticks": 1
+    },
+    "entity_action_lost": {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "team leave @s"
+    },
+    "hidden": true
+}

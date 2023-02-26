@@ -1,0 +1,9 @@
+{
+    "name": "§2§nHard Worker",
+    "description": "You mine 10% faster.",
+    "type": "origins:modify_break_speed",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.1
+    }
+}

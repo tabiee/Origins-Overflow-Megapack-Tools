@@ -1,0 +1,40 @@
+{
+	"name": "Bouncy",
+	"description": "You can negate fall damage and will bounce when you fall from heights.",
+    "type": "origins:multiple",
+    "falldmg": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "fall"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.7
+        }
+    },
+    "lessfall": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "fall"
+        },
+        "condition": {
+            "type": "origins:fall_distance",
+            "comparison": "<",
+            "compare_to": 15
+        }
+    },
+    "bounce": {
+        "type": "origins:action_on_land",
+        "entity_action": {
+            "type": "origins:add_velocity",
+            "y": 0.55
+        },
+        "condition": {
+            "type": "origins:fall_distance",
+            "comparison": ">",
+            "compare_to": 4
+        }
+    }
+}

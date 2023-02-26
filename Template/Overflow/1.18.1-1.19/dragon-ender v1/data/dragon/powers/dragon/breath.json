@@ -1,0 +1,43 @@
+{
+	"name": "§5§nDragon's Breath",
+	"description": "[Primary] Conjure up a ball of magic to shoot at enemies.",
+	"type": "origins:multiple",
+	"fire": {
+		"type": "origins:fire_projectile",
+		"entity_type": "dragon_fireball",
+		"cooldown": 200,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 19
+		},
+		"count": 1,
+		"speed": 1.5,
+		"divergence": 1,
+		"sound": "minecraft:entity.ender_dragon.shoot",
+		"tag": "{Tags:[\"fancy\"]}",
+		"key": {
+			"key": "primary",
+			"continuous": true
+		}
+	},
+	"fx": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=fancy] at @s run particle witch ~ ~ ~ 0.3 0.3 0.3 0 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=fancy] at @s run particle dust 0.400 0.000 1.000 2 ~ ~ ~ 0 0 0 1 10",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

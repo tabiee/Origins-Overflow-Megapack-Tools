@@ -1,0 +1,25 @@
+{
+	"name": "§e§nGlowing Marking",
+	"description": "You always emit a light level of 7 from your glowing marking.",
+	"type": "origins:multiple",
+	"air": {
+		"condition": {
+			"type": "origins:fluid_height",
+			"fluid": "water",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"type": "origins:action_over_time",
+		"interval": 3,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "function azuly:light",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

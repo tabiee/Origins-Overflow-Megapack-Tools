@@ -1,0 +1,41 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 2,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "team join Endheir @s",
+                "permission_level": 4
+            },
+			{
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "team modify Endheir color light_purple"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "team join Endheir @e[type=enderman]",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "team join Endheir @e[type=endermite]",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "team join Endheir @e[type=ender_dragon]",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "team join Endheir @e[type=shulker]",
+                "permission_level": 4
+            }
+        ]
+    },
+    "name": "One of Us",
+    "description": "After your ancestor's arrival in the end, the mobs there have adapted to your presence and consider you their own kind."
+}

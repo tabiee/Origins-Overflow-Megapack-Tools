@@ -1,0 +1,211 @@
+{
+    "name": "Energy Blast",
+    "description": "By hearing enough noises you gather up energy, you can release it when full in a huge blast around you to do massive damage and knock back everything around you in a 10 block radius, giving targets blindness for 5 seconds as their ears would be ringing.",
+    "type": "origins:multiple",
+    "grant": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=!echo,distance=..12] at @s run power grant @s echo:hear"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=!echo,distance=12..] at @s run power revoke @s echo:hear"
+                }
+            ]
+        }
+    },
+    "energy": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1000,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 19
+        },
+        "max_action": {
+            "type": "origins:play_sound",
+            "sound": "entity.allay.item_given",
+            "volume": 5,
+            "pitch": 0.1
+        }
+    },
+    "act": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:blast_energy",
+                    "comparison": "==",
+                    "compare_to": 1000
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:block_in_radius",
+                    "block_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "dampens_vibrations"
+                    },
+                    "radius": 3,
+                    "shape": "cube",
+                    "comparison": ">=",
+                    "compare_to": 9
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:blast_energy",
+                    "change": -1000,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:area_of_effect",
+                    "radius": 20,
+                    "bientity_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:damage",
+                                "amount": 32,
+                                "source": {
+                                    "name": "even_more_magic",
+                                    "bypasses_armor": true,
+                                    "unblockable": true
+                                }
+                            },
+                            {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "tp @s ~ ~ ~ facing entity @e[tag=echo,limit=1]"
+                                        },
+                                        {
+                                            "type": "origins:delay",
+                                            "action": {
+                                                "type": "origins:add_velocity",
+                                                "y": 1,
+                                                "z": -2.5,
+                                                "space": "local",
+                                                "client": true,
+                                                "server": true
+                                            },
+                                            "ticks": 3
+                                        },
+                                        {
+                                            "type": "origins:apply_effect",
+                                            "effect": {
+                                                "effect": "darkness",
+                                                "duration": 100,
+                                                "amplifier": 0,
+                                                "show_particles": false,
+                                                "show_icon": true
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "playsound item.trident.thunder master @a[distance=..20] ~ ~ ~ 1 0.1"
+                    },
+                    "ticks": 2
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "playsound entity.illusioner.prepare_mirror master @a[distance=..20] ~ ~ ~ 1 0.1"
+                    },
+                    "ticks": 1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound entity.allay.death master @a[distance=..20] ~ ~ ~ 10 0.1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute positioned ~ ~0.5 ~ rotated 45 0 run function echo:exp"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute positioned ~ ~0.5 ~ rotated 90 0 run function echo:exp2"
+                    },
+                    "ticks": 6
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute positioned ~ ~0.5 ~ rotated 135 0 run function echo:exp3"
+                    },
+                    "ticks": 12
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute positioned ~ ~0.5 ~ rotated 45 0 run function echo:circle"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute positioned ~ ~0.5 ~ rotated 90 0 run function echo:circle2"
+                    },
+                    "ticks": 6
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute positioned ~ ~0.5 ~ rotated 135 0 run function echo:circle3"
+                    },
+                    "ticks": 12
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute positioned ~ ~0.5 ~ rotated 135 0 run function echo:circle3"
+                    },
+                    "ticks": 18
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:end_rod ~ ~1.65 ~ 0 0 0 0.1 25"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:firework ~ ~1.65 ~ 1 1 1 0.35 50"
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.saveToolbarActivator"
+        }
+    }
+}

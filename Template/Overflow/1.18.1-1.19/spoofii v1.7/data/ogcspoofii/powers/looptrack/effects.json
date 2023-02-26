@@ -1,0 +1,10 @@
+{
+	"name": "Pain Immunity",
+	"description": "You don't care about damage, wither or poison.",
+    "type": "origins:effect_immunity",
+    "effects": [
+        "instant_damage",
+        "wither",
+        "poison"
+    ]
+}

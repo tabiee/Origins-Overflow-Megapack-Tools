@@ -1,0 +1,6 @@
+{
+    "name": "§2§nTransparent",
+    "description": "You're uh... you're transparent.",
+    "type": "origins:model_color",
+    "alpha": 0.5
+}

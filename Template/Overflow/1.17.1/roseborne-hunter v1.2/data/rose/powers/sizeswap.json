@@ -1,0 +1,154 @@
+{
+    "name": "From Soil to Sky",
+    "description": "Can grow up to 3 blocks tall, or shrink to half a block short.",
+    "type": "origins:multiple",
+    "form": {
+        "type": "origins:resource",
+        "min": 1,
+        "max": 3,
+        "start_value": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "swap": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:sizeswap_form",
+                        "comparison": "==",
+                        "compare_to": 3
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:height 1 @s"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:width 1 @s"
+                            },
+                            {
+                                "type": "origins:delay",
+                                "action": {
+                                    "type": "origins:change_resource",
+                                    "resource": "*:sizeswap_form",
+                                    "change": -2,
+                                    "operation": "add"
+                                },
+                                "ticks": 2
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:sizeswap_form",
+                        "comparison": "==",
+                        "compare_to": 1
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:height 1.5 @s"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:width 1.5 @s"
+                            },
+                            {
+                                "type": "origins:delay",
+                                "action": {
+                                    "type": "origins:change_resource",
+                                    "resource": "*:sizeswap_form",
+                                    "change": 1,
+                                    "operation": "add"
+                                },
+                                "ticks": 2
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:sizeswap_form",
+                        "comparison": "==",
+                        "compare_to": 2
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:height 0.25 @s"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:width 0.25 @s"
+                            },
+                            {
+                                "type": "origins:delay",
+                                "action": {
+                                    "type": "origins:change_resource",
+                                    "resource": "*:sizeswap_form",
+                                    "change": 1,
+                                    "operation": "add"
+                                },
+                                "ticks": 2
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 21
+        },
+        "key": {
+            "key": "quaternary",
+            "continuous": true
+        }
+    },
+    "slow": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:sizeswap_form",
+                    "comparison": "==",
+                    "compare_to": 3
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:sneaking"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "slow_falling",
+                "duration": 5,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    }
+}

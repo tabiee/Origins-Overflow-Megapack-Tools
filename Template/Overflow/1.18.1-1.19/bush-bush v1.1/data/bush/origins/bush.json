@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"bush:invis",
+		"bush:sizeswap",
+		"bush:ivy",
+		"bush:branches",
+		"bush:biomes",
+		"bush:burn",
+		"bush:eat",
+		"bush:shears",
+		"bush:sun",
+		"bush:model"
+	],
+	"icon": "minecraft:azalea",
+	"impact": 3,
+	"name": "§2§l§oBushborn",
+	"description": "You are literally a bush."
+}

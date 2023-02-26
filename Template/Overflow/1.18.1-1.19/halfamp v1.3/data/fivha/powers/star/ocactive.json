@@ -1,0 +1,68 @@
+{
+    "hidden": true,
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:resource",
+			"resource": "*:star/overcharge_toggle",
+			"comparison": "==",
+			"compare_to": 1
+        },
+        "if_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s {\"text\":\"- - - Overcharge Deactivated. ###\",\"bold\":true,\"color\":\"dark_aqua\"}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.evoker.prepare_summon",
+                    "volume": 0.3,
+                    "pitch": 1
+                },
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:change_resource",
+						"resource": "*:star/overcharge_toggle",
+						"change": -1
+						},
+					"ticks": 5
+				}
+            ]
+        },
+        "else_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s {\"text\":\"### Overcharge Activated! - - -\",\"bold\":true,\"color\":\"aqua\"}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.evoker.prepare_summon",
+                    "volume": 0.3,
+                    "pitch": 2
+                },
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:change_resource",
+						"resource": "*:star/overcharge_toggle",
+						"change": 1
+						},
+					"ticks": 5
+				}
+            ]
+        }
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": "primary"
+}

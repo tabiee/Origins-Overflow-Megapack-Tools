@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"skys:fly",
+		"skys:fall",
+		"skys:spawn",
+		"skys:hp",
+		"skys:water",
+		"skys:invis"
+	],
+	"icon": {
+		"item": "minecraft:potion",
+		"tag": "{Potion:\"minecraft:water\"}"
+	},
+	"impact": 1,
+	"name": "§b§l§oSkyswimmer",
+	"description": "Over years of evolution of living in the end you have gained the ability to swim using dust particles in the air. You are the last of your kind, you must try your hardest to survive."
+}

@@ -1,0 +1,42 @@
+{
+    "name": "§a§nShaking with Excitement",
+    "description": "You are nearly manic, making you a lot more shaky, projectile based weapons are not usable.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "*:select_mode",
+                "comparison": "==",
+                "compare_to": 3
+            }
+        ]
+    },
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "lingering_potion"
+            },
+            {
+                "item": "splash_potion"
+            },
+            {
+                "item": "trident"
+            },
+            {
+                "item": "egg"
+            },
+            {
+                "item": "snowball"
+            },
+            {
+                "item": "bow"
+            },
+            {
+                "item": "crossbow"
+            }
+        ]
+    }
+}

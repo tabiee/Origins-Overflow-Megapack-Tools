@@ -1,0 +1,24 @@
+{
+    "powers": [
+        "3smp:moth/flower_power",
+        "3smp:moth/small",
+        "3smp:moth/wings",
+        "3smp:moth/water_vulnerability",
+        "3smp:moth/vegetarian",
+        "3smp:moth/light_armor",
+        "3smp:moth/flight",
+		"3smp:moth/particles",
+		"3smp:moth/color",
+		"3smp:moth/ooh",
+		"3smp:moth/weremoth",
+		"3smp:moth/toggle",
+		"3smp:moth/wmdummy",
+		"3smp:moth/rainhate"
+    ],
+    "icon": "minecraft:oxeye_daisy",
+    "order": 4,
+    "impact": 2,
+    "unchoosable": false,
+    "name": "§9§l§oMoth",
+    "description": "This moth-like creature serves as an effective builder and messenger, skilled at flying quickly through the dark but weak in a fight. "
+}

@@ -1,0 +1,175 @@
+{
+	"name": "§5§nGhastly Step [Secondary]",
+	"description": "Slip between shadows to teleport to another spot, you are yanked back where you came from after a few seconds.",
+	"type": "origins:multiple",
+	"tp": {
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if block ^ ^ ^20 air",
+			"comparison": ">=",
+			"compare_to": 1,
+			"permission_level": 4
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:[\"tpback\"]}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "tp @s ^ ^ ^20",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "particle squid_ink ~ ~1 ~ 1 1 1 0.1 25",
+						"permission_level": 4
+					},
+					"ticks": 3
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "particle ash ~ ~1 ~ 1 1 1 0.1 200",
+						"permission_level": 4
+					},
+					"ticks": 3
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.ender_dragon.flap",
+					"volume": 0.7,
+					"pitch": 1.2
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:play_sound",
+						"sound": "minecraft:ui.toast.out",
+						"volume": 1,
+						"pitch": 0.7
+					},
+					"ticks": 3
+				},
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "*:tricks/tp_cd"
+				}
+			]
+		},
+		"cooldown": 200,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+			"bar_index": 18
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"cd": {
+		"type": "origins:cooldown",
+		"cooldown": 100,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+			"bar_index": 9
+		}
+	},
+	"act": {
+		"condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tricks/tp_cd",
+                    "comparison": "<=",
+                    "compare_to": 5
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tricks/tp_cd",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+		"type": "origins:action_over_time",
+		"interval": 3,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tp @s @e[tag=tpback,limit=1]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle squid_ink ~ ~1 ~ 1 1 1 0.1 25",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle ash ~ ~1 ~ 1 1 1 0.1 200",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.ender_dragon.flap",
+					"volume": 0.7,
+					"pitch": 0.9
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:ui.toast.out",
+					"volume": 1,
+					"pitch": 0.4
+				}
+			]
+		},
+		"falling_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "kill @e[tag=tpback]",
+						"permission_level": 4
+					},
+					"ticks": 5
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle squid_ink ~ ~1 ~ 1 1 1 0.1 25",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle ash ~ ~1 ~ 1 1 1 0.1 200",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.ender_dragon.flap",
+					"volume": 0.7,
+					"pitch": 0.9
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:ui.toast.out",
+					"volume": 1,
+					"pitch": 0.4
+				}
+			]
+		}
+	}
+}

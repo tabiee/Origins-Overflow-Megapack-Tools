@@ -1,0 +1,10 @@
+{
+    "name": "Long-lived",
+    "description": "Your lifespan reaches centuries, you have 5 extra hearts.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": 10
+    }
+}

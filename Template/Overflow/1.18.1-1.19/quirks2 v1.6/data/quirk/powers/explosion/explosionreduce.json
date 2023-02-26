@@ -1,0 +1,17 @@
+{
+	"type": "origins:modify_damage_taken",
+	"loading_priority": 1,
+	"modifier": {
+		"name": "explosion",
+		"value": -0.50,
+		"operation": "multiply_base"
+
+	},
+	"damage_condition": {
+		"type": "origins:name",
+		"name": "explosion"
+	},
+   "name": "Though Skin",
+   "description": "Explosions do less damage",
+  "hidden": false
+}

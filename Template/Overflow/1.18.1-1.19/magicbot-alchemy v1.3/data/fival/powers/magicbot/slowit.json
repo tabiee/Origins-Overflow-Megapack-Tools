@@ -1,0 +1,13 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:creative_flying"
+    },
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "attribute": "generic.flying_speed",
+        "operation": "addition",
+        "value": -10
+    },
+    "tick_rate": 1
+}

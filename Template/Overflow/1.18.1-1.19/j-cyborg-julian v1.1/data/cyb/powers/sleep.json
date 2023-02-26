@@ -1,0 +1,7 @@
+{
+    "name": "§6§nBattery station",
+    "description": "Due to being part robot, you do not need to sleep. You find it disgusting that humans and other origins must sleep for energy.",
+    "type": "origins:prevent_sleep",
+    "message": "You don't sleep. Why would you ever? Such a waste of time.",
+    "set_spawn_point": true
+}

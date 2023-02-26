@@ -1,0 +1,7 @@
+{
+    "name": "Energy Consumption",
+    "description": "You need to eat more.",
+    "type": "origins:exhaust",
+    "interval": 300,
+    "exhaustion": 2
+}

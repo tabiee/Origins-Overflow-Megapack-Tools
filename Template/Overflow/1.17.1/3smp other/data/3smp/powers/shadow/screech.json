@@ -1,0 +1,68 @@
+{
+	"name": "§5§nScreech [Primary]",
+	"description": "Stun your enemies with sheer terror.",
+    "type": "origins:active_self",
+    "cooldown": 900,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "execute at @s run effect give @e[distance=..15] blindness 20"
+            },
+			{
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "execute at @s run effect give @e[distance=..15] slowness 10 1"
+            },
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "effect clear @s blindness"
+            },
+			{
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "effect clear @s slowness"
+			},
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "execute at @s run effect give @e[distance=..15] wither 20"
+            },
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "effect clear @s wither"
+			},
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.vex.death",
+                "volume": 1,
+                "pitch": 0.4
+            },
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "particle minecraft:large_smoke ~ ~ ~ 5 0 5 0 80 normal"
+            },
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "duration": 300,
+                    "is_ambient": false,
+                    "show_particles": false,
+                    "show_icon": false,
+                    "effect": "invisibility"
+                }
+            }
+        ]
+    },
+    "key": "primary",
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 7
+    }
+}

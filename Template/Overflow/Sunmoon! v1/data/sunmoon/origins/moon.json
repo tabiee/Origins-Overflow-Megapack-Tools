@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"sunmoon:spec/swim",
+		"sunmoon:spec/hands",
+		"sunmoon:moon/nv",
+		"sunmoon:moon/murder",
+		"sunmoon:moon/lunar",
+		"sunmoon:moon/tagger"
+	],
+	"icon": "minecraft:snowball",
+	"impact": 3,
+	"name": "§1§l§oMoon§r",
+	"description": "§1§oNighty night.§r\nHostile but powerful, Moon is always active in the dark."
+}

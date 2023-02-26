@@ -1,0 +1,191 @@
+{
+    "name": "§6§nBlinding Lights§r",
+    "description": "While in Solar mode, you can shine as bright as the Sun, blinding and knocking back any creature near you.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "This ability is unlocked by infusing a Dragon Egg with a Nether Star."
+        }
+    ],
+    "type": "origins:multiple",
+    "blind": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "apoli:daytime"
+                },
+                {
+                    "type": "origins:exposed_to_sky"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:blind_lock",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:area_of_effect",
+                    "radius": 8,
+                    "bientity_action": {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:apply_effect",
+                                    "effect": {
+                                        "effect": "blindness",
+                                        "duration": 200,
+                                        "amplifier": 0,
+                                        "show_particles": true,
+                                        "show_icon": true
+                                    }
+                                },
+                                {
+                                    "type": "origins:set_on_fire",
+                                    "duration": 7
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "tp @s ~ ~ ~ facing entity @e[tag=cosm,limit=1]"
+                                },
+                                {
+                                    "type": "origins:delay",
+                                    "action": {
+                                        "type": "origins:add_velocity",
+                                        "y": 0.75,
+                                        "z": -2,
+                                        "space": "local",
+                                        "client": true,
+                                        "server": true,
+                                        "set": true
+                                    },
+                                    "ticks": 3
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle crit ~ ~0.3 ~ 1 0.25 1 0 200"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle electric_spark ~ ~0.3 ~ 1 0.25 1 0 200"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 1.000 0.635 0.000 1 ~ ~0.3 ~ 1 0.25 1 0 200"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle crit ~ ~1 ~ 2 0.5 2 0 400"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle electric_spark ~ ~1 ~ 2 0.5 2 0 400"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle dust 1.000 0.635 0.000 1 ~ ~1 ~ 2 0.5 2 0 400"
+                            }
+                        ]
+                    },
+                    "ticks": 6
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.amethyst_block.chime",
+                    "volume": 10,
+                    "pitch": 0.1
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.amethyst_block.break",
+                    "volume": 1,
+                    "pitch": 0.1
+                }
+            ]
+        },
+        "cooldown": 300,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 14
+        },
+        "key": {
+            "key": "primary"
+        }
+    },
+    "unlock": {
+        "type": "origins:action_on_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "dragon_egg"
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "nether_star"
+            }
+        },
+        "hands": [
+            "main_hand"
+        ],
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:blind_lock",
+                    "change": 1,
+                    "operation": "set"
+                }
+            ]
+        },
+        "block_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "summon item ~ ~ ~ {Item:{id:\"minecraft:dragon_egg\",Count:1b}}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle witch ~ ~ ~ 1 1 1 0 100"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle electric_spark ~ ~ ~ 1 1 1 0 100"
+                }
+            ]
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        },
+        "action_result": "success"
+    },
+    "lock": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

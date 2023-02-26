@@ -1,0 +1,19 @@
+{
+    "name": "§1§nLevitation Shot",
+    "description": "Shoot a shulker bullet to make your enemies levitate.",
+    "type": "origins:fire_projectile",
+    "entity_type": "shulker_bullet",
+    "cooldown": 200,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 19
+    },
+    "count": 1,
+    "speed": 1.5,
+    "sound": "entity.shulker.shoot",
+    "key": {
+        "key": "secondary",
+        "continuous": true
+    }
+}

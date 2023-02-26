@@ -1,0 +1,129 @@
+{
+    "name": "§5§nPhasing",
+    "description": "Phase through walls while also being invisible.",
+    "type": "origins:multiple",
+    "phasing": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:phantom/phasing_tog"
+        },
+        "type": "origins:phasing",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:unphasable"
+        },
+        "blacklist": true,
+        "render_type": "blindness",
+        "view_distance": 10,
+        "phase_down_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:on_block"
+                }
+            ]
+        }
+    },
+    "tog": {
+        "type": "origins:toggle",
+        "active_by_default": true,
+        "key": {
+            "key": "primary"
+        }
+    },
+    "invis": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:phantom/phasing_tog"
+        },
+        "type": "origins:invisibility",
+        "render_armor": false
+    },
+    "eff": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:phantom/phasing_tog"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "jump_boost",
+                            "duration": 100,
+                            "amplifier": 2,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "speed",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "resistance",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "strength",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "regeneration",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": false
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "hp": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:phantom/phasing_tog"
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": 10
+        },
+        "tick_rate": 5
+    },
+    "tick": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:phantom/phasing_tog"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:phantom/phased_timer",
+                    "change": -1
+                }
+            ]
+        }
+    }
+}

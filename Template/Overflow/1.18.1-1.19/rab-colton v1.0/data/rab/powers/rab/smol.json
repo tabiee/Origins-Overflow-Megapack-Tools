@@ -1,0 +1,17 @@
+{
+	"name": "§e§nSmall",
+	"description": "The world is now much bigger, and your health is now much smaller.",
+	"type": "origins:multiple",
+	"size": {
+		"type": "extraorigins:modify_size",
+		"scale": 0.45
+	},
+	"attr": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.max_health",
+			"operation": "addition",
+			"value": -6
+		}
+	}
+}

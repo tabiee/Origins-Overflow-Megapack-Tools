@@ -1,0 +1,32 @@
+{
+    "name": "§2§nConfident Free-runner",
+    "description": " You've grown pretty good at your abilities in parkour and free running.",
+    "type": "apoli:multiple",
+    "inv": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                }
+            ]
+        }
+    },
+    "spd": {
+        "name": "Quick Feet",
+        "description": "Your movement speed is higher than average.",
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_total",
+            "value": 0.2
+        },
+        "update_health": false
+    }
+}

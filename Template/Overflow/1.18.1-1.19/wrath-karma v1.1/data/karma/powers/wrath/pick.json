@@ -1,0 +1,363 @@
+{
+	"name": "§b§nJack of All Trades",
+	"description": "Switch between five abilities, reverse the order by holding Shift.",
+	"type": "origins:multiple",
+	"pick": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:wrath/pick_bit",
+								"comparison": "==",
+								"compare_to": 5
+							},
+							{
+								"inverted": true,
+								"type": "origins:sneaking"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:wrath/pick_bit",
+								"change": -4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "tellraw @s {\"text\":\"# Assault Mode.\",\"italic\":true,\"color\":\"gold\"}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:wrath/pick_bit",
+								"comparison": "==",
+								"compare_to": 1
+							},
+							{
+								"inverted": true,
+								"type": "origins:sneaking"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:wrath/pick_bit",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "tellraw @s {\"text\":\"# Teleport.\",\"italic\":true,\"color\":\"dark_aqua\"}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:wrath/pick_bit",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"inverted": true,
+								"type": "origins:sneaking"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:wrath/pick_bit",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "tellraw @s {\"text\":\"# Soul Combustion.\",\"italic\":true,\"color\":\"black\"}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:wrath/pick_bit",
+								"comparison": "==",
+								"compare_to": 3
+							},
+							{
+								"inverted": true,
+								"type": "origins:sneaking"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:wrath/pick_bit",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "tellraw @s {\"text\":\"# Demonic Retraction.\",\"italic\":true,\"color\":\"dark_red\"}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:wrath/pick_bit",
+								"comparison": "==",
+								"compare_to": 4
+							},
+							{
+								"inverted": true,
+								"type": "origins:sneaking"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:wrath/pick_bit",
+								"change": 1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "tellraw @s {\"text\":\"# Shadow Step.\",\"italic\":true,\"color\":\"dark_purple\"}",
+								"permission_level": 4
+							}
+						]
+					}
+				}
+			]
+		},
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary",
+			"continuous": true
+		}
+	},
+	"pickreverse": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:wrath/pick_bit",
+								"comparison": "==",
+								"compare_to": 2
+							},
+							{
+								"type": "origins:sneaking"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:wrath/pick_bit",
+								"change": -1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "tellraw @s {\"text\":\"# Assault Mode.\",\"italic\":true,\"color\":\"gold\"}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:wrath/pick_bit",
+								"comparison": "==",
+								"compare_to": 3
+							},
+							{
+								"type": "origins:sneaking"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:wrath/pick_bit",
+								"change": -1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "tellraw @s {\"text\":\"# Teleport.\",\"italic\":true,\"color\":\"dark_aqua\"}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:wrath/pick_bit",
+								"comparison": "==",
+								"compare_to": 4
+							},
+							{
+								"type": "origins:sneaking"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:wrath/pick_bit",
+								"change": -1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "tellraw @s {\"text\":\"# Soul Combustion.\",\"italic\":true,\"color\":\"black\"}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:wrath/pick_bit",
+								"comparison": "==",
+								"compare_to": 5
+							},
+							{
+								"type": "origins:sneaking"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:wrath/pick_bit",
+								"change": -1
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "tellraw @s {\"text\":\"# Demonic Retraction.\",\"italic\":true,\"color\":\"dark_red\"}",
+								"permission_level": 4
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:wrath/pick_bit",
+								"comparison": "==",
+								"compare_to": 1
+							},
+							{
+								"type": "origins:sneaking"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:wrath/pick_bit",
+								"change": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "tellraw @s {\"text\":\"# Shadow Step.\",\"italic\":true,\"color\":\"dark_purple\"}",
+								"permission_level": 4
+							}
+						]
+					}
+				}
+			]
+		},
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary",
+			"continuous": true
+		}
+	},
+	"bit": {
+		"type": "origins:resource",
+		"min": 1,
+		"max": 5,
+		"start_value": 1,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+			"bar_index": 3
+		}
+	}
+}

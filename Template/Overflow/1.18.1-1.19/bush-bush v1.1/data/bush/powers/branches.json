@@ -1,0 +1,41 @@
+{
+    "name": "Broken Branches",
+    "description": "You can't wear netherite nor use shields.",
+    "type": "origins:multiple",
+    "nether": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "netherite_helmet"
+            }
+        },
+        "chest": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "netherite_chestplate"
+            }
+        },
+        "legs": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "netherite_leggings"
+            }
+        },
+        "feet": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "netherite_boots"
+            }
+        }
+    },
+    "prev": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "shield"
+            }
+        }
+    }
+}

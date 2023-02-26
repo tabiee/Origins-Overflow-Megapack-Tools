@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"quirk:electrification/elecfist",
+		"quirk:electrification/eletric_beam",
+		"quirk:electrification/discharge",
+		"quirk:electrification/dash",
+		"quirk:electrification/thunder_ball",
+		"quirk:electrification/electric_conductor",
+		"quirk:electrification/particles",
+		"quirk:health"
+	],
+	"icon": "minecraft:lightning_rod",
+        "unchoosable": true,
+	"order": 10,
+	"impact": 3,
+	"name": "Electrification",
+	"description": "Denki's Quirk"
+}

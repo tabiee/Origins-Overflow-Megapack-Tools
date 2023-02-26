@@ -1,0 +1,30 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "give": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=!end,type=player,distance=..30] at @s run power grant @s ender:look"
+                }
+            ]
+        }
+    },
+    "remove": {
+        "type": "origins:action_on_callback",
+        "execute_chosen_when_orb": false,
+        "entity_action_lost": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=!end,type=player] at @s run power remove @s ender:look"
+                }
+            ]
+        }
+    }
+}

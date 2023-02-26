@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"void:void",
+		"void:claim",
+		"void:random",
+		"void:consume",
+		"void:cold",
+		"void:zero",
+		"void:armor",
+		"void:lazy",
+		"void:fire",
+		"void:ironhate",
+		"void:tagger"
+	],
+	"icon": "minecraft:structure_block",
+	"impact": 3,
+	"name": "§5§l§oVoidware Virus",
+	"description": "A being infused with the power of the Void."
+}

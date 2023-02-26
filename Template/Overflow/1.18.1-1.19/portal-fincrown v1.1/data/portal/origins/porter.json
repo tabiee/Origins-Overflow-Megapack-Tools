@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"portal:dimdoor",
+		"portal:shield",
+		"portal:blink",
+		"portal:checkpoint",
+		"portal:trap",
+		"portal:escape",
+		"portal:debug",
+		"portal:tagger",
+		"portal:portal"
+	],
+	"icon": "minecraft:structure_block",
+	"impact": 3,
+	"name": "Porter",
+	"description": "As a being made of space you have the ability to travel across long distances using gaps in reality. You create portals for utility, offense and defense."
+}

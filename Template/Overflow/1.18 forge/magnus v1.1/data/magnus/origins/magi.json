@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"magnus:magi/desc",
+		"magnus:magi/nerd",
+		"magnus:king/crown",
+		"magnus:farm/cook"
+	],
+	"icon": "spelled:creative_tome",
+	"impact": 1,
+	"order": 2,
+	"name": "§f§l§oMagician",
+	"description": "You spent years on research to become a practitioner of magic."
+}

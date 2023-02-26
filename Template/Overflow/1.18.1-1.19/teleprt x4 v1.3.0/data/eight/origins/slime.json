@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"eight:slime/jump",
+		"eight:slime/sticky",
+		"eight:slime/fall",
+		"eight:headless/hp"
+	],
+	"icon": "minecraft:slime_ball",
+	"impact": 1,
+	"name": "§a§l§oSlime Monster",
+	"description": "Green, sticky and made of goop."
+}

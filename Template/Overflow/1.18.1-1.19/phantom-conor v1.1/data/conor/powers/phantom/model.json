@@ -1,0 +1,51 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"mod": {
+		"type": "origins:model_color",
+		"red": 0.6,
+		"green": 0.4,
+		"blue": 0.85,
+		"alpha": 0.65
+	},
+	"overlay": {
+		"type": "origins:overlay",
+		"texture": "minecraft:textures/misc/nausea.png",
+		"strength": 0.5,
+		"red": 0.7,
+		"green": 0.1,
+		"blue": 1.0,
+		"draw_mode": "nausea",
+		"draw_phase": "above_hud",
+		"hide_with_hud": false,
+		"visible_in_third_person": false,
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:phantom/phasing_tog"
+		}
+	},
+	"part": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:power_active",
+					"power": "*:phantom/phasing_tog"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 2,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle dust_color_transition 0.427 0.008 0.710 1 0.200 0.004 0.271 ~ ~ ~ 0.5 1 0.5 1 4 normal",
+			"permission_level": 4
+		}
+	}
+}

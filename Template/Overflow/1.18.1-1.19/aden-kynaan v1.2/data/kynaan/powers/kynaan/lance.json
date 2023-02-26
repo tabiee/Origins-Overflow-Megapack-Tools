@@ -1,0 +1,125 @@
+{
+	"name": "§5§nMagic Lance",
+	"description": "You throw a lance of magic. If the lance slays the target, the cooldown is reset.",
+	"type": "origins:multiple",
+	"fire": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:kynaan/lance_cd",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:fire_projectile",
+		"entity_type": "minecraft:trident",
+		"cooldown": 1,
+		"count": 1,
+		"speed": 1.5,
+		"divergence": 1,
+		"tag": "{Tags:[\"lance\"],pickup: 0b}",
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"act": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:kynaan/lance_cd",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:trigger_cooldown",
+						"power": "*:kynaan/lance_cd"
+					},
+					"ticks": 3
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=lance,nbt={inGround: 1b}] at @s run data modify entity @s life set value 1180",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"cd": {
+		"type": "origins:cooldown",
+		"cooldown": 300,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 16
+		}
+	},
+	"reset": {
+		"type": "origins:self_action_on_kill",
+		"damage_condition": {
+            "type": "origins:projectile",
+            "projectile": "trident"
+        },
+        "target_condition": {
+            "type": "origins:command",
+            "command": "execute if entity @e[tag=lance,distance=..5]",
+            "comparison": ">=",
+            "compare_to": 1,
+            "permission_level": 4
+        },
+		"entity_action": {
+			"type": "origins:delay",
+			"action": {
+				"type": "origins:change_resource",
+				"resource": "*:kynaan/lance_cd",
+				"change": -300
+			},
+			"ticks": 6
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"fx": {
+		"type": "origins:action_over_time",
+		"interval": 2,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=lance] at @s run particle glow ~ ~ ~ 0 0 0 0.1 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=lance] at @s run particle soul_fire_flame ~ ~ ~ 0 0 0 0.025 1",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

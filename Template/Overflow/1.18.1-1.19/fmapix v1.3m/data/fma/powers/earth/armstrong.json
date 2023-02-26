@@ -1,0 +1,55 @@
+{
+	"name": "§2§nStone Muscles",
+	"description": "With your impressive strength you knock enemies back a lot further.",
+	"type": "origins:multiple",
+	"str": {
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effects": [
+				{
+					"effect": "strength",
+					"duration": 100,
+					"amplifier": 1,
+					"show_particles": false,
+					"show_icon": false
+				},
+				{
+					"effect": "resistance",
+					"duration": 100,
+					"amplifier": 0,
+					"show_particles": false,
+					"show_icon": false
+				}
+			]
+		}
+	},
+	"knck": {
+		"type": "origins:target_action_on_hit",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[distance=..4,tag=!blam] at @s run tp @s ~ ~ ~ facing entity @p[tag=blam]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:add_velocity",
+						"y": 0.7,
+						"z": -1,
+						"space": "local"
+					},
+					"ticks": 3
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	}
+}

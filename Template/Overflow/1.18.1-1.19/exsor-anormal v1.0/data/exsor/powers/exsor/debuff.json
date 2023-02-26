@@ -1,0 +1,27 @@
+{
+    "name": "§6§nFrail Form",
+    "description": "You're used to relying on your magic, not your combat skills.",
+    "type": "origins:multiple",
+    "hp": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": -6
+        }
+    },
+    "dmg": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "weakness",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+	"type": "nbtcrafting:brewing",
+	"base": {
+		"item": "minecraft:potion",
+		"data": "potion:minecraft_thick"
+	},
+	"ingredient": {
+		"item": "minecraft:glow_berries"
+	},
+	"result": {
+		"item": "minecraft:potion",
+		"data": {
+			"CustomPotionColor": 16771514,
+			"CustomPotionEffects": [{
+				"Duration": 9600,
+				"Id": 24
+			}],
+			"display": {
+				"Name": [{
+						"text": "Potion of Glowing",
+						"italic": false
+					},
+					"nbtcrafting:stringify"
+				]
+			}
+		}
+	}
+}

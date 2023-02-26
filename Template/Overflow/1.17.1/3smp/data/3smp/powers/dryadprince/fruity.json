@@ -1,0 +1,41 @@
+{
+	"name": "§e§nFruity",
+	"description": "No, I meant you eat fruit.",
+    "type": "origins:multiple",
+    "apples": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "inverted": false,
+            "ingredient": {
+                "tag": "3smp:apples"
+            }
+        },
+        "food_modifier": {
+            "operation": "addition",
+            "value": 2
+        },
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": 10.4
+        }
+    },
+    "nonapples": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "inverted": true,
+            "ingredient": {
+                "tag": "3smp:apples"
+            }
+        },
+        "food_modifier": {
+            "operation": "multiply_total",
+            "value": 0.25
+        },
+        "saturation_modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    }
+}

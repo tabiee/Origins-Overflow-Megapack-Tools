@@ -1,0 +1,228 @@
+{
+    "name": "3P",
+    "hidden": true,
+    "type": "origins:multiple",
+    "highlighter": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "spectator"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "sunmoon:indicator_synced",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 60,
+                    "block": true,
+                    "entity": true,
+                    "shape_type": "visual",
+                    "fluid_handling": "any",
+                    "bientity_condition": {
+                        "type": "origins:target_condition",
+                        "condition": {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[tag=!duo]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        }
+                    },
+                    "bientity_action": {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:apply_effect",
+                            "effects": [
+                                {
+                                    "effect": "glowing",
+                                    "duration": 10,
+                                    "amplifier": 0,
+                                    "show_particles": false,
+                                    "show_icon": false
+                                },
+                                {
+                                    "effect": "slowness",
+                                    "duration": 50,
+                                    "amplifier": 0,
+                                    "show_particles": false,
+                                    "show_icon": false
+                                }
+                            ]
+                        }
+                    },
+                    "command_at_hit": "function sunmoon:pointer",
+                    "command_step": 1
+                }
+            ]
+        }
+    },
+    "pull_mess": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "spectator"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "sunmoon:indicator_synced",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 60,
+                    "block": true,
+                    "entity": true,
+                    "shape_type": "visual",
+                    "fluid_handling": "any",
+                    "bientity_condition": {
+                        "type": "origins:target_condition",
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:in_tag",
+                                    "tag": "sunmoon:mess"
+                                },
+                                {
+                                    "type": "origins:command",
+                                    "command": "execute if entity @s[tag=!duo]",
+                                    "comparison": ">=",
+                                    "compare_to": 1
+                                }
+                            ]
+                        }
+                    },
+                    "bientity_action": {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "execute facing entity @e[tag=cont,limit=1] eyes run tp @s ^ ^1 ^1"
+                                }
+                            ]
+                        }
+                    },
+                    "block_action": {
+                        "type": "apoli:execute_command",
+                        "command": "execute as @e[type=#sunmoon:mess,tag=!duo,distance=..1.5] run execute facing entity @e[tag=cont,limit=1] eyes run tp @s ^ ^ ^1"
+                    },
+                    "command_step": 1
+                }
+            ]
+        }
+    },
+    "power": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:food_level",
+                    "comparison": "<",
+                    "compare_to": 20
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "spectator"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "sunmoon:indicator_synced",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:raycast",
+                    "distance": 60,
+                    "block": true,
+                    "entity": false,
+                    "shape_type": "visual",
+                    "fluid_handling": "any",
+                    "block_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "sunmoon:power"
+                    }
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 50,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 60,
+                    "block": true,
+                    "entity": false,
+                    "shape_type": "visual",
+                    "fluid_handling": "any",
+                    "hit_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:area_of_effect",
+                                "radius": 3,
+                                "include_target": true,
+                                "bientity_condition": {
+                                    "type": "origins:target_condition",
+                                    "condition": {
+                                        "type": "origins:command",
+                                        "command": "execute if entity @s[tag=duo]",
+                                        "comparison": ">=",
+                                        "compare_to": 1
+                                    }
+                                },
+                                "bientity_action": {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:and",
+                                        "actions": [
+                                            {
+                                                "type": "origins:feed",
+                                                "food": 1,
+                                                "saturation": 0.5
+                                            },
+                                            {
+                                                "type": "origins:heal",
+                                                "amount": 1
+                                            },
+                                            {
+                                                "type": "origins:execute_command",
+                                                "command": "particle dust 0.000 1.000 0.900 1 ~ ~1 ~ 0.5 0.1 0.5 0 5"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "command_at_hit": "particle dust 0.000 1.000 0.900 1 ~ ~ ~ 0.25 0.25 0.25 0 10",
+                    "command_step": 1
+                }
+            ]
+        }
+    }
+}

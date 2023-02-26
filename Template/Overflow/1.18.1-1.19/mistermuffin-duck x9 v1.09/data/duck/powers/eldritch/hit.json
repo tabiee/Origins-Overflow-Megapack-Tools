@@ -1,0 +1,39 @@
+{
+    "name": "§2§nInconceivable Nature",
+    "description": "Anything that attacks you takes damage and is nauseated by you.",
+    "type": "origins:action_when_hit",
+    "bientity_action": {
+        "type": "origins:actor_action",
+        "action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "nausea",
+                        "duration": 100,
+                        "amplifier": 0,
+                        "show_particles": true,
+                        "show_icon": true
+                    }
+                },
+                {
+                    "type": "origins:damage",
+                    "amount": 1,
+                    "source": {
+                        "name": "thorns",
+                        "unblockable": true
+                    }
+                }
+            ]
+        }
+    },
+    "damage_condition": {
+        "inverted": true,
+        "type": "origins:projectile"
+    },
+    "cooldown": 10,
+    "hud_render": {
+        "should_render": false
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "type": "origins:modify_player_spawn",
+    "dimension": "the_end",
+    "spawn_strategy": "center",
+    "description": "Your natural spawn is in the End Highlands.",
+    "name": "Barren Home",
+    "biome": "end_highlands"
+}

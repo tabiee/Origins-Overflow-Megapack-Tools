@@ -1,0 +1,54 @@
+{
+    "name": "§e§nPhantastic Appetite",
+    "description": "Your physical form is barely being held together, you cannot consume normal food. You have to take the life of another to keep your unstable form together.(Hold Shift while near an entity)",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:command",
+                "command": "execute if entity @e[distance=..3,tag=!rev,type=!armor_stand,type=!item,type=!minecart,type=!chest_minecart,type=!furnace_minecart,type=!hopper_minecart,type=!tnt_minecart,type=!arrow,type=!trident,type=!boat,type=!spectral_arrow,type=!leash_knot,limit=1]",
+                "comparison": ">=",
+                "compare_to": 1,
+                "permission_level": 4
+            },
+            {
+                "type": "origins:sneaking"
+            }
+        ]
+    },
+    "type": "origins:self_action_on_hit",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "effect give @e[distance=..3,tag=!rev,limit=1] wither 1 1 true",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:heal",
+                "amount": 3
+            },
+            {
+                "type": "origins:feed",
+                "food": 3,
+                "saturation": 3
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.strider.death",
+                "volume": 1,
+                "pitch": 1.2
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute at @s anchored eyes run particle minecraft:soul ^ ^ ^1.5 0.5 0.5 0.5 0 3 normal",
+                "permission_level": 4
+            }
+        ]
+    },
+    "cooldown": 10,
+    "hud_render": {
+        "should_render": false
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "§2§nCursed",
+    "description": "No negative food effects.",
+    "type": "origins:effect_immunity",
+    "effects": [
+        "hunger",
+        "poison",
+        "nausea",
+        "blindness"
+    ]
+}

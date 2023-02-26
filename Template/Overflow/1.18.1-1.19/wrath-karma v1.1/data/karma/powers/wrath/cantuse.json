@@ -1,0 +1,38 @@
+{
+	"name": "§4§nCombat Preferences",
+    "description": "You don't use shields or bows, you also refuse to ride horses and boats.",
+	"type": "origins:multiple",
+	"item": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": [
+				{
+					"item": "bow"
+				},
+				{
+					"item": "shield"
+				}
+			]
+		}
+	},
+	"entity": {
+		"type": "origins:prevent_entity_use",
+		"bientity_condition": {
+			"type": "origins:target_condition",
+			"condition": {
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "origins:entity_type",
+						"entity_type": "horse"
+					},
+					{
+						"type": "origins:entity_type",
+						"entity_type": "boat"
+					}
+				]
+			}
+		}
+	}
+}

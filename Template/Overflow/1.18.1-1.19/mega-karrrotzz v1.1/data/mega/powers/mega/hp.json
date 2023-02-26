@@ -1,0 +1,10 @@
+{
+    "name": "§4§nLittle Creature",
+    "description": "Your small size leaves you with fewer health.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": -8
+    }
+}

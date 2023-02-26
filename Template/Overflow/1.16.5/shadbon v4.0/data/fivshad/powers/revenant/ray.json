@@ -1,0 +1,29 @@
+{
+    "name": "§1§nHallowing Blast",
+    "description": "By using your secondary you can fire a beam of black particles that will not only damage but also give anything it touches the wither effect.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "execute anchored eyes run function fivshad:hallow",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.vex.hurt",
+                "volume": 1,
+                "pitch": 1
+            }
+        ]
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": {
+        "key": "secondary",
+        "continuous": true
+    }
+}

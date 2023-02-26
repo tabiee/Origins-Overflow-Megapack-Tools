@@ -1,0 +1,61 @@
+{
+	"name": "§4§nWater Vulnerability",
+	"description": "Damage from water.",
+	"hidden": true,
+  "type": "origins:damage_over_time",
+  "interval": 20,
+  "onset_delay": 1,
+  "damage": 2,
+  "damage_easy": 1,
+  "damage_source": {
+    "name": "hurt_by_water",
+    "unblockable": true,
+    "bypasses_armor": true
+  },
+  "protection_enchantment": "origins:water_protection",
+  "protection_effectiveness": 1.0,
+  "condition": {
+    "type": "origins:and",
+    "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "inverted": true,
+                "equipment_slot": "offhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "inverted": false,
+                    "ingredient": {
+                        "item": "minecraft:big_dripleaf"
+                    }
+                }
+            },
+            {
+                "type": "origins:equipped_item",
+                "inverted": true,
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "inverted": false,
+                    "ingredient": {
+                        "item": "minecraft:big_dripleaf"
+                    }
+                }
+            },
+            {
+                "type": "origins:equipped_item",
+                "inverted": true,
+                "equipment_slot": "head",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "inverted": false,
+                    "ingredient": {
+                        "item": "minecraft:big_dripleaf"
+                    }
+                }
+            },
+      {
+        "type": "origins:in_rain"
+      }
+    ]
+  }
+}

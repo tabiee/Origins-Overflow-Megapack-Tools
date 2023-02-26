@@ -1,0 +1,7 @@
+{
+	"name": "§1§nAura of Frostbite",
+	"description": "Surround yourself with freezing air, slowing and dealing damage to enemies. Additionally, you're able to walk on water.",
+    "type": "origins:toggle",
+    "active_by_default": false,
+    "key": "secondary"
+}

@@ -1,0 +1,28 @@
+{
+	"replace": false,
+	"values": [
+		"soul_sand",
+		"dirt_path",
+		"farmland",
+		"#slabs",
+		"#stairs",
+		"#beds",
+		"cake",
+		"#candle_cakes",
+		"#candles",
+		"#carpets",
+		"#cauldrons",
+		"#fence_gates",
+		"#fences",
+		"#flower_pots",
+		"snow",
+		"#rails",
+		"end_portal_frame",
+		"chest",
+		"ender_chest",
+		"trapped_chest",
+		"enchanting_table",
+		"#trapdoors",
+		"#campfires"
+	]
+}

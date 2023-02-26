@@ -1,0 +1,17 @@
+{
+    "hidden": true,
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "additionalentityattributes:lava_speed",
+            "operation": "multiply_base",
+            "value": 0.5
+        },
+        {
+            "attribute": "additionalentityattributes:lava_visibility",
+            "operation": "multiply_base",
+            "value": 2
+        }
+    ],
+    "update_health": false
+}

@@ -1,0 +1,293 @@
+{
+	"name": "§c§nProdigy",
+	"description": "You are naturally gifted with magic. All potion buff durations and potency for you and people near you are increased.",
+	"type": "origins:multiple",
+	"1": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:speed",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"2": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:haste",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"3": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:strength",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"4": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:jump_boost",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"5": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:regeneration",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"6": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:resistance",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"7": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:fire_resistance",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"8": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:water_breathing",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"9": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:invisibility",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"10": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:night_vision",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"11": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:health_boost",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"12": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:absorption",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"13": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:saturation",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"14": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:luck",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"15": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:slow_falling",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"16": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:conduit_power",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"17": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:dolphins_grace",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"18": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:hero_of_the_village",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"1b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:speed",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"2b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:haste",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"3b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:strength",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"4b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:jump_boost",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"5b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:regeneration",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"6b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:resistance",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"7b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:fire_resistance",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"8b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:water_breathing",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"9b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:invisibility",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"10b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:night_vision",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"11b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:health_boost",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"12b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:absorption",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"13b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:saturation",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"14b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:luck",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"15b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:slow_falling",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"16b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:conduit_power",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"17b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:dolphins_grace",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"18b": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:hero_of_the_village",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	}
+}

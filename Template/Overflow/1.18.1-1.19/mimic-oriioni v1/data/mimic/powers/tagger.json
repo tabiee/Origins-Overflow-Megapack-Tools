@@ -1,0 +1,47 @@
+{
+    "hidden": true,
+    "type": "origins:action_on_callback",
+    "entity_action_chosen": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "tag @s add mimic",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "forceload add 0 0 0 0",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute unless entity @e[tag=inventory] run summon chest_minecart 0 6900 0 {NoGravity:1b,Silent:1b,Invulnerable:1b,Tags:[\"inventory\"]}",
+                "permission_level": 4
+            }
+        ]
+    },
+    "execute_chosen_when_orb": true,
+    "entity_action_lost": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "tag @s remove mimic",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "scale reset @s"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[tag=chest] at @s run fill ~ ~ ~ ~ ~ ~ air replace chest"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "kill @e[tag=chest]"
+            }
+        ]
+    }
+}

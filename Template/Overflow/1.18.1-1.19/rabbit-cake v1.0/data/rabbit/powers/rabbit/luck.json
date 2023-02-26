@@ -1,0 +1,16 @@
+{
+    "name": "§2§nLucky Feet",
+    "description": "Your luck is increased.",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "luck",
+            "duration": 100,
+            "amplifier": 1,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

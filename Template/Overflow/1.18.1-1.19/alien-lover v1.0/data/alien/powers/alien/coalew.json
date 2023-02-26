@@ -1,0 +1,33 @@
+{
+    "name": "§6§nCarbon Allergy",
+    "description": "Whenever coal or charcoal is in your inventory, you feel weak and lose charge.",
+    "condition": {
+        "type": "origins:command",
+        "command": "clear @s #alien:carbon 0",
+        "comparison": ">=",
+        "compare_to": 1,
+        "permission_level": 4
+    },
+    "type": "origins:action_over_time",
+    "interval": 10,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "weakness",
+                    "duration": 20,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "*:alien/fly_nuggets",
+                "change": -2
+            }
+        ]
+    }
+}

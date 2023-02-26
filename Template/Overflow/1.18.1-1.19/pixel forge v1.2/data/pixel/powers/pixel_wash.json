@@ -1,0 +1,36 @@
+{
+    "name": "There's a leak",
+    "description": "Being in water slowly washes away your Pixels.",
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:fluid_height",
+                "fluid": "water",
+                "comparison": ">",
+                "compare_to": 0
+            },
+            {
+                "type": "origins:in_rain"
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:change_resource",
+                "resource": "*:pixel_meter_resource",
+                "change": -1
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "block.amethyst_cluster.break",
+                "volume": 1,
+                "pitch": 2
+            }
+        ]
+    }
+}

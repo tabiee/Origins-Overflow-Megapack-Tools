@@ -1,0 +1,10 @@
+{
+    "name": "§2§nEquipped",
+    "description": "You spawn with an iron chestplate.",
+    "type": "origins:action_on_callback",
+    "entity_action_chosen": {
+        "type": "origins:execute_command",
+        "command": "give @s iron_chestplate"
+    },
+    "execute_chosen_when_orb": true
+}

@@ -1,0 +1,24 @@
+{
+  "impact": 3,
+  "unchoosable": false,
+  "name": "Frog ",
+  "description": "Tsuyu Asui's Quirk",
+  "icon": "minecraft:lily_pad",
+        "unchoosable": true,
+  "order": 17,
+  "powers": [
+    "quirk:frog/web_slinger",
+    "quirk:frog/healpart",
+    "quirk:frog/heal",
+    "quirk:frog/frog_acid",
+    "quirk:frog/camo",
+    "quirk:frog/amphibious",
+    "quirk:frog/amphibious2",
+    "quirk:frog/wet_eyes",
+    "quirk:frog/scurry",
+    "quirk:frog/frog_mobility",
+    "quirk:frog/particles",
+		"quirk:health"
+    
+  ]
+}

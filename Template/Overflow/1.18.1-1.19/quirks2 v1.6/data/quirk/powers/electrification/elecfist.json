@@ -1,0 +1,34 @@
+{
+	"type": "origins:target_action_on_hit",
+	"name": "Electric Fist",
+	"description": "Stun your enemies",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+							{
+								"type": "origins:apply_effect",
+								"effect": {
+									"effect": "slowness",
+									"amplifier": 3,
+									"duration": 40,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+								}
+							},
+		{
+			"type": "origins:execute_command",
+			"permission_level": 4,
+			"command": "execute as @s run particle minecraft:dust 1 1 0.2 0.5 ~ ~1 ~ 1 1 1 0 100"
+		}
+	]
+},
+
+
+	"cooldown": 80,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+		"bar_index": 1
+	}
+}

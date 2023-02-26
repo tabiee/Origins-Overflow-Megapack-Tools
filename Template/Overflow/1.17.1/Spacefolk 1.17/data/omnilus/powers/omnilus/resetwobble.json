@@ -1,0 +1,21 @@
+{
+    "name": "reset size to normal",
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 200,
+    "entity_action": {
+		"type": "origins:and",
+		"actions": [
+		{
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 1 @s",
+                "permission_level": 4
+        },
+		{
+			    "type": "origins:execute_command",
+                "command": "scale set pehkui:width 1 @s",
+                "permission_level": 4
+		}
+		]
+	}
+}

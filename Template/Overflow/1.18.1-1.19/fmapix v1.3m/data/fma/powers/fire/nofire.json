@@ -1,0 +1,9 @@
+{
+    "name": "§2§nTemperature Control",
+    "description": "You put yourself out whenever you catch fire.",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:extinguish"
+    }
+}

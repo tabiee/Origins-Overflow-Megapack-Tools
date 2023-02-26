@@ -1,0 +1,10 @@
+{
+    "name": "§6§nSmall",
+    "description": "You have 7 hearts due to being tiny.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": -6
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "§5§nCopper-skinned",
+    "description": "You have 30 hearts, as well as immunity to fire and hunger, you also have passive regeneration and the ability to see in lava.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": 40
+    }
+}

@@ -1,0 +1,204 @@
+{
+    "name": "Sonic Scream",
+    "description": "High-pitched screech that damages everything around you as long as you have stamina for it.",
+    "type": "origins:multiple",
+    "dur": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 400,
+        "start_value": 400,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 6,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:scream_dur",
+                "comparison": "!=",
+                "compare_to": 400
+            }
+        }
+    },
+    "use": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:scream_dur",
+                    "comparison": "!=",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:block_in_radius",
+                    "block_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "dampens_vibrations"
+                    },
+                    "radius": 3,
+                    "shape": "cube",
+                    "comparison": ">=",
+                    "compare_to": 9
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:scream_dur",
+                    "change": -1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:scream_cd"
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "primary",
+            "continuous": true
+        }
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "act": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:scream_dur",
+                    "comparison": "!=",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:scream_cd",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute anchored eyes positioned ^ ^ ^0.3 anchored feet run function echo:ray/start_ray"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:area_of_effect",
+                        "radius": 20,
+                        "bientity_condition": {
+                            "type": "origins:target_condition",
+                            "condition": {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:living"
+                                    },
+                                    {
+                                        "type": "origins:command",
+                                        "command": "execute if entity @s[tag=hitby]",
+                                        "comparison": ">=",
+                                        "compare_to": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "bientity_action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:damage",
+                                    "amount": 5,
+                                    "source": {
+                                        "name": "even_more_magic",
+                                        "bypasses_armor": true,
+                                        "unblockable": true
+                                    }
+                                },
+                                {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:and",
+                                        "actions": [
+                                            {
+                                                "type": "origins:execute_command",
+                                                "command": "particle electric_spark ~ ~0.5 ~ 0.25 0.25 0.25 0 3"
+                                            },
+                                            {
+                                                "type": "origins:add_velocity",
+                                                "y": 0.25,
+                                                "space": "world",
+                                                "client": true,
+                                                "server": true
+                                            },
+                                            {
+                                                "type": "origins:apply_effect",
+                                                "effect": {
+                                                    "effect": "blindness",
+                                                    "duration": 20,
+                                                    "amplifier": 0,
+                                                    "show_particles": false,
+                                                    "show_icon": true
+                                                }
+                                            },
+                                            {
+                                                "type": "origins:delay",
+                                                "action": {
+                                                    "type": "origins:execute_command",
+                                                    "command": "tag @s remove hitby"
+                                                },
+                                                "ticks": 2
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "ticks": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound block.sculk_shrieker.shriek master @a[distance=..10] ~ ~ ~ 0.3 1.8"
+                }
+            ]
+        }
+    },
+    "regain": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:scream_cd",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:scream_dur",
+            "change": 1,
+            "operation": "add"
+        }
+    }
+}

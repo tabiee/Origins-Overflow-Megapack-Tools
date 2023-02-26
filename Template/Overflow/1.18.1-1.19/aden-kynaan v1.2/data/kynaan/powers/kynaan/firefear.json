@@ -1,0 +1,12 @@
+{
+    "name": "§4§nFear of Fire",
+    "description": "You take additional damage from fire and lava. You don't receive some of your Gift of Magic buffs in hot biomes.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:fire"
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.25
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "§2§nImmune System",
+    "description": "Due to living in the nether you have grown an immunity to poison and wither.",
+    "type": "origins:effect_immunity",
+    "effects": [
+        "poison",
+        "wither"
+    ]
+}

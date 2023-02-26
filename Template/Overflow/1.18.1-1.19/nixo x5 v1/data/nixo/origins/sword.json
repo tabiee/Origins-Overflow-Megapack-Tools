@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"nixo:sword/blast",
+		"nixo:sword/jumps",
+		"nixo:sword/dual",
+		"nixo:sword/shields",
+		"nixo:sword/notdual",
+		"nixo:sword/death"
+	],
+	"icon": "minecraft:iron_sword",
+	"impact": 3,
+	"name": "§0§l§oBlack Swordsman§r",
+	"description": "Master of blades, agile and deadly."
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Cold Touch",
+    "description": "Attacking with metal items deals extra damage.",
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "spacefolk:iron"
+            }
+        }
+    },
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+        "type": "origins:damage",
+        "amount": 2,
+        "source": {
+            "name": "generic",
+            "bypasses_armor": true,
+            "unblockable": true
+        }
+    },
+    "cooldown": 5
+}

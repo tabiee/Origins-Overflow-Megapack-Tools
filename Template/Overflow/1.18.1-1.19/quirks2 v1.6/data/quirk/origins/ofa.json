@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"quirk:ofa/cowlingparticles",
+		"quirk:ofa/cowlingpower",
+		"quirk:ofa/cowlingpower2",
+		"quirk:ofa/cowlingpower3",
+		"quirk:ofa/detroit_smash",
+		"quirk:ofa/fall_immune",
+		"quirk:ofa/ground_pound",
+		"quirk:ofa/super_leap",
+		"quirk:ofa/ussmash",
+		"quirk:health"
+	],
+	"icon": "minecraft:emerald",
+        "unchoosable": true,
+	"order": 10,
+	"impact": 3,
+	"name": "One For All",
+	"description": "Izuku Midoriya's Quirk"
+}

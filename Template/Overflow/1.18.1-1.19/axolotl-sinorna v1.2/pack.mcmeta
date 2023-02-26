@@ -1,0 +1,9 @@
+{
+  "pack": {
+    "pack_format": 10,
+    "name": "Stuff",
+	"version": "1.19.2",
+    "description": "Stuff",
+	"authors": "Meightaboot on Fiverr, Tabee#5318"
+  }
+}

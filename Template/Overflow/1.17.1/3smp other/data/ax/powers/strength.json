@@ -1,0 +1,38 @@
+{
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 1.0
+    },
+    "damage_condition": {
+        "type": "origins:attacker",
+        "entity_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:offset",
+                        "condition": {
+                            "type": "origins:block",
+                            "block": "minecraft:water"
+                        },
+                        "y": 1
+                    }
+                },
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:water"
+                    }
+                },
+				{
+					"type": "origins:in_rain"
+				}
+            ]
+        }
+    },
+	"name": "Aquatic Strength",
+	"description": "You are stronger in water."
+}

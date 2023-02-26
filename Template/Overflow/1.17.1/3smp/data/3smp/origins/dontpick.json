@@ -1,0 +1,21 @@
+{
+    "impact": 3,
+    "unchoosable": false,
+    "name": "§f§l§oCursed",
+    "description": "A being cursed by the angels to make their life as painful as possible. Maybe if a way for the curse to be lifted was found then things could change, but otherwise this origin will cause a lot of headaches for the player.",
+    "powers": [
+        "3smp:cursed/fragile",
+        "3smp:cursed/light_armor",
+        "3smp:cursed/shulker_inventory",
+        "3smp:cursed/vegetarian",
+        "3smp:cursed/fresh_air",
+        "3smp:cursed/water_vulnerability",
+        "3smp:cursed/more_exhaustion",
+        "3smp:cursed/bad_sleep",
+        "3smp:cursed/nerf_exp",
+        "3smp:cursed/slow_mining"
+    ],
+    "loading_priority": 4,
+    "order": 1,
+    "icon": "minecraft:barrier"
+}

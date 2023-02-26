@@ -1,0 +1,22 @@
+{
+	"values": [
+		"minecraft:blaze",
+		"minecraft:drowned",
+		"minecraft:evoker",
+		"minecraft:ghast",
+		"minecraft:hoglin",
+		"minecraft:husk",
+		"minecraft:magma_cube",
+		"minecraft:phantom",
+		"minecraft:piglin",
+		"minecraft:piglin_brute",
+		"minecraft:skeleton",
+		"minecraft:stray",
+		"minecraft:wither",
+		"minecraft:wither_skeleton",
+		"minecraft:zoglin",
+		"minecraft:zombie",
+		"minecraft:zombified_piglin",
+		"minecraft:zombie_villager"
+	]
+}

@@ -1,0 +1,16 @@
+{
+    "powers": [
+        "origins:phasing",
+        "betterhuman:burypunch",
+        "betterhuman:slowblind",
+        "origins:phantomize",
+        "betterhuman:slowblind2"
+    ],
+    "icon": "minecraft:coarse_dirt",
+    "order": 2012,
+    "impact": 3,
+    "name": "Buried",
+    "description": "You can bury people at will.",
+    "loading_priority": 100,
+    "unchoosable": true
+}

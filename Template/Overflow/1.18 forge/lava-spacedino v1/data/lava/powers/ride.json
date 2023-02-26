@@ -1,0 +1,15 @@
+{
+    "name": "§0§nHeavy Haul",
+    "description": "You are too heavy to ride vehicles and animals, you also can't use an elytra.",
+    "type": "origins:multiple",
+    "rd": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:dismount"
+        }
+    },
+    "ely": {
+        "type": "origins:prevent_elytra_flight"
+    }
+}

@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"noct:invis",
+		"noct:tp",
+		"noct:undeath",
+		"noct:zombify",
+		"noct:cure",
+		"noct:irons",
+		"noct:sleep",
+		"noct:recipes",
+		"noct:hp",
+		"origins:light_armor",
+		"noct:seevex"
+	],
+	"icon": "minecraft:tripwire_hook",
+	"impact": 3,
+	"name": "§c§l§oNoctine Larcener",
+	"description": "Being of undeath."
+}

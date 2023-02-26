@@ -1,0 +1,51 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"resize": {
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:fluid_height",
+					"fluid": "water",
+					"comparison": ">=",
+					"compare_to": 0.4
+				},
+				{
+					"type": "origins:predicate",
+					"predicate": "kraken:weather/thunder"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"falling_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:kraken/size_bit",
+					"change": -1
+				}
+			]
+		}
+	},
+	"air": {
+        "condition": {
+            "type": "origins:air",
+            "comparison": "<=",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:damage",
+            "amount": 1,
+            "source": {
+                "name": "no_water_for_gills",
+                "bypasses_armor": true,
+                "unblockable": true
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "name": "Dark Vision",
+    "description": "You're adjusted to the dark.",
+    "type": "origins:night_vision",
+    "strength": 0.5
+}

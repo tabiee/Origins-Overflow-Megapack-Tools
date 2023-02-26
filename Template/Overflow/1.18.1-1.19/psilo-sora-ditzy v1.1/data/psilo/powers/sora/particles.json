@@ -1,0 +1,52 @@
+{
+	"name": "§e§nStarchild",
+	"description": "The ikimono origin emits light sparkles in the colors cyan and orange.",
+	"hidden": false,
+	"type": "origins:multiple",
+	"fx1": {
+		"type": "origins:action_over_time",
+		"interval": 3,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle glow ~ ~ ~ 0.4 0.7 0.4 0 1",
+			"permission_level": 4
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:invisible"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				}
+			]
+		}
+	},
+	"fx2": {
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle wax_on ~ ~ ~ 0.4 0.7 0.4 0 1",
+			"permission_level": 4
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:invisible"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				}
+			]
+		}
+	}
+}

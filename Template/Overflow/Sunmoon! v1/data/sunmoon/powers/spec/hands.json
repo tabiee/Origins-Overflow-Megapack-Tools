@@ -1,0 +1,48 @@
+{
+	"name": "§c§n§lAuthorized Interaction§r",
+	"description": "If not in sync, you are not permitted to affect or use blocks in any way.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/star.png",
+			"text": "Drains power slightly when active."
+		}
+	],
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:gamemode",
+				"gamemode": "survival"
+			},
+			{
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "origins:resource",
+						"resource": "sunmoon:spec/tog-eyeshands_deltog",
+						"comparison": "==",
+						"compare_to": 0
+					},
+					{
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:spec/tog-eyeshands_deltog",
+								"comparison": "==",
+								"compare_to": 1
+							},
+							{
+								"type": "origins:resource",
+								"resource": "sunmoon:indicator_synced",
+								"comparison": "==",
+								"compare_to": 0
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"type": "origins:prevent_block_selection"
+}

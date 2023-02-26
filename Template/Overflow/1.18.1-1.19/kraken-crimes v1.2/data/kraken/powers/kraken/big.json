@@ -1,0 +1,377 @@
+{
+	"name": "§e§nHuge Form",
+	"description": "Only accessed while thundering or in water. Gain tons of powerful effects and immunity to fire and lightning. Allows you to use Lightning Strike.",
+	"type": "origins:multiple",
+	"hp": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:fluid_height",
+							"fluid": "water",
+							"comparison": ">=",
+							"compare_to": 0.4
+						},
+						{
+							"type": "origins:predicate",
+							"predicate": "kraken:weather/thunder"
+						}
+					]
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:kraken/size_bit",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:in_block",
+					"block_condition": {
+						"type": "origins:height",
+						"comparison": ">",
+						"compare_to": 30
+					}
+				}
+			]
+		},
+		"type": "origins:conditioned_attribute",
+		"modifiers": [
+			{
+				"attribute": "generic.max_health",
+				"operation": "addition",
+				"value": 10
+			}
+		],
+		"tick_rate": 5
+	},
+	"effects": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:fluid_height",
+							"fluid": "water",
+							"comparison": ">=",
+							"compare_to": 0.4
+						},
+						{
+							"type": "origins:predicate",
+							"predicate": "kraken:weather/thunder"
+						}
+					]
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:kraken/size_bit",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:in_block",
+				"block_condition": {
+					"type": "origins:height",
+					"comparison": "<=",
+					"compare_to": 30
+				}
+			},
+			"if_action": {
+				"type": "origins:apply_effect",
+				"effects": [
+					{
+						"effect": "strength",
+						"duration": 100,
+						"amplifier": 9,
+						"show_particles": false,
+						"show_icon": true
+					},
+					{
+						"effect": "resistance",
+						"duration": 100,
+						"amplifier": 3,
+						"show_particles": false,
+						"show_icon": true
+					},
+					{
+						"effect": "regeneration",
+						"duration": 100,
+						"amplifier": 6,
+						"show_particles": false,
+						"show_icon": true
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:apply_effect",
+				"effects": [
+					{
+						"effect": "strength",
+						"duration": 100,
+						"amplifier": 4,
+						"show_particles": false,
+						"show_icon": true
+					},
+					{
+						"effect": "resistance",
+						"duration": 100,
+						"amplifier": 1,
+						"show_particles": false,
+						"show_icon": true
+					},
+					{
+						"effect": "regeneration",
+						"duration": 100,
+						"amplifier": 2,
+						"show_particles": false,
+						"show_icon": true
+					}
+				]
+			}
+		}
+	},
+	"hp2": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:fluid_height",
+							"fluid": "water",
+							"comparison": ">=",
+							"compare_to": 0.4
+						},
+						{
+							"type": "origins:predicate",
+							"predicate": "kraken:weather/thunder"
+						}
+					]
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:kraken/size_bit",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:in_block",
+					"block_condition": {
+						"type": "origins:height",
+						"comparison": "<=",
+						"compare_to": 30
+					}
+				}
+			]
+		},
+		"type": "origins:conditioned_attribute",
+		"modifiers": [
+			{
+				"attribute": "generic.max_health",
+				"operation": "addition",
+				"value": 40
+			}
+		],
+		"tick_rate": 5
+	},
+	"size": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:fluid_height",
+							"fluid": "water",
+							"comparison": ">=",
+							"compare_to": 0.4
+						},
+						{
+							"type": "origins:predicate",
+							"predicate": "kraken:weather/thunder"
+						}
+					]
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:kraken/size_bit",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale reset @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "function kraken:big",
+						"permission_level": 4
+					},
+					"ticks": 2
+				}
+			]
+		}
+	},
+	"immune": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:fluid_height",
+							"fluid": "water",
+							"comparison": ">=",
+							"compare_to": 0.4
+						},
+						{
+							"type": "origins:predicate",
+							"predicate": "kraken:weather/thunder"
+						}
+					]
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:kraken/size_bit",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:fire"
+				},
+				{
+					"type": "origins:name",
+					"name": "lightningBolt"
+				},
+				{
+					"type": "origins:name",
+					"name": "lightningBolt.player"
+				}
+			]
+		}
+	},
+	"tooluse": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:fluid_height",
+							"fluid": "water",
+							"comparison": ">=",
+							"compare_to": 0.4
+						},
+						{
+							"type": "origins:predicate",
+							"predicate": "kraken:weather/thunder"
+						}
+					]
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:kraken/size_bit",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "mainhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"tag": "kraken:tools"
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "offhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"tag": "kraken:tools"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "generic.attack_speed",
+			"operation": "addition",
+			"value": -1000
+		},
+		"tick_rate": 5
+	},
+	"rightclick": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:fluid_height",
+							"fluid": "water",
+							"comparison": ">=",
+							"compare_to": 0.4
+						},
+						{
+							"type": "origins:predicate",
+							"predicate": "kraken:weather/thunder"
+						}
+					]
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:kraken/size_bit",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "kraken:right"
+			}
+		}
+	}
+}

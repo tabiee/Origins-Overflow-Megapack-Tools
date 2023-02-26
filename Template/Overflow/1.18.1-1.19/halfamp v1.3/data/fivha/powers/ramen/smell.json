@@ -1,0 +1,11 @@
+{
+    "name": "Strong Scent",
+    "description": "Due to the delicious scent that you give off mobs can smell you from farther away.",
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "data merge @e[type=!player] {Attributes:[{Name:generic.followRange,Base:64}]}",
+        "permission_level": 4
+    }
+}

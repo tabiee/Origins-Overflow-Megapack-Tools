@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"vamp:vamp/invis",
+		"vamp:vamp/see",
+		"vamp:vamp/dmg",
+		"vamp:vamp/night",
+		"vamp:vamp/hp",
+		"vamp:vamp/eat",
+		"vamp:vamp/sleep",
+		"vamp:vamp/iron",
+		"vamp:vamp/sun",
+		"vamp:vamp/noeating"
+	],
+	"icon": "minecraft:redstone",
+	"impact": 3,
+	"name": "§c§l§oVampire",
+	"description": "Creature that feeds on the blood of living things."
+}

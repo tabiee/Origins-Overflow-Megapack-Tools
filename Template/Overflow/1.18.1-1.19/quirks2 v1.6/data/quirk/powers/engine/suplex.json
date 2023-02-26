@@ -1,0 +1,123 @@
+{
+  "type": "origins:multiple",
+  "suplex1": {
+    "type": "origins:self_action_on_hit",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:add_velocity",
+          "y": 2,
+          "space": "world",
+          "set": true
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "execute at @s run playsound minecraft:entity.illusioner.cast_spell master @a[distance=..4] ~ ~ ~ 1 1.4",
+          "permission_level": 4
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "effect give @s resistance 3 10 true",
+          "permission_level": 4
+        },
+        {
+          "type": "origins:delay",
+          "ticks": 15,
+          "action": {
+            "type": "origins:add_velocity",
+            "y": -3,
+            "space": "world",
+            "set": true
+          }
+        },
+        {
+          "type": "origins:delay",
+          "ticks": 22,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "summon firework_rocket ~ ~1 ~ {LifeTime:0.1,FireworksItem:{id:firework_rocket,Count:6,tag:{Fireworks:{Flight:0.1,Explosions:[{Type:4,Flicker:0,Trail:0,Colors:[I;1973019],FadeColors:[I;1973019]},{Type:4,Flicker:0,Trail:0,Colors:[I;1973019],FadeColors:[I;1973019]},{Type:4,Flicker:0,Trail:0,Colors:[I;1973019],FadeColors:[I;1973019]},{Type:4,Flicker:0,Trail:0,Colors:[I;1973019],FadeColors:[I;1973019]},{Type:4,Flicker:0,Trail:0,Colors:[I;1973019],FadeColors:[I;1973019]},{Type:4,Flicker:0,Trail:0,Colors:[I;1973019],FadeColors:[I;1973019]},{Type:4,Flicker:0,Trail:0,Colors:[I;1973019],FadeColors:[I;1973019]},{Type:4,Flicker:0,Trail:0,Colors:[I;1973019],FadeColors:[I;1973019]}]}}}}",
+            "permission_level": 4
+          }
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:air"
+            }
+            }
+            },
+        {
+          "type": "origins:sneaking"
+        },
+        {
+          "type": "origins:on_block"
+        }
+      ]
+    },
+    "cooldown": 350,
+    "hud_render": {
+      "should_render": true,
+      "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+      "bar_index": 16
+    }
+  },
+  "suplex2": {
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:add_velocity",
+          "y": 2,
+          "space": "local",
+          "set": true
+        },
+        {
+          "type": "origins:delay",
+          "ticks": 15,
+          "action": {
+            "type": "origins:add_velocity",
+            "y": -3,
+            "space": "local",
+            "set": true
+          }
+        }
+      ]
+    },
+
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:air"
+            }
+          }
+        },
+        {
+          "type": "origins:sneaking"
+        },
+        {
+          "type": "origins:on_block"
+        }
+      ]
+    },
+    "cooldown": 350
+  },
+  "hidden": false,
+  "name": "Suplex",
+  "description": "You jump into the air with you opponent et smash to the ground in a blast [shift+hit (empty hand)]"
+}

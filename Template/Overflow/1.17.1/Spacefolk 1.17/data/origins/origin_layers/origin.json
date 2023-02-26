@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "origins": [
+        "omnilus:omnilus",
+		"protogen:protogen"
+    ],
+    "auto_choose": false,
+    "allow_random": false,
+    "enabled": true,
+    "allow_random_unchoosable": false
+}

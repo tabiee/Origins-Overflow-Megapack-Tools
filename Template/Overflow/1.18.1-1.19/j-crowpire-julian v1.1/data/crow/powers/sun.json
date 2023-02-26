@@ -1,0 +1,56 @@
+{
+    "name": "§6§nYour Banes",
+    "description": "As a vampire, you burn in sunlight unless wearing protective gear.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:exposed_to_sun"
+            },
+            {
+                "inverted": true,
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "head",
+                        "item_condition": {
+                            "inverted": true,
+                            "type": "origins:empty"
+                        }
+                    },
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "chest",
+                        "item_condition": {
+                            "inverted": true,
+                            "type": "origins:empty"
+                        }
+                    },
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "legs",
+                        "item_condition": {
+                            "inverted": true,
+                            "type": "origins:empty"
+                        }
+                    },
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "feet",
+                        "item_condition": {
+                            "inverted": true,
+                            "type": "origins:empty"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:set_on_fire",
+        "duration": 1
+    }
+}

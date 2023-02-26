@@ -1,0 +1,12 @@
+{
+    "name": "Light Pollution",
+    "description": "You can only sleep above y=90.",
+    "type": "origins:prevent_sleep",
+    "block_condition": {
+        "type": "origins:height",
+        "comparison": "<",
+        "compare_to": 89
+    },
+    "message": "You need to go higher! (y=90)",
+    "set_spawn_point": true
+}

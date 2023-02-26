@@ -1,0 +1,9 @@
+{
+    "name": "Body Builder",
+    "description": "You take 35% less damage.",
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": -0.35
+    }
+}

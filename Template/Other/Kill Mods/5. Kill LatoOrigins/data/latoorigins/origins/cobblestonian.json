@@ -1,0 +1,16 @@
+{
+    "powers": [
+        "latoorigins:cobblestone_skin",
+        "latoorigins:movement_reduction",
+        "latoorigins:rocky_eater",
+        "latoorigins:heavy_body",
+        "latoorigins:pickaxeable",
+        "latoorigins:fall",
+        "origins:no_shield"
+    ],
+    "icon": "cobblestone",
+    "order": 1,
+    "impact": 3,
+    "loading_priority": 2147483647,
+    "unchoosable": true
+}

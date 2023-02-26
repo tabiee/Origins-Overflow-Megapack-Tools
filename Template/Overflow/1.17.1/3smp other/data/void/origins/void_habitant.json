@@ -1,0 +1,32 @@
+{
+	"powers": [
+		"void:flying",
+		"void:flying2",
+		"void:flying3",
+		"void:boost",
+		"void:wormhole",
+		"void:vision",
+		"void:vision2",
+		"void:no_sleep",
+		"void:bottom_feeder",
+		"void:bottom_feeder2",
+		"void:bottom_feeder3",
+		"void:bottom_feeder4",
+		"void:nutrients",
+		"void:home_tp",
+		"void:predators",
+		"void:weak",
+		"void:black_skin",
+		"void:bedrock",
+		"void:color",
+		"void:slowfall",
+		"void:particles",
+		"void:height",
+		"void:breathe"
+	],
+	"icon": "minecraft:black_concrete",
+	"order": 10,
+	"impact": 3,
+	"name": "§6§l§oVoidwalker",
+	"description": "You are a being who was born with abilities to survive in the void, but wondered a bit to far from your home land and ended up in a strange place"
+}

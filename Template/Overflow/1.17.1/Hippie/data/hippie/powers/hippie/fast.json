@@ -1,0 +1,10 @@
+{
+    "name": "§6§nSteady Speed",
+	"description": "You can't sprint without getting disoriented, but you're fast regardless.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.movement_speed",
+        "operation": "addition",
+        "value": 0.05
+    }
+}

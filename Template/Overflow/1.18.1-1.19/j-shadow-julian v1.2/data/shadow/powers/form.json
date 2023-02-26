@@ -1,0 +1,28 @@
+{
+    "name": "§b§nMalleable Form",
+    "description": "You don’t take fall damage, but you hunger faster and require more food to sustain your form.",
+    "type": "origins:multiple",
+    "fall": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                }
+            ]
+        }
+    },
+    "hungy": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.5
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+	"powers": [
+	    "fivshad:adia/blastem",
+		"fivshad:adia/radi",
+		"fivshad:adia/ichor",
+		"fivshad:adia/totem",
+		"fivshad:adia/tagger",
+		"fivshad:adia/food",
+		"fivshad:adia/deltog"
+	],
+	"icon": "minecraft:shroomlight",
+	"impact": 2,
+	"name": "§6§l§oAdia's Vessel",
+	"description": "You were born in the poor slums of the holy city of Fadana. As a young boy you were chosen by the motherly goddess of Medicine, Poison, Mercy, and Vengeance Adia to be their vassel. Their soul has been intertwined with their own and you house their mind, and powers until they recover to return to their original state, you have been tasked by them to reunite their divided church in their name."
+}

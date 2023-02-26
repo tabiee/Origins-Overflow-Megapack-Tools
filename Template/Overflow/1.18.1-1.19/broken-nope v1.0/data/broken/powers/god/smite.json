@@ -1,0 +1,36 @@
+{
+    "name": "Smite",
+    "description": "You are able to strike your enemies with lightning when you hit them, from any distance.",
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "summon lightning_bolt ~ ~ ~",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle electric_spark ~ ~ ~ 1.5 0.5 1.5 0.1 50",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle glow ~ ~ ~ 1.5 0.5 1.5 0.1 50",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:item.trident.thunder",
+                "volume": 1,
+                "pitch": 1.5
+            }
+        ]
+    },
+    "cooldown": 600,
+    "hud_render": {
+        "should_render": true,
+        "bar_index": 2
+    }
+}

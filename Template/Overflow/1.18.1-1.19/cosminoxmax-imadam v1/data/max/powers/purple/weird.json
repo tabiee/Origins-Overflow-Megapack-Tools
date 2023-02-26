@@ -1,0 +1,213 @@
+{
+    "name": "§5§nTurned Around§r",
+    "description": "Shift and flip a player's motion, perspective, and even their gravity temporarily.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "*:select_mode",
+                "comparison": "==",
+                "compare_to": 5
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "apoli:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle witch ~ ~0.25 ~ 2 0 2 0 300"
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.shulker.ambient",
+                "volume": 0.5,
+                "pitch": 2
+            },
+            {
+                "type": "apoli:area_of_effect",
+                "radius": 5,
+                "include_target": false,
+                "bientity_condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:entity_type",
+                        "entity_type": "player"
+                    }
+                },
+                "bientity_action": {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0 10"
+                            },
+                            {
+                                "type": "origins:choice",
+                                "actions": [
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:execute_command",
+                                            "command": "effect give @s blindness 1 0"
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:add_velocity",
+                                            "y": 0.05,
+                                            "z": 1.9,
+                                            "space": "world",
+                                            "client": true,
+                                            "server": true,
+                                            "set": true
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:add_velocity",
+                                            "y": 0.05,
+                                            "z": -1.3,
+                                            "space": "world",
+                                            "client": true,
+                                            "server": true,
+                                            "set": true
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:add_velocity",
+                                            "x": 1.4,
+                                            "y": 0.1,
+                                            "space": "world",
+                                            "client": true,
+                                            "server": true,
+                                            "set": true
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:add_velocity",
+                                            "x": -0.35,
+                                            "y": 0.1,
+                                            "space": "world",
+                                            "client": true,
+                                            "server": true,
+                                            "set": true
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:add_velocity",
+                                            "x": -0.35,
+                                            "y": 0.05,
+                                            "z": 1.9,
+                                            "space": "world",
+                                            "client": true,
+                                            "server": true,
+                                            "set": true
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:add_velocity",
+                                            "x": 1.4,
+                                            "y": 0.05,
+                                            "z": -0.3,
+                                            "space": "world",
+                                            "client": true,
+                                            "server": true,
+                                            "set": true
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:apply_effect",
+                                            "effect": {
+                                                "effect": "levitation",
+                                                "duration": 10,
+                                                "amplifier": 10,
+                                                "show_particles": false,
+                                                "show_icon": false
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:execute_command",
+                                            "command": "tp @s ~ ~ ~ 45 0"
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:execute_command",
+                                            "command": "tp @s ~ ~ ~ -45 0"
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:execute_command",
+                                            "command": "tp @s ~ ~ ~ -180 0"
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:execute_command",
+                                            "command": "tp @s ~ ~ ~ 90 45"
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:execute_command",
+                                            "command": "tp @s ~ ~ ~ -90 -45"
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:execute_command",
+                                            "command": "tp @s ~ ~ ~ -135 90"
+                                        }
+                                    },
+                                    {
+                                        "weight": 1,
+                                        "element": {
+                                            "type": "origins:execute_command",
+                                            "command": "tp @s ~ ~ ~ 135 -45"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "cooldown": 15,
+    "key": {
+        "key": "key.spectatorOutlines",
+        "continuous": true
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+        "bar_index": 7
+    }
+}

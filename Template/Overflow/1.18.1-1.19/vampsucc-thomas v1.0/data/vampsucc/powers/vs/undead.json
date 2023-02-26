@@ -1,0 +1,37 @@
+{
+    "name": "§e§nUndeath",
+    "description": "You do not breathe nor eat food, you cannot regain health from saturation.",
+    "type": "origins:multiple",
+    "hero": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "hero_of_the_village",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        }
+    },
+    "breathe": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:gain_air",
+            "value": 10
+        }
+    },
+    "cancel": {
+        "type": "origins:disable_regen"
+    },
+    "exh": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

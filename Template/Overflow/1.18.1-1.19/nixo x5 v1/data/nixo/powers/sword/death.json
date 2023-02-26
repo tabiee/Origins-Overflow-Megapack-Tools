@@ -1,0 +1,105 @@
+{
+    "name": "§4§nFear of Death§r",
+    "description": "Whenever a player dies near you, you feel sick for a short time.",
+    "type": "origins:multiple",
+    "trigger": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:sword/death_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:area_of_effect",
+            "radius": 10,
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:health",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:entity_type",
+                            "entity_type": "player"
+                        }
+                    ]
+                }
+            },
+            "bientity_action": {
+                "type": "origins:actor_action",
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:trigger_cooldown",
+                            "power": "*:sword/death_cd"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "particle soul ~ ~0.5 ~ 0.5 0.5 0.5 0 15"
+                        },
+                        {
+                            "type": "origins:play_sound",
+                            "sound": "entity.vex.ambient",
+                            "volume": 10,
+                            "pitch": 0.5
+                        },
+                        {
+                            "type": "origins:apply_effect",
+                            "effects": [
+                                {
+                                    "effect": "slowness",
+                                    "duration": 100,
+                                    "amplifier": 0,
+                                    "show_particles": false,
+                                    "show_icon": true
+                                },
+                                {
+                                    "effect": "nausea",
+                                    "duration": 100,
+                                    "amplifier": 0,
+                                    "show_particles": false,
+                                    "show_icon": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "hp": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:sword/death_cd",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": -4
+        },
+        "tick_rate": 1,
+        "update_health": true
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 100,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

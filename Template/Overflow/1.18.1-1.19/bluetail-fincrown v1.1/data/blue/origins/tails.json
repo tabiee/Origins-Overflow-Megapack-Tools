@@ -1,0 +1,26 @@
+{
+	"powers": [
+		"blue:tails",
+		"blue:limit",
+		"blue:desc1",
+		"blue:desc2",
+		"blue:desc3",
+		"blue:desc4",
+		"blue:desc5",
+		"blue:fire",
+		"blue:fall",
+		"blue:regen",
+		"blue:totems",
+		"blue:one",
+		"blue:three",
+		"blue:four",
+		"blue:five",
+		"blue:grant",
+		"blue:fx",
+		"blue:tagger"
+	],
+	"icon": "minecraft:soul_lantern",
+	"impact": 3,
+	"name": "§b§l§oBluefire Five-Tails",
+	"description": "Being a modified mythical being each one of your tails have been changed to suit the elements of soul fire, allowing you to manipulate a certain level of cremation for every tail."
+}

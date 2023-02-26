@@ -1,0 +1,65 @@
+{
+    "name": "§5§nShadow Form",
+    "description": "You can turn invisible and climb blocks, but cant phase through blocks.",
+    "type": "origins:multiple",
+    "invis": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:fears/shad_tap"
+        },
+        "type": "origins:invisibility",
+        "render_armor": false
+    },
+    "climbing": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:collided_horizontally"
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fears/shad_tip"
+                }
+            ]
+        },
+        "type": "origins:climbing",
+        "allow_holding": true,
+        "hold_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": 0.01,
+                            "offset_y": 0,
+                            "offset_z": 0.01
+                        },
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": -0.01,
+                            "offset_y": 0,
+                            "offset_z": -0.01
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fears/shad_tip"
+                }
+            ]
+        }
+    },
+    "tip": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": "secondary"
+    },
+    "tap": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": "primary"
+    }
+}

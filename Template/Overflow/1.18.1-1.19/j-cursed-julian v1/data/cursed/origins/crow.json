@@ -1,0 +1,25 @@
+{
+	"powers": [
+		"cursed:beak",
+		"cursed:esc",
+		"cursed:elytra",
+		"cursed:dmg",
+		"cursed:night",
+		"cursed:nv",
+		"cursed:fire",
+		"cursed:fall",
+		"cursed:nether",
+		"cursed:fx",
+		"cursed:size",
+		"cursed:carnivore",
+		"cursed:sleep",
+		"cursed:celling",
+		"cursed:hp",
+		"cursed:water",
+		"cursed:scare"
+	],
+	"icon": "minecraft:black_dye",
+	"impact": 3,
+	"name": "§8§l§oCursed Crow",
+	"description": "Wings and feathers."
+}

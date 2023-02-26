@@ -1,0 +1,13 @@
+{
+	"name": "§6§nFlammable",
+	"description": "Fire hurts twice as much.",
+  "type": "origins:modify_damage_taken",
+  "modifier": {
+	"name": "Origin modifier",
+	"operation": "multiply_base",
+	"value": 1
+  },
+  "damage_condition": {
+	"type": "origins:fire"
+  }
+}

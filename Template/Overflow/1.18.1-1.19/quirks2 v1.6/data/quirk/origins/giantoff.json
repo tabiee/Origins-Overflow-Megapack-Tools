@@ -1,0 +1,13 @@
+{
+  "powers": [
+    "quirk:giant/swap",
+    "quirk:giant/fix2",
+		"quirk:health"
+  ],
+  "icon": "minecraft:beacon",
+        "unchoosable": true,
+  "order": 30,
+  "impact": 3,
+  "name": "Giantification",
+  "description": "Mt. Lady's Quirk"
+}

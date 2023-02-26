@@ -1,0 +1,53 @@
+{
+    "name": "§4§nStake to the Heart",
+    "description": "Being hit with a crossbow has a 5% chance to instantly kill you.",
+    "type": "origins:self_action_when_hit",
+    "damage_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:projectile",
+                "projectile": "arrow"
+            },
+            {
+                "type": "origins:attacker",
+                "entity_condition": {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "crossbow"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "origins:attacker",
+                "entity_condition": {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "crossbow"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "entity_action": {
+        "type": "origins:chance",
+        "chance": 0.05,
+        "action": {
+            "type": "origins:execute_command",
+            "command": "kill @s",
+            "permission_level": 4
+        }
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    }
+}

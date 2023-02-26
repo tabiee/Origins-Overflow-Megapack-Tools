@@ -1,0 +1,191 @@
+{
+	"name": "§5§nWeapons Expert",
+	"description": "Melee weapons swing faster and do more damage. Ranged weapons cause Slowness and you can choose to tp to the target or target to you.",
+	"type": "origins:multiple",
+	"melee": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "kynaan:weapons"
+				}
+			}
+		},
+		"type": "origins:attribute",
+		"modifiers": [
+			{
+				"attribute": "generic.attack_damage",
+				"operation": "multiply_base",
+				"value": 0.25
+			},
+			{
+				"attribute": "generic.attack_speed",
+				"operation": "multiply_base",
+				"value": 0.2
+			}
+		]
+	},
+	"bow_notp": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:kynaan/swapper_bit",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:target_action_on_hit",
+		"damage_condition": {
+			"type": "origins:projectile",
+			"projectile": "arrow"
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "slowness",
+						"duration": 100,
+						"amplifier": 0,
+						"show_particles": true,
+						"show_icon": true
+					}
+				}
+			]
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"bow_tptar": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:kynaan/swapper_bit",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:target_action_on_hit",
+		"damage_condition": {
+			"type": "origins:projectile",
+			"projectile": "arrow"
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "slowness",
+						"duration": 100,
+						"amplifier": 0,
+						"show_particles": true,
+						"show_icon": true
+					}
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "tp @s @e[tag=kyn,limit=1]",
+					"permission_level": 4
+				},
+				 {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "permission_level": 4,
+                                "command": "particle witch ~ ~ ~ 1 1 1 0 25"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "entity.enderman.teleport",
+                                "volume": 1,
+                                "pitch": 0.5
+                            }
+                        ]
+                    },
+                    "ticks": 5
+                }
+			]
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"bow_tpme": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:kynaan/swapper_bit",
+					"comparison": "==",
+					"compare_to": 2
+				}
+			]
+		},
+		"type": "origins:target_action_on_hit",
+		"damage_condition": {
+			"type": "origins:projectile",
+			"projectile": "arrow"
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "slowness",
+						"duration": 100,
+						"amplifier": 0,
+						"show_particles": true,
+						"show_icon": true
+					}
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "tp @e[tag=kyn,limit=1] @s",
+					"permission_level": 4
+				},
+				 {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "permission_level": 4,
+                                "command": "execute as @e[tag=kyn] at @s run particle witch ~ ~ ~ 1 1 1 0 25"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "entity.enderman.teleport",
+                                "volume": 1,
+                                "pitch": 1.2
+                            }
+                        ]
+                    },
+                    "ticks": 5
+                }
+			]
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		}
+	}
+}

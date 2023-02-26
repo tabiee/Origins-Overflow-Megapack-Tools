@@ -1,0 +1,11 @@
+{
+    "name": "Two-Tail",
+    "description": "With two tails active, you have the ability to shoot fire in a straight line up to 20 blocks.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Hold SaveToolbar key to use."
+        }
+    ],
+    "type": "origins:simple"
+}

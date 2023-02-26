@@ -1,0 +1,17 @@
+{
+	"name": "§e§nSmall",
+	"description": "Puts you at eye level with rabbits, health-wise too.",
+	"type": "origins:multiple",
+	"size": {
+		"type": "extraorigins:modify_size",
+		"scale": 0.45
+	},
+	"attr": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.max_health",
+			"operation": "addition",
+			"value": -4
+		}
+	}
+}

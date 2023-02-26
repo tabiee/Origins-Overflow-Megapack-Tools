@@ -1,0 +1,139 @@
+{
+	"name": "§d§lCosmetics",
+	"description": "Requires Resourcepack. Hold a stick in your offhand and right click while Hotbar8 is selected to apply cosmetics to your head slot. This will remove your current head item.",
+	"type": "origins:multiple",
+	"head": {
+		"condition": {
+			"inverted": true,
+			"type": "origins:power",
+			"power": "sunmoon:cosm-hats"
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=cont] at @s run item replace entity @e[tag=extra,limit=1] container.9 from entity @s armor.head"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=spec] at @s run item replace entity @s armor.head from entity @e[tag=extra,limit=1] container.9"
+				}
+			]
+		}
+	},
+	"select": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "offhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "stick"
+				}
+			}
+		},
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:command",
+						"command": "data get entity @s SelectedItemSlot",
+						"comparison": "==",
+						"compare_to": 7
+					},
+					"action": {
+						"type": "origins:execute_command",
+						"command": "title @s actionbar {\"text\":\" Activate Cosmetic Hats (Deletes current helmet)\",\"bold\":true,\"color\":\"gold\"}"
+					}
+				}
+			]
+		}
+	},
+	"pick": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "offhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "stick"
+				}
+			}
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:command",
+								"command": "data get entity @s SelectedItemSlot",
+								"comparison": "==",
+								"compare_to": 7
+							},
+							{
+								"inverted": true,
+								"type": "origins:power",
+								"power": "sunmoon:cosm-hats"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:execute_command",
+						"command": "power grant @e[tag=duo] sunmoon:cosm-hats"
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:command",
+								"command": "data get entity @s SelectedItemSlot",
+								"comparison": "==",
+								"compare_to": 7
+							},
+							{
+								"type": "origins:power",
+								"power": "sunmoon:cosm-hats"
+							}
+						]
+					},
+					"action": {
+						"type": "origins:execute_command",
+						"command": "power revoke @e[tag=duo] sunmoon:cosm-hats"
+					}
+				}
+			]
+		},
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.use"
+		}
+	},
+	"callback": {
+		"type": "origins:action_on_callback",
+		"execute_chosen_when_orb": true,
+		"entity_action_lost": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "power revoke @a sunmoon:cosm-hats"
+				}
+			]
+		}
+	}
+}

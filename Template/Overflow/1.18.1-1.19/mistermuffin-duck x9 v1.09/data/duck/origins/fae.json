@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"duck:fae/tp",
+		"duck:fae/dimswap",
+		"duck:fae/sizeswap",
+		"duck:fae/hover",
+		"duck:flower/regen",
+		"duck:fae/armor",
+		"duck:fae/zombies",
+		"duck:fae/eat",
+		"duck:fae/forms"
+	],
+	"icon": "minecraft:sculk_vein",
+	"impact": 3,
+	"name": "§3§l§oDimensional Fae",
+	"description": "Little creature that phases through reality with ease."
+}

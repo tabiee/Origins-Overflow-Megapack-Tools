@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"class:assassin/sneak",
+		"class:assassin/speed",
+		"class:assassin/hp"
+	],
+	"icon": "minecraft:iron_sword",
+	"impact": 1,
+	"name": "§9§l§oAssassin",
+	"description": "Quick and deadly, but more fragile."
+}

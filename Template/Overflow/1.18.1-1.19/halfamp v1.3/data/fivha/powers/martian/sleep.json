@@ -1,0 +1,12 @@
+{
+    "name": "Stargazer",
+    "description": "Due to your fondness of the stars you always want to be closer to them and thus must sleep above Y level 83. ",
+    "type": "origins:prevent_sleep",
+    "block_condition": {
+        "type": "origins:height",
+        "comparison": "<",
+        "compare_to": 83
+    },
+    "message": "You need to go higher to see the stars. (y-level 83)",
+    "set_spawn_point": true
+}

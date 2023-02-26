@@ -1,0 +1,9 @@
+{
+    "name": "§2§nAcquried Taste",
+    "description": "You're immune to poison and nausea.",
+    "type": "origins:effect_immunity",
+    "effects": [
+        "minecraft:poison",
+        "minecraft:nausea"
+    ]
+}

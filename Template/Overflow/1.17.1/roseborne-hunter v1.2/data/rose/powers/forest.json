@@ -1,0 +1,155 @@
+{
+	"name": "Friend of the forest",
+	"description": "Bees do not get angry at you, you take no damage from plants, and animals don't run away right away when attacked.",
+	"type": "origins:multiple",
+	"team": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team join bees @e[type=bee,distance=..20]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team leave @e[type=bee,distance=20..]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=bee, distance= ..48] run data modify entity @s AngerTime set value 0",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=bee, distance= ..48] run data remove entity @s AngerAt",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"call": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tag @s add rose",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team add bees",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "team modify bees friendlyFire false",
+						"permission_level": 4
+					},
+					"ticks": 2
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "team join bees @s",
+						"permission_level": 4
+					},
+					"ticks": 4
+				}
+			]
+		},
+		"execute_chosen_when_orb": true,
+		"entity_action_removed": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team remove bees",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "tag @s remove rose",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale reset @s",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"dmg": {
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "cactus"
+				},
+				{
+					"type": "origins:name",
+					"name": "cactus.player"
+				},
+				{
+					"type": "origins:name",
+					"name": "sweetBerryBush"
+				},
+				{
+					"type": "origins:name",
+					"name": "sweetBerryBush.player"
+				}
+			]
+		}
+	},
+	"animals": {
+        "type": "origins:target_action_on_hit",
+        "target_condition": {
+            "type": "origins:command",
+            "command": "execute if entity @s[type=#rose:animals,tag=!distrust]",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "slowness",
+                        "duration": 100,
+                        "amplifier": 999,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add distrust"
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+	"reset": {
+		"type": "origins:action_over_time",
+		"interval": 300,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "tag @e[tag=distrust] remove distrust"
+		}
+	}
+}

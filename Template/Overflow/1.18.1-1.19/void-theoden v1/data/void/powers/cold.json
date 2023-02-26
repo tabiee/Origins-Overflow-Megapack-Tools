@@ -1,0 +1,55 @@
+{
+    "name": "§d§nNice & Cold",
+    "description": "You gain Speed and Strength in the End and any cold biome.",
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:dimension",
+                "dimension": "minecraft:the_end"
+            },
+            {
+                "type": "origins:biome",
+                "biomes": [
+                    "minecraft:snowy_beach",
+                    "minecraft:ice_spikes",
+                    "minecraft:snowy_plains",
+                    "minecraft:frozen_peaks",
+                    "minecraft:snowy_slopes",
+                    "minecraft:the_void",
+                    "minecraft:frozen_river",
+                    "minecraft:cold_ocean",
+                    "minecraft:deep_cold_ocean",
+                    "minecraft:deep_frozen_ocean",
+                    "minecraft:frozen_ocean",
+                    "minecraft:snowy_taiga",
+                    "minecraft:taiga",
+                    "minecraft:old_growth_pine_taiga",
+                    "minecraft:old_growth_spruce_taiga",
+                    "minecraft:jagged_peaks"
+                ]
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 55,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "speed",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "strength",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ]
+    }
+}

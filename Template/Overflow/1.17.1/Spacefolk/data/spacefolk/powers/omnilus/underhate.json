@@ -1,0 +1,113 @@
+{
+    "name": "Claustrophobic",
+    "description": "You are a being born of the universe, staying anywhere where the stars and sky aren’t visible exhausts you.",
+    "condition": {
+        "type": "origins:constant",
+        "value": false
+    },
+    "type": "origins:multiple",
+    "nugget": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 5,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "tickingup": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "spacefolk:omnilus/underhate_nugget",
+                    "comparison": "<",
+                    "compare_to": 6
+                },
+                {
+                    "type": "origins:block_collision",
+                    "offset_y": 1,
+                    "offset_x": 0,
+                    "offset_z": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1200,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "spacefolk:omnilus/underhate_nugget",
+            "change": 1,
+            "operation": "add"
+        }
+    },
+    "reset": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "spacefolk:omnilus/underhate_nugget",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:block_collision",
+                    "offset_x": 0,
+                    "offset_y": 1,
+                    "offset_z": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "rising_action": {
+            "type": "origins:change_resource",
+            "resource": "spacefolk:omnilus/underhate_nugget",
+            "change": 0,
+            "operation": "set"
+        }
+    },
+    "effects": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "spacefolk:omnilus/underhate_nugget",
+                    "comparison": "==",
+                    "compare_to": 5
+                },
+                {
+                    "type": "origins:block_collision",
+                    "offset_x": 0,
+                    "offset_y": 1,
+                    "offset_z": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 60,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "weakness",
+                    "duration": 100,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": false
+                },
+                {
+                    "effect": "slowness",
+                    "duration": 100,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            ]
+        }
+    }
+}

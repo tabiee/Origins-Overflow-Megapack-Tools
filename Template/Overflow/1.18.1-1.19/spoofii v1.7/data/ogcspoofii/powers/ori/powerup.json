@@ -1,0 +1,47 @@
+{
+    "name": "Boost",
+    "description": "Gain Speed and Invisibility.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "speed",
+                        "duration": 300,
+                        "amplifier": 3,
+                        "show_particles": false,
+                        "show_icon": false
+                    },
+                    {
+                        "effect": "invisibility",
+                        "duration": 300,
+                        "amplifier": 3,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                ]
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle flame ~ ~ ~ 2 0.3 2 0.1 25",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:block.conduit.activate",
+                "volume": 1,
+                "pitch": 2
+            }
+        ]
+    },
+    "cooldown": 800,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 19
+    },
+    "key": "secondary"
+}

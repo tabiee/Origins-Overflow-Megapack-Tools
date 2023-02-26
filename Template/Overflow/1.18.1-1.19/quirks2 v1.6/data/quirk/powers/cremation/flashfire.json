@@ -1,0 +1,160 @@
+{
+	"type": "origins:active_self",
+	"name": "Flash Fire",
+	"description": "A huge blast of concentrated heat, this is a very dangerous ability, use carefully",
+	"hidden": false,
+	"cooldown": 1250,
+	"key": {
+		"key": "key.origins.quaternary_active",
+		"continuous": false
+	},
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [{
+				"type": "origins:execute_command",
+				"permission_level": 4,
+				"command": "power grant @p quirk:cremation/flashfirestream1"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute as @p run particle minecraft:soul_fire_flame ~ ~ ~ 4 4 4 0 250",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 2,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "power remove @p quirk:cremation/flashfirestream1"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 10,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "power grant @p quirk:cremation/flashfirestream1"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 10,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute as @p run particle minecraft:soul_fire_flame ~ ~ ~ 4 4 4 0 250"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 12,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "power remove @p quirk:cremation/flashfirestream1"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 20,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "power grant @p quirk:cremation/flashfirestream1"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 20,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute as @p run particle minecraft:soul_fire_flame ~ ~ ~ 4 4 4 0 250"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 22,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "power remove @p quirk:cremation/flashfirestream1"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 30,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "power grant @p quirk:cremation/flashfirestream1"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 30,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute as @p run particle minecraft:soul_fire_flame ~ ~ ~ 4 4 4 0 250"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 32,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "power remove @p quirk:cremation/flashfirestream1"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 40,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "power grant @p quirk:cremation/flashfirestream1"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 40,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute as @p run particle minecraft:soul_fire_flame ~ ~ ~ 4 4 4 0 250"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 42,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "power remove @p quirk:cremation/flashfirestream1"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 50,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "power grant @p quirk:cremation/flashfirestream1"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 50,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute as @p run particle minecraft:soul_fire_flame ~ ~ ~ 4 4 4 0 250"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 52,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "power remove @p quirk:cremation/flashfirestream1"
+				}
+			}
+
+		]
+	},
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 7
+    }
+
+}

@@ -1,0 +1,257 @@
+{
+    "name": "Undead",
+    "description": "You count as undead. Potion effects are reversed, you are immune to drowning, burn in sunlight, can't sleep and more.",
+    "type": "origins:multiple",
+    "group": {
+        "type": "origins:entity_group",
+        "group": "undead"
+    },
+    "snowgolem": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:projectile",
+            "projectile": "snowball"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.1
+        }
+    },
+    "sun": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:exposed_to_sun"
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                }
+            ]
+        },
+        "type": "origins:burn",
+        "interval": 20,
+        "burn_duration": 6
+    },
+    "effect": {
+        "type": "origins:effect_immunity",
+        "effects": [
+            "hunger",
+            "invisibility"
+        ]
+    },
+    "burn": {
+        "condition": {
+            "type": "origins:on_fire"
+        },
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:set_on_fire",
+                "duration": 4
+            }
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "sleep": {
+        "type": "origins:prevent_sleep",
+        "message": "§6No rest for the wicked.§r",
+        "set_spawn_point": true
+    },
+    "iron_golem": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=minecraft:iron_golem,distance=..20] at @s run data modify entity @s AngryAt set from entity @e[tag=noct,limit=1,sort=nearest] UUID"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=minecraft:iron_golem,distance=..20] at @s run data modify entity @s AngerTime set value 60"
+                }
+            ]
+        }
+    },
+    "team": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team join undead @e[tag=!aggro,type=#noct:hostiles,distance=..100]"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team leave @e[tag=aggro,distance=..100]"
+				}
+			]
+		}
+	},
+	"remove": {
+		"type": "origins:action_over_time",
+		"interval": 1200,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tag @e remove aggro"
+				}
+			]
+		}
+	},
+	"aggro": {
+		"type": "origins:target_action_on_hit",
+        "target_condition": {
+            "type": "origins:command",
+            "command": "execute if entity @s[tag=noct]",
+            "comparison": "==",
+            "compare_to": 0
+        },
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "tag @s[type=!#noct:undead] add aggro"
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"teamer": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team add undead",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team join undead @s",
+					"permission_level": 4
+				}
+			]
+		},
+		"execute_chosen_when_orb": true,
+		"entity_action_lost": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team remove undead",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+    "check": {
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:command",
+						"command": "execute if entity @e[tag=vex]",
+						"comparison": ">",
+						"compare_to": 5,
+						"permission_level": 4
+					},
+					"action": {
+						"type": "origins:execute_command",
+						"command": "kill @e[tag=vex,limit=1]",
+						"permission_level": 4
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:command",
+						"command": "execute if entity @e[tag=vex,distance=..5]",
+						"comparison": "==",
+						"compare_to": 0,
+						"permission_level": 4
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "summon minecraft:vex ^ ^ ^-1 {NoAI:1b,NoGravity:1b,Silent:1b,Tags:[\"vex\"],ActiveEffects:[{Id: 11, Duration: 99999999, Amplifier: 10, ShowParticles: 0b}]}",
+								"permission_level": 4
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	"vex": {
+		"type": "origins:action_over_time",
+		"interval": 3,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute rotated ~ 0 run tp @e[tag=vex,sort=nearest,limit=1] ^ ^ ^-1 facing entity @e[tag=noct,limit=1,sort=nearest] eyes",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[tag=vex] unluck 10 4 true",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "power grant @a noct:seevex",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "power grant @e[tag=vex] noct:fakevis",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"callback": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "tag @s add noct",
+			"permission_level": 4
+		},
+		"execute_chosen_when_orb": true,
+		"entity_action_lost": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tag @s remove noct",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[tag=vex]",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

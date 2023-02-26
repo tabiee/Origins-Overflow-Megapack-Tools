@@ -1,0 +1,56 @@
+{
+	"name": "§6§nFavourite Armor",
+    "description": "You only wear Diamond and Netherite armor sets.",
+    "type": "origins:restrict_armor",
+    "head": {
+        "inverted": true,
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "diamond_helmet"
+            },
+            {
+                "item": "netherite_helmet"
+            },
+            {
+                "item": "pumpkin"
+            }
+        ]
+    },
+    "chest": {
+        "inverted": true,
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "diamond_chestplate"
+            },
+            {
+                "item": "netherite_chestplate"
+            }
+        ]
+    },
+    "legs": {
+        "inverted": true,
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "diamond_leggings"
+            },
+            {
+                "item": "netherite_leggings"
+            }
+        ]
+    },
+    "feet": {
+        "inverted": true,
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "diamond_boots"
+            },
+            {
+                "item": "netherite_boots"
+            }
+        ]
+    }
+}

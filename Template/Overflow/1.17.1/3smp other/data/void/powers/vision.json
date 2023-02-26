@@ -1,0 +1,6 @@
+{
+    "type": "origins:shader",
+    "shader": "minecraft:shaders/post/desaturate.json",
+    "name": "Void Eyes",
+    "description": "Due to living in the void, you see different than others."
+}

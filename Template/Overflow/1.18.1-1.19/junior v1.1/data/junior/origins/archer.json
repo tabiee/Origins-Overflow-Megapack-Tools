@@ -1,0 +1,13 @@
+{
+	"unchoosable":false,
+	"powers": [
+		"junior:archer/bowdamage",
+		"junior:archer/health",
+		"junior:archer/sword"
+	],
+	"icon": "minecraft:bow",
+	"order": 2,
+	"impact": 1,
+	"name": "Archer",
+	"description": "Specialist in Long Range Weapondry."
+}

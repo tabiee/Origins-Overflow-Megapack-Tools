@@ -1,0 +1,100 @@
+{
+    "name": "§5§nInfected Claws§r",
+    "description": "You dip your claws in whatever nasty thing you find, making your melee hits cause Poison for a short time.",
+    "type": "apoli:multiple",
+    "use": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle sculk_soul ^ ^1 ^0.75 0.1 0.1 0.1 0 10",
+                    "permission_level": 4
+                },
+                {
+                    "type": "apoli:trigger_cooldown",
+                    "power": "*:*_dur"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "item.axe.scrape",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        },
+        "cooldown": 600,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 1,
+            "condition": {
+                "type": "apoli:resource",
+                "resource": "*:*_dur",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        },
+        "key": {
+            "key": "primary"
+        }
+    },
+    "dur": {
+        "type": "apoli:cooldown",
+        "cooldown": 300,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 10
+        }
+    },
+    "act": {
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_dur",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "type": "apoli:action_over_time",
+        "interval": 1,
+        "falling_action": {
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:execute_command",
+                    "command": "resource set @s rat:poison_use 1"
+                }
+            ]
+        }
+    },
+    "hit": {
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_dur",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "poison",
+                    "duration": 100,
+                    "amplifier": 0,
+                    "show_particles": true,
+                    "show_icon": true
+                }
+            }
+        },
+        "damage_condition": {
+            "inverted": true,
+            "type": "origins:projectile"
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

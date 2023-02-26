@@ -1,0 +1,35 @@
+{
+    "name": "§5§nTeleport§r",
+    "description": "Teleport using an enderpearl unless you are in water or rain.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "inverted": true,
+                "type": "origins:in_rain"
+            },
+            {
+                "type": "origins:fluid_height",
+                "fluid": "water",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        ]
+    },
+    "type": "origins:fire_projectile",
+    "entity_type": "origins:enderian_pearl",
+    "cooldown": 30,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 6
+    },
+    "count": 1,
+    "speed": 1.5,
+    "divergence": 1,
+    "sound": "minecraft:entity.ender_pearl.throw",
+    "key": {
+        "key": "primary",
+        "continuous": false
+    }
+}

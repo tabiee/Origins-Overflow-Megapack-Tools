@@ -1,0 +1,31 @@
+{
+	"name": "§5§nRing of Fire [Secondary]",
+	"description": "Set your surroundings alight.",
+    "type": "origins:active_self",
+    "cooldown": 900,
+    "key": {
+        "key": "key.origins.secondary_active",
+        "continuous": false
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.blaze.shoot",
+                "volume": 1,
+                "pitch": 0.5
+            },
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "function 3smp:ringofire"
+            }
+        ]
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 15
+    }
+}

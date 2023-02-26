@@ -1,0 +1,24 @@
+{
+    "replace": false,
+    "powers": [
+        "genesis:silverfish/burrow",
+        "genesis:silverfish/silverfriend",
+        "genesis:silverfish/silverteam",
+        "genesis:silverfish/infest",
+        "genesis:silverfish/insect",
+        "genesis:silverfish/nocturnal",
+        "genesis:silverfish/squishy",
+        "genesis:silverfish/night_vision",
+        "genesis:silverfish/leave_team",
+        "genesis:silverfish/silver",
+        "genesis:silverfish/silver_resource",
+        "genesis:silverfish/cave_spawn"
+    ],
+    "icon": "minecraft:infested_stone",
+    "order": 5,
+    "impact": 2,
+    "name": "Infested",
+    "description": "You are descended from the scuttling silverfish. They know you, and come at your call.",
+    "loading_priority": 100,
+    "unchoosable": true
+}

@@ -1,0 +1,106 @@
+{
+  "type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [        
+        {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~ ~ 0.6 0.6 0.6 0.01 200",
+            "permission_level": 4
+	},
+        {
+            "type": "origins:execute_command",
+            "command": "effect give @p minecraft:slowness 2 50 true",
+            "permission_level": 4
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 5,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~ ~ 0.6 0.6 0.6 0.01 200",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 10,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~ ~ 0.6 0.6 0.6 0.01 200",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 15,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~ ~ 0.6 0.6 0.6 0.01 200",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 20,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~ ~ 0.6 0.6 0.6 0.01 200",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 25,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~ ~ 0.6 0.6 0.6 0.01 200",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 25,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "effect give @p minecraft:resistance 1 50 true",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 30,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "minecraft:block.anvil.land",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 30,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "execute run function quirk:groundpoundsteel",
+            "permission_level": 4
+          }
+	}
+			
+		]
+	},
+  "cooldown": 80,
+  "hud_render": {
+  "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+  "should_render": true,
+  "bar_index": 0
+  },
+    "key": {
+        "key": "key.origins.senary_active",
+        "continuous": false
+    },
+    "condition": {
+            "type": "origins:on_block"
+    },
+  "name": "Ground Pound",
+  "description": "Smash the ground and hurt anybody nearby"
+}

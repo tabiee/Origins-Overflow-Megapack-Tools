@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"mimic:chest",
+		"mimic:nv",
+		"mimic:poison",
+		"mimic:dark",
+		"mimic:armor",
+		"mimic:size",
+		"mimic:chestfx",
+		"mimic:tagger"
+	],
+	"icon": "minecraft:chest",
+	"impact": 3,
+	"name": "Mimic",
+	"description": "Small creature that can take the shape of a mundane chest, tricking enemies and luring in unsuspecting victims."
+}

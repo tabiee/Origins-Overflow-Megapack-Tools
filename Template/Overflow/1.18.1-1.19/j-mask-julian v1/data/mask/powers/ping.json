@@ -1,0 +1,124 @@
+{
+    "name": "§1§nDarkness Calls§r",
+    "description": "You can ooze an unnatural sense of fear and dread. Create a wave of energy around you, all entities caught in its radius are blinded and can be seen through walls by the user.",
+    "type": "origins:multiple",
+    "pong": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.elder_guardian.curse",
+                    "volume": 10,
+                    "pitch": 0.1
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.bell.resonate",
+                    "volume": 1,
+                    "pitch": 0.1
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:ping_cd"
+                },
+                {
+                    "type": "origins:area_of_effect",
+                    "radius": 60,
+                    "bientity_action": {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:apply_effect",
+                            "effect": {
+                                "effect": "blindness",
+                                "duration": 60,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function mask:go"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute positioned ~ ~0.5 ~ rotated 90 0 run function mask:ping"
+                },
+                {
+                    "type": "apoli:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute positioned ~ ~0.5 ~ rotated 90 0 run function mask:ping2"
+                    },
+                    "ticks": 3
+                },
+                {
+                    "type": "apoli:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute positioned ~ ~0.5 ~ rotated 90 0 run function mask:ping3"
+                    },
+                    "ticks": 3
+                },
+                {
+                    "type": "apoli:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute positioned ~ ~0.5 ~ rotated 90 0 run function mask:ping4"
+                    },
+                    "ticks": 6
+                },
+                {
+                    "type": "apoli:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute positioned ~ ~0.5 ~ rotated 90 0 run function mask:ping5"
+                    },
+                    "ticks": 9
+                },
+                {
+                    "type": "apoli:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute positioned ~ ~0.5 ~ rotated 90 0 run function mask:ping6"
+                    },
+                    "ticks": 12
+                }
+            ]
+        },
+        "cooldown": 80,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 7
+        },
+        "key": {
+            "key": "secondary",
+            "continuous": true
+        }
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 60,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "glow": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:ping_cd",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "type": "origins:entity_glow",
+        "use_teams": false,
+        "red": 0.6,
+        "green": 0,
+        "blue": 0.4
+    }
+}

@@ -1,0 +1,356 @@
+{
+	"name": "sleep is for the weak",
+	"description": "yep",
+	"type": "origins:multiple",
+	"nope": {
+		"condition": {
+			"type": "origins:constant",
+			"value": true
+		},
+		"type": "origins:prevent_sleep",
+		"message": "You can't sleep right now.",
+		"set_spawn_point": true
+	},
+	"phantoms": {
+		"type": "origins:action_over_time",
+		"interval": 100,
+		"entity_action": {
+			"type": "origins:chance",
+			"chance": 0.25,
+			"action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:chance",
+								"chance": 1,
+								"action": {
+									"type": "origins:execute_command",
+									"command": "execute at @s positioned ^ ^5 ^-5 run summon phantom ~ ~ ~ {Tags:[\"one\"]}",
+									"permission_level": 4
+								}
+							},
+							{
+								"type": "origins:chance",
+								"chance": 0.5,
+								"action": {
+									"type": "origins:execute_command",
+									"command": "execute at @s positioned ^ ^5 ^-5 run summon phantom ~ ~ ~ {Tags:[\"two\"]}",
+									"permission_level": 4
+								}
+							},
+							{
+								"type": "origins:chance",
+								"chance": 0.5,
+								"action": {
+									"type": "origins:execute_command",
+									"command": "execute at @s positioned ^ ^5 ^-5 run summon phantom ~ ~ ~ {Tags:[\"three\"]}",
+									"permission_level": 4
+								}
+							},
+							{
+								"type": "origins:chance",
+								"chance": 0.5,
+								"action": {
+									"type": "origins:execute_command",
+									"command": "execute at @s positioned ^ ^5 ^-5 run summon phantom ~ ~ ~ {Tags:[\"four\"]}",
+									"permission_level": 4
+								}
+							},
+							{
+								"type": "origins:chance",
+								"chance": 0.5,
+								"action": {
+									"type": "origins:execute_command",
+									"command": "execute at @s positioned ^ ^5 ^-5 run summon phantom ~ ~ ~ {Tags:[\"five\"]}",
+									"permission_level": 4
+								}
+							}
+						]
+					},
+					{
+						"type": "origins:delay",
+						"action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:choice",
+											"actions": [
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 0.25 @e[type=phantom,tag=one]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 1 @e[type=phantom,tag=one]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 0.5 @e[type=phantom,tag=one]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 3 @e[type=phantom,tag=one]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 2 @e[type=phantom,tag=one]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 1.5 @e[type=phantom,tag=one]",
+														"permission_level": 4
+													}
+												}
+											]
+										},
+										{
+											"type": "origins:choice",
+											"actions": [
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 0.25 @e[type=phantom,tag=two]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 1 @e[type=phantom,tag=two]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 0.5 @e[type=phantom,tag=two]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 3 @e[type=phantom,tag=two]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 2 @e[type=phantom,tag=two]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 1.5 @e[type=phantom,tag=two]",
+														"permission_level": 4
+													}
+												}
+											]
+										},
+										{
+											"type": "origins:choice",
+											"actions": [
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 0.25 @e[type=phantom,tag=three]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 1 @e[type=phantom,tag=three]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 0.5 @e[type=phantom,tag=three]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 3 @e[type=phantom,tag=three]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 2 @e[type=phantom,tag=three]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 1.5 @e[type=phantom,tag=three]",
+														"permission_level": 4
+													}
+												}
+											]
+										},
+										{
+											"type": "origins:choice",
+											"actions": [
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 0.25 @e[type=phantom,tag=four]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 1 @e[type=phantom,tag=four]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 0.5 @e[type=phantom,tag=four]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 3 @e[type=phantom,tag=four]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 2 @e[type=phantom,tag=four]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 1.5 @e[type=phantom,tag=four]",
+														"permission_level": 4
+													}
+												}
+											]
+										},
+										{
+											"type": "origins:choice",
+											"actions": [
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 0.25 @e[type=phantom,tag=five]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 1 @e[type=phantom,tag=five]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 0.5 @e[type=phantom,tag=five]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 3 @e[type=phantom,tag=five]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 2 @e[type=phantom,tag=five]",
+														"permission_level": 4
+													}
+												},
+												{
+													"weight": 20,
+													"element": {
+														"type": "origins:execute_command",
+														"command": "scale set pehkui:base 1.5 @e[type=phantom,tag=five]",
+														"permission_level": 4
+													}
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						"ticks": 3
+					}
+				]
+			}
+		}
+	}
+}

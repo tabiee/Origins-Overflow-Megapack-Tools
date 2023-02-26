@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"quirk:engine/swap",
+		"quirk:engine/fix",
+		"quirk:health"
+
+	],
+	"icon": "tripwire_hook",
+        "unchoosable": true,
+	"order": 10,
+	"impact": 3,
+	"name": "Engine",
+	"description": "Tenya Ida's Quirk"
+}

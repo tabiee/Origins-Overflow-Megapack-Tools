@@ -1,0 +1,19 @@
+{
+	"name": "Lonesomeness",
+	"description": "Because of your obscure appearance, villagers are scared of you.",
+    "type": "origins:action_over_time",
+    "interval": 100,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "execute at @s as @e[type=villager,distance=..30] run data merge entity @s {Gossips:[{Target:[I;1,1,1,1],Type:'major_negative',Value:100}]}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute at @s as @e[type=villager,distance=..30] run data modify entity @s Gossips[{Target:[I;1,1,1,1]}].Target set from entity @p[distance=..3] UUID"
+            }
+        ]
+    }
+}

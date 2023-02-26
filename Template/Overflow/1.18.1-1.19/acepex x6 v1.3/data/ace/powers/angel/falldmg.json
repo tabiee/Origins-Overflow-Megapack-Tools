@@ -1,0 +1,22 @@
+{
+    "name": "Poor Landing",
+    "description": "You take twice as much fall damage.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "fall.player"
+            },
+            {
+                "type": "origins:name",
+                "name": "fall"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 1
+    }
+}

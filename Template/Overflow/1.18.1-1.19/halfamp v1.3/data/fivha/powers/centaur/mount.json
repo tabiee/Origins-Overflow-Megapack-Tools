@@ -1,0 +1,65 @@
+{
+	"name": "Noble Steed",
+	"description": "Toggle whether other players can ride you. Kick them off by sneaking and pressing jump.",
+	"type": "origins:multiple",
+	"allow": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"ride_mount": {
+		"type": "origins:action_on_being_used",
+		"bientity_action": {
+			"type": "origins:mount"
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [{
+					"type": "origins:resource",
+					"resource": "*:*_allow",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:passenger",
+					"inverted": true
+				}
+			]
+		}
+	},
+	"ride_dismount_self": {
+		"type": "origins:active_self",
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [{
+				"condition": {
+					"type": "origins:and",
+					"conditions": [{
+							"type": "origins:sneaking"
+						},
+						{
+							"type": "origins:passenger"
+						}
+					]
+				},
+				"action": {
+					"type": "origins:passenger_action",
+					"action": {
+						"type": "origins:dismount"
+					}
+				}
+			}]
+		},
+		"key": {
+			"key": "key.jump"
+		}
+	}
+}

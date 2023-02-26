@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "origins": [
+    "duck:other",
+    "duck:whisp",
+    "duck:eldritch",
+    "duck:fae",
+    "duck:sugar",
+    "duck:demon",
+    "duck:flower",
+    "duck:dragon",
+    "duck:slasher"
+  ]
+}

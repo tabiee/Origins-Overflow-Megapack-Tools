@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"ogcspoofii:spoofii/respawn",
+		"ogcspoofii:spoofii/backtoback",
+		"ogcspoofii:spoofii/perms",
+		"ogcspoofii:spoofii/hp",
+		"ogcspoofii:spoofii/dmg",
+		"ogcspoofii:spoofii/armorno",
+		"ogcspoofii:spoofii/lunge",
+		"ogcspoofii:spoofii/onhit",
+		"ogcspoofii:spoofii/secon",
+		"ogcspoofii:spoofii/repeat"
+	],
+	"icon": "minecraft:nether_star",
+	"impact": 2,
+	"name": "§6§lSpoofii",
+	"description": "You do stuff!"
+}

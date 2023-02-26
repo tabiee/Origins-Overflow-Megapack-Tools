@@ -1,0 +1,72 @@
+{
+	"name": "§4§nPurety Weakness",
+    "description": "Golden weapons and tools, as well as Smite, do more damage to you.",
+    "type": "origins:multiple",
+    "gold": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": [
+                        {
+                            "item": "golden_sword"
+                        },
+                        {
+                            "item": "golden_axe"
+                        },
+                        {
+                            "item": "golden_hoe"
+                        },
+                        {
+                            "item": "golden_shovel"
+                        },
+                        {
+                            "item": "golden_pickaxe"
+                        }
+                    ]
+                }
+            }
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 4
+        }
+    },
+    "weak": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "magic"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "magic.player"
+                },
+                {
+                    "type": "origins:attacker",
+                    "entity_condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:enchantment",
+                            "enchantment": "smite",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.5
+        }
+    }
+}

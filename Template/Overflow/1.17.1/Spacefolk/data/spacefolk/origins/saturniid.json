@@ -1,0 +1,19 @@
+{
+    "impact": 2,
+    "unchoosable": false,
+    "name": "§3§l§oSaturniid",
+    "description": "An otherwordly bug.",
+    "icon": "minecraft:cyan_dye",
+    "powers": [
+	    "spacefolk:saturniid/climbing",
+		"spacefolk:saturniid/flash",
+        "spacefolk:saturniid/particles",
+		"spacefolk:saturniid/small",
+		"spacefolk:saturniid/nightv",
+		"spacefolk:saturniid/softy",
+		"spacefolk:saturniid/elytra",
+		"spacefolk:saturniid/tagger",
+		"spacefolk:saturniid/rain",
+		"spacefolk:saturniid/carnivore"
+    ]
+}

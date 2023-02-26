@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:glowstone",
+    "minecraft:sea_lantern",
+    "minecraft:jack_o_lantern",
+    "minecraft:beacon",
+    "minecraft:shroomlight",
+    "minecraft:redstone_lamp",
+    "minecraft:magma_block",
+	"minecraft:lantern",
+	"minecraft:soul_lantern",
+	"minecraft:end_rod",
+	"minecraft:conduit"
+  ]
+}

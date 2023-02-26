@@ -1,0 +1,19 @@
+{
+	"powers": [
+	"fma:earth/makeearth",
+	"fma:earth/spiky",
+	"fma:earth/wall",
+	"fma:earth/wall2",
+	"fma:earth/wallclear",
+	"fma:earth/wall2clear",
+	"fma:earth/armstrong",
+	"fma:earth/diggy",
+	"fma:earth/tagger",
+	"fma:earth/negdesc",
+	"fma:earth/clearspike"
+	],
+	"icon": "minecraft:stone",
+	"impact": 1,
+	"name": "§e§l§oEarth Alchemy",
+	"description": "Defensive alchemy type with great melee capabilities."
+}

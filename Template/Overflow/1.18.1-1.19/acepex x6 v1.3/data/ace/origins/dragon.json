@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"ace:dragon/fireball",
+		"ace:angel/elytra",
+		"ace:dragon/hp",
+		"ace:dragon/fall",
+		"ace:angel/fire",
+		"origins:carnivore",
+		"ace:dragon/size",
+		"ace:dragon/shield",
+		"ace:dragon/exp",
+		"ace:dragon/fly"
+	],
+	"icon": "minecraft:dragon_head",
+	"impact": 3,
+	"name": "Dragon",
+	"description": "Mighty fire-breathing lizard."
+}

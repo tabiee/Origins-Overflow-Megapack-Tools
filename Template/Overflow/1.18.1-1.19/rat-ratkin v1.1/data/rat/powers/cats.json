@@ -1,0 +1,42 @@
+{
+    "name": "§4§nPredators§r",
+    "description": "While near cats or ocelots you suffer Weakness and Nausea.",
+    "condition": {
+        "type": "apoli:or",
+        "conditions": [
+            {
+                "type": "apoli:command",
+                "command": "execute if entity @e[type=cat,distance=..5]",
+                "comparison": ">=",
+                "compare_to": 1
+            },
+            {
+                "type": "apoli:command",
+                "command": "execute if entity @e[type=ocelot,distance=..5]",
+                "comparison": ">=",
+                "compare_to": 1
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 35,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "weakness",
+                "duration": 55,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "nausea",
+                "duration": 55,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        ]
+    }
+}

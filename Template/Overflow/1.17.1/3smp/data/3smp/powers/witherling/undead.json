@@ -1,0 +1,6 @@
+{
+	"name": "§6§nUndead",
+	"description": "You count as non-living.",
+    "type": "origins:entity_group",
+    "group": "undead"
+}

@@ -1,0 +1,40 @@
+{
+    "type": "origins:active_self",
+      "entity_action": {
+        "type": "origins:and",
+        "actions": [ 
+          {    
+          "type": "origins:execute_command",
+          "command": "effect give @s minecraft:resistance 30 2",
+          "permission_level": 4
+          },
+	  {    
+          "type": "origins:execute_command",
+          "command": "effect give @s minecraft:slowness 30 2",
+          "permission_level": 4
+          },
+	  {    
+          "type": "origins:execute_command",
+          "command": "effect give @s minecraft:strength 30 3",
+          "permission_level": 4
+          },
+	  {    
+          "type": "origins:execute_command",
+          "command": "effect give @s minecraft:fire_resistance 6 0",
+          "permission_level": 4
+          }
+		]
+      },
+      "name": "Steel Body",
+      "description": "You enter your steel state, becoming slow but resistant.",
+      "key": {
+          "key": "key.origins.secondary_active",
+          "continuous": false
+      },
+      "cooldown": 1400,
+      "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 0
+          }
+  }

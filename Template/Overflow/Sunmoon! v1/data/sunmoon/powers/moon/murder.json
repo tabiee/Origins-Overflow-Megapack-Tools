@@ -1,0 +1,76 @@
+{
+    "name": "§9§n§lSecurity Protocol",
+    "description": "You have no restraint.",
+    "type": "origins:multiple",
+    "dmg": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.attack_damage",
+                "operation": "multiply_total",
+                "value": 0.5
+            },
+			{
+                "attribute": "generic.knockback_resistance",
+                "operation": "multiply_total",
+                "value": 2
+            }
+        ],
+        "update_health": false
+    },
+    "kick": {
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "tp @s ~ ~ ~ facing entity @e[tag=moon,limit=1]"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:add_velocity",
+                            "y": 0.45,
+                            "z": -1.15,
+                            "space": "local",
+                            "client": true,
+                            "server": true,
+                            "set": true
+                        },
+                        "ticks": 3
+                    },
+                    {
+                        "type": "origins:chance",
+                        "chance": 0.5,
+                        "action": {
+                            "type": "origins:apply_effect",
+                            "effects": [
+                                {
+                                    "effect": "slowness",
+                                    "duration": 40,
+                                    "amplifier": 0,
+                                    "show_particles": false,
+                                    "show_icon": true
+                                },
+                                {
+                                    "effect": "nausea",
+                                    "duration": 40,
+                                    "amplifier": 0,
+                                    "show_particles": false,
+                                    "show_icon": true
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "cooldown": 50,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

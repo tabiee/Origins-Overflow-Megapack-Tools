@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"light:speed",
+		"light:str",
+		"light:imm",
+		"light:float",
+		"light:armor",
+		"light:particles"
+	],
+	"icon": "minecraft:lightning_rod",
+	"impact": 1,
+	"name": "§b§l§oLightningborn",
+	"description": "A being with affinity for electricity."
+}

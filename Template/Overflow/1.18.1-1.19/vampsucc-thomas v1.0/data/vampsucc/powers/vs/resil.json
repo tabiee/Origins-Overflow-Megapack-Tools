@@ -1,0 +1,45 @@
+{
+    "name": "§e§nUndead Resilience",
+    "description": "You're immune to fall and kinetic damage, as well as knockback.",
+    "type": "origins:multiple",
+    "dmg": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "flyIntoWall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "flyIntoWall.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "starve"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "starve.player"
+                }
+            ]
+        }
+    },
+    "knockback": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.knockback_resistance",
+            "operation": "addition",
+            "value": 25
+        }
+    }
+}

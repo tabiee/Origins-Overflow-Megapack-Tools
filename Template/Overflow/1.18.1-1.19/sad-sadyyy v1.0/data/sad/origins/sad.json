@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"sad:sad/phasing",
+		"sad:sad/nv",
+		"sad:sad/float",
+		"sad:sad/hero",
+		"sad:sad/sword",
+		"sad:sad/tear",
+		"sad:sad/sleep",
+		"sad:sad/axes",
+		"sad:sad/model"
+	],
+	"icon": "minecraft:ghast_tear",
+	"impact": 1,
+	"name": "§3§l§oSad Spirit",
+	"description": "You've met a tragic end and are now lingering in the world with unfinished business."
+}

@@ -1,0 +1,48 @@
+{
+    "name": "§2§nBlack Feathers",
+    "description": "You randomly deal extra damage when wielding a netherite sword.",
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "netherite_sword"
+            }
+        }
+    },
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+            "type": "origins:chance",
+            "chance": 0.25,
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:damage",
+                            "amount": 6,
+                            "source": {
+                                "name": "player",
+                                "bypasses_armor": true,
+                                "unblockable": true
+                            }
+                        },
+                        "ticks": 15
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle witch ~ ~1 ~ 0.5 0.5 0.5 0.25 25"
+                    }
+                ]
+            }
+        }
+    },
+    "cooldown": 100,
+    "hud_render": {
+        "should_render": false
+    }
+}

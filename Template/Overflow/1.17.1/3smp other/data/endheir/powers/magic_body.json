@@ -1,0 +1,13 @@
+{
+    "type": "origins:multiple",
+    "name": "Magic Body",
+    "description": "Much like Enderman, you are immune to arrows. You also have Resistance and Strength while present in the end.",
+    "o___0": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:projectile",
+            "inverted": false,
+            "projectile": "minecraft:arrow"
+        }
+    }
+}

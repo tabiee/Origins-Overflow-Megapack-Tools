@@ -1,0 +1,32 @@
+{
+    "name": "Heat Absorption",
+    "description": "While on fire, do more damage and gain haste.",
+    "type": "origins:multiple",
+    "dmg": {
+        "condition": {
+            "type": "origins:on_fire"
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "addition",
+            "value": 3
+        }
+    },
+    "haste": {
+        "condition": {
+            "type": "origins:on_fire"
+        },
+        "type": "origins:action_over_time",
+        "interval": 60,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "haste",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        }
+    }
+}

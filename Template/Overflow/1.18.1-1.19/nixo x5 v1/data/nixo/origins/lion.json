@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"nixo:lion/jump",
+		"nixo:lion/climb",
+		"nixo:lion/speed",
+		"nixo:lion/poison"
+	],
+	"icon": "minecraft:sunflower",
+	"impact": 3,
+	"name": "§6§l§oLion",
+	"description": "King of the jungle!"
+}

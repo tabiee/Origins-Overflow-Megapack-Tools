@@ -1,0 +1,44 @@
+{
+    "hidden": true,
+    "type": "origins:action_on_callback",
+    "entity_action_chosen": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "tag @s add wizzy",
+                "permission_level": 4
+            },
+			{
+                "type": "origins:execute_command",
+                "command": "team add wiz",
+                "permission_level": 4
+            },
+			{
+				"type": "origins:delay",
+				"action": {
+                "type": "origins:execute_command",
+                "command": "team join wiz @s",
+                "permission_level": 4
+            },
+			"ticks": 1
+			}
+        ]
+    },
+    "execute_chosen_when_orb": true,
+    "entity_action_lost": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "tag @s remove wizzy",
+                "permission_level": 4
+            },
+			{
+                "type": "origins:execute_command",
+                "command": "team leave @s",
+                "permission_level": 4
+            }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"class:berserk/dmg",
+		"class:berserk/start",
+		"class:berserk/shield"
+	],
+	"icon": "minecraft:stone_axe",
+	"impact": 1,
+	"name": "§c§l§oBerserker",
+	"description": "Start with an iron sword. Great at combat."
+}

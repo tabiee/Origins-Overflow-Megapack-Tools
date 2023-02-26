@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"alien:alien/laser",
+		"alien:alien/pickup",
+		"alien:alien/fly",
+		"alien:alien/grav",
+		"alien:alien/helmet",
+		"alien:alien/coalew",
+		"alien:alien/diet",
+		"alien:alien/water",
+		"alien:alien/debug",
+		"alien:alien/land"
+	],
+	"icon": "minecraft:ender_eye",
+	"impact": 3,
+	"name": "§3§l§oThe Visitor",
+	"description": "You are an extraterrestrial that came to this world for a vacation. It's not a good vacation."
+}

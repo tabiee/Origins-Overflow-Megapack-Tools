@@ -1,0 +1,17 @@
+{
+    "name": "§e§nWoah",
+    "description": "Hold a mushroom in your offhand.",
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "offhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "hippie:shrooms"
+            }
+        }
+    },
+    "type": "origins:shader",
+    "shader": "minecraft:shaders/post/wobble.json",
+    "toggleable": true
+}

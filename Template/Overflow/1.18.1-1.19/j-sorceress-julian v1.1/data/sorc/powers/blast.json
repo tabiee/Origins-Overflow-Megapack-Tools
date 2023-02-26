@@ -1,0 +1,63 @@
+{
+    "name": "§5§nArcane Blast§r",
+    "description": "You can fire a blast of red magical energy.",
+    "condition": {
+        "type": "origins:resource",
+        "resource": "sorc:mana_bar",
+        "comparison": ">=",
+        "compare_to": 50
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:change_resource",
+                "resource": "sorc:mana_bar",
+                "change": -50,
+                "operation": "add"
+            },
+            {
+                "type": "origins:raycast",
+                "distance": 7,
+                "block": true,
+                "entity": true,
+                "shape_type": "outline",
+                "fluid_handling": "any",
+                "bientity_action": {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:damage",
+                        "amount": 4,
+                        "source": {
+                            "name": "magic",
+                            "magic": true
+                        }
+                    }
+                },
+                "command_at_hit": "particle crimson_spore ~ ~ ~ 0.5 0.5 0.5 0.2 50",
+                "command_along_ray": "particle dust 1.000 0.000 0.000 3 ^ ^-0.55 ^1 0 0 0 0.2 2"
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.illusioner.cast_spell",
+                "volume": 1,
+                "pitch": 2
+            },
+            {
+                "type": "origins:swing_hand",
+                "hand": "MAIN_HAND"
+            }
+        ]
+    },
+    "cooldown": 20,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+        "bar_index": 5
+    },
+    "key": {
+        "key": "primary",
+        "continuous": true
+    }
+}

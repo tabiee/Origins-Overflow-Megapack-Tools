@@ -1,0 +1,23 @@
+{
+	"type": "origins:damage_over_time",
+	"condition": {
+		"type": "origins:on_block",
+		"inverted": false,
+		"block_condition": {
+			"type": "origins:in_tag",
+			"inverted": false,
+			"tag": "tricks:ironblocks"
+		}
+	},
+	"interval": 10,
+	"damage": 1,
+	"damage_source": {
+		"bypasses_armor": false,
+		"fire": true,
+		"unblockable": false,
+		"magic": false,
+		"out_of_world": false,
+		"name": "hotFloor"
+	},
+	"hidden": true
+}

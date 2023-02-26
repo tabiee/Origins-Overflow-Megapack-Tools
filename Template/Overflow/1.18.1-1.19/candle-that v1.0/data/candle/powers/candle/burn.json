@@ -1,0 +1,82 @@
+{
+	"name": "Blazing Aura",
+	"description": "Using your Primary makes your flame burn hotter, making all creatures around you catch fire while toggled.\nWhile you burn like this you glow brightly and melt through your wax very quickly.",
+	"type": "origins:multiple",
+	"tap": {
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": {
+			"key": "primary"
+		}
+	},
+	"act": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:candle/burn_tap"
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "particle flame ~ ~0.5 ~ 2.5 0 2.5 0.025 50",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:candle/wax_goo",
+					"change": -5
+				}
+			]
+		}
+	},
+	"fire": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:candle/burn_tap"
+		},
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:area_of_effect",
+					"radius": 6,
+					"bientity_action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:set_on_fire",
+							"duration": 6
+						}
+					},
+					"bientity_condition": {
+						"type": "origins:can_see"
+					}
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.fire.ambient",
+					"volume": 5,
+					"pitch": 1
+				}
+			]
+		}
+	},
+	"glow": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:candle/burn_tap"
+		},
+		"type": "origins:self_glow",
+		"bientity_condition": {
+			"type": "origins:can_see"
+		},
+		"use_teams": false,
+		"red": 1.0,
+		"green": 0.25,
+		"blue": 0.0
+	}
+}

@@ -1,0 +1,74 @@
+{
+    "name": "§e§nSlasher-Core",
+    "description": "You are proficient in more messy weaponry, deal more damage with axes and less with swords. You also can't use bows.",
+    "type": "origins:multiple",
+    "swrd": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "mask:sword"
+                }
+            }
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.3
+        }
+    },
+    "axe": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "mask:axe"
+                }
+            }
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.3
+        }
+    },
+    "prev": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "bow"
+                }
+            ]
+        }
+    },
+    "haste": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "mask:axe"
+                }
+            }
+        },
+        "type": "origins:action_over_time",
+        "interval": 35,
+        "entity_action": {
+            "type": "apoli:apply_effect",
+            "effect": {
+                "effect": "haste",
+                "duration": 55,
+                "amplifier": 0,
+                "show_icon": true,
+                "show_particles": false
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "type": "origins:multiple",
+  "color": {
+    "type": "origins:model_color",
+    "red": 1,
+    "green": 1,
+    "blue": 1,
+    "alpha": 1
+  },
+  "effects": {
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 20,
+    "effects": [
+        {
+            "effect": "minecraft:speed",
+            "duration": 20,
+            "amplifier": 1,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:jump_boost",
+            "duration": 20,
+            "amplifier": 1,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        }
+    ]
+  },
+  "hidden": true
+}

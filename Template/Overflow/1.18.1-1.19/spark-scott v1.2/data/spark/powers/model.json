@@ -1,0 +1,6 @@
+{
+    "name": "Radiant",
+    "description": "Your transparent skin gives off a bright light wherever you go.",
+    "type": "origins:model_color",
+    "alpha": 0.55
+}

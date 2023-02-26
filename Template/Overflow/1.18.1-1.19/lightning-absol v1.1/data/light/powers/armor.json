@@ -1,0 +1,186 @@
+{
+    "name": "§4§nConductive Material",
+    "description": "Iron and Diamond don't mix well with your kind, you cannot use neither tools nor armor made from them.",
+    "type": "origins:multiple",
+    "rest": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "iron_helmet"
+                },
+                {
+                    "item": "diamond_helmet"
+                }
+            ]
+        },
+        "chest": {
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "iron_chestplate"
+                },
+                {
+                    "item": "diamond_chestplate"
+                }
+            ]
+        },
+        "legs": {
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "iron_leggings"
+                },
+                {
+                    "item": "diamond_leggings"
+                }
+            ]
+        },
+        "feet": {
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "iron_boots"
+                },
+                {
+                    "item": "diamond_boots"
+                }
+            ]
+        }
+    },
+    "right": {
+        "type": "origins:prevent_block_selection",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": [
+                    {
+                        "item": "iron_pickaxe"
+                    },
+                    {
+                        "item": "diamond_pickaxe"
+                    },
+                    {
+                        "item": "iron_axe"
+                    },
+                    {
+                        "item": "diamond_axe"
+                    },
+                    {
+                        "item": "iron_sword"
+                    },
+                    {
+                        "item": "diamond_sword"
+                    },
+                    {
+                        "item": "iron_shovel"
+                    },
+                    {
+                        "item": "diamond_shovel"
+                    },
+                    {
+                        "item": "iron_hoe"
+                    },
+                    {
+                        "item": "diamond_hoe"
+                    }
+                ]
+            }
+        }
+    },
+    "dmg": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": [
+                    {
+                        "item": "iron_pickaxe"
+                    },
+                    {
+                        "item": "diamond_pickaxe"
+                    },
+                    {
+                        "item": "iron_axe"
+                    },
+                    {
+                        "item": "diamond_axe"
+                    },
+                    {
+                        "item": "iron_sword"
+                    },
+                    {
+                        "item": "diamond_sword"
+                    },
+                    {
+                        "item": "iron_shovel"
+                    },
+                    {
+                        "item": "diamond_shovel"
+                    },
+                    {
+                        "item": "iron_hoe"
+                    },
+                    {
+                        "item": "diamond_hoe"
+                    }
+                ]
+            }
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    },
+    "mine": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": [
+                    {
+                        "item": "iron_pickaxe"
+                    },
+                    {
+                        "item": "diamond_pickaxe"
+                    },
+                    {
+                        "item": "iron_axe"
+                    },
+                    {
+                        "item": "diamond_axe"
+                    },
+                    {
+                        "item": "iron_sword"
+                    },
+                    {
+                        "item": "diamond_sword"
+                    },
+                    {
+                        "item": "iron_shovel"
+                    },
+                    {
+                        "item": "diamond_shovel"
+                    },
+                    {
+                        "item": "iron_hoe"
+                    },
+                    {
+                        "item": "diamond_hoe"
+                    }
+                ]
+            }
+        },
+        "type": "origins:modify_break_speed",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    }
+}

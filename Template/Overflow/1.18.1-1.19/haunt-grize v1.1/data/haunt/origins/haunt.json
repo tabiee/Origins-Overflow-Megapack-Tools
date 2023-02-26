@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"haunt:haunt/hover",
+		"haunt:haunt/airswim",
+		"haunt:haunt/glide",
+		"haunt:haunt/fall",
+		"haunt:haunt/grav",
+		"haunt:haunt/reduc",
+		"haunt:haunt/hp",
+		"haunt:haunt/armor",
+		"haunt:haunt/hits"
+	],
+	"icon": "minecraft:ender_eye",
+	"impact": 3,
+	"name": "§3§l§oHaunt",
+	"description": "Ghastly apparition that glides through walls with ease."
+}

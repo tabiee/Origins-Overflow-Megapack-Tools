@@ -1,0 +1,17 @@
+{
+    "impact": 1,
+    "unchoosable": false,
+    "powers": [
+        "3smp:divinechild/random_item",
+        "3smp:divinechild/quickstride",
+        "3smp:divinechild/faster_breaking",
+		"3smp:divinechild/light",
+		"3smp:divinechild/glow",
+		"3smp:divinechild/undeadew",
+		"3smp:divinechild/skyfallen",
+		"3smp:divinechild/color"
+    ],
+    "name": "§c§l§oDivine Child",
+    "description": "The child of the Server that now resides in the overworld.",
+    "icon": "minecraft:enchanted_golden_apple"
+}

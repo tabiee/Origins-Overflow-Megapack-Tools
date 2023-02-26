@@ -1,0 +1,43 @@
+{
+	"type": "origins:active_self",
+	"cooldown": 70,
+ 	 "key": {
+    "key": "key.origins.primary_active",
+    "continuous": false
+	},
+	"hud_render": {
+	  "should_render":true,
+	  "sprite_location":"origins:textures/gui/resource_bar.png",
+	  "bar_index": 4
+	},
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [ 
+			{
+			  "type": "origins:execute_command",
+			  "command": "playsound minecraft:entity.generic.explode @a[distance=..10] ~ ~ ~ 2 0.7",
+			  "permission_level": 4
+			},
+			            {
+                "type": "origins:execute_command",
+                "command": "execute as @s run particle minecraft:cloud ~ ~ ~ 0 0 0 1 200",
+                "permission_level": 4
+            },
+
+			{
+				"type": "origins:add_velocity",
+				"z": 2,
+				"space": "local"
+			}
+		],
+	  "cooldown": 20,
+	  "hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/resource_bar.png",
+			"bar_index": 4
+		}
+	},
+
+		"name": "Thrust",
+		"description": "Use your jets to propel yourself forward"
+	}

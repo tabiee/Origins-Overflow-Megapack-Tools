@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"bunny:carrots",
+		"bunny:carrots2",
+		"bunny:regen",
+		"bunny:fall",
+		"origins:more_exhaustion",
+		"origins:light_armor",
+		"bunny:short",
+		"bunny:jump",
+		"bunny:hp"
+	],
+	"icon": "minecraft:rabbit_foot",
+	"order": 10,
+	"impact": 2,
+	"name": "Bunny",
+	"description": "A cute creature that like roaming around the plains and eating carrots."
+}

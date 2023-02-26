@@ -1,0 +1,100 @@
+{
+    "name": "§3§nLunar§r",
+    "description": "With the Moon above your head, you are able to suffocate enemies on hit and lower the gravity of every player around you. Your diet is also limited to veggies.",
+    "type": "origins:multiple",
+    "veggies": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:daytime"
+        },
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "origins:meat"
+                            }
+                        },
+                        {
+                            "type": "origins:meat"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:food"
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "origins:ignore_diet"
+                    },
+                    "inverted": true
+                }
+            ]
+        }
+    },
+    "gravity": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "apoli:daytime"
+                },
+                {
+                    "type": "origins:exposed_to_sky"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[type=player,distance=..6] jump_boost 1 2 true"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[type=player,distance=..6] slow_falling 1 0 true"
+                }
+            ]
+        }
+    },
+    "speed_weak": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "apoli:daytime"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:exposed_to_sky"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[type=player,distance=..6] jump_boost 1 0 true"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @e[type=player,distance=..6] slow_falling 1 0 true"
+                }
+            ]
+        }
+    }
+}

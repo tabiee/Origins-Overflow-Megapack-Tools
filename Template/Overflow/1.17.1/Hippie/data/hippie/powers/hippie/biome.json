@@ -1,0 +1,32 @@
+{
+    "name": "§2§nAt Home",
+    "description": "You feel great in mushroom lands.",
+    "condition": {
+        "type": "origins:biome",
+        "biomes": [
+            "minecraft:mushroom_fields",
+            "minecraft:mushroom_field_shore"
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 60,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "regeneration",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "speed",
+                "duration": 100,
+                "amplifier": 3,
+                "show_particles": false,
+                "show_icon": false
+            }
+        ]
+    }
+}

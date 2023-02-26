@@ -1,0 +1,9 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:power_active",
+        "power": "*:tricks/fade"
+    },
+    "type": "origins:invisibility",
+    "render_armor": false
+}

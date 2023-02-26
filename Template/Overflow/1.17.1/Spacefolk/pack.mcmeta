@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 6,
+    "name": "Spacefolk",
+	"id": "spacefolk",
+	"version": "1.16.5",
+    "description": "Space stuff",
+	"authors": "Meightaboot on Fiverr, Teomydude IGN"
+  }
+}

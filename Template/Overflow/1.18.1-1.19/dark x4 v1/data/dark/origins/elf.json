@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"dark:elf/tp",
+		"dark:elf/hp",
+		"origins:cat_vision",
+		"dark:elf/shadows",
+		"dark:elf/sunlight"
+	],
+	"icon": "minecraft:sculk",
+	"impact": 3,
+	"name": "Dark Elf",
+	"description": "The elves that live in shadows and void, having gathered their power to use as their own."
+}

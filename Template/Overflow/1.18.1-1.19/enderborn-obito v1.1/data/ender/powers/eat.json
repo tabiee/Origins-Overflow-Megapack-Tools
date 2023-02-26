@@ -1,0 +1,48 @@
+{
+    "name": "Picky Eater",
+    "description": "You can only eat chorus fruit and golden apples.",
+    "type": "origins:multiple",
+    "prev": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:food"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:ingredient",
+                    "ingredient": [
+                        {
+                            "item": "chorus_fruit"
+                        },
+                        {
+                            "item": "golden_apple"
+                        },
+                        {
+                            "item": "enchanted_golden_apple"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "mod": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "chorus_fruit"
+            }
+        },
+        "food_modifier": {
+            "operation": "addition",
+            "value": 2
+        },
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": 16
+        }
+    }
+}

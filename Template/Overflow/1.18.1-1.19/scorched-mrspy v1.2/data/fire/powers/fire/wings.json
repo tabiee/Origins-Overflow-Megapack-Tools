@@ -1,0 +1,44 @@
+{
+    "name": "Fire Wings",
+    "description": "At Level 3, you grow wings.",
+    "type": "origins:multiple",
+    "wings": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:fire/levels_lvl",
+            "comparison": "==",
+            "compare_to": 3
+        },
+        "type": "origins:elytra_flight",
+        "render_elytra": true,
+		"texture_location": "minecraft:textures/entity/wings.png"
+    },
+    "fx": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fall_flying"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fire/levels_lvl",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle flame ~ ~ ~ 1 0 1 0 3",
+                    "permission_level": 4
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+	"name": "§4§nArcane Weakness",
+	"description": "You take more damage from enchanted items.",
+	"type": "origins:modify_damage_taken",
+	"damage_condition": {
+		"type": "origins:attacker",
+		"entity_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{}]}}}]",
+                    "comparison": ">=",
+                    "compare_to": 1,
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={HandItems:[{},{},{tag:{Enchantments:[{}]}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1,
+                    "permission_level": 4
+                }
+            ]
+        }
+	},
+	"modifier": {
+		"operation": "multiply_total",
+		"value": 0.5
+	}
+}

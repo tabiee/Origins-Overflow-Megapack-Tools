@@ -1,0 +1,21 @@
+{
+    "name": "Weak Frame",
+    "description": "You cannot wear any chestplate.",
+    "type": "origins:restrict_armor",
+    "head": {
+        "type": "origins:constant",
+        "value": false
+    },
+    "chest": {
+        "inverted": true,
+        "type": "origins:empty"
+    },
+    "legs": {
+        "type": "origins:constant",
+        "value": false
+    },
+    "feet": {
+        "type": "origins:constant",
+        "value": false
+    }
+}

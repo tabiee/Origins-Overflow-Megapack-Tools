@@ -1,0 +1,197 @@
+{
+	"name": "§5§nBeam of Color",
+	"description": "The power of rainbows.",
+	"type": "origins:multiple",
+	"red": {
+		"condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "hippie:hippie/beam_nuggets",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "hippie:hippie/recharge_nuggets",
+                    "comparison": ">",
+                    "compare_to": 4
+                }
+            ]
+        },
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [{
+					"type": "origins:execute_command",
+					"command": "execute positioned ^ ^1.7 ^ anchored feet run function hippie:red/start_ray",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.shulker_bullet.hurt",
+					"volume": 1,
+					"pitch": 1.2
+				},
+                {
+                    "type": "origins:change_resource",
+                    "resource": "hippie:hippie/recharge_nuggets",
+                    "change": -4
+                }
+			]
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "primary",
+			"continuous": true
+		}
+	},
+	"ora": {
+		"condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "hippie:hippie/beam_nuggets",
+                    "comparison": "==",
+                    "compare_to": 2
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "hippie:hippie/recharge_nuggets",
+                    "comparison": ">",
+                    "compare_to": 4
+                }
+            ]
+        },
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [{
+					"type": "origins:execute_command",
+					"command": "execute positioned ^ ^1.7 ^ anchored feet run function hippie:orange/start_ray",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.shulker_bullet.hurt",
+					"volume": 1,
+					"pitch": 1.4
+				},
+                {
+                    "type": "origins:change_resource",
+                    "resource": "hippie:hippie/recharge_nuggets",
+                    "change": -4
+                }
+			]
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "primary",
+			"continuous": true
+		}
+	},
+	"cya": {
+		"condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "hippie:hippie/beam_nuggets",
+                    "comparison": "==",
+                    "compare_to": 3
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "hippie:hippie/recharge_nuggets",
+                    "comparison": ">",
+                    "compare_to": 4
+                }
+            ]
+        },
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [{
+					"type": "origins:execute_command",
+					"command": "execute positioned ^ ^1.7 ^ anchored feet run function hippie:cyan/start_ray",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.shulker_bullet.hurt",
+					"volume": 1,
+					"pitch": 1.6
+				},
+                {
+                    "type": "origins:change_resource",
+                    "resource": "hippie:hippie/recharge_nuggets",
+                    "change": -4
+                }
+			]
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "primary",
+			"continuous": true
+		}
+	},
+	"purp": {
+		"condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "hippie:hippie/beam_nuggets",
+                    "comparison": "==",
+                    "compare_to": 4
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "hippie:hippie/recharge_nuggets",
+                    "comparison": ">",
+                    "compare_to": 4
+                }
+            ]
+        },
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [{
+					"type": "origins:execute_command",
+					"command": "execute positioned ^ ^1.7 ^ anchored feet run function hippie:purple/start_ray",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.shulker_bullet.hurt",
+					"volume": 1,
+					"pitch": 2
+				},
+                {
+                    "type": "origins:change_resource",
+                    "resource": "hippie:hippie/recharge_nuggets",
+                    "change": -4
+                }
+			]
+		},
+		"cooldown": 1,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "primary",
+			"continuous": true
+		}
+	}
+}

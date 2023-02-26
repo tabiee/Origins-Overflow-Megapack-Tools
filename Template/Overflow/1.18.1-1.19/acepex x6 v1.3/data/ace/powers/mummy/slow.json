@@ -1,0 +1,19 @@
+{
+    "name": "Photophobia",
+    "description": "You are slowed by sunlight.",
+    "condition": {
+        "type": "origins:exposed_to_sun"
+    },
+    "type": "origins:action_over_time",
+    "interval": 25,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "slowness",
+            "duration": 35,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    }
+}

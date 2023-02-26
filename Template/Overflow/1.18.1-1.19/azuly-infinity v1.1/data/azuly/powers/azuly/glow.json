@@ -1,0 +1,23 @@
+{
+	"name": "§1§nExtra-dimensional Senses",
+	"description": "Your Secondary lets you sniff out other beings around you, giving everything around you a blue glow.",
+	"type": "origins:multiple",
+	"tap": {
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"see": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:azuly/glow_tap"
+		},
+		"type": "origins:entity_glow",
+		"use_teams": false,
+		"red": 0.3,
+		"green": 0.3,
+		"blue": 0.7
+	}
+}

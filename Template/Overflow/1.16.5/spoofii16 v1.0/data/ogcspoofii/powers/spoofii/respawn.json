@@ -1,0 +1,21 @@
+{
+    "name": "Ghost",
+    "description": "You turn into a ghost upon death, to return to life you need murder.",
+    "type": "origins:action_on_callback",
+    "execute_chosen_when_orb": false,
+    "entity_action_respawned": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "origin set @s origins:origin ogcspoofii:ghost",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "/give @s iron_sword{display:{Name:'[{\"text\":\"Spectreblade\",\"color\":\"aqua\"}]',Lore:['[{\"text\":\"Time for Murder :)\",\"italic\":false,\"color\":\"dark_red\",\"bold\":true}]']},Enchantments:[{id:vanishing_curse,lvl:1},{id:sharpness,lvl:5}],HideFlags:1} 1",
+                "permission_level": 4
+            }
+        ]
+    }
+}

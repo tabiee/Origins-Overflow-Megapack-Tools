@@ -1,0 +1,170 @@
+{
+    "name": "Tinkerer",
+    "description": "Certain redstone recipes are cheaper for you.",
+    "type": "origins:multiple",
+    "tnt": {
+        "type": "origins:recipe",
+        "recipe": {
+            "id": "noct:recipes/cheap_tnt",
+            "type": "minecraft:crafting_shapeless",
+            "ingredients": [
+                {
+                    "item": "sand"
+                },
+                {
+                    "item": "gunpowder"
+                },
+                {
+                    "item": "gunpowder"
+                },
+                {
+                    "item": "sand"
+                }
+            ],
+            "result": {
+                "item": "tnt",
+                "count": 1
+            }
+        }
+    },
+    "dispenser": {
+        "type": "origins:recipe",
+        "recipe": {
+            "id": "noct:recipes/cheap_dispenser",
+            "type": "minecraft:crafting_shaped",
+            "pattern": [
+                " # ",
+                "#B#",
+                "#R#"
+            ],
+            "key": {
+                "#": {
+                    "item": "cobblestone"
+                },
+                "B": {
+                    "item": "bow"
+                },
+                "R": {
+                    "item": "redstone"
+                }
+            },
+            "result": {
+                "item": "dispenser",
+                "count": 1
+            }
+        }
+    },
+    "comparator": {
+        "type": "origins:recipe",
+        "recipe": {
+            "id": "noct:recipes/cheap_comparator",
+            "type": "minecraft:crafting_shaped",
+            "pattern": [
+                " # ",
+                "#Q#",
+                " S "
+            ],
+            "key": {
+                "#": {
+                    "item": "minecraft:redstone_torch"
+                },
+                "Q": {
+                    "item": "minecraft:quartz"
+                },
+                "S": {
+                    "item": "minecraft:stone"
+                }
+            },
+            "result": {
+                "item": "minecraft:comparator",
+                "count": 1
+            }
+        }
+    },
+    "sculk_sensor": {
+        "type": "origins:recipe",
+        "recipe": {
+            "id": "noct:recipes/cheap_sculk_sensor",
+            "type": "minecraft:crafting_shaped",
+            "pattern": [
+                "#D#",
+                "RNR",
+                "SSS"
+            ],
+            "key": {
+                "#": {
+                    "item": "minecraft:twisting_vines"
+                },
+                "D": {
+                    "item": "minecraft:diamond"
+                },
+                "R": {
+                    "item": "minecraft:redstone"
+                },
+                "N": {
+                    "item": "minecraft:note_block"
+                },
+                "S": {
+                    "item": "minecraft:sculk"
+                }
+            },
+            "result": {
+                "item": "minecraft:sculk_sensor",
+                "count": 1
+            }
+        }
+    },
+    "observer": {
+        "type": "origins:recipe",
+        "recipe": {
+            "id": "noct:recipes/cheap_observer",
+            "type": "minecraft:crafting_shaped",
+            "pattern": [
+                "##",
+                "RQ",
+                "##"
+            ],
+            "key": {
+                "#": {
+                    "item": "minecraft:cobblestone"
+                },
+                "R": {
+                    "item": "minecraft:redstone"
+                },
+                "Q": {
+                    "item": "minecraft:quartz"
+                }
+            },
+            "result": {
+                "item": "minecraft:observer",
+                "count": 1
+            }
+        }
+    },
+    "repeater": {
+        "type": "origins:recipe",
+        "recipe": {
+            "id": "noct:recipes/cheap_repeater",
+            "type": "minecraft:crafting_shaped",
+            "pattern": [
+                "#R#",
+                " S "
+            ],
+            "key": {
+                "#": {
+                    "item": "minecraft:redstone_torch"
+                },
+                "R": {
+                    "item": "minecraft:redstone"
+                },
+                "S": {
+                    "item": "minecraft:stone"
+                }
+            },
+            "result": {
+                "item": "minecraft:repeater",
+                "count": 1
+            }
+        }
+    }
+}

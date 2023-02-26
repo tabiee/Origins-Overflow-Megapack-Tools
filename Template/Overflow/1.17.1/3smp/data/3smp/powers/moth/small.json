@@ -1,0 +1,42 @@
+{
+    "type": "origins:multiple",
+    "name": "§6§nSmall Bug",
+    "description": "Smaller than an average humanoid.",
+    "modify_size": {
+        "type": "extraorigins:modify_size",
+        "scale": 0.65
+    },
+    "health": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "value": -4,
+            "operation": "addition",
+            "name": "moth health reduction"
+        }
+    },
+    "mothness": {
+        "type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+            "permission_level": 4,
+            "command": "winged set winged:blue_elytra"
+		},
+        "entity_action_lost": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "identity unequip @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "winged clear"
+                }
+            ]
+        },
+        "execute_chosen_when_orb": true
+    }
+}

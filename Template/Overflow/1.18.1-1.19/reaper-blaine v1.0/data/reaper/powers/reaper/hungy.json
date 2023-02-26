@@ -1,0 +1,9 @@
+{
+    "name": "§2§nNo Appetite",
+    "description": "You hardly eat.",
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "operation": "addition",
+        "value": -0.6
+    }
+}

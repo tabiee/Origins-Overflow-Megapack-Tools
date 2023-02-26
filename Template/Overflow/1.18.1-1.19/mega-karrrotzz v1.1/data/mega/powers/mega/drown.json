@@ -1,0 +1,10 @@
+{
+    "name": "§2§nGood Lungs",
+    "description": "You can hold your breath for longer.",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:gain_air",
+        "value": 10
+    }
+}

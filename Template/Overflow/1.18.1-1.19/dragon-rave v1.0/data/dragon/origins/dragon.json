@@ -1,0 +1,25 @@
+{
+	"powers": [
+		"dragon:dragon/fireball",
+		"dragon:dragon/launch",
+		"dragon:dragon/fly",
+		"dragon:dragon/winged",
+		"dragon:dragon/chomp",
+		"dragon:dragon/sharp",
+		"dragon:dragon/tough",
+		"dragon:dragon/hp",
+		"dragon:dragon/fire",
+		"dragon:dragon/fall",
+		"dragon:dragon/size",
+		"dragon:dragon/carnivore",
+		"dragon:dragon/shield",
+		"dragon:dragon/sleep",
+		"dragon:dragon/shiny",
+		"dragon:dragon/hydro",
+		"dragon:dragon/tagger"
+	],
+	"icon": "minecraft:dragon_head",
+	"impact": 3,
+	"name": "§c§l§oDragon",
+	"description": "An ancient race of dragon that have lived for a long time."
+}

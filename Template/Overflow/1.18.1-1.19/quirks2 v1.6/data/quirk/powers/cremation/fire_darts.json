@@ -1,0 +1,21 @@
+{
+    "type": "origins:fire_projectile",
+    "entity_type": "minecraft:firework_rocket",
+    "cooldown": 300,
+	"count": 4,
+	"interval": 5,
+	"speed": 2.0,
+	"divergence": 9.0,
+	"sound": "minecraft:entity.ender_dragon.shoot",
+    "hud_render": {
+        "should_render": true,
+		"bar_index": 8
+    },
+    "tag": "{LifeTime:9,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:0,Flicker:0,Trail:0,Colors:[I;2437522,6719955],FadeColors:[I;2437522,6719955]},{Type:0,Flicker:0,Trail:0,Colors:[I;2437522,6719955],FadeColors:[I;2437522,6719955]},{Type:0,Flicker:0,Trail:0,Colors:[I;2437522,6719955],FadeColors:[I;2437522,6719955]},{Type:0,Flicker:0,Trail:0,Colors:[I;2437522,6719955],FadeColors:[I;2437522,6719955]}]}}}}",
+    "key": {
+        "key": "key.origins.senary_active",
+        "continuous": false
+    },
+	"name": "Fire Darts",
+	"description": "Send out fire darts that explode"
+}

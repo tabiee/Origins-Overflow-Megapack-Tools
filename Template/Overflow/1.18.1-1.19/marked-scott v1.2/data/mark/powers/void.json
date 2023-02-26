@@ -1,0 +1,6 @@
+{
+    "name": "Void-touched",
+    "description": "Due to your ties to the void, you are immune to withering.",
+    "type": "origins:effect_immunity",
+    "effect": "wither"
+}

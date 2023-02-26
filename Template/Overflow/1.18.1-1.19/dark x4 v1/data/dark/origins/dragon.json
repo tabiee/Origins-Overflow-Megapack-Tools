@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"dark:dragon/fireballs",
+		"origins:elytra",
+		"origins:more_exhaustion",
+		"origins:carnivore",
+		"origins:nether_spawn",
+		"dark:dragon/particles"
+	],
+	"icon": "minecraft:fire_charge",
+	"impact": 3,
+	"name": "Dragon",
+	"description": "Flying lizard that escaped the Nether to terrorize people with it's devastating fireballs."
+}

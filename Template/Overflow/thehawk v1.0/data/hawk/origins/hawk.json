@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"hawk:hawk/pickup",
+		"hawk:hawk/buff",
+		"hawk:hawk/elytra",
+		"hawk:hawk/sharp",
+		"hawk:hawk/sight",
+		"hawk:hawk/tagger",
+		"hawk:hawk/debug"
+	],
+	"icon": "minecraft:flint",
+	"impact": 1,
+	"name": "§c§l§oHawk",
+	"description": "Swift flier takes to the skies."
+}

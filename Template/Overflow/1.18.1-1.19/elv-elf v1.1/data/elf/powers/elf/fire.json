@@ -1,0 +1,42 @@
+{
+    "name": "Flammable",
+    "description": "You are a very weak to fire creature.\nYou take 25% more damage from fire and 35% more damage from nether mobs.\nYour stats all decrease by 50% while in the nether.\nYou also take 15% more knockback.",
+    "type": "origins:multiple",
+    "firedmg": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:fire"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.25
+        }
+    },
+    "firemobs": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:in_tag",
+                "tag": "elf:nether"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.35
+        }
+    },
+    "knbck": {
+        "type": "origins:self_action_when_hit",
+        "entity_action": {
+            "type": "origins:add_velocity",
+            "y": 0.01,
+            "z": -0.25,
+            "space": "local"
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

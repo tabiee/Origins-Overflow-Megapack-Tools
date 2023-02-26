@@ -1,0 +1,227 @@
+{
+    "name": "Electronics",
+    "description": "Standing in water will drain your charge and damage you once at zero. When charge drops below 50% you walk and break blocks slower. Once charge is at zero you can no longer move but can still attack and place blocks.",
+    "type": "origins:multiple",
+    "nofood": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:food"
+        }
+    },
+    "coal": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "coal"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "coal"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:star/charge_nuggets",
+                    "comparison": "<",
+                    "compare_to": 1000
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s coal 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:star/charge_nuggets",
+                    "change": 140
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.bone_block.break",
+                    "volume": 0.5,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        }
+    },
+    "charcoal": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "charcoal"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "charcoal"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:star/charge_nuggets",
+                    "comparison": "<",
+                    "compare_to": 1000
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s charcoal 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:star/charge_nuggets",
+                    "change": 140
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.bone_block.break",
+                    "volume": 0.5,
+                    "pitch": 1
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        }
+    },
+    "sunlight": {
+        "condition": {
+            "type": "origins:exposed_to_sun"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:star/charge_nuggets",
+            "change": 10
+        }
+    },
+    "lava": {
+        "condition": {
+            "type": "origins:block_in_radius",
+            "block_condition": {
+                "type": "origins:block",
+                "block": "minecraft:lava"
+            },
+            "radius": 2,
+            "shape": "cube",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:star/charge_nuggets",
+            "change": 25
+        }
+    },
+    "redstone": {
+        "condition": {
+            "type": "origins:block_in_radius",
+            "block_condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:block",
+                        "block": "redstone_block"
+                    },
+                    {
+                        "type": "origins:block",
+                        "block": "redstone_torch"
+                    }
+                ]
+            },
+            "radius": 3,
+            "shape": "cube",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:star/charge_nuggets",
+            "change": 25
+        }
+    },
+    "bucket": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "offhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "lava_bucket"
+                }
+            }
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:star/charge_nuggets",
+            "change": 5
+        }
+    }
+}

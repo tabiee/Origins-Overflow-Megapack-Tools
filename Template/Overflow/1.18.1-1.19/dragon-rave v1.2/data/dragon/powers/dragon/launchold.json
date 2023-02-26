@@ -1,0 +1,19 @@
+{
+    "name": "§5§nLaunch",
+    "description": "Every 25 seconds you are able to launch about 25 blocks up into the air.",
+    "condition": {
+        "inverted": true,
+        "type": "origins:fall_flying"
+    },
+    "type": "origins:launch",
+    "cooldown": 500,
+    "speed": 2.5,
+    "hud_render": {
+        "should_render": true,
+        "bar_index": 4
+    },
+    "sound": "minecraft:entity.ender_dragon.flap",
+    "key": {
+        "key": "secondary"
+    }
+}

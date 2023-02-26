@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"echo:scream",
+		"echo:ping",
+		"echo:blast",
+		"echo:shield",
+		"echo:sculk",
+		"echo:helm",
+		"echo:sleep",
+		"echo:wool",
+		"echo:size",
+		"echo:hp",
+		"echo:tagger"
+	],
+	"icon": "minecraft:sculk_shrieker",
+	"impact": 3,
+	"name": "Echo",
+	"description": "A normal human born with powers of converting sound into energy."
+}

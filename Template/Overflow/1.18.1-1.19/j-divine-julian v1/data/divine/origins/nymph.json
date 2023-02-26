@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"divine:siren",
+		"divine:blast",
+		"divine:fall",
+		"divine:green",
+		"divine:regen",
+		"divine:veggie",
+		"divine:iron",
+		"divine:nether",
+		"divine:fire"
+	],
+	"icon": "minecraft:horn_coral",
+	"impact": 3,
+	"name": "§6§l§oDivine Nymph",
+	"description": "You are a demi-god and a forest nymph, and you will do anything for the people you care about."
+}

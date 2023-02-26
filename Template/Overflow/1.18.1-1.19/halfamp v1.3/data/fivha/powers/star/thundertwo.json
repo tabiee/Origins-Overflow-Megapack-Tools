@@ -1,0 +1,32 @@
+{
+    "hidden": true,
+    "type": "origins:self_action_when_hit",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "lightningBolt"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle glow ~ ~ ~ 1.5 1 1.5 0.5 100",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "block.beacon.activate",
+                "volume": 1,
+                "pitch": 0.7
+            },
+            {
+                "type": "origins:trigger_cooldown",
+                "power": "*:star/thunder_zappity"
+            }
+        ]
+    },
+    "cooldown": 1000,
+    "hud_render": {
+        "should_render": false
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "impact": 1,
+    "unchoosable": false,
+    "name": "§e§l§oElectrokinetic",
+    "description": "Person in tune with the element of Lightning.",
+    "icon": "minecraft:horn_coral_fan",
+    "powers": [
+	    "spacefolk:electro/tagger",
+		"spacefolk:electro/zap",
+		"spacefolk:electro/heal",
+		"spacefolk:electro/lightningshield",
+		"spacefolk:electro/thunder",
+		"spacefolk:electro/waterdmg",
+		"spacefolk:electro/zapimmune",
+		"spacefolk:electro/zoom",
+		"spacefolk:electro/exhaust",
+		"spacefolk:electro/shieldsound"
+    ]
+}

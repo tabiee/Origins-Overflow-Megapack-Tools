@@ -1,0 +1,47 @@
+{
+    "name": "Power-Up",
+    "description": "Gain Strength and Haste for 20s, 1min cooldown.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "strength",
+                        "duration": 400,
+                        "amplifier": 0,
+                        "show_particles": false,
+                        "show_icon": false
+                    },
+                    {
+                        "effect": "haste",
+                        "duration": 400,
+                        "amplifier": 3,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                ]
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle crit ~ ~ ~ 2 0.3 2 0.1 25",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:block.beacon.activate",
+                "volume": 1,
+                "pitch": 2
+            }
+        ]
+    },
+    "cooldown": 1200,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 2
+    },
+    "key": "primary"
+}

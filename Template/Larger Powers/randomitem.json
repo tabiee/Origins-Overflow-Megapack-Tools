@@ -1,0 +1,6588 @@
+{
+	"name": "Trickster",
+	"description": "Every minute, you recieve one random item",
+	"type": "origins:action_over_time",
+	"interval": 1200,
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.vex.charge"
+			},
+			{
+				"type": "origins:choice",
+				"actions": [{
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:granite"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_granite"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diorite"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_diorite"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:andesite"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_andesite"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:grass_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dirt"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:coarse_dirt"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:podzol"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cobblestone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_planks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_planks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_planks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_planks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_planks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_planks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_sapling"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_sapling"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_sapling"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_sapling"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_sapling"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_sapling"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sand"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_sand"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gravel"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gold_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:coal_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_log"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_log"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_log"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_log"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_log"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_log"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_oak_log"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_spruce_log"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_birch_log"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_jungle_log"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_acacia_log"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_dark_oak_log"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_oak_wood"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_spruce_wood"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_birch_wood"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_jungle_wood"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_acacia_wood"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_dark_oak_wood"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_wood"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_wood"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_wood"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_wood"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_wood"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_wood"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_leaves"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_leaves"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_leaves"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_leaves"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_leaves"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_leaves"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sponge"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:wet_sponge"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lapis_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lapis_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dispenser"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sandstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chiseled_sandstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cut_sandstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:note_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:powered_rail"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:detector_rail"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sticky_piston"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cobweb"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:grass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:fern"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_bush"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:seagrass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sea_pickle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:piston"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_wool"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dendelion"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:poppy"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_orchid"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:allium"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:azure_bluet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_tulip"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_tulip"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_tulip"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_tulip"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oxeye_daisy"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_mushroom"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_mushroom"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gold_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sandstone_slan"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cobblestone_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brick_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_brick_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nether_brick_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:quartz_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_sandstone_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purpur_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:prismarine_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:prismarine_brick_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_prismarine_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smooth_quartz"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smooth_red_sandstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smooth_sandstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smooth_stone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:tnt"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bookshelf"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mossy_cobblestone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:obsidian"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:torch"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:end_rod"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chorus_plant"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chorus_flower"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purpur_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purpur_pillar"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purpur_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chest"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamond_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamond_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crafting_table"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:furnace"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:ladder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:rail"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cobblestone_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lever"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_pressure_plate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_pressure_plate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_pressure_plate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_pressure_plate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_pressure_plate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_pressure_plate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_pressure_plate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:redstone_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:redstone_torch"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_button"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:snow"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:ice"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:snow_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cactus"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:clay"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jukebox"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_fence"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_fence"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_fence"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_fence"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_fence"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_fence"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pumpkin"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:carved_pumpkin"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherrack"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:soul_sand"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:glowstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jack_o_lantern"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_trapdoor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_trapdoor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_trapdoor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_trapdoor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_trapdoor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_trapdoor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mossy_stone_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cracked_stone_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chiseled_stone_brick"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_mushroom_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_mushroom_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mushroom_stem"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_bars"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:melon"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:vine"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_fence_gate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_fence_gate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_fence_gate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_fence_gate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_fence_gate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_fance_gate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brick_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_brick_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mycelium"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lily_pad"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nether_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nether_brick_fence"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nether_brick_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:enchanting_table"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:end_stone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:end_stone_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:redstone_lamp"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sandstone_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:emerald_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:ender_chest"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:tripwire_hook"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:emerald_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:beacon"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cobblestone_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mossy_cobblestone_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_button"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_button"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_button"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_button"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_button"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_button"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:anvil"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chipped_anvil"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:damaged_anvil"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:trapped_chest"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_weighted_pressure_plate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:heavy_weighted_pressure_plate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:daylight_detector"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:redstone_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nether_quartz_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:hopper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chiseled_quartz_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:quartz_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:quartz_pillar"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:quartz_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:activator_rail"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dropper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_terracitta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_trapdoor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:hay_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:coal_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:packed_ice"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:slime_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sunflower"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lilac"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:rose_bush"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:peony"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:tall_grass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:large_fern"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_stained"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_stained_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_stained_glass_pane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:prismarine"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:prismarine_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_prismarine"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:prismarine_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:prismarine_brick_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_prismarine_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sea_lantern"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_sandstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chiseled_red_sandstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cut_red_sandstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_sandstone_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magma_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nether_wart_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_nether_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bone_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:observer"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_shulker_box"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_glazed_terracotta"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_concrete"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_orange_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_concrete_powder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:turtle_egg"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_tube_coral_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_brain_coral_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_bubble_coral_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_fire_coral_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_horn_coral_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:tube_coral_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brain_coral_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bubble_coral_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:fire_coral_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:horn_coral_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:tube_coral"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brain_coral"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bubble_coral"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:fire_coral"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:horn_coral"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_brain_coral"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_bubble_coral"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_fire_coral"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_horn_coral"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_tube_coral"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:tube_coral_fan"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brain_coral_fan"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bubble_coral_fan"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:fire_coral_fan"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:horn_coral_fan"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_tube_coral_fan"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_brain_coral_fan"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_bubble_coral_fan"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_fire_coral_fan"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dead_horn_coral_fan"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_ice"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:conduit"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_door"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_door"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_door"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_door"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_door"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_door"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_door"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:repeater"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:comparator"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:turtle_helmet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:scute"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_shovel"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_pickaxe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_axe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:flint_and_steel"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:apple"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bow"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:arrow"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:coal"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:charcoal"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamond"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_ingot"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gold_ingot"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_sword"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:wooden_sword"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:wooden_shovel"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:wooden_pickaxe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:wooden_axe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_sword"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_shovel"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_pickaxe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_axe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamond_sword"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamond_shovel"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamond_pickaxe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamoned_axe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stick"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bowl"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mushroom_stew"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:golden_sword"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:golden_shovel"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:golden_pickaxe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:golden_axe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:string"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:feather"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gunpowder"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:wooden_hoe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_hoe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_hoe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamond_hoe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:golden_hoe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:wheat_feed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:wheat"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bread"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:leather_helmet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:leather_chestplate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:leather_legging"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:leather_boots"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chainmail_helmet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chainmail_chestplate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chainmail_leggings"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chainmail_boots"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_helmet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_chestplate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_leggings"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_boot"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamond_helmet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamond_chestplate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamond_leggings"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamond_boots"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:golden_helmet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:golden_chestplate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:golden_leggings"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:golden_boots"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:flint"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:porkchop"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cooked_porkchop"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:painting"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:golden_apple"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:enchanted_golden_apple"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sign"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bucket"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:water_bucket"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lava_bucket"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:minecart"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:saddle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:redstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:snowball"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_boat"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:leather"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:milk_bucket"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pufferfish_bucket"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:salmon_bucket"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cod_bucket"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:tropical_fish_bucket"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brick"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:clay_ball"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sugar_cane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:kelp"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dried_kelp_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:paper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:book"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:slime_ball"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chest_minecart"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:furnace_minecraft"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:egg"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:compass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:fishing_rod"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:clock"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:glowstone_dust"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cod"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:salmon"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:tropical_fish"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pufferfish"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cooked_cod"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cooked_salmon"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:ink_sac"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:rose_red"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cactus_green"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cocoa_beans"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lapis_lazuli"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dandelion_yellow"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bone_meal"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sugar"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cake"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_bed"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cookie"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:filled_map"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:shears"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:melon_slice"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dried_kelp"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pumpkin_seeds"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:melon_seeds"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:beef"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cooked_beef"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chicken"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cooked_chicken"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:rotten_flesh"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:ender_pearl"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blaze_rod"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:ghast_tear"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gold_nugget"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nether_wart"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:water}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:awkward}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:thick}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion:{Potion:mundane}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:regeneration}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:swiftness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:fire_resistance}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:poison}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:healing}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:night_vision}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:weakness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strength}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:slowness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:harming}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:water_breathing}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:invisiblity}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strong_regeneration}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strong_swiftness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strong_poison}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strong_healing}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strong_strength}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strong_leaping}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strong_harming}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:long_regeneration}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:long_swiftness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:long_fire_resistance}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:long_poison}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:long_night_vision}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:long_weakness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:long_strength}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:long_slowness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:leaping}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:long_water_breathing}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:long_invisibility}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strong_regeneration}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strong_swiftness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strong_poison}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strong_strength}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:turtle_master}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:long_turtle_master}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:strong_turtle_master}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:slow_falling}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potion{Potion:long_slow_falling}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:regeneration}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:swiftness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:fire_resistance}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:poison}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:healing}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:night_vision}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:weakness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strength}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:slowness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:harming}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:water_breathing}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:invisibility}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strong_regeneration}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strong_swiftness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strong_poison}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strong_healing}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strong_poison)"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strong_leaping}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strong_harming}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:long_regeneration}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:long_swiftness)"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:long_fire_resistance}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:long_poison}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:long_night_vision}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:long_weakness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:long_strength}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:long_slowness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:leaping}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:long_water_breathing}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:long_invisibilty}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strong_regeneration}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strong_swiftness}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strong_poison}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strong_strength}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:turtle_master}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:long_turtle_master}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:strong_turtle_master}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:slow_falling}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:splash_potion{Potion:long_slow_falling}"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:glass_bottle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spider_eye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:fermented_spider_eye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blaze_power"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magma_cream"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brewing_stand"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cauldron"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:ender_eye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:glistering_melon_slice"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:experience_bottle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:fire_charge"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:writable_book"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:written_book"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:emerald"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:item_frame"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:flower_pot"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:carrot"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:potato"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:baked_potato"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:poisonous_potato"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:map"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:golden_carrot"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:skeleton_skull"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:wither_skeleton_skull"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:player_head"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:zombie_head"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:creeper_head"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dragon_head"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:carrot_on_a_stick"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nether_star"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pumpkin_pie"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:firework_rocket"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:firework_star"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:enchanted_book"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nether_brick"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:quartz"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:tnt_minecart"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:hopper_minecraft"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:prismarine_shard"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:prismarine_crystals"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:rabbit"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cooked_rabbit"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:rabbit_stew"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:rabbit_foot"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:rabbit_hide"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:armor_stand"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_horse_armor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:golden_horse_armor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diamond_horse_armor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lead"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:name_tag"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mutton"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cooked_mutton"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_banner"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:end_crystal"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chrous_fruit"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:popped_chorus_fruit"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:beetroot"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:beetroot_seeds"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:beetroot_soup"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dragon_breath"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spectral_arrow"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:tipped_arrow"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:shield"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:elytra"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_boat"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_boat"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_boat"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_boat"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_boat"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:totem_of_undying"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:shulker_shell"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_nugget"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:knowledge_book"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:debug_stick"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_13"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_cat"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_blocks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_chirp"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_far"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_mall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_mellohi"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_stal"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_strad"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_ward"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_11"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_wait"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:trident"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:phantom_membrane"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nautilus_shell"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:heart_of_the_sea"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cornflower"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lily_of_the_valley"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:wither_rose"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smooth_stone_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cut_sandstone_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cut_red_sandstone_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brick_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:prismarine_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_sandstone_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mossy_stone_brick_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:granite_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_brick_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nether_brick_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:andesite_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_nether_brick_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sandstone_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:end_stone_brick_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diorite_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_granite_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smooth_red_sandstone_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mossy_stone_brick_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_diorite_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mossy_cobblestone_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:end_stone_brick_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stone_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smooth_sandstone_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smooth_quartz_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:granite_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:andesite_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_nether_brick_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_andesite_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diorite_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_granite_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smooth_red_sandstone_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mossy_stone_brick_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_diorite_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mossy_cobblestone_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:end_stone_brick_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smooth_sandstone_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smooth_quartz_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:granite_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:andesite_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_nether_brick_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_andesite_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:diorite_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:scaffolding"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:composter"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oak_sign"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spruce_sign"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:birch_sign"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:jungle_sign"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:acacia_sign"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dark_oak_sign"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bamboo"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_dye"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:leather_horse_armor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crossbow"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:suspicious_stew"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:loom"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:flower_banner_pattern"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:creeper_banner_pattern"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:skull_banner_pattern"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:mojang_banner_pattern"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:globe_banner_pattern"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:barrel"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smoker"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blast_furnace"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cartography_table"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:fletching_table"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:grindstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lecturn"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smithing_table"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stonecutter"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bell"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lantern"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sweet_berries"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:campfire"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:honeycomb"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bee_nest"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:beehive"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:honey_bottle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:honey_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:honeycomb_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_nylium"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_nylium"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_planks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_planks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nether_gold_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_stem"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_stem"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_crimson_stem"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_warped_stem"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_crimson_hyphae"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:stripped_warped_hyphae"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_hyphae"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_hyphae"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_fungus"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_fungus"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_roots"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_roots"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:nether_sprout"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:weeping_vines"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:twisting_vines"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_pressure_plate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_pressure_plate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_blackstone_pressure_plate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_fence"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_fence"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:soul_soil"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:basalt"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_basalt"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:soul_torch"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_trapdoor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_trapdoor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chain"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_fence_gate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_fence_gate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cracked_nether_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chiseled_nether_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blackstone_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_blackstone_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_blackstone_brick_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_button"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_button"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_blackstone_button"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:quartz_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_wart_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_door"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_door"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherite_ingot"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherite_scrap"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherite_sword"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherite_shovel"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherite_pickaxe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherite_axe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherite_hoe"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherite_helmet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherite_chestplate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherite_leggings"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherite_boot"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crimson_sign"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_sign"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:warped_fungus_on_a_stick"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_pigstep"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:piglin_banner_pattern"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:soul_lantern"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:soul_campfire"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:shroomlight"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lodestone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:netherite_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:ancient_debris"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:target"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crying_obsidian"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blackstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blackstone_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blackstone_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gilded_blackstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_blackstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_blackstone_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_blackstone_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chiseled_polished_blackstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_blackstone_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_blackstone_brick_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cracked_polished_blackstone_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:respawn_anchor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:amethyst_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:amethyst_bud"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:amethyst_cluster"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:amethyst_shard"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:axolotl_bucket"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:azalea"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:azalea_leaves"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:big_dripleaf"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:black_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:blue_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:broken_elytra"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:brown_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:budding_amethyst"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:bundle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:calcite"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:chiseled_deepslate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cobbled_deepslate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cobbled_deepslate_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cobbled_deepslate_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:copper_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:copper_ingot"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:copper_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cracked_deepslate_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cracked_deepslate_tiles"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crossbow_arrow"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:crossbow_firework"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cut_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cut_copper_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cut_copper_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:cyan_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_bricks"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_brick_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_brick_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_brick_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_coal_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_diamond_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_emerald_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_gold_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_iron_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_lapis_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_redstone_ore"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_tiles"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_tile_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_tile_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:deepslate_tile_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:dripstone_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:exposed_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:exposed_cut_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:exposed_cut_copper_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:exposed_cut_copper_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:flowering_azalea"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:flowering_azalea_leaves"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:glow_berries"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:glow_ink_sac"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:glow_item_frame"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:glow_lichen"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:gray_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:green_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:hanging_roots"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:large_amethyst_bud"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lightning_rod"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_blue_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:light_gray_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:lime_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:magenta_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:medium_amethyst_bud"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:moss_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:moss_carpet"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:orange_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oxidized_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oxidized_cut_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oxidized_cut_copper_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:oxidized_cut_copper_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pink_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:pointed_dripstone"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_deepslate"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_deepslate_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_deepslate_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:polished_deepslate_wall"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:powder_snow_bucket"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:purple_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:raw_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:raw_copper_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:raw_gold"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:raw_gold_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:raw_iron"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:raw_iron_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:red_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:rooted_dirt"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:sculk_sensor"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:small_amethyst_bud"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:small_dripleaf"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:smooth_basalt"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spore_blossom"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:spyglass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:tinted_glass"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:tuff"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_copper_block"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_cut_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_cut_copper_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_cut_copper_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_exposed_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_exposed_cut_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_exposed_cut_copper_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_exposed_cut_copper_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_oxidized_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_oxidized_cut_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_oxidized_cut_copper_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_oxidized_cut_copper_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_weathered_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_weathered_cut_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_weathered_cut_copper_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:waxed_weathered_cut_copper_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:weathered_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:weathered_cut_copper"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:weathered_cut_copper_slab"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:weathered_cut_copper_stairs"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:white_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:yellow_candle"
+					},
+					"weight": 1
+				}, {
+					"element": {
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:music_disc_otherside"
+					},
+					"weight": 1
+				}]
+			}
+		]
+	}
+}

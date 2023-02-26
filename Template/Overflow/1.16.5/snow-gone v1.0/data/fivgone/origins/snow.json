@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"fivgone:snow/dash",
+		"fivgone:snow/snowball",
+		"fivgone:snow/slow",
+		"fivgone:snow/slowice",
+		"fivgone:snow/blue",
+		"fivgone:snow/dmg",
+		"fivgone:snow/fire",
+		"fivgone:snow/particles"
+	],
+	"icon": "minecraft:snowball",
+	"impact": 1,
+	"name": "§b§l§oSnowborn",
+	"description": "Peacekeepers created to oppose the Flameborn."
+}

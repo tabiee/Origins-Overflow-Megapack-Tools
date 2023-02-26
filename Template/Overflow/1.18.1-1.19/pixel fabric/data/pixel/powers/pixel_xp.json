@@ -1,0 +1,54 @@
+{
+    "name": "XP to Bits",
+    "description": "Convert a level of XP into Pixels while holding Shift.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "*:pixel_swapper_bit",
+                "comparison": "==",
+                "compare_to": 0
+            },
+			{
+                "type": "origins:resource",
+                "resource": "*:pixel_meter_resource",
+                "comparison": "!=",
+                "compare_to": 100
+            },
+            {
+                "type": "origins:sneaking"
+            },
+			{
+                "type": "origins:xp_levels",
+                "comparison": "!=",
+                "compare_to": 0
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "cooldown": 5,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+        "bar_index": 0
+    },
+    "key": {
+        "key": "primary",
+        "continuous": true
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:change_resource",
+                "resource": "*:pixel_meter_resource",
+                "change": 5
+            },
+            {
+                "type": "origins:add_xp",
+                "levels": -1
+            }
+        ]
+    }
+}

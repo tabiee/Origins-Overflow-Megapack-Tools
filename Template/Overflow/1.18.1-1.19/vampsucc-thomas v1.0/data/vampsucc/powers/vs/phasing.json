@@ -1,0 +1,56 @@
+{
+	"name": "§1§nEthereal",
+	"description": "You enter a state of etherealness, able to pass through blocks with no resistance.",
+	"type": "origins:multiple",
+	"toggle": {
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": "primary"
+	},
+	"phase": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:vs/phasing_toggle"
+		},
+		"type": "origins:phasing",
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "origins:unphasable"
+		},
+		"blacklist": true,
+		"render_type": "blindness",
+		"view_distance": 10,
+		"phase_down_condition": {
+			"type": "origins:or",
+            "conditions": [
+               {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:sneaking"
+                        },
+                        {
+                            "type": "origins:on_block"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:fall_flying"
+                }
+            ]
+		}
+	},
+	"feed": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:vs/phasing_toggle"
+		},
+		"type": "origins:action_over_time",
+		"interval": 600,
+		"entity_action": {
+			"type": "origins:feed",
+			"food": -1,
+			"saturation": -3
+		}
+	}
+}

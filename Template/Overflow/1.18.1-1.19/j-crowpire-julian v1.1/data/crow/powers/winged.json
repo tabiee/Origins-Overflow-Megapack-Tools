@@ -1,0 +1,23 @@
+{
+    "name": "§5§nBirthright",
+    "description": "Your wings are your birthright as a member of the Crow Coven, these dark black wings allow you to soar through the night skies.",
+    "type": "origins:multiple",
+    "wings": {
+        "type": "origins:elytra_flight",
+        "render_elytra": true
+    },
+    "launch": {
+        "type": "origins:launch",
+        "cooldown": 100,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 23
+        },
+        "sound": "minecraft:entity.parrot.fly",
+        "speed": 2,
+        "key": {
+            "key": "primary",
+            "continuous": true
+        }
+    }
+}

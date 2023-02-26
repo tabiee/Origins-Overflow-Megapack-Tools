@@ -1,0 +1,32 @@
+{
+    "type": "origins:phasing",
+    "blacklist": true,
+    "render_type": "blindness",
+    "view_distance": 100,
+    "block_condition": {
+        "type": "origins:in_tag",
+        "tag": "origins:unphasable",
+        "inverted": false
+    },
+    "phase_down_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:sneaking",
+                "inverted": false
+            },
+            {
+                "type": "origins:on_block",
+                "inverted": false
+            }
+        ],
+        "inverted": false
+    },
+    "condition": {
+        "type": "origins:power_active",
+        "power": "3smp:spectre/phantomize",
+        "inverted": false
+    },
+	    "name": "§5§nIncorporeal[Primary]",
+    "description": "Your body is not quite physical, you can become invisible and phase through blocks."
+}

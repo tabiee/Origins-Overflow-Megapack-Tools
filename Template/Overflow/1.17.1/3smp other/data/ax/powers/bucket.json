@@ -1,0 +1,56 @@
+{
+	"diet": {
+   "type":"origins:active_self",
+   "cooldown":5,
+   "hud_render":{
+      "should_render":false
+   },
+   "condition":{
+      "type":"origins:and",
+      "conditions":[
+         {
+            "type":"origins:equipped_item",
+            "equipment_slot":"mainhand",
+            "item_condition":{
+               "type":"origins:ingredient",
+               "ingredient":{
+                  "item":"minecraft:tropical_fish_bucket"
+               }
+            }
+         },
+         {
+            "type":"origins:food_level",
+            "comparison":"<",
+            "compare_to":20
+         }
+      ]
+   },
+   "entity_action":{
+      "type":"origins:and",
+      "actions":[
+         {
+            "type":"origins:execute_command",
+            "command":"clear @s tropical_fish_bucket 1",
+            "command":"give @s water_bucket 1", 
+			"permission_level": 4
+         },
+         {
+            "type":"origins:feed",
+            "food":20,
+            "saturation":20
+         },
+		 {
+			"type":"origins:execute_command",
+            "command":"playsound minecraft:entity.generic.eat player @a[distance=0..8] ~ ~ ~ 1 1",
+			"permission_level": 4
+		 }
+      ]
+   },
+   "key": {
+        "key": "key.origins.secondary_active",
+        "continuous": true
+    }
+   },
+   "name":"Big Fish Diet",
+   "description":"You can eat a WHOLE FISH, and it is very tasty. [Secondary]"
+}

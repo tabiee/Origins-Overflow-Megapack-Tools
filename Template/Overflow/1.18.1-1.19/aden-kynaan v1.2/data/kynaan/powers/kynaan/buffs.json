@@ -1,0 +1,245 @@
+{
+	"name": "§9§nAspiring Alchemist",
+	"description": "All potion buffs duration are increased by 25%. All debuffs have their duration increased by 50%.",
+	"type": "origins:multiple",
+	"1": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:speed",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"2": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:haste",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"3": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:strength",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"4": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:jump_boost",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"5": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:regeneration",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"6": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:resistance",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"7": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:fire_resistance",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"8": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:water_breathing",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"9": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:invisibility",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"10": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:night_vision",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"11": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:health_boost",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"12": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:absorption",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"13": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:saturation",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"14": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:luck",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"15": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:slow_falling",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"16": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:conduit_power",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"17": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:dolphins_grace",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"18": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:hero_of_the_village",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"19": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:bad_omen",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"20": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:unluck",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"21": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:levitation",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"22": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:glowing",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"23": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:wither",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"24": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:poison",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"25": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:weakness",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"26": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:hunger",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"27": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:blindness",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"28": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:nausea",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"29": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:mining_fatigue",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"30": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:slowness",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	}
+}

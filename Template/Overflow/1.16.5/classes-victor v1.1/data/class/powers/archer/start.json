@@ -1,0 +1,19 @@
+{
+    "name": "§2§nEquipped",
+    "description": "You spawn with a bow and 50 arrows.",
+    "type": "origins:action_on_callback",
+    "entity_action_chosen": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "give @s bow 1"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "give @s arrow 50"
+            }
+        ]
+    },
+    "execute_chosen_when_orb": true
+}

@@ -1,0 +1,176 @@
+{
+    "type": "origins:multiple",
+    "name": "§e§nOne With The Shadows",
+    "description": "Darkness is your ally.",
+    "hidden": false,
+    "invis": {
+        "type": "origins:invisibility",
+        "render_armor": true,
+        "condition": {
+            "type": "origins:and",
+            "inverted": false,
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "inverted": false,
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "block",
+                        "inverted": false,
+                        "comparison": "<",
+                        "compare_to": 6
+                    }
+                },
+                {
+                    "type": "origins:status_effect",
+                    "inverted": true,
+                    "effect": "glowing"
+                }
+            ]
+        }
+    },
+    "speed": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "duration": 40,
+                "is_ambient": false,
+                "show_particles": false,
+                "show_icon": false,
+                "effect": "speed",
+                "amplifier": 3
+            }
+        },
+        "interval": 20,
+        "condition": {
+            "type": "origins:and",
+            "inverted": false,
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "inverted": false,
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "block",
+                        "inverted": false,
+                        "comparison": "<",
+                        "compare_to": 6
+                    }
+                },
+                {
+                    "type": "origins:status_effect",
+                    "inverted": true,
+                    "effect": "glowing"
+                }
+            ]
+        }
+    },
+    "swim": {
+        "type": "origins:swimming",
+        "condition": {
+            "type": "origins:and",
+            "inverted": false,
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "inverted": false,
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "block",
+                        "inverted": false,
+                        "comparison": "<",
+                        "compare_to": 9
+                    }
+                },
+                {
+                    "type": "origins:status_effect",
+                    "inverted": true,
+                    "effect": "glowing"
+                }
+            ]
+        }
+    },
+    "weak": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:and",
+            "inverted": false,
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "inverted": false,
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "block",
+                        "inverted": false,
+                        "comparison": ">",
+                        "compare_to": 12
+                    }
+                },
+                {
+                    "type": "origins:status_effect",
+                    "inverted": true,
+                    "effect": "glowing"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "duration": 40,
+                    "is_ambient": false,
+                    "show_particles": false,
+                    "show_icon": false,
+                    "effect": "weakness"
+                },
+                {
+                    "duration": 40,
+                    "is_ambient": false,
+                    "show_particles": false,
+                    "show_icon": false,
+                    "effect": "slowness",
+                    "amplifier": 1
+                }
+            ]
+        },
+        "interval": 20
+    },
+    "dmg": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:and",
+            "inverted": false,
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "inverted": false,
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "block",
+                        "inverted": false,
+                        "comparison": "==",
+                        "compare_to": 15
+                    }
+                },
+                {
+                    "type": "origins:status_effect",
+                    "inverted": true,
+                    "effect": "glowing"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "duration": 1,
+                "is_ambient": false,
+                "show_particles": false,
+                "show_icon": false,
+                "effect": "instant_damage"
+            }
+        },
+        "interval": 20
+    }
+}

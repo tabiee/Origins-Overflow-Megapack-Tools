@@ -1,0 +1,61 @@
+{
+	"name": "§1§nShadowy Form [Secondary]",
+	"description": "When in darkness, your form dissolves into shadows.",
+    "type": "origins:multiple",
+    "hidden": false,
+    "perm": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "permission_level": 4,
+            "command": "particle betterend:black_spore ~ ~ ~ 0 1 0 0 2 normal"
+        },
+        "interval": 3,
+        "condition": {
+            "type": "origins:status_effect",
+            "inverted": true,
+            "effect": "invisibility"
+        }
+    },
+    "dark": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "permission_level": 4,
+            "command": "particle minecraft:squid_ink ~ ~1 ~ 0 0 0 0 1 normal"
+        },
+        "condition": {
+            "type": "origins:and",
+            "inverted": false,
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "inverted": false,
+                    "block_condition": {
+                        "type": "origins:light_level",
+						"light_type": "block",
+                        "inverted": false,
+                        "comparison": "<",
+                        "compare_to": 6
+                    }
+                },
+                {
+                    "type": "origins:status_effect",
+                    "inverted": true,
+                    "effect": "glowing"
+                },
+                {
+                    "type": "origins:power_active",
+                    "inverted": false,
+                    "power": "3smp:shadow/effect_toggle"
+                },
+                {
+                    "type": "origins:status_effect",
+                    "inverted": true,
+                    "effect": "invisibility"
+                }
+            ]
+        },
+        "interval": 4
+    }
+}

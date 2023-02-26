@@ -1,0 +1,28 @@
+{
+	"type": "nbtcrafting:brewing",
+	"base": {
+		"item": "minecraft:potion",
+		"data": "potion:minecraft_thick"
+	},
+	"ingredient": {
+		"item": "minecraft:ink_sac"
+	},
+	"result": {
+		"item": "minecraft:potion",
+		"data": {
+			"CustomPotionColor": 2171169,
+			"CustomPotionEffects": [{
+				"Duration": 4500,
+				"Id": 15
+			}],
+			"display": {
+				"Name": [{
+						"text": "Potion of Blindness",
+						"italic": false
+					},
+					"nbtcrafting:stringify"
+				]
+			}
+		}
+	}
+}

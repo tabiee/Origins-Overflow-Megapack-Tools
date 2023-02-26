@@ -1,0 +1,18 @@
+{
+    "impact": 1,
+    "unchoosable": false,
+    "name": "§6§l§oPyrotechnic",
+    "description": "Person in tune with the element of Fire.",
+    "icon": "minecraft:fire_charge",
+    "powers": [
+	    "spacefolk:pyro/fireblast",
+		"spacefolk:pyro/hothands",
+        "spacefolk:pyro/burning_wrath",
+		"spacefolk:pyro/fire_immunity",
+		"spacefolk:pyro/flame_particles",
+		"spacefolk:pyro/hot_blooded",
+		"spacefolk:pyro/lavawalk",
+		"spacefolk:pyro/waterweak",
+		"spacefolk:pyro/sound"
+    ]
+}

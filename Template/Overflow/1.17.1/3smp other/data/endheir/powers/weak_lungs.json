@@ -1,0 +1,27 @@
+{
+    "type": "origins:multiple",
+    "name": "Weak Lungs",
+    "description": "From being in the End so long, your lungs are not used to so much air, meaning you suffocate and exhaust faster.",
+    "o___0": {
+        "type": "origins:exhaust",
+        "interval": 100,
+        "exhaustion": 0.5,
+        "condition": {
+            "type": "origins:dimension",
+            "inverted": false,
+            "dimension": "overworld"
+        }
+    },
+    "o___1": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "inverted": false,
+            "name": "minecraft:suffocate"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    }
+}

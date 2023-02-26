@@ -1,0 +1,21 @@
+{
+    "impact": 3,
+    "unchoosable": false,
+    "name": "§2§l§oSaerth",
+    "description": "An intergalactic beast of another distant planet similar to earth. These massive stone like sabertooth tiger roam the planet and protect the nature they live in. Helping food grow, helping lesser live forms and fending of the Imoltu’s kind.",
+    "icon": "minecraft:oak_leaves",
+    "powers": [
+        "spacefolk:saerth/crops",
+		"spacefolk:saerth/toggle",
+		"spacefolk:saerth/treestride",
+		"origins:strong_arms",
+		"spacefolk:saerth/bigboi",
+		"spacefolk:saerth/hp",
+		"spacefolk:saerth/sink",
+		"spacefolk:saerth/model",
+		"spacefolk:saerth/pickouch",
+		"spacefolk:saerth/particles",
+		"spacefolk:saerth/bighit",
+		"origins:extra_reach"
+    ]
+}

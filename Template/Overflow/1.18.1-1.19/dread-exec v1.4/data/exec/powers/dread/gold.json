@@ -1,0 +1,81 @@
+{
+    "type": "origins:multiple",
+    "act": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "haste",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        }
+    },
+    "fuk": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:dread/gold_fine",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "team join piggy @e[type=piglin,distance=..50]",
+            "permission_level": 4
+        }
+    },
+    "fine": {
+        "type": "origins:cooldown",
+        "cooldown": 200,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "illdoitthehardway": {
+        "type": "origins:self_action_on_hit",
+        "target_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "piglin"
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "piglin_brute"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[type=piglin,distance=..25]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:dread/gold_fine"
+                }
+            ]
+        },
+        "cooldown": 200,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+	"arm": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 5
+        }
+    }
+}

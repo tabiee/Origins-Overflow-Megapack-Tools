@@ -1,0 +1,9 @@
+{
+    "name": "§4§nAlways Fighting",
+    "description": "Due to constantly fighting crime, you exhaust more quickly.",
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.25
+    }
+}

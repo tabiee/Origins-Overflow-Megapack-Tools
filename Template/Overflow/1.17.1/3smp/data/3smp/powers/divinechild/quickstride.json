@@ -1,0 +1,10 @@
+{
+	"name": "§2§nQuick Stride",
+    "description": "You have good agility.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.movement_speed",
+        "value": 0.04,
+        "operation": "addition"
+    }
+}

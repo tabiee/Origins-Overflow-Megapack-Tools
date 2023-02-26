@@ -1,0 +1,80 @@
+{
+	"name": "§5§nFly Boost",
+	"description": "You can boost yourself while flying with an elytra every 2 seconds.",
+	"type": "origins:multiple",
+	"ability": {
+		"condition": {
+			"type": "origins:fall_flying"
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:add_velocity",
+					"y": 0.3,
+					"z": 1.5,
+					"space": "local"
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.phantom.flap",
+					"volume": 10,
+					"pitch": 2
+				}
+			]
+		},
+		"cooldown": 40,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 3
+		},
+		"key": {
+			"key": "secondary",
+			"continuous": true
+		}
+	},
+	"effect": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:fall_flying"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:dragon/launch_held",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.phantom.flap",
+					"volume": 10,
+					"pitch": 1
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle minecraft:flame ~ ~ ~ 1 1 1 0.2 100",
+					"permission_level": 4
+				}
+			]
+		},
+		"cooldown": 500,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary",
+			"continuous": true
+		}
+	}
+}

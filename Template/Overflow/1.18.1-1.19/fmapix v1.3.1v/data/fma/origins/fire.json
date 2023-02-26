@@ -1,0 +1,24 @@
+{
+	"powers": [
+		"fma:fire/makefire",
+		"fma:fire/click",
+		"fma:fire/click2",
+		"fma:fire/shmelt1",
+		"fma:fire/shmelt2",
+		"fma:fire/shmelt3",
+		"fma:fire/shmelt4",
+		"fma:fire/shmelt5",
+		"fma:fire/shmelt6",
+		"fma:fire/shmelt7",
+		"fma:fire/shmelt8",
+		"fma:fire/firehit",
+		"fma:fire/nofire",
+		"fma:fire/negdesc",
+		"fma:fire/tss",
+		"fma:fire/tagger"
+	],
+	"icon": "minecraft:fire_charge",
+	"impact": 1,
+	"name": "§6§l§oFire Alchemy",
+	"description": "Offensive alchemy type that brings destruction."
+}

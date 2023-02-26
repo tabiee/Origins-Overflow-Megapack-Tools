@@ -1,0 +1,19 @@
+{
+    "type": "origins:action_over_time",
+    "hidden": true,
+    "interval": 5,
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+    {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "particle minecraft:cloud ^0.2 ^1 ^1 1 1 1 0.01 250 force"
+    }
+ ]
+},
+    "condition": {
+		"type": "origins:power_active",
+		"power": "quirk:whirlwind/whirl_toggle"
+    }
+}

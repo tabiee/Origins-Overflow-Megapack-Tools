@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"bed:charge",
+		"bed:regen",
+		"bed:weps",
+		"bed:extra",
+		"bed:eat",
+		"bed:wither",
+		"bed:axes",
+		"bed:vill",
+		"bed:nether",
+		"bed:deep",
+		"bed:shield",
+		"bed:food"
+	],
+	"icon": "minecraft:bedrock",
+	"impact": 2,
+	"name": "§8§l§oBedrockian",
+	"description": "Different universe, different rules."
+}

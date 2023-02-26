@@ -1,0 +1,40 @@
+{
+    "name": "§3§n\"I got this!§r\"",
+    "description": "You can more consistently use your powers with mantras like \"I can do this!, or \"I got this\" or acting generally overconfident.",
+    "condition": {
+        "type": "origins:resource",
+        "resource": "*:cd",
+        "comparison": "==",
+        "compare_to": 0
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle wax_on ~ ~1 ~ 0.5 0 0.5 5 1"
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "block.note_block.harp",
+                "volume": 0.25,
+                "pitch": 2
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "*:conf_bar",
+                "change": 5,
+                "operation": "add"
+            }
+        ]
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": {
+        "key": "primary",
+        "continuous": true
+    }
+}

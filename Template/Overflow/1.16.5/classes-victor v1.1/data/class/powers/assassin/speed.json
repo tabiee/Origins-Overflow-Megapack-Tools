@@ -1,0 +1,18 @@
+{
+    "name": "§2§nFast Reflexes",
+    "description": "Your movement and attack speed are slightly higher.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_total",
+            "value": 0.45
+        },
+        {
+            "attribute": "generic.attack_speed",
+            "operation": "multiply_total",
+            "value": 0.45
+        }
+    ],
+    "update_health": false
+}

@@ -1,0 +1,18 @@
+{
+    "type": "origins:target_action_on_hit",
+    "name": "Steel Punch",
+    "description": "You do extra knockback with your punches",
+    "entity_action": {
+        "type": "origins:add_velocity",
+        "z": 1,
+        "y": 1,
+        "space": "local"
+    },
+ 
+    "cooldown": 80,
+    "hud_render": {
+        "should_render": true,
+    "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+    "bar_index": 11
+    }
+}

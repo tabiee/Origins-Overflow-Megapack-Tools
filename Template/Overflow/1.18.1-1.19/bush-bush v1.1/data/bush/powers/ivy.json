@@ -1,0 +1,38 @@
+{
+    "name": "Poison Ivy",
+    "description": "Enemies attacking you take damage and get poisoned.",
+    "type": "origins:action_when_hit",
+    "bientity_action": {
+        "type": "origins:actor_action",
+        "action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "poison",
+                        "duration": 40,
+                        "amplifier": 0,
+                        "show_particles": true,
+                        "show_icon": true
+                    }
+                },
+                {
+                    "type": "origins:damage",
+                    "amount": 2,
+                    "source": {
+                        "name": "thorns"
+                    }
+                }
+            ]
+        }
+    },
+    "damage_condition": {
+        "inverted": true,
+        "type": "origins:projectile"
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    }
+}

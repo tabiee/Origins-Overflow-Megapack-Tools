@@ -1,0 +1,16 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "no": {
+        "type": "origins:disable_regen"
+    },
+    "yes": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:feed",
+            "food": 100,
+            "saturation": 100
+        }
+    }
+}

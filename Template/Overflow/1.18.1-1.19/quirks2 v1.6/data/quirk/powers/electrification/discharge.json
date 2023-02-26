@@ -1,0 +1,31 @@
+{
+    "type": "origins:active_self",
+    "name": "Indiscriminate Discharge",
+    "description": "Create an output of 2 Million volts to the area around you",
+    "hidden": false,
+    "cooldown": 280,
+  "key": {
+    "key": "key.origins.secondary_active",
+    "continuous": false
+  },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "execute as @p run particle minecraft:dust 1 1 0.2 1 ~ ~1 ~ 6 4 6 1 3000 force"
+            },
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "execute as @p run function quirk:discharge"
+            }
+        ]
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+        "bar_index": 13
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Bite-sized",
+    "description": "You are 4 times smaller than an average person, you have 3 less hearts, have increased attack speed but less range.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": -6
+        },
+        {
+            "attribute": "generic.attack_speed",
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    ]
+}

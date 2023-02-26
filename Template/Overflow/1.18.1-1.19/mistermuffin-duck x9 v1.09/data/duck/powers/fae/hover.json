@@ -1,0 +1,180 @@
+{
+    "name": "§1§nFloat§r",
+    "description": "You float gently, allowing you to fly and hover slowly.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "The keybind is Highlight Players (Spectators)"
+        }
+    ],
+    "type": "origins:multiple",
+    "tap": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "key.spectatorOutlines"
+        },
+        "retain_state": true
+    },
+    "float": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fae/hover_tap"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fae/hover_hold",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "levitation",
+                "duration": 5,
+                "amplifier": -1,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    },
+    "fall": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fae/hover_tap"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fae/hover_hold",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "slow_falling",
+                "duration": 3,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    },
+    "up": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fae/hover_tap"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fae/hover_hold",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "levitation",
+                "duration": 5,
+                "amplifier": 1,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    },
+    "trigger": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fae/hover_tap"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:fae/hover_hold"
+                }
+            ]
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.jump",
+            "continuous": true
+        }
+    },
+    "sound": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fae/hover_tap"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.leash_knot.break",
+                    "volume": 0.1,
+                    "pitch": 1.8
+                }
+            ]
+        },
+        "cooldown": 2,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.jump",
+            "continuous": true
+        }
+    },
+    "hold": {
+        "type": "origins:cooldown",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "replace": false,
+    "origins" : [
+    "quirk:cremation",
+    "quirk:engine",
+	"quirk:engineoff",
+	"quirk:explosion",
+	"quirk:frog",
+	"quirk:giant",
+	"quirk:giantoff",
+	"quirk:hellflame",
+	"quirk:ice",
+	"quirk:jet",
+	"quirk:ofa",
+	"quirk:perm",
+	"quirk:steel",
+        "quirk:steelform",
+	"quirk:superregen",
+	"quirk:whirlwind",
+	"quirk:zerograv",
+	"quirk:warpgate",
+	"quirk:copy",
+	"quirk:electrification",
+	"quirk:hchh",
+	"quirk:navel"
+    ],
+  "allow_random": true,
+  "exclude_random": [
+    "origins:quirkless",
+    "quirk:engine",
+    "quirk:steelform",
+	"quirk:giant",
+	"quirk:copy",
+	"quirk:blank"
+],
+  "allow_random_unchoosable": true,
+  "hidden": false
+}

@@ -1,0 +1,22 @@
+{
+    "name": "Immortal?",
+    "description": "You don't need to eat, but you also can’t naturally regenerate.",
+    "type": "origins:multiple",
+    "dis": {
+        "type": "origins:disable_regen"
+    },
+    "eat": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:food"
+        }
+    }, "hunger": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:feed",
+            "food": 10,
+            "saturation": 10
+        }
+    }
+}

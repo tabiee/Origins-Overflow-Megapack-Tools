@@ -1,0 +1,10 @@
+{
+    "name": "§4§nSoft Paws",
+    "description": "The damage you deal is a bit lower than usual.",
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": -0.15,
+        "name": "-15%"
+    }
+}

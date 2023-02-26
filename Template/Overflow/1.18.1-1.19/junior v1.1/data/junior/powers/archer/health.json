@@ -1,0 +1,12 @@
+{
+    "name": "Weakened Body",
+    "description": "You have 2 less hearts than a regular player due to you not being used to Close Range Combat.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.max_health",
+        "operation": "addition",
+        "value": -2,
+        "name": "Nine lives health reduction"
+    },
+    "update_health": false
+}

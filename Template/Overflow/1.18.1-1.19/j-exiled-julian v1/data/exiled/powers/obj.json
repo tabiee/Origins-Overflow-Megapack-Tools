@@ -1,0 +1,111 @@
+{
+    "name": "§3§nObject?",
+    "description": "Not much to say about it, you're an inanimate object. You have limited movement, and you're as small as any other object in your surroundings.",
+    "type": "origins:multiple",
+    "fx": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "exiled:forms_tog",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "exiled:forms_form",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 25,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "slowness",
+                    "duration": 35,
+                    "amplifier": 99,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "weakness",
+                    "duration": 35,
+                    "amplifier": 99,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "mining_fatigue",
+                    "duration": 35,
+                    "amplifier": 99,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "resistance",
+                    "duration": 35,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "fire_resistance",
+                    "duration": 35,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            ]
+        }
+    },
+    "invis": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "exiled:forms_tog",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "exiled:forms_form",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:model_color",
+        "alpha": 0.11
+    },
+    "jumps": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "exiled:forms_tog",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "exiled:forms_form",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:modify_jump",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    }
+}

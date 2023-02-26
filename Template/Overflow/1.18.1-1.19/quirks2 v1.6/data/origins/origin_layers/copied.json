@@ -1,0 +1,76 @@
+{
+	"name": "Copied Origin",
+	"missing_name": "None",
+	"missing_description": "Not copying anyone currenty.",
+	"auto_choose": true,
+	"default_origin": "quirk:blank",
+	"order": 69,
+	"replace": false,
+	"enabled": true,
+	"origins": [
+		{
+			"condition": {
+				"type": "origins:origin",
+				"origin": "quirk:copy",
+				"layer": "origins:origin"
+			},
+			"origins": [
+				"quirk:blank"
+			]
+		},
+		{
+			"condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "origins:origin",
+						"origin": "quirk:copy",
+						"layer": "origins:origin"
+					},
+					{
+						"type": "origins:resource",
+						"resource": "quirk:copy/copycat_toggle",
+						"comparison": "==",
+						"compare_to": 1
+					}
+				]
+			},
+			"origins": [
+				"origins:arachnid",
+				"origins:avian",
+				"origins:blazeborn",
+				"origins:elytrian",
+				"origins:enderian",
+				"origins:feline",
+				"origins:human",
+				"origins:merling",
+				"origins:phantom",
+				"origins:shulk",
+				"quirk:cremation",
+				"quirk:engine",
+				"quirk:engineoff",
+				"quirk:explosion",
+				"quirk:frog",
+				"quirk:giant",
+				"quirk:giantoff",
+				"quirk:hellflame",
+				"quirk:ice",
+				"quirk:jet",
+				"quirk:ofa",
+				"quirk:perm",
+				"quirk:steel",
+				"quirk:steelform",
+				"quirk:superregen",
+				"quirk:whirlwind",
+				"quirk:zerograv",
+				"quirk:warpgate",
+				"origins:quirkless",
+				"quirk:engine",
+				"quirk:steelform",
+				"quirk:giant",
+				"quirk:electrification",
+				"quirk:hchh"
+			]
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "§2§nBallistic Suit",
+    "description": "Your vigilante suit is ballistic, you take half projectile damage.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:projectile"
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": -0.5
+    }
+}

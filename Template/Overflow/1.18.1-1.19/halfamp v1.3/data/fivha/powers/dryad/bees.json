@@ -1,0 +1,71 @@
+{
+	"name": "Nature's Gift",
+	"description": "Bees do not get angry at you when you harvest hives, and drinking honey restores your health.",
+	"type": "origins:multiple",
+	"team": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team join bees @e[type=bee,distance=..20]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team leave @e[type=bee,distance=20..]",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=bee, distance= ..48] run data modify entity @s AngerTime set value 0",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=bee, distance= ..48] run data remove entity @s AngerAt",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"call": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team add bees",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "team modify bees friendlyFire false",
+						"permission_level": 4
+					},
+					"ticks": 2
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "team join bees @s",
+						"permission_level": 4
+					},
+					"ticks": 4
+				}
+			]
+		},
+		"execute_chosen_when_orb": true,
+		"entity_action_removed": {
+			"type": "origins:execute_command",
+			"command": "team leave @s",
+			"permission_level": 4
+		}
+	}
+}

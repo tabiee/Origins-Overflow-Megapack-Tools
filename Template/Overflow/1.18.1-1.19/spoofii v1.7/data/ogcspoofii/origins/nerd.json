@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"ogcspoofii:nerd/powerup",
+		"ogcspoofii:nerd/heal",
+		"ogcspoofii:nerd/perms",
+		"ogcspoofii:nerd/hp",
+		"ogcspoofii:nerd/shulk",
+		"origins:no_shield",
+		"ogcspoofii:nerd/outcast",
+		"ogcspoofii:nerd/reach",
+		"ogcspoofii:nerd/arrow",
+		"ogcspoofii:nerd/noweps",
+		"ogcspoofii:nerd/noshi",
+		"ogcspoofii:nerd/tagger"
+	],
+	"icon": "minecraft:mushroom_stew",
+	"impact": 1,
+	"name": "§7§lNerd",
+	"description": "Yer a nerd."
+}

@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"cyb:str",
+		"cyb:res",
+		"cyb:range",
+		"cyb:sleep",
+		"cyb:charge",
+		"cyb:hungy",
+		"cyb:water"
+	],
+	"icon": "minecraft:observer",
+	"impact": 3,
+	"name": "§4§l§oCyborg",
+	"description": "You are, in fact, a cyborg man. You do not know how you were created or why you were created. You now wander the world to figure out what you shall do."
+}

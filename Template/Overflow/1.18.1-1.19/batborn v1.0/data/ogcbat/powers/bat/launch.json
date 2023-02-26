@@ -1,0 +1,17 @@
+{
+    "name": "§5§nSoar into the Sky",
+    "description": "Launch yourself upwards.",
+    "type": "origins:launch",
+    "cooldown": 600,
+    "speed": 2,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 4
+    },
+    "sound": "minecraft:entity.bat.ambient",
+    "key": {
+        "key": "primary",
+        "continuous": true
+    }
+}

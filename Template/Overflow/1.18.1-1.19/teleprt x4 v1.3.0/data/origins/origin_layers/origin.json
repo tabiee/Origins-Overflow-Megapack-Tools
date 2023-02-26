@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "origins": [
+    "eight:cthulhu",
+	"eight:headless",
+	"eight:moth",
+	"eight:slime"
+  ]
+}

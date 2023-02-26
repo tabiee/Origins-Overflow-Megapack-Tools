@@ -1,0 +1,436 @@
+{
+    "name": "§3§nPower§r",
+    "description": "You use energy to enter battle modes. Energy restores itself 5 seconds after leaving a mode.",
+    "type": "origins:multiple",
+    "bar": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 160,
+        "start_value": 160,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 8
+        }
+    },
+    "gain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:submerged_in",
+                    "fluid": "minecraft:water"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:nv_tip",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:hover_tap",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:biome",
+                    "biomes": [
+                        "minecraft:ice_spikes",
+                        "minecraft:snowy_plains",
+                        "minecraft:snowy_beach",
+                        "minecraft:deep_frozen_ocean",
+                        "minecraft:frozen_ocean",
+                        "minecraft:frozen_river",
+                        "minecraft:old_growth_pine_taiga",
+                        "minecraft:old_growth_spruce_taiga",
+                        "minecraft:snowy_taiga",
+                        "minecraft:taiga",
+                        "minecraft:frozen_peaks",
+                        "minecraft:snowy_slopes",
+                        "minecraft:desert",
+                        "minecraft:basalt_deltas",
+                        "minecraft:crimson_forest",
+                        "minecraft:nether_wastes",
+                        "minecraft:soul_sand_valley",
+                        "minecraft:warped_forest",
+                        "minecraft:savanna",
+                        "minecraft:savanna_plateau",
+                        "minecraft:windswept_savanna",
+                        "minecraft:ocean",
+                        "minecraft:warm_ocean",
+                        "minecraft:swamp",
+                        "minecraft:badlands",
+                        "minecraft:eroded_badlands",
+                        "minecraft:wooded_badlands",
+                        "minecraft:bamboo_jungle",
+                        "minecraft:jungle",
+                        "minecraft:sparse_jungle"
+                    ]
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:or",
+                            "conditions": [
+                                {
+                                    "type": "origins:in_block_anywhere",
+                                    "block_condition": {
+                                        "type": "origins:or",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:block",
+                                                "block": "fire"
+                                            },
+                                            {
+                                                "type": "origins:block",
+                                                "block": "soul_fire"
+                                            }
+                                        ]
+                                    },
+                                    "comparison": ">=",
+                                    "compare_to": 1
+                                },
+                                {
+                                    "type": "origins:fluid_height",
+                                    "fluid": "lava",
+                                    "comparison": ">",
+                                    "compare_to": 0
+                                },
+                                {
+                                    "type": "origins:on_fire"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={Inventory:[{Slot:101b,id:\"minecraft:netherite_leggings\",tag:{CustomModelData:69}}]}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_bar",
+                    "change": 2,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "gain2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:submerged_in",
+                    "fluid": "minecraft:water"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:nv_tip",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:hover_tap",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:biome",
+                    "biomes": [
+                        "minecraft:ice_spikes",
+                        "minecraft:snowy_plains",
+                        "minecraft:snowy_beach",
+                        "minecraft:deep_frozen_ocean",
+                        "minecraft:frozen_ocean",
+                        "minecraft:frozen_river",
+                        "minecraft:old_growth_pine_taiga",
+                        "minecraft:old_growth_spruce_taiga",
+                        "minecraft:snowy_taiga",
+                        "minecraft:taiga",
+                        "minecraft:frozen_peaks",
+                        "minecraft:snowy_slopes",
+                        "minecraft:desert",
+                        "minecraft:basalt_deltas",
+                        "minecraft:crimson_forest",
+                        "minecraft:nether_wastes",
+                        "minecraft:soul_sand_valley",
+                        "minecraft:warped_forest",
+                        "minecraft:savanna",
+                        "minecraft:savanna_plateau",
+                        "minecraft:windswept_savanna",
+                        "minecraft:ocean",
+                        "minecraft:warm_ocean",
+                        "minecraft:swamp",
+                        "minecraft:badlands",
+                        "minecraft:eroded_badlands",
+                        "minecraft:wooded_badlands",
+                        "minecraft:bamboo_jungle",
+                        "minecraft:jungle",
+                        "minecraft:sparse_jungle"
+                    ]
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:or",
+                            "conditions": [
+                                {
+                                    "type": "origins:in_block_anywhere",
+                                    "block_condition": {
+                                        "type": "origins:or",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:block",
+                                                "block": "fire"
+                                            },
+                                            {
+                                                "type": "origins:block",
+                                                "block": "soul_fire"
+                                            }
+                                        ]
+                                    },
+                                    "comparison": ">=",
+                                    "compare_to": 1
+                                },
+                                {
+                                    "type": "origins:fluid_height",
+                                    "fluid": "lava",
+                                    "comparison": ">",
+                                    "compare_to": 0
+                                },
+                                {
+                                    "type": "origins:on_fire"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "origins:command",
+                            "command": "execute if entity @s[nbt={Inventory:[{Slot:101b,id:\"minecraft:netherite_leggings\",tag:{CustomModelData:69}}]}]",
+                            "comparison": ">=",
+                            "compare_to": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_bar",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "gain3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_bar",
+                    "change": 2,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "zero": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_bar",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 25,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "slowness",
+                            "duration": 50,
+                            "amplifier": 1,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "weakness",
+                            "duration": 50,
+                            "amplifier": 1,
+                            "show_particles": false,
+                            "show_icon": true
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "cd": {
+        "type": "origins:cooldown",
+        "cooldown": 100,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "cd2": {
+        "type": "origins:cooldown",
+        "cooldown": 6000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 9
+        }
+    },
+    "lighn": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "lightningBolt"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "lightningBolt.player"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle soul_fire_flame ~ ~1 ~ 0.5 0.5 0.5 1 100"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 2
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_bar",
+                    "change": 200,
+                    "operation": "add"
+                }
+            ]
+        },
+        "cooldown": 200,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "imm": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "lightningBolt"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "lightningBolt.player"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.95
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "§6§nAdapted Appendages",
+    "description": "You swim faster in lava and can see clearly in it.",
+    "type": "origins:multiple",
+    "imm": {
+        "type": "origins:fire_immunity"
+    },
+    "speed": {
+        "type": "origins:modify_lava_speed",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.5
+        }
+    },
+    "see": {
+        "type": "origins:lava_vision",
+        "s": 8,
+        "v": 20
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "name": "§b§nConfidence Guage§r",
+    "description": "An old friend lied to you and said this guage would measure you confidence, because you believe it does, it does.",
+    "type": "apoli:multiple",
+    "bar": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 500,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 5,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:cd",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        },
+        "max_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle smoke ~ ~ ~ 1 0.25 1 0 100"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.ghast.ambient",
+                    "volume": 1,
+                    "pitch": 0.5
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:conf_bar",
+                    "change": -1000,
+                    "operation": "add"
+                },
+                {
+                    "type": "apoli:trigger_cooldown",
+                    "power": "*:cd"
+                }
+            ]
+        }
+    }
+}

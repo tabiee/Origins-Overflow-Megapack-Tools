@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"exec:dread/consume",
+		"exec:dread/hp",
+		"exec:dread/nv",
+		"exec:dread/fortune",
+		"exec:dread/fire",
+		"exec:dread/lava",
+		"exec:dread/mine",
+		"exec:dread/regen",
+		"exec:dread/speed",
+		"exec:dread/tagger"
+	],
+	"icon": "minecraft:copper_block",
+	"impact": 3,
+	"name": "§6§l§oDreadnaught",
+	"description": "I craved the strength and certainty of metal for it is unyielding, for the flesh Pain is a companion. And pain is constant, all-encompassing. Death’s legacy, a promise that I too will die, but form metal a gift of endurance and a dreadnought to the pain."
+}

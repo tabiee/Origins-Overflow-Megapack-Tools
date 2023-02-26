@@ -1,0 +1,17 @@
+{
+	"name": "§b§nCelestial Dawn",
+	"description": "As you are a Celestial Being you are practically immortal, you cannot die of old age but can still be killed quite easily.",
+	"type": "origins:multiple",
+	"health": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "generic.max_health",
+			"operation": "addition",
+			"value": -4
+		}
+	},
+	"ef": {
+		"type": "origins:effect_immunity",
+		"effect": "poison"
+	}
+}

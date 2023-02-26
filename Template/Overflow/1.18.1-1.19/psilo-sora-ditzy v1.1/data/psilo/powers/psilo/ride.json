@@ -1,0 +1,8 @@
+{
+	"name": "§1§nClingy",
+	"description": "While you are mushroom sized, you can ride on other players.",
+	"type": "extraorigins:start_riding",
+	"key": {
+		"key": "ternary"
+	}
+}

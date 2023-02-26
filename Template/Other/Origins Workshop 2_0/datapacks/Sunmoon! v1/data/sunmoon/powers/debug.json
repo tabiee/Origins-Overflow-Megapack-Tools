@@ -1,0 +1,209 @@
+{
+	"name": "I have so many fking debugs, at this point I don't know which ones I need anymore",
+	"hidden": true,
+	"type": "origins:multiple",
+	"follow": {
+		"condition": {
+			"type": "origins:gamemode",
+			"gamemode": "spectator"
+		},
+		"type": "origins:action_over_time",
+		"interval": 8,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:dismount"
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "spectate @e[tag=cont,limit=1] @s"
+					},
+					"ticks": 2
+				}
+			]
+		}
+	},
+	"dismount": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:gamemode",
+					"gamemode": "spectator"
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:dismount"
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.attack",
+			"continuous": true
+		}
+	},
+	"gotoseat": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:gamemode",
+					"gamemode": "spectator"
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "execute at @e[tag=ride,limit=1] run tp @s ~ ~ ~"
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "key.sneak",
+			"continuous": true
+		}
+	},
+	"farmount": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @s[tag=spec]",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:command",
+					"command": "execute unless entity @e[tag=cont,distance=..1.5]",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 500,
+		"entity_action": {
+			"type": "origins:dismount"
+		}
+	},
+	"contmount": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:gamemode",
+					"gamemode": "survival"
+				},
+				{
+					"type": "origins:riding",
+					"bientity_condition": {
+						"type": "origins:target_condition",
+						"condition": {
+							"type": "origins:entity_type",
+							"entity_type": "armor_stand"
+						}
+					}
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:dismount"
+		}
+	},
+	"kill_extra": {
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if entity @e[tag=ride]",
+			"comparison": ">",
+			"compare_to": 1
+		},
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "kill @e[tag=ride,limit=1]"
+		}
+	},
+	"tag_fix": {
+		"type": "origins:action_over_time",
+		"interval": 100,
+		"entity_action": {
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:command",
+								"command": "execute if entity @e[tag=spec]",
+								"comparison": ">",
+								"compare_to": 1
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "tag @e[tag=duo] remove spec"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "gamemode survival @a[tag=duo]"
+								},
+								"ticks": 1
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:command",
+								"command": "execute if entity @e[tag=cont]",
+								"comparison": "==",
+								"compare_to": 0
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "tag @e[tag=duo] remove spec"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "gamemode survival @a[tag=duo]"
+								},
+								"ticks": 1
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+}

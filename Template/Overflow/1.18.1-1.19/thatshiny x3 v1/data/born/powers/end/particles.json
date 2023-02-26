@@ -1,0 +1,28 @@
+{
+	"name": "Ender Presence",
+	"description": "You have end-like particles around you, distinguishing you from other races.",
+	"type": "origins:multiple",
+	"fx1": {
+		"type": "origins:action_over_time",
+		"interval": 14,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle portal ~ ~0.5 ~ 0.5 0.5 0.5 0 2",
+			"permission_level": 4
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:invisible"
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "invisibility"
+				}
+			]
+		}
+	}
+}

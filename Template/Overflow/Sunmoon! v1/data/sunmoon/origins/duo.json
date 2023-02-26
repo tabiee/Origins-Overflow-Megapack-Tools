@@ -1,0 +1,30 @@
+{
+	"powers": [
+		"sunmoon:control",
+		"sunmoon:sync",
+		"sunmoon:request",
+		"sunmoon:fight",
+		"sunmoon:energy",
+		"sunmoon:battery",
+		"sunmoon:overlay",
+		"sunmoon:attendant",
+		"sunmoon:robotic",
+		"sunmoon:cosm_check",
+
+		"sunmoon:control_nether",
+		"sunmoon:control_end",
+		"sunmoon:control_other",
+		"sunmoon:debug",
+		"sunmoon:spec/tog-eyeshands",
+		"sunmoon:spec/tog-movement",
+		"sunmoon:indicator",
+		"sunmoon:spec/gather",
+		"sunmoon:size",
+		"sunmoon:pickup",
+		"sunmoon:teamer"
+	],
+	"icon": "minecraft:orange_wool",
+	"impact": 3,
+	"name": "§6§l§oCelestial Duo§r",
+	"description": "The Daycare Attendant animatronic of Fazbear Entertainment contains two personality modes for Day and Night. Although they don't always get along, when in sync they are capable of incredible feats."
+}

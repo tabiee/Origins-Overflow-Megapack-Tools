@@ -1,0 +1,19 @@
+{
+    "impact": 2,
+    "unchoosable": false,
+    "name": "§e§l§oSolgron",
+    "description": "They are astral draconic humanoid race, known as consumers of light. They fly through the galaxies absorbing any light source to sustain their own life. ",
+    "icon": "minecraft:glowstone",
+    "powers": [
+	    "spacefolk:solgron/strike",
+		"spacefolk:solgron/food",
+	    "spacefolk:solgron/regen",
+        "spacefolk:solgron/glow",
+		"spacefolk:solgron/poof",
+		"spacefolk:solgron/elytra",
+		"spacefolk:solgron/fire_immunity",
+		"spacefolk:solgron/heat",
+		"spacefolk:solgron/waterdmg",
+		"origins:fresh_air"
+    ]
+}

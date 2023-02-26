@@ -1,0 +1,26 @@
+{
+    "name": "§4§nThe food feels different",
+    "description": "Saturation is less effective for you.\n",
+    "type": "origins:multiple",
+    "eat": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:food"
+        },
+        "food_modifier": {
+            "operation": "multiply_base",
+            "value": -0.25
+        },
+        "saturation_modifier": {
+            "operation": "multiply_base",
+            "value": -0.25
+        }
+    },
+    "exh": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.25
+        }
+    }
+}

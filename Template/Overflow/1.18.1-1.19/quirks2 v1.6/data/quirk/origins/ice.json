@@ -1,0 +1,22 @@
+{
+    "powers": [
+	"quirk:ice/ice_fist",
+	"quirk:ice/ice_stream",
+	"quirk:ice/snowstorm",
+	"quirk:ice/snowstormpart",
+	"quirk:ice/ice_ascend",
+	"quirk:ice/ice_prison",
+	"quirk:ice/anti_ice",
+	"quirk:ice/cold_aura",
+	"quirk:ice/ice_spikes",
+	"quirk:ice/iceparticles",
+		"quirk:health"
+       
+    ],
+    "icon": "minecraft:ice",
+    "order": 20,
+    "impact": 3,
+        "unchoosable": true,
+    "name": "Ice",
+    "description": "Rei Todoroki's Quirk"
+}

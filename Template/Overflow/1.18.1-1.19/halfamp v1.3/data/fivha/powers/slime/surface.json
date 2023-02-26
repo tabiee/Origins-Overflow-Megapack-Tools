@@ -1,0 +1,66 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "swim": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": "<=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:sneaking"
+                }
+            ]
+        },
+        "type": "origins:modify_swim_speed",
+        "modifier": {
+            "operation": "addition",
+            "value": 0.06
+        }
+    },
+    "bump": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": "<=",
+                    "compare_to": 1
+                },
+				{
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:sneaking"
+                },
+				{
+					"type": "origins:moving"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:add_velocity",
+            "y": 0.6,
+			"z": 0.3,
+            "space": "local"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "§3§nDigging Claws",
+    "description": "You always have Haste.",
+    "type": "origins:action_over_time",
+    "interval": 25,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "haste",
+            "duration": 35,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

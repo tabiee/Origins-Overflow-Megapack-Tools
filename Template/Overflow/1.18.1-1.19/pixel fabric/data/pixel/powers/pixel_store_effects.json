@@ -1,0 +1,44 @@
+{
+	"hidden": true,
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:delay",
+				"action": {
+					"type": "origins:change_resource",
+					"resource": "pixel:pixel_meter_resource",
+					"change": -100
+				},
+				"ticks": 5
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "playsound entity.illusioner.mirror_move voice @a ~ ~ ~ 2 1.3",
+				"permission_level": 4
+			}
+		]
+	},
+	"cooldown": 20,
+	"hud_render": {
+		"should_render": false
+	},
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:resource",
+				"resource": "pixel:pixel_meter_resource",
+				"comparison": "==",
+				"compare_to": 100
+			},
+			{
+				"type": "origins:resource",
+				"resource": "*:pixel_swapper_bit",
+				"comparison": "==",
+				"compare_to": 0
+			}
+		]
+	}
+}

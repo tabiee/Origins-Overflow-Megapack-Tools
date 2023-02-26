@@ -1,0 +1,73 @@
+{
+	"name": "§e§nBloodsucker",
+	"description": "You cannot eat anything, instead you feed off of other living things. Shift-Rightclick to feed.",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:sneaking"
+			}
+		]
+	},
+	"type": "origins:action_on_entity_use",
+	"bientity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:target_action",
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:damage",
+							"amount": 1,
+							"source": {
+								"name": "wither.player"
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "particle minecraft:dust 0.600 0.000 0.161 1 ~ ~ ~ 1 1 1 0 6",
+							"permission_level": 4
+						}
+					]
+				}
+			},
+			{
+				"type": "origins:actor_action",
+				"action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:heal",
+							"amount": 1
+						},
+						{
+							"type": "origins:feed",
+							"food": 1,
+							"saturation": 1
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "entity.phantom.bite",
+							"volume": 0.2,
+							"pitch": 0.8
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "particle minecraft:dust 0.600 0.000 0.161 1 ~ ~ ~ 1 1 1 0 6",
+							"permission_level": 4
+						}
+					]
+				}
+			}
+		]
+	},
+	"bientity_condition": {
+		"type": "origins:target_condition",
+		"condition": {
+			"type": "origins:in_tag",
+			"tag": "vamp:food"
+		}
+	}
+}

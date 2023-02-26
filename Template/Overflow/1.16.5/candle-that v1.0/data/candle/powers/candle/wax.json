@@ -1,0 +1,148 @@
+{
+	"name": "Wax",
+	"description": "Your wax is slowly melting away, you need to use honeycombs or honey to replenish it. You melt faster when on fire. You will die if your body runs out of wax.",
+	"type": "origins:multiple",
+	"goo": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1000,
+		"start_value": 1000,
+		"hud_render": {
+			"should_render": true,
+			"bar_index": 7
+		},
+		"min_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.fire.extinguish",
+					"volume": 1,
+					"pitch": 2
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle smoke ~ ~ ~ 0.5 0.5 0.5 0 50",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:height 0.1 @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:width 0.1 @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "kill @s",
+						"permission_level": 4
+					},
+					"ticks": 20
+				}
+			]
+		}
+	},
+	"drain": {
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:on_fire"
+			},
+			"if_action": {
+				"type": "origins:change_resource",
+				"resource": "*:candle/wax_goo",
+				"change": -10
+			},
+			"else_action": {
+				"type": "origins:change_resource",
+				"resource": "*:candle/wax_goo",
+				"change": -1
+			}
+		}
+	},
+	"bottle": {
+		"type": "origins:action_on_item_use",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:candle/wax_goo",
+					"change": 200
+				}
+			]
+		},
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "honey_bottle"
+			}
+		}
+	},
+	"comb": {
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "honeycomb"
+						}
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "honeycomb"
+						}
+					}
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @s honeycomb 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:candle/wax_goo",
+					"change": 75
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.honey_block.break",
+					"volume": 0.5,
+					"pitch": 1.35
+				}
+			]
+		},
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+			"bar_index": 0
+		},
+		"key": {
+			"key": "key.use",
+			"continuous": true
+		}
+	}
+}

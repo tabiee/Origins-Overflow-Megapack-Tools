@@ -1,0 +1,110 @@
+{
+    "name": "§9§nMelancholic§r",
+    "description": "Those who attack you become weaker and slower, transposing your own sorrow to others. Rains increases the effects of this ability.",
+    "type": "origins:multiple",
+    "no": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 4
+                },
+                {
+                    "inverted": true,
+                    "type": "apoli:in_rain"
+                }
+            ]
+        },
+        "type": "origins:action_when_hit",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle nautilus ~ ~1 ~ 0.5 0.5 0.5 0 10"
+                    },
+                    {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "weakness",
+                                "duration": 100,
+                                "amplifier": 0,
+                                "show_icon": true,
+                                "show_particles": true
+                            },
+                            {
+                                "effect": "slowness",
+                                "duration": 100,
+                                "amplifier": 0,
+                                "show_icon": true,
+                                "show_particles": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "cooldown": 40,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "yes": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 4
+                },
+                {
+                    "type": "apoli:in_rain"
+                }
+            ]
+        },
+        "type": "origins:action_when_hit",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle nautilus ~ ~1 ~ 0.5 0.5 0.5 0 10"
+                    },
+                    {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "weakness",
+                                "duration": 200,
+                                "amplifier": 1,
+                                "show_icon": true,
+                                "show_particles": true
+                            },
+                            {
+                                "effect": "slowness",
+                                "duration": 200,
+                                "amplifier": 1,
+                                "show_icon": true,
+                                "show_particles": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "cooldown": 40,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

@@ -1,0 +1,159 @@
+{
+    "name": "Homeland",
+    "description": "You live in the woods and the end. A wood elf and a dark elf.\nYour stats increase by 45% while in the woods, the end, or lush caves.",
+    "type": "origins:multiple",
+    "att": {
+        "condition": {
+            "type": "origins:biome",
+            "biomes": [
+                "forest",
+                "flower_forest",
+                "birch_forest",
+                "dark_forest",
+                "old_growth_birch_forest",
+                "old_growth_pine_taiga",
+                "old_growth_spruce_taiga",
+                "taiga",
+                "snowy_taiga",
+                "windswept_forest",
+                "grove",
+                "lush_caves",
+                "the_end",
+                "end_highlands",
+                "end_midlands",
+                "small_end_islands",
+                "end_barrens",
+                "deep_dark"
+            ]
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.movement_speed",
+                "operation": "multiply_base",
+                "value": 0.45
+            },
+            {
+                "attribute": "generic.attack_damage",
+                "operation": "multiply_base",
+                "value": 0.45
+            },
+            {
+                "attribute": "generic.armor",
+                "operation": "multiply_base",
+                "value": 0.45
+            },
+            {
+                "attribute": "generic.attack_speed",
+                "operation": "multiply_base",
+                "value": 0.45
+            }
+        ],
+        "tick_rate": 1
+    },
+    "reach": {
+        "condition": {
+            "type": "origins:biome",
+            "biomes": [
+                "forest",
+                "flower_forest",
+                "birch_forest",
+                "dark_forest",
+                "old_growth_birch_forest",
+                "old_growth_pine_taiga",
+                "old_growth_spruce_taiga",
+                "taiga",
+                "snowy_taiga",
+                "windswept_forest",
+                "grove",
+                "lush_caves",
+                "the_end",
+                "end_highlands",
+                "end_midlands",
+                "small_end_islands",
+                "end_barrens",
+                "deep_dark"
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:reach 1.45",
+                    "permission_level": 4
+                }
+            ]
+        },
+        "falling_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale reset @s",
+                    "permission_level": 4
+                }
+            ]
+        }
+    },
+    "att_nether": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "minecraft:the_nether"
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.movement_speed",
+                "operation": "multiply_base",
+                "value": -0.5
+            },
+            {
+                "attribute": "generic.attack_damage",
+                "operation": "multiply_base",
+                "value": -0.5
+            },
+            {
+                "attribute": "generic.armor",
+                "operation": "multiply_base",
+                "value": -0.5
+            },
+            {
+                "attribute": "generic.attack_speed",
+                "operation": "multiply_base",
+                "value": -0.5
+            }
+        ],
+        "tick_rate": 1
+    },
+    "reach_nether": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "minecraft:the_nether"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:reach 0.5",
+                    "permission_level": 4
+                }
+            ]
+        },
+        "falling_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale reset @s",
+                    "permission_level": 4
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "§1§nInhuman strength",
+    "description": "Due to your robotic nature, you are much stronger than a human. You deal more damage at any given time.",
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "strength",
+            "duration": 55,
+            "amplifier": 1,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

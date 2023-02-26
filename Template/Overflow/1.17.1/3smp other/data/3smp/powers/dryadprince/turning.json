@@ -1,0 +1,83 @@
+{
+    "name": "§4§nSomething's Off..",
+    "description": "Why is the room spinning?",
+    "type": "origins:multiple",
+    "effects": {
+        "type": "origins:action_over_time",
+        "interval": 26000,
+        "entity_action": {
+            "type": "origins:chance",
+            "chance": 0.5,
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "duration": 120,
+                                "is_ambient": false,
+                                "show_particles": false,
+                                "show_icon": false,
+                                "effect": "nausea"
+                            },
+                            {
+                                "duration": 300,
+                                "is_ambient": false,
+                                "show_particles": false,
+                                "show_icon": false,
+                                "effect": "slowness",
+                                "amplifier": 9
+                            },
+                            {
+                                "duration": 300,
+                                "is_ambient": false,
+                                "show_particles": false,
+                                "show_icon": false,
+                                "effect": "weakness",
+                                "amplifier": 1
+                            },
+                            {
+                                "duration": 500,
+                                "is_ambient": false,
+                                "show_particles": false,
+                                "show_icon": false,
+                                "effect": "resistance",
+                                "amplifier": 3
+                            },
+                            {
+                                "duration": 500,
+                                "is_ambient": false,
+                                "show_particles": false,
+                                "show_icon": false,
+                                "effect": "fire_resistance"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "permission_level": 4,
+                        "command": "tellraw @s {\"text\":\"Your body feels odd again...\",\"bold\":true,\"italic\":true,\"color\":\"dark_purple\"}"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "permission_level": 4,
+                        "command": "particle betterend:tenanea_petal ~ ~ ~ 1 1 1 0.1 50 normal"
+                    }
+                ]
+            }
+        }
+    },
+    "color": {
+        "type": "origins:model_color",
+        "red": 0.6,
+        "green": 0.5,
+        "blue": 0.8,
+        "condition": {
+            "type": "origins:status_effect",
+            "inverted": false,
+            "effect": "slowness",
+            "min_amplifier": 4
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "type": "origins:action_over_time",
+    "name": "s",
+    "description": "s",
+    "hidden": true,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "particle minecraft:dust_color_transition 0.01 0 0 1 0.5 0 1 ~ ~0.49 ~ 0.2 1 0.2 0.1 200 force"
+    },
+    "interval": 25
+}

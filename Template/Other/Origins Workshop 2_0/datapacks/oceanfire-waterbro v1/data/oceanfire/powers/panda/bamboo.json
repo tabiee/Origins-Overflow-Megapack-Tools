@@ -1,0 +1,82 @@
+{
+    "name": "Panda Stomach",
+    "description": "Eating bamboo has a chance of empowering you for a short time.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "item": "bamboo"
+                            }
+                        }
+                    },
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "offhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "item": "bamboo"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "origins:food_level",
+                "comparison": "<",
+                "compare_to": 20
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "clear @s bamboo 1"
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.panda.eat",
+                "volume": 0.4,
+                "pitch": 1.2
+            },
+            {
+                "type": "origins:feed",
+                "food": 3,
+                "saturation": 8
+            },
+            {
+                "type": "origins:chance",
+                "chance": 0.025,
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "strength",
+                        "duration": 1200,
+                        "amplifier": 1,
+                        "show_particles": false,
+                        "show_icon": true
+                    }
+                }
+            }
+        ]
+    },
+    "cooldown": 20,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": {
+        "key": "key.use",
+        "continuous": true
+    }
+}

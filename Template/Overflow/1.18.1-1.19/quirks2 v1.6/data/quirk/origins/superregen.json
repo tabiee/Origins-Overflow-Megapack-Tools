@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"quirk:superregen/regen",
+		"quirk:superregen/regenfield",
+		"quirk:superregen/peak",
+		"quirk:superregen/regenbolt",
+		"quirk:health"
+	],
+	"icon": "minecraft:redstone",
+	"order": 10,
+	"impact": 3,
+	"name": "Super Regen",
+        "unchoosable": true,
+	"description": "Nomu U.S.J's Quirk"
+}

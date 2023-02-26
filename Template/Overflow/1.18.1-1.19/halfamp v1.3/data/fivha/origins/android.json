@@ -1,0 +1,13 @@
+{
+	"unchoosable": true,
+	"powers": [
+	    "fivha:slime/backtoback",
+		"fivha:android/punch",
+		"fivha:android/red",
+		"fivha:android/waterdmg"
+	],
+	"icon": "minecraft:sea_lantern",
+	"impact": 2,
+	"name": "§a§l§oAndroid",
+	"description": "Robot Mode."
+}

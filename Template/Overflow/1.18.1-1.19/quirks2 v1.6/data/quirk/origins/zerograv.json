@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"quirk:zerograv/levitation_fist",
+		"quirk:zerograv/blast",
+		"quirk:zerograv/levitation_ring",
+		"quirk:zerograv/float",
+		"quirk:zerograv/rockparty",
+		"quirk:health"
+	],
+	"icon": "minecraft:popped_chorus_fruit",
+	"order": 10,
+	"impact": 3,
+	"name": "Zero Gravity",
+        "unchoosable": true,
+	"description": "Ochaco Uraraka's Quirk"
+}

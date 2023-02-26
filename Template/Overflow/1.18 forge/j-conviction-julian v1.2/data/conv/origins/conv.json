@@ -1,0 +1,21 @@
+{
+	"powers": [
+		"conv:conf",
+		"conv:gain",
+		"conv:swapper",
+		"conv:cd",
+		"conv:shield",
+		"conv:fall",
+		"conv:nv",
+		"conv:speed",
+		"conv:teamer",
+		"conv:proj",
+		"conv:immune",
+		"conv:fire",
+		"conv:focus"
+	],
+	"icon": "minecraft:rabbit_foot",
+	"impact": 3,
+	"name": "§e§l§oConviction",
+	"description": "You are Conviction, a powerful vigilante with the ability to manipulate reality around yourself based on your self-confidence. If you believe you can do it, you can!"
+}

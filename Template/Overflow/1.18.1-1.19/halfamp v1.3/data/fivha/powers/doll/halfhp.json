@@ -1,0 +1,21 @@
+{
+    "name": "Delicate Joints",
+    "description": "When your hp drops below half you receive the Weakness debuff.",
+    "condition": {
+        "type": "origins:health",
+        "comparison": "<=",
+        "compare_to": 14
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "weakness",
+            "duration": 100,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

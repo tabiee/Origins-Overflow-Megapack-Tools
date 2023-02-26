@@ -1,0 +1,9 @@
+{
+    "name": "§4§nRelentless Hunger",
+    "description": "Hunger depletes faster.",
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.2
+    }
+}

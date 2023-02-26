@@ -1,0 +1,10 @@
+{
+    "name": "Low Stamina",
+    "description": "You tire easily when sprinting.",
+    "condition": {
+        "type": "origins:sprinting"
+    },
+    "type": "origins:exhaust",
+    "interval": 20,
+    "exhaustion": 2
+}

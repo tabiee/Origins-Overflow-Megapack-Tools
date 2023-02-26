@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"spooky:alien/shulky",
+		"spooky:alien/elytra",
+		"spooky:alien/jump",
+		"spooky:alien/nv",
+		"spooky:alien/slowfall",
+		"spooky:alien/size",
+		"spooky:alien/fish",
+		"spooky:alien/helmet",
+		"spooky:alien/hp",
+		"spooky:alien/vill",
+		"spooky:alien/fire",
+		"spooky:alien/totems"
+	],
+	"icon": "minecraft:beacon",
+	"impact": 1,
+	"name": "§3§l§oAlien",
+	"description": "Small extraterrestrial with psyhic abilities."
+}

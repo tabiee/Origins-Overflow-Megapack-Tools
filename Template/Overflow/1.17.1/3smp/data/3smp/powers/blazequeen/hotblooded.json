@@ -1,0 +1,9 @@
+{
+	"name": "§2§nHotblooded",
+	"description": "You don't care for poison or hunger.",
+  "type": "origins:effect_immunity",
+  "effects": [
+    "minecraft:poison",
+    "minecraft:hunger"
+  ]
+}

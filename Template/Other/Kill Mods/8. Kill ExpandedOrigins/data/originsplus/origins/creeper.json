@@ -1,0 +1,13 @@
+{
+    "powers": [
+        "originsplus:explodable",
+        "origins:scare_creepers",
+        "originsplus:green_skin",
+        "originsplus:scared_of_cats"
+    ],
+    "icon": "minecraft:gunpowder",
+    "order": -1,
+    "impact": 2,
+    "loading_priority": 100,
+    "unchoosable": true
+}

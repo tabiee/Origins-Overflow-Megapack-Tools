@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"reaper:reaper/model",
+		"reaper:reaper/particles",
+		"reaper:reaper/tp",
+		"reaper:reaper/slowfall",
+		"reaper:reaper/dmg",
+		"reaper:reaper/drown",
+		"reaper:reaper/night",
+		"reaper:reaper/hungy",
+		"reaper:reaper/meat",
+		"reaper:reaper/size",
+		"reaper:reaper/hp"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"impact": 2,
+	"name": "§4§l§oReaper",
+	"description": "The personification of death itself."
+}

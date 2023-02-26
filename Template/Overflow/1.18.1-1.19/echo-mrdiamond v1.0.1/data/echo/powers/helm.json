@@ -1,0 +1,9 @@
+{
+    "name": "Sensitive Ears",
+    "description": "You can’t wear helmets since they would cover up your ears.",
+    "type": "origins:restrict_armor",
+    "head": {
+        "inverted": true,
+        "type": "origins:empty"
+    }
+}

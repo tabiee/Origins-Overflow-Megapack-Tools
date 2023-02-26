@@ -1,0 +1,7 @@
+{
+    "name": "§4§nHungry",
+    "description": "You need to eat more.",
+    "type": "origins:exhaust",
+    "interval": 60,
+    "exhaustion": 6
+}

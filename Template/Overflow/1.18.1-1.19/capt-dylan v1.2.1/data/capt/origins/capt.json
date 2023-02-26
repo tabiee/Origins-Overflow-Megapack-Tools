@@ -1,0 +1,22 @@
+{
+	"powers": [
+		"capt:capt/shield",
+		"capt:capt/combat",
+		"capt:capt/trident",
+		"capt:capt/effs",
+		"capt:capt/axes",
+		"capt:capt/cold",
+		"capt:capt/hat",
+		"capt:capt/sleep",
+		"capt:capt/exhaust",
+		"capt:capt/imm",
+		"capt:capt/tagger"
+	],
+	"icon": {
+		"item": "minecraft:shield",
+		"tag": "{BlockEntityTag:{Base:0,Patterns:[{Pattern:ss,Color:14},{Pattern:cbo,Color:11},{Pattern:mr,Color:11},{Pattern:flo,Color:11},{Pattern:ms,Color:11},{Pattern:mc,Color:0},{Pattern:bo,Color:11}]}}"
+	},
+	"impact": 1,
+	"name": "§1§l§oCapta§f§l§oin Ame§4§l§orica",
+	"description": "America’s World War II Super-Soldier."
+}

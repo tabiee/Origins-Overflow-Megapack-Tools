@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "origins": [
+    "class:berserker",
+    "class:archer",
+    "class:assassin",
+    "class:paladin",
+    "class:bard"
+  ]
+}

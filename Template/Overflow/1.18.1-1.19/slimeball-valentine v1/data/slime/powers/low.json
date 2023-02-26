@@ -1,0 +1,39 @@
+{
+    "name": "Small Weakness",
+    "description": "When at 2 hearts or less, you deal almost no damage, but your attacks have stronger knockback.",
+    "type": "origins:multiple",
+    "dmg": {
+        "condition": {
+            "type": "origins:health",
+            "comparison": "<=",
+            "compare_to": 4
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.5
+        },
+        "target_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tp @s ~ ~ ~ facing entity @e[tag=slime,limit=1]"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:add_velocity",
+                        "y": 0.35,
+                        "z": -1.15,
+                        "space": "local",
+                        "client": true,
+                        "server": true,
+                        "set": true
+                    },
+                    "ticks": 3
+                }
+            ]
+        }
+    }
+}

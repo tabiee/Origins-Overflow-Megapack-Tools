@@ -1,0 +1,221 @@
+{
+	"type": "origins:multiple",
+	"remove": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute if entity @p[tag=echo,distance=13..] run power revoke @s echo:hear"
+                }
+            ]
+        }
+    },
+	"resist": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block_in_radius",
+                    "block_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "dampens_vibrations"
+                    },
+                    "radius": 2,
+                    "shape": "cube",
+                    "comparison": ">=",
+                    "compare_to": 4
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:attacker",
+                    "entity_condition": {
+                        "type": "origins:command",
+                        "command": "execute if entity @s[tag=echo]",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    }
+                },
+                {
+                    "type": "origins:name",
+                    "name": "even_more_magic"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.8
+        }
+    },
+	"run": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:moving"
+						},
+						{
+							"type": "origins:sprinting"
+						}
+					]
+				},
+				{
+					"type": "origins:on_block"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "resource change @e[tag=echo,limit=1,sort=nearest] echo:blast_energy 1"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle end_rod ~ ~0.15 ~ 0 0 0 0 1 normal @p[tag=echo]"
+				}
+			]
+		}
+	},
+	"break": {
+		"type": "origins:action_on_block_break",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "resource change @e[tag=echo,limit=1,sort=nearest] echo:blast_energy 1"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle end_rod ~ ~0.15 ~ 0 0 0 0 1 normal @p[tag=echo]"
+				}
+			]
+		}
+	},
+	"use": {
+		"type": "origins:action_on_block_use",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "resource change @e[tag=echo,limit=1,sort=nearest] echo:blast_energy 1"
+				}
+			]
+		},
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "particle end_rod ~ ~0.15 ~ 0 0 0 0 1 normal @p[tag=echo]"
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:block",
+					"block": "minecraft:lever"
+				},
+				{
+					"type": "origins:in_tag",
+					"tag": "minecraft:buttons"
+				},
+				{
+					"type": "origins:block",
+					"block": "minecraft:chest"
+				},
+				{
+					"type": "origins:block",
+					"block": "minecraft:note_block"
+				},
+				{
+					"type": "origins:block",
+					"block": "minecraft:jukebox"
+				},
+				{
+					"type": "origins:block",
+					"block": "minecraft:ender_chest"
+				},
+				{
+					"type": "origins:block",
+					"block": "minecraft:trapped_chest"
+				},
+				{
+					"type": "origins:block",
+					"block": "minecraft:shulker_box"
+				}
+			]
+		}
+	},
+	"items": {
+		"type": "origins:action_on_item_use",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "resource change @e[tag=echo,limit=1,sort=nearest] echo:blast_energy 1"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle end_rod ~ ~0.15 ~ 0 0 0 0 1 normal @p[tag=echo]"
+				}
+			]
+		}
+	},
+	"dmg": {
+		"type": "origins:action_when_damage_taken",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "resource change @e[tag=echo,limit=1,sort=nearest] echo:blast_energy 1"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle end_rod ~ ~0.15 ~ 0 0 0 0 1 normal @p[tag=echo]"
+				}
+			]
+		},
+		"cooldown": 5
+	},
+	"fell": {
+		"condition": {
+			"type": "origins:fall_distance",
+			"comparison": ">=",
+			"compare_to": 5
+		},
+		"type": "origins:action_on_land",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "resource change @e[tag=echo,limit=1,sort=nearest] echo:blast_energy 1"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle end_rod ~ ~0.15 ~ 0 0 0 0 1 normal @p[tag=echo]"
+				}
+			]
+		}
+	}
+}

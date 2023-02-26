@@ -1,0 +1,17 @@
+{
+    "powers": [
+        "origins:vegetarian",
+        "origins:no_shield",
+        "origins:weak_arms",
+        "origins:scare_creepers",
+        "origins:tailwind",
+        "betterhuman:cowlife"
+    ],
+    "icon": "minecraft:beef",
+    "order": 23,
+    "impact": 2,
+    "name": "Cowsian",
+    "description": "Being a cow isn't that bad.",
+    "loading_priority": 100,
+    "unchoosable": true
+}

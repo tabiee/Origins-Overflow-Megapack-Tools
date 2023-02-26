@@ -1,0 +1,18 @@
+{
+    "name": "Earthly Life",
+    "description": "You spawn and can only set your spawn within the Overworld, meaning you cannot use any respawn anchors, only beds.",
+    "type": "origins:prevent_block_use",
+    "block_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:block",
+                "block": "respawn_anchor"
+            },
+            {
+                "type": "origins:block",
+                "block": "unusualend:ender_respawn_altar"
+            }
+        ]
+    }
+}

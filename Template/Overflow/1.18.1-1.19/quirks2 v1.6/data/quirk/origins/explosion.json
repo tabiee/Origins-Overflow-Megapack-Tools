@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"quirk:explosion/dash",
+		"quirk:explosion/explosionreduce",
+		"quirk:explosion/ap_shot",
+		"quirk:explosion/surroundexplosive",
+		"quirk:explosion/chained",
+		"quirk:health"
+	],
+	"icon": "minecraft:tnt",
+        "unchoosable": true,
+	"order": 10,
+	"impact": 3,
+	"name": "Explosion",
+	"description": "Katsuki Bakugo's Quirk"
+}

@@ -1,0 +1,106 @@
+{
+    "name": "§9§nOxygen Supply§r",
+    "description": "Your suit activates underwater breathing, at the cost of power usage.",
+    "type": "origins:multiple",
+    "normal": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "minecraft:water"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:gain_air",
+                    "value": 100
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "inverted": true,
+                        "type": "origins:command",
+                        "command": "execute if entity @s[nbt={Inventory:[{Slot:102b,id:\"minecraft:netherite_chestplate\",tag:{CustomModelData:69}}]}]",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    "if_action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:power_bar",
+                        "change": -6,
+                        "operation": "add"
+                    }
+                }
+            ]
+        }
+    },
+    "crown": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "minecraft:water"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:gain_air",
+                    "value": 100
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "inverted": true,
+                        "type": "origins:command",
+                        "command": "execute if entity @s[nbt={Inventory:[{Slot:102b,id:\"minecraft:netherite_chestplate\",tag:{CustomModelData:69}}]}]",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    "if_action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:power_bar",
+                        "change": -3,
+                        "operation": "add"
+                    }
+                }
+            ]
+        }
+    }
+}

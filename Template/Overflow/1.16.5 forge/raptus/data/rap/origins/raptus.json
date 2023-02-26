@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"rap:small",
+		"rap:pounce",
+		"rap:ride",
+		"rap:biteforce",
+		"origins:tailwind",
+		"rap:fall",
+		"rap:higher_jump",
+		"origins:carnivore",
+		"rap:smaller_body",
+		"rap:light_armor"
+	],
+	"icon": "minecraft:mutton",
+	"order": 10,
+	"impact": 2,
+	"name": "Raptus",
+	"description": "These dinosaur-like creatures are descendants of velociraptors. Nowadays, they can be found hunting in packs or resting."
+}

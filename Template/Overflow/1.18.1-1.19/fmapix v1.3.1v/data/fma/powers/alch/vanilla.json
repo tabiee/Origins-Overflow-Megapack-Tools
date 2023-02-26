@@ -1,0 +1,9 @@
+{
+	"type": "origins:modify_crafting",
+	"hidden": true,
+	"recipe": "white_dye",
+	"result": {
+		"item": "white_dye",
+		"tag": "{display:{Name:'[{\"text\":\"Chalk\",\"italic\":false,\"color\":\"white\",\"bold\":true}]'}}"
+	}
+}

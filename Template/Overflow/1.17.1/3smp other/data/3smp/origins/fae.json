@@ -1,0 +1,20 @@
+{
+    "impact": 2,
+    "unchoosable": false,
+    "name": "§2§l§oFae",
+    "description": "The Fae are creatures in tune with the world itself, able to see more of it than common folk.",
+    "icon": "minecraft:glow_berries",
+    "powers": [
+        "3smp:fae/otherworldly",
+		"3smp:fae/particles",
+        "3smp:fae/fade",
+		"3smp:fae/trail",
+		"3smp:fae/littlefolk",
+		"3smp:fae/ironweak",
+		"3smp:fae/nameblind",
+		"3smp:fae/dealmaster",
+		"3smp:fae/ironal",
+		"3smp:fae/ironstand",
+		"3smp:fae/color"
+    ]
+}

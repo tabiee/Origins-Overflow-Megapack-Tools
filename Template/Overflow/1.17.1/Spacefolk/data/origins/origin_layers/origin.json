@@ -1,0 +1,18 @@
+{
+    "replace": false,
+    "origins": [
+        "spacefolk:omnilus",
+		"spacefolk:protogen",
+		"spacefolk:pyro",
+		"spacefolk:cryo",
+		"spacefolk:saturniid",
+		"spacefolk:electro",
+		"spacefolk:solgron",
+		"spacefolk:imoltu",
+		"spacefolk:saerth"
+    ],
+    "auto_choose": false,
+    "allow_random": false,
+    "enabled": true,
+    "allow_random_unchoosable": false
+}

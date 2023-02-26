@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"ace:mummy/lightsout",
+		"ace:mummy/exhaust",
+		"ace:mummy/hungy",
+		"ace:mummy/husk",
+		"ace:mummy/slow",
+		"origins:carnivore",
+		"ace:mummy/ironhate",
+		"ace:mummy/cold",
+		"ace:yeti/fire",
+		"ace:mummy/teamer"
+	],
+	"icon": "minecraft:chiseled_sandstone",
+	"impact": 2,
+	"name": "Mummy",
+	"description": "Risen mummified ruler of the ancient past."
+}

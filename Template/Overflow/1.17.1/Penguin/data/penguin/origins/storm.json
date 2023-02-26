@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"penguin:grace",
+		"penguin:fish",
+		"penguin:usual",
+		"origins:no_shield",
+		"penguin:crawl"
+	],
+	"icon": "minecraft:white_glazed_terracotta",
+	"order": 10,
+	"impact": 2,
+	"name": "Penguin",
+	"description": "The cuddly creatures of the south pole."
+}

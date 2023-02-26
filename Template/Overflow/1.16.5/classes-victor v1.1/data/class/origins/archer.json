@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"class:archer/bow",
+		"class:archer/speed",
+		"class:archer/start",
+		"class:archer/weps"
+	],
+	"icon": "minecraft:bow",
+	"impact": 1,
+	"name": "§a§l§oArcher",
+	"description": "Start with a bow and arrow. Good with the bow, not that good with anything else."
+}

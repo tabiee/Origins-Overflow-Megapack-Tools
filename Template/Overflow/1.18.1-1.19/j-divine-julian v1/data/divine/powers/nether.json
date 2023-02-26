@@ -1,0 +1,89 @@
+{
+    "name": "§4§nLimited time in Hell",
+    "description": "You can only stay in the nether for five minutes until you get Weakness and Mining Fatigue.",
+    "type": "origins:multiple",
+    "time": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 6000,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 15,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_time",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        }
+    },
+    "fx": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:the_nether"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_time",
+                    "comparison": "==",
+                    "compare_to": 6000
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "weakness",
+                    "duration": 100,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "mining_fatigue",
+                    "duration": 100,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            ]
+        }
+    },
+    "up": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "minecraft:the_nether"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_time",
+            "change": 1,
+            "operation": "add"
+        }
+    },
+    "down": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:dimension",
+            "dimension": "minecraft:the_nether"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_time",
+            "change": -25,
+            "operation": "add"
+        }
+    }
+}

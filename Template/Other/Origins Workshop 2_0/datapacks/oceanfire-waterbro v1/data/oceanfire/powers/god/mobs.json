@@ -1,0 +1,23 @@
+{
+    "name": "Loyal Subjects",
+    "description": "Sea creatures don't attack you no matter what.",
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "team join fish @e[type=drowned,distance=..120]"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "team join fish @e[type=guardian,distance=..120]"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "team join fish @e[type=elder_guardian,distance=..120]"
+            }
+        ]
+    }
+}

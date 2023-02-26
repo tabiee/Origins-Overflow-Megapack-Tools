@@ -1,0 +1,6 @@
+{
+	"name": "§2§nWinged",
+	"description": "You naturally have wings.",
+  "type": "origins:elytra_flight",
+  "render_elytra": true
+}

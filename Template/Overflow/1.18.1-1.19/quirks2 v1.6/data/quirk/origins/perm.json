@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"quirk:perm/phase",
+		"quirk:perm/suffo",
+		"quirk:perm/jump",
+		"quirk:perm/intangibility",
+		"quirk:perm/target",
+		"quirk:health"
+	],
+	"icon": "barrier",
+        "unchoosable": true,
+	"order": 10,
+	"impact": 3,
+	"name": "Permeation",
+	"description": "Mirio Togata's Quirk"
+}

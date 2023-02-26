@@ -1,0 +1,11 @@
+{
+    "name": "§6§nCows",
+    "description": "Cows.",
+    "type": "origins:action_over_time",
+    "interval": 2,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "function hippie:cows",
+        "permission_level": 4
+    }
+}

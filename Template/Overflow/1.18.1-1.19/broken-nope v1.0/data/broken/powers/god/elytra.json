@@ -1,0 +1,6 @@
+{
+    "name": "Winged",
+    "description": "There is pair of natural wings on your back, you have no need for elytra.",
+    "type": "origins:elytra_flight",
+    "render_elytra": true
+}

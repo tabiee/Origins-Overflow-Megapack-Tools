@@ -1,0 +1,74 @@
+{
+    "name": "§c§nFurious",
+    "description": "Your punches emit stronger force, attack damage increases, knocking enemies back further, as well as setting them ablaze.",
+    "type": "origins:multiple",
+    "burn": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle flame ~ ~1 ~ 0.5 0.5 0.5 0 10"
+                    },
+                    {
+                        "type": "origins:set_on_fire",
+                        "duration": 7
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "tp @s ~ ~ ~ facing entity @e[tag=cosm,limit=1]"
+                    },
+                    {
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:add_velocity",
+                            "y": 0.45,
+                            "z": -1.15,
+                            "space": "local",
+                            "client": true,
+                            "server": true,
+                            "set": true
+                        },
+                        "ticks": 3
+                    }
+                ]
+            }
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "dmg": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.4
+        }
+    }
+}

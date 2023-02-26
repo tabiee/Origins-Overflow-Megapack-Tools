@@ -1,0 +1,15 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "function 3smp:shiny"
+    },
+    "condition": {
+        "type": "origins:daytime",
+        "inverted": true
+    },
+    "interval": 1,
+    "name": "§e§nOooh Shiny!",
+    "description": "Moths are attracted to light."
+}

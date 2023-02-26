@@ -1,0 +1,111 @@
+{
+	"name": "§5§nBlood Demon Art: Blood Sickles",
+	"description": "Each hit has a chance to bleed the enemy for additional damage.",
+	"type": "origins:multiple",
+	"mark": {
+		"type": "origins:target_action_on_hit",
+		"damage_condition": {
+			"type": "origins:attacker",
+			"entity_condition": {
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "demon:weapons"
+					}
+				}
+			}
+		},
+		"entity_action": {
+			"type": "origins:chance",
+			"chance": 0.5,
+			"action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:apply_effect",
+						"effect": {
+							"effect": "unluck",
+							"duration": 100,
+							"amplifier": 5,
+							"show_particles": false,
+							"show_icon": false
+						}
+					},
+					{
+						"type": "origins:delay",
+						"action": {
+							"type": "origins:damage",
+							"amount": 12,
+							"source": {
+								"name": "magic",
+								"bypasses_armor": true,
+								"unblockable": true,
+								"magic": true
+							}
+						},
+						"ticks": 10
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "particle dust 0.710 0.000 0.000 1 ^ ^1 ^1.5 0.5 0.5 0.5 0 30 normal"
+					}
+				]
+			}
+		},
+		"cooldown": 100,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"dmg": {
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:area_of_effect",
+			"radius": 60,
+			"bientity_condition": {
+				"type": "origins:target_condition",
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:status_effect",
+							"effect": "unluck",
+							"min_amplifier": 5,
+							"max_amplifier": 5
+						}
+					]
+				}
+			},
+			"bientity_action": {
+				"type": "origins:damage",
+				"amount": 1,
+				"source": {
+					"name": "magic",
+					"bypasses_armor": true,
+					"unblockable": true,
+					"magic": true
+				}
+			}
+		}
+	},
+	"fx": {
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[nbt={ActiveEffects:[{Id: 27b,Amplifier:5b}]}] at @s run particle dust 0.710 0.000 0.000 1 ~ ~1 ~ 0.25 0.25 0.25 0 3 normal"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[nbt={ActiveEffects:[{Id: 27b,Amplifier:5b}]}] at @s run particle landing_lava ~ ~1 ~ 0.1 0.1 0.1 0 1 normal"
+				}
+			]
+		}
+	}
+}

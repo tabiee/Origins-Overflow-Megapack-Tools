@@ -1,0 +1,32 @@
+{
+    "name": "§2§nSquishy Body",
+    "description": "You take little to no fall damage.",
+    "type": "origins:multiple",
+    "dmg": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.9
+        }
+    },
+    "land": {
+        "type": "origins:action_on_land",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle item slime_block ~ ~0.15 ~ 0.1 0.1 0.1 0.1 3"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "§4§nLarge Appetite",
+    "description": "You exhaust much quicker than others, thus requiring you to eat more.",
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.6,
+        "name": "Extra exhaustion from large appetite"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "§4§nOdd Biology",
+    "description": "You can't drink potions.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:potion"
+        }
+    }
+}

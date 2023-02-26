@@ -1,0 +1,54 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "*:pixel_meter_resource",
+                "comparison": "!=",
+                "compare_to": 0
+            },
+            {
+                "type": "origins:resource",
+                "resource": "*:pixel_meter_resource",
+                "comparison": "!=",
+                "compare_to": 100
+            },
+			{
+				"inverted": true,
+				"type": "origins:sneaking"
+			},
+			{
+                "type": "origins:resource",
+                "resource": "*:pixel_swapper_bit",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": {
+        "key": "primary",
+        "continuous": true
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:change_resource",
+                "resource": "*:pixel_meter_resource",
+                "change": -1
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "give @s poisonous_potato{CustomModelData:300,display:{Name:'[{\"text\":\"Pixel\",\"italic\":false}]'},Enchantments:[{}]} 1",
+                "permission_level": 4
+            }
+        ]
+    }
+}

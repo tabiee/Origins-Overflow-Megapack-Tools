@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"exsor:exsor/assplode",
+		"exsor:exsor/fangs",
+		"exsor:exsor/resist",
+		"exsor:exsor/debuff",
+		"exsor:exsor/villa",
+		"exsor:exsor/iron",
+		"exsor:exsor/cats",
+		"exsor:exsor/minions",
+		"exsor:exsor/tagger"
+	],
+	"icon": "minecraft:tnt",
+	"impact": 3,
+	"name": "§e§l§oExplosive Sorcerer",
+	"description": "You have mastered magic! ...and blowing things up."
+}

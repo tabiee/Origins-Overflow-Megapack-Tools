@@ -1,0 +1,16 @@
+{
+    "name": "§e§nThe Weeping Dead",
+    "description": "You drop a ghast tear when killed.",
+    "condition": {
+        "type": "origins:health",
+        "comparison": "==",
+        "compare_to": 0
+    },
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "rising_action": {
+        "type": "origins:execute_command",
+        "command": "summon item ~ ~ ~ {Item:{id:\"minecraft:ghast_tear\",Count:1b}}",
+        "permission_level": 4
+    }
+}

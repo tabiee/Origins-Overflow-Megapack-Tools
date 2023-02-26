@@ -1,0 +1,129 @@
+{
+    "name": "Warping Shield",
+    "description": "You can create a portal shield around you that teleports any projectiles elsewhere into the void, nullifying their damage. While active, anyone that approaches you gets teleported 10 blocks in a random direction.",
+    "type": "origins:multiple",
+    "tap": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:shield_dur",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "secondary"
+        },
+        "retain_state": false
+    },
+    "inv": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:shield_tap"
+                }
+            ]
+        },
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:projectile"
+        }
+    },
+    "dur": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 300,
+        "start_value": 300,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 8,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:shield_dur",
+                "comparison": "!=",
+                "compare_to": 300
+            }
+        }
+    },
+    "drain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:shield_tap"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:shield_dur",
+                    "change": -1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute positioned ~ ~1.25 ~ rotated 90 0 run function portal:helix/animate"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle scrape ~ ~0.5 ~ 1 1 1 0 1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "spreadplayers ~ ~ 10 10 false @e[type=!#portal:noeyes,tag=!porter,distance=..3]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=!porter,distance=..3.5] at @s run particle dust 0.431 0.827 1.000 1 ~ ~ ~ 0.1 0.1 0.1 0.5 6"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "kill @e[type=#minecraft:impact_projectiles,distance=..2.25]"
+                    },
+                    "ticks": 1
+                }
+            ]
+        }
+    },
+    "gain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:power_active",
+                    "power": "*:shield_tap"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:shield_dur",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        }
+    }
+}

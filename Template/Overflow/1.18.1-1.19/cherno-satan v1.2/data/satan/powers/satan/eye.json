@@ -1,0 +1,69 @@
+{
+	"name": "§2§lSatanic Eye",
+	"description": "A mere glance at an entity enough to kill them.",
+	"type": "origins:multiple",
+	"act": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:satan/eye_tap"
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:raycast",
+					"distance": 60,
+					"block": false,
+					"entity": true,
+					"shape_type": "visual",
+					"fluid_handling": "none",
+					"bientity_action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:damage",
+							"amount": 30,
+							"source": {
+								"name": "magic",
+								"bypasses_armor": true,
+								"unblockable": true,
+								"magic": true
+							}
+						}
+					},
+					"command_at_hit": "particle soul ~ ~ ~ 0.5 1 0.5 0 3 normal",
+					"command_along_ray": "particle dust 0.812 0.000 0.000 1 ^ ^ ^1 0 0 0 0 3",
+					"command_step": 1,
+					"command_along_ray_only_on_hit": false
+				}
+			]
+		}
+	},
+	"sound": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:satan/eye_tap"
+		},
+		"type": "origins:action_over_time",
+		"interval": 3,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "entity.vex.hurt",
+					"volume": 0.2,
+					"pitch": 1
+				}
+			]
+		}
+	},
+	"tap": {
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": {
+			"key": "primary"
+		}
+	}
+}

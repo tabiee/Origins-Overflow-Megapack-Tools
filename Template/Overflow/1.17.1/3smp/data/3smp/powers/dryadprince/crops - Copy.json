@@ -1,0 +1,305 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:delay",
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 59 59:1"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 104 104:1"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 105 105:1"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 141 141:1"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 142 142:1"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 207 207:1"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "clearhistory"
+                        }
+                    ]
+                },
+                "ticks": 20
+            },
+            {
+                "type": "origins:delay",
+                "ticks": 40,
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 59:1 59:2"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 104:1 104:2"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 105:1 105:2"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 141:1 141:2"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 142:1 142:2"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 207:1 207:2"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "clearhistory"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "origins:delay",
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 59:2 59:3"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 104:2 104:3"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 105:2 105:3"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 141:2 141:3"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 142:2 142:3"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 207:2 207:3"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "clearhistory"
+                        }
+                    ]
+                },
+                "ticks": 60
+            },
+            {
+                "type": "origins:delay",
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 59:3 59:4"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 104:3 104:4"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 105:3 105:4"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 141:3 141:4"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 142:3 142:4"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "clearhistory"
+                        }
+                    ]
+                },
+                "ticks": 80
+            },
+            {
+                "type": "origins:delay",
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 59:4 59:5"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 104:4 104:5"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 105:4 105:5"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 141:4 141:5"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 142:4 142:5"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "clearhistory"
+                        }
+                    ]
+                },
+                "ticks": 100
+            },
+            {
+                "type": "origins:delay",
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 59:5 59:6"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 104:5 104:6"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 105:5 105:6"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 141:5 141:6"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 142:5 142:6"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "clearhistory"
+                        }
+                    ]
+                },
+                "ticks": 120
+            },
+            {
+                "type": "origins:delay",
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 59:6 59:7"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 104:6 104:7"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 105:6 105:7"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 141:6 141:7"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "/replacenear 3 142:6 142:7"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "permission_level": 4,
+                            "command": "clearhistory"
+                        }
+                    ]
+                },
+                "ticks": 140
+            }
+        ]
+    },
+    "cooldown": 900,
+    "key": "key.origins.primary_active",
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 8
+    },
+    "name": "§5§nNourish [Primary]",
+    "description": "Focus to grow plants faster."
+}

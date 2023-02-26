@@ -1,0 +1,92 @@
+{
+    "type": "origins:active_self",
+    "name": "Hurricane",
+    "description": "Summon a very powerful wind storm",
+    "hidden": false,
+    "cooldown": 1250,
+  "key": {
+    "key": "key.origins.quaternary_active",
+    "continuous": false
+  },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+        {
+          "type": "origins:delay",
+          "ticks": 1,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "execute at @p run function quirk:hurricane",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 3,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "execute at @p run function quirk:hurricane",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 7,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "execute at @p run function quirk:hurricane",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 13,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "execute at @p run function quirk:hurricane",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 17,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "execute at @p run function quirk:hurricane",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 23,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "execute at @p run function quirk:hurricane",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 27,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "execute at @p run function quirk:hurricane",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 33,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "execute at @p run function quirk:hurricane",
+            "permission_level": 4
+          }
+	}
+        ]
+    },
+  "hud_render": {
+    "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+    "bar_index": 23 
+  }
+}

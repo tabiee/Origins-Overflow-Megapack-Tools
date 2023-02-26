@@ -1,0 +1,39 @@
+{
+    "name": "§5§nArc Volt",
+    "description": "Summon a lightning strike on those around you.",
+    "type": "origins:active_self",
+    "cooldown": 600,
+    "hud_render": {
+        "should_render": true,
+        "bar_index": 2
+    },
+    "key": {
+        "key": "primary"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..20,tag=!zapper] at @s run summon lightning_bolt ~ ~ ~",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle electric_spark ~ ~ ~ 10 0.3 10 1 500",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle glow ~ ~ ~ 10 0.3 10 1 500",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "item.trident.thunder",
+                "volume": 1,
+                "pitch": 1.5
+            }
+        ]
+    }
+}

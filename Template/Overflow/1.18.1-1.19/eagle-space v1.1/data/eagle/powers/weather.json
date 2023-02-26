@@ -1,0 +1,19 @@
+{
+    "name": "Bad Weather",
+    "description": "You gain the Sunbird's Curse when it's raining, snowing or thundering.",
+    "type": "origins:action_over_time",
+    "condition": {
+        "type": "apoli:in_rain"
+    },
+    "interval": 35,
+    "entity_action": {
+        "type": "apoli:apply_effect",
+        "effect": {
+            "effect": "alexsmobs:sunbird_curse",
+            "duration": 55,
+            "amplifier": 0,
+            "show_icon": true,
+            "show_particles": false
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Frostbite",
+    "description": "Your skin is blue.",
+    "type": "origins:model_color",
+    "red": 0.25,
+    "green": 0.65,
+    "blue": 0.8,
+    "alpha": 0.85
+}

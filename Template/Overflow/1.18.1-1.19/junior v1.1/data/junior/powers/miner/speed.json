@@ -1,0 +1,19 @@
+{
+    "name": "Quick Digger",
+    "description": "You mine 30% faster.",
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "junior:pickaxe"
+            }
+        }
+    },
+    "type": "origins:modify_break_speed",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.3
+    }
+}

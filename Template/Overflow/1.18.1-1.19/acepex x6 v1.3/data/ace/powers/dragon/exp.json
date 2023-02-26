@@ -1,0 +1,42 @@
+{
+    "name": "Loud",
+    "description": "Explosions do twice as much damage to you.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "explosion"
+            },
+            {
+                "type": "origins:name",
+                "name": "explosion.player"
+            },
+            {
+                "type": "origins:name",
+                "name": "fireworks"
+            },
+            {
+                "type": "origins:name",
+                "name": "fireworks.item"
+            },
+            {
+                "type": "origins:name",
+                "name": "fireworks.player"
+            },
+            {
+                "type": "origins:name",
+                "name": "fireball"
+            },
+            {
+                "type": "origins:name",
+                "name": "fireball.item"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 1
+    }
+}

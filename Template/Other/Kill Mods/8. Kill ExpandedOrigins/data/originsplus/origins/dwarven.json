@@ -1,0 +1,19 @@
+{
+    "impact": 4,
+    "order": -1,
+    "icon": "minecraft:iron_pickaxe",
+    "powers": [
+        "originsplus:apply_haste",
+        "originsplus:extra_ores",
+        "originsplus:hastenize",
+        "originsplus:hastenize_display",
+        "originsplus:dwarven_appettite",
+        "originsplus:dwarven_size",
+        "originsplus:darkvision",
+        "origins:strong_arms",
+        "origins:strong_arms_break_speed",
+        "originsplus:sun_blinded"
+    ],
+    "loading_priority": 100,
+    "unchoosable": true
+}

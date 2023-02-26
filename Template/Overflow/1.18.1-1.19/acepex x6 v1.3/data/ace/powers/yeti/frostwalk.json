@@ -1,0 +1,57 @@
+{
+	"name": "Frostwalker",
+	"description": "Able to turn water into ice and run across it.",
+	"type": "origins:multiple",
+	"tog": {
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": "secondary"
+	},
+	"walk": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "ace:yeti/frostwalk_tog"
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 minecraft:frosted_ice replace minecraft:water",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "summon area_effect_cloud ~ ~ ~ {Particle:\"snowflake\",Radius:5f,Duration:2}",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"float": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:fluid_height",
+					"fluid": "minecraft:water",
+					"comparison": "<=",
+					"compare_to": 0.1
+				},
+				{
+					"type": "origins:power_active",
+					"power": "ace:yeti/frostwalk_tog"
+				}
+			]
+		},
+		"type": "origins:walk_on_fluid",
+		"fluid": "minecraft:water"
+	}
+}

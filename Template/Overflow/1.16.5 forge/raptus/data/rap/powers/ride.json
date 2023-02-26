@@ -1,0 +1,174 @@
+{
+	"name": "Rideable",
+	"description": "You can pick people up to put on your back. Hit someone to select them. Must be next to your target.",
+	"type": "origins:multiple",
+	"tap": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+			"bar_index": 0
+		}
+	},
+	"hit": {
+		"type": "origins:target_action_on_hit",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tag @e remove pickup",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:execute_command",
+						"command": "tag @s[type=player] add pickup",
+						"permission_level": 4
+					},
+					"ticks": 2
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"deltog": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:ride_tap",
+				"comparison": "==",
+				"compare_to": 1
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:play_sound",
+						"sound": "minecraft:entity.panda.cant_breed",
+						"volume": 0.3,
+						"pitch": 0.9
+					},
+					{
+						"type": "origins:delay",
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:ride_tap",
+							"change": -1
+						},
+						"ticks": 2
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:play_sound",
+						"sound": "minecraft:entity.panda.cant_breed",
+						"volume": 0.3,
+						"pitch": 2
+					},
+					{
+						"type": "origins:delay",
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:ride_tap",
+							"change": 1
+						},
+						"ticks": 2
+					}
+				]
+			}
+		},
+		"cooldown": 10,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"act": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:ride_tap",
+			"comparison": "==",
+			"compare_to": 1
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "tp @e[tag=pickup,distance=..4,limit=1] ~ ~1.5 ~",
+			"permission_level": 4
+		}
+	},
+	"debug": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:ride_tap",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[tag=pickup,distance=..1.5] slow_falling 1 0 true",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"fail": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=pickup]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:ride_tap",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "title @a actionbar {\"text\":\"No Target. Hit someone to select them as your target.\",\"bold\":true,\"color\":\"red\"}",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

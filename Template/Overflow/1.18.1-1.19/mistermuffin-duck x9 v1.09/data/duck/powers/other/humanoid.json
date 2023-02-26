@@ -1,0 +1,123 @@
+{
+    "name": "§e§nHumanoid Form§r",
+    "description": "Like a human but winged.\nYou can boost into the air every 30s and glide. You can't wear heavy armor like iron, diamond or netherite and feel weaker when under cellings.",
+    "type": "origins:multiple",
+    "elytra": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:other/change_form",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "type": "origins:elytra_flight",
+        "render_elytra": true
+    },
+    "armor": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:other/change_form",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "type": "origins:conditioned_restrict_armor",
+        "head": {
+            "type": "origins:armor_value",
+            "comparison": ">",
+            "compare_to": 2
+        },
+        "chest": {
+            "type": "origins:armor_value",
+            "comparison": ">",
+            "compare_to": 5
+        },
+        "legs": {
+            "type": "origins:armor_value",
+            "comparison": ">",
+            "compare_to": 4
+        },
+        "feet": {
+            "type": "origins:armor_value",
+            "comparison": ">",
+            "compare_to": 1
+        },
+        "tick_rate": 1
+    },
+    "launch": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:other/change_form",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "type": "origins:launch",
+        "cooldown": 600,
+        "speed": 2,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 4
+        },
+        "sound": "minecraft:entity.parrot.fly",
+        "key": {
+            "key": "key.saveToolbarActivator",
+            "continuous": true
+        }
+    },
+    "cellings": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:other/change_form",
+                    "comparison": "==",
+                    "compare_to": 2
+                },
+                {
+                    "type": "origins:block_collision",
+                    "offset_x": 0,
+                    "offset_y": 1,
+                    "offset_z": 0
+                }
+            ]
+        },
+        "type": "origins:stacking_status_effect",
+        "min_stacks": -20,
+        "max_stacks": 361,
+        "duration_per_stack": 10,
+        "tick_rate": 10,
+        "effects": [
+            {
+                "effect": "minecraft:weakness",
+                "duration": 100,
+                "amplifier": 0,
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "minecraft:slowness",
+                "duration": 100,
+                "amplifier": 0,
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ]
+    }
+}

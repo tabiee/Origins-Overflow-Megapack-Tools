@@ -1,0 +1,207 @@
+{
+	"name": "§5§nChronokinesis",
+	"description": "Your Primary lets you warp and twist space between two points, connecting them with portals. This works even between dimensions.",
+	"type": "origins:multiple",
+	"blu2ora": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=blu,distance=..1]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:azuly/portal_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "weakness"
+				},
+				{
+					"inverted": true,
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "head",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "golden_helmet"
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "chest",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "golden_chestplate"
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "legs",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "golden_leggings"
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "feet",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "golden_boots"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "function azuly:blu",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "*:azuly/portal_cd"
+				}
+			]
+		}
+	},
+	"ora2blu": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:command",
+					"command": "execute if entity @e[tag=ora,distance=..1]",
+					"comparison": ">=",
+					"compare_to": 1,
+					"permission_level": 4
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:azuly/portal_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"inverted": true,
+					"type": "origins:status_effect",
+					"effect": "weakness"
+				},
+				{
+					"inverted": true,
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "head",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "golden_helmet"
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "chest",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "golden_chestplate"
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "legs",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "golden_leggings"
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "feet",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "golden_boots"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "function azuly:ora",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "*:azuly/portal_cd"
+				}
+			]
+		}
+	},
+	"cd": {
+		"type": "origins:cooldown",
+		"cooldown": 50,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 0
+		}
+	},
+	"effect": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=blu] at @s run particle block_marker light_blue_concrete ~ ~1 ~ 0.1 0.25 0.1 0 2",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=ora] at @s run particle block_marker orange_concrete ~ ~1 ~ 0.1 0.25 0.1 0 2",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

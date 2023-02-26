@@ -1,0 +1,132 @@
+{
+    "name": "§2§nGrowing Rage§r",
+    "description": "The more damage you take, the more damage you deal.",
+    "type": "origins:multiple",
+    "rage": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 100,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 5
+        }
+    },
+    "gain": {
+        "type": "origins:action_when_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:change_resource",
+                "resource": "*:saiyan/rage_rage",
+                "change": 5,
+                "operation": "add"
+            }
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "lose": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:saiyan/rage_rage",
+            "change": -1,
+            "operation": "add"
+        }
+    },
+    "dmg1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:saiyan/rage_rage",
+                    "comparison": "!=",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:saiyan/rage_rage",
+                    "comparison": "<=",
+                    "compare_to": 25
+                }
+            ]
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.25
+        }
+    },
+    "dmg2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:saiyan/rage_rage",
+                    "comparison": ">",
+                    "compare_to": 25
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:saiyan/rage_rage",
+                    "comparison": "<=",
+                    "compare_to": 50
+                }
+            ]
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    },
+    "dmg3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:saiyan/rage_rage",
+                    "comparison": ">",
+                    "compare_to": 50
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:saiyan/rage_rage",
+                    "comparison": "<=",
+                    "compare_to": 75
+                }
+            ]
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.5
+        }
+    },
+    "dmg4": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:saiyan/rage_rage",
+                    "comparison": ">",
+                    "compare_to": 75
+                }
+            ]
+        },
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    }
+}

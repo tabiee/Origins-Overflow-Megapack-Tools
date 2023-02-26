@@ -1,0 +1,10 @@
+{
+    "hidden": true,
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.movement_speed",
+        "operation": "multiply_total",
+        "value": 0.5
+    },
+    "update_health": false
+}

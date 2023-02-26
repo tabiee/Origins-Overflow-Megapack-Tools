@@ -1,0 +1,28 @@
+{
+    "type": "origins:restrict_armor",
+    "head": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 2,
+        "inverted": false
+    },
+    "chest": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 6,
+        "inverted": false
+    },
+    "legs": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 5,
+        "inverted": false
+    },
+    "feet": {
+        "type": "origins:armor_value",
+        "comparison": ">",
+        "compare_to": 2,
+        "inverted": false
+    },    "name": "§6§nLight Armour",
+    "description": "You can't wear anything heavier than iron."
+}

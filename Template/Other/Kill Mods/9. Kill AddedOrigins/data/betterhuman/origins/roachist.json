@@ -1,0 +1,18 @@
+{
+    "powers": [
+        "origins:natural_armor",
+        "betterhuman:less_hunger",
+        "betterhuman:roach_sized",
+        "betterhuman:lavahaterxes",
+        "betterhuman:water_breath",
+        "betterhuman:roachsize",
+        "betterhuman:poisonimmune"
+    ],
+    "icon": "minecraft:dirt",
+    "order": 12,
+    "impact": 2,
+    "name": "Roachist",
+    "description": "The roach is a common origin",
+    "loading_priority": 100,
+    "unchoosable": true
+}

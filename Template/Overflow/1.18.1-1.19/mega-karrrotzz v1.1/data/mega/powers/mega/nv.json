@@ -1,0 +1,10 @@
+{
+    "name": "§1§nNocturnal",
+    "description": "At dusk you are far more active, you have great night vision.",
+    "type": "origins:toggle_night_vision",
+    "strength": 0.7,
+    "active_by_default": true,
+    "key": {
+        "key": "secondary"
+    }
+}

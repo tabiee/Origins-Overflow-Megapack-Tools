@@ -1,0 +1,19 @@
+{
+    "name": "Sticky",
+    "description": "When you get hit, the attacker receives Slowness.",
+    "type": "origins:attacker_action_when_hit",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "slowness",
+            "duration": 60,
+            "amplifier": 0,
+            "show_particles": true,
+            "show_icon": true
+        }
+    },
+    "cooldown": 10,
+    "hud_render": {
+        "should_render": false
+    }
+}

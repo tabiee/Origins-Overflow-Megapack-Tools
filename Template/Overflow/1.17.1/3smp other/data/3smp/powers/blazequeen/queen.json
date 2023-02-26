@@ -1,0 +1,12 @@
+{
+	"name": "§2§nQueen",
+	"description": "The netherfolk wouldn't dare to harm you.",
+  "type": "extraorigins:mob_neutrality",
+  "entity_types": [
+	"piglin",
+	"ghast",
+	"blaze",
+	"wither_skeleton",
+	"magma_cube"
+  ]
+}

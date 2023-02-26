@@ -1,0 +1,30 @@
+{
+    "name": "§4§nArcanophobia",
+    "description": "You take double magic damage due to your physiology not mixing well with it.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "magic"
+            },
+			{
+                "type": "origins:name",
+                "name": "indirectMagic"
+            },
+			{
+                "type": "origins:name",
+                "name": "indirectMagic.item"
+            },
+            {
+                "type": "origins:name",
+                "name": "magic.player"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.5
+    }
+}

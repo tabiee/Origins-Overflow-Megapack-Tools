@@ -1,0 +1,20 @@
+{
+    "powers": [
+        "latoorigins:lava_torpedo",
+        "latoorigins:lava_vision",
+        "latoorigins:lava_swimming",
+        "latoorigins:lava_swimming_speed",
+        "latoorigins:lava_finned",
+        "origins:fire_immunity",
+        "origins:nether_spawn",
+        "origins:flame_particles",
+        "origins:burning_wrath",
+        "origins:water_vulnerability",
+        "origins:carnivore"
+    ],
+    "icon": "lava_bucket",
+    "order": 1,
+    "impact": 3,
+    "loading_priority": 2147483647,
+    "unchoosable": true
+}

@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"shadow:tp",
+		"shadow:sword",
+		"shadow:proj",
+		"shadow:hp",
+		"shadow:wither",
+		"shadow:undead",
+		"shadow:soulsand",
+		"shadow:fear",
+		"shadow:soulfire",
+		"shadow:form",
+		"shadow:unstable",
+		"shadow:tagger"
+	],
+	"icon": "minecraft:netherite_sword",
+	"impact": 3,
+	"name": "§9§l§oShadowborn",
+	"description": "You are a form of “Celestial Being” born from nothing but the universe itself. You arose from nothing but shadows."
+}

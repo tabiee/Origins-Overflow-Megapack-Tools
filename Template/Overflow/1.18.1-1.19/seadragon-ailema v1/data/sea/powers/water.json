@@ -1,0 +1,54 @@
+{
+    "name": "§2§nSea Dweller",
+    "description": "The waters are your home, you are a fast swimmer, can breathe underwater and more.",
+    "type": "origins:multiple",
+    "speed": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "additionalentityattributes:water_speed",
+            "operation": "multiply_total",
+            "value": 3
+        },
+        "update_health": false
+    },
+    "air": {
+        "type": "origins:action_over_time",
+        "interval": 25,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "conduit_power",
+                "duration": 35,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        }
+    },
+    "mining": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "water",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:modify_break_speed",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 3.5
+        }
+    },
+    "jump": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "water",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:modify_jump",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 2
+        }
+    }
+}

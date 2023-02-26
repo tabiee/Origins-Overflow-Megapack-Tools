@@ -1,0 +1,41 @@
+{
+    "type": "apoli:modify_falling",
+    "velocity": 0.01,
+    "take_fall_damage": false,
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:sneaking",
+                        "inverted": false
+                    },
+                    {
+                        "type": "origins:fall_flying",
+                        "inverted": false
+                    }
+                ],
+                "inverted": false
+            },
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:sneaking",
+                        "inverted": true
+                    },
+                    {
+                        "type": "origins:fall_flying",
+                        "inverted": true
+                    }
+                ],
+                "inverted": false
+            }
+        ],
+        "inverted": false
+    },
+	    "name": "§2§nLight as a feather",
+    "description": "You don't fall as a human would instead you glide gently to the ground."
+}

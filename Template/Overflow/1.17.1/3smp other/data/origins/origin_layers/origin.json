@@ -1,0 +1,23 @@
+{
+    "replace": false,
+    "origins": [
+        "3smp:fae",
+		"3smp:piglinbrute",
+        "3smp:spectre",
+        "3smp:divinechild",
+        "3smp:dragonkin",
+		"3smp:blazequeen",
+		"3smp:moth",
+		"3smp:shadow",
+		"3smp:dryadprince",
+		"void:void_habitant",
+		"foxboi_two:foxboi_two",
+        "simplymob:wolf",
+        "ax:axolotl",
+        "endheir:endheir"
+    ],
+    "auto_choose": false,
+    "allow_random": false,
+    "enabled": true,
+    "allow_random_unchoosable": false
+}

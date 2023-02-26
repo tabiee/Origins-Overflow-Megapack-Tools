@@ -1,0 +1,10 @@
+{
+    "name": "Tiny!",
+    "description": "You are incredibly small and only have 3 hearts.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": -14
+    }
+}

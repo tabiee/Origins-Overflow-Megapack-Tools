@@ -1,0 +1,12 @@
+{
+    "name": "Deep Slumber",
+    "description": "You can only sleep underground.",
+    "type": "origins:prevent_sleep",
+    "block_condition": {
+        "type": "origins:height",
+        "comparison": ">",
+        "compare_to": 30
+    },
+    "message": "You need to go deeper.",
+    "set_spawn_point": true
+}

@@ -1,0 +1,67 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "fx": {
+        "type": "origins:effect_immunity",
+        "effects": [
+            "poison",
+            "wither"
+        ]
+    },
+    "gold": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "golden_carrot"
+                },
+                {
+                    "item": "golden_apple"
+                },
+                {
+                    "item": "enchanted_golden_apple"
+                }
+            ]
+        },
+        "food_modifier": {
+            "operation": "multiply_base",
+            "value": 0.2
+        },
+        "saturation_modifier": {
+            "operation": "multiply_base",
+            "value": 0.2
+        }
+    },
+	"shiny": {
+        "type": "origins:active_self",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "primary",
+            "continuous": true
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle warped_spore ^ ^1.5 ^0.5 0.2 0.5 0.2 0 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle crimson_spore ^ ^1.5 ^0.5 0.2 0.5 0.2 0 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle spore_blossom_air ^ ^1.5 ^0.2 0.2 0.5 0.2 0 1",
+                    "permission_level": 4
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,111 @@
+{
+    "name": "Teleport",
+    "description": "You teleport to the last entity you hit.",
+    "type": "origins:multiple",
+    "pin": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @e[tag=tpsp] remove tpsp",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add tpsp",
+                    "permission_level": 4
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "cooldown": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 500,
+        "start_value": 500,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 8,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_cooldown",
+                "comparison": "<",
+                "compare_to": 500
+            }
+        }
+    },
+    "callback": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[tag=tpsp]",
+                    "comparison": ">",
+                    "compare_to": 0,
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_cooldown",
+                    "comparison": "==",
+                    "compare_to": 500
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tp @s @e[tag=tpsp,limit=1]",
+                    "permission_level": 4
+                },
+				{
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:glow ~ ~ ~ 1 1 1 0.1 50",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.enderman.teleport",
+                        "volume": 0.1,
+                        "pitch": 1.5
+                    },
+                    "ticks": 2
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_cooldown",
+                    "change": -500
+                }
+            ]
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "secondary"
+        }
+    },
+    "increase_cooldown": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_cooldown",
+            "change": 20
+        }
+    }
+}

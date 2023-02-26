@@ -1,0 +1,27 @@
+{
+    "name": "§2§nBorn In The Dark",
+    "description": "You were not just born in the dark, you were molded by it.",
+    "type": "origins:multiple",
+    "nv": {
+        "type": "origins:night_vision",
+        "strength": 0.35
+    },
+    "str": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:daytime"
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "strength",
+                "duration": 55,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    }
+}

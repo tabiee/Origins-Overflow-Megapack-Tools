@@ -1,0 +1,195 @@
+{
+	"name": "§5§nICE",
+	"hidden": true,
+	"type": "origins:active_self",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"inverted": true,
+				"type": "origins:on_fire"
+			},
+			{
+				"inverted": true,
+				"type": "origins:dimension",
+				"dimension": "the_nether"
+			},
+			{
+				"type": "origins:xp_levels",
+				"comparison": ">",
+				"compare_to": 0
+			},
+			{
+				"type": "origins:sneaking",
+				"inverted": true
+			},
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "offhand",
+				"item_condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "heart_of_the_sea"
+							}
+						},
+						{
+							"type": "origins:nbt",
+							"nbt": "{CustomModelData:2}"
+						}
+					]
+				}
+			},
+			{
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "origins:block_in_radius",
+						"block_condition": {
+							"type": "origins:or",
+							"conditions": [
+								{
+									"type": "origins:block",
+									"block": "ice"
+								},
+								{
+									"type": "origins:block",
+									"block": "blue_ice"
+								},
+								{
+									"type": "origins:block",
+									"block": "packed_ice"
+								},
+								{
+									"type": "origins:block",
+									"block": "frosted_ice"
+								},
+								{
+									"type": "origins:block",
+									"block": "snow"
+								},
+								{
+									"type": "origins:block",
+									"block": "snow_block"
+								},
+								{
+									"type": "origins:block",
+									"block": "water"
+								}
+							]
+						},
+						"radius": 2,
+						"shape": "cube",
+						"comparison": ">=",
+						"compare_to": 1
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s water_bucket 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s minecraft:potion{Potion:\"minecraft:water\"} 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s ice 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s blue_ice 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s packed_ice 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s snow 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s snow_block 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					},
+					{
+						"type": "origins:command",
+						"command": "clear @s powder_snow_bucket 0",
+						"comparison": ">=",
+						"compare_to": 1,
+						"permission_level": 4
+					}
+				]
+			}
+		]
+	},
+	"entity_action": {
+		"type": "origins:raycast",
+		"distance": 100,
+		"block": true,
+		"entity": true,
+		"shape_type": "collider",
+		"fluid_handling": "any",
+		"bientity_action": {
+			"type": "origins:target_action",
+			"action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:damage",
+						"source": {
+							"name": "freeze.player"
+						},
+						"amount": 4,
+						"bypasses_armor": true
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "fill ~1 ~ ~1 ~-1 ~ ~-1 ice replace water"
+					},
+					{
+						"type": "origins:delay",
+						"action": {
+						"type": "origins:execute_command",
+						"command": "fill ~ ~ ~ ~ ~ ~ powder_snow replace packed_ice"
+					},
+					"ticks": 2
+					}
+				]
+			}
+		},
+		"command_along_ray": "particle minecraft:white_ash ^ ^-0.5 ^2 0 0 0 0 1 normal",
+		"command_at_hit": "function fma:iceplode",
+		"command_step": 1
+	},
+	"key": {
+		"key": "primary",
+		"continuous": true
+	},
+	"cooldown": 50,
+	"hud_render": {
+		"should_render": false
+	}
+}

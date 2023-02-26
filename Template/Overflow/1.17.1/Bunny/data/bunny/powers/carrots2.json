@@ -1,0 +1,29 @@
+{
+  "type": "origins:action_on_item_use",
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "effect give @s minecraft:speed 7 3 false"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "effect give @s minecraft:regeneration 5 0 false"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "effect give @s minecraft:absorption 5 0 false"
+      }
+      ]
+  },
+  "item_condition":
+      {
+        "type": "origins:ingredient",
+        "ingredient": {
+          "item": "minecraft:golden_carrot"
+        }
+      },
+  "name": "Carrots Eater",
+  "description": "Eating carrots gives Speed 3 for 10 seconds and eating golden carrots gives Speed 4 for 7 seconds, regan for 5 seconds and absorption."
+}

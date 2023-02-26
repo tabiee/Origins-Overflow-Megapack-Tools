@@ -1,0 +1,9 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:power_active",
+        "power": "*:vs/phasing_toggle"
+    },
+    "type": "origins:invisibility",
+    "render_armor": false
+}

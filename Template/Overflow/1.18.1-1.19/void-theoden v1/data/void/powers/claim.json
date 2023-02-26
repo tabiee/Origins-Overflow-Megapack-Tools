@@ -1,0 +1,161 @@
+{
+    "name": "§5§nClaim§r",
+    "description": "By draining all of your stored void, you can place an invisible beacon. When any player other than you comes 30 blocks or closer to it, they gain Slowness and Glowing.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "Using this while sneaking on top of a beacon removes it and refunds 50% of your void."
+        }
+    ],
+    "type": "origins:multiple",
+    "place": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:void",
+                    "comparison": "==",
+                    "compare_to": 100
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:sneaking"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.activate",
+                    "volume": 1,
+                    "pitch": 1.5
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:void",
+                    "change": 0,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "summon armor_stand ~ ~1 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,Tags:[\"voidbeacon\"],DisabledSlots:4144959}"
+                }
+            ]
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "secondary"
+        }
+    },
+    "remove": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[tag=voidbeacon,distance=..1.5]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.beacon.deactivate",
+                    "volume": 1,
+                    "pitch": 1.5
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:void",
+                    "change": 50,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "kill @e[tag=voidbeacon,distance=..1.5,sort=nearest]"
+                }
+            ]
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "secondary"
+        }
+    },
+    "fx": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=voidbeacon] at @s run particle witch ~ ~ ~ 30 30 30 0 200 normal @p[tag=void]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=voidbeacon] at @s run particle dragon_breath ~ ~ ~ 30 30 30 0 200 normal @p[tag=void]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=voidbeacon] at @s run particle falling_obsidian_tear ~ ~ ~ 30 30 30 0 100 normal @p[tag=void]"
+                }
+            ]
+        }
+    },
+    "fx2": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=voidbeacon] at @s run particle witch ~ ~ ~ 0.15 0.65 0.15 0 2 normal"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=voidbeacon] at @s run particle dust 0.498 0.114 0.882 1 ~ ~ ~ 0.15 0.65 0.15 0 2 normal"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=voidbeacon] at @s run particle dripping_obsidian_tear ~ ~1.35 ~ 0.15 0 0.15 0 2 normal"
+                }
+            ]
+        }
+    },
+    "alert": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=voidbeacon] at @s run effect give @p[distance=..30,tag=!void] slowness 1 0 true"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[tag=voidbeacon] at @s run effect give @p[distance=..30,tag=!void] glowing 1 0 true"
+                }
+            ]
+        }
+    }
+}

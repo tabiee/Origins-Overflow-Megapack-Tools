@@ -1,0 +1,29 @@
+{
+    "name": "§e§nGolem Effect",
+    "description": "You can breath underwater, but you can’t swim, instead you walk at the bottom.",
+    "type": "origins:multiple",
+    "breathe": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:gain_air",
+            "value": 100
+        }
+    },
+    "walk": {
+        "type": "origins:ignore_water"
+    },
+    "slow": {
+        "condition": {
+            "type": "origins:submerged_in",
+            "fluid": "water"
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "addition",
+            "value": -0.03
+        },
+        "tick_rate": 10
+    }
+}

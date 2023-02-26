@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"mega:mega/adr",
+		"mega:mega/nv",
+		"mega:mega/dig",
+		"mega:mega/drown",
+		"mega:mega/omni",
+		"mega:mega/paws",
+		"mega:mega/hp",
+		"mega:mega/size"
+	],
+	"icon": "minecraft:rabbit_foot",
+	"impact": 1,
+	"name": "§e§l§oMegazostrodon",
+	"description": "One of the first mammals, a small, shrew-like animal."
+}

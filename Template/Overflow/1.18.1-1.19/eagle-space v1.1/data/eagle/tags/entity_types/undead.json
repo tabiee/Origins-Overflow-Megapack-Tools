@@ -1,0 +1,13 @@
+{
+	"values": [
+		"minecraft:drowned",
+		"minecraft:phantom",
+		"minecraft:skeleton",
+		"minecraft:stray",
+		"minecraft:vex",
+		"minecraft:wither_skeleton",
+		"minecraft:zoglin",
+		"minecraft:zombie",
+		"minecraft:zombie_villager"
+	]
+}

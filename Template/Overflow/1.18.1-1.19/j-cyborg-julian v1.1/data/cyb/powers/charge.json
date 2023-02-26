@@ -1,0 +1,114 @@
+{
+    "name": "§6§nI need to charge§r",
+    "description": "Consequently, since you cannot sleep, you must charge. You must stand on a redstone block whenever, but after three days, you get a weakness debuff if you haven't stood on a redstone block.",
+    "type": "origins:multiple",
+    "timer": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 108000,
+        "start_value": 108000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 14
+        }
+    },
+    "decay": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:on_block",
+            "block_condition": {
+                "type": "origins:block",
+                "block": "redstone_block"
+            }
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:charge_timer",
+            "change": -1,
+            "operation": "add"
+        }
+    },
+    "weak": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:charge_timer",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 1,
+        "max_stacks": 300,
+        "duration_per_stack": 200,
+        "tick_rate": 5,
+        "effects": [
+            {
+                "effect": "weakness",
+                "duration": 100,
+                "amplifier": 2,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "blindness",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "slowness",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "mining_fatigue",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ]
+    },
+    "gain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:charge_timer",
+                    "comparison": "!=",
+                    "compare_to": 108000
+                },
+                {
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "redstone_block"
+                    }
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 1.000 0.000 0.000 1 ~ ~ ~ 0.3 0.1 0.3 0 3"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:charge_timer",
+                    "change": 300,
+                    "operation": "add"
+                }
+            ]
+        }
+    }
+}

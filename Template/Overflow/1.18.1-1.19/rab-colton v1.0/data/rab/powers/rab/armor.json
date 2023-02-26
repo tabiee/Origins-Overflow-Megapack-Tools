@@ -1,0 +1,58 @@
+{
+    "name": "§4§nWeight Limit",
+    "description": "Anything other then Leather, Chainmail and Turtle Shell are far too heavy for you to wear.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": [
+            {
+                "item": "iron_helmet"
+            },
+            {
+                "item": "iron_chestplate"
+            },
+            {
+                "item": "iron_leggings"
+            },
+            {
+                "item": "iron_boots"
+            },
+			{
+                "item": "golden_helmet"
+            },
+            {
+                "item": "golden_chestplate"
+            },
+            {
+                "item": "golden_leggings"
+            },
+            {
+                "item": "golden_boots"
+            },
+            {
+                "item": "diamond_helmet"
+            },
+            {
+                "item": "diamond_chestplate"
+            },
+            {
+                "item": "diamond_leggings"
+            },
+            {
+                "item": "diamond_boots"
+            },
+			{
+                "item": "netherite_helmet"
+            },
+            {
+                "item": "netherite_chestplate"
+            },
+            {
+                "item": "netherite_leggings"
+            },
+            {
+                "item": "netherite_boots"
+            }
+        ]
+    }
+}

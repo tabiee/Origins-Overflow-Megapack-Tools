@@ -1,0 +1,15 @@
+{
+    "name": "Sea Brethren",
+    "description": "Hostile sea mobs don't attack you no matter what.",
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "team join water @e[type=#ace:water,distance=..60]"
+            }
+        ]
+    }
+}

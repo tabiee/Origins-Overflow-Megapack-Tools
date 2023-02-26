@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"psilo:psilo/sprout",
+		"psilo:psilo/tog",
+		"psilo:psilo/bone",
+		"psilo:psilo/fire",
+		"psilo:psilo/ride",
+		"psilo:psilo/eat",
+		"psilo:psilo/hp",
+		"psilo:psilo/size",
+		"psilo:psilo/particles"
+	],
+	"icon": "minecraft:spore_blossom",
+	"impact": 3,
+	"name": "§2§l§oPsilocybian",
+	"description": "A forest dwelling race of supernatural spore. Enchanted enoki. Otherworldly ostreatus. Parapsychological portobello... Magic mushroom."
+}

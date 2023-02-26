@@ -1,0 +1,101 @@
+{
+	"name": "Blazing Aura",
+	"description": "Using your Primary makes your flame burn hotter, making all creatures around you catch fire while toggled.\nWhile you burn like this you glow brightly and melt through your wax very quickly.",
+	"type": "origins:multiple",
+	"tap": {
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": {
+			"key": "primary"
+		}
+	},
+	"act": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:candle/burn_tap"
+		},
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "particle flame ~ ~0.5 ~ 2.5 0 2.5 0.025 50",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:candle/wax_goo",
+					"change": -5
+				},
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "glowing",
+						"duration": 25,
+						"amplifier": 0,
+						"show_particles": false,
+						"show_icon": false
+					}
+				}
+			]
+		}
+	},
+	"arrow": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:candle/burn_tap"
+		},
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=!cand,type=!#candle:noeyes,distance=..4] at @s run summon arrow ~ ~3 ~ {damage:0.01d,Motion:[0.0,-1.0,0.0],Tags:[\"burn\"]}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.fire.ambient",
+					"volume": 5,
+					"pitch": 1
+				}
+			]
+		}
+	},
+	"arrow2": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:candle/burn_tap"
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "execute as @e[tag=burn] run data modify entity @s Owner set from entity @e[tag=cand,limit=1] UUID",
+			"permission_level": 4
+		}
+	},
+	"fire": {
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:candle/burn_tap"
+		},
+		"type": "origins:target_action_on_hit",
+		"damage_condition": {
+			"type": "origins:projectile",
+			"projectile": "arrow"
+		},
+		"entity_action": {
+			"type": "origins:set_on_fire",
+			"duration": 6
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	}
+}

@@ -1,0 +1,51 @@
+{
+    "name": "§1§nEthereal Fall",
+    "description": "Glide downwards gracefully at will.",
+    "type": "origins:multiple",
+    "tap": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": "secondary"
+    },
+    "slow": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:reaper/slowfall_tap"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "slow_falling",
+                "duration": 30,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    },
+    "particles": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:reaper/slowfall_tap"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "summon area_effect_cloud ~ ~ ~ {Particle:\"dust 0.063 0.000 0.169 1\",NoGravity:0b,Radius:0.8f,Duration:5}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle ash ~ ~ ~ 0.1 0 0.1 0 7",
+                    "permission_level": 4
+                }
+            ]
+        }
+    }
+}

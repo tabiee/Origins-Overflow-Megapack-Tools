@@ -1,0 +1,22 @@
+{
+	"powers": [
+		"quirk:whirlwind/wind_punch",
+		"quirk:whirlwind/float",
+		"quirk:whirlwind/soring",
+		"quirk:whirlwind/tornado",
+		"quirk:whirlwind/particle",
+		"quirk:whirlwind/point_defense",
+		"quirk:whirlwind/particleshield",
+		"quirk:whirlwind/flyparticle",
+		"quirk:whirlwind/whirl_toggle",
+		"quirk:whirlwind/whirl_toggle1",
+		"quirk:whirlwind/hurricane",
+		"quirk:health"
+	],
+	"icon": "minecraft:snow_block",
+	"order": 10,
+	"impact": 3,
+        "unchoosable": true,
+	"name": "Whirlwind",
+	"description": "Inasa Yoarashi's Quirk"
+}

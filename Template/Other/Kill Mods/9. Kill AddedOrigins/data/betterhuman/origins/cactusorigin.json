@@ -1,0 +1,17 @@
+{
+    "powers": [
+        "betterhuman:rainydays",
+        "betterhuman:rooted",
+        "betterhuman:nohitdamage",
+        "betterhuman:thornsc",
+        "betterhuman:reset",
+        "betterhuman:lastchancefighter"
+    ],
+    "icon": "minecraft:cactus",
+    "order": 2022,
+    "impact": 3,
+    "unchoosable": true,
+    "name": "Cactus",
+    "description": "You are a cactus and either did a very hard task or used commands to get this",
+    "loading_priority": 100
+}

@@ -1,0 +1,35 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "nuggets": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 300,
+        "start_value": 300,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 7,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "hippie:hippie/recharge_nuggets",
+                "comparison": "<",
+                "compare_to": 300
+            }
+        }
+    },
+    "gain": {
+		"condition": {
+            "inverted": true,
+            "type": "origins:in_tag",
+            "tag": "hippieray"
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "hippie:hippie/recharge_nuggets",
+            "change": 1
+        }
+    }
+}

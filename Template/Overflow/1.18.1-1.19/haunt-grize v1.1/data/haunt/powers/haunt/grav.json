@@ -1,0 +1,17 @@
+{
+    "name": "§2§nDefying Gravity",
+    "description": "You have increased speed whether you're moving on land or in water.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_base",
+            "value": 0.6
+        },
+        {
+            "attribute": "additionalentityattributes:water_speed",
+            "operation": "multiply_base",
+            "value": 0.6
+        }
+    ]
+}

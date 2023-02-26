@@ -1,0 +1,36 @@
+{
+    "name": "§2§nCreature of the Night",
+    "description": "During the night you do more damage and move faster.",
+    "type": "origins:multiple",
+    "eff": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:daytime"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "strength",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        }
+    },
+    "att": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:daytime"
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_base",
+            "value": 0.5
+        },
+        "tick_rate": 5
+    }
+}

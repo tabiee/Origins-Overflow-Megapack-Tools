@@ -1,0 +1,20 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:resource",
+        "resource": "*:ori/nuggets_nuggets",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+        "type": "origins:add_velocity",
+        "y": 0.5,
+        "z": -1,
+        "space": "local"
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    }
+}

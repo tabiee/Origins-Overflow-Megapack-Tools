@@ -1,0 +1,261 @@
+{
+	"name": "§5§nCreate Monster",
+    "description": "The Swarmlord can create his own horde to defend himself and destroy his enemies.",
+    "type": "origins:multiple",
+    "cd": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1600,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 18,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:conq/summon_cd",
+                "comparison": "!=",
+                "compare_to": 0
+            }
+        }
+    },
+    "act": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:conq/summon_cd",
+            "change": -1
+        }
+    },
+    "one": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 15
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:conq/summon_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "summon zombie ~ ~ ~ {CustomName:'[{\"text\":\"Minion\",\"color\":\"red\",\"bold\":true}]',CustomNameVisible:1b,Team:sum,Tags:[\"minion\"],IsBaby:1b,CanPickUpLoot:1b,PersistenceRequired:1b,Silent:1b}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:change_resource",
+                            "resource": "*:conq/summon_cd",
+                            "change": 600
+                        }
+                    ]
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "primary"
+        }
+    },
+    "two": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 20
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:conq/summon_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/summon minecraft:skeleton ~ ~ ~ {CustomName:'[{\"text\":\"Minion\",\"bold\":true,\"color\":\"red\"}]',CustomNameVisible:1b,Team:sum,Tags:[\"minion\"],CanPickUpLoot:1b,PersistenceRequired:1b,Silent:1b,HandItems:[{id:iron_sword,Count:1}],ArmorItems:[{},{},{},{id:iron_helmet,Count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:change_resource",
+                            "resource": "*:conq/summon_cd",
+                            "change": 800
+                        }
+                    ]
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "secondary"
+        }
+    },
+    "three": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 25
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:conq/summon_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/summon minecraft:skeleton ~ ~ ~ {CustomName:'[{\"text\":\"Minion\",\"bold\":true,\"color\":\"red\"}]',CustomNameVisible:1b,Team:sum,Tags:[\"minion\"],CanPickUpLoot:1b,PersistenceRequired:1b,Silent:1b,HandItems:[{id:bow,tag:{Enchantments:[{id:power,lvl:4}]},Count:1}],ArmorItems:[{},{},{},{id:iron_helmet,Count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:change_resource",
+                            "resource": "*:conq/summon_cd",
+                            "change": 1000
+                        }
+                    ]
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "ternary"
+        }
+    },
+    "four": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 30
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:conq/summon_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/summon minecraft:vindicator ~ ~ ~ {CustomName:'[{\"text\":\"Minion\",\"bold\":true,\"color\":\"red\"}]',CustomNameVisible:1b,Team:sum,Tags:[\"minion\"],CanPickUpLoot:1b,PersistenceRequired:1b,Silent:1b,ActiveEffects:[{Id:10,Duration:999999,Amplifier:0,ShowParticles:0b}],HandItems:[{id:iron_axe,Count:1}],HandDropChances:[0f]}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:change_resource",
+                            "resource": "*:conq/summon_cd",
+                            "change": 1200
+                        }
+                    ]
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "quaternary"
+        }
+    },
+    "five": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 40
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:conq/summon_cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/summon minecraft:ravager ~ ~ ~ {CustomName:'[{\"text\":\"Victorum\",\"bold\":true,\"color\":\"red\"}]',CustomNameVisible:1b,Team:sum,Tags:[\"minion\"],CanPickUpLoot:1b,PersistenceRequired:1b,Silent:1b,ActiveEffects:[{Id:10,Duration:999999,Amplifier:1,ShowParticles:0b},{Id:1,Duration:999999,Amplifier:0,ShowParticles:0b}]}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:change_resource",
+                            "resource": "*:conq/summon_cd",
+                            "change": 1600
+                        }
+                    ]
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "quinary"
+        }
+    }
+}

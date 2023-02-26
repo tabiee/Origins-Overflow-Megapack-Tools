@@ -1,0 +1,33 @@
+{
+    "name": "Rejuvenating Light",
+    "description": "Bright light heals you.",
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:exposed_to_sun"
+            },
+            {
+                "type": "origins:on_block",
+                "block_condition": {
+                    "type": "origins:light_level",
+                    "light_type": "block",
+                    "comparison": ">",
+                    "compare_to": 6
+                }
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 60,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "regeneration",
+            "duration": 100,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

@@ -1,0 +1,95 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "minecraft:resistance",
+                    "duration": 1,
+                    "amplifier": 50,
+                    "show_icon": false,
+                    "show_particles": false
+                }
+            },
+            {
+                "type": "origins:add_velocity",
+                "z": 2,
+                "space": "local"
+            },
+{
+	"type": "origins:change_resource",
+	"resource": "quirk:engine/overheat",
+	"change": 15
+},
+            {
+                "type": "origins:execute_command",
+                "command": "playsound minecraft:entity.generic.explode master @p ~ ~ ~ 2 1",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:flame ~ ~0.02 ~ 1 1 1 0.2 100 force",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:soul_fire_flame ~ ~0.02 ~ 1 1 1 0.2 100 force",
+                "permission_level": 4
+            },
+        {
+          "type": "origins:delay",
+          "ticks": 10,
+          "action": {
+                "type": "origins:add_velocity",
+                "z": -4,
+                "space": "local"
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 10,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:soul_fire_flame ~ ~0.02 ~ 1 1 1 0.2 100 force",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 10,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:flame ~ ~0.02 ~ 1 1 1 0.2 100 force",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 10,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "playsound minecraft:entity.generic.explode master @p ~ ~ ~ 2 1",
+            "permission_level": 4
+          }
+	}
+        ]
+    },
+    "cooldown": 100,
+	"hud_render": {
+	  "should_render":true,
+	  "sprite_location":"origins:textures/gui/resource_bar.png",
+	  "bar_index": 4
+	},
+    "condition": {
+            "type": "origins:on_block"
+    },
+  "key": {
+    "key": "key.origins.quaternary_active",
+    "continuous": false
+  },
+	"name": "Recoil Dash",
+	"description": "Send yourself forward then backwards",
+    "hidden": false
+}

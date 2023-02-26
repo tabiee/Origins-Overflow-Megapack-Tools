@@ -1,0 +1,30 @@
+{
+    "name": "Pesticide",
+    "description": "Poison will kill you.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:status_effect",
+                "effect": "poison"
+            },
+            {
+                "type": "origins:health",
+                "comparison": "<=",
+                "compare_to": 1
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "rising_action": {
+        "type": "origins:damage",
+        "amount": 2,
+        "source": {
+            "name": "magic",
+            "bypasses_armor": true,
+            "unblockable": true,
+            "magic": true
+        }
+    }
+}

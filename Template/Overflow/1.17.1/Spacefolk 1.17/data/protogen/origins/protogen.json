@@ -1,0 +1,23 @@
+{
+    "impact": 1,
+    "unchoosable": false,
+    "name": "§7§l§oProtogen",
+    "description": "...",
+    "icon": "minecraft:lodestone",
+    "powers": [
+        "origins:climbing",
+		"protogen:protogen/laser",
+		"protogen:protogen/dmg",
+		"protogen:protogen/dmgresist",
+		"protogen:protogen/fast",
+		"protogen:protogen/jump",
+		"protogen:protogen/overheat",
+		"protogen:protogen/reach",
+		"protogen:protogen/size",
+		"protogen:protogen/tagger",
+		"protogen:protogen/morefire",
+		"protogen:protogen/water_breathing",
+		"protogen:protogen/waterdmg",
+		"protogen:protogen/red"
+    ]
+}

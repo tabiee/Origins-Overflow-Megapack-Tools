@@ -1,0 +1,161 @@
+{
+    "name": "§b§nNano Suit§r",
+    "description": "You have become one with the suit that empowers you.",
+    "type": "origins:multiple",
+    "jump": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:overworld"
+                }
+            ]
+        },
+        "type": "origins:modify_jump",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.75
+        }
+    },
+    "fall": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:overworld"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.2
+        }
+    },
+    "fx": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:overworld"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 15,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "haste",
+                    "duration": 25,
+                    "amplifier": 1,
+                    "show_particles": false,
+                    "show_icon": false
+                },
+                {
+                    "effect": "speed",
+                    "duration": 25,
+                    "amplifier": 1,
+                    "show_particles": false,
+                    "show_icon": false
+                }
+            ]
+        }
+    },
+    "arm": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:overworld"
+                }
+            ]
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.armor",
+                "operation": "addition",
+                "value": 12
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": true
+    },
+    "hp": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:overworld"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:resource",
+                    "resource": "*:modes_pick",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "generic.max_health",
+                "operation": "addition",
+                "value": 20
+            }
+        ],
+        "tick_rate": 1,
+        "update_health": true
+    },
+    "heal": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "instant_health",
+                "amplifier": 10,
+                "duration": 1,
+                "show_icon": false,
+                "show_particles": false
+            }
+        },
+        "entity_action_respawned": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "instant_health",
+                "amplifier": 10,
+                "duration": 1,
+                "show_icon": false,
+                "show_particles": false
+            }
+        }
+    }
+}

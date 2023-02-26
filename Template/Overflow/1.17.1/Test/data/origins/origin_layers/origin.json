@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "origins": [
+		"test:dope"
+    ],
+    "auto_choose": false,
+    "allow_random": false,
+    "enabled": true,
+    "allow_random_unchoosable": false
+}

@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"drake:inv",
+		"drake:haste",
+		"drake:tough",
+		"drake:nv",
+		"drake:freeze",
+		"drake:size",
+		"drake:vill",
+		"drake:iron",
+		"drake:hot",
+		"drake:eat",
+		"drake:tools",
+		"drake:speed"
+	],
+	"icon": "minecraft:snowball",
+	"impact": 3,
+	"name": "§b§l§oDrake",
+	"description": "Fluffy dragon that lives in the frozen mountain peaks."
+}

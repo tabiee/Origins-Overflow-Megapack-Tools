@@ -1,0 +1,22 @@
+{
+    "impact": 2,
+    "unchoosable": false,
+    "name": "§4§l§oOmnilus",
+    "description": "A entity manifested of chaotic matter and sentient that travel the galaxy with no purpose.",
+    "icon": "minecraft:weeping_vines",
+    "powers": [
+        "omnilus:omnilus/tp",
+		"omnilus:omnilus/nomlife",
+		"omnilus:omnilus/novillagers",
+		"omnilus:omnilus/lowhp",
+		"omnilus:omnilus/underhate",
+		"omnilus:omnilus/nightv",
+		"omnilus:omnilus/breathe",
+		"omnilus:omnilus/shader",
+		"omnilus:omnilus/noeating",
+		"omnilus:omnilus/tagger",
+		"omnilus:omnilus/wobble",
+		"omnilus:omnilus/resetwobble",
+		"omnilus:omnilus/particles"
+    ]
+}

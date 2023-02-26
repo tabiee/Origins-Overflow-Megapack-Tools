@@ -1,0 +1,126 @@
+{
+	"name": "Air Punch",
+	"description": "Punch the air creating a medium sized airwave destroying blocks, but dealing 5 hearts of damage to you and 15 hearts of damage to any entities hit by the air wave.",
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "particle electric_spark ^ ^1 ^1 1 0.1 6 0.1 300"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "fill ^ ^0.5 ^1 ^ ^1.5 ^6 air replace #pig:all"
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "item.trident.throw",
+				"volume": 1,
+				"pitch": 0.1
+			},
+			{
+				"type": "origins:raycast",
+				"distance": 8,
+				"block": true,
+				"entity": true,
+				"shape_type": "outline",
+				"fluid_handling": "none",
+				"hit_action": {
+					"type": "origins:area_of_effect",
+					"radius": 16,
+					"bientity_condition": {
+						"type": "origins:target_condition",
+						"condition": {
+							"type": "origins:command",
+							"command": "execute if entity @s[tag=airhit]",
+							"comparison": ">=",
+							"compare_to": 1
+						}
+					},
+					"bientity_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:damage",
+								"amount": 30,
+								"source": {
+									"name": "explosion",
+									"unblockable": true
+								}
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:target_action",
+									"action": {
+										"type": "origins:execute_command",
+										"command": "tag @s remove airhit"
+									}
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				"miss_action": {
+					"type": "origins:area_of_effect",
+					"radius": 16,
+					"bientity_condition": {
+						"type": "origins:target_condition",
+						"condition": {
+							"type": "origins:command",
+							"command": "execute if entity @s[tag=airhit]",
+							"comparison": ">=",
+							"compare_to": 1
+						}
+					},
+					"bientity_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:damage",
+								"amount": 30,
+								"source": {
+									"name": "explosion",
+									"unblockable": true
+								}
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:target_action",
+									"action": {
+										"type": "origins:execute_command",
+										"command": "tag @s remove airhit"
+									}
+								},
+								"ticks": 2
+							}
+						]
+					}
+				},
+				"command_along_ray": "tag @e[tag=!pig,distance=..2] add airhit",
+				"command_step": 0.5
+			},
+			{
+				"type": "origins:damage",
+				"amount": 10,
+				"source": {
+					"name": "explosion",
+					"unblockable": true
+				}
+			}
+		]
+	},
+	"cooldown": 100,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+		"bar_index": 3
+	},
+	"key": {
+		"key": "primary",
+		"continuous": true
+	}
+}

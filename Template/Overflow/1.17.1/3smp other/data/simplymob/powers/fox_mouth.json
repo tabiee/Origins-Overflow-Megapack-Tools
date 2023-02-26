@@ -1,0 +1,14 @@
+{
+    "name": "Mouth",
+    "description": "You have an extra 9 slots of inv space [SECONDARY ABILITY KEY].",
+    "type": "origins:inventory",
+    "drop_on_death": true,
+    "drop_on_death_filter": {
+        "type": "origins:food",
+        "inverted": true
+    },
+    "key": {
+        "key": "key.origins.secondary_active",
+        "continuous": true
+    }
+}

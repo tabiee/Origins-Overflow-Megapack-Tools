@@ -1,0 +1,61 @@
+{
+    "name": "§4§nToo Loud!§r",
+    "description": "During a storm you become timid, suffering slowness and darkness, you are also stuck being invisible regardless of the time of day.",
+    "type": "origins:multiple",
+    "act": {
+        "condition": {
+            "type": "origins:predicate",
+            "predicate": "duck:weather/thunder"
+        },
+        "type": "origins:action_over_time",
+        "interval": 25,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "slowness",
+                    "duration": 35,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "darkness",
+                    "duration": 100,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            ]
+        }
+    },
+    "get": {
+        "condition": {
+            "type": "origins:predicate",
+            "predicate": "duck:weather/thunder"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:change_resource",
+            "resource": "*:whisp/storm_thun",
+            "change": 1,
+            "operation": "set"
+        },
+        "falling_action": {
+            "type": "origins:change_resource",
+            "resource": "*:whisp/storm_thun",
+            "change": 0,
+            "operation": "set"
+        }
+    },
+    "thun": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

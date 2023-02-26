@@ -1,0 +1,30 @@
+{
+    "name": "§3§nChirp",
+    "description": "Beetles get a bit loud.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:play_sound",
+                "sound": "item.spyglass.use",
+                "volume": 2,
+                "pitch": 1.8
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "block.stone_button.click_off",
+                "volume": 0.2,
+                "pitch": 1.9
+            }
+        ]
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": {
+        "key": "secondary",
+        "continuous": true
+    }
+}

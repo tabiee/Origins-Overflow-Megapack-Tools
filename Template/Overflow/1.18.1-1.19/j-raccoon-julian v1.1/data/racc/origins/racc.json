@@ -1,0 +1,29 @@
+{
+	"powers": [
+		"racc:thief",
+		"racc:climb",
+		"racc:jump",
+		"racc:hop",
+		"racc:fire",
+		"racc:fall",
+		"racc:food",
+		"racc:imm",
+		"racc:nv",
+		"racc:prick",
+		"racc:speed",
+		"racc:team",
+		"racc:size",
+		"racc:wither",
+		"racc:nether",
+		"racc:hp",
+		"racc:hungy",
+		"racc:villagers",
+		"racc:water",
+		"racc:sink",
+		"racc:tagger"
+	],
+	"icon": "minecraft:charcoal",
+	"impact": 3,
+	"name": "§e§l§oCursed Raccoon",
+	"description": "A once in a lifetime curse was brought upon someone by a malevolent and bored god banishing a Raccoon person to the nether cursing them with a non permanent death as it seemed to them. Being trapped in the nether forced to adapt to its harsh climate until they can escape."
+}

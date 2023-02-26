@@ -1,0 +1,9 @@
+{
+    "name": "Passive Outlook",
+    "description": "Due to your passive nature you are not adept in combat. You deal 2 less damage.",
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "addition",
+        "value": -2
+    }
+}

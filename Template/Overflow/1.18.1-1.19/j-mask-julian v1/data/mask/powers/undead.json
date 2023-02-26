@@ -1,0 +1,96 @@
+{
+	"name": "§2§nOne of Them",
+	"description": "All undead ignore you unless provoked.",
+	"type": "origins:multiple",
+	"team": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team join undead @e[tag=!aggro,type=#mask:undead,distance=..100]"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team leave @e[tag=aggro,distance=..100]"
+				}
+			]
+		}
+	},
+	"remove": {
+		"type": "origins:action_over_time",
+		"interval": 1200,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tag @e remove aggro"
+				}
+			]
+		}
+	},
+	"aggro": {
+		"type": "origins:target_action_on_hit",
+		"target_condition": {
+			"type": "origins:command",
+			"command": "execute if entity @s[tag=mask]",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "tag @s add aggro"
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"teamer": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "tag @s add mask"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team add undead",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "team join undead @s",
+					"permission_level": 4
+				}
+			]
+		},
+		"entity_action_respawned": {
+			"type": "apoli:delay",
+			"action": {
+				"type": "apoli:extinguish"
+			},
+			"ticks": 3
+		},
+		"execute_chosen_when_orb": true,
+		"entity_action_lost": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team remove undead",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "tag @s remove mask"
+				}
+			]
+		}
+	}
+}

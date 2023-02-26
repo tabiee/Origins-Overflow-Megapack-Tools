@@ -1,0 +1,2717 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+	"small_amethyst_bud": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:small_amethyst_bud\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "small_amethyst_bud"
+		},
+		"only_when_harvested": false
+	},
+	"medium_amethyst_bud": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:medium_amethyst_bud\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "medium_amethyst_bud"
+		},
+		"only_when_harvested": false
+	},
+	"large_amethyst_bud": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:large_amethyst_bud\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "large_amethyst_bud"
+		},
+		"only_when_harvested": false
+	},
+	"amethyst_cluster": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:amethyst_cluster\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:amethyst_shard\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "amethyst_cluster"
+		},
+		"only_when_harvested": false
+	},
+	"blue_ice": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:blue_ice\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "blue_ice"
+		},
+		"only_when_harvested": false
+	},
+	"ice": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:ice\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "ice"
+		},
+		"only_when_harvested": false
+	},
+	"bookshelf": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:bookshelf\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:book\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "bookshelf"
+		},
+		"only_when_harvested": false
+	},
+	"budding_amethyst": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:budding_amethyst\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "budding_amethyst"
+		},
+		"only_when_harvested": false
+	},
+	"cake": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:cake\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "cake"
+		},
+		"only_when_harvested": false
+	},
+	"campfire": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:campfire\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:charcoal\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "campfire"
+		},
+		"only_when_harvested": false
+	},
+	"clay": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:clay\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:clay_ball\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "clay"
+		},
+		"only_when_harvested": false
+	},
+	"coal_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:coal_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:coal\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "coal_ore"
+		},
+		"only_when_harvested": false
+	},
+	"deepslate_coal_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:_deepslate_coal_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:coal\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "deepslate_coal_ore"
+		},
+		"only_when_harvested": false
+	},
+	"copper_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:copper_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:raw_copper\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "copper_ore"
+		},
+		"only_when_harvested": false
+	},
+	"deepslate_copper_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:deepslate_copper_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:raw_copper\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "deepslate_copper_ore"
+		},
+		"only_when_harvested": false
+	},
+	"tube_coral_block": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:tube_coral_block\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "tube_coral_block"
+		},
+		"only_when_harvested": false
+	},
+	"brain_coral_block": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:brain_coral_block\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "brain_coral_block"
+		},
+		"only_when_harvested": false
+	},
+	"bubble_coral_block": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:bubble_coral_block\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "bubble_coral_block"
+		},
+		"only_when_harvested": false
+	},
+	"fire_coral_block": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:fire_coral_block\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "fire_coral_block"
+		},
+		"only_when_harvested": false
+	},
+	"horn_coral_block": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:horn_coral_block\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "horn_coral_block"
+		},
+		"only_when_harvested": false
+	},
+	"deepslate": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:deepslate\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:cobbled_deepslate\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "deepslate"
+		},
+		"only_when_harvested": false
+	},
+	"diamond_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:diamond_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:diamond\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "diamond_ore"
+		},
+		"only_when_harvested": false
+	},
+	"deepslate_diamond_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:deepslate_diamond_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:diamond\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "deepslate_diamond_ore"
+		},
+		"only_when_harvested": false
+	},
+	"emerald_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:emerald_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:emerald\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "emerald_ore"
+		},
+		"only_when_harvested": false
+	},
+	"deepslate_emerald_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:deepslate_emerald_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:emerald\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "deepslate_emerald_ore"
+		},
+		"only_when_harvested": false
+	},
+	"ender_chest": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:ender_chest\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:obsidian\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "ender_chest"
+		},
+		"only_when_harvested": false
+	},
+	"farmland": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:farmland\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:dirt\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "farmland"
+		},
+		"only_when_harvested": false
+	},
+	"gilded_blackstone": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:gilded_blackstone\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:gold_nugget\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "gilded_blackstone"
+		},
+		"only_when_harvested": false
+	},
+	"glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "glass"
+		},
+		"only_when_harvested": false
+	},
+	"glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"black_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:black_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "black_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"black_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:black_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "black_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"red_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:red_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "red_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"red_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:red_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "red_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"green_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:green_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "green_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"green_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:green_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "green_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"brown_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:brown_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "brown_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"brown_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:brown_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "brown_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"blue_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:blue_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "blue_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"blue_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:blue_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "blue_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"purple_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:purple_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "purple_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"purple_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:purple_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "purple_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"cyan_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:cyan_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "cyan_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"cyan_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:cyan_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "cyan_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"light_gray_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:light_gray_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "light_gray_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"light_gray_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:light_gray_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "light_gray_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"gray_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:gray_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "gray_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"gray_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:gray_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "gray_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"pink_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:pink_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "pink_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"pink_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:pink_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "pink_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"lime_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:lime_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "lime_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"lime_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:lime_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "lime_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"yellow_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:yellow_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "yellow_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"yellow_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:yellow_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "yellow_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"light_blue_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:light_blue_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "light_blue_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"light_blue_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:light_blue_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "light_blue_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"magenta_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:magenta_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "magenta_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"magenta_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:magenta_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "magenta_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"orange_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:orange_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "orange_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"orange_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:orange_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "orange_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"yellow_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:yellow_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "yellow_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"yellow_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:yellow_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "yellow_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"white_stained_glass": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:white_stained_glass\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "white_stained_glass"
+		},
+		"only_when_harvested": false
+	},
+	"white_stained_glass_pane": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:white_stained_glass_pane\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "white_stained_glass_pane"
+		},
+		"only_when_harvested": false
+	},
+	"glowstone": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:glowstone\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:glowstone_dust\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "glowstone"
+		},
+		"only_when_harvested": false
+	},
+	"gold_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:gold_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:raw_gold\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "gold_ore"
+		},
+		"only_when_harvested": false
+	},
+	"deepslate_gold_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:deepslate_gold_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:raw_gold\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "deepslate_gold_ore"
+		},
+		"only_when_harvested": false
+	},
+	"grass_block": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:grass_block\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:dirt\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "grass_block"
+		},
+		"only_when_harvested": false
+	},
+	"dirt_path": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:dirt_path\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:dirt\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "dirt_path"
+		},
+		"only_when_harvested": false
+	},
+	"infested_stone": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:infested_stone\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "infested_stone"
+		},
+		"only_when_harvested": false
+	},
+	"infested_stone_kill": {
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "kill @e[type=silverfish,distance=0..1]"
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "minecraft:infested_stone"
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"only_when_harvested": false
+	},
+	"infested_stone_bricks": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:infested_stone_bricks\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "infested_stone_bricks"
+		},
+		"only_when_harvested": false
+	},
+	"infested_stone_brick_give": {
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "kill @e[type=silverfish,distance=0..1]"
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "minecraft:infested_stone_bricks"
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"only_when_harvested": false
+	},
+	"infested_mossy_stone_bricks": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:infested_mossy_stone_bricks\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "infested_mossy_stone_bricks"
+		},
+		"only_when_harvested": false
+	},
+	"infested_mossy_brick_give": {
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "kill @e[type=silverfish,distance=0..1]"
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "minecraft:infested_mossy_stone_bricks"
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"only_when_harvested": false
+	},
+	"infested_cracked_stone_bricks": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:infested_cracked_stone_bricks\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "infested_cracked_stone_bricks"
+		},
+		"only_when_harvested": false
+	},
+	"infested_cracked_brick_give": {
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "kill @e[type=silverfish,distance=0..1]"
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "minecraft:infested_cracked_stone_bricks"
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"only_when_harvested": false
+	},
+	"infested_cobblestone": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:infested_cobblestone\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "infested_cobblestone"
+		},
+		"only_when_harvested": false
+	},
+	"infested_cobblestone_give": {
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "kill @e[type=silverfish,distance=0..1]"
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "minecraft:infested_cobblestone"
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"only_when_harvested": false
+	},
+	"infested_chiseled_stone_bricks": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:infested_chiseled_stone_bricks\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "infested_chiseled_stone_bricks"
+		},
+		"only_when_harvested": false
+	},
+	"infested_chiseled_bricks_give": {
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "kill @e[type=silverfish,distance=0..1]"
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "minecraft:infested_chiseled_stone_bricks"
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"only_when_harvested": false
+	},
+	"infested_deepslate": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:infested_deepslate\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "infested_deepslate"
+		},
+		"only_when_harvested": false
+	},
+	"infested_deepslate_give": {
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "kill @e[type=silverfish,distance=0..1]"
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "minecraft:infested_deepslate"
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"only_when_harvested": false
+	},
+	"iron_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:iron_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:raw_iron\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "iron_ore"
+		},
+		"only_when_harvested": false
+	},
+	"deepslate_iron_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:deepslate_iron_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:raw_iron\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "deepslate_iron_ore"
+		},
+		"only_when_harvested": false
+	},
+	"lapis_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:lapis_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:lapis_lazuli\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "lapis_ore"
+		},
+		"only_when_harvested": false
+	},
+	"deepslate_lapis_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:deepslate_lapis_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:lapis_lazuli\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "deepslate_lapis_ore"
+		},
+		"only_when_harvested": false
+	},
+	"oak_leaves": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:oak_leaves\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "oak_leaves"
+		},
+		"only_when_harvested": false
+	},
+	"spruce_leaves": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:spruce_leaves\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "spruce_leaves"
+		},
+		"only_when_harvested": false
+	},
+	"birch_leaves": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:birch_leaves\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "birch_leaves"
+		},
+		"only_when_harvested": false
+	},
+	"jungle_leaves": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:jungle_leaves\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "jungle_leaves"
+		},
+		"only_when_harvested": false
+	},
+	"acacia_leaves": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:acacia_leaves\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "acacia_leaves"
+		},
+		"only_when_harvested": false
+	},
+	"dark_oak_leaves": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:dark_oak_leaves\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "dark_oak_leaves"
+		},
+		"only_when_harvested": false
+	},
+	"azalea_leaves": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:azalea_leaves\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "azalea_leaves"
+		},
+		"only_when_harvested": false
+	},
+	"flowering_azalea_leaves": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:flowering_azalea_leaves\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "flowering_azalea_leaves"
+		},
+		"only_when_harvested": false
+	},
+	"melon": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:melon\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:melon_slice\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "melon"
+		},
+		"only_when_harvested": false
+	},
+	"mushroom_stem": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:mushroom_stem\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "mushroom_stem"
+		},
+		"only_when_harvested": false
+	},
+	"red_mushroom_block": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:red_mushroom_block\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "red_mushroom_block"
+		},
+		"only_when_harvested": false
+	},
+	"brown_mushroom_block": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:brown_mushroom_block\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "brown_mushroom_block"
+		},
+		"only_when_harvested": false
+	},
+	"mycelium": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:mycelium\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:dirt\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "mycelium"
+		},
+		"only_when_harvested": false
+	},
+	"nether_gold_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:nether_gold_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:gold_nugget\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "nether_gold_ore"
+		},
+		"only_when_harvested": false
+	},
+	"nether_quartz_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:nether_quartz_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:quartz\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "nether_quartz_ore"
+		},
+		"only_when_harvested": false
+	},
+	"crimson_nylium": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:crimson_nylium\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:netherrack\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "crimson_nylium"
+		},
+		"only_when_harvested": false
+	},
+	"warped_nylium": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:warped_nylium\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:netherrack\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "warped_nylium"
+		},
+		"only_when_harvested": false
+	},
+	"packed_ice": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:packed_ice\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "packed_ice"
+		},
+		"only_when_harvested": false
+	},
+	"podzol": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:podzol\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:dirt\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "podzol"
+		},
+		"only_when_harvested": false
+	},
+	"redstone_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:redstone_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:redstone\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "redstone_ore"
+		},
+		"only_when_harvested": false
+	},
+	"deepslate_redstone_ore": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:deepslate_redstone_ore\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:redstone\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "deepslate_redstone_ore"
+		},
+		"only_when_harvested": false
+	},
+	"sculk_sensor": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:sculk_sensor\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "sculk_sensor"
+		},
+		"only_when_harvested": false
+	},
+	"sea_lantern": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:sea_lantern\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:prismarine_crystals\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "sea_lantern"
+		},
+		"only_when_harvested": false
+	},
+	"snow": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:snow\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "snow"
+		},
+		"only_when_harvested": false
+	},
+	"snow_block": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:snow_block\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:snowball\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "snow_block"
+		},
+		"only_when_harvested": false
+	},
+	"soul_campfire": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:soul_campfire\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:charcoal\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "soul_campfire"
+		},
+		"only_when_harvested": false
+	},
+	"stone": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:stone\",Count:1b}}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "kill @e[type=item,distance=..0.6,nbt={Item:{id:\"minecraft:cobblestone\"}}]",
+					"permission_level": 4
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "stone"
+		},
+		"only_when_harvested": false
+	},
+	"turtle_egg": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:turtle_egg\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "turtle_egg"
+		},
+		"only_when_harvested": false
+	},
+	"twisting_vines": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:twisting_vines\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "twisting_vines"
+		},
+		"only_when_harvested": false
+	},
+	"weeping_vines": {
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:empty"
+			}
+		},
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon item ~ ~ ~ {Item:{id:\"minecraft:weeping_vines\",Count:1b}}",
+			"permission_level": 4
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "weeping_vines"
+		},
+		"only_when_harvested": false
+	}
+}

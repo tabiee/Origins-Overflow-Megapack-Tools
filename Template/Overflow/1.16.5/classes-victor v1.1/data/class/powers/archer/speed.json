@@ -1,0 +1,48 @@
+{
+    "name": "§2§nQuickdraw",
+    "description": "While holding a bow, you move faster.",
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": [
+                        {
+                            "item": "bow"
+                        },
+                        {
+                            "item": "crossbow"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "offhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": [
+                        {
+                            "item": "bow"
+                        },
+                        {
+                            "item": "crossbow"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "type": "origins:conditioned_attribute",
+    "modifiers": [
+        {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_total",
+            "value": 0.35
+        }
+    ],
+    "tick_rate": 1
+}

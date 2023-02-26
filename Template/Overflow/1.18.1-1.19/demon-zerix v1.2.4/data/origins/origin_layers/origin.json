@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"origins": [
+		"demon:reborn",
+		"demon:weak",
+		"demon:strong",
+		"demon:lower",
+		"demon:upper",
+		"demon:king"
+	]
+}

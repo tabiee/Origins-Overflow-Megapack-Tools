@@ -1,0 +1,65 @@
+{
+    "name": "§3§nTwo Legs?",
+    "description": "Just like the taller creatures around you, you too have the ability to be taller and have similar strengths as them! \nThough you cant seem to get the healing correct... Maybe you wont have to heal since you don’t seem to take as much damage! One Tanuki can only hope.",
+    "type": "origins:multiple",
+    "regen": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "exiled:forms_tog",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "exiled:forms_form",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "type": "origins:disable_regen"
+    },
+    "fx": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "exiled:forms_tog",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "exiled:forms_form",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 25,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "strength",
+                    "duration": 35,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "resistance",
+                    "duration": 35,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            ]
+        }
+    }
+}

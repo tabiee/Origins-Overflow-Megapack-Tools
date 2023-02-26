@@ -1,0 +1,13 @@
+{
+	"name": "§6§nWhat Goes Up, Must Go Down",
+	"description": "You're not impervious to fall damage, actually, you take 2x fall damage.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "fall"
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 2
+    }
+}

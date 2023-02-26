@@ -1,0 +1,113 @@
+{
+    "name": "§1§nChanneled Flight",
+    "description": "You create a force under your feet to carry yourself through the air.",
+    "type": "origins:multiple",
+    "nuggets": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 300,
+        "start_value": 300,
+        "hud_render": {
+            "should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 19
+        }
+    },
+    "creative": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:magicbot/fly_nuggets",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:creative_flight"
+    },
+    "disc": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:magicbot/fly_nuggets",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:creative_flying"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "summon area_effect_cloud ~ ~ ~ {Particle:\"dust 0.365 0.000 1.000 1\",NoGravity:0b,Radius:0.5f,Duration:5}",
+                    "permission_level": 4
+                },
+				{
+                    "type": "origins:execute_command",
+                    "command": "particle witch ~ ~ ~ 0.1 0 0.1 0 3",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:magicbot/fly_nuggets",
+                    "change": -1
+                }
+            ]
+        }
+    },
+	"sprint": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:magicbot/fly_nuggets",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:creative_flying"
+                },
+				{
+				"type": "origins:sprinting"
+		}
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+                    "type": "origins:change_resource",
+                    "resource": "*:magicbot/fly_nuggets",
+                    "change": -5
+        }
+    },
+    "regain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:magicbot/fly_nuggets",
+                    "comparison": "<",
+                    "compare_to": 300
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:creative_flying"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:magicbot/fly_nuggets",
+            "change": 2
+        }
+    }
+}

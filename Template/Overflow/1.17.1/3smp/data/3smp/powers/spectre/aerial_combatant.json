@@ -1,0 +1,13 @@
+{
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "value": 1,
+        "operation": "multiply_base"
+    },
+    "condition": {
+        "type": "origins:fall_flying",
+        "inverted": false
+    },
+	    "name": "§2§nAerial Combatant",
+    "description": "Having lived your previous life in the air you are an expert at aerial combat."
+}

@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"oceanfire:god/breathe",
+		"oceanfire:god/death",
+		"oceanfire:god/mobs",
+		"oceanfire:god/teamer",
+		"origins:water_vision",
+		"origins:aqua_affinity",
+		"origins:swim_speed",
+		"origins:like_water",
+		"origins:aquatic",
+		"origins:conduit_power_on_land"
+	],
+	"icon": "minecraft:heart_of_the_sea",
+	"impact": 3,
+	"name": "§3§l§oOcean God",
+	"description": "Ruler of the Seas."
+}

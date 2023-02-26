@@ -1,0 +1,107 @@
+{
+    "name": "§4§nHydrophobia",
+    "description": "If you are in water for more than 10 seconds, you start receiving damage.",
+    "type": "origins:multiple",
+    "bit": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 200,
+        "start_value": 200,
+        "hud_render": {
+            "should_render": true,
+            "bar_index": 1,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:dragon/hydro_bit",
+                "comparison": "!=",
+                "compare_to": 200
+            }
+        }
+    },
+    "tick": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:in_rain"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:dragon/hydro_bit",
+            "change": -1
+        }
+    },
+    "regain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:in_rain"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:dragon/hydro_bit",
+            "change": 10
+        }
+    },
+    "dmg": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:fluid_height",
+                            "fluid": "minecraft:water",
+                            "comparison": ">",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:in_rain"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:dragon/hydro_bit",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:damage_over_time",
+        "interval": 30,
+        "onset_delay": 1,
+        "damage": 2,
+        "damage_easy": 1,
+        "damage_source": {
+            "name": "hurt_by_water",
+            "bypasses_armor": true,
+            "unblockable": true
+        },
+        "protection_enchantment": "origins:water_protection",
+        "protection_effectiveness": 1
+    }
+}

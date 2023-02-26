@@ -1,0 +1,9 @@
+{
+    "name": "Pacifist",
+    "description": "You're not used to fighting, your damage is halved.",
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": -0.5
+    }
+}

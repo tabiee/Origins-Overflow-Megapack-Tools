@@ -1,0 +1,12 @@
+{
+    "name": "Flammability",
+    "description": "Due to your mostly plant like nature, you take double damage from fire.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:fire"
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": 2
+    }
+}

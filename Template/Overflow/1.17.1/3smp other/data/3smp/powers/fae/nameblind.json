@@ -1,0 +1,18 @@
+{
+    "type": "origins:prevent_entity_render",
+    "entity_condition": {
+        "type": "origins:equipped_item",
+        "inverted": false,
+        "equipment_slot": "head",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "inverted": false,
+            "ingredient": {
+                "tag": "3smp:mobheads"
+            }
+        }
+    },
+	"hidden": false,
+	"name": "§6§nNameblind",
+    "description": "People can hide their true identity."
+}

@@ -1,0 +1,291 @@
+{
+	"hidden": true,
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:resource",
+				"resource": "*:mast/chalk_stuff",
+				"comparison": "==",
+				"compare_to": 1
+			},
+			{
+				"inverted": true,
+				"type": "origins:equipped_item",
+				"equipment_slot": "offhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "heart_of_the_sea"
+					}
+				}
+			},
+			{
+				"type": "origins:xp_levels",
+				"comparison": ">",
+				"compare_to": 0
+			}
+		]
+	},
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:if_else",
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "porkchop"
+				}
+			}
+		},
+		"if_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @s porkchop 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "give @s cooked_porkchop 1",
+					"permission_level": 4
+				}
+			]
+		},
+		"else_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "beef"
+					}
+				}
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "clear @s beef 1",
+						"permission_level": 4
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "give @s cooked_beef 1",
+						"permission_level": 4
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "chicken"
+						}
+					}
+				},
+				"if_action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "clear @s chicken 1",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "give @s cooked_chicken",
+							"permission_level": 4
+						}
+					]
+				},
+				"else_action": {
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:equipped_item",
+						"equipment_slot": "mainhand",
+						"item_condition": {
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "cod"
+							}
+						}
+					},
+					"if_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "clear @s cod 1",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "give @s cooked_cod 1",
+								"permission_level": 4
+							}
+						]
+					},
+					"else_action": {
+						"type": "origins:if_else",
+						"condition": {
+							"type": "origins:equipped_item",
+							"equipment_slot": "mainhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "salmon"
+								}
+							}
+						},
+						"if_action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "origins:execute_command",
+									"command": "clear @s salmon 1",
+									"permission_level": 4
+								},
+								{
+									"type": "origins:execute_command",
+									"command": "give @s cooked_salmon 1",
+									"permission_level": 4
+								}
+							]
+						},
+						"else_action": {
+							"type": "origins:if_else",
+							"condition": {
+								"type": "origins:equipped_item",
+								"equipment_slot": "mainhand",
+								"item_condition": {
+									"type": "origins:ingredient",
+									"ingredient": {
+										"item": "mutton"
+									}
+								}
+							},
+							"if_action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:execute_command",
+										"command": "clear @s mutton 1",
+										"permission_level": 4
+									},
+									{
+										"type": "origins:execute_command",
+										"command": "give @s cooked_mutton 1",
+										"permission_level": 4
+									}
+								]
+							},
+							"else_action": {
+								"type": "origins:if_else",
+								"condition": {
+									"type": "origins:equipped_item",
+									"equipment_slot": "mainhand",
+									"item_condition": {
+										"type": "origins:ingredient",
+										"ingredient": {
+											"item": "rabbit"
+										}
+									}
+								},
+								"if_action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:execute_command",
+											"command": "clear @s rabbit 1",
+											"permission_level": 4
+										},
+										{
+											"type": "origins:execute_command",
+											"command": "give @s cooked_rabbit 1",
+											"permission_level": 4
+										}
+									]
+								},
+								"else_action": {
+									"type": "origins:if_else",
+									"condition": {
+										"type": "origins:equipped_item",
+										"equipment_slot": "mainhand",
+										"item_condition": {
+											"type": "origins:ingredient",
+											"ingredient": {
+												"item": "potato"
+											}
+										}
+									},
+									"if_action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:execute_command",
+												"command": "clear @s potato 1",
+												"permission_level": 4
+											},
+											{
+												"type": "origins:execute_command",
+												"command": "give @s baked_potato 1",
+												"permission_level": 4
+											}
+										]
+									},
+									"else_action": {
+										"type": "origins:if_else",
+										"condition": {
+											"type": "origins:equipped_item",
+											"equipment_slot": "mainhand",
+											"item_condition": {
+												"type": "origins:ingredient",
+												"ingredient": {
+													"item": "kelp"
+												}
+											}
+										},
+										"if_action": {
+											"type": "origins:and",
+											"actions": [
+												{
+													"type": "origins:execute_command",
+													"command": "clear @s kelp 1",
+													"permission_level": 4
+												},
+												{
+													"type": "origins:execute_command",
+													"command": "give @s dried_kelp 1",
+													"permission_level": 4
+												}
+											]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"cooldown": 20,
+	"hud_render": {
+		"should_render": false
+	},
+	"key": {
+		"key": "primary",
+		"continuous": true
+	}
+}

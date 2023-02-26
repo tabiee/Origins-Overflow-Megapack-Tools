@@ -1,0 +1,16 @@
+{
+    "name": "§2§nQuick Feet",
+    "description": "Due to constantly running from hunters you have devolved natural speed.",
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "speed",
+            "duration": 55,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    }
+}

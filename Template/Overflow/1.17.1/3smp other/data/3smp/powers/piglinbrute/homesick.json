@@ -1,0 +1,48 @@
+{
+  "type": "origins:multiple",
+      "name": "§4§nHomesickness",
+    "description": "You are weaker outside of the nether, although aren't damaged by the overworlds much cooler lava.",
+  "change_group": {
+	"type": "origins:entity_group",
+	"group": "undead",
+	"condition": {
+	  "type": "origins:dimension",
+	  "dimension": "minecraft:overworld",
+	  "inverted": false
+	}
+  },
+  "fire_immunity": {
+	"type": "origins:fire_immunity",
+	"condition": {
+	  "type": "origins:dimension",
+	  "dimension": "minecraft:overworld",
+	  "inverted": false
+	}
+  },
+  "slowness": {
+	"type": "origins:stacking_status_effect",
+	"min_stacks": 0,
+	"max_stacks": 1,
+	"duration_per_stack": 30,
+	"effect": {
+	  "effect": "slowness",
+	  "amplifier": 0,
+	  "is_ambient": true,
+	  "show_particles": false,
+	  "show_icon": false
+	},
+	"condition": {
+	  "type": "origins:dimension",
+	  "dimension": "minecraft:overworld",
+	  "inverted": false
+	}
+  },
+  "shaking": {
+	"type": "origins:shaking",
+	"condition": {
+	  "type": "origins:dimension",
+	  "dimension": "minecraft:overworld",
+	  "inverted": false
+	}
+  }
+}

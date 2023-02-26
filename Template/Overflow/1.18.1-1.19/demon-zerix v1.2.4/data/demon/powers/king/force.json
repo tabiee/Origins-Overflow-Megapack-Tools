@@ -1,0 +1,120 @@
+{
+	"name": "§5§nBlood Demon Art: Kinetic Forcefield",
+	"description": "Push away enemies and projectiles for 10s.",
+	"type": "origins:multiple",
+	"act": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "demon:king/force_dur"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle dust 0.412 0.086 0.086 3 ~ ~ ~ 2 2 2 0 300"
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "block.end_portal_frame.fill",
+					"volume": 1,
+					"pitch": 0.3
+				}
+			]
+		},
+		"cooldown": 1200,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 1
+		},
+		"key": {
+			"key": "key.saveToolbarActivator"
+		}
+	},
+	"dur": {
+		"type": "origins:cooldown",
+		"cooldown": 200,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 0
+		}
+	},
+	"push": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "demon:king/force_dur",
+			"comparison": "!=",
+			"compare_to": 0
+		},
+		"type": "origins:action_over_time",
+		"interval": 2,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:area_of_effect",
+					"radius": 7,
+					"bientity_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:target_action",
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:execute_command",
+											"command": "tp @s ~ ~ ~ facing entity @e[tag=demon,limit=1]"
+										},
+										{
+											"type": "origins:delay",
+											"action": {
+												"type": "origins:add_velocity",
+												"y": 1,
+												"z": -1,
+												"space": "local",
+												"client": true,
+												"server": true
+											},
+											"ticks": 1
+										}
+									]
+								}
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "summon area_effect_cloud ~ ~ ~ {Particle:\"dust 1.000 0.000 0.000 1\",Radius:7f,Duration:5}"
+				}
+			]
+		}
+	},
+	"projectiles": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "demon:king/force_dur",
+			"comparison": "!=",
+			"compare_to": 0
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=#minecraft:impact_projectiles,distance=..7] at @s run data modify entity @s Motion set value [0.0,0.0,0.0]"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=#minecraft:impact_projectiles,distance=..7] at @s run tp @s ^ ^ ^-1"
+				}
+			]
+		}
+	}
+}

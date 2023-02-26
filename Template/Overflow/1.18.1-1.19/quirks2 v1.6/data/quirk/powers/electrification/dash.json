@@ -1,0 +1,32 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+         "type": "origins:and",
+        "actions": [{
+  "type": "origins:add_velocity",
+  "z": 2,
+  "space": "local"
+},
+{
+
+                       "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.illusioner.mirror_move master @s ~ ~ ~ 10 1.5"
+},
+{
+    "type": "origins:execute_command",
+    "command": "particle minecraft:flash ~ ~ ~ 1 1 1 1.5 150"
+},
+{
+    "type": "origins:execute_command",
+    "command": "execute as @p run particle minecraft:dust 1 1 0.2 1 ~ ~1 ~ 1 1 1 1 500 force"
+}
+]},
+    "cooldown": 70,
+    "hud_render": {
+        "should_render": true,
+        "bar_index": 4
+    },
+    "key": "key.origins.senary_active",
+    "name": "Lightning Dash",
+    "description": "You are able to dash forward wherever you are looking at."
+}

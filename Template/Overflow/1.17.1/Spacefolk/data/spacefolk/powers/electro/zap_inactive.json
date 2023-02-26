@@ -1,0 +1,33 @@
+{
+    "name": "Shock",
+    "description": "Small burst of electricity in close range around you.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "effect give @e[tag=!zapper,distance=..5] poison 2 10 true",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle end_rod ~ ~ ~ 1 1 1 1 100",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "item.trident.thunder",
+                "volume": 1,
+                "pitch": 2
+            }
+        ]
+    },
+    "cooldown": 300,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 2
+    },
+    "key": "primary"
+}

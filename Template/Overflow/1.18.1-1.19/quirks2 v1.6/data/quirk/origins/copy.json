@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"quirk:copy/copycat",
+		"quirk:copy/toggle",
+		"quirk:copy/failsafe",
+		"quirk:copy/reset",
+	    "quirk:health"
+	],
+    "unchoosable": true,
+	"icon": "minecraft:repeater",
+	"impact": 3,
+	"order": 1,
+	"name": "Copy",
+	"description": "Monoma's Quirk"
+}

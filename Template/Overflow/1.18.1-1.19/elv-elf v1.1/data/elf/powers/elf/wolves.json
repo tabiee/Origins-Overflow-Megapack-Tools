@@ -1,0 +1,49 @@
+{
+    "name": "Natural Predator",
+    "description": "Cerberus and Fenrir are wolf like creatures and are an elf's only predator, due to this you do 25% less damage to wolves and wolves do 75% more damage to you. Wolves attack you on sight.",
+    "type": "origins:multiple",
+    "angy": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=minecraft:wolf,distance=..20] at @s run data modify entity @s AngryAt set from entity @e[tag=elf,limit=1] UUID",
+                    "permission_level": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=minecraft:wolf,distance=..20] at @s run data modify entity @s AngerTime set value 60",
+                    "permission_level": 2
+                }
+            ]
+        }
+    },
+    "dmg": {
+        "type": "origins:modify_damage_dealt",
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:wolf"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.25
+        }
+    },
+    "taken": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:wolf"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.75
+        }
+    }
+}

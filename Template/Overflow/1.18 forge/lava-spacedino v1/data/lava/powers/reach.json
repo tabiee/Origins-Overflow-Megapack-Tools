@@ -1,0 +1,14 @@
+{
+    "name": "§6§nLarger Reach",
+    "description": "Your larger body allows you to reach farther.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "forge:reach_distance",
+            "operation": "addition",
+            "value": 3,
+            "name": "Extra Reach block reach"
+        }
+    ],
+    "update_health": false
+}

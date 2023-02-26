@@ -1,0 +1,28 @@
+{
+    "name": "§e§nDustbunny",
+    "description": "Like the rabbit origin, when struck, there is a chance for the ikimono to drop some glowstone dust.",
+    "type": "origins:self_action_when_hit",
+    "entity_action": {
+        "type": "origins:chance",
+        "chance": 0.5,
+        "action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 1.000 0.533 0.000 2 ~ ~1 ~ 0.5 0.5 0.5 1 25 normal",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "summon item ~ ~ ~ {PickupDelay:40,Item:{id:\"minecraft:glowstone_dust\",Count:1b}}",
+                    "permission_level": 4
+                }
+            ]
+        }
+    },
+    "cooldown": 50,
+    "hud_render": {
+        "should_render": false
+    }
+}

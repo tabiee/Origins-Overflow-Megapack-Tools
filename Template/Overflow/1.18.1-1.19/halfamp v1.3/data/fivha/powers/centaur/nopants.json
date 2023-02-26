@@ -1,0 +1,13 @@
+{
+	"name": "Horse Body",
+	"description": "Because of your lower half, you cannot wear pants or boots. You also can't ride other animals.",
+    "type": "origins:restrict_armor",
+    "legs": {
+        "type": "origins:constant",
+        "value": true
+    },
+    "feet": {
+        "type": "origins:constant",
+        "value": true
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "name": "Fleet of Foot",
+    "description": "You move faster on grass.",
+    "condition": {
+        "type": "origins:on_block",
+        "block_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "minecraft:mycelium"
+                },
+                {
+                    "type": "origins:block",
+                    "block": "minecraft:warped_nylium"
+                },
+                {
+                    "type": "origins:block",
+                    "block": "minecraft:crimson_nylium"
+                },
+                {
+                    "type": "origins:block",
+                    "block": "minecraft:grass_block"
+                },
+                {
+                    "type": "origins:block",
+                    "block": "minecraft:dirt_path"
+                }
+            ]
+        }
+    },
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "speed",
+            "duration": 55,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    }
+}

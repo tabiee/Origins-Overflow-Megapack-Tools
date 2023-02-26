@@ -1,0 +1,60 @@
+{
+	"name": "§2§nPack Bond",
+	"description": "You are a social creature and can form bonds with others. When you are near any tamed pet, you and the pet gain Resistance.",
+	"condition": {
+		"type": "origins:or",
+		"conditions": [
+			{
+				"type": "origins:command",
+				"command": "execute as @e[distance=..15] if data entity @s Owner",
+				"comparison": ">=",
+				"compare_to": 1,
+				"permission_level": 4
+			},
+			{
+				"type": "origins:command",
+				"command": "execute if entity @e[nbt={Trusting:1b},distance=..15]",
+				"comparison": ">=",
+				"compare_to": 1,
+				"permission_level": 4
+			}
+		]
+	},
+	"type": "origins:action_over_time",
+	"interval": 20,
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "execute as @e[distance=..15] at @s if data entity @s Owner run effect give @s resistance 10 0 true",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute as @e[nbt={Trusting:1b},distance=..15] at @s run effect give @s resistance 10 0 true",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute as @e[distance=..15] at @s if data entity @s Owner run particle wax_on ~ ~1.5 ~ 0 0 0 0 20",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute as @e[nbt={Trusting:1b},distance=..15] at @s run particle wax_on ~ ~1.5 ~ 0 0 0 0 20",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "resistance",
+					"duration": 100,
+					"amplifier": 0,
+					"show_particles": false,
+					"show_icon": true
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"name": "Light's Out",
+	"description": "Blind everything around you.",
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "blindness",
+					"duration": 22,
+					"amplifier": 3,
+					"show_particles": false,
+					"show_icon": false
+				}
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "particle squid_ink ~ ~ ~ 5 3 5 0 300",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "particle ash ~ ~ ~ 5 3 5 1 300",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "effect give @e[tag=!mum,distance=..30] blindness 10 0 true",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "entity.vex.charge",
+				"volume": 10,
+				"pitch": 0.1
+			}
+		]
+	},
+	"cooldown": 1200,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+		"bar_index": 1
+	},
+	"key": {
+		"key": "primary"
+	}
+}

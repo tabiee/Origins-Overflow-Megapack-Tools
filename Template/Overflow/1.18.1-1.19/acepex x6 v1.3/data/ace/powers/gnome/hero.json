@@ -1,0 +1,16 @@
+{
+    "name": "Good Manners",
+    "description": "Villagers like you.",
+    "type": "origins:action_over_time",
+    "interval": 25,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "hero_of_the_village",
+            "duration": 35,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

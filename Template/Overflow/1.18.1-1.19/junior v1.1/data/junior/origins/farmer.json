@@ -1,0 +1,10 @@
+{
+	"powers": [
+		"junior:farmer/bonemeal",
+		"junior:farmer/trades"
+	],
+	"icon": "minecraft:iron_hoe",
+	"impact": 1,
+	"name": "Farmer",
+	"description": "You're good with crops."
+}

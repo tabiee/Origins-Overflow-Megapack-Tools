@@ -1,0 +1,19 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+	"type": "origins:change_resource",
+	"resource": "quirk:steel/steelshock",
+	"change": 120
+},
+    "condition": {
+            "type": "origins:on_block"
+    },
+  "cooldown": 80,
+  "hud_render": {
+    "should_render": false,
+    "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+    "bar_index": 15
+  },
+  "key": "key.origins.senary_active",
+  "hidden": true
+}

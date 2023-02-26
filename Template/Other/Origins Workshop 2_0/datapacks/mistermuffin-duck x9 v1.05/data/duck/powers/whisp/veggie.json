@@ -1,0 +1,59 @@
+{
+	"name": "§e§nHerbivore",
+	"description": "Your diet is restricted to non-meat and carrots restore more hunger.",
+	"type": "origins:multiple",
+	"eat": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"tag": "origins:meat"
+							}
+						},
+						{
+							"type": "origins:meat"
+						}
+					]
+				},
+				{
+					"type": "origins:food"
+				},
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "origins:ignore_diet"
+					},
+					"inverted": true
+				}
+			]
+		}
+	},
+	"carrot": {
+		"type": "origins:modify_food",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": [
+				{
+					"item": "carrot"
+				},
+				{
+					"item": "golden_carrot"
+				}
+			]
+		},
+		"food_modifier": {
+			"operation": "addition",
+			"value": 2
+		},
+		"saturation_modifier": {
+			"operation": "addition",
+			"value": 4
+		}
+	}
+}

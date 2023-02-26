@@ -1,0 +1,52 @@
+{
+    "name": "Royal Combatant",
+    "description": "You are incredibly skilled. You're fast, deal more damage to players and know how to use your armor better.",
+    "type": "origins:multiple",
+    "fast": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_base",
+            "value": 0.2
+        }
+    },
+    "dmg": {
+        "type": "origins:modify_damage_dealt",
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:player"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.4
+        }
+    },
+    "def": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head"
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "chest"
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "legs"
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "feet"
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.35
+        }
+    }
+}

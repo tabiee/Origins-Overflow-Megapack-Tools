@@ -1,0 +1,35 @@
+{
+    "name": "§5§nFierce Beak",
+    "description": "Go into a pecking frenzy for a short time.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.parrot.hurt",
+                "volume": 1,
+                "pitch": 1.5
+            },
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "strength",
+                    "duration": 200,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            }
+        ]
+    },
+    "cooldown": 600,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 5
+    },
+    "key": {
+        "key": "primary"
+    }
+}

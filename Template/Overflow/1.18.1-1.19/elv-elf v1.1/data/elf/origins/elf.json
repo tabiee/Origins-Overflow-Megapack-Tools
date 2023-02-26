@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"elf:elf/hp",
+		"elf:elf/wolves",
+		"elf:elf/homeland",
+		"elf:elf/archer",
+		"elf:elf/fire",
+		"elf:elf/magic",
+		"elf:elf/effs",
+		"elf:elf/tagger"
+	],
+	"icon": "minecraft:flowering_azalea",
+	"impact": 3,
+	"name": "Elf",
+	"description": "Elves are a creature from folklore with a close relation to Humans."
+}

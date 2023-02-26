@@ -1,0 +1,29 @@
+{
+    "name": "Mummy's Curse",
+    "description": "Attacking a player causes hunger for 10s.",
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "hunger",
+                "duration": 200,
+                "amplifier": 0,
+                "show_particles": true,
+                "show_icon": true
+            }
+        }
+    },
+    "bientity_condition": {
+        "type": "origins:target_condition",
+        "condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:player"
+        }
+    },
+    "cooldown": 300,
+    "hud_render": {
+        "should_render": false
+    }
+}

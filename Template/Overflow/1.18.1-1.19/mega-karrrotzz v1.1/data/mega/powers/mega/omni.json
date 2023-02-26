@@ -1,0 +1,34 @@
+{
+    "name": "§e§nOmnivore",
+    "description": "While you can eat anything, meat is more preferrable to fruit and veggies.",
+    "type": "origins:multiple",
+    "meat": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:meat"
+        },
+        "food_modifier": {
+            "operation": "addition",
+            "value": 2
+        },
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "not": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "inverted": true,
+            "type": "origins:meat"
+        },
+        "food_modifier": {
+            "operation": "addition",
+            "value": -1
+        },
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": -2
+        }
+    }
+}

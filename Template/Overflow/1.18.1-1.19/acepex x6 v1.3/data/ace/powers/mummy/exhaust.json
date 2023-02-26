@@ -1,0 +1,9 @@
+{
+    "name": "Hungerless",
+    "description": "You exhaust a lot slower.",
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": -0.5
+    }
+}

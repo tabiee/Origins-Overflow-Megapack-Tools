@@ -1,0 +1,11 @@
+{
+    "name": "Quick Stride",
+    "description": "You move twice as fast.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.movement_speed",
+        "operation": "multiply_total",
+        "value": 1
+    },
+    "update_health": false
+}

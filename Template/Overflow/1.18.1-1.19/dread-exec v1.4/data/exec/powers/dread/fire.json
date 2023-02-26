@@ -1,0 +1,6 @@
+{
+    "name": "§2§nFire Immunity",
+    "description": "Fire is nothing to you.",
+	"hidden": true,
+    "type": "origins:fire_immunity"
+}

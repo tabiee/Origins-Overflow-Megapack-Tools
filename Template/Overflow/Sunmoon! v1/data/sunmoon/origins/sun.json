@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"sunmoon:spec/jumps",
+		"sunmoon:spec/eyes",
+		"sunmoon:sun/nyoom",
+		"sunmoon:sun/solar",
+		"sunmoon:sun/tagger"
+	],
+	"icon": "minecraft:sunflower",
+	"impact": 3,
+	"name": "§e§l§oSun§r",
+	"description": "§e§oHello friend!§r\nUpbeat and energetic, Sun is always active in the light."
+}

@@ -1,0 +1,22 @@
+{
+    "name": "§3§nWarm Coat",
+    "description": "You are resistant to the cold.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "freeze"
+            },
+            {
+                "type": "origins:name",
+                "name": "freeze.player"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": -0.8
+    }
+}

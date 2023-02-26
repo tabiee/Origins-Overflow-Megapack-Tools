@@ -1,0 +1,35 @@
+{
+    "name": "§4§nNon-Corporeal",
+    "description": "Armor doesn't stay on you, you can't wear any.",
+    "type": "origins:multiple",
+    "armor": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "type": "origins:armor_value",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "chest": {
+            "type": "origins:armor_value",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "legs": {
+            "type": "origins:armor_value",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "feet": {
+            "type": "origins:armor_value",
+            "comparison": ">=",
+            "compare_to": 1
+        }
+    },
+    "model": {
+        "type": "origins:model_color",
+        "red": 1,
+        "green": 1,
+        "blue": 1,
+        "alpha": 0.55
+    }
+}

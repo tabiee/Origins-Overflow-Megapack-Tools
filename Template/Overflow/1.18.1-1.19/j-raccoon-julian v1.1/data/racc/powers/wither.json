@@ -1,0 +1,39 @@
+{
+    "name": "§e§nWither Hands",
+    "description": "Your claws are filled with a dangerous disease, hitting someone inflicts them with withering. But it also makes you unable to grow farms.",
+    "type": "origins:multiple",
+    "hits": {
+        "type": "origins:target_action_on_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:empty"
+                }
+            }
+        },
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "wither",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": true,
+                "show_icon": true
+            }
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "nofarmsforu": {
+        "type": "origins:prevent_block_selection",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "racc:farms"
+        }
+    }
+}

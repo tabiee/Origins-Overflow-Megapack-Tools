@@ -1,0 +1,43 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "call": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:execute_command",
+            "command": "team add sneak",
+            "permission_level": 4
+        },
+        "execute_chosen_when_orb": true,
+        "entity_action_removed": {
+            "type": "origins:execute_command",
+            "command": "team leave @s",
+            "permission_level": 4
+        }
+    },
+    "sneaky": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:rat/stealth_tap",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join sneak @e[distance=..64,type=!player]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[distance=64..,type=!player]",
+                    "permission_level": 4
+                }
+            ]
+        }
+    }
+}

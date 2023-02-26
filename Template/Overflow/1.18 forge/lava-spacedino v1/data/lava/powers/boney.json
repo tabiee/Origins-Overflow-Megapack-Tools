@@ -1,0 +1,25 @@
+{
+    "name": "§0§nFeared Nemesis",
+    "description": "Your kind are often hunted by bone serpents Bone Serpents, they deal more damage to you.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:attacker",
+        "entity_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "alexsmobs:bone_serpent"
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "alexsmobs:bone_serpent_part"
+                }
+            ]
+        }
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 1
+    }
+}

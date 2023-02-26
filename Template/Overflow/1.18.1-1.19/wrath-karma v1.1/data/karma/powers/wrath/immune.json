@@ -1,0 +1,44 @@
+{
+    "name": "§2§nToughened Skin",
+    "description": "Due to being the King of demons and sinner you are naturally the strongest.",
+    "type": "origins:multiple",
+    "invuln": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "explosion"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "explosion.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "wither"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "wither.player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "witherSkull"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                }
+            ]
+        }
+    },
+    "fire": {
+        "type": "origins:fire_immunity"
+    }
+}

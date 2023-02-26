@@ -1,0 +1,24 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:fall_distance",
+        "comparison": ">",
+        "compare_to": 4
+    },
+    "type": "origins:action_on_land",
+    "entity_action": {
+        "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "summon area_effect_cloud ~ ~0.2 ~ {Particle:\"dust 0.365 0.000 1.000 1\",NoGravity:0b,Radius:0.8f,Duration:20}",
+                    "permission_level": 4
+                },
+				{
+                    "type": "origins:execute_command",
+                    "command": "particle dragon_breath ~ ~ ~ 0.1 0 0.1 0.1 25",
+                    "permission_level": 4
+                }
+				]
+    }
+}

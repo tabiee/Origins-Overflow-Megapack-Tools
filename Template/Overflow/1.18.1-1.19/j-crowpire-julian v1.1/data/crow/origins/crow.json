@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"crow:winged",
+		"crow:leech",
+		"crow:dark",
+		"crow:carn",
+		"crow:sun",
+		"crow:weaks"
+	],
+	"icon": "minecraft:cauldron",
+	"impact": 3,
+	"name": "§5§l§oCrowpire",
+	"description": "You are a vampire of the Crow Coven. You not only have the various abilities and traits of a vampire, but a crow as well."
+}

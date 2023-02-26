@@ -1,0 +1,42 @@
+{
+    "name": "Electro Therapy",
+    "description": "Restore health at will, can be exhausting.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "regeneration",
+                        "duration": 40,
+                        "amplifier": 2,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                ]
+            },
+            {
+                "type": "origins:exhaust",
+                "amount": 6
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "item.trident.return",
+                "volume": 1,
+                "pitch": 0.2
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:falling_dust sand ~ ~ ~ 0.8 0.5 0.8 0 20",
+                "permission_level": 4
+            }
+        ]
+    },
+    "cooldown": 10,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": "secondary"
+}

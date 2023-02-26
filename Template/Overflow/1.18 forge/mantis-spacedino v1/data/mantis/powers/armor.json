@@ -1,0 +1,29 @@
+{
+    "name": "§3§nCarapace",
+    "description": "You naturally have 2 points of armor and explosion immunity.",
+    "type": "apoli:multiple",
+    "arm": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.armor",
+            "operation": "addition",
+            "value": 4
+        }
+    },
+    "inv": {
+        "type": "apoli:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "explosion"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "explosion.player"
+                }
+            ]
+        }
+    }
+}

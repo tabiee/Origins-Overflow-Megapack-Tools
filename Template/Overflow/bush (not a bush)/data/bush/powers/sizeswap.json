@@ -1,0 +1,292 @@
+{
+    "name": "Photosynthesis",
+    "description": "Change between three different sizes, being small or big has it's own strength and weakness.",
+    "type": "origins:multiple",
+    "form": {
+        "type": "origins:resource",
+        "min": 1,
+        "max": 3,
+        "start_value": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "swap": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:sizeswap_form",
+                        "comparison": "==",
+                        "compare_to": 3
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:height 1 @s"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:width 1 @s"
+                            },
+                            {
+                                "type": "origins:delay",
+                                "action": {
+                                    "type": "origins:change_resource",
+                                    "resource": "*:sizeswap_form",
+                                    "change": -2,
+                                    "operation": "add"
+                                },
+                                "ticks": 2
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:sizeswap_form",
+                        "comparison": "==",
+                        "compare_to": 1
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:height 2.5 @s"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:width 2.5 @s"
+                            },
+                            {
+                                "type": "origins:delay",
+                                "action": {
+                                    "type": "origins:change_resource",
+                                    "resource": "*:sizeswap_form",
+                                    "change": 1,
+                                    "operation": "add"
+                                },
+                                "ticks": 2
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:sizeswap_form",
+                        "comparison": "==",
+                        "compare_to": 2
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:height 0.25 @s"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scale set pehkui:width 0.25 @s"
+                            },
+                            {
+                                "type": "origins:delay",
+                                "action": {
+                                    "type": "origins:change_resource",
+                                    "resource": "*:sizeswap_form",
+                                    "change": 1,
+                                    "operation": "add"
+                                },
+                                "ticks": 2
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 21
+        },
+        "key": {
+            "key": "primary",
+            "continuous": true
+        }
+    },
+    "s_fx": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:sizeswap_form",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "weakness",
+                    "duration": 25,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "speed",
+                    "duration": 25,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "jump_boost",
+                    "duration": 25,
+                    "amplifier": 3,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            ]
+        }
+    },
+    "b_fx": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:sizeswap_form",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "slowness",
+                    "duration": 25,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "jump_boost",
+                    "duration": 25,
+                    "amplifier": 1,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "strength",
+                    "duration": 25,
+                    "amplifier": 0,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            ]
+        }
+    },
+    "s_hp": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:sizeswap_form",
+            "comparison": "==",
+            "compare_to": 3
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": -10
+        },
+        "tick_rate": 1,
+        "update_health": true
+    },
+    "b_hp": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:sizeswap_form",
+            "comparison": "==",
+            "compare_to": 2
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": 20
+        },
+        "tick_rate": 1,
+        "update_health": true
+    },
+    "rideme": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:sizeswap_form",
+            "comparison": "==",
+            "compare_to": 2
+        },
+        "type": "origins:action_on_being_used",
+        "bientity_action": {
+            "type": "origins:mount"
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "inverted": true,
+                "type": "origins:passenger",
+                "comparison": ">=",
+                "compare_to": 1
+            }
+        },
+        "action_result": "success"
+    },
+    "rideyou": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:sizeswap_form",
+            "comparison": "==",
+            "compare_to": 3
+        },
+        "type": "origins:action_on_entity_use",
+        "bientity_action": {
+            "type": "origins:mount"
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "player"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:passenger",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    }
+                ]
+            }
+        },
+        "action_result": "success"
+    }
+}

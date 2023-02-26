@@ -1,0 +1,90 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"three": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"inverted": true,
+							"type": "origins:advancement",
+							"advancement": "adventure/sniper_duel"
+						},
+						{
+							"inverted": true,
+							"type": "origins:advancement",
+							"advancement": "story/shiny_gear"
+						},
+						{
+							"inverted": true,
+							"type": "origins:advancement",
+							"advancement": "adventure/hero_of_the_village"
+						}
+					]
+				},
+				{
+					"inverted": true,
+					"type": "origins:sneaking"
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "tellraw @s {\"text\":\" *-* This ability in not unlocked. Requires Hero of the Village and all prior abilities.\",\"italic\":true,\"color\":\"red\"}",
+			"permission_level": 4
+		},
+		"cooldown": 20,
+		"key": {
+			"key": "secondary"
+		}
+	},
+	"four": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"inverted": true,
+							"type": "origins:advancement",
+							"advancement": "adventure/sniper_duel"
+						},
+						{
+							"inverted": true,
+							"type": "origins:advancement",
+							"advancement": "story/shiny_gear"
+						},
+						{
+							"inverted": true,
+							"type": "origins:advancement",
+							"advancement": "adventure/hero_of_the_village"
+						},
+						{
+							"inverted": true,
+							"type": "origins:advancement",
+							"advancement": "end/respawn_dragon"
+						}
+					]
+				},
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "tellraw @s {\"text\":\" *-* This ability in not unlocked. Requires The End.. Again and all prior abilities.\",\"italic\":true,\"color\":\"red\"}",
+			"permission_level": 4
+		},
+		"cooldown": 20,
+		"key": {
+			"key": "secondary"
+		}
+	}
+}

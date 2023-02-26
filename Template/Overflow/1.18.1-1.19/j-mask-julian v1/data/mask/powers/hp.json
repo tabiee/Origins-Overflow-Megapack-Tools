@@ -1,0 +1,30 @@
+{
+    "name": "§e§nCreature of the Night",
+    "description": "Strong during the night, weak during the day.",
+    "type": "apoli:multiple",
+    "day": {
+        "condition": {
+            "type": "apoli:daytime"
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": -4
+        },
+        "tick_rate": 1
+    },
+    "night": {
+        "condition": {
+            "inverted": true,
+            "type": "apoli:daytime"
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": 4
+        },
+        "tick_rate": 1
+    }
+}

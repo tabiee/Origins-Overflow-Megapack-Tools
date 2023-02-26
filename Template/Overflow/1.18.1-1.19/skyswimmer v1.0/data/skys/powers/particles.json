@@ -1,0 +1,24 @@
+{
+    "hidden": true,
+    "condition": {
+		"inverted": true,
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:power_active",
+                "power": "*:invis_toggle"
+            },
+            {
+                "type": "origins:status_effect",
+                "effect": "invisibility"
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 6,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "particle dust 0.216 0.020 0.471 1 ~ ~ ~ 0.5 1 0.5 0 2 normal",
+        "permission_level": 4
+    }
+}

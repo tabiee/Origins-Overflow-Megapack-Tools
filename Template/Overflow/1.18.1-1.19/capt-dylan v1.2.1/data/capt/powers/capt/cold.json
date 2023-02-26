@@ -1,0 +1,24 @@
+{
+    "name": "§4§nCryophobia",
+    "description": "You are weakened in the cold.",
+    "condition": {
+        "type": "origins:biome",
+        "condition": {
+            "type": "origins:temperature",
+            "comparison": "<",
+            "compare_to": 0.6
+        }
+    },
+    "type": "origins:action_over_time",
+    "interval": 15,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "slowness",
+            "duration": 100,
+            "amplifier": 1,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

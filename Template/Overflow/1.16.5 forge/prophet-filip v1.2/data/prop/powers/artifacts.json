@@ -1,0 +1,496 @@
+{
+    "name": "§a§nArtifacts§r",
+    "description": "Find artifacts in order to improve your suit and discover new abilities. Create with Quinary; Toggle Elytra Boots with Quaternary",
+    "type": "origins:multiple",
+    "head": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "netherite_helmet"
+                        },
+                        "comparison": ">=",
+                        "compare_to": 1
+                    }
+                },
+                {
+                    "type": "origins:command",
+                    "command": "clear @s beacon 0",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:command",
+                    "command": "clear @s netherite_ingot 0",
+                    "comparison": ">=",
+                    "compare_to": 8
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "give @s netherite_helmet{Unbreakable:1,CustomModelData:69,display:{Name:'[{\"text\":\"Beacon\",\"italic\":false,\"bold\":true,\"color\":\"blue\"},{\"text\":\" Crown\",\"color\":\"dark_gray\"}]'},Enchantments:[{id:lure,lvl:1}],HideFlags:0} 1"
+                    },
+                    "ticks": 3
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle composter ~ ~1 ~ 0.75 0 0.75 0 200"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s netherite_ingot 8"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s beacon 1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s netherite_helmet 1"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.enchantment_table.use",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.origins.quinary_active"
+        }
+    },
+    "chest": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "netherite_chestplate"
+                        },
+                        "comparison": ">=",
+                        "compare_to": 1
+                    }
+                },
+                {
+                    "type": "origins:command",
+                    "command": "clear @s heart_of_the_sea 0",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "give @s netherite_chestplate{Unbreakable:1,CustomModelData:69,display:{Name:'[{\"text\":\"Heart of\",\"italic\":false,\"bold\":true,\"color\":\"blue\"},{\"text\":\" the Sea\",\"color\":\"dark_gray\"}]'},Enchantments:[{id:lure,lvl:1}],HideFlags:0} 1"
+                    },
+                    "ticks": 3
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle composter ~ ~1 ~ 0.75 0 0.75 0 200"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s heart_of_the_sea 1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s netherite_chestplate 1"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.enchantment_table.use",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.origins.quinary_active"
+        }
+    },
+    "legs": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "netherite_leggings"
+                        },
+                        "comparison": ">=",
+                        "compare_to": 1
+                    }
+                },
+                {
+                    "type": "origins:command",
+                    "command": "clear @s nether_star 0",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "give @s netherite_leggings{Unbreakable:1,CustomModelData:69,display:{Name:'[{\"text\":\"Netherstar\",\"italic\":false,\"bold\":true,\"color\":\"blue\"},{\"text\":\" Leggings\",\"color\":\"dark_gray\"}]'},Enchantments:[{id:lure,lvl:1}],HideFlags:0} 1"
+                    },
+                    "ticks": 3
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle composter ~ ~1 ~ 0.75 0 0.75 0 200"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s nether_star 1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s netherite_leggings 1"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.enchantment_table.use",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.origins.quinary_active"
+        }
+    },
+    "boots": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "netherite_boots"
+                        },
+                        "comparison": ">=",
+                        "compare_to": 1
+                    }
+                },
+                {
+                    "type": "origins:command",
+                    "command": "clear @s elytra 0",
+                    "comparison": ">=",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "give @s netherite_boots{Unbreakable:1,CustomModelData:69,display:{Name:'[{\"text\":\"Elytra\",\"italic\":false,\"bold\":true,\"color\":\"blue\"},{\"text\":\" Boots\",\"color\":\"dark_gray\"}]'},Enchantments:[{id:lure,lvl:1}],HideFlags:0} 1"
+                    },
+                    "ticks": 3
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle composter ~ ~1 ~ 0.75 0 0.75 0 200"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s elytra 2"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s netherite_boots 1"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "block.enchantment_table.use",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.origins.quinary_active"
+        }
+    },
+    "legfire": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": ">=",
+                    "compare_to": 8
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:101b,id:\"minecraft:netherite_leggings\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:fire_immunity"
+    },
+    "legwither": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:power_bar",
+                    "comparison": ">=",
+                    "compare_to": 8
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:101b,id:\"minecraft:netherite_leggings\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:effect_immunity",
+        "effects": [
+            "wither"
+        ]
+    },
+    "leguse": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:in_block_anywhere",
+                            "block_condition": {
+                                "type": "origins:or",
+                                "conditions": [
+                                    {
+                                        "type": "origins:block",
+                                        "block": "fire"
+                                    },
+                                    {
+                                        "type": "origins:block",
+                                        "block": "soul_fire"
+                                    }
+                                ]
+                            },
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        {
+                            "type": "origins:fluid_height",
+                            "fluid": "lava",
+                            "comparison": ">",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:on_fire"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:101b,id:\"minecraft:netherite_leggings\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:power_bar",
+            "change": -8,
+            "operation": "add"
+        }
+    },
+    "leguse2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:in_block_anywhere",
+                            "block_condition": {
+                                "type": "origins:or",
+                                "conditions": [
+                                    {
+                                        "type": "origins:block",
+                                        "block": "fire"
+                                    },
+                                    {
+                                        "type": "origins:block",
+                                        "block": "soul_fire"
+                                    }
+                                ]
+                            },
+                            "comparison": ">=",
+                            "compare_to": 1
+                        },
+                        {
+                            "type": "origins:fluid_height",
+                            "fluid": "lava",
+                            "comparison": ">",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:on_fire"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:101b,id:\"minecraft:netherite_leggings\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:103b,id:\"minecraft:netherite_helmet\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:power_bar",
+            "change": -4,
+            "operation": "add"
+        }
+    },
+    "chestsee": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:102b,id:\"minecraft:netherite_chestplate\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "water"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "night_vision",
+                "duration": 300,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        },
+        "falling_action": {
+            "type": "origins:clear_effect",
+            "effect": "night_vision"
+        }
+    },
+    "chestmine": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @s[nbt={Inventory:[{Slot:102b,id:\"minecraft:netherite_chestplate\",tag:{CustomModelData:69}}]}]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "water"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "haste",
+                "amplifier": 26,
+                "duration": 10,
+                "show_icon": false,
+                "show_particles": false
+            }
+        }
+    }
+}

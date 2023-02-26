@@ -1,0 +1,60 @@
+{
+	"name": "Consume the living",
+	"description": "You have to take the life of another to feed.",
+	"type": "origins:multiple",
+	"eat": {
+		"target_condition": {
+			"inverted": true,
+			"type": "origins:in_tag",
+			"tag": "brain:noeyes"
+		},
+		"type": "origins:self_action_on_kill",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:heal",
+					"amount": 4
+				},
+				{
+					"type": "origins:feed",
+					"food": 4,
+					"saturation": 6
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "entity.strider.death",
+					"volume": 0.25,
+					"pitch": 1.2
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute at @s anchored eyes run particle minecraft:soul ^ ^ ^1.5 0.5 0.5 0.5 0 3 normal",
+					"permission_level": 4
+				}
+			]
+		},
+		"cooldown": 5,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"noeat": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:food"
+				},
+				{
+					"inverted": true,
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "origins:ignore_diet"
+					}
+				}
+			]
+		}
+	}
+}

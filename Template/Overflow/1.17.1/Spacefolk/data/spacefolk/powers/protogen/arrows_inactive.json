@@ -1,0 +1,72 @@
+{
+    "name": "Delicate Hardware",
+    "description": "Getting hit by an arrow causes glitches.",
+    "type": "origins:multiple",
+    "effects": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "arrow"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "slowness",
+                            "duration": 60,
+                            "amplifier": 1,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "weakness",
+                            "duration": 60,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": false
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "slowness",
+                                "duration": 40,
+                                "amplifier": 1,
+                                "show_particles": false,
+                                "show_icon": false
+                            },
+                            {
+                                "effect": "blindness",
+                                "duration": 60,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": false
+                            }
+                        ]
+                    },
+                    "ticks": 60
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "item.armor.equip_iron",
+                    "volume": 1,
+                    "pitch": 0.7
+                }
+            ]
+        },
+        "cooldown": 120,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "glitch": {
+        "type": "origins:simple"
+    }
+}

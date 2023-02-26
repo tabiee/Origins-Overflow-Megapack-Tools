@@ -1,0 +1,10 @@
+{
+    "name": "Sturdy Structure",
+    "description": "As a Doll, you have 4 more hearts than that of a human and can use string to heal yourself.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": 8
+    }
+}

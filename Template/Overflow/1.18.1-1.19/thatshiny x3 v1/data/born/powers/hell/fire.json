@@ -1,0 +1,20 @@
+{
+    "name": "Fiery Adaptations",
+    "description": "Due to adapting to the Nether's terrain, your kind has evolved to swim through lava as if it was water, as well as seeing through lava clearly and being fire-proof.",
+    "type": "origins:multiple",
+    "imm": {
+        "type": "origins:fire_immunity"
+    },
+    "speed": {
+        "type": "origins:modify_lava_speed",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.5
+        }
+    },
+    "see": {
+        "type": "origins:lava_vision",
+        "s": 3,
+        "v": 15
+    }
+}

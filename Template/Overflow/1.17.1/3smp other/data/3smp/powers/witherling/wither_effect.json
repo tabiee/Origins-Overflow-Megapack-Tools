@@ -1,0 +1,22 @@
+{
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:wither",
+            "amplifier": 1,
+            "duration": 50,
+            "is_ambient": false,
+            "show_particles": true,
+            "show_icon": true
+        }
+    },
+    "cooldown": 15,
+    "hud_render": {
+        "should_render": true,
+        "bar_index": 5,
+        "sprite_location": "origins:textures/gui/resource_bar.png"
+    },
+    "name": "§1§nWithering Touch",
+    "description": "Everything you hit will start to wither."
+}

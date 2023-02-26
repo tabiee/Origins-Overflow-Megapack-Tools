@@ -1,0 +1,44 @@
+{
+    "type": "origins:action_on_callback",
+	"hidden": true,
+    "execute_chosen_when_orb": true,
+    "entity_action_chosen": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "team add red"
+            },
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "team modify red color red"
+            }
+        ]
+    },
+    "entity_action_added": {
+        "type": "origins:delay",
+        "action": {
+            "type": "origins:execute_command",
+            "permission_level": 4,
+            "command": "team join red @s"
+        },
+        "ticks": 1
+    },
+    "entity_action_lost": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "identity unequip @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "permission_level": 4,
+                    "command": "team leave @s"
+                }
+            ]
+        }
+    }

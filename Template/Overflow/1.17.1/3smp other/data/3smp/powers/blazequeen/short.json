@@ -1,0 +1,11 @@
+{
+    "1": {
+        "type": "extraorigins:modify_size",
+        "scale": 0.85,
+        "hidden": true
+    },
+    "2": {
+        "type": "origins:simple"
+    },
+    "type": "origins:multiple"
+}

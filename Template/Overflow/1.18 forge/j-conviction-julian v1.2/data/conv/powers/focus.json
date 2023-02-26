@@ -1,0 +1,296 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "ace1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:swapper_bit",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:conf_bar",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "jump_boost"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "regeneration"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "resistance"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "speed"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "strength"
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "strength",
+                            "duration": 15,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "speed",
+                            "duration": 15,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "resistance",
+                            "duration": 15,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": true
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "str2": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:swapper_bit",
+                    "comparison": "==",
+                    "compare_to": 2
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:conf_bar",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "jump_boost"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "regeneration"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "resistance"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "speed"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "strength"
+                },
+                {
+                    "type": "apoli:delay",
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "strength",
+                                "duration": 15,
+                                "amplifier": 1,
+                                "show_particles": false,
+                                "show_icon": true
+                            }
+                        ]
+                    },
+                    "ticks": 1
+                }
+            ]
+        }
+    },
+    "agi3": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:swapper_bit",
+                    "comparison": "==",
+                    "compare_to": 3
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:conf_bar",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "jump_boost"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "regeneration"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "resistance"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "strength"
+                },
+                {
+                    "type": "apoli:delay",
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "speed",
+                                "duration": 15,
+                                "amplifier": 1,
+                                "show_particles": false,
+                                "show_icon": true
+                            },
+                            {
+                                "effect": "jump_boost",
+                                "duration": 15,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            }
+                        ]
+                    },
+                    "ticks": 1
+                }
+            ]
+        }
+    },
+    "res4": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:swapper_bit",
+                    "comparison": "==",
+                    "compare_to": 4
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:conf_bar",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:cd",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 50,
+        "entity_action": {
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "jump_boost"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "regeneration"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "resistance"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "speed"
+                },
+                {
+                    "type": "apoli:clear_effect",
+                    "effect": "strength"
+                },
+                {
+                    "type": "apoli:delay",
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "resistance",
+                                "duration": 51,
+                                "amplifier": 1,
+                                "show_particles": false,
+                                "show_icon": true
+                            },
+                            {
+                                "effect": "regeneration",
+                                "duration": 51,
+                                "amplifier": 0,
+                                "show_particles": false,
+                                "show_icon": true
+                            }
+                        ]
+                    },
+                    "ticks": 1
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "§4§nAdia's Burden",
+    "description": "Adia in order to speed up their recovery will take a cut of the energy of all food you consume.",
+    "type": "origins:modify_food",
+    "item_condition": {
+        "type": "origins:constant",
+        "value": true
+    },
+    "food_modifier": {
+        "operation": "addition",
+        "value": -3
+    }
+}

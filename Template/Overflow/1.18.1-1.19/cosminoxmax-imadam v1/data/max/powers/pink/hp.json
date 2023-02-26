@@ -1,0 +1,45 @@
+{
+    "name": "§d§nLovingly§r",
+    "description": "You have an extra five hearts and slightly higher regeneration, feeling more whole than usual.",
+    "type": "origins:multiple",
+    "hearts": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 6
+                }
+            ]
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "addition",
+            "value": 10
+        },
+        "tick_rate": 1,
+        "update_health": true
+    },
+    "regen": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 6
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 100,
+        "entity_action": {
+            "type": "origins:heal",
+            "amount": 1
+        }
+    }
+}

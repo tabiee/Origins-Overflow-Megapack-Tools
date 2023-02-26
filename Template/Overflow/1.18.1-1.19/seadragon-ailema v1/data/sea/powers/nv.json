@@ -1,0 +1,10 @@
+{
+    "name": "§1§nDark Eyes",
+    "description": "You have excellent night vision.",
+    "type": "origins:toggle_night_vision",
+    "active_by_default": true,
+    "strength": 0.4,
+    "key": {
+        "key": "secondary"
+    }
+}

@@ -1,0 +1,27 @@
+{
+	"powers": [
+		"quirk:engine/swap2",
+		"quirk:engine/engineparticles",
+		"quirk:engine/suplex",
+		"quirk:engine/dash",
+		"quirk:engine/speed",
+		"quirk:engine/engineparticles2",
+		"quirk:engine/engine_mobility",
+		"quirk:engine/enginepower",
+		"quirk:engine/fall",
+		"quirk:engine/groundkick",
+		"quirk:engine/recoildash",
+		"quirk:engine/overheat",
+		"quirk:engine/overheatcons",
+		"quirk:engine/heatcooldown",
+		"quirk:engine/fix",
+		"quirk:health"
+
+	],
+	"icon": "tripwire_hook",
+        "unchoosable": true,
+	"order": 10,
+	"impact": 3,
+	"name": "Engine (ON)",
+	"description": "Tenya Ida's Quirk"
+}

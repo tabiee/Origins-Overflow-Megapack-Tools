@@ -1,0 +1,27 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "exiled:forms_form",
+                "comparison": "==",
+                "compare_to": 1
+            },
+            {
+                "type": "origins:resource",
+                "resource": "exiled:forms_tog",
+                "comparison": "==",
+                "compare_to": 3
+            }
+        ]
+    },
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": -4
+    },
+    "tick_rate": 1
+}

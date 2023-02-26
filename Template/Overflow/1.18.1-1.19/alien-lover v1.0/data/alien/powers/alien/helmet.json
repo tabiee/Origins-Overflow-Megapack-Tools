@@ -1,0 +1,36 @@
+{
+    "name": "§e§nProper Equipment",
+    "description": "Keep your helmet on!",
+    "type": "origins:multiple",
+    "helm": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:execute_command",
+            "command": "item replace entity @s armor.head with glass{display:{Name:'{\"text\":\"Space Helmet\",\"color\":\"dark_aqua\",\"bold\":true,\"italic\":false}',Lore:['[{\"text\":\"You need this to live!\",\"italic\":false}]']},Enchantments:[{id:\"minecraft:binding_curse\",lvl:1s}]} 1",
+            "permission_level": 4
+        },
+        "execute_chosen_when_orb": true,
+        "entity_action_removed": {
+            "type": "origins:execute_command",
+            "command": "item replace entity @s armor.head with air 1",
+            "permission_level": 4
+        },
+        "entity_action_respawned": {
+            "type": "origins:execute_command",
+            "command": "item replace entity @s armor.head with glass{display:{Name:'{\"text\":\"Space Helmet\",\"color\":\"dark_aqua\",\"bold\":true,\"italic\":false}',Lore:['[{\"text\":\"You need this to live!\",\"italic\":false}]']},Enchantments:[{id:\"minecraft:binding_curse\",lvl:1s}]} 1",
+            "permission_level": 4
+        }
+    },
+    "screen": {
+        "type": "origins:overlay",
+		"texture": "minecraft:textures/block/glass.png",
+		"strength": 0.3,
+		"red": 1.0,
+		"green": 1.0,
+		"blue": 1.0,
+		"draw_mode": "texture",
+		"draw_phase": "below_hud",
+		"hide_with_hud": false,
+		"visible_in_third_person": true
+    }
+}

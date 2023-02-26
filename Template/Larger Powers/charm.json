@@ -1,0 +1,92 @@
+{
+    "name": "§2§nCharm",
+    "description": "Everyone near is magically attracted to you and will do whatever you ask.",
+    "type": "origins:multiple",
+    "act": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @e[tag=!tar,type=!iron_golem,type=!snow_golem,type=!slime,type=!magma_cube,distance=..7] add cha",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "team join charm @e[tag=cha,tag=!tar,type=!iron_golem,type=!snow_golem,type=!slime,type=!magma_cube,distance=..7]",
+                        "permission_level": 4
+                    },
+                    "ticks": 2
+                }
+            ]
+        }
+    },
+    "tar": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add tar",
+                    "permission_level": 4
+                },
+				{
+                    "type": "origins:execute_command",
+                    "command": "team leave @s",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute at @e[tag=cha,tag=!tar,distance=..7,tag=!vampy,type=!item,type=!arrow] run summon snowball ~ ~5 ~ {Tags:[\"snowhit\"],Motion:[0.0,-0.5,0.0]}",
+                        "permission_level": 4
+                    },
+                    "ticks": 1
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "execute as @e[type=snowball,tag=snowhit] run data modify entity @s Owner set from entity @e[tag=tar,limit=1] UUID",
+                        "permission_level": 4
+                    },
+                    "ticks": 3
+                }
+            ]
+        },
+        "cooldown": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "team": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team add charm",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join charm @s",
+                    "permission_level": 4
+                }
+            ]
+        },
+        "execute_chosen_when_orb": true,
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "team leave @s",
+            "permission_level": 4
+        }
+    }
+}

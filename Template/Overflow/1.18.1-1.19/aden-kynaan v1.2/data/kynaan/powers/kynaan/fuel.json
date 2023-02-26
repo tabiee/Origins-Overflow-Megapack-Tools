@@ -1,0 +1,65 @@
+{
+    "name": "§9§nMagic Fuel",
+    "description": "Your hunger can't drop below 4 when around grass during the day.\nIn hot biomes your hunger decay is increased.",
+    "type": "origins:multiple",
+    "day": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:daytime"
+                },
+                {
+                    "type": "origins:block_in_radius",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "grass_block"
+                    },
+                    "radius": 3,
+                    "shape": "cube",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": "<=",
+                    "compare_to": 7
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:feed",
+            "food": 1,
+			"saturation": 0
+        }
+    },
+    "hot": {
+        "condition": {
+            "type": "origins:biome",
+            "biomes": [
+                "desert",
+                "savanna",
+                "savanna_plateau",
+                "windswept_savanna",
+                "jungle",
+                "sparse_jungle",
+                "bamboo_jungle",
+                "badlands",
+                "eroded_badlands",
+                "wooded_badlands",
+                "nether_wastes",
+                "warped_forest",
+                "crimson_forest",
+                "soul_and_valley",
+                "basalt_deltas"
+            ]
+        },
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    }
+}

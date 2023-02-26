@@ -1,0 +1,353 @@
+{
+	"type": "origins:active_self",
+	"entity_action":
+	{
+		"type": "origins:if_else",
+		"condition":
+		{
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition":
+			{
+				"type": "origins:ingredient",
+				"ingredient":
+				{
+					"item": "minecraft:coal_ore"
+				}
+			}
+		},
+		"if_action":
+		{
+			"type": "origins:and",
+			"actions":
+			[
+				{
+					"type": "origins:execute_command",
+					"command": "clear @s minecraft:coal_ore 1",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "give @s minecraft:coal 7",
+					"permission_level": 4
+				}
+			]
+		},
+		"else_action":
+		{
+			"type": "origins:if_else",
+			"condition":
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition":
+				{
+					"type": "origins:ingredient",
+					"ingredient":
+					{
+						"item": "minecraft:iron_ore"
+					}
+				}
+			},
+			"if_action":
+			{
+				"type": "origins:and",
+				"actions":
+				[
+					{
+						"type": "origins:execute_command",
+						"command": "clear @s minecraft:iron_ore 1",
+						"permission_level": 4
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "give @s minecraft:iron_ingot 5",
+						"permission_level": 4
+					}
+				]
+			},
+			"else_action":
+			{
+				"type": "origins:if_else",
+				"condition":
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition":
+					{
+						"type": "origins:ingredient",
+						"ingredient":
+						{
+							"item": "minecraft:lapis_ore"
+						}
+					}
+				},
+				"if_action":
+				{
+					"type": "origins:and",
+					"actions":
+					[
+						{
+							"type": "origins:execute_command",
+							"command": "clear @s minecraft:lapis_ore 1",
+							"permission_level": 4
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "give @s minecraft:lapis_lazuli 7",
+							"permission_level": 4
+						}
+					]
+				},
+				"else_action":
+				{
+					"type": "origins:if_else",
+					"condition":
+					{
+						"type": "origins:equipped_item",
+						"equipment_slot": "mainhand",
+						"item_condition":
+						{
+							"type": "origins:ingredient",
+							"ingredient":
+							{
+								"item": "minecraft:nether_quartz_ore"
+							}
+						}
+					},
+					"if_action":
+					{
+						"type": "origins:and",
+						"actions":
+						[
+							{
+								"type": "origins:execute_command",
+								"command": "clear @s minecraft:nether_quartz_ore 1",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "give @s minecraft:quartz 5",
+								"permission_level": 4
+							}
+						]
+					},
+					"else_action":
+					{
+						"type": "origins:if_else",
+						"condition":
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "mainhand",
+							"item_condition":
+							{
+								"type": "origins:ingredient",
+								"ingredient":
+								{
+									"item": "minecraft:redstone_ore"
+								}
+							}
+						},
+						"if_action":
+						{
+							"type": "origins:and",
+							"actions":
+							[
+								{
+									"type": "origins:execute_command",
+									"command": "clear @s minecraft:redstone_ore 1",
+									"permission_level": 4
+								},
+								{
+									"type": "origins:execute_command",
+									"command": "give @s minecraft:redstone 7",
+									"permission_level": 4
+								}
+							]
+						},
+						"else_action":
+						{
+							"type": "origins:if_else",
+							"condition":
+							{
+								"type": "origins:equipped_item",
+								"equipment_slot": "mainhand",
+								"item_condition":
+								{
+									"type": "origins:ingredient",
+									"ingredient":
+									{
+										"item": "minecraft:gold_ore"
+									}
+								}
+							},
+							"if_action":
+							{
+								"type": "origins:and",
+								"actions":
+								[
+									{
+										"type": "origins:execute_command",
+										"command": "clear @s minecraft:gold_ore 1",
+										"permission_level": 4
+									},
+									{
+										"type": "origins:execute_command",
+										"command": "give @s minecraft:gold_ingot 5",
+										"permission_level": 4
+									}
+								]
+							},
+							"else_action":
+							{
+								"type": "origins:if_else",
+								"condition":
+								{
+									"type": "origins:equipped_item",
+									"equipment_slot": "mainhand",
+									"item_condition":
+									{
+										"type": "origins:ingredient",
+										"ingredient":
+										{
+											"item": "minecraft:nether_gold_ore"
+										}
+									}
+								},
+								"if_action":
+								{
+									"type": "origins:and",
+									"actions":
+									[
+										{
+											"type": "origins:execute_command",
+											"command": "clear @s minecraft:nether_gold_ore 1",
+											"permission_level": 4
+										},
+										{
+											"type": "origins:execute_command",
+											"command": "give @s minecraft:gold_nugget 12",
+											"permission_level": 4
+										}
+									]
+								},
+								"else_action":
+								{
+									"type": "origins:if_else",
+									"condition":
+									{
+										"type": "origins:equipped_item",
+										"equipment_slot": "mainhand",
+										"item_condition":
+										{
+											"type": "origins:ingredient",
+											"ingredient":
+											{
+												"item": "minecraft:emerald_ore"
+											}
+										}
+									},
+									"if_action":
+									{
+										"type": "origins:and",
+										"actions":
+										[
+											{
+												"type": "origins:execute_command",
+												"command": "clear @s minecraft:emerald_ore 1",
+												"permission_level": 4
+											},
+											{
+												"type": "origins:execute_command",
+												"command": "give @s minecraft:emerald 3",
+												"permission_level": 4
+											}
+										]
+									},
+									"else_action":
+									{
+										"type": "origins:if_else",
+										"condition":
+										{
+											"type": "origins:equipped_item",
+											"equipment_slot": "mainhand",
+											"item_condition":
+											{
+												"type": "origins:ingredient",
+												"ingredient":
+												{
+													"item": "minecraft:diamond_ore"
+												}
+											}
+										},
+										"if_action":
+										{
+											"type": "origins:and",
+											"actions":
+											[
+												{
+													"type": "origins:execute_command",
+													"command": "clear @s minecraft:diamond_ore 1",
+													"permission_level": 4
+												},
+												{
+													"type": "origins:execute_command",
+													"command": "give @s minecraft:diamond 3",
+													"permission_level": 4
+												}
+											]
+										},
+										"else_action":
+										{
+											"type": "origins:if_else",
+											"condition":
+											{
+												"type": "origins:equipped_item",
+												"equipment_slot": "mainhand",
+												"item_condition":
+												{
+													"type": "origins:ingredient",
+													"ingredient":
+													{
+														"item": "minecraft:ancient_debris"
+													}
+												}
+											},
+											"if_action":
+											{
+												"type": "origins:and",
+												"actions":
+												[
+													{
+														"type": "origins:execute_command",
+														"command": "clear @s minecraft:ancient_debris 1",
+														"permission_level": 4
+													},
+													{
+														"type": "origins:execute_command",
+														"command": "give @s minecraft:netherite_scrap 1",
+														"permission_level": 4
+													}
+												]
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"name": "§1§nMolten Hands",
+	"description": "You can smelt anything in your hands.",
+	"cooldown": 1,
+	"key": {
+            "key": "secondary",
+			"continuous": true
+	},
+	"hud_render": {
+	    "should_render": false
+        }
+}

@@ -1,0 +1,72 @@
+{
+	"name": "§5§nEyebeams",
+	"description": "Shoot a laser for a short time, consumes charge.",
+	"condition": {
+		"type": "origins:resource",
+		"resource": "*:alien/fly_nuggets",
+		"comparison": ">",
+		"compare_to": 5
+	},
+	"type": "origins:active_self",
+	"key": {
+		"key": "primary",
+		"continuous": true
+	},
+	"cooldown": 1,
+	"hud_render": {
+		"should_render": false
+	},
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:play_sound",
+				"sound": "block.amethyst_block.fall",
+				"volume": 0.3,
+				"pitch": 2
+			},
+			{
+				"type": "origins:trigger_cooldown",
+				"power": "*:alien/fly_cd"
+			},
+			{
+				"type": "origins:change_resource",
+				"resource": "*:alien/fly_nuggets",
+				"change": -3
+			},
+			{
+				"type": "origins:raycast",
+				"distance": 20,
+				"block": true,
+				"entity": true,
+				"shape_type": "visual",
+				"fluid_handling": "none",
+				"bientity_action": {
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:set_on_fire",
+								"duration": 4
+							},
+							{
+								"type": "origins:damage",
+								"amount": 3,
+								"source": {
+									"name": "magic",
+									"fire": true,
+									"magic": true
+								}
+							}
+						]
+					}
+				},
+				"command_at_hit": "particle glow_squid_ink ~ ~ ~ 0.5 0.5 0.5 0 1",
+				"command_along_ray": "particle glow ~ ~ ~ 0 0 0 0 1",
+				"command_step": 1,
+				"command_along_ray_only_on_hit": false
+			}
+		]
+	}
+}

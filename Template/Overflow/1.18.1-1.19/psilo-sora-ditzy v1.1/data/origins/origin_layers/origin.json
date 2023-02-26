@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "origins": [
+    "psilo:psilo",
+	"psilo:sora"
+  ]
+}

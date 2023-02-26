@@ -1,0 +1,77 @@
+{
+	"hidden": true,
+	"type": "origins:action_on_callback",
+	"entity_action_chosen": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "team add piggy",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "team join piggy @s",
+				"permission_level": 4
+			}
+		]
+	},
+	"execute_chosen_when_orb": true,
+	"entity_action_lost": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "team leave @s",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "power revoke @s exec:dread/iron",
+				"permission_level": 4
+			}
+			,
+			{
+				"type": "origins:execute_command",
+				"command": "power revoke @s exec:dread/iron",
+				"permission_level": 4
+			}
+			,
+			{
+				"type": "origins:execute_command",
+				"command": "power revoke @s exec:dread/gold",
+				"permission_level": 4
+			}
+			,
+			{
+				"type": "origins:execute_command",
+				"command": "power revoke @s exec:dread/emerald",
+				"permission_level": 4
+			}
+			,
+			{
+				"type": "origins:execute_command",
+				"command": "power revoke @s exec:dread/diamond",
+				"permission_level": 4
+			}
+			,
+			{
+				"type": "origins:execute_command",
+				"command": "power revoke @s exec:dread/netherite",
+				"permission_level": 4
+			}
+			,
+			{
+				"type": "origins:execute_command",
+				"command": "power revoke @s exec:dread/pick",
+				"permission_level": 4
+			}
+			,
+			{
+				"type": "origins:execute_command",
+				"command": "power revoke @s exec:dread/silky",
+				"permission_level": 4
+			}
+		]
+	}
+}

@@ -1,0 +1,15 @@
+{
+  "minecraft:recipes/misc/red_dye_from_tulip": {
+    "criteria": {
+      "has_red_flower": "2022-01-24 21:24:07 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:desert": "2022-01-24 21:20:07 +0200"
+    },
+    "done": false
+  },
+  "DataVersion": 2865
+}

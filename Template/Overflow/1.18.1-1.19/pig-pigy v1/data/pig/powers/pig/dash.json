@@ -1,0 +1,159 @@
+{
+    "name": "Battering Ram",
+    "description": "Hold Secondary to run forward up to 50 blocks destroying blocks in your way.\nAny entities hit by you take 7 hearts of damage. Additionally, you gain Resistance while active.",
+    "type": "origins:multiple",
+    "ram": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 40,
+        "start_value": 40,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 5
+        }
+    },
+    "go": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:pig/dash_ram",
+                    "comparison": "!=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:add_velocity",
+                    "z": 0.5,
+                    "space": "local_horizontal_normalized",
+                    "client": true,
+                    "server": true
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "fill ^-1 ^0.25 ^1 ^1 ^2.5 ^1 air replace #pig:allobby"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle explosion ^ ^1 ^6 0.5 2 0.5 0 1"
+                },
+				{
+                    "type": "origins:execute_command",
+                    "command": "particle dust 0.812 0.000 0.000 1 ^ ^1 ^6 0.5 2 0.5 0 15"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:pig/dash_ram",
+                    "change": -1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:pig/dash_hold"
+                },
+				{
+                    "type": "origins:play_sound",
+                    "sound": "block.calcite.break",
+                    "volume": 1,
+                    "pitch": 1
+                },
+				{
+                    "type": "origins:area_of_effect",
+                    "radius": 2,
+                    "bientity_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:damage",
+                                "amount": 14,
+                                "source": {
+                                    "name": "explosion",
+                                    "unblockable": true
+                                }
+                            },
+                            {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:add_velocity",
+                                    "y": 0.5,
+                                    "z": 1.5,
+                                    "space": "local",
+                                    "client": true,
+                                    "server": true
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "secondary",
+            "continuous": true
+        }
+    },
+    "regain": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:pig/dash_hold",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:pig/dash_ram",
+                    "change": 1,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "eff": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:pig/dash_hold",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "resistance",
+                        "duration": 20,
+                        "amplifier": 2,
+                        "show_particles": false,
+                        "show_icon": true
+                    }
+                }
+            ]
+        }
+    },
+    "hold": {
+        "type": "origins:cooldown",
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

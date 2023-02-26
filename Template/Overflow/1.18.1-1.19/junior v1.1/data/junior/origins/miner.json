@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"junior:miner/fortune",
+		"junior:miner/trades",
+		"junior:miner/speed"
+	],
+	"icon": "minecraft:iron_pickaxe",
+	"impact": 1,
+	"name": "Miner",
+	"description": "You're good at mining."
+}

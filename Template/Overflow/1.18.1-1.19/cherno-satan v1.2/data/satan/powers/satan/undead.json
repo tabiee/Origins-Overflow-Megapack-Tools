@@ -1,0 +1,16 @@
+{
+    "name": "§2§lUndead Brethren",
+    "description": "No undead mobs will attack you.",
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "team join dead @e[type=#satan:undead]",
+                "permission_level": 4
+            }
+        ]
+    }
+}

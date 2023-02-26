@@ -1,0 +1,175 @@
+{
+	"name": "§5§nIgnite",
+	"description": "Scorch your enemies with a single flick of your fingers.",
+	"hidden": true,
+	"type": "origins:active_self",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "offhand",
+				"item_condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "heart_of_the_sea"
+							}
+						},
+						{
+							"type": "origins:nbt",
+							"nbt": "{CustomModelData:3}"
+						}
+					]
+				}
+			},
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "lava_bucket"
+					}
+				}
+			},
+			{
+				"type": "origins:fluid_height",
+				"fluid": "water",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			{
+				"inverted": true,
+				"type": "origins:in_rain"
+			},
+			{
+				"type": "origins:xp_levels",
+				"comparison": ">",
+				"compare_to": 0
+			}
+		]
+	},
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.cat.hiss",
+				"volume": 0.2,
+				"pitch": 0.2
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:block.fire.ambient",
+				"volume": 1,
+				"pitch": 0.8
+			},
+			{
+				"type": "origins:raycast",
+				"distance": 200,
+				"block": true,
+				"entity": true,
+				"shape_type": "collider",
+				"fluid_handling": "any",
+				"block_action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:explode",
+							"power": 8,
+							"destruction_type": "none",
+							"damage_self": true,
+							"create_fire": true
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "execute at @e[tag=!clicker,distance=..5] run summon small_fireball ~ ~4 ~ {Motion:[0.0,-2.0,0.0]}",
+							"permission_level": 4
+						}
+					]
+				},
+				"bientity_action": {
+					"type": "origins:actor_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "clear @s lava_bucket 1"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "give @s bucket 1"
+							}
+						]
+					},
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:damage",
+								"source": {
+									"name": "onFire.player"
+								},
+								"amount": 4,
+								"bypasses_armor": true
+							},
+							{
+								"type": "origins:set_on_fire",
+								"duration": 14
+							},
+							{
+								"type": "origins:explode",
+								"power": 8,
+								"destruction_type": "none",
+								"damage_self": true,
+								"create_fire": true
+							},
+							{
+								"type": "origins:area_of_effect",
+								"radius": 5,
+								"bientity_action": {
+									"type": "origins:target_action",
+									"action": {
+										"type": "origins:and",
+										"actions": [
+											{
+												"type": "origins:set_on_fire",
+												"duration": 14
+											},
+											{
+												"type": "origins:damage",
+												"source": {
+													"name": "onFire.player"
+												},
+												"amount": 7,
+												"bypasses_armor": true
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				},
+				"command_along_ray": "particle minecraft:flame ^ ^-0.5 ^2 0 0 0 0 1 normal",
+				"command_at_hit": "function fma:boom",
+				"command_step": 1
+			}
+		]
+	},
+	"key": {
+		"key": "primary",
+		"continuous": true
+	},
+	"cooldown": 100,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+		"bar_index": 15
+	}
+}

@@ -1,0 +1,20 @@
+{
+    "name": "§2§nOdd Gravity",
+    "description": "You feel lighter, your bounce is higher and you don't hit the ground hard enough to take damage due to your Hover Mode's safety features.",
+    "type": "origins:multiple",
+    "speed": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.movement_speed",
+            "operation": "multiply_base",
+            "value": 0.2
+        }
+    },
+    "jump": {
+        "type": "origins:modify_jump",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.5
+        }
+    }
+}

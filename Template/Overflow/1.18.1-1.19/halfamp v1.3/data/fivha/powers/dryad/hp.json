@@ -1,0 +1,10 @@
+{
+    "name": "Plant-like Body",
+    "description": "Your fortitude is higher than most, you have 14 hearts.\n",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": 8
+    }
+}

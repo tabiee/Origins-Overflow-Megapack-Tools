@@ -1,0 +1,11 @@
+{
+    "type": "origins:attribute",
+    "modifier": {
+        "name": "Speedy",
+        "attribute": "minecraft:generic.movement_speed",
+        "value": 0.03,
+        "operation": "addition"
+    },
+    "name": "Gotta go fast",
+    "description": "You are a very fast runner"
+}

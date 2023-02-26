@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "origins": [
+    "magnus:farm",
+	"magnus:magi",
+	"magnus:warr",
+	"magnus:king"
+  ]
+}

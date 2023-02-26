@@ -1,0 +1,32 @@
+{
+    "name": "§2§nFinality",
+    "description": "You do not need EXP to enchant.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:block_in_radius",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "enchanting_table"
+                },
+                "radius": 10,
+                "shape": "cube",
+                "comparison": ">=",
+                "compare_to": 1
+            },
+            {
+                "type": "origins:xp_levels",
+                "comparison": "!=",
+                "compare_to": 999
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "xp set @s 999 levels",
+        "permission_level": 4
+    }
+}

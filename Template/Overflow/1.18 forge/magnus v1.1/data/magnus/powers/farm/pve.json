@@ -1,0 +1,28 @@
+{
+    "name": "Untrained Fighter",
+    "description": "You know how to defend yourself from mobs, but not other players.",
+    "type": "origins:multiple",
+    "mobs": {
+        "type": "origins:modify_damage_dealt",
+        "target_condition": {
+            "inverted": true,
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:player"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.25
+        }
+    },
+    "players": {
+        "type": "origins:modify_damage_dealt",
+        "target_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:player"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.25
+        }
+    }
+}

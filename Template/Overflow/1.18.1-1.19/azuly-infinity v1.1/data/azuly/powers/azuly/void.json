@@ -1,0 +1,100 @@
+{
+    "name": "§2§nSelf-Preservation",
+    "description": "When you fall into the void, your instincts kick in and you teleport to the top of the world, negating any fall damage on the way down.",
+    "type": "origins:multiple",
+    "fallen": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "fell": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "outOfWorld"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "outOfWorld.player"
+                }
+            ]
+        },
+        "self_action": {
+            "type": "origins:delay",
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "tp @s ~ ~60 ~",
+                        "permission_level": 4
+                    },
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "*:azuly/void_fallen",
+                        "change": 1
+                    }
+                ]
+            },
+            "ticks": 8
+        }
+    },
+    "land": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:azuly/void_fallen",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:action_on_land",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:azuly/void_fallen",
+            "change": -1
+        }
+    },
+    "dmg": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:azuly/void_fallen",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall.player"
+                }
+            ]
+        }
+    },
+    "eff": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:azuly/void_fallen",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle falling_water ~ ~-5 ~ 0.5 0.5 0.5 0 25",
+            "permission_level": 4
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+	"name": "Night Vision",
+	"description": "See in the dark.",
+	"type": "origins:multiple",
+	"nv": {
+		"type": "origins:night_vision",
+		"strength": 0.15
+	}
+}

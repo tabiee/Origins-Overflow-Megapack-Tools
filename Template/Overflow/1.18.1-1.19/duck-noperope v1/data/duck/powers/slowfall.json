@@ -1,0 +1,30 @@
+{
+	"name": "§1§nLightweight",
+	"description": "You have Slow Falling unless you hold Sneak.",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"inverted": true,
+				"type": "origins:sneaking"
+			},
+			{
+				"inverted": true,
+				"type": "origins:submerged_in",
+				"fluid": "water"
+			}
+		]
+	},
+	"type": "origins:action_over_time",
+	"interval": 1,
+	"entity_action": {
+		"type": "origins:apply_effect",
+		"effect": {
+			"effect": "slow_falling",
+			"duration": 5,
+			"amplifier": 0,
+			"show_particles": false,
+			"show_icon": true
+		}
+	}
+}

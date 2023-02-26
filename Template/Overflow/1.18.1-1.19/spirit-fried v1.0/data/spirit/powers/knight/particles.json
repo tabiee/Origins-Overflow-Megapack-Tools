@@ -1,0 +1,24 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "inverted": true,
+                "type": "origins:invisible"
+            },
+            {
+                "inverted": true,
+                "type": "origins:status_effect",
+                "effect": "invisibility"
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 16,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "particle soul_fire_flame ~ ~ ~ 0.4 1 0.4 0 1",
+        "permission_level": 4
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "Freezing Cold",
+    "description": "Cold biomes make you go blind.",
+    "condition": {
+        "type": "origins:biome",
+        "biomes": [
+            "minecraft:ice_spikes",
+            "minecraft:snowy_plains",
+            "minecraft:snowy_beach",
+            "minecraft:deep_frozen_ocean",
+            "minecraft:frozen_ocean",
+            "minecraft:frozen_river",
+            "minecraft:old_growth_pine_taiga",
+            "minecraft:old_growth_spruce_taiga",
+            "minecraft:snowy_taiga",
+            "minecraft:taiga",
+            "minecraft:frozen_peaks",
+            "minecraft:snowy_slopes"
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 25,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "blindness",
+            "duration": 100,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+        }
+    }
+}

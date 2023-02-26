@@ -1,0 +1,15 @@
+{
+    "name": "Leap",
+    "description": "You can leap into the air like a fox would",
+    "type": "origins:launch",
+    "cooldown": 120,
+    "hud_render": {
+        "bar_index": 4
+    },
+    "sound": "minecraft:entity.fox.screech",
+    "speed": 1,
+    "key": {
+        "key": "key.origins.primary_active",
+        "continuous": true
+    }
+}

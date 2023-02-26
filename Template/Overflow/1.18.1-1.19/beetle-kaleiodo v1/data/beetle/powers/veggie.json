@@ -1,0 +1,62 @@
+{
+    "name": "§6§nDecomposer",
+    "description": "You can't eat meat, except rotten flesh. Eating it doesn't cause hunger and gives more saturation than usual.",
+    "type": "origins:multiple",
+    "veg": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "origins:meat"
+                            }
+                        },
+                        {
+                            "type": "origins:meat"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:food"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "origins:ignore_diet"
+                    }
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "rotten_flesh"
+                    }
+                }
+            ]
+        }
+    },
+    "rot": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "rotten_flesh"
+            }
+        },
+        "food_modifier": {
+            "operation": "addition",
+            "value": 2
+        },
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": 10.2
+        },
+        "prevent_effects": true
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Shortness of Breath",
+    "description": "You run out of air faster.",
+    "condition": {
+        "type": "origins:submerged_in",
+        "fluid": "water"
+    },
+    "type": "origins:action_over_time",
+    "interval": 10,
+    "entity_action": {
+        "type": "origins:gain_air",
+        "value": -10
+    }
+}

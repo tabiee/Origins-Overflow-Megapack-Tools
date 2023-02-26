@@ -1,0 +1,121 @@
+{
+    "name": "§4§nSweet Tooth§r",
+    "description": "You can only eat sugary foods and sugar itself.",
+    "type": "origins:multiple",
+    "prev": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:food"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:ingredient",
+                    "ingredient": [
+                        {
+                            "item": "pumpkin_pie"
+                        },
+                        {
+                            "item": "honey_bottle"
+                        },
+                        {
+                            "item": "cookie"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "mod": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "pumpkin_pie"
+                },
+                {
+                    "item": "honey_bottle"
+                },
+                {
+                    "item": "cookie"
+                },
+                {
+                    "item": "cake"
+                }
+            ]
+        },
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": 4.8
+        }
+    },
+    "sugar": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:food_level",
+                    "comparison": "<",
+                    "compare_to": 20
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "sugar"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "sugar"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s sugar 1"
+                },
+                {
+                    "type": "origins:feed",
+                    "food": 1,
+                    "saturation": 1
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.horse.eat",
+                    "volume": 0.1,
+                    "pitch": 2
+                }
+            ]
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": true
+        }
+    }
+}

@@ -1,0 +1,186 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "fx": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_tap",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_bit",
+                    "comparison": "==",
+                    "compare_to": 5
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 25,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "speed",
+                    "duration": 35,
+                    "amplifier": 29,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "strength",
+                    "duration": 35,
+                    "amplifier": 1,
+                    "show_particles": false,
+                    "show_icon": true
+                },
+                {
+                    "effect": "jump_boost",
+                    "duration": 35,
+                    "amplifier": 4,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+            ]
+        }
+    },
+    "water": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:five_tog"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_bit",
+                    "comparison": "==",
+                    "compare_to": 5
+                }
+            ]
+        },
+        "type": "origins:walk_on_fluid",
+        "fluid": "water"
+    },
+    "tog": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_tap",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_bit",
+                    "comparison": "==",
+                    "compare_to": 5
+                }
+            ]
+        },
+        "type": "origins:toggle",
+        "active_by_default": true,
+        "key": {
+            "key": "key.saveToolbarActivator"
+        },
+        "retain_state": false
+    },
+    "justcus": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:five_tog"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_bit",
+                    "comparison": "==",
+                    "compare_to": 5
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle soul_fire_flame ~ ~-0.25 ~ 0.25 0.25 0.25 0 25"
+        }
+    },
+    "fire": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:five_tog"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_tap",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_bit",
+                    "comparison": "==",
+                    "compare_to": 5
+                }
+            ]
+        },
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:set_on_fire",
+                "duration": 4
+            }
+        },
+        "cooldown": 5,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "speed": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_tap",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:tails_bit",
+                    "comparison": "==",
+                    "compare_to": 5
+                }
+            ]
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.attack_speed",
+            "operation": "multiply_total",
+            "value": 0.65
+        },
+        "tick_rate": 1,
+        "update_health": false
+    }
+}

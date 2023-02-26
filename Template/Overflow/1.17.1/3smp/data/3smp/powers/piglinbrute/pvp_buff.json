@@ -1,0 +1,41 @@
+{
+    "type": "origins:self_action_when_hit",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:strength",
+            "amplifier": 1,
+            "duration": 100,
+            "is_ambient": false,
+            "show_particles": true,
+            "show_icon": false
+        },
+        "effects": [
+            {
+                "duration": 200,
+                "is_ambient": false,
+                "show_particles": true,
+                "show_icon": false,
+                "effect": "minecraft:resistance",
+                "amplifier": 1
+            },
+            {
+                "duration": 100,
+                "is_ambient": false,
+                "show_particles": true,
+                "show_icon": false,
+                "effect": "minecraft:speed",
+                "amplifier": 1
+            }
+        ]
+    },
+    "damage_condition": {
+        "type": "origins:amount",
+        "comparison": ">=",
+        "compare_to": 4,
+        "inverted": false
+    },
+    "cooldown": 450,
+    "name": "§2§nDo Not Provoke",
+    "description": "When attacked get a boost to speed, resistance, and attack."
+}

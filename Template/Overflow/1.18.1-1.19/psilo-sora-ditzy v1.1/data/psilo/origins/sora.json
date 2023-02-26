@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"psilo:sora/firework",
+		"psilo:sora/jump",
+		"psilo:sora/foot",
+		"psilo:sora/food",
+		"psilo:sora/dust",
+		"psilo:sora/size",
+		"psilo:sora/particles",
+		"psilo:sora/water"
+	],
+	"icon": "minecraft:nether_star",
+	"impact": 3,
+	"name": "§b§l§oSora Ikimono",
+	"description": "When a planet combusted, these orb creatures fell from grace to this blocky world and took forms of many creatures but this one specifically took the form of the mythical creatures known as skvaders."
+}

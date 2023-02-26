@@ -1,0 +1,13 @@
+{
+    "name": "Bow Masterly",
+    "description": "You trained for years to use Bows / Crossbows. [Extra Damage when using Projectile Based Attacks]",
+    "type": "origins:modify_projectile_damage",
+    "damage_condition": {
+        "type": "origins:projectile",
+        "projectile": "minecraft:spectral_arrow"
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": 8.0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "Black Thumb",
+    "description": "Everything you touch withers away.",
+    "type": "origins:target_action_on_hit",
+    "target_condition": {
+        "type": "origins:command",
+        "command": "execute if entity @e[tag=god,distance=..5]",
+        "comparison": ">=",
+        "compare_to": 1,
+        "permission_level": 4
+    },
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "wither",
+            "duration": 60,
+            "amplifier": 2,
+            "show_particles": true,
+            "show_icon": true
+        }
+    },
+    "cooldown": 10,
+    "hud_render": {
+        "should_render": false
+    }
+}

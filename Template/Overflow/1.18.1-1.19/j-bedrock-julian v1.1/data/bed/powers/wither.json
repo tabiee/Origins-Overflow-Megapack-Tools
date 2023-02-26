@@ -1,0 +1,26 @@
+{
+    "name": "§6§nSame Powers Same Trauma",
+    "description": "You take more Wither damage.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "wither"
+            },
+            {
+                "type": "origins:name",
+                "name": "witherSkull"
+            },
+            {
+                "type": "origins:name",
+                "name": "wither.player"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 1
+    }
+}

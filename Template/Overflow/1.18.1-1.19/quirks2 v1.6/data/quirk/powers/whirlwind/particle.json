@@ -1,0 +1,12 @@
+{
+    "type": "origins:action_over_time",
+    "name": "s",
+    "description": "s",
+    "hidden": true,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "particle minecraft:snowflake ~ ~1 ~ 0.3 1 0.3 0.01 15 force"
+    },
+    "interval": 10
+}

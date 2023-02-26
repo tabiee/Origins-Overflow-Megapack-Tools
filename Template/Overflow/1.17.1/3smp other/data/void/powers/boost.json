@@ -1,0 +1,15 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "execute at @s run teleport @s ^ ^ ^10",
+      "permission_level": 4
+    },
+    "cooldown": 40,
+    "hud_render": {
+        "should_render": true,
+        "bar_index": 6
+    },
+    "name":"Boost",
+    "description": "You can use your ancestor's ability to teleport a few blocks giving you a boost when flying. [Primary]"
+}

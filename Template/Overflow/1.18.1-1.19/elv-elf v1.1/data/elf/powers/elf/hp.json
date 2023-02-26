@@ -1,0 +1,10 @@
+{
+    "name": "Long Lifespan",
+    "description": "You have one additional heart.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": 2
+    }
+}

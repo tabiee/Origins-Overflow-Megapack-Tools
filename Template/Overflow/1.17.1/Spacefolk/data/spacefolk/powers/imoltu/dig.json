@@ -1,0 +1,38 @@
+{
+    "name": "Tunnel",
+    "description": "Destroy a large chunk of stone infront of you. No items will be gathered.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "execute at @s positioned ^ ^1 ^2 run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 air replace minecraft:stone",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute at @s positioned ^ ^1 ^2 run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 air replace minecraft:cobblestone",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:smoke ^ ^ ^3 1 1 1 0 100",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "block.stone.break",
+                "volume": 1,
+                "pitch": 1
+            }
+        ]
+    },
+    "cooldown": 150,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 0
+    },
+    "key": "primary"
+}

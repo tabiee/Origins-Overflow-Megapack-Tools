@@ -1,0 +1,71 @@
+{
+    "name": "Inescapable Fate",
+    "description": "Totems of undying do not work for you, they slip out of your grasp.",
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:if_else_list",
+        "actions": [
+            {
+                "condition": {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "totem_of_undying"
+                        }
+                    }
+                },
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:equipped_item_action",
+                            "equipment_slot": "mainhand",
+                            "action": {
+                                "type": "origins:consume",
+                                "amount": 1
+                            }
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "summon item ~ ~ ~ {PickupDelay:100,Motion:[0.0,0.0,1.0],Item:{id:\"minecraft:totem_of_undying\",Count:1b}}",
+                            "permission_level": 4
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "totem_of_undying"
+                        }
+                    }
+                },
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:equipped_item_action",
+                            "equipment_slot": "offhand",
+                            "action": {
+                                "type": "origins:consume",
+                                "amount": 1
+                            }
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "summon item ~ ~ ~ {PickupDelay:100,Motion:[0.0,0.0,1.0],Item:{id:\"minecraft:totem_of_undying\",Count:1b}}",
+                            "permission_level": 4
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

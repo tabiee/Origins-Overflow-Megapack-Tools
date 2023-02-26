@@ -1,0 +1,9 @@
+{
+    "name": "Storage of the Earth",
+    "description": "The overworld has many unique items and blocks, due to this you have adapted to carry more.",
+    "type": "origins:inventory",
+    "title": "Extra Pockets",
+    "key": {
+        "key": "primary"
+    }
+}

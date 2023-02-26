@@ -1,0 +1,88 @@
+{
+    "name": "§6§nOvercharged",
+    "description": "While in water, splashed with a potion or in rain there's a chance for lightning to strike you. This will fill your stamina but deal double damage.",
+    "type": "origins:multiple",
+    "strike": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:in_rain"
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[type=minecraft:potion,distance=..3.5]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 100,
+        "entity_action": {
+            "type": "origins:chance",
+            "chance": 0.1,
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle glow ~ ~ ~ 1.5 1.5 1.5 .1 100"
+                    },
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:block.beacon.activate",
+                        "volume": 1,
+                        "pitch": 1.5
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "summon lightning_bolt ~ ~ ~"
+                    },
+                    {
+                        "type": "origins:feed",
+                        "food": 20,
+                        "saturation": 20
+                    }
+                ]
+            }
+        }
+    },
+    "dmg": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "water",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:in_rain"
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[type=minecraft:potion,distance=..3.5]",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "lightningBolt"
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    }
+}

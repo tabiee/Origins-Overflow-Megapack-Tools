@@ -1,0 +1,35 @@
+{
+    "name": "Hunter's Instinct",
+	"description": "You embrace your instincts, gaining strength and speed and not losing moisture). [Primary]",
+	"type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "effect give @s minecraft:speed 60 0 true",
+                "permission_level": 4
+            },
+			{
+				"type": "origins:execute_command",
+                "command": "effect give @s minecraft:strength 60 0 true",
+                "permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+                "command": "effect give @s minecraft:water_breathing 300 0 true",
+                "permission_level": 4
+			}
+			]
+	},
+	"cooldown": 8400,
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": false
+	},
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+		"bar_index": 2
+	}
+}

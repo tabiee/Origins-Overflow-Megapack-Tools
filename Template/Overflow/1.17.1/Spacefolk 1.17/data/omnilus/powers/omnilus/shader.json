@@ -1,0 +1,8 @@
+{
+	"name": "screen shader",
+	"description": "feel free to remove",
+    "type": "origins:shader",
+    "shader": "minecraft:shaders/post/deconverge.json",
+    "toggleable": true,
+	"hidden": true
+}

@@ -1,0 +1,87 @@
+{
+	"type": "origins:active_self",
+	"name": "Permeation Intangibility",
+	"description": "Punches and Weapons go through your body for a small amount of time thanks to your quirk. This takes extra focus so you are slower (You still take knockback)",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [{
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "minecraft:resistance",
+					"duration": 60,
+					"amplifier": 100,
+					"show_icon": false,
+					"show_particles": false
+				}
+			},
+			{
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "minecraft:slowness",
+					"duration": 60,
+					"amplifier": 2,
+					"show_icon": false,
+					"show_particles": false
+				}
+			},
+          {    
+          "type": "origins:execute_command",
+          "command": "particle minecraft:cloud ~ ~1 ~ 0.6 0.6 0.6 0.1 50",
+          "permission_level": 4
+          },
+        {
+          "type": "origins:delay",
+          "ticks": 20,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~1 ~ 0.6 0.6 0.6 0.1 50",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 40,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~1 ~ 0.6 0.6 0.6 0.1 50",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 60,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:cloud ~ ~1 ~ 0.6 0.6 0.6 1 100",
+            "permission_level": 4
+          }
+	},
+        {
+          "type": "origins:delay",
+          "ticks": 60,
+          "action": {
+            "type": "origins:execute_command",
+            "command": "playsound minecraft:item.trident.riptide_2 master @p ~ ~ ~ 1 2",
+            "permission_level": 4
+          }
+	},
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:item.trident.riptide_1"
+			}
+		]
+	},
+	"cooldown": 400,
+
+ 	 "key": {
+    "key": "key.origins.senary_active",
+    "continuous": false
+	},
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+		"bar_index": 16
+	}
+}
+
+

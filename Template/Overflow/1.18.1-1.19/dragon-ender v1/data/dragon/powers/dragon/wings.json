@@ -1,0 +1,6 @@
+{
+    "name": "§2§nWinged",
+    "description": "As a dragon, you have your own set of wings.",
+    "type": "origins:elytra_flight",
+    "render_elytra": true
+}

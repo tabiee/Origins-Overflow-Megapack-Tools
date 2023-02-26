@@ -1,0 +1,29 @@
+{
+    "name": "Astral Tides",
+    "description": "At night, the stars make you feel more at home allowing you to run faster and use less stamina.",
+    "type": "origins:multiple",
+    "speed": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:daytime"
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+			"attribute": "generic.movement_speed",
+            "operation": "addition",
+            "value": 0.05
+        },
+        "tick_rate": 20
+    },
+    "exh": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:daytime"
+        },
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "addition",
+            "value": -0.02
+        }
+    }
+}

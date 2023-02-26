@@ -1,0 +1,13 @@
+{
+  "type": "origins:action_over_time",
+  "interval": 1,
+  "entity_action": {
+    "type": "origins:execute_command",
+    "command": "effect give @s minecraft:jump_boost 1 1 true"
+  },
+  "condition": {
+    "type": "origins:sneaking"
+  },
+  "name": "Leaper",
+  "description": "Your foot allow you to jump higher when you crouch."
+}

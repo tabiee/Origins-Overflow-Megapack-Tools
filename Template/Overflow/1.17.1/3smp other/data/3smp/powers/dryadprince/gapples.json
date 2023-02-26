@@ -1,0 +1,38 @@
+{
+	"name": "§2§nBountiful Harvest",
+	"description": "Apples are easy to find.",
+    "type": "origins:action_on_block_break",
+    "only_when_harvested": false,
+    "block_condition": {
+        "type": "origins:in_tag",
+        "inverted": false,
+        "tag": "3smp:leaves"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:chance",
+                "chance": 0.0025,
+                "action": {
+                    "type": "origins:give",
+                    "stack": {
+                        "amount": 1,
+                        "item": "minecraft:golden_apple"
+                    }
+                }
+            },
+            {
+                "type": "origins:chance",
+                "chance": 0.05,
+                "action": {
+                    "type": "origins:give",
+                    "stack": {
+                        "amount": 1,
+                        "item": "minecraft:apple"
+                    }
+                }
+            }
+        ]
+    }
+}

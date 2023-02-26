@@ -1,0 +1,11 @@
+{
+    "type": "origins:prevent_sleep",
+    "block_condition": {
+    	"type": "origins:height",
+		"comparison": ">",
+		"compare_to": 5
+  	},
+  	"message": "You can't hear the ambient noise of the void",
+    "name": "Peaceful Sleep",
+    "description": "You miss the quiet ambience of the void, so you must sleep at Y-level 5 or lower."
+}

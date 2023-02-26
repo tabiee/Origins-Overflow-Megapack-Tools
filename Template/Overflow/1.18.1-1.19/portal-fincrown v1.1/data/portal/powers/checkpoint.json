@@ -1,0 +1,306 @@
+{
+	"name": "Wormhole Checkpoint",
+	"description": "Place a portal, then tap the key again to create a second portal. The portals are closed by default and can be opened by holding Shift when tapping this key.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/star.png",
+			"text": "These portals allow any creature to pass through them, they have no range limit."
+		},
+		{
+			"sprite": "origins:textures/gui/badge/star.png",
+			"text": "To change checkpoint location, tap the key again. Otherwise use Rewind to clear all portals."
+		}
+	],
+	"type": "origins:multiple",
+	"redpur": {
+		"condition": {
+			"inverted": true,
+			"type": "origins:sneaking"
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "apoli:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:checkpoint_tap",
+								"comparison": "==",
+								"compare_to": 0
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:checkpoint_tap",
+								"operation": "set",
+								"change": 1
+							},
+							{
+								"type": "apoli:trigger_cooldown",
+								"power": "*:checkpoint_fakered"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "execute as @e[tag=red] at @s run summon item ~ ~ ~ {Age:5995,PickupDelay:200,Tags:[\"reset\"],Item:{id:\"minecraft:egg\",Count:1b}}"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "kill @e[tag=red]"
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "execute as @e[tag=reset] at @s run forceload remove ~ ~ ~ ~"
+								},
+								"ticks": 2
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:raycast",
+									"distance": 10,
+									"block": true,
+									"entity": true,
+									"shape_type": "visual",
+									"fluid_handling": "none",
+									"miss_action": {
+										"type": "origins:execute_command",
+										"command": "summon minecraft:marker ^ ^1 ^10 {NoGravity:1b,Tags:[\"red\",\"point\"],Invisible:1b}"
+									},
+									"command_at_hit": "summon minecraft:marker ~ ~0.5 ~ {NoGravity:1b,Tags:[\"red\",\"point\"],Invisible:1b}",
+									"command_step": 1,
+									"command_along_ray_only_on_hit": false
+								},
+								"ticks": 3
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "execute as @e[tag=red] at @s run forceload add ~ ~ ~ ~"
+								},
+								"ticks": 4
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "execute as @e[tag=red] at @s run tp @s ~ ~ ~ facing entity @p[sort=nearest]"
+								},
+								"ticks": 4
+							}
+						]
+					}
+				},
+				{
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:checkpoint_tap",
+								"comparison": "==",
+								"compare_to": 1
+							}
+						]
+					},
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:checkpoint_tap",
+								"operation": "set",
+								"change": 0
+							},
+							{
+								"type": "apoli:trigger_cooldown",
+								"power": "*:checkpoint_fakepur"
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "execute as @e[tag=pur] at @s run summon item ~ ~ ~ {Age:5995,PickupDelay:200,Tags:[\"reset\"],Item:{id:\"minecraft:egg\",Count:1b}}"
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "kill @e[tag=pur]"
+								},
+								"ticks": 1
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "execute as @e[tag=reset] at @s run forceload remove ~ ~ ~ ~"
+								},
+								"ticks": 2
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:raycast",
+									"distance": 10,
+									"block": true,
+									"entity": true,
+									"shape_type": "visual",
+									"fluid_handling": "none",
+									"miss_action": {
+										"type": "origins:execute_command",
+										"command": "summon minecraft:marker ^ ^1 ^10 {NoGravity:1b,Tags:[\"pur\",\"point\"],Invisible:1b}"
+									},
+									"command_at_hit": "summon minecraft:marker ~ ~0.5 ~ {NoGravity:1b,Tags:[\"pur\",\"point\"],Invisible:1b}",
+									"command_step": 1,
+									"command_along_ray_only_on_hit": false
+								},
+								"ticks": 3
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "execute as @e[tag=pur] at @s run forceload add ~ ~ ~ ~"
+								},
+								"ticks": 4
+							},
+							{
+								"type": "origins:delay",
+								"action": {
+									"type": "origins:execute_command",
+									"command": "execute as @e[tag=pur] at @s run tp @s ~ ~ ~ facing entity @p[sort=nearest]"
+								},
+								"ticks": 4
+							}
+						]
+					}
+				}
+			]
+		},
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "quaternary"
+		}
+	},
+	"on_off": {
+		"condition": {
+			"type": "origins:sneaking"
+		},
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:checkpoint_tog",
+				"comparison": "==",
+				"compare_to": 0
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "title @s actionbar {\"text\":\"§9§lCheckpoint Active§r\"}"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "minecraft:block.note_block.chime",
+						"volume": 1,
+						"pitch": 1
+					},
+					{
+						"type": "origins:delay",
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:checkpoint_tog",
+							"change": 1
+						},
+						"ticks": 2
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "title @s actionbar {\"text\":\"§c§lCheckpoint Inactive§r\"}"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "minecraft:block.note_block.chime",
+						"volume": 1,
+						"pitch": 0.5
+					},
+					{
+						"type": "origins:delay",
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:checkpoint_tog",
+							"change": -1
+						},
+						"ticks": 2
+					}
+				]
+			}
+		},
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": false
+		},
+		"key": {
+			"key": "quaternary"
+		}
+	},
+	"tog": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"tap": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"fakered": {
+		"type": "origins:cooldown",
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+			"bar_index": 23
+		}
+	},
+	"fakepur": {
+		"type": "origins:cooldown",
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+			"bar_index": 19
+		}
+	}
+}

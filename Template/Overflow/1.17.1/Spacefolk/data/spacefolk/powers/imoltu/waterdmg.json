@@ -1,0 +1,22 @@
+{
+    "name": "Water Weakness",
+    "description": "You should not go into water.",
+    "condition": {
+        "type": "origins:fluid_height",
+        "fluid": "minecraft:water",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "type": "origins:damage_over_time",
+    "interval": 5,
+    "onset_delay": 1,
+    "damage": 3,
+    "damage_easy": 2,
+    "damage_source": {
+        "name": "hurt_by_water",
+        "bypasses_armor": true,
+        "unblockable": true
+    },
+    "protection_enchantment": "origins:water_protection",
+    "protection_effectiveness": 1
+}

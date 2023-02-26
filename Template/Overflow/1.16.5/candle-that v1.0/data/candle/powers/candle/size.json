@@ -1,0 +1,162 @@
+{
+	"name": "Shrinking",
+	"description": "As your wax melts, you get smaller.",
+	"type": "origins:multiple",
+	"reset": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:height 0.75 @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:width 0.75 @s",
+					"permission_level": 4
+				}
+			]
+		},
+		"execute_chosen_when_orb": true,
+		"entity_action_lost": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale reset @s",
+					"permission_level": 4
+				}
+			]
+		},
+		"entity_action_respawned": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:height 0.75 @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:width 0.75 @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:candle/wax_goo",
+					"change": 1000
+				}
+			]
+		}
+	},
+	"size1": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:candle/wax_goo",
+					"comparison": "<",
+					"compare_to": 750
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:candle/wax_goo",
+					"comparison": ">=",
+					"compare_to": 500
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:height 0.6 @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:width 0.6 @s",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"size2": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:candle/wax_goo",
+					"comparison": "<",
+					"compare_to": 500
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:candle/wax_goo",
+					"comparison": ">=",
+					"compare_to": 250
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:height 0.4 @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:width 0.4 @s",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"size3": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:candle/wax_goo",
+					"comparison": "<",
+					"compare_to": 250
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:candle/wax_goo",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:height 0.25 @s",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:width 0.25 @s",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

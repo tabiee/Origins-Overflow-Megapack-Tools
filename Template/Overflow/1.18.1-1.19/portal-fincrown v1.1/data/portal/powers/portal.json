@@ -1,0 +1,232 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"check_blu": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:portal_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:command",
+					"command": "execute as @e[tag=blu] at @s if entity @e[tag=!reset,tag=!portal,tag=!point,distance=..1.25]",
+					"comparison": ">=",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "*:portal_cd"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=blu] at @s run tp @e[tag=!reset,tag=!portal,tag=!point,distance=..1.35] @e[tag=ora,limit=1]",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"check_ora": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:portal_cd",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:command",
+					"command": "execute as @e[tag=ora] at @s if entity @e[tag=!reset,tag=!portal,tag=!point,distance=..1.25]",
+					"comparison": ">=",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "*:portal_cd"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=ora] at @s run tp @e[tag=!reset,tag=!portal,tag=!point,distance=..1.35] @e[tag=blu,limit=1]",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"check_red": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "apoli:resource",
+					"resource": "*:checkpoint_tog",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:portal_cd2",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:command",
+					"command": "execute as @e[tag=red] at @s if entity @e[tag=!reset,tag=!portal,tag=!point,distance=..1.25]",
+					"comparison": ">=",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "*:portal_cd2"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=red] at @s run tp @e[tag=!reset,tag=!portal,tag=!point,distance=..1.35] @e[tag=pur,limit=1]",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"check_pur": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "apoli:resource",
+					"resource": "*:checkpoint_tog",
+					"comparison": "==",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:portal_cd2",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:command",
+					"command": "execute as @e[tag=pur] at @s if entity @e[tag=!reset,tag=!portal,tag=!point,distance=..1.35]",
+					"comparison": ">=",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:trigger_cooldown",
+					"power": "*:portal_cd2"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=pur] at @s run tp @e[tag=!reset,tag=!portal,tag=!point,distance=..1.25] @e[tag=red,limit=1]",
+					"permission_level": 4
+				}
+			]
+		}
+	},
+	"cd": {
+		"type": "origins:cooldown",
+		"cooldown": 50,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 0
+		}
+	},
+	"cd2": {
+		"type": "origins:cooldown",
+		"cooldown": 50,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+			"bar_index": 18
+		}
+	},
+	"fx": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=blu] at @s run particle block_marker light_blue_concrete ~ ~1 ~ 0.1 0.25 0.1 0 2",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=ora] at @s run particle block_marker orange_concrete ~ ~1 ~ 0.1 0.25 0.1 0 2",
+					"permission_level": 4
+				},
+				{
+					"type": "apoli:if_else",
+					"condition": {
+						"type": "apoli:resource",
+						"resource": "*:checkpoint_tog",
+						"comparison": "==",
+						"compare_to": 0
+					},
+					"if_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "execute as @e[tag=red] at @s run particle dust 0.749 0.000 0.000 2 ~ ~1 ~ 0.1 0.25 0.1 0 2",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "execute as @e[tag=pur] at @s run particle dust 0.533 0.047 0.910 2 ~ ~1 ~ 0.1 0.25 0.1 0 2",
+								"permission_level": 4
+							}
+						]
+					},
+					"else_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "execute as @e[tag=red] at @s run particle block_marker red_concrete ~ ~1 ~ 0.1 0.25 0.1 0 2",
+								"permission_level": 4
+							},
+							{
+								"type": "origins:execute_command",
+								"command": "execute as @e[tag=pur] at @s run particle block_marker purple_concrete ~ ~1 ~ 0.1 0.25 0.1 0 2",
+								"permission_level": 4
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+}

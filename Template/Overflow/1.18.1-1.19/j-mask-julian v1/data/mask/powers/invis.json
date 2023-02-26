@@ -1,0 +1,23 @@
+{
+    "name": "§1§nHollow Form§r",
+    "description": "Your body has hollowed out to the point where it's mostly a strange goop. You can hide by crouching, turning you into a puddle.",
+    "type": "apoli:multiple",
+    "inv": {
+        "condition": {
+            "type": "origins:sneaking"
+        },
+        "type": "origins:invisibility",
+        "render_armor": false
+    },
+    "fx": {
+        "condition": {
+            "type": "origins:sneaking"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:execute_command",
+            "command": "particle landing_obsidian_tear ~ ~1 ~ 0.1 0.1 0.1 0 100 normal"
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "name": "§1§nSuper Soldier",
+    "description": "You have several permament effects active.",
+    "condition": {
+        "inverted": true,
+        "type": "origins:biome",
+        "condition": {
+            "type": "origins:temperature",
+            "comparison": "<",
+            "compare_to": 0.6
+        }
+    },
+    "type": "origins:action_over_time",
+    "interval": 15,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "strength",
+                "duration": 100,
+                "amplifier": 1,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "speed",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "jump_boost",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "resistance",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "hero_of_the_village",
+                "duration": 100,
+                "amplifier": 4,
+                "show_particles": false,
+                "show_icon": false
+            }
+        ]
+    }
+}

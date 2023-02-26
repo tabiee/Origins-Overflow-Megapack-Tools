@@ -1,0 +1,48 @@
+{
+    "name": "§4§lImmediate Distrust",
+    "description": "Villagers raise their prices significantly and iron golems see you as a threat.",
+    "type": "origins:multiple",
+    "iron_golem": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=minecraft:iron_golem,distance=..20] at @s run data modify entity @s AngryAt set from entity @e[tag=edgy,limit=1] UUID",
+                    "permission_level": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=minecraft:iron_golem,distance=..20] at @s run data modify entity @s AngerTime set value 60",
+                    "permission_level": 2
+                }
+            ]
+        }
+    },
+    "prices": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "data modify storage offworld vill set value {Type: \"trading\", Value: -30}",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "data modify storage offworld vill.Target set from entity @s UUID",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=minecraft:villager] run data modify entity @s Gossips append from storage minecraft:offworld vill",
+                    "permission_level": 4
+                }
+            ]
+        }
+    }
+}

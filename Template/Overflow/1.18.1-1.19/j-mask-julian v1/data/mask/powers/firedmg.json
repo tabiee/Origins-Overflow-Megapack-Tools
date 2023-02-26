@@ -1,0 +1,41 @@
+{
+    "name": "§4§nFlammable Form",
+    "description": "You take double damage from fire and burn longer.",
+    "type": "apoli:multiple",
+    "dmg": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:fire"
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "burnbbyburn": {
+        "condition": {
+            "type": "origins:in_block_anywhere",
+            "block_condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:block",
+                        "block": "fire"
+                    },
+                    {
+                        "type": "origins:block",
+                        "block": "soul_fire"
+                    }
+                ]
+            },
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "falling_action": {
+            "type": "origins:set_on_fire",
+            "duration": 6
+        }
+    }
+}

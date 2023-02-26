@@ -1,0 +1,25 @@
+{
+	"unchoosable": true,
+	"powers": [
+		"demon:weak/sword",
+		"demon:weak/rankup",
+		"demon:weak/hp",
+		"demon:weak/xp",
+		"demon:strong/stats",
+		"demon:fire",
+		"demon:gold",
+		"demon:poison",
+		"demon:nether",
+		"demon:iron",
+		"demon:sun",
+		"demon:lava",
+		"demon:hunger",
+		"demon:fortune",
+		"demon:tagger",
+		"demon:beds"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"impact": 3,
+	"name": "§c§l§oDemon: Weak",
+	"description": "The lowest form of demon, with great potential."
+}

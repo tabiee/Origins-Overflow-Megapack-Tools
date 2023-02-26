@@ -1,0 +1,33 @@
+{
+    "name": "§e§nBasophobia§r",
+    "description": "You take more damage from falling.",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "*:select_mode",
+                "comparison": "==",
+                "compare_to": 2
+            }
+        ]
+    },
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "apoli:or",
+        "conditions": [
+            {
+                "type": "apoli:name",
+                "name": "fall"
+            },
+            {
+                "type": "apoli:name",
+                "name": "fall.player"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.5
+    }
+}

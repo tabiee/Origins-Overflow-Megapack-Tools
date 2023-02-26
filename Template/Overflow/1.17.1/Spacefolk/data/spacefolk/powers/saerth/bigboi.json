@@ -1,0 +1,45 @@
+{
+    "name": "As big as a Tree",
+    "description": "You're large!",
+    "condition": {
+        "type": "origins:constant",
+        "value": false
+    },
+    "type": "origins:action_on_callback",
+    "entity_action_chosen": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 2.5",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:width 2.5",
+                "permission_level": 4
+            }
+        ]
+    },
+    "execute_chosen_when_orb": true,
+    "entity_action_lost": {
+        "type": "origins:execute_command",
+        "command": "scale reset @s",
+        "permission_level": 4
+    },
+    "entity_action_respawned": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 2.5",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:width 2.5",
+                "permission_level": 4
+            }
+        ]
+    }
+}

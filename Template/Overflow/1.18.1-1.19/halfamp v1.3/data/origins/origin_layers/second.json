@@ -1,0 +1,19 @@
+{
+  "name": "Sub-Origin",
+  "missing_name": "None",
+  "missing_description": "Nothing selected",
+  "order": 69,
+  "origins": [
+  {
+	  "condition": {
+		    "type": "origins:origin",
+            "origin": "fivha:slime",
+            "layer": "origins:origin"
+	  },
+	  "origins": [
+	"fivha:android",
+	"fivha:doll"
+  ]
+  }
+  ]
+}

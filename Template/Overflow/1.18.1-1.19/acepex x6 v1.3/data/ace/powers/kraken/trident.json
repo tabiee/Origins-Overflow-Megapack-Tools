@@ -1,0 +1,68 @@
+{
+    "name": "Soulbound Trident",
+    "description": "Summon an unbreakable trident at will.",
+    "type": "origins:multiple",
+    "sum": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle glow ^ ^1 ^1 0.25 0.25 0.25 0 25"
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:command",
+                        "command": "clear @s trident{display:{Name:'[{\"text\":\"§3§lTrident\"}]'},Enchantments:[{id:unbreaking,lvl:100},{id:riptide,lvl:3}],HideFlags:1} 0",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    "if_action": {
+                        "type": "origins:execute_command",
+                        "command": "give @s trident{display:{Name:'[{\"text\":\"§3§lTrident\"}]'},Enchantments:[{id:unbreaking,lvl:100},{id:riptide,lvl:3}],HideFlags:1} 1"
+                    }
+                }
+            ]
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "secondary",
+            "continuous": true
+        }
+    },
+    "debug": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:command",
+                        "command": "clear @s trident{display:{Name:'[{\"text\":\"§3§lTrident\"}]'},Enchantments:[{id:unbreaking,lvl:100},{id:riptide,lvl:3}],HideFlags:1} 0",
+                        "comparison": ">",
+                        "compare_to": 1
+                    },
+                    "if_action": {
+                        "type": "origins:execute_command",
+                        "command": "clear @s trident{display:{Name:'[{\"text\":\"§3§lTrident\"}]'},Enchantments:[{id:unbreaking,lvl:100},{id:riptide,lvl:3}],HideFlags:1} 1"
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "kill @e[type=item,nbt={Item:{tag:{display:{Name:'[{\"text\":\"§3§lTrident\"}]'}}}}]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @e[tag=!kraken] trident{display:{Name:'[{\"text\":\"§3§lTrident\"}]'}} 10"
+                }
+            ]
+        }
+    }
+}

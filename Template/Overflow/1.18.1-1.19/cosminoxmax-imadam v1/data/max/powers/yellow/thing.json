@@ -1,0 +1,59 @@
+{
+    "name": "§e§nThingophobia§r",
+    "description": "A wave of fear, causing ALL nearby entities to take double damage and inflicting a blinding effect on them.",
+    "type": "origins:multiple",
+    "act": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:select_mode",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle wax_on ~ ~1.25 ~ 3 0 3 5 300"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle item honeycomb ~ ~1.25 ~ 3 0 3 0.15 300"
+                },
+                {
+                    "type": "origins:area_of_effect",
+                    "radius": 7,
+                    "include_target": false,
+                    "bientity_action": {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:grant_power",
+                            "power": "max:yellow/feared",
+                            "source": "max:max"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "entity.horse.death",
+                    "volume": 0.5,
+                    "pitch": 0.25
+                }
+            ]
+        },
+        "cooldown": 900,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png"
+        },
+        "key": {
+            "key": "key.spectatorOutlines"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+	"name": "Night Vision",
+	"description": "You can see in the dark.",
+	"type": "origins:toggle_night_vision",
+	"active_by_default": true,
+	"strength": 0.2,
+	"key": {
+		"key": "secondary"
+	}
+}

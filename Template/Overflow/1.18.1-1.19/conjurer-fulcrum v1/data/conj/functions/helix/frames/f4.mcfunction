@@ -1,0 +1,26 @@
+
+particle bubble_pop ^-0.414 ^0.246 ^0.608 0 0 0 0 1 normal
+particle bubble_pop ^-0.339 ^0.230 ^0.653 0 0 0 0 1 normal
+particle bubble_pop ^-0.259 ^0.215 ^0.689 0 0 0 0 1 normal
+particle bubble_pop ^-0.174 ^0.200 ^0.715 0 0 0 0 1 normal
+particle bubble_pop ^-0.088 ^0.186 ^0.730 0 0 0 0 1 normal
+particle bubble_pop ^-0.000 ^0.172 ^0.736 0 0 0 0 1 normal
+particle bubble_pop ^0.088 ^0.159 ^0.730 0 0 0 0 1 normal
+particle bubble_pop ^0.174 ^0.146 ^0.715 0 0 0 0 1 normal
+particle bubble_pop ^0.259 ^0.133 ^0.689 0 0 0 0 1 normal
+particle bubble_pop ^0.339 ^0.122 ^0.653 0 0 0 0 1 normal
+particle bubble_pop ^0.414 ^0.110 ^0.608 0 0 0 0 1 normal
+particle bubble_pop ^0.484 ^0.099 ^0.554 0 0 0 0 1 normal
+particle bubble_pop ^0.547 ^0.089 ^0.492 0 0 0 0 1 normal
+particle bubble_pop ^0.602 ^0.079 ^0.424 0 0 0 0 1 normal
+particle bubble_pop ^0.648 ^0.070 ^0.349 0 0 0 0 1 normal
+particle bubble_pop ^0.685 ^0.062 ^0.269 0 0 0 0 1 normal
+particle bubble_pop ^0.712 ^0.053 ^0.185 0 0 0 0 1 normal
+particle bubble_pop ^0.729 ^0.046 ^0.099 0 0 0 0 1 normal
+particle bubble_pop ^0.736 ^0.039 ^0.011 0 0 0 0 1 normal
+particle bubble_pop ^0.732 ^0.032 ^-0.077 0 0 0 0 1 normal
+particle bubble_pop ^0.717 ^0.027 ^-0.164 0 0 0 0 1 normal
+particle bubble_pop ^0.693 ^0.021 ^-0.248 0 0 0 0 1 normal
+particle bubble_pop ^0.658 ^0.017 ^-0.329 0 0 0 0 1 normal
+particle bubble_pop ^0.614 ^0.013 ^-0.405 0 0 0 0 1 normal
+particle bubble_pop ^0.561 ^0.009 ^-0.476 0 0 0 0 1 normal

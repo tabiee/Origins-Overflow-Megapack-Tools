@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"fivshad:revenant/tp",
+		"fivshad:revenant/ray",
+		"fivshad:revenant/phase",
+	    "fivshad:revenant/eat",
+		"fivshad:revenant/undead",
+		"fivshad:revenant/noeating",
+		"fivshad:revenant/soul"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"impact": 2,
+	"name": "§4§l§oRevenant",
+	"description": "You are a being that is fueled by nothing but determination and willpower. You still breathe and walk purely to spite death."
+}

@@ -1,0 +1,10 @@
+{
+	"powers": [
+		"bush:wee",
+		"bush:tagger"
+	],
+	"icon": "minecraft:azalea",
+	"impact": 3,
+	"name": "§b§l§onot a bush",
+	"description": "You are literally not a bush."
+}

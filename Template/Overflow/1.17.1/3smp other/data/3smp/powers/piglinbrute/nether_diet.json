@@ -1,0 +1,53 @@
+{
+	"name": "§1§nGold Yummy",
+	"description": "Chew on some gold. Fills your stomache for a while.",
+    "key": {
+        "key": "key.use",
+        "continuous": true
+    },
+    "type": "origins:active_self",
+    "cooldown": 45,
+    "hud_render": {
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 14
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:gold_nugget"
+                    }
+                }
+            },
+            {
+                "type": "origins:food_level",
+                "comparison": "<",
+                "compare_to": 20
+            }
+        ]
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "clear @s gold_nugget 1"
+            },
+            {
+                "type": "origins:feed",
+                "food": 3,
+                "saturation": 12.8
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "playsound minecraft:entity.iron_golem.repair player @s ~ ~ ~ 1 1"
+            }
+        ]
+    },
+    "hidden": false
+}

@@ -1,0 +1,10 @@
+{
+	"type": "origins:action_over_time",
+	"entity_action": {
+		"type": "origins:execute_command",
+		"permission_level": 4,
+		"command": "function tricks:ironal"
+	},
+	"interval": 1,
+	"hidden": true
+}

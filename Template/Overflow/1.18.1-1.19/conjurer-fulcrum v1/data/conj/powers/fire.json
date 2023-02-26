@@ -1,0 +1,24 @@
+{
+    "name": "§6§nFire Immunity§r",
+    "description": "You do not take any damage from fire.",
+    "type": "origins:multiple",
+    "imm": {
+        "type": "origins:fire_immunity"
+    },
+	"stats": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "additionalentityattributes:lava_visibility",
+                "operation": "addition",
+                "value": 25
+            },
+            {
+                "attribute": "additionalentityattributes:lava_speed",
+                "operation": "multiply_total",
+                "value": 0.8
+            }
+        ],
+        "update_health": false
+    }
+}

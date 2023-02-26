@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"ace:angel/elytra",
+		"ace:angel/gapple",
+		"ace:angel/blind",
+		"ace:angel/fire",
+		"ace:angel/str",
+		"ace:angel/weak",
+		"ace:angel/carnivore",
+		"ace:angel/size",
+		"ace:angel/falldmg",
+		"ace:angel/hp",
+		"origins:water_vulnerability"
+	],
+	"icon": "minecraft:dead_brain_coral_fan",
+	"impact": 2,
+	"name": "Fallen Angel",
+	"description": "Failed celestial."
+}

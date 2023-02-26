@@ -1,0 +1,62 @@
+{
+	"name": "§2§nAbsorbing",
+	"description": "Shallow waters are quite pleasant.",
+    "type": "origins:multiple",
+    "regen": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "duration": 100,
+                "is_ambient": false,
+                "show_particles": false,
+                "show_icon": false,
+                "effect": "regeneration"
+            }
+        },
+        "interval": 100,
+        "condition": {
+            "type": "origins:and",
+            "inverted": false,
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "inverted": false,
+                    "comparison": ">",
+					"compare_to": 0,
+                    "fluid": "water"
+                },
+                {
+                    "type": "origins:submerged_in",
+                    "inverted": true,
+                    "fluid": "water"
+                }
+            ]
+        }
+    },
+    "depthstrider": {
+        "type": "origins:modify_swim_speed",
+        "modifier": {
+            "operation": "addition",
+            "value": 0.025
+        },
+        "condition": {
+            "type": "origins:and",
+            "inverted": false,
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "inverted": false,
+                    "comparison": ">",
+					"compare_to": 0,
+                    "fluid": "water"
+                },
+                {
+                    "type": "origins:submerged_in",
+                    "inverted": true,
+                    "fluid": "water"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,74 @@
+{
+	"name": "Focus Fire",
+	"description": "Mark the last target you hit with a fiery ring that weakens them and causes them to turn into 5 fire shards instead of 1.",
+	"type": "origins:multiple",
+	"act": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:raycast",
+					"distance": 16,
+					"block": false,
+					"entity": true,
+					"shape_type": "visual",
+					"fluid_handling": "none",
+					"bientity_action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:execute_command",
+							"command": "tag @s add five"
+						}
+					},
+					"miss_action": {
+						"type": "origins:delay",
+						"action": {
+							"type": "origins:execute_command",
+							"command": "resource set @s fire:fire/five_act 260",
+							"permission_level": 4
+						},
+						"ticks": 1
+					},
+					"command_at_hit": "particle lava ~ ~ ~ 0.5 0.5 0.5 0 5",
+					"command_along_ray": "particle flame ~ ~ ~ 0 0 0 0 1",
+					"command_step": 1,
+					"command_along_ray_only_on_hit": false
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle flame ^ ^1 ^1 0.3 0.3 0.3 0 10",
+					"permission_level": 4
+				}
+			]
+		},
+		"cooldown": 300,
+		"hud_render": {
+			"should_render": true,
+			"bar_index": 7
+		},
+		"key": {
+			"key": "key.saveToolbarActivator",
+			"continuous": true
+		}
+	},
+	"fx": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[tag=five] at @s run summon area_effect_cloud ~ ~1 ~ {Particle:\"flame\",Radius:0.1f,Duration:2}",
+					"permission_level": 4
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "effect give @e[tag=five] weakness 10 1 true",
+					"permission_level": 4
+				}
+			]
+		}
+	}
+}

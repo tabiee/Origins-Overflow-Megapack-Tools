@@ -1,0 +1,35 @@
+{
+	"hidden": true,
+    "type": "origins:multiple",
+    "stone": {
+        "type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "fivha:natural_stone"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.07
+        }
+    },
+    "haste": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:star/overcharge_toggle",
+			"comparison": "==",
+			"compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "haste",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        }
+    }
+}

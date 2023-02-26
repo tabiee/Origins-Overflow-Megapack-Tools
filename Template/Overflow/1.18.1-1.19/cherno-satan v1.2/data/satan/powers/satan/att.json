@@ -1,0 +1,95 @@
+{
+    "name": "§2§lGodly Attributes",
+    "description": "You gain Speed, Jump Boost and Strength at all times, Conduit Power underwater. And even stronger effects at night.",
+    "type": "origins:multiple",
+    "nm": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "speed",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "strength",
+                            "duration": 100,
+                            "amplifier": 4,
+                            "show_particles": false,
+                            "show_icon": false
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "night": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:daytime"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "speed",
+                            "duration": 100,
+                            "amplifier": 1,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "jump_boost",
+                            "duration": 100,
+                            "amplifier": 0,
+                            "show_particles": false,
+                            "show_icon": false
+                        },
+                        {
+                            "effect": "strength",
+                            "duration": 100,
+                            "amplifier": 9,
+                            "show_particles": false,
+                            "show_icon": false
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "water": {
+        "condition": {
+            "type": "origins:submerged_in",
+            "fluid": "water"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "conduit_power",
+                        "duration": 100,
+                        "amplifier": 0,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                }
+            ]
+        }
+    }
+}

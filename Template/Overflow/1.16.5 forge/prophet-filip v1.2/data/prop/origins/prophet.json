@@ -1,0 +1,30 @@
+{
+	"powers": [
+		"prop:nano",
+		"prop:power",
+		"prop:modes",
+		"prop:stealth",
+		"prop:stealth2",
+		"prop:armor",
+		"prop:emerg",
+		"prop:ultimate",
+		"prop:adapt",
+		"prop:breath",
+		"prop:nv",
+		"prop:artifacts",
+		"prop:suit",
+		"prop:desc",
+		"prop:temp",
+		"prop:ironhate",
+		"prop:teamer",
+		"prop:hover",
+		"prop:debug"
+	],
+	"impact": 3,
+	"name": "§0§l§oThe Prophet§r",
+	"icon": {
+		"item": "netherite_helmet",
+		"tag": "{CustomModelData:69,Enchantments:[{}]}"
+	},
+	"description": "A seasoned veteran equipped with a specialized powersuit."
+}

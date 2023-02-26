@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"fivha:ramen/hp",
+		"fivha:ramen/tagger",
+		"fivha:ramen/armor",
+		"fivha:ramen/lasso",
+		"fivha:ramen/heat",
+		"fivha:ramen/sleep",
+		"fivha:ramen/smell",
+		"fivha:ramen/fall",
+		"fivha:ramen/water"
+	],
+	"icon": "minecraft:mushroom_stew",
+	"impact": 1,
+	"name": "§6§l§oRamen",
+	"description": "Noodle-y goodness!"
+}

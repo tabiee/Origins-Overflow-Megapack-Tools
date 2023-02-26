@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"oceanfire:panda/bamboo",
+		"oceanfire:panda/firetouch",
+		"oceanfire:panda/fire",
+		"oceanfire:panda/bubbles"
+	],
+	"icon": "minecraft:bamboo",
+	"impact": 3,
+	"name": "§c§l§oFire Panda",
+	"description": "Bear that is attuned to the element of Fire."
+}

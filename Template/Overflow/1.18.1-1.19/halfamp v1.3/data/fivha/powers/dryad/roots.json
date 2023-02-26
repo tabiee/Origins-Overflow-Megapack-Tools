@@ -1,0 +1,49 @@
+{
+    "name": "Rooted Defense",
+    "description": "You commune with the roots beneath the earth to grab entities within 15 blocks.",
+    "condition": {
+        "type": "origins:resource",
+        "resource": "*:dryad/waterbar_bubbles",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "particle block_marker dead_bush ~ ~ ~ 5 0.2 5 5 100"
+            },
+			{
+                "type": "origins:execute_command",
+                "permission_level": 4,
+                "command": "particle block dead_bush ~ ~ ~ 5 0.2 5 5 100"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "effect give @e[tag=!dryad,distance=..15] slowness 2 20",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "block.rooted_dirt.break",
+                "volume": 1,
+                "pitch": 1
+            },
+			{
+			    "type": "origins:change_resource",
+                "resource": "*:dryad/waterbar_bubbles",
+                "change": -50
+			}
+        ]
+    },
+    "cooldown": 900,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 4
+    },
+    "key": "primary"
+}
